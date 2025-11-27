@@ -9,14 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.0.1",
+    "@prisma/client": "^7.0.1",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "bcryptjs": "^2.4.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.555.0",
+    "next": "14.2.32",
+    "next-themes": "^0.4.6",
+    "nodemailer": "^6.9.8",
+    "openai": "^4.104.0",
+    "pg": "^8.16.3",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.32"
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "baseline-browser-mapping": "^2.8.31",
     "eslint": "^8",
-    "eslint-config-next": "14.2.32"
+    "eslint-config-next": "14.2.32",
+    "postcss": "^8",
+    "prisma": "^7.0.1",
+    "tailwindcss": "^3.4.1"
   }
 }

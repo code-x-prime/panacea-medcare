@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-raleway)", "sans-serif"],
+      },
       colors: {
         panacea: {
           primary: "#046d8a",

@@ -1,0 +1,33 @@
+{
+  "title": "Let Us Help You",
+  "description": "Fill out the form below and we'll get back to you with a free quote",
+  "getQuote": "Get FREE Quote",
+  "patientName": "Patient Name",
+  "patientNamePlaceholder": "Enter patient name",
+  "country": "Country",
+  "selectCountry": "Select Country",
+  "city": "City",
+  "selectCity": "Select City",
+  "phoneNumber": "Phone Number",
+  "phonePlaceholder": "Your Phone number",
+  "medicalProblem": "Medical Problem",
+  "medicalProblemPlaceholder": "Describe The Current Medical Problem ..",
+  "ageOrDob": "Age or Date of Birth",
+  "ageOrDobPlaceholder": "Example: 30 Yrs or 29-05-1985",
+  "submitButton": "Get FREE Quote",
+  "submitSuccess": "Thank you! We'll contact you soon.",
+  "termsText": "By submitting the form I agree to the",
+  "termsOfUse": "Terms of Use",
+  "and": "and",
+  "privacyPolicy": "Privacy Policy",
+  "ofPanacea": "of Panacea Medcare.",
+  "countries": {
+    "india": "India",
+    "turkey": "Turkey",
+    "thailand": "Thailand",
+    "germany": "Germany"
+  }
+}
+
+
+

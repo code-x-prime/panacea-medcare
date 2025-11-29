@@ -3,10 +3,16 @@ import { config } from "dotenv";
 
 config();
 
-export default {
+const prismaConfig = {
   schema: "./prisma/schema.prisma",
   datasource: {
     url: process.env.DATABASE_URL,
   },
 };
+
+export default prismaConfig;
+
+
+
+
 

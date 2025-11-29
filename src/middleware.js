@@ -1,50 +1,59 @@
-// src/middleware.js
+import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 
-export function middleware(request) {
-  const { pathname } = request.nextUrl;
-  const locale = pathname.split("/")[1];
+const intlMiddleware = createMiddleware({
+  // A list of all locales that are supported
+  locales: ["en", "ar", "fr"],
 
-  // If path already starts with /en or /ar, continue
-  if (locale === "en" || locale === "ar") {
-    const response = NextResponse.next();
-    response.headers.set("x-pathname", pathname);
-    return response;
-  }
+  // Used when no locale matches
+  defaultLocale: "en",
 
-  // Skip middleware for admin routes and API routes
-  if (
-    pathname.startsWith("/n-admin") ||
-    pathname.startsWith("/admin") ||
-    pathname.startsWith("/api")
-  ) {
-    const response = NextResponse.next();
-    response.headers.set("x-pathname", pathname);
-    return response;
-  }
+  // Enable locale detection from cookies/headers
+  localeDetection: true,
+});
 
-  // Check cookie first
-  const cookieLang = request.cookies.get("lang")?.value;
-  let selectedLocale = "en";
+export default function middleware(request) {
+  // Check for saved locale in cookie
+  const savedLocale = request.cookies.get("NEXT_LOCALE")?.value;
+  const pathname = request.nextUrl.pathname;
+  const validLocales = ["en", "ar", "fr"];
 
-  if (cookieLang === "en" || cookieLang === "ar") {
-    selectedLocale = cookieLang;
-  } else {
-    // Check Accept-Language header
-    const acceptLanguage = request.headers.get("accept-language") || "";
-    if (acceptLanguage.startsWith("ar")) {
-      selectedLocale = "ar";
+  // If we have a saved locale and user is accessing root or a path without locale
+  if (savedLocale && validLocales.includes(savedLocale)) {
+    const pathSegments = pathname.split("/").filter(Boolean);
+    const firstSegment = pathSegments[0];
+
+    // If path doesn't start with a valid locale, redirect to saved locale
+    if (!validLocales.includes(firstSegment)) {
+      const newUrl = request.nextUrl.clone();
+      // Handle root path
+      if (pathname === "/" || pathname === "") {
+        newUrl.pathname = `/${savedLocale}`;
+      } else {
+        newUrl.pathname = `/${savedLocale}${pathname}`;
+      }
+      return NextResponse.redirect(newUrl);
+    }
+
+    // If path has a different locale than saved, update cookie to match current path
+    if (firstSegment !== savedLocale && validLocales.includes(firstSegment)) {
+      const response = intlMiddleware(request);
+      response.cookies.set("NEXT_LOCALE", firstSegment, {
+        path: "/",
+        maxAge: 31536000,
+        sameSite: "lax",
+      });
+      return response;
     }
   }
 
-  // Set cookie and redirect
-  const response = NextResponse.redirect(
-    new URL(`/${selectedLocale}${pathname}`, request.url)
-  );
-  response.cookies.set("lang", selectedLocale, { maxAge: 60 * 60 * 24 * 365 });
-  return response;
+  // Use next-intl middleware for everything else
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  // Match all pathnames except for
+  // - … if they start with `/api`, `/_next` or `/_vercel`
+  // - … the ones containing a dot (e.g. `favicon.ico`)
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };

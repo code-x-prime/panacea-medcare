@@ -1,47 +1,125 @@
-// src/components/LanguageSwitcher.js
-'use client';
+"use client";
 
-import { usePathname, useRouter } from 'next/navigation';
-import { useTransition } from 'react';
+import { useRouter, usePathname } from "next/navigation";
+import { useState, useRef, useEffect } from "react";
+import { ChevronDown, Globe } from "lucide-react";
+
+var languages = [
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+];
 
 export default function LanguageSwitcher({ currentLocale }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
+  var router = useRouter();
+  var pathname = usePathname();
+  var [isOpen, setIsOpen] = useState(false);
+  var dropdownRef = useRef(null);
 
-  const switchLocale = (newLocale) => {
-    startTransition(() => {
-      const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
-      router.push(newPath);
-      document.cookie = `lang=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}`;
-    });
-  };
+  var currentLang =
+    languages.find((l) => l.code === currentLocale) || languages[0];
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  function handleLanguageChange(newLocale) {
+    // Save to localStorage
+    if (typeof window !== "undefined") {
+      localStorage.setItem("preferred-locale", newLocale);
+
+      // Also set cookie for middleware to read
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    }
+
+    var segments = pathname.split("/").filter((s) => s !== "");
+
+    // Check if first segment is a valid locale
+    var localeList = languages.map((l) => l.code);
+    var firstSegment = segments[0];
+    var isFirstSegmentLocale = localeList.indexOf(firstSegment) !== -1;
+
+    var newPath = "";
+
+    if (isFirstSegmentLocale) {
+      // Replace existing locale
+      segments[0] = newLocale;
+      newPath = "/" + segments.join("/");
+    } else {
+      // Add new locale at start
+      newPath = "/" + newLocale + pathname;
+    }
+
+    // Clean path
+    newPath = newPath.replace(/\/+/g, "/");
+    if (newPath.length > 1 && newPath.endsWith("/")) {
+      newPath = newPath.slice(0, -1);
+    }
+
+    if (newPath === "" || newPath === "/") {
+      newPath = "/" + newLocale;
+    }
+
+    setIsOpen(false);
+    router.push(newPath);
+    router.refresh();
+  }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="relative" ref={dropdownRef}>
       <button
-        onClick={() => switchLocale('en')}
-        className={`px-3 py-1 rounded text-sm transition ${
-          currentLocale === 'en'
-            ? 'bg-panacea-primary text-white'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-        disabled={isPending}
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
+        aria-label="Change language"
       >
-        EN
+        <Globe className="w-4 h-4 text-gray-500" />
+        <span className="hidden sm:inline">{currentLang.flag}</span>
+        <span className="hidden md:inline">{currentLang.name}</span>
+        <ChevronDown
+          className={
+            "w-4 h-4 transition-transform duration-200 " +
+            (isOpen ? "rotate-180" : "")
+          }
+        />
       </button>
-      <button
-        onClick={() => switchLocale('ar')}
-        className={`px-3 py-1 rounded text-sm transition ${
-          currentLocale === 'ar'
-            ? 'bg-panacea-primary text-white'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-        disabled={isPending}
-      >
-        AR
-      </button>
+
+      {isOpen && (
+        <div className="absolute top-full mt-2 right-0 w-44 bg-white border border-gray-200 rounded-lg shadow-xl z-[100] overflow-hidden">
+          {languages.map((lang) => {
+            var isActive = lang.code === currentLocale;
+            return (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  handleLanguageChange(lang.code);
+                }}
+                className={
+                  "w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors " +
+                  (isActive
+                    ? "bg-teal-50 text-teal-700 font-semibold"
+                    : "text-gray-700 hover:bg-gray-50")
+                }
+              >
+                <span className="text-lg">{lang.flag}</span>
+                <span>{lang.name}</span>
+                {isActive && (
+                  <span className="ml-auto w-2 h-2 bg-teal-500 rounded-full"></span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
-

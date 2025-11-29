@@ -80,12 +80,20 @@
 /* RTL/LTR Support */
 [dir="rtl"] {
   direction: rtl;
-  text-align: right;
 }
 
 [dir="ltr"] {
   direction: ltr;
-  text-align: left;
+}
+
+/* Ensure text alignment in RTL */
+[dir="rtl"] * {
+  text-align: inherit;
+}
+
+/* Reset for elements that should remain LTR */
+.ltr-force {
+  direction: ltr !important;
 }
 
 .font-ltr {

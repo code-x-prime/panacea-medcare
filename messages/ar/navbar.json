@@ -1,0 +1,396 @@
+{
+  "topBar": {
+    "findDoctor": "ابحث عن طبيب",
+    "findTreatment": "ابحث عن علاج",
+    "findDepartment": "ابحث عن قسم",
+    "requestConsultation": "طلب استشارة"
+  },
+  "iconNav": {
+    "heartCenter": "مركز القلب",
+    "hematoOncology": "أورام الدم",
+    "cancerCenter": "مركز السرطان",
+    "search": "بحث"
+  },
+  "main": {
+    "home": "الرئيسية",
+    "hospitals": "المستشفيات",
+    "doctors": "الأطباء",
+    "cost": "التكلفة",
+    "knowledge": "المعرفة",
+    "patientStories": "قصص المرضى",
+    "freeConsult": "استشارة مجانية"
+  },
+  "menu": {
+    "main": [
+      { "name": "الرئيسية", "slug": "/" },
+      { "name": "المستشفيات", "type": "mega", "key": "hospitals" },
+      { "name": "الأطباء", "type": "mega", "key": "doctors" },
+      { "name": "التكلفة", "type": "mega", "key": "cost" },
+      { "name": "المعرفة", "type": "dropdown", "key": "knowledge" },
+      { "name": "قصص المرضى", "slug": "/patient-stories" },
+      { "name": "استشارة مجانية", "slug": "/free-consult" }
+    ],
+    "hospitals": [
+      {
+        "country": "الهند",
+        "slug": "/hospitals/india",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/hospitals/india/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/hospitals/india/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/hospitals/india/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/hospitals/india/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/hospitals/india/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/hospitals/india/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/hospitals/india/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/hospitals/india/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "تركيا",
+        "slug": "/hospitals/turkey",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/hospitals/turkey/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/hospitals/turkey/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/hospitals/turkey/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/hospitals/turkey/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/hospitals/turkey/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/hospitals/turkey/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/hospitals/turkey/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/hospitals/turkey/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "تايلاند",
+        "slug": "/hospitals/thailand",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/hospitals/thailand/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/hospitals/thailand/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/hospitals/thailand/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/hospitals/thailand/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/hospitals/thailand/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/hospitals/thailand/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/hospitals/thailand/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/hospitals/thailand/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "ألمانيا",
+        "slug": "/hospitals/germany",
+        "treatments": [
+          {
+            "name": "الأورام",
+            "slug": "/hospitals/germany/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/hospitals/germany/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          }
+        ]
+      }
+    ],
+    "doctors": [
+      { "country": "الهند", "slug": "/doctors/india" },
+      { "country": "تركيا", "slug": "/doctors/turkey" },
+      { "country": "تايلاند", "slug": "/doctors/thailand" },
+      { "country": "ألمانيا", "slug": "/doctors/germany" }
+    ],
+    "cost": [
+      {
+        "country": "الهند",
+        "slug": "/cost/india",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/cost/india/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/cost/india/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/cost/india/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/cost/india/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/cost/india/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/cost/india/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/cost/india/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/cost/india/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "تركيا",
+        "slug": "/cost/turkey",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/cost/turkey/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/cost/turkey/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/cost/turkey/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/cost/turkey/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/cost/turkey/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/cost/turkey/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/cost/turkey/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/cost/turkey/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "تايلاند",
+        "slug": "/cost/thailand",
+        "treatments": [
+          {
+            "name": "أمراض القلب",
+            "slug": "/cost/thailand/cardiology",
+            "sub": "جراحة القلب"
+          },
+          {
+            "name": "الأورام",
+            "slug": "/cost/thailand/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/cost/thailand/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          },
+          {
+            "name": "جراحة العظام",
+            "slug": "/cost/thailand/orthopedics",
+            "sub": "جراحة العظام"
+          },
+          {
+            "name": "أطفال الأنابيب",
+            "slug": "/cost/thailand/ivf",
+            "sub": "علاج أطفال الأنابيب"
+          },
+          {
+            "name": "أمراض النساء",
+            "slug": "/cost/thailand/gynecology",
+            "sub": "الجراحة النسائية"
+          },
+          {
+            "name": "التجميل",
+            "slug": "/cost/thailand/cosmetic",
+            "sub": "جراحة التجميل"
+          },
+          {
+            "name": "جراحة العمود الفقري",
+            "slug": "/cost/thailand/spine-surgery",
+            "sub": "جراحة العمود الفقري"
+          }
+        ]
+      },
+      {
+        "country": "ألمانيا",
+        "slug": "/cost/germany",
+        "treatments": [
+          {
+            "name": "الأورام",
+            "slug": "/cost/germany/oncology",
+            "sub": "علاج السرطان"
+          },
+          {
+            "name": "جراحة الأعصاب",
+            "slug": "/cost/germany/neurosurgery",
+            "sub": "جراحة الأعصاب"
+          }
+        ]
+      }
+    ],
+    "knowledge": [
+      { "name": "المدونات", "slug": "/blogs" },
+      { "name": "الفيديوهات", "slug": "/videos" },
+      { "name": "التأشيرة الطبية", "slug": "/medical-visa" }
+    ]
+  },
+  "hospitals": {
+    "india": "الهند",
+    "turkey": "تركيا",
+    "thailand": "تايلاند",
+    "germany": "ألمانيا",
+    "treatments": {
+      "cardiology": "طب القلب",
+      "heartSurgery": "جراحة القلب",
+      "oncology": "الأورام",
+      "cancerTreatment": "علاج السرطان",
+      "neurosurgery": "جراحة الأعصاب",
+      "orthopedics": "جراحة العظام",
+      "orthopedicSurgery": "جراحة العظام",
+      "ivf": "التلقيح الصناعي",
+      "ivfTreatment": "علاج التلقيح الصناعي",
+      "gynecology": "أمراض النساء",
+      "gynaecologicalSurgery": "جراحة أمراض النساء",
+      "cosmetic": "تجميل",
+      "cosmeticSurgery": "جراحة التجميل",
+      "spineSurgery": "جراحة العمود الفقري"
+    }
+  },
+  "doctors": {
+    "india": "الهند",
+    "turkey": "تركيا",
+    "thailand": "تايلاند",
+    "germany": "ألمانيا"
+  },
+  "cost": {
+    "india": "الهند",
+    "turkey": "تركيا",
+    "thailand": "تايلاند",
+    "germany": "ألمانيا"
+  },
+  "knowledge": {
+    "blogs": "مدونات",
+    "videos": "فيديوهات",
+    "medicalVisa": "تأشيرة طبية"
+  }
+}

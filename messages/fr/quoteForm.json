@@ -1,0 +1,33 @@
+{
+  "title": "Laissez-nous vous aider",
+  "description": "Remplissez le formulaire ci-dessous et nous vous répondrons avec un devis gratuit",
+  "getQuote": "Obtenir un devis GRATUIT",
+  "patientName": "Nom du patient",
+  "patientNamePlaceholder": "Entrez le nom du patient",
+  "country": "Pays",
+  "selectCountry": "Sélectionner un pays",
+  "city": "Ville",
+  "selectCity": "Sélectionner une ville",
+  "phoneNumber": "Numéro de téléphone",
+  "phonePlaceholder": "Votre numéro de téléphone",
+  "medicalProblem": "Problème médical",
+  "medicalProblemPlaceholder": "Décrivez le problème médical actuel ..",
+  "ageOrDob": "Âge ou date de naissance",
+  "ageOrDobPlaceholder": "Exemple: 30 ans ou 29-05-1985",
+  "submitButton": "Obtenir un devis GRATUIT",
+  "submitSuccess": "Merci! Nous vous contacterons bientôt.",
+  "termsText": "En soumettant le formulaire, j'accepte les",
+  "termsOfUse": "Conditions d'utilisation",
+  "and": "et",
+  "privacyPolicy": "Politique de confidentialité",
+  "ofPanacea": "de Panacea Medcare.",
+  "countries": {
+    "india": "Inde",
+    "turkey": "Turquie",
+    "thailand": "Thaïlande",
+    "germany": "Allemagne"
+  }
+}
+
+
+

@@ -2,6 +2,7 @@
 import HeroSection from '@/components/HeroSection';
 import TopMedicalDestinations from '@/components/TopMedicalDestinations';
 import NetworkOfTopHospitals from '@/components/NetworkOfTopHospitals';
+import LowestQuotesAssured from '@/components/LowestQuotesAssured';
 import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
@@ -17,6 +18,7 @@ export default function HomePage({ params }) {
       <MultiSpecialtyFocus locale={locale} />
       <WhyChoosePanacea locale={locale} />
       <NeedAssistanceButton locale={locale} />
+      <LowestQuotesAssured locale={locale} />
     </div>
   );
 }

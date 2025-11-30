@@ -1,0 +1,38 @@
+{
+  "badge": "أفضل الأسعار المضمونة",
+  "title": "أسعار علاجية لا تُقهر",
+  "subtitle": "من خلال شبكتنا الواسعة وشراكاتنا، نؤمن لك أفضل الأسعار للعلاجات الطبية المتميزة. استمتع برعاية صحية عالمية المستوى بأسعار معقولة.",
+  "starting": "من",
+  "getQuote": "طلب عرض سعر",
+  "discoverText": "هل أنت مستعد لاستكشاف خيارات العلاج؟",
+  "contactHospital": "احصل على عرض مجاني",
+  "chat": "واتساب",
+  "treatments": {
+    "knee-replacement": "استبدال الركبة",
+    "hip-replacement": "استبدال الورك",
+    "brain-tumor": "ورم الدماغ",
+    "heart-bypass": "جراحة مجازة القلب",
+    "valve-replacement": "استبدال الصمام",
+    "breast-cancer": "سرطان الثدي",
+    "lung-cancer": "سرطان الرئة",
+    "rhinoplasty": "تجميل الأنف",
+    "breast-implants": "زراعة الثدي",
+    "hair-transplant": "زراعة الشعر",
+    "cervical-cancer": "سرطان عنق الرحم",
+    "hysterectomy": "استئصال الرحم"
+  },
+  "prices": {
+    "knee-replacement": "4000 دولار",
+    "hip-replacement": "5500 دولار",
+    "brain-tumor": "9000 دولار",
+    "heart-bypass": "4500 دولار",
+    "valve-replacement": "9500 دولار",
+    "breast-cancer": "5000 دولار",
+    "lung-cancer": "5500 دولار",
+    "rhinoplasty": "1800 دولار",
+    "breast-implants": "2750 دولار",
+    "hair-transplant": "1400 دولار",
+    "cervical-cancer": "4500 دولار",
+    "hysterectomy": "3000 دولار"
+  }
+}

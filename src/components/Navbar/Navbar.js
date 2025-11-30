@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
-import MegaMenu from "./MegaMenu";
 import { useTranslations } from "next-intl";
 
 export default function Navbar({ locale = "en" }) {
@@ -85,7 +84,7 @@ export default function Navbar({ locale = "en" }) {
 
   return (
     <nav
-      className="navbar-container h-full relative"
+      className="navbar-container h-full relative sticky top-0 z-50"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Desktop Menu */}

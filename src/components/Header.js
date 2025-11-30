@@ -56,7 +56,7 @@ export default function Header({ locale }) {
 
   return (
     <header
-      className="bg-white shadow-md sticky top-0 z-50"
+      className="bg-white shadow-md z-50"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Top Bar */}
@@ -122,7 +122,7 @@ export default function Header({ locale }) {
 
       {/* Main Header */}
       <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-3">
+        <div className="container mx-auto px-4 py-1">
           <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
             {/* Logo - RTL: right side, LTR: left side */}
             <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
@@ -134,9 +134,9 @@ export default function Header({ locale }) {
                 <Image
                   src="/logo.png"
                   alt="Panacea Medcare Logo"
-                  width={180}
-                  height={50}
-                  className="h-12 w-auto"
+                  width={200}
+                  height={100}
+                  className="h-24 w-auto"
                   priority
                 />
               </div>
@@ -203,15 +203,6 @@ export default function Header({ locale }) {
               }
             >
               <LanguageSwitcher currentLocale={locale} />
-              <button
-                className={
-                  "hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-teal-600 rounded-full hover:bg-teal-700 hover:shadow-lg gap-2 " +
-                  (isRTL ? "flex-row-reverse" : "")
-                }
-              >
-                <Calendar className="w-4 h-4" />
-                {t.getQuote}
-              </button>
               <div className="lg:hidden">
                 <Navbar locale={locale} />
               </div>

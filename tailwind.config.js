@@ -15,6 +15,8 @@ module.exports = {
         panacea: {
           primary: "#046d8a",
           accent: "#c82d33",
+          light: "#f0f9ff",
+          dark: "#0a4a5e",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

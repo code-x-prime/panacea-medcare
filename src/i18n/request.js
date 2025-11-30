@@ -11,12 +11,16 @@ export default getRequestConfig(async ({ locale }) => {
   var quoteFormMessages = (
     await import("../../messages/" + validLocale + "/quoteForm.json")
   ).default;
+  var homeMessages = (
+    await import("../../messages/" + validLocale + "/home.json")
+  ).default;
 
   return {
     locale: validLocale,
     messages: {
       navbar: navbarMessages,
       quoteForm: quoteFormMessages,
+      home: homeMessages,
     },
   };
 });

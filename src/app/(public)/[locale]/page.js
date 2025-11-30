@@ -5,6 +5,7 @@ import NetworkOfTopHospitals from '@/components/NetworkOfTopHospitals';
 import LowestQuotesAssured from '@/components/LowestQuotesAssured';
 import HowWeWork from '@/components/HowWeWork';
 import OurServices from '@/components/OurServices';
+import FAQ from '@/components/FAQ';
 import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
@@ -23,6 +24,7 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
+      <FAQ locale={locale} />
     </div>
   );
 }

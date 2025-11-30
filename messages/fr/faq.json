@@ -1,0 +1,47 @@
+{
+  "badge": "Des questions?",
+  "title": "Questions Fréquemment Posées",
+  "subtitle": "Trouvez des réponses aux questions courantes sur nos services de tourisme médical et comment nous pouvons vous aider.",
+  "faqs": [
+    {
+      "question": "Qu'est-ce que le tourisme médical et pourquoi choisir un traitement international?",
+      "answer": "Le tourisme médical connecte les patients avec des établissements de santé de classe mondiale à l'étranger. Les gens choisissent un traitement international pour accéder à des procédures spécialisées, des délais d'attente plus courts, des économies de 40 à 70%, et l'opportunité de combiner traitement et récupération dans une nouvelle destination."
+    },
+    {
+      "question": "Comment Panacea MedCare aide-t-il dans mon parcours médical?",
+      "answer": "Nous fournissons un soutien de bout en bout incluant la coordination des consultations médicales, les estimations de coûts, l'assistance visa, les arrangements de voyage, la réservation d'hébergement, l'interprétation linguistique et les soins de suivi post-traitement. Nos gestionnaires de cas dédiés vous guident à chaque étape."
+    },
+    {
+      "question": "Quelles sont les exigences de visa et de voyage pour un traitement médical à l'étranger?",
+      "answer": "Les exigences varient selon le pays de destination. La plupart des pays offrent des visas médicaux plus faciles à obtenir que les visas touristiques. Nous aidons avec toute la documentation, les lettres d'invitation des hôpitaux, et vous guidons à travers le processus de demande de visa pour votre destination choisie."
+    },
+    {
+      "question": "Comment puis-je vérifier la qualité et les accréditations des hôpitaux internationaux?",
+      "answer": "Tous nos hôpitaux partenaires détiennent des accréditations internationales comme JCI, ISO ou NABH. Nous fournissons des informations détaillées sur les certifications hospitalières, les qualifications des spécialistes, les taux de réussite et les avis des patients. Vous pouvez également planifier des consultations virtuelles avant de prendre des décisions."
+    },
+    {
+      "question": "Quelles sont les économies typiques pour un traitement à l'étranger?",
+      "answer": "Les patients économisent généralement 40 à 70% par rapport aux coûts de traitement dans les pays occidentaux, même après avoir inclus les dépenses de voyage et d'hébergement. Nous fournissons des estimations de coûts transparentes et détaillées à l'avance sans frais cachés, afin que vous sachiez exactement à quoi vous attendre."
+    },
+    {
+      "question": "Y a-t-il des frais pour utiliser les services de Panacea MedCare?",
+      "answer": "Non, tous nos services sont entièrement gratuits pour les patients. Nous travaillons directement avec les hôpitaux et recevons une compensation de leur part, donc votre facture médicale reste inchangée. Vous ne payez que pour votre traitement réel, vos voyages et votre hébergement."
+    },
+    {
+      "question": "Comment assurez-vous la confidentialité des patients et la sécurité des données?",
+      "answer": "Nous suivons des normes strictes de conformité HIPAA et RGPD. Tous les dossiers médicaux sont cryptés et stockés en toute sécurité. Nous ne partageons jamais vos informations sans consentement explicite, et tous nos hôpitaux partenaires maintiennent les plus hauts standards de confidentialité des patients."
+    },
+    {
+      "question": "Que se passe-t-il si des complications surviennent pendant ou après le traitement?",
+      "answer": "Nos hôpitaux partenaires fournissent des soins complets post-traitement et un suivi. En cas de complications, vous recevrez une attention médicale immédiate. Nous aidons également à coordonner avec vos médecins locaux pour des soins continus après votre retour, assurant une continuité de traitement sans faille."
+    },
+    {
+      "question": "Puis-je amener un compagnon ou un membre de ma famille avec moi?",
+      "answer": "Absolument! Nous encourageons les patients à amener des compagnons pour un soutien émotionnel. Nous pouvons organiser l'hébergement pour les membres de la famille, aider avec leurs demandes de visa, et fournir des conseils sur les attractions locales pour leur séjour pendant votre récupération."
+    },
+    {
+      "question": "Quelles langues parle votre équipe de support?",
+      "answer": "Notre équipe fournit un support en anglais, arabe, français et plusieurs autres langues. Nous organisons également des interprètes médicaux professionnels dans les hôpitaux pour assurer une communication claire avec les médecins et le personnel médical tout au long de votre traitement."
+    }
+  ]
+}

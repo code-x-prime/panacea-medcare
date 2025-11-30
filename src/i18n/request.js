@@ -17,6 +17,7 @@ export default getRequestConfig(async ({ locale }) => {
     lowestQuotes: (await import(`../../messages/${validLocale}/lowestQuotes.json`)).default,
     howWeWork: (await import(`../../messages/${validLocale}/howWeWork.json`)).default,
     ourServices: (await import(`../../messages/${validLocale}/ourServices.json`)).default,
+    faq: (await import(`../../messages/${validLocale}/faq.json`)).default,
   };
 
   return {

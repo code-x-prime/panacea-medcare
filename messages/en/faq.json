@@ -1,0 +1,47 @@
+{
+  "badge": "Got Questions?",
+  "title": "Frequently Asked Questions",
+  "subtitle": "Find answers to common questions about our medical tourism services and how we can help you.",
+  "faqs": [
+    {
+      "question": "What is medical tourism and why choose international treatment?",
+      "answer": "Medical tourism connects patients with world-class healthcare facilities abroad. People choose international treatment for access to specialized procedures, shorter wait times, cost savings of 40-70%, and the opportunity to combine treatment with recovery in a new destination."
+    },
+    {
+      "question": "How does Panacea MedCare assist with my medical journey?",
+      "answer": "We provide end-to-end support including medical consultation coordination, cost estimates, visa assistance, travel arrangements, accommodation booking, language interpretation, and post-treatment follow-up care. Our dedicated case managers guide you through every step."
+    },
+    {
+      "question": "What are the visa and travel requirements for medical treatment abroad?",
+      "answer": "Requirements vary by destination country. Most countries offer medical visas that are easier to obtain than tourist visas. We assist with all documentation, invitation letters from hospitals, and guide you through the visa application process for your chosen destination."
+    },
+    {
+      "question": "How can I verify the quality and credentials of international hospitals?",
+      "answer": "All our partner hospitals hold international accreditations like JCI, ISO, or NABH. We provide detailed information about hospital certifications, specialist qualifications, success rates, and patient reviews. You can also schedule virtual consultations before making any decisions."
+    },
+    {
+      "question": "What is the typical cost savings for treatment abroad?",
+      "answer": "Patients typically save 40-70% compared to treatment costs in Western countries, even after including travel and accommodation expenses. We provide transparent, itemized cost estimates upfront with no hidden fees, so you know exactly what to expect."
+    },
+    {
+      "question": "Are there any fees for using Panacea MedCare's services?",
+      "answer": "No, all our services are completely free for patients. We work directly with hospitals and receive compensation from them, so your medical bill remains unchanged. You only pay for your actual treatment, travel, and accommodation."
+    },
+    {
+      "question": "How do you ensure patient privacy and data security?",
+      "answer": "We follow strict HIPAA and GDPR compliance standards. All medical records are encrypted and stored securely. We never share your information without explicit consent, and all our partner hospitals maintain the highest standards of patient confidentiality."
+    },
+    {
+      "question": "What happens if complications arise during or after treatment?",
+      "answer": "Our partner hospitals provide comprehensive post-treatment care and follow-up. In case of complications, you'll receive immediate medical attention. We also help coordinate with your local doctors for continued care after you return home, ensuring seamless continuity of treatment."
+    },
+    {
+      "question": "Can I bring a companion or family member with me?",
+      "answer": "Absolutely! We encourage patients to bring companions for emotional support. We can arrange accommodation for family members, help with their visa applications, and provide guidance on local attractions for their stay while you recover."
+    },
+    {
+      "question": "What languages do your support team speak?",
+      "answer": "Our team provides support in English, Arabic, French, and several other languages. We also arrange professional medical interpreters at hospitals to ensure clear communication with doctors and medical staff throughout your treatment."
+    }
+  ]
+}

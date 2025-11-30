@@ -1,0 +1,61 @@
+{
+  "companyName": "Panacea MedCare",
+  "tagline": "Votre partenaire de confiance en santé mondiale",
+  "contactTitle": "Contactez-nous",
+  "phone": "+1-XXX-XXX-XXXX",
+  "email": "info@panaceamedcare.com",
+  "address": "123 Plaza Healthcare, District médical, Ville, Pays",
+  "quickLinks": {
+    "title": "Liens rapides",
+    "aboutUs": "À propos",
+    "ourServices": "Nos services",
+    "hospitals": "Hôpitaux partenaires",
+    "destinations": "Destinations médicales",
+    "specialties": "Spécialités",
+    "howItWorks": "Comment ça marche",
+    "faq": "FAQ",
+    "contactUs": "Nous contacter"
+  },
+  "services": {
+    "title": "Nos services",
+    "medicalOpinion": "Avis médical",
+    "travelAssistance": "Assistance voyage",
+    "visaSupport": "Support visa",
+    "accommodation": "Hébergement",
+    "interpreters": "Interprètes",
+    "followUpCare": "Soins de suivi"
+  },
+  "destinations": {
+    "title": "Meilleures destinations",
+    "india": "Inde",
+    "turkey": "Turquie",
+    "thailand": "Thaïlande",
+    "uae": "EAU",
+    "germany": "Allemagne",
+    "egypt": "Égypte"
+  },
+  "legal": {
+    "title": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "disclaimer": "Avertissement",
+    "cookiePolicy": "Politique des cookies"
+  },
+  "social": {
+    "title": "Suivez-nous",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube"
+  },
+  "newsletter": {
+    "title": "Restez informé",
+    "description": "Abonnez-vous à notre newsletter pour des conseils santé et des offres exclusives.",
+    "placeholder": "Entrez votre email",
+    "button": "S'abonner"
+  },
+  "disclaimer": "Les informations sur ce site web sont à des fins de connaissance générale uniquement et ne constituent pas un avis médical, un diagnostic ou un traitement. Consultez toujours des professionnels de santé qualifiés.",
+  "copyright": "© 2024 Panacea MedCare. Tous droits réservés.",
+  "certifications": "Facilitateur de tourisme médical certifié"
+}

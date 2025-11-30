@@ -18,6 +18,7 @@ export default getRequestConfig(async ({ locale }) => {
     howWeWork: (await import(`../../messages/${validLocale}/howWeWork.json`)).default,
     ourServices: (await import(`../../messages/${validLocale}/ourServices.json`)).default,
     faq: (await import(`../../messages/${validLocale}/faq.json`)).default,
+    footer: (await import(`../../messages/${validLocale}/footer.json`)).default,
   };
 
   return {

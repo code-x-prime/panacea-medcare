@@ -1,0 +1,61 @@
+{
+  "companyName": "Panacea MedCare",
+  "tagline": "شريكك الموثوق في الرعاية الصحية العالمية",
+  "contactTitle": "تواصل معنا",
+  "phone": "+1-XXX-XXX-XXXX",
+  "email": "info@panaceamedcare.com",
+  "address": "123 ساحة الرعاية الصحية، المنطقة الطبية، المدينة، البلد",
+  "quickLinks": {
+    "title": "روابط سريعة",
+    "aboutUs": "من نحن",
+    "ourServices": "خدماتنا",
+    "hospitals": "المستشفيات الشريكة",
+    "destinations": "الوجهات الطبية",
+    "specialties": "التخصصات",
+    "howItWorks": "كيف نعمل",
+    "faq": "الأسئلة الشائعة",
+    "contactUs": "اتصل بنا"
+  },
+  "services": {
+    "title": "خدماتنا",
+    "medicalOpinion": "الرأي الطبي",
+    "travelAssistance": "المساعدة في السفر",
+    "visaSupport": "دعم التأشيرة",
+    "accommodation": "الإقامة",
+    "interpreters": "المترجمون",
+    "followUpCare": "رعاية المتابعة"
+  },
+  "destinations": {
+    "title": "أفضل الوجهات",
+    "india": "الهند",
+    "turkey": "تركيا",
+    "thailand": "تايلاند",
+    "uae": "الإمارات",
+    "germany": "ألمانيا",
+    "egypt": "مصر"
+  },
+  "legal": {
+    "title": "قانوني",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "disclaimer": "إخلاء المسؤولية",
+    "cookiePolicy": "سياسة ملفات تعريف الارتباط"
+  },
+  "social": {
+    "title": "تابعنا",
+    "facebook": "فيسبوك",
+    "twitter": "تويتر",
+    "instagram": "إنستغرام",
+    "linkedin": "لينكد إن",
+    "youtube": "يوتيوب"
+  },
+  "newsletter": {
+    "title": "ابق على اطلاع",
+    "description": "اشترك في نشرتنا الإخبارية للحصول على نصائح صحية وعروض حصرية.",
+    "placeholder": "أدخل بريدك الإلكتروني",
+    "button": "اشترك"
+  },
+  "disclaimer": "المعلومات الواردة في هذا الموقع هي لأغراض المعرفة العامة فقط ولا تشكل نصيحة طبية أو تشخيصًا أو علاجًا. استشر دائمًا متخصصي الرعاية الصحية المؤهلين.",
+  "copyright": "© 2024 Panacea MedCare. جميع الحقوق محفوظة.",
+  "certifications": "ميسر سياحة طبية معتمد"
+}

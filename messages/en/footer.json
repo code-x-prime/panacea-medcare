@@ -1,0 +1,61 @@
+{
+  "companyName": "Panacea MedCare",
+  "tagline": "Your Trusted Partner in Global Healthcare",
+  "contactTitle": "Get in Touch",
+  "phone": "+1-XXX-XXX-XXXX",
+  "email": "info@panaceamedcare.com",
+  "address": "123 Healthcare Plaza, Medical District, City, Country",
+  "quickLinks": {
+    "title": "Quick Links",
+    "aboutUs": "About Us",
+    "ourServices": "Our Services",
+    "hospitals": "Partner Hospitals",
+    "destinations": "Medical Destinations",
+    "specialties": "Specialties",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contactUs": "Contact Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "medicalOpinion": "Medical Opinion",
+    "travelAssistance": "Travel Assistance",
+    "visaSupport": "Visa Support",
+    "accommodation": "Accommodation",
+    "interpreters": "Interpreters",
+    "followUpCare": "Follow-up Care"
+  },
+  "destinations": {
+    "title": "Top Destinations",
+    "india": "India",
+    "turkey": "Turkey",
+    "thailand": "Thailand",
+    "uae": "UAE",
+    "germany": "Germany",
+    "egypt": "Egypt"
+  },
+  "legal": {
+    "title": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "disclaimer": "Disclaimer",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "social": {
+    "title": "Follow Us",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "youtube": "YouTube"
+  },
+  "newsletter": {
+    "title": "Stay Updated",
+    "description": "Subscribe to our newsletter for health tips and exclusive offers.",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "disclaimer": "The information on this website is for general knowledge purposes only and does not constitute medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals.",
+  "copyright": "© 2024 Panacea MedCare. All rights reserved.",
+  "certifications": "Certified Medical Tourism Facilitator"
+}

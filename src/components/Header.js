@@ -39,17 +39,17 @@ export default function Header({ locale }) {
       search: "بحث",
       getQuote: "احصل على عرض",
     },
-    hi: {
-      findDoctor: "डॉक्टर खोजें",
-      findTreatment: "इलाज खोजें",
-      findDepartment: "विभाग खोजें",
-      requestConsultation: "मुफ्त परामर्श",
-      heartCenter: "हृदय केंद्र",
-      hematoOncology: "हेमेटो-ऑन्कोलॉजी",
-      cancerCenter: "कैंसर केंद्र",
-      search: "खोजें",
-      getQuote: "कोट प्राप्त करें",
-    },
+    fr: {
+      findDoctor: "Trouver un médecin",
+      findTreatment: "Trouver un traitement",
+      findDepartment: "Trouver un département",
+      requestConsultation: "Consultation gratuite",
+      heartCenter: "Centre du cœur",
+      hematoOncology: "Hématologie et oncologie",
+      cancerCenter: "Centre du cancer",
+      search: "Rechercher",
+      getQuote: "Obtenir un devis",
+    }
   };
 
   var t = translations[locale] || translations.en;

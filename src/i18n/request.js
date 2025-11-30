@@ -14,6 +14,9 @@ export default getRequestConfig(async ({ locale }) => {
   var homeMessages = (
     await import("../../messages/" + validLocale + "/home.json")
   ).default;
+  var destinationsMessages = (
+    await import("../../messages/" + validLocale + "/destinations.json")
+  ).default;
 
   return {
     locale: validLocale,
@@ -21,6 +24,7 @@ export default getRequestConfig(async ({ locale }) => {
       navbar: navbarMessages,
       quoteForm: quoteFormMessages,
       home: homeMessages,
+      destinations: destinationsMessages,
     },
   };
 });

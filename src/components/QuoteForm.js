@@ -189,7 +189,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("phoneNumber")}
           </label>
-          <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <Select
               value={formData.phoneCode}
               onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
@@ -310,4 +310,5 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
     </Dialog>
   );
 }
+
 

@@ -1,0 +1,30 @@
+{
+  "badge": "شبكة الرعاية الصحية العالمية",
+  "title": "شبكة أفضل المستشفيات",
+  "subtitle": "نقوم بفحص المستشفيات بدقة قبل إضافتها إلى لوحتنا، مما يضمن حصولك على أفضل رعاية. لدينا معرفة متعمقة بالمستشفيات في كل دولة نعمل فيها.",
+  "viewDetails": "عرض التفاصيل",
+  "countries": {
+    "india": "الهند",
+    "turkey": "تركيا",
+    "uae": "الإمارات",
+    "thailand": "تايلاند",
+    "germany": "ألمانيا",
+    "egypt": "مصر"
+  },
+  "hospitals": {
+    "medanta-gurgaon": "ميدانتا، جورجاون",
+    "indraprastha-apollo-hospital-new-delhi": "إندرابراستا أبولو، نيودلهي",
+    "kokilaben-hospital-mumbai": "كوكيلابين، مومباي",
+    "apollo-hospital-chennai": "أبولو، تشيناي",
+    "medical-park-istanbul": "ميديكال بارك، إسطنبول",
+    "memorial-hospitals-istanbul": "ميموريال، إسطنبول",
+    "burjeel-abu-dhabi": "برجيل، أبوظبي",
+    "saudi-german-dubai": "السعودي الألماني، دبي",
+    "bumrungrad-bangkok": "بومرونجراد، بانكوك",
+    "bangkok-hospital-bangkok": "بانكوك، بانكوك",
+    "charite-berlin": "شاريتيه، برلين",
+    "heidelberg-university-heidelberg": "جامعة هايدلبرغ، هايدلبرغ",
+    "arab-contractors-medical-centre-cairo": "المقاولون العرب، القاهرة",
+    "as-salam-international-hospital-cairo": "السلام الدولي، القاهرة"
+  }
+}

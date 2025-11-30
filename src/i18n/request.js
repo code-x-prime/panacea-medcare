@@ -12,6 +12,8 @@ export default getRequestConfig(async ({ locale }) => {
     destinations: (await import(`../../messages/${validLocale}/destinations.json`)).default,
     specialties: (await import(`../../messages/${validLocale}/specialties.json`)).default,
     whyChoose: (await import(`../../messages/${validLocale}/whyChoose.json`)).default,
+    hospitalDetail: (await import(`../../messages/${validLocale}/hospitalDetail.json`)).default,
+    networkHospitals: (await import(`../../messages/${validLocale}/networkHospitals.json`)).default,
   };
 
   return {

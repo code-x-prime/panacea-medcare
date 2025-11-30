@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "getQuote": "احصل على عرض أسعار مجاني",
+    "bookConsultation": "احجز استشارة",
+    "established": "تأسست",
+    "beds": "أسرة",
+    "specialists": "متخصصون"
+  },
+  "overview": {
+    "title": "عن المستشفى",
+    "accreditations": "الاعتمادات والشهادات"
+  },
+  "specialties": {
+    "title": "التخصصات الطبية",
+    "subtitle": "علاج عالمي المستوى عبر تخصصات متعددة"
+  },
+  "facilities": {
+    "title": "المرافق والخدمات",
+    "subtitle": "بنية تحتية حديثة لرعاية المرضى"
+  },
+  "doctors": {
+    "title": "أطباؤنا الخبراء",
+    "subtitle": "متخصصون مدربون دوليًا بخبرة عقود",
+    "viewProfile": "عرض الملف الشخصي",
+    "experience": "سنوات من الخبرة"
+  },
+  "contact": {
+    "title": "احصل على خطة العلاج المجانية الخاصة بك",
+    "subtitle": "سيساعدك منسقونا الطبيون في التخطيط لعلاجك",
+    "location": "الموقع",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "hours": "ساعات العمل"
+  },
+  "stats": {
+    "patientsServed": "المرضى المخدومون سنويًا",
+    "successRate": "معدل النجاح",
+    "departments": "الأقسام",
+    "internationalPatients": "المرضى الدوليون"
+  }
+}

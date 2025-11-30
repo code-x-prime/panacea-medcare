@@ -18,7 +18,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en" dir="ltr">
       <body className={`${raleway.variable} font-sans overflow-x-hidden`}>
         <LocaleProvider>{children}</LocaleProvider>
         <Toaster />

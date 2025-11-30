@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "getQuote": "Get Free Quote",
+    "bookConsultation": "Book Consultation",
+    "established": "Established",
+    "beds": "Beds",
+    "specialists": "Specialists"
+  },
+  "overview": {
+    "title": "About the Hospital",
+    "accreditations": "Accreditations & Certifications"
+  },
+  "specialties": {
+    "title": "Medical Specialties",
+    "subtitle": "World-class treatment across multiple specialties"
+  },
+  "facilities": {
+    "title": "Facilities & Amenities",
+    "subtitle": "State-of-the-art infrastructure for patient care"
+  },
+  "doctors": {
+    "title": "Our Expert Doctors",
+    "subtitle": "Internationally trained specialists with decades of experience",
+    "viewProfile": "View Profile",
+    "experience": "years experience"
+  },
+  "contact": {
+    "title": "Get Your Free Treatment Plan",
+    "subtitle": "Our medical coordinators will help you plan your treatment",
+    "location": "Location",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Operating Hours"
+  },
+  "stats": {
+    "patientsServed": "Patients Served Annually",
+    "successRate": "Success Rate",
+    "departments": "Departments",
+    "internationalPatients": "International Patients"
+  }
+}

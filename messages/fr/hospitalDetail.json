@@ -1,0 +1,41 @@
+{
+  "hero": {
+    "getQuote": "Obtenir un devis gratuit",
+    "bookConsultation": "Réserver une consultation",
+    "established": "Établi",
+    "beds": "Lits",
+    "specialists": "Spécialistes"
+  },
+  "overview": {
+    "title": "À propos de l'hôpital",
+    "accreditations": "Accréditations et certifications"
+  },
+  "specialties": {
+    "title": "Spécialités médicales",
+    "subtitle": "Traitement de classe mondiale dans plusieurs spécialités"
+  },
+  "facilities": {
+    "title": "Installations et commodités",
+    "subtitle": "Infrastructure de pointe pour les soins aux patients"
+  },
+  "doctors": {
+    "title": "Nos médecins experts",
+    "subtitle": "Spécialistes formés à l'international avec des décennies d'expérience",
+    "viewProfile": "Voir le profil",
+    "experience": "années d'expérience"
+  },
+  "contact": {
+    "title": "Obtenez votre plan de traitement gratuit",
+    "subtitle": "Nos coordinateurs médicaux vous aideront à planifier votre traitement",
+    "location": "Emplacement",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "hours": "Heures d'ouverture"
+  },
+  "stats": {
+    "patientsServed": "Patients servis annuellement",
+    "successRate": "Taux de réussite",
+    "departments": "Départements",
+    "internationalPatients": "Patients internationaux"
+  }
+}

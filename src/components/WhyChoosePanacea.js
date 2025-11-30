@@ -4,10 +4,18 @@ import { useTranslations } from "next-intl";
 import { Users, Globe, Award, Heart, Shield, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function WhyChoosePanacea({ locale }) {
     const t = useTranslations("whyChoose");
     const isRTL = locale === "ar";
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (containerRef.current && isRTL && window.innerWidth >= 1024) {
+            containerRef.current.style.flexDirection = 'row-reverse';
+        }
+    }, [isRTL]);
 
     const features = [
         { icon: Users, key: "feature1" },
@@ -20,7 +28,6 @@ export default function WhyChoosePanacea({ locale }) {
     return (
         <section
             className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-teal-50 relative overflow-hidden"
-            dir={isRTL ? "rtl" : "ltr"}
         >
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
@@ -31,10 +38,13 @@ export default function WhyChoosePanacea({ locale }) {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className={`grid lg:grid-cols-2 gap-16 items-center ${isRTL ? "lg:grid-flow-dense" : ""}`}>
+                <div
+                    ref={containerRef}
+                    className="flex flex-col lg:flex-row gap-16 items-center"
+                >
 
                     {/* Left Side - Image Section */}
-                    <div className={`relative ${isRTL ? "lg:col-start-2" : ""}`}>
+                    <div className="relative flex-1">
                         {/* Main Image Container */}
                         <div className="relative">
                             {/* Decorative Background Shape */}
@@ -79,7 +89,7 @@ export default function WhyChoosePanacea({ locale }) {
                     </div>
 
                     {/* Right Side - Content */}
-                    <div className={`${isRTL ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+                    <div className="flex-1">
                         {/* Badge */}
                         <div className="inline-block mb-6">
                             <span className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold border-2 border-teal-200">

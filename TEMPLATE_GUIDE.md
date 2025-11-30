@@ -33,7 +33,7 @@ export default function YourComponent({ locale }) {
 
   return (
     <section
-      className="py-12"
+      className="py-12 md:py-16"
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="container mx-auto px-4">

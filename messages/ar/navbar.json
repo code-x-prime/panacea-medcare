@@ -28,7 +28,7 @@
       { "name": "التكلفة", "type": "mega", "key": "cost" },
       { "name": "المعرفة", "type": "dropdown", "key": "knowledge" },
       { "name": "قصص المرضى", "slug": "/patient-stories" },
-      { "name": "استشارة مجانية", "slug": "/free-consult" }
+      { "name": "استشارة مجانية", "slug": "/consult-online" }
     ],
     "hospitals": [
       {

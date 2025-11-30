@@ -28,7 +28,7 @@
       { "name": "Coût", "type": "mega", "key": "cost" },
       { "name": "Connaissance", "type": "dropdown", "key": "knowledge" },
       { "name": "Histoires de patients", "slug": "/patient-stories" },
-      { "name": "Consultation Gratuite", "slug": "/free-consult" }
+      { "name": "Consultation Gratuite", "slug": "/consult-online" }
     ],
     "hospitals": [
       {

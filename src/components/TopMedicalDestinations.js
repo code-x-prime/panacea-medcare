@@ -71,7 +71,7 @@ export default function TopMedicalDestinations({ locale }) {
     return (
         <>
             <section
-                className="py-16 bg-gradient-to-br from-gray-50 via-white to-teal-50 relative overflow-hidden"
+                className="py-12 md:py-16 bg-gradient-to-br from-gray-50 via-white to-teal-50 relative overflow-hidden"
                 dir={isRTL ? "rtl" : "ltr"}
             >
                 {/* Background Decoration */}
@@ -86,7 +86,7 @@ export default function TopMedicalDestinations({ locale }) {
                                 {t("badge")}
                             </span>
                         </div>
-                        <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
                             {t("title")}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

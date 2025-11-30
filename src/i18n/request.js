@@ -1,34 +1,21 @@
 import { getRequestConfig } from "next-intl/server";
 
-var locales = ["en", "ar", "fr"];
+const locales = ["en", "ar", "fr"];
 
 export default getRequestConfig(async ({ locale }) => {
-  var validLocale = locales.includes(locale) ? locale : "en";
+  const validLocale = locales.includes(locale) ? locale : "en";
 
-  var navbarMessages = (
-    await import("../../messages/" + validLocale + "/navbar.json")
-  ).default;
-  var quoteFormMessages = (
-    await import("../../messages/" + validLocale + "/quoteForm.json")
-  ).default;
-  var homeMessages = (
-    await import("../../messages/" + validLocale + "/home.json")
-  ).default;
-  var destinationsMessages = (
-    await import("../../messages/" + validLocale + "/destinations.json")
-  ).default;
-  var specialtiesMessages = (
-    await import("../../messages/" + validLocale + "/specialties.json")
-  ).default;
+  const messages = {
+    navbar: (await import(`../../messages/${validLocale}/navbar.json`)).default,
+    quoteForm: (await import(`../../messages/${validLocale}/quoteForm.json`)).default,
+    home: (await import(`../../messages/${validLocale}/home.json`)).default,
+    destinations: (await import(`../../messages/${validLocale}/destinations.json`)).default,
+    specialties: (await import(`../../messages/${validLocale}/specialties.json`)).default,
+    whyChoose: (await import(`../../messages/${validLocale}/whyChoose.json`)).default,
+  };
 
   return {
     locale: validLocale,
-    messages: {
-      navbar: navbarMessages,
-      quoteForm: quoteFormMessages,
-      home: homeMessages,
-      destinations: destinationsMessages,
-      specialties: specialtiesMessages,
-    },
+    messages,
   };
 });

@@ -57,7 +57,7 @@ export default function MultiSpecialtyFocus({ locale }) {
     return (
         <>
             <section
-                className="py-16 bg-white"
+                className="py-12 md:py-16 bg-white"
                 dir={isRTL ? "rtl" : "ltr"}
             >
                 <div className="container mx-auto px-4">
@@ -68,7 +68,7 @@ export default function MultiSpecialtyFocus({ locale }) {
                                 {t("badge")}
                             </span>
                         </div>
-                        <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
                             {t("title")}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">

@@ -107,7 +107,7 @@ export default function Header({ locale }) {
                 }
               >
                 <Link
-                  href={"/" + locale + "/free-consult"}
+                  href={"/" + locale + "/consult-online"}
                   className={
                     "bg-teal-500 hover:bg-teal-400 px-4 py-1.5 rounded-full font-semibold transition-all duration-200 flex items-center gap-2 text-xs " +
                     (isRTL ? "flex-row-reverse" : "")

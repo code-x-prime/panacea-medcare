@@ -111,7 +111,7 @@ export default function NetworkOfTopHospitals({ locale }) {
 
     return (
         <section
-            className="py-16 md:py-20 bg-gradient-to-br from-gray-50 via-white to-panacea-light/20"
+            className=" py-12 md:py-16  bg-gradient-to-br from-gray-50 via-white to-panacea-light/20"
             dir={isRTL ? "rtl" : "ltr"}
         >
             <div className="container mx-auto px-4 max-w-7xl">

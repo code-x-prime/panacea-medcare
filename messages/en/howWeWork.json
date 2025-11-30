@@ -1,0 +1,26 @@
+{
+  "badge": "Our Process",
+  "title": "Your Medical Journey Made Simple",
+  "subtitle": "From initial consultation to complete recovery, we guide you through every step of your healthcare experience.",
+  "getStarted": "Get Started",
+  "chatWithUs": "Chat with Us",
+  "videoTitle": "Watch How We Help Patients",
+  "steps": {
+    "step1": {
+      "title": "Share Your Medical Needs",
+      "description": "Connect with us and share your health concerns. Our expert team will reach out within hours."
+    },
+    "step2": {
+      "title": "Receive Expert Consultation",
+      "description": "Get detailed medical opinions and transparent cost estimates within 48 hours from top specialists."
+    },
+    "step3": {
+      "title": "Travel Arrangements",
+      "description": "We handle all logistics - flights, accommodation, and airport reception for a seamless experience."
+    },
+    "step4": {
+      "title": "Treatment & Aftercare",
+      "description": "Receive world-class treatment and comprehensive follow-up care throughout your recovery journey."
+    }
+  }
+}

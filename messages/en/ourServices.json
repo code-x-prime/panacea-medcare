@@ -1,0 +1,45 @@
+{
+  "badge": "Complete Care Solutions",
+  "title": "Comprehensive Services for Your Healthcare Journey",
+  "subtitle": "Our dedicated care managers provide personalized assistance at every stage. All services are complimentary - you only pay for your medical treatment.",
+  "chatWithUs": "Chat with Us",
+  "freeNotice": "All our services are FREE - your hospital bill remains unchanged!",
+  "services": {
+    "medicalOpinion": {
+      "title": "Medical Opinion & Cost Analysis",
+      "description": "Receive expert medical opinions and detailed cost breakdowns from leading specialists."
+    },
+    "preTravelConsult": {
+      "title": "Pre-Travel Consultation",
+      "description": "Comprehensive guidance about your procedure, preparation, and what to expect during your visit."
+    },
+    "visaSupport": {
+      "title": "Visa Assistance",
+      "description": "Complete medical visa support and documentation assistance for hassle-free travel."
+    },
+    "currencyExchange": {
+      "title": "Currency Exchange",
+      "description": "Convenient currency exchange services available at competitive rates in your destination city."
+    },
+    "interpreters": {
+      "title": "Language Interpreters",
+      "description": "Professional interpreters to ensure clear communication with medical staff at all times."
+    },
+    "transportation": {
+      "title": "Transportation Services",
+      "description": "Complimentary airport transfers and local transportation for all medical appointments."
+    },
+    "accommodation": {
+      "title": "Accommodation Arrangements",
+      "description": "Comfortable lodging options near hospitals, tailored to your budget and preferences."
+    },
+    "admissionSupport": {
+      "title": "Hospital Coordination",
+      "description": "Complete assistance with hospital admission, appointments, and pharmacy needs."
+    },
+    "nursingCare": {
+      "title": "Private Nursing Care",
+      "description": "Arrangements for dedicated private nursing care when medically required."
+    }
+  }
+}

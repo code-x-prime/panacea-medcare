@@ -1,0 +1,26 @@
+{
+  "badge": "Notre processus",
+  "title": "Votre parcours médical simplifié",
+  "subtitle": "De la consultation initiale à la guérison complète, nous vous guidons à chaque étape de votre expérience de santé.",
+  "getStarted": "Commencer",
+  "chatWithUs": "Discutez avec nous",
+  "videoTitle": "Découvrez comment nous aidons les patients",
+  "steps": {
+    "step1": {
+      "title": "Partagez vos besoins médicaux",
+      "description": "Contactez-nous et partagez vos préoccupations de santé. Notre équipe d'experts vous contactera dans les heures qui suivent."
+    },
+    "step2": {
+      "title": "Recevez une consultation d'expert",
+      "description": "Obtenez des avis médicaux détaillés et des estimations de coûts transparentes dans les 48 heures auprès de spécialistes de premier plan."
+    },
+    "step3": {
+      "title": "Arrangements de voyage",
+      "description": "Nous gérons toute la logistique - vols, hébergement et accueil à l'aéroport pour une expérience sans faille."
+    },
+    "step4": {
+      "title": "Traitement et suivi",
+      "description": "Recevez un traitement de classe mondiale et des soins de suivi complets tout au long de votre parcours de guérison."
+    }
+  }
+}

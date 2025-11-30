@@ -1,0 +1,45 @@
+{
+  "badge": "Solutions de soins complets",
+  "title": "Services complets pour votre parcours de santé",
+  "subtitle": "Nos gestionnaires de soins dédiés fournissent une assistance personnalisée à chaque étape. Tous les services sont gratuits - vous ne payez que pour votre traitement médical.",
+  "chatWithUs": "Discutez avec nous",
+  "freeNotice": "Tous nos services sont GRATUITS - votre facture d'hôpital reste inchangée!",
+  "services": {
+    "medicalOpinion": {
+      "title": "Avis médical et analyse des coûts",
+      "description": "Recevez des avis médicaux d'experts et des détails de coûts complets de spécialistes de premier plan."
+    },
+    "preTravelConsult": {
+      "title": "Consultation pré-voyage",
+      "description": "Conseils complets sur votre procédure, la préparation et ce à quoi vous attendre lors de votre visite."
+    },
+    "visaSupport": {
+      "title": "Assistance visa",
+      "description": "Support complet pour visa médical et assistance documentaire pour un voyage sans tracas."
+    },
+    "currencyExchange": {
+      "title": "Change de devises",
+      "description": "Services de change pratiques disponibles à des tarifs compétitifs dans votre ville de destination."
+    },
+    "interpreters": {
+      "title": "Interprètes linguistiques",
+      "description": "Interprètes professionnels pour assurer une communication claire avec le personnel médical en tout temps."
+    },
+    "transportation": {
+      "title": "Services de transport",
+      "description": "Transferts aéroport gratuits et transport local pour tous les rendez-vous médicaux."
+    },
+    "accommodation": {
+      "title": "Arrangements d'hébergement",
+      "description": "Options de logement confortables près des hôpitaux, adaptées à votre budget et vos préférences."
+    },
+    "admissionSupport": {
+      "title": "Coordination hospitalière",
+      "description": "Assistance complète pour l'admission à l'hôpital, les rendez-vous et les besoins en pharmacie."
+    },
+    "nursingCare": {
+      "title": "Soins infirmiers privés",
+      "description": "Arrangements pour des soins infirmiers privés dédiés lorsque médicalement requis."
+    }
+  }
+}

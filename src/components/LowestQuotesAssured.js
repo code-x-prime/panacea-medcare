@@ -43,7 +43,7 @@ export default function LowestQuotesAssured({ locale }) {
 
     return (
         <section
-            className="py-16 md:py-20 bg-gradient-to-br from-white via-gray-50 to-panacea-light/20"
+            className=" py-12 md:py-16  bg-gradient-to-br from-white via-gray-50 to-panacea-light/20"
             dir={isRTL ? "rtl" : "ltr"}
         >
             <div className="container mx-auto px-4 max-w-7xl">
@@ -114,7 +114,7 @@ export default function LowestQuotesAssured({ locale }) {
                             {t("contactHospital")}
                         </button>
                         <button className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2">
-                           <FaWhatsapp className="w-5 h-5" />
+                            <FaWhatsapp className="w-5 h-5" />
                             <span>{t("chat")}</span>
                         </button>
                     </div>

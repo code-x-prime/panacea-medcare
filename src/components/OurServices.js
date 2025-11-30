@@ -19,15 +19,51 @@ export default function OurServices({ locale }) {
     const isRTL = locale === "ar";
 
     const services = [
-        { id: "medicalOpinion", icon: FileText },
-        { id: "preTravelConsult", icon: Plane },
-        { id: "visaSupport", icon: ClipboardList },
-        { id: "currencyExchange", icon: DollarSign },
-        { id: "interpreters", icon: Languages },
-        { id: "transportation", icon: Car },
-        { id: "accommodation", icon: Home },
-        { id: "admissionSupport", icon: CreditCard },
-        { id: "nursingCare", icon: HeartPulse },
+        {
+            id: "medicalOpinion",
+            icon: FileText,
+            image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop"
+        },
+        {
+            id: "preTravelConsult",
+            icon: Plane,
+            image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop"
+        },
+        {
+            id: "visaSupport",
+            icon: ClipboardList,
+            image: "https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=400&h=300&fit=crop"
+        },
+        {
+            id: "currencyExchange",
+            icon: DollarSign,
+            image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=300&fit=crop"
+        },
+        {
+            id: "interpreters",
+            icon: Languages,
+            image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop"
+        },
+        {
+            id: "transportation",
+            icon: Car,
+            image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&h=300&fit=crop"
+        },
+        {
+            id: "accommodation",
+            icon: Home,
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
+        },
+        {
+            id: "admissionSupport",
+            icon: CreditCard,
+            image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400&h=300&fit=crop"
+        },
+        {
+            id: "nursingCare",
+            icon: HeartPulse,
+            image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop"
+        },
     ];
 
     return (
@@ -51,29 +87,43 @@ export default function OurServices({ locale }) {
                     </p>
                 </div>
 
-                {/* Services Grid */}
+                {/* Services Grid with Background Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     {services.map((service, idx) => {
                         const IconComponent = service.icon;
                         return (
                             <div
                                 key={idx}
-                                className="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                                className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 min-h-[220px]"
                             >
-                                {/* Icon */}
-                                <div className="w-14 h-14 bg-panacea-light rounded-xl flex items-center justify-center mb-4 group-hover:bg-panacea-primary/10 transition-colors duration-300">
-                                    <IconComponent className="w-7 h-7 text-panacea-primary" />
+                                {/* Background Image with Overlay */}
+                                <div
+                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                    style={{
+                                        backgroundImage: `url(${service.image})`,
+                                    }}
+                                >
+                                    {/* Gradient Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white/80 to-panacea-light/70 group-hover:from-white/90 group-hover:via-white/85 group-hover:to-panacea-light/70 transition-all duration-500"></div>
                                 </div>
 
-                                {/* Service Title */}
-                                <h3 className={`text-lg md:text-xl font-bold text-gray-900 mb-3 ${isRTL ? "text-right" : "text-left"}`}>
-                                    {t(`services.${service.id}.title`)}
-                                </h3>
+                                {/* Content */}
+                                <div className="relative p-6 h-full flex flex-col">
+                                    {/* Icon */}
+                                    <div className="w-14 h-14 bg-gradient-to-br from-panacea-primary to-panacea-dark rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                        <IconComponent className="w-7 h-7 text-white" />
+                                    </div>
 
-                                {/* Service Description */}
-                                <p className={`text-gray-600 leading-relaxed ${isRTL ? "text-right" : "text-left"}`}>
-                                    {t(`services.${service.id}.description`)}
-                                </p>
+                                    {/* Service Title */}
+                                    <h3 className={`text-lg md:text-xl font-bold text-gray-900 mb-3 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t(`services.${service.id}.title`)}
+                                    </h3>
+
+                                    {/* Service Description */}
+                                    <p className={`text-gray-700 leading-relaxed flex-1 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t(`services.${service.id}.description`)}
+                                    </p>
+                                </div>
                             </div>
                         );
                     })}

@@ -198,8 +198,8 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-white max-h-[200px]">
-                {phoneCodes.map((code) => (
-                  <SelectItem key={code.value} value={code.value}>
+                {phoneCodes.map((code, index) => (
+                  <SelectItem key={`phone-${index}`} value={code.value}>
                     {code.label}
                   </SelectItem>
                 ))}

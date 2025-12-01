@@ -10,6 +10,13 @@ export default async function TestimonialsPage() {
     },
   });
 
+  // Serialize dates to prevent hydration errors
+  const serializedTestimonials = testimonials.map(t => ({
+    ...t,
+    createdAt: t.createdAt.toISOString(),
+    updatedAt: t.updatedAt.toISOString(),
+  }));
+
   return (
     <div className="space-y-6">
       <div>
@@ -17,7 +24,7 @@ export default async function TestimonialsPage() {
         <p className="text-gray-500 mt-1">Manage patient reviews and testimonials.</p>
       </div>
 
-      <TestimonialList testimonials={testimonials} />
+      <TestimonialList testimonials={serializedTestimonials} />
     </div>
   );
 }

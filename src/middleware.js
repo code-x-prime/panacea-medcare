@@ -1,5 +1,6 @@
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
+import { jwtVerify } from "jose";
 
 const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
@@ -12,10 +13,33 @@ const intlMiddleware = createMiddleware({
   localeDetection: true,
 });
 
-export default function middleware(request) {
+export default async function middleware(request) {
   const pathname = request.nextUrl.pathname;
 
-  // Skip middleware for admin routes
+  // Protect admin routes (except login page)
+  if (pathname.startsWith('/admin') && !pathname.startsWith('/n-admin')) {
+    const sessionToken = request.cookies.get('admin_session')?.value;
+
+    if (!sessionToken) {
+      // Redirect to login if no session
+      return NextResponse.redirect(new URL('/n-admin/auth', request.url));
+    }
+
+    try {
+      // Verify JWT token
+      const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+      await jwtVerify(sessionToken, secret);
+
+      // Token is valid, allow access
+      return NextResponse.next();
+    } catch (error) {
+      // Token is invalid, redirect to login
+      console.error('JWT verification failed:', error);
+      return NextResponse.redirect(new URL('/n-admin/auth', request.url));
+    }
+  }
+
+  // Skip intl middleware for all admin routes (including login)
   if (pathname.startsWith('/admin') || pathname.startsWith('/n-admin')) {
     return NextResponse.next();
   }

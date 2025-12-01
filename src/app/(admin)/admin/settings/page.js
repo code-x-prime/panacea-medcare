@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     User,
     Lock,
@@ -8,12 +8,33 @@ import {
     Save,
     Shield,
     Mail,
-    Globe
+    Globe,
+    PlayCircle
 } from "lucide-react";
 
 export default function SettingsPage() {
     const [activeTab, setActiveTab] = useState("profile");
     const [isLoading, setIsLoading] = useState(false);
+    const [autoplayEnabled, setAutoplayEnabled] = useState(true);
+    const [loadingSettings, setLoadingSettings] = useState(true);
+
+    useEffect(() => {
+        fetchSettings();
+    }, []);
+
+    const fetchSettings = async () => {
+        try {
+            const response = await fetch('/api/admin/settings');
+            if (response.ok) {
+                const data = await response.json();
+                setAutoplayEnabled(data.autoplayEnabled);
+            }
+        } catch (error) {
+            console.error('Error fetching settings:', error);
+        } finally {
+            setLoadingSettings(false);
+        }
+    };
 
     const handleSave = () => {
         setIsLoading(true);
@@ -22,6 +43,23 @@ export default function SettingsPage() {
             setIsLoading(false);
             alert("Settings saved successfully!");
         }, 1000);
+    };
+
+    const handleAutoplayToggle = async (enabled) => {
+        setAutoplayEnabled(enabled);
+        try {
+            const response = await fetch('/api/admin/settings', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ autoplayEnabled: enabled }),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to update settings');
+            }
+        } catch (error) {
+            console.error('Error updating autoplay:', error);
+            setAutoplayEnabled(!enabled);
+        }
     };
 
     return (
@@ -36,8 +74,8 @@ export default function SettingsPage() {
                     <button
                         onClick={() => setActiveTab("profile")}
                         className={`flex items-center gap-2 px-6 py-4 text-sm font-medium transition-colors relative ${activeTab === "profile"
-                                ? "text-panacea-primary"
-                                : "text-gray-500 hover:text-gray-700"
+                            ? "text-panacea-primary"
+                            : "text-gray-500 hover:text-gray-700"
                             }`}
                     >
                         <User className="w-4 h-4" />
@@ -49,8 +87,8 @@ export default function SettingsPage() {
                     <button
                         onClick={() => setActiveTab("security")}
                         className={`flex items-center gap-2 px-6 py-4 text-sm font-medium transition-colors relative ${activeTab === "security"
-                                ? "text-panacea-primary"
-                                : "text-gray-500 hover:text-gray-700"
+                            ? "text-panacea-primary"
+                            : "text-gray-500 hover:text-gray-700"
                             }`}
                     >
                         <Lock className="w-4 h-4" />
@@ -62,13 +100,26 @@ export default function SettingsPage() {
                     <button
                         onClick={() => setActiveTab("notifications")}
                         className={`flex items-center gap-2 px-6 py-4 text-sm font-medium transition-colors relative ${activeTab === "notifications"
-                                ? "text-panacea-primary"
-                                : "text-gray-500 hover:text-gray-700"
+                            ? "text-panacea-primary"
+                            : "text-gray-500 hover:text-gray-700"
                             }`}
                     >
                         <Bell className="w-4 h-4" />
                         Notifications
                         {activeTab === "notifications" && (
+                            <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-panacea-primary" />
+                        )}
+                    </button>
+                    <button
+                        onClick={() => setActiveTab("carousel")}
+                        className={`flex items-center gap-2 px-6 py-4 text-sm font-medium transition-colors relative ${activeTab === "carousel"
+                            ? "text-panacea-primary"
+                            : "text-gray-500 hover:text-gray-700"
+                            }`}
+                    >
+                        <PlayCircle className="w-4 h-4" />
+                        Carousel
+                        {activeTab === "carousel" && (
                             <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-panacea-primary" />
                         )}
                     </button>
@@ -200,6 +251,40 @@ export default function SettingsPage() {
                                     <label className="relative inline-flex items-center cursor-pointer">
                                         <input type="checkbox" className="sr-only peer" />
                                         <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-panacea-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-panacea-primary"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {activeTab === "carousel" && (
+                        <div className="space-y-6 max-w-2xl">
+                            <div className="p-4 bg-purple-50 rounded-xl border border-purple-100 flex gap-3">
+                                <PlayCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                                <div>
+                                    <h4 className="text-sm font-bold text-purple-900">Testimonials Carousel Settings</h4>
+                                    <p className="text-sm text-purple-700 mt-1">
+                                        Control how testimonials are displayed on the homepage. Autoplay will automatically scroll through testimonials every 2 seconds.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-4">
+                                <h3 className="text-lg font-medium text-gray-900">Display Settings</h3>
+                                <div className="flex items-center justify-between py-3 border-b border-gray-100">
+                                    <div>
+                                        <h4 className="text-sm font-medium text-gray-900">Enable Autoplay</h4>
+                                        <p className="text-sm text-gray-500">Automatically scroll through testimonials on the homepage.</p>
+                                    </div>
+                                    <label className="relative inline-flex items-center cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            className="sr-only peer"
+                                            checked={autoplayEnabled}
+                                            onChange={(e) => handleAutoplayToggle(e.target.checked)}
+                                            disabled={loadingSettings}
+                                        />
+                                        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-panacea-primary/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-panacea-primary peer-disabled:opacity-50"></div>
                                     </label>
                                 </div>
                             </div>

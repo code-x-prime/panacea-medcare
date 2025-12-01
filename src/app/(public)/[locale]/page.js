@@ -9,6 +9,7 @@ import FAQ from '@/components/FAQ';
 import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 export default function HomePage({ params }) {
   const { locale } = params;
@@ -24,6 +25,7 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
+      <TestimonialsCarousel />
       <FAQ locale={locale} />
     </div>
   );

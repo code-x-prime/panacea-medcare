@@ -14,13 +14,21 @@ model AdminUser {
 }
 
 model Testimonial {
-  id        Int      @id @default(autoincrement())
-  name      String
-  content   String
-  rating    Int      @default(5)
-  isVisible Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id          Int      @id @default(autoincrement())
+  name        String?
+  description String?
+  location    String?
+  image       String?
+  videoUrl    String?
+  rating      Int      @default(5)
+  isVisible   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Settings {
+  id              Int     @id @default(autoincrement())
+  autoplayEnabled Boolean @default(true)
 }
 
 model Lead {

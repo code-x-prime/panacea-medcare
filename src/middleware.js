@@ -13,9 +13,15 @@ const intlMiddleware = createMiddleware({
 });
 
 export default function middleware(request) {
+  const pathname = request.nextUrl.pathname;
+
+  // Skip middleware for admin routes
+  if (pathname.startsWith('/admin') || pathname.startsWith('/n-admin')) {
+    return NextResponse.next();
+  }
+
   // Check for saved locale in cookie
   const savedLocale = request.cookies.get("NEXT_LOCALE")?.value;
-  const pathname = request.nextUrl.pathname;
   const validLocales = ["en", "ar", "fr"];
 
   // If we have a saved locale and user is accessing root or a path without locale

@@ -187,7 +187,7 @@ export default function SettingsPage() {
                                 <div>
                                     <h4 className="text-sm font-bold text-blue-900">Secure Your Account</h4>
                                     <p className="text-sm text-blue-700 mt-1">
-                                        Two-factor authentication adds an extra layer of security to your account. To log in, you'll need to provide a 4 digit code.
+                                        Two-factor authentication adds an extra layer of security to your account. To log in, you&apos;ll need to provide a 4 digit code.
                                     </p>
                                 </div>
                             </div>

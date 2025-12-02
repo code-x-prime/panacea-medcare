@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { X, Upload, Star, Youtube, MapPin, User, FileText, Image as ImageIcon } from "lucide-react";
 import { FaStar } from "react-icons/fa";
+import Image from "next/image";
 
 // Convert embed URL back to watch URL for editing
 function convertEmbedToWatchUrl(url) {
@@ -158,9 +159,11 @@ export default function TestimonialForm({ testimonial, onClose, onSuccess }) {
             <div className="space-y-3">
               {imagePreview ? (
                 <div className="relative inline-block">
-                  <img
+                  <Image
                     src={imagePreview}
                     alt="Preview"
+                    width={128}
+                    height={128}
                     className="w-32 h-32 object-cover rounded-lg border-2 border-gray-200"
                   />
                   <button

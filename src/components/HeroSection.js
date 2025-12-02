@@ -2,6 +2,7 @@
 import { FcGoogle } from "react-icons/fc";
 import QuoteForm from "./QuoteForm";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export default function HeroSection({ locale }) {
   const t = useTranslations("home");
@@ -15,9 +16,11 @@ export default function HeroSection({ locale }) {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
           alt="Medical professionals"
+          width={2080}
+          height={1080}
           className="w-full h-full object-cover"
         />
         <div className={`absolute inset-0 ${isRTL
@@ -82,10 +85,10 @@ export default function HeroSection({ locale }) {
                   className={`flex ${isRTL ? "flex-row-reverse -space-x-reverse" : "-space-x-3"
                     }`}
                 >
-                  <img src="https://i.pravatar.cc/150?img=1" alt="" className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <img src="https://i.pravatar.cc/150?img=5" alt="" className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <img src="https://i.pravatar.cc/150?img=9" alt="" className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <img src="https://i.pravatar.cc/150?img=8" alt="" className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
+                  <Image src="https://i.pravatar.cc/150?img=1" alt="Patient 1" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
+                  <Image src="https://i.pravatar.cc/150?img=5" alt="Patient 2" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
+                  <Image src="https://i.pravatar.cc/150?img=9" alt="Patient 3" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
+                  <Image src="https://i.pravatar.cc/150?img=8" alt="Patient 4" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
                 </div>
                 <div className={isRTL ? "text-right" : "text-left"}>
                   <p className="text-base font-bold text-white leading-tight">

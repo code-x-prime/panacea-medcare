@@ -182,7 +182,7 @@ function TestimonialCard({ testimonial }) {
                         <div className="flex-1 mb-6 relative z-10">
                             {testimonial.description ? (
                                 <p className="text-gray-700 leading-relaxed italic line-clamp-4">
-                                    "{testimonial.description}"
+                                    &ldquo;{testimonial.description}&rdquo;
                                 </p>
                             ) : (
                                 <p className="text-gray-400 italic">No description provided</p>
@@ -286,7 +286,7 @@ function TestimonialCard({ testimonial }) {
                 <div className="flex-1 mb-6 relative z-10">
                     {testimonial.description ? (
                         <p className="text-gray-700 leading-relaxed italic">
-                            "{testimonial.description}"
+                            &ldquo;{testimonial.description}&rdquo;
                         </p>
                     ) : (
                         <p className="text-gray-400 italic">No description provided</p>

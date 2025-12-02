@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaStar, FaPlay } from "react-icons/fa";
+import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
 import {
     Carousel,
@@ -11,6 +11,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 export default function TestimonialsCarousel() {
     const [testimonials, setTestimonials] = useState([]);
@@ -45,7 +46,7 @@ export default function TestimonialsCarousel() {
 
     if (loading) {
         return (
-            <section className="py-16 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
+            <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
                 <div className="container mx-auto px-4">
                     <div className="text-center">
                         <div className="animate-pulse">
@@ -62,24 +63,31 @@ export default function TestimonialsCarousel() {
         return null;
     }
 
-    const plugins = autoplayEnabled ? [Autoplay({ delay: 2000 })] : [];
-    const showNavigation = testimonials.length > 3;
+    const plugins = autoplayEnabled ? [Autoplay({ delay: 4000, stopOnInteraction: false })] : [];
+    const showNavigation = testimonials.length > 2;
 
     return (
-        <section className="py-16 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50">
-            <div className="container mx-auto px-4">
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30 relative overflow-hidden">
+            {/* Decorative Background Elements */}
+            <div className="absolute top-0 left-0 w-64 h-64 bg-panacea-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-panacea-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+            <div className="max-w-7xl mx-auto px-4 relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                        Patient Testimonials
+                <div className="max-w-3xl mb-16">
+                    <p className="text-panacea-accent font-semibold mb-3 tracking-wide uppercase text-sm">
+                        Testimonials
+                    </p>
+                    <h2 className="text-4xl md:text-5xl font-bold text-panacea-dark mb-4">
+                        What our patients say
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 text-lg">
                         Hear from our satisfied patients about their experiences with Panacea MedCare
                     </p>
                 </div>
 
                 {/* Carousel */}
-                <div className="relative max-w-7xl mx-auto">
+                <div className="relative">
                     <Carousel
                         opts={{
                             align: "start",
@@ -88,11 +96,11 @@ export default function TestimonialsCarousel() {
                         plugins={plugins}
                         className="w-full"
                     >
-                        <CarouselContent className="-ml-2 md:-ml-4">
+                        <CarouselContent className="-ml-4">
                             {testimonials.map((testimonial) => (
                                 <CarouselItem
                                     key={testimonial.id}
-                                    className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                                    className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                                 >
                                     <TestimonialCard testimonial={testimonial} />
                                 </CarouselItem>
@@ -101,8 +109,8 @@ export default function TestimonialsCarousel() {
 
                         {showNavigation && (
                             <>
-                                <CarouselPrevious className="hidden md:flex -left-4 lg:-left-12 bg-white hover:bg-panacea-primary hover:text-white border-2 border-panacea-primary" />
-                                <CarouselNext className="hidden md:flex -right-4 lg:-right-12 bg-white hover:bg-panacea-primary hover:text-white border-2 border-panacea-primary" />
+                                <CarouselPrevious className="hidden lg:flex -left-6 bg-white hover:bg-panacea-primary hover:text-white border-2 border-gray-200 hover:border-panacea-primary shadow-lg transition-all" />
+                                <CarouselNext className="hidden lg:flex -right-6 bg-white hover:bg-panacea-primary hover:text-white border-2 border-gray-200 hover:border-panacea-primary shadow-lg transition-all" />
                             </>
                         )}
                     </Carousel>
@@ -115,93 +123,209 @@ export default function TestimonialsCarousel() {
 function TestimonialCard({ testimonial }) {
     const [showVideo, setShowVideo] = useState(false);
 
-    const hasMedia = testimonial.image || testimonial.videoUrl;
     const videoId = testimonial.videoUrl?.includes('embed/')
-        ? testimonial.videoUrl.split('embed/')[1]
+        ? testimonial.videoUrl.split('embed/')[1]?.split('?')[0]
         : null;
 
-    return (
-        <div className="group h-full">
-            {/* Gradient Border Card */}
-            <div className="relative bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-500 rounded-3xl p-[3px] h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-                <div className="bg-white rounded-3xl p-6 h-full flex flex-col">
-                    {/* Media Section */}
-                    {hasMedia && (
-                        <div className="mb-4 relative">
-                            {showVideo && videoId ? (
-                                <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                                        title="Testimonial Video"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="w-full h-full"
-                                    ></iframe>
-                                </div>
-                            ) : (
-                                <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-md">
-                                    {testimonial.image ? (
-                                        <img
-                                            src={testimonial.image}
-                                            alt={testimonial.name || "Patient"}
-                                            className="w-full h-full object-cover"
-                                        />
-                                    ) : (
-                                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-panacea-primary to-panacea-dark">
-                                            <span className="text-white text-5xl font-bold">
-                                                {testimonial.name?.charAt(0) || "?"}
-                                            </span>
-                                        </div>
-                                    )}
+    // Layout with video on left, details on right
+    if (testimonial.videoUrl && videoId) {
+        return (
+            <div className="group h-full">
+                <div className="bg-white rounded-2xl overflow-hidden h-full flex flex-col md:flex-row shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative">
+                    {/* Video Section - Left Side */}
+                    <div className="relative md:w-2/5 flex-shrink-0 bg-gray-900">
+                        <div className="aspect-video md:aspect-auto md:h-full relative">
+                            {/* Embedded Video */}
+                            <iframe
+                                src={`https://www.youtube.com/embed/${videoId}?controls=0&modestbranding=1&rel=0`}
+                                title="Video testimonial preview"
+                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                className="w-full h-full absolute inset-0"
+                            ></iframe>
 
-                                    {/* Play Button Overlay for Videos */}
-                                    {testimonial.videoUrl && !showVideo && (
-                                        <button
-                                            onClick={() => setShowVideo(true)}
-                                            className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/50 transition-all group"
-                                        >
-                                            <div className="bg-panacea-accent rounded-full p-5 group-hover:scale-110 transition-transform shadow-2xl">
-                                                <FaPlay className="w-6 h-6 text-white ml-1" />
-                                            </div>
-                                        </button>
-                                    )}
+                            {/* Play Button Overlay */}
+                            <button
+                                onClick={() => setShowVideo(true)}
+                                className="absolute inset-0 flex items-center justify-center group/play bg-black/30 hover:bg-black/50 transition-all duration-300"
+                                aria-label="Play video"
+                            >
+                                <div className="w-16 h-16 bg-panacea-accent rounded-full flex items-center justify-center shadow-2xl transform group-hover/play:scale-110 transition-transform duration-300">
+                                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                                    </svg>
                                 </div>
-                            )}
+                            </button>
                         </div>
-                    )}
-
-                    {/* Name and Title */}
-                    <div className="mb-3">
-                        <h3 className="font-bold text-lg text-panacea-dark mb-1 line-clamp-1">
-                            {testimonial.name || "Patient Testimonial"}
-                        </h3>
-                        {testimonial.location && (
-                            <div className="flex items-center gap-1 text-sm text-gray-600">
-                                <MdLocationOn className="w-4 h-4 text-panacea-primary" />
-                                <span>{testimonial.location}</span>
-                            </div>
-                        )}
                     </div>
 
-                    {/* Rating */}
-                    <div className="flex gap-1 mb-3">
+                    {/* Details Section - Right Side */}
+                    <div className="flex-1 p-6 md:p-8 flex flex-col">
+                        {/* Quote Icon */}
+                        <div className="absolute top-4 right-4 text-panacea-accent/10">
+                            <FaQuoteLeft className="w-10 h-10" />
+                        </div>
+
+                        {/* Rating */}
+                        <div className="flex gap-1 mb-4 relative z-10">
+                            {[...Array(5)].map((_, i) => (
+                                <FaStar
+                                    key={i}
+                                    className={`w-4 h-4 ${i < (testimonial.rating || 5)
+                                        ? "text-yellow-400"
+                                        : "text-gray-300"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+
+                        {/* Description */}
+                        <div className="flex-1 mb-6 relative z-10">
+                            {testimonial.description ? (
+                                <p className="text-gray-700 leading-relaxed italic line-clamp-4">
+                                    "{testimonial.description}"
+                                </p>
+                            ) : (
+                                <p className="text-gray-400 italic">No description provided</p>
+                            )}
+                        </div>
+
+                        {/* Author Section */}
+                        <div className="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                            {/* Avatar */}
+                            <div className="relative flex-shrink-0">
+                                {testimonial.image ? (
+                                    <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-panacea-primary/20">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.name || "Patient"}
+                                            width={48}
+                                            height={48}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-panacea-primary to-panacea-dark text-white flex items-center justify-center font-bold text-lg ring-2 ring-panacea-primary/20">
+                                        {testimonial.name?.charAt(0) || "?"}
+                                    </div>
+                                )}
+                            </div>
+
+                            {/* Name and Location */}
+                            <div className="flex-1 min-w-0">
+                                <h4 className="font-bold text-panacea-dark truncate">
+                                    {testimonial.name || "Anonymous"}
+                                </h4>
+                                {testimonial.location && (
+                                    <div className="flex items-center gap-1 text-sm text-panacea-accent mt-1">
+                                        <MdLocationOn className="w-4 h-4 flex-shrink-0" />
+                                        <span className="truncate">{testimonial.location}</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Video Modal */}
+                    {showVideo && (
+                        <div
+                            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                            onClick={() => setShowVideo(false)}
+                        >
+                            <div
+                                className="relative w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <button
+                                    onClick={() => setShowVideo(false)}
+                                    className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white z-10 backdrop-blur-sm"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                                    title="Testimonial Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full h-full"
+                                ></iframe>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    }
+
+    // Default layout for testimonials without video
+    return (
+        <div className="group h-full">
+            <div className="bg-white rounded-2xl p-8 h-full flex flex-col shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative overflow-hidden">
+                {/* Quote Icon */}
+                <div className="absolute top-6 right-6 text-panacea-accent/10">
+                    <FaQuoteLeft className="w-12 h-12" />
+                </div>
+
+                {/* Rating */}
+                <div className="flex items-center justify-between mb-4 relative z-10">
+                    <div className="flex gap-1">
                         {[...Array(5)].map((_, i) => (
                             <FaStar
                                 key={i}
                                 className={`w-4 h-4 ${i < (testimonial.rating || 5)
-                                        ? "text-yellow-400"
-                                        : "text-gray-300"
+                                    ? "text-yellow-400"
+                                    : "text-gray-300"
                                     }`}
                             />
                         ))}
                     </div>
+                </div>
 
-                    {/* Description */}
-                    {testimonial.description && (
-                        <p className="text-gray-700 text-sm leading-relaxed flex-1 line-clamp-3">
+                {/* Description */}
+                <div className="flex-1 mb-6 relative z-10">
+                    {testimonial.description ? (
+                        <p className="text-gray-700 leading-relaxed italic">
                             "{testimonial.description}"
                         </p>
+                    ) : (
+                        <p className="text-gray-400 italic">No description provided</p>
                     )}
+                </div>
+
+                {/* Author Section */}
+                <div className="flex items-center gap-4 pt-6 border-t border-gray-100 relative z-10">
+                    {/* Avatar */}
+                    <div className="relative flex-shrink-0">
+                        {testimonial.image ? (
+                            <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-panacea-primary/20">
+                                <Image
+                                    src={testimonial.image}
+                                    alt={testimonial.name || "Patient"}
+                                    width={56}
+                                    height={56}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        ) : (
+                            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-panacea-primary to-panacea-dark text-white flex items-center justify-center font-bold text-xl ring-2 ring-panacea-primary/20">
+                                {testimonial.name?.charAt(0) || "?"}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Name and Location */}
+                    <div className="flex-1 min-w-0">
+                        <h4 className="font-bold text-panacea-dark truncate">
+                            {testimonial.name || "Anonymous"}
+                        </h4>
+                        {testimonial.location && (
+                            <div className="flex items-center gap-1 text-sm text-panacea-accent mt-1">
+                                <MdLocationOn className="w-4 h-4 flex-shrink-0" />
+                                <span className="truncate">{testimonial.location}</span>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,8 @@
+{
+  "title": "Chat Support",
+  "subtitle": "Online now",
+  "welcomeTitle": "Hello there!",
+  "welcomeMessage": "How can I help you today?",
+  "inputPlaceholder": "Type your message...",
+  "errorMessage": "Sorry, I encountered an error."
+}

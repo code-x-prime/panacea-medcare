@@ -20,6 +20,7 @@ export default getRequestConfig(async ({ locale }) => {
     faq: (await import(`../../messages/${validLocale}/faq.json`)).default,
     footer: (await import(`../../messages/${validLocale}/footer.json`)).default,
     notFound: (await import(`../../messages/${validLocale}/notFound.json`)).default,
+    chatbot: (await import(`../../messages/${validLocale}/chatbot.json`)).default,
   };
 
   return {

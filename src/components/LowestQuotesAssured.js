@@ -63,7 +63,7 @@ export default function LowestQuotesAssured({ locale }) {
                 </div>
 
                 {/* Treatment Cards Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-2 mb-12">
                     {treatments.map((treatment, idx) => {
                         const IconComponent = treatment.icon;
                         return (

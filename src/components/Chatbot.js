@@ -83,7 +83,7 @@ export default function Chatbot({ locale }) {
       {/* Chat Window */}
       {isOpen && (
         <div
-          className={`fixed bottom-24 ${isRTL ? 'left-4' : 'right-4'} w-[380px] h-[600px] bg-white rounded-3xl shadow-2xl flex flex-col z-50 border border-gray-100 overflow-hidden`}
+          className={`fixed bottom-24 ${isRTL ? 'left-4' : 'right-4'} w-[320px] sm:w-[350px] md:w-[400px] h-[600px] bg-white rounded-3xl shadow-2xl flex flex-col z-50 border border-gray-100 overflow-hidden`}
           dir={isRTL ? "rtl" : "ltr"}
         >
           {/* Header */}
@@ -136,8 +136,8 @@ export default function Chatbot({ locale }) {
                 )}
                 <div
                   className={`max-w-[75%] px-4 py-3 rounded-2xl shadow-sm ${msg.role === 'user'
-                      ? 'bg-gradient-to-r from-panacea-primary to-panacea-dark text-white rounded-br-sm'
-                      : 'bg-white text-gray-800 border border-gray-100 rounded-bl-sm'
+                    ? 'bg-gradient-to-r from-panacea-primary to-panacea-dark text-white rounded-br-sm'
+                    : 'bg-white text-gray-800 border border-gray-100 rounded-bl-sm'
                     } ${isRTL ? 'text-right' : 'text-left'}`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.content}</p>
@@ -181,7 +181,7 @@ export default function Chatbot({ locale }) {
               />
               <button
                 type="button"
-                className="text-gray-400 hover:text-panacea-primary transition-colors"
+                className="text-gray-400 hover:text-panacea-primary transition-colors hidden md:block"
                 disabled={isLoading}
               >
                 <Paperclip className="w-5 h-5" />

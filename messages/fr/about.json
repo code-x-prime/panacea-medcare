@@ -1,0 +1,21 @@
+{
+  "title": "À propos de Panacea MedCare",
+  "subtitle": "Votre partenaire de confiance en santé mondiale",
+  "heading": "Qui sommes-nous",
+  "description": "Panacea MedCare est un facilitateur de tourisme médical de premier plan qui met en relation des patients internationaux avec des établissements de santé de classe mondiale en Inde. Avec plus de 8 ans d'expérience, nous avons aidé des milliers de patients à recevoir des soins médicaux de qualité à des prix abordables.",
+  "mission": "Notre mission",
+  "missionText": "Fournir des soins médicaux accessibles, abordables et de classe mondiale aux patients du monde entier grâce à notre réseau d'hôpitaux de premier ordre et de professionnels médicaux expérimentés.",
+  "vision": "Notre vision",
+  "visionText": "Être le partenaire de santé mondial le plus fiable, transformant des vies grâce à des soins médicaux exceptionnels et des expériences patient personnalisées.",
+  "values": "Nos valeurs",
+  "valuesItems": {
+    "quality": "Soins de qualité",
+    "qualityDesc": "Nous ne nous associons qu'avec des hôpitaux accrédités et des médecins expérimentés",
+    "transparency": "Transparence",
+    "transparencyDesc": "Communication claire et tarification honnête à chaque étape",
+    "support": "Soutien aux patients",
+    "supportDesc": "Assistance 24h/24 et 7j/7 tout au long de votre parcours médical",
+    "affordability": "Accessibilité financière",
+    "affordabilityDesc": "Soins de classe mondiale à une fraction du coût"
+  }
+}

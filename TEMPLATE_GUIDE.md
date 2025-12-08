@@ -1,287 +1,416 @@
-# Multi-Language Component & Page Template Guide
+# Panacea MedCare - Multi-Language Template System Guide
 
-This guide will help you create new components and pages that work with all 3 languages (English, Arabic, French) with proper RTL support for Arabic.
+## Overview
 
----
+This guide documents the multi-language template system for Panacea MedCare, featuring full EN/AR/FR support with RTL capabilities, reusable components, and a comprehensive page structure.
 
-## 📁 File Structure
+## Color Scheme
 
-For every new page/component, you need:
-
-1. **Component/Page File** - The React component
-2. **Translation Files** (3 files):
-   - `messages/en/[name].json` - English
-   - `messages/ar/[name].json` - Arabic  
-   - `messages/fr/[name].json` - French
-
----
-
-## 🎯 Template 1: Client Component (with useTranslations)
-
-Use this for interactive components that need client-side features.
-
-### Component File: `src/components/YourComponent.js`
+The Panacea brand colors are defined in `tailwind.config.js`:
 
 ```javascript
-"use client";
+colors: {
+  panacea: {
+    primary: "#046d8a",    // Primary teal
+    accent: "#c82d33",     // Accent red
+    light: "#f0f9ff",      // Light blue
+    dark: "#0a4a5e",       // Dark teal
+  }
+}
+```
 
-import { useTranslations } from "next-intl";
+Use these colors consistently across all components and pages.
 
-export default function YourComponent({ locale }) {
-  const t = useTranslations("yourComponent"); // Match your JSON filename
-  const isRTL = locale === "ar";
+## Project Structure
 
+```
+panacea-medcare/
+├── src/
+│   ├── app/
+│   │   └── [locale]/           # Locale-based routing
+│   │       ├── page.tsx        # Home page
+│   │       ├── about/
+│   │       ├── services/
+│   │       ├── doctors/
+│   │       ├── testimonials/
+│   │       └── ...
+│   ├── components/
+│   │   ├── HeroSection.tsx     # Reusable hero component
+│   │   ├── Header.js
+│   │   ├── Footer.js
+│   │   └── ...
+│   └── i18n/
+│       └── request.js          # Translation loader
+├── messages/
+│   ├── en/                     # English translations
+│   ├── ar/                     # Arabic translations
+│   └── fr/                     # French translations
+└── data/
+    ├── testimonials.json
+    ├── doctors.json
+    └── equipment.json
+```
+
+## HeroSection Component
+
+### Usage
+
+The `HeroSection` component is a reusable hero section with full RTL support and translation capabilities.
+
+```tsx
+import HeroSection from "@/components/HeroSection";
+
+export default function Page({ params }) {
+  const { locale } = params;
+  
   return (
-    <section
-      className="py-12 md:py-16"
-      dir={isRTL ? "rtl" : "ltr"}
-    >
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h2 
-          className={`text-3xl font-bold mb-6 ${
-            isRTL ? "text-right" : "text-left"
-          }`}
-        >
-          {t("title")}
-        </h2>
-
-        {/* Content with flex direction for RTL */}
-        <div 
-          className={`flex gap-4 ${
-            isRTL ? "flex-row-reverse" : ""
-          }`}
-        >
-          <div className="flex-1">
-            <p className={isRTL ? "text-right" : "text-left"}>
-              {t("description")}
-            </p>
-          </div>
-        </div>
-
-        {/* Button with icon - RTL support */}
-        <button 
-          className={`flex items-center gap-2 px-6 py-3 bg-teal-600 text-white rounded-lg ${
-            isRTL ? "flex-row-reverse" : ""
-          }`}
-        >
-          <span>{t("buttonText")}</span>
-          <svg 
-            className={`w-5 h-5 ${isRTL ? "rotate-180" : ""}`} 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-      </div>
-    </section>
+    <HeroSection
+      locale={locale}
+      namespace="pageName"
+      backgroundImage="/images/hero-bg.jpg"
+      fallbackImage="/images/hero-fallback.jpg"
+    />
   );
 }
 ```
 
-### Translation Files
+### Props
 
-**`messages/en/yourComponent.json`**
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `locale` | string | Yes | Current locale (en/ar/fr) |
+| `namespace` | string | Yes | Translation namespace to use |
+| `title` | string | No | Override title (uses translation if not provided) |
+| `subtitle` | string | No | Override subtitle (uses translation if not provided) |
+| `backgroundImage` | string | No | Custom background image path |
+| `fallbackImage` | string | No | Fallback image if backgroundImage not provided |
+| `customContent` | ReactNode | No | Custom content to replace default title/subtitle |
+
+### Features
+
+- ✅ Full RTL support for Arabic
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Dark overlay with gradient
+- ✅ Auto-height background image
+- ✅ Translation support via next-intl
+- ✅ Panacea brand colors
+
+## Translation System
+
+### Adding a New Page
+
+1. **Create translation files** for all three languages:
+
+```bash
+messages/en/yourPage.json
+messages/ar/yourPage.json
+messages/fr/yourPage.json
+```
+
+2. **Translation file structure**:
+
 ```json
 {
-  "title": "Your Component Title",
-  "description": "Your component description text",
-  "buttonText": "Click Here"
+  "title": "Page Title",
+  "subtitle": "Page subtitle",
+  "content": "Page content"
 }
 ```
 
-**`messages/ar/yourComponent.json`**
-```json
-{
-  "title": "عنوان المكون الخاص بك",
-  "description": "نص وصف المكون الخاص بك",
-  "buttonText": "انقر هنا"
-}
-```
-
-**`messages/fr/yourComponent.json`**
-```json
-{
-  "title": "Titre de votre composant",
-  "description": "Texte de description de votre composant",
-  "buttonText": "Cliquez ici"
-}
-```
-
-### Update `src/i18n/request.js`
-
-Add your new translation namespace:
+3. **Update `src/i18n/request.js`**:
 
 ```javascript
-export default getRequestConfig(async ({ locale }) => {
-  var validLocale = locales.includes(locale) ? locale : "en";
-
-  var navbarMessages = (
-    await import("../../messages/" + validLocale + "/navbar.json")
-  ).default;
-  var quoteFormMessages = (
-    await import("../../messages/" + validLocale + "/quoteForm.json")
-  ).default;
-  var homeMessages = (
-    await import("../../messages/" + validLocale + "/home.json")
-  ).default;
-  // ADD YOUR NEW NAMESPACE HERE
-  var yourComponentMessages = (
-    await import("../../messages/" + validLocale + "/yourComponent.json")
-  ).default;
-
-  return {
-    locale: validLocale,
-    messages: {
-      navbar: navbarMessages,
-      quoteForm: quoteFormMessages,
-      home: homeMessages,
-      yourComponent: yourComponentMessages, // ADD HERE
-    },
-  };
-});
+const messages = {
+  // ... existing namespaces
+  yourPage: (await import(`../../messages/${validLocale}/yourPage.json`)).default,
+};
 ```
 
----
+4. **Use translations in your page**:
 
-## 🎯 Template 2: Server Component (Page)
+```tsx
+import { useTranslations } from "next-intl";
 
-Use this for pages that don't need client-side interactivity.
-
-### Page File: `src/app/(public)/[locale]/your-page/page.js`
-
-```javascript
-import { getMessages } from '@/lib/getMessages';
-import YourComponent from '@/components/YourComponent';
-
-export default async function YourPage({ params }) {
-  const locale = params.locale || 'en';
-  const messages = await getMessages(locale, 'yourPage');
-
+export default function YourPage() {
+  const t = useTranslations("yourPage");
+  
   return (
-    <div className="bg-white">
-      <YourComponent locale={locale} />
+    <div>
+      <h1>{t("title")}</h1>
+      <p>{t("subtitle")}</p>
     </div>
   );
 }
 ```
 
----
+## RTL Support Patterns
 
-## 🎨 Common RTL Patterns
+### Text Direction
 
-### 1. Text Alignment
-```javascript
-className={isRTL ? "text-right" : "text-left"}
-```
+```tsx
+const isRTL = locale === "ar";
 
-### 2. Flex Direction (Reverse for RTL)
-```javascript
-className={`flex ${isRTL ? "flex-row-reverse" : ""}`}
-```
-
-### 3. Padding/Margin (Left/Right)
-```javascript
-// For padding-left in LTR, padding-right in RTL
-className={isRTL ? "pr-4" : "pl-4"}
-
-// For margin-left in LTR, margin-right in RTL
-className={isRTL ? "mr-4" : "ml-4"}
-```
-
-### 4. Icons/Arrows (Rotate for RTL)
-```javascript
-className={`w-5 h-5 ${isRTL ? "rotate-180" : ""}`}
-```
-
-### 5. Grid with RTL
-```javascript
-<div className={`grid grid-cols-3 gap-4 ${isRTL ? "text-right" : "text-left"}`}>
-  {/* Grid items will automatically flow RTL in Arabic */}
+<div dir={isRTL ? "rtl" : "ltr"}>
+  {/* Content */}
 </div>
 ```
 
-### 6. Absolute Positioning
-```javascript
-// For left positioning
-className={isRTL ? "right-0" : "left-0"}
+### Text Alignment
 
-// For right positioning
-className={isRTL ? "left-0" : "right-0"}
+```tsx
+<div className={isRTL ? "text-right" : "text-left"}>
+  {/* Content */}
+</div>
 ```
 
----
+### Flexbox Direction
 
-## 📝 Quick Checklist for New Component/Page
-
-- [ ] Create component file with `locale` prop
-- [ ] Add `const isRTL = locale === "ar";`
-- [ ] Add `dir={isRTL ? "rtl" : "ltr"}` to main container
-- [ ] Use `useTranslations("namespace")` for client components
-- [ ] Create 3 translation JSON files (en, ar, fr)
-- [ ] Add namespace to `src/i18n/request.js`
-- [ ] Apply RTL classes for:
-  - [ ] Text alignment
-  - [ ] Flex direction
-  - [ ] Padding/Margin
-  - [ ] Icons/Arrows
-  - [ ] Absolute positioning
-
----
-
-## 🚀 Usage Example
-
-```javascript
-// In your page
-<YourComponent locale={locale} />
-
-// Component will automatically:
-// ✅ Show correct language text
-// ✅ Align text properly (right for Arabic, left for others)
-// ✅ Reverse flex layouts for Arabic
-// ✅ Rotate icons for Arabic
+```tsx
+<div className={`flex ${isRTL ? "flex-row-reverse" : "flex-row"}`}>
+  {/* Content */}
+</div>
 ```
 
----
+### Icon Rotation
 
-## 💡 Pro Tips
+```tsx
+<svg className={isRTL ? "rotate-180" : ""}>
+  {/* Icon */}
+</svg>
+```
 
-1. **Always test in all 3 languages**: `/en`, `/ar`, `/fr`
-2. **Check Arabic RTL**: Make sure everything flips correctly
-3. **Use Tailwind's logical properties** when possible
-4. **Keep translation keys consistent** across all 3 JSON files
-5. **Use descriptive translation keys**: `heroTitle` not `title1`
+### Spacing (Logical Properties)
 
----
+```tsx
+// Use logical properties for RTL-aware spacing
+<div className={isRTL ? "pr-4" : "pl-4"}>  // Padding start
+<div className={isRTL ? "pl-4" : "pr-4"}>  // Padding end
+<div className={isRTL ? "mr-4" : "ml-4"}>  // Margin start
+<div className={isRTL ? "ml-4" : "mr-4"}>  // Margin end
+```
 
-## 🔗 Common Imports
+## Page Templates
 
-```javascript
-// For client components
-"use client";
+### Static Page Template
+
+```tsx
+import HeroSection from "@/components/HeroSection";
 import { useTranslations } from "next-intl";
 
-// For server components/pages
-import { getMessages } from '@/lib/getMessages';
+export default function StaticPage({ params }) {
+  const { locale } = params;
+  const t = useTranslations("pageName");
+  const isRTL = locale === "ar";
 
-// For links
-import Link from "next/link";
-
-// For images
-import Image from "next/image";
+  return (
+    <main dir={isRTL ? "rtl" : "ltr"}>
+      <HeroSection
+        locale={locale}
+        namespace="pageName"
+        backgroundImage="/images/page-bg.jpg"
+      />
+      
+      <section className="container mx-auto px-4 py-12">
+        <h2 className={`text-3xl font-bold mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+          {t("heading")}
+        </h2>
+        <p className={isRTL ? "text-right" : "text-left"}>
+          {t("content")}
+        </p>
+      </section>
+    </main>
+  );
+}
 ```
 
+### Dynamic Page Template
+
+```tsx
+import HeroSection from "@/components/HeroSection";
+import { notFound } from "next/navigation";
+import data from "@/data/items.json";
+
+export default function DynamicPage({ params }) {
+  const { locale, id } = params;
+  const isRTL = locale === "ar";
+  
+  // Find item by ID
+  const item = data.find(item => item.id === id);
+  
+  if (!item) {
+    notFound();
+  }
+  
+  // Get localized content
+  const title = locale === "ar" ? item.nameAr : locale === "fr" ? item.nameFr : item.name;
+  const description = locale === "ar" ? item.descriptionAr : locale === "fr" ? item.descriptionFr : item.description;
+
+  return (
+    <main dir={isRTL ? "rtl" : "ltr"}>
+      <HeroSection
+        locale={locale}
+        namespace="heroSection"
+        title={title}
+        subtitle={description}
+      />
+      
+      <section className="container mx-auto px-4 py-12">
+        {/* Dynamic content */}
+      </section>
+    </main>
+  );
+}
+```
+
+## Dynamic Routes with JSON Data
+
+### Data File Structure
+
+Create JSON files in the `data/` directory:
+
+```json
+[
+  {
+    "id": "1",
+    "name": "English Name",
+    "nameAr": "الاسم العربي",
+    "nameFr": "Nom français",
+    "description": "English description",
+    "descriptionAr": "الوصف العربي",
+    "descriptionFr": "Description française"
+  }
+]
+```
+
+### Loading Data
+
+```tsx
+import data from "@/data/items.json";
+
+// Find specific item
+const item = data.find(item => item.id === params.id);
+
+// Get localized field
+const localizedName = locale === "ar" ? item.nameAr : locale === "fr" ? item.nameFr : item.name;
+```
+
+## Development Rules
+
+### Server vs Client Components
+
+- **Server Components** (default): Use for static content, data fetching
+- **Client Components** (`"use client"`): Use only when needed for interactivity
+
+```tsx
+// Server Component (default)
+export default function Page() {
+  return <div>Static content</div>;
+}
+
+// Client Component (when needed)
+"use client";
+export default function InteractivePage() {
+  const [state, setState] = useState();
+  return <div>Interactive content</div>;
+}
+```
+
+### No Hardcoded Text
+
+❌ **Wrong:**
+```tsx
+<h1>Welcome to Panacea</h1>
+```
+
+✅ **Correct:**
+```tsx
+const t = useTranslations("home");
+<h1>{t("welcome")}</h1>
+```
+
+### Locale Switching
+
+Users can switch locales via the language switcher. All content automatically updates based on the current locale.
+
+## Navbar Structure
+
+The navbar includes the following menu items:
+
+- Home
+- About
+- International Patients
+- Services (Dropdown)
+  - Teleconsultation
+  - Tele-radiology
+  - Tele-pathology
+  - AI Solutions
+  - Medical Tourism
+- Doctors
+- Hospitals
+- Equipment
+- Testimonials
+- Blog
+- Contact
+
+## Available Pages
+
+### Static Pages
+- `/[locale]` - Home
+- `/[locale]/about` - About Us
+- `/[locale]/international-patients` - International Patients
+- `/[locale]/contact` - Contact
+- `/[locale]/blog` - Blog
+- `/[locale]/privacy` - Privacy Policy
+- `/[locale]/terms` - Terms & Conditions
+- `/[locale]/consent` - Consent Information
+- `/[locale]/hospitals` - Hospitals
+- `/[locale]/services` - Services Overview
+- `/[locale]/services/teleconsultation` - Teleconsultation
+- `/[locale]/services/tele-radiology` - Tele-radiology
+- `/[locale]/services/tele-pathology` - Tele-pathology
+- `/[locale]/services/ai-solutions` - AI Solutions
+- `/[locale]/services/medical-tourism` - Medical Tourism
+
+### Dynamic Pages
+- `/[locale]/testimonials` - Testimonials Listing
+- `/[locale]/testimonials/[id]` - Testimonial Detail
+- `/[locale]/doctors` - Doctors Listing
+- `/[locale]/doctors/[id]` - Doctor Profile
+- `/[locale]/equipment` - Equipment Listing
+- `/[locale]/equipment/[id]` - Equipment Detail
+
+## Best Practices
+
+1. **Always use translations** - Never hardcode text
+2. **Test all three languages** - EN, AR, FR
+3. **Verify RTL layout** - Check Arabic pages for proper alignment
+4. **Use HeroSection consistently** - Every page should have a hero section
+5. **Follow color scheme** - Use Panacea brand colors
+6. **Optimize images** - Use Next.js Image component
+7. **Mobile-first design** - Ensure responsive layouts
+8. **Semantic HTML** - Use proper heading hierarchy
+9. **Accessibility** - Include alt text, ARIA labels
+10. **Performance** - Lazy load images, minimize bundle size
+
+## Common Issues & Solutions
+
+### Issue: Translation not loading
+**Solution:** Ensure the namespace is added to `src/i18n/request.js`
+
+### Issue: RTL layout broken
+**Solution:** Check `dir` attribute and use RTL-aware classes
+
+### Issue: Image not displaying
+**Solution:** Verify image path and use Next.js Image component
+
+### Issue: Dynamic route 404
+**Solution:** Ensure data file exists and ID matches
+
+## Support
+
+For questions or issues, contact the development team or refer to the Next.js and next-intl documentation.
+
 ---
 
-## 📞 Need Help?
-
-Refer to existing components:
-- `src/components/Header.js` - Complex RTL example
-- `src/components/HeroSection.js` - Translation usage
-- `src/components/Navbar/Navbar.js` - Navigation with RTL
-
----
-
-**Happy Coding! 🎉**
+**Last Updated:** December 2024  
+**Version:** 1.0.0

@@ -1,0 +1,32 @@
+{
+  "title": "Services de téléconsultation",
+  "subtitle": "Connectez-vous avec des spécialistes à distance",
+  "heading": "Consultations médicales à distance",
+  "intro": "Notre service de téléconsultation vous permet de vous connecter avec des spécialistes médicaux expérimentés de n'importe où dans le monde. Obtenez des conseils médicaux d'experts sans avoir besoin de voyager.",
+  "features": "Caractéristiques principales",
+  "featuresList": {
+    "video": "Consultations vidéo HD",
+    "videoDesc": "Appels vidéo de haute qualité avec des spécialistes",
+    "secure": "Plateforme sécurisée",
+    "secureDesc": "Communications conformes HIPAA et cryptées",
+    "records": "Dossiers médicaux",
+    "recordsDesc": "Partage facile de documents et rapports médicaux",
+    "followup": "Support de suivi",
+    "followupDesc": "Consultations de suivi programmées incluses",
+    "multilingual": "Support multilingue",
+    "multilingualDesc": "Consultations disponibles en plusieurs langues",
+    "affordable": "Prix abordables",
+    "affordableDesc": "Rentable par rapport aux visites en personne"
+  },
+  "howItWorks": "Comment ça marche",
+  "steps": {
+    "step1": "Réserver un rendez-vous",
+    "step1Desc": "Planifiez une consultation à votre convenance",
+    "step2": "Télécharger des documents",
+    "step2Desc": "Partagez vos dossiers médicaux en toute sécurité",
+    "step3": "Consultation vidéo",
+    "step3Desc": "Connectez-vous avec le spécialiste par appel vidéo",
+    "step4": "Recevoir le rapport",
+    "step4Desc": "Obtenez un rapport médical détaillé et des recommandations"
+  }
+}

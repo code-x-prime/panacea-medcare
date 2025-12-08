@@ -7,8 +7,14 @@ export default getRequestConfig(async ({ locale }) => {
 
   const messages = {
     navbar: (await import(`../../messages/${validLocale}/navbar.json`)).default,
+    heroSection: (await import(`../../messages/${validLocale}/heroSection.json`)).default,
     quoteForm: (await import(`../../messages/${validLocale}/quoteForm.json`)).default,
     home: (await import(`../../messages/${validLocale}/home.json`)).default,
+    about: (await import(`../../messages/${validLocale}/about.json`)).default,
+    internationalPatients: (await import(`../../messages/${validLocale}/internationalPatients.json`)).default,
+    contact: (await import(`../../messages/${validLocale}/contact.json`)).default,
+    services: (await import(`../../messages/${validLocale}/services.json`)).default,
+    teleconsultation: (await import(`../../messages/${validLocale}/teleconsultation.json`)).default,
     destinations: (await import(`../../messages/${validLocale}/destinations.json`)).default,
     specialties: (await import(`../../messages/${validLocale}/specialties.json`)).default,
     whyChoose: (await import(`../../messages/${validLocale}/whyChoose.json`)).default,

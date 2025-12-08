@@ -1,0 +1,32 @@
+{
+  "title": "International Patients",
+  "subtitle": "Comprehensive healthcare services for patients worldwide",
+  "heading": "Welcome International Patients",
+  "intro": "We specialize in providing world-class medical care to international patients, offering comprehensive support from consultation to recovery.",
+  "servicesTitle": "Services for International Patients",
+  "services": {
+    "visa": "Visa Assistance",
+    "visaDesc": "Complete support for medical visa applications and documentation",
+    "travel": "Travel Arrangements",
+    "travelDesc": "Flight bookings, airport pickup, and local transportation",
+    "accommodation": "Accommodation",
+    "accommodationDesc": "Comfortable lodging near hospitals for patients and families",
+    "interpreter": "Interpreter Services",
+    "interpreterDesc": "Professional interpreters in multiple languages",
+    "consultation": "Medical Consultation",
+    "consultationDesc": "Pre-arrival consultations with specialists",
+    "followup": "Post-Treatment Care",
+    "followupDesc": "Follow-up support and telemedicine consultations"
+  },
+  "whyChoose": "Why Choose Us",
+  "benefits": {
+    "cost": "Cost Savings",
+    "costDesc": "Save up to 70% compared to Western countries",
+    "quality": "World-Class Quality",
+    "qualityDesc": "JCI-accredited hospitals with latest technology",
+    "doctors": "Expert Doctors",
+    "doctorsDesc": "Internationally trained and experienced specialists",
+    "support": "24/7 Support",
+    "supportDesc": "Dedicated patient coordinators throughout your journey"
+  }
+}

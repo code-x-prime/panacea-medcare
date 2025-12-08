@@ -1,0 +1,19 @@
+{
+  "title": "Nos services",
+  "subtitle": "Services complets de tourisme médical",
+  "heading": "Services médicaux que nous offrons",
+  "intro": "Panacea MedCare donne accès à une large gamme de services médicaux grâce à notre réseau d'hôpitaux de classe mondiale.",
+  "servicesList": {
+    "teleconsultation": "Téléconsultation",
+    "teleconsultationDesc": "Connectez-vous avec des spécialistes à distance pour des consultations et des suivis",
+    "teleRadiology": "Téléradiologie",
+    "teleRadiologyDesc": "Services de radiologie à distance avec analyse d'experts",
+    "telePathology": "Télépathologie",
+    "telePathologyDesc": "Services de pathologie numérique pour un diagnostic précis",
+    "aiSolutions": "Solutions IA",
+    "aiSolutionsDesc": "Outils de diagnostic et de planification de traitement alimentés par l'IA",
+    "medicalTourism": "Tourisme médical",
+    "medicalTourismDesc": "Forfaits de voyage médical complets avec support de bout en bout"
+  },
+  "cta": "En savoir plus"
+}

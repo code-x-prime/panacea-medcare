@@ -1,0 +1,21 @@
+{
+  "title": "About Panacea MedCare",
+  "subtitle": "Your trusted partner in global healthcare",
+  "heading": "Who We Are",
+  "description": "Panacea MedCare is a leading medical tourism facilitator connecting international patients with world-class healthcare facilities in India. With over 8 years of experience, we have helped thousands of patients receive quality medical care at affordable prices.",
+  "mission": "Our Mission",
+  "missionText": "To provide accessible, affordable, and world-class medical care to patients worldwide through our network of top-tier hospitals and experienced medical professionals.",
+  "vision": "Our Vision",
+  "visionText": "To be the most trusted global healthcare partner, transforming lives through exceptional medical care and personalized patient experiences.",
+  "values": "Our Values",
+  "valuesItems": {
+    "quality": "Quality Care",
+    "qualityDesc": "We partner only with accredited hospitals and experienced doctors",
+    "transparency": "Transparency",
+    "transparencyDesc": "Clear communication and honest pricing at every step",
+    "support": "Patient Support",
+    "supportDesc": "24/7 assistance throughout your medical journey",
+    "affordability": "Affordability",
+    "affordabilityDesc": "World-class care at a fraction of the cost"
+  }
+}

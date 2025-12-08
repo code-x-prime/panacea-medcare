@@ -1,0 +1,32 @@
+{
+  "title": "Patients internationaux",
+  "subtitle": "Services de santé complets pour les patients du monde entier",
+  "heading": "Bienvenue aux patients internationaux",
+  "intro": "Nous sommes spécialisés dans la fourniture de soins médicaux de classe mondiale aux patients internationaux, offrant un soutien complet de la consultation à la convalescence.",
+  "servicesTitle": "Services pour les patients internationaux",
+  "services": {
+    "visa": "Assistance visa",
+    "visaDesc": "Soutien complet pour les demandes de visa médical et la documentation",
+    "travel": "Arrangements de voyage",
+    "travelDesc": "Réservations de vols, prise en charge à l'aéroport et transport local",
+    "accommodation": "Hébergement",
+    "accommodationDesc": "Logement confortable près des hôpitaux pour les patients et les familles",
+    "interpreter": "Services d'interprétation",
+    "interpreterDesc": "Interprètes professionnels en plusieurs langues",
+    "consultation": "Consultation médicale",
+    "consultationDesc": "Consultations pré-arrivée avec des spécialistes",
+    "followup": "Soins post-traitement",
+    "followupDesc": "Soutien de suivi et consultations de télémédecine"
+  },
+  "whyChoose": "Pourquoi nous choisir",
+  "benefits": {
+    "cost": "Économies de coûts",
+    "costDesc": "Économisez jusqu'à 70% par rapport aux pays occidentaux",
+    "quality": "Qualité de classe mondiale",
+    "qualityDesc": "Hôpitaux accrédités JCI avec la dernière technologie",
+    "doctors": "Médecins experts",
+    "doctorsDesc": "Spécialistes formés internationalement et expérimentés",
+    "support": "Support 24/7",
+    "supportDesc": "Coordinateurs de patients dédiés tout au long de votre parcours"
+  }
+}

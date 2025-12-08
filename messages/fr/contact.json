@@ -1,0 +1,28 @@
+{
+  "title": "Contactez-nous",
+  "subtitle": "Entrez en contact avec notre équipe",
+  "heading": "Nous sommes là pour vous aider",
+  "intro": "Vous avez des questions sur nos services? Notre équipe est prête à vous aider 24h/24 et 7j/7.",
+  "form": {
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "country": "Pays",
+    "treatment": "Traitement intéressé",
+    "message": "Votre message",
+    "submit": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès!",
+    "error": "Échec de l'envoi du message. Veuillez réessayer."
+  },
+  "info": {
+    "email": "E-mail",
+    "emailValue": "info@panaceamedcare.com",
+    "phone": "Téléphone",
+    "phoneValue": "+91 98765 43210",
+    "whatsapp": "WhatsApp",
+    "whatsappValue": "+91 98765 43210",
+    "address": "Adresse",
+    "addressValue": "New Delhi, Inde"
+  }
+}

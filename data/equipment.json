@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1",
+    "name": "MRI Scanner 3.0 Tesla",
+    "nameAr": "جهاز التصوير بالرنين المغناطيسي 3.0 تسلا",
+    "nameFr": "Scanner IRM 3.0 Tesla",
+    "category": "Diagnostic Imaging",
+    "categoryAr": "التصوير التشخيصي",
+    "categoryFr": "Imagerie diagnostique",
+    "description": "State-of-the-art 3.0 Tesla MRI scanner providing high-resolution imaging for accurate diagnosis. Features advanced imaging protocols for neurological, musculoskeletal, and cardiovascular imaging.",
+    "descriptionAr": "جهاز تصوير بالرنين المغناطيسي حديث بقوة 3.0 تسلا يوفر تصويرًا عالي الدقة للتشخيص الدقيق. يتميز ببروتوكولات تصوير متقدمة للتصوير العصبي والعضلي الهيكلي والقلب والأوعية الدموية.",
+    "descriptionFr": "Scanner IRM de pointe 3.0 Tesla offrant une imagerie haute résolution pour un diagnostic précis. Dispose de protocoles d'imagerie avancés pour l'imagerie neurologique, musculo-squelettique et cardiovasculaire.",
+    "specifications": {
+      "fieldStrength": "3.0 Tesla",
+      "boreSize": "70 cm",
+      "scanTime": "15-45 minutes",
+      "applications": ["Brain", "Spine", "Joints", "Cardiac", "Abdomen"]
+    },
+    "specificationsAr": {
+      "fieldStrength": "3.0 تسلا",
+      "boreSize": "70 سم",
+      "scanTime": "15-45 دقيقة",
+      "applications": ["الدماغ", "العمود الفقري", "المفاصل", "القلب", "البطن"]
+    },
+    "specificationsFr": {
+      "fieldStrength": "3.0 Tesla",
+      "boreSize": "70 cm",
+      "scanTime": "15-45 minutes",
+      "applications": ["Cerveau", "Colonne vertébrale", "Articulations", "Cardiaque", "Abdomen"]
+    },
+    "image": "/images/equipment/mri-scanner.jpg",
+    "manufacturer": "Siemens Healthineers",
+    "availability": "Available at Apollo Hospital, Fortis Hospital"
+  },
+  {
+    "id": "2",
+    "name": "Da Vinci Surgical Robot",
+    "nameAr": "روبوت دافنشي الجراحي",
+    "nameFr": "Robot chirurgical Da Vinci",
+    "category": "Surgical Equipment",
+    "categoryAr": "المعدات الجراحية",
+    "categoryFr": "Équipement chirurgical",
+    "description": "Advanced robotic surgical system enabling minimally invasive procedures with enhanced precision, flexibility, and control. Used for complex surgeries across multiple specialties.",
+    "descriptionAr": "نظام جراحي روبوتي متقدم يتيح إجراءات طفيفة التوغل مع دقة ومرونة وتحكم محسّنة. يستخدم للجراحات المعقدة عبر تخصصات متعددة.",
+    "descriptionFr": "Système chirurgical robotique avancé permettant des procédures mini-invasives avec une précision, une flexibilité et un contrôle améliorés. Utilisé pour des chirurgies complexes dans plusieurs spécialités.",
+    "specifications": {
+      "arms": "4 robotic arms",
+      "vision": "3D HD visualization",
+      "instruments": "EndoWrist instruments",
+      "applications": ["Urology", "Gynecology", "Cardiac", "Thoracic", "General Surgery"]
+    },
+    "specificationsAr": {
+      "arms": "4 أذرع روبوتية",
+      "vision": "رؤية ثلاثية الأبعاد عالية الدقة",
+      "instruments": "أدوات EndoWrist",
+      "applications": ["المسالك البولية", "أمراض النساء", "القلب", "الصدر", "الجراحة العامة"]
+    },
+    "specificationsFr": {
+      "arms": "4 bras robotiques",
+      "vision": "Visualisation 3D HD",
+      "instruments": "Instruments EndoWrist",
+      "applications": ["Urologie", "Gynécologie", "Cardiaque", "Thoracique", "Chirurgie générale"]
+    },
+    "image": "/images/equipment/da-vinci-robot.jpg",
+    "manufacturer": "Intuitive Surgical",
+    "availability": "Available at Max Hospital, Medanta Hospital"
+  },
+  {
+    "id": "3",
+    "name": "PET-CT Scanner",
+    "nameAr": "جهاز المسح المقطعي بالإصدار البوزيتروني",
+    "nameFr": "Scanner TEP-TDM",
+    "category": "Diagnostic Imaging",
+    "categoryAr": "التصوير التشخيصي",
+    "categoryFr": "Imagerie diagnostique",
+    "description": "Combined PET and CT imaging system for comprehensive cancer detection, staging, and treatment monitoring. Provides both metabolic and anatomical information in a single scan.",
+    "descriptionAr": "نظام تصوير مشترك بالإصدار البوزيتروني والتصوير المقطعي المحوسب للكشف الشامل عن السرطان وتحديد مراحله ومراقبة العلاج. يوفر معلومات استقلابية وتشريحية في مسح واحد.",
+    "descriptionFr": "Système d'imagerie combiné TEP et TDM pour la détection, la stadification et le suivi du traitement du cancer. Fournit des informations métaboliques et anatomiques en un seul scan.",
+    "specifications": {
+      "detectorType": "Lutetium Oxyorthosilicate (LSO)",
+      "scanTime": "20-30 minutes",
+      "resolution": "4.0 mm",
+      "applications": ["Oncology", "Cardiology", "Neurology"]
+    },
+    "specificationsAr": {
+      "detectorType": "أوكسي أورثوسيليكات اللوتيتيوم (LSO)",
+      "scanTime": "20-30 دقيقة",
+      "resolution": "4.0 ملم",
+      "applications": ["علم الأورام", "أمراض القلب", "طب الأعصاب"]
+    },
+    "specificationsFr": {
+      "detectorType": "Oxyorthosilicate de lutétium (LSO)",
+      "scanTime": "20-30 minutes",
+      "resolution": "4.0 mm",
+      "applications": ["Oncologie", "Cardiologie", "Neurologie"]
+    },
+    "image": "/images/equipment/pet-ct-scanner.jpg",
+    "manufacturer": "GE Healthcare",
+    "availability": "Available at Fortis Hospital, BLK Hospital"
+  }
+]

@@ -315,21 +315,26 @@ export default function Navbar({ locale = "en" }) {
                         (isRTL ? "flex-row-reverse" : "")
                       }
                     >
-                      <Link
-                        href={
-                          item.slug === "/"
-                            ? "/" + locale
-                            : "/" + locale + item.slug
-                        }
-                        className="text-lg font-semibold text-gray-800 hover:text-teal-600 transition-colors flex-1"
-                        onClick={() => {
-                          if (!hasSubMenu) {
-                            closeMobileMenu();
+                      {hasSubMenu ? (
+                        <button
+                          onClick={() => toggleMobileItem(item.key)}
+                          className="text-lg font-semibold text-gray-800 hover:text-panacea-primary transition-colors flex-1 text-left"
+                        >
+                          {item.name}
+                        </button>
+                      ) : (
+                        <Link
+                          href={
+                            item.slug === "/"
+                              ? "/" + locale
+                              : "/" + locale + item.slug
                           }
-                        }}
-                      >
-                        {item.name}
-                      </Link>
+                          className="text-lg font-semibold text-gray-800 hover:text-panacea-primary transition-colors flex-1"
+                          onClick={closeMobileMenu}
+                        >
+                          {item.name}
+                        </Link>
+                      )}
                       {hasSubMenu && (
                         <button
                           onClick={() => {
@@ -351,63 +356,21 @@ export default function Navbar({ locale = "en" }) {
                     {hasSubMenu && isExpanded && subMenuItems && (
                       <div
                         className={
-                          "pb-3 space-y-2 bg-gray-50 rounded-lg p-3 mb-2 " +
+                          "pb-3 space-y-2 bg-panacea-light rounded-lg p-3 mb-2 " +
                           (isRTL ? "mr-2" : "ml-2")
                         }
                       >
-                        {/* For mega menus with countries and treatments */}
-                        {(item.key === "hospitals" || item.key === "cost") &&
-                          subMenuItems.map((country, cIdx) => (
-                            <div key={cIdx} className="py-2">
-                              <Link
-                                href={"/" + locale + country.slug}
-                                className="font-bold text-teal-600 block mb-2 text-sm"
-                                onClick={closeMobileMenu}
-                              >
-                                {country.country}
-                              </Link>
-                              <div
-                                className={
-                                  "space-y-1 border-teal-200 " +
-                                  (isRTL
-                                    ? "pr-3 border-r-2"
-                                    : "pl-3 border-l-2")
-                                }
-                              >
-                                {country.treatments &&
-                                  country.treatments.map((treatment, tIdx) => (
-                                    <Link
-                                      key={tIdx}
-                                      href={"/" + locale + treatment.slug}
-                                      className="block text-sm text-gray-600 hover:text-teal-600 py-1.5"
-                                      onClick={closeMobileMenu}
-                                    >
-                                      <span className="block leading-snug">
-                                        {treatment.name}
-                                      </span>
-                                      {treatment.sub && (
-                                        <span className="text-xs text-gray-400 block leading-snug mt-0.5">
-                                          {treatment.sub}
-                                        </span>
-                                      )}
-                                    </Link>
-                                  ))}
-                              </div>
-                            </div>
-                          ))}
-
-                        {/* For doctors and knowledge - simple list */}
-                        {(item.key === "doctors" || item.key === "knowledge") &&
-                          subMenuItems.map((sub, sIdx) => (
-                            <Link
-                              key={sIdx}
-                              href={"/" + locale + sub.slug}
-                              className="block py-2.5 text-sm font-medium text-gray-600 hover:text-teal-600 hover:bg-white rounded px-3"
-                              onClick={closeMobileMenu}
-                            >
-                              {sub.country || sub.name}
-                            </Link>
-                          ))}
+                        {/* Simple list for all dropdown items */}
+                        {subMenuItems.map((sub, sIdx) => (
+                          <Link
+                            key={sIdx}
+                            href={"/" + locale + sub.slug}
+                            className="block py-2.5 text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-3 transition-colors"
+                            onClick={closeMobileMenu}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
                       </div>
                     )}
                   </li>

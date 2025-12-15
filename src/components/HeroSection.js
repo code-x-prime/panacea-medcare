@@ -72,23 +72,17 @@ export default function HeroSection({ locale }) {
               {t("heroSubtitle")}
             </p>
 
-            {/* Stats/Trust Indicators */}
-            <div
-              className={`flex ${isRTL ? "flex-row-reverse" : ""
-                } items-start gap-6 pt-4 flex-wrap`}
-            >
+            {/* Stats/Trust Indicators - Centered */}
+            <div className="flex justify-center items-center gap-6 pt-4 flex-wrap">
               {/* Patients Avatars */}
-              <div className={`flex ${isRTL ? "flex-row-reverse" : ""} items-center gap-3`}>
-                <div
-                  className={`flex ${isRTL ? "flex-row-reverse -space-x-reverse" : "-space-x-3"
-                    }`}
-                >
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-3">
                   <Image src="https://i.pravatar.cc/150?img=1" alt="Patient 1" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
                   <Image src="https://i.pravatar.cc/150?img=5" alt="Patient 2" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
                   <Image src="https://i.pravatar.cc/150?img=9" alt="Patient 3" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
                   <Image src="https://i.pravatar.cc/150?img=8" alt="Patient 4" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
                 </div>
-                <div className={isRTL ? "text-right" : "text-left"}>
+                <div className="text-center">
                   <p className="text-base font-bold text-white leading-tight">
                     {t("patientsAssisted")}
                   </p>
@@ -99,11 +93,11 @@ export default function HeroSection({ locale }) {
               </div>
 
               {/* Google Rating */}
-              <div className={`flex ${isRTL ? "flex-row-reverse" : ""} items-center gap-3`}>
+              <div className="flex items-center gap-3">
                 <FcGoogle className="w-12 h-12" />
-                <div className={isRTL ? "text-right" : "text-left"}>
+                <div className="text-center">
                   <p className="text-3xl font-extrabold text-white leading-none">4.9</p>
-                  <div className="flex gap-0.5 mt-1">
+                  <div className="flex gap-0.5 mt-1 justify-center">
                     {[...Array(5)].map((_, i) => (
                       <span key={i} className="text-yellow-400 text-sm">★</span>
                     ))}

@@ -29,6 +29,10 @@ export default getRequestConfig(async ({ locale }) => {
     chatbot: (await import(`../../messages/${validLocale}/chatbot.json`)).default,
     patientStories: (await import(`../../messages/${validLocale}/patientStories.json`)).default,
     whatsapp: (await import(`../../messages/${validLocale}/whatsapp.json`)).default,
+    caseStudies: (await import(`../../messages/${validLocale}/caseStudies.json`)).default,
+    blog: (await import(`../../messages/${validLocale}/blog.json`)).default,
+    ourOffices: (await import(`../../messages/${validLocale}/ourOffices.json`)).default,
+    treatmentPackages: (await import(`../../messages/${validLocale}/treatmentPackages.json`)).default,
   };
 
   return {

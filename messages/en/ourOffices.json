@@ -1,0 +1,23 @@
+{
+  "title": "Our Offices",
+  "subtitle": "Visit us or reach out for assistance",
+  "globalPresence": "Global Presence",
+  "globalPresenceDesc": "Serving patients across continents with trusted healthcare partners",
+  "ourOffices": "Our Offices",
+  "ourOfficesDesc": "Visit us at our offices or reach out for assistance",
+  "gurgaon": {
+    "name": "Gurgaon Office",
+    "address": "123 Healthcare Plaza, Sector 44, Gurgaon, Haryana, India"
+  },
+  "delhiNcr": {
+    "name": "Delhi NCR Office",
+    "address": "456 Medical District, New Delhi, India"
+  },
+  "africa": "Africa",
+  "africaCountries": "Uganda, Tanzania, Kenya",
+  "middleEast": "Middle East",
+  "middleEastCountries": "UAE, Saudi Arabia",
+  "asia": "Asia",
+  "asiaCountries": "Nepal, Bangladesh"
+}
+

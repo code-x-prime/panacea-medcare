@@ -1,0 +1,19 @@
+{
+  "title": "Patient Success Stories",
+  "subtitle": "Real stories of international patients treated successfully in India",
+  "patient": "Patient",
+  "age": "Age",
+  "gender": "Gender",
+  "country": "Country",
+  "doctor": "Doctor",
+  "hospital": "Hospital",
+  "treatment": "Treatment",
+  "years": "Years",
+  "viewFullStory": "View Full Story",
+  "patientDetails": "Patient Details",
+  "diagnosisTitle": "Diagnosis & Challenge",
+  "journeyTitle": "Finding Treatment Abroad",
+  "experienceTitle": "Treatment & Hospital Experience",
+  "outcomeTitle": "Recovery & Outcome"
+}
+

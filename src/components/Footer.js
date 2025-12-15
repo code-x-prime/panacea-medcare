@@ -180,50 +180,6 @@ export default function Footer({ locale }) {
             </div>
           </div>
 
-          {/* Newsletter & Social */}
-          <div>
-            <h4 className="font-bold text-xl mb-6">{t("newsletter.title")}</h4>
-            <p className="text-panacea-light/90 mb-4">
-              {t("newsletter.description")}
-            </p>
-
-            {/* Newsletter Form */}
-            <form className="mb-8">
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder={t("newsletter.placeholder")}
-                  className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-panacea-accent"
-                />
-                <button
-                  type="submit"
-                  className="px-6 py-3 bg-panacea-accent hover:bg-panacea-accent/90 rounded-lg font-semibold transition-all hover:scale-105 flex items-center gap-2"
-                >
-                  <Send className="w-5 h-5" />
-                </button>
-              </div>
-            </form>
-
-            {/* Social Links */}
-            <h4 className="font-bold text-xl mb-4">{t("social.title")}</h4>
-            <div className="flex gap-3 flex-wrap">
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/10 hover:bg-panacea-accent rounded-lg flex items-center justify-center transition-all hover:scale-110"
-                    aria-label={t(`social.${social.label}`)}
-                  >
-                    <IconComponent className="w-6 h-6" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
 

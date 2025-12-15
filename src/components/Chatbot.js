@@ -200,6 +200,7 @@ export default function Chatbot({ locale }) {
 
       {/* Floating Button */}
       <button
+        data-chatbot-toggle
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 ${isRTL ? 'left-6' : 'right-6'} w-16 h-16 bg-gradient-to-r from-panacea-primary to-panacea-dark text-white rounded-full shadow-2xl hover:shadow-panacea-primary/50 transition-all flex items-center justify-center z-40 transform hover:scale-110 group`}
       >

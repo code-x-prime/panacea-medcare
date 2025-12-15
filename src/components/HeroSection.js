@@ -114,16 +114,24 @@ export default function HeroSection({ locale }) {
 
             {/* CTA Buttons */}
             <div
-              className={`flex ${isRTL ? "flex-row-reverse" : ""} justify-center gap-4 pt-6 flex-wrap`}
+              className={`flex ${isRTL ? "flex-row-reverse" : ""} justify-center gap-4 pt-6 flex-wrap items-center`}
             >
-              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-panacea-primary hover:bg-panacea-dark text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-panacea-primary/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
-                <span>{t("aboutUs")}</span>
-                <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              {/* Free Consultation - Bigger, Bolder, Teal Color */}
+              <button
+                onClick={() => {
+                  // Open chatbot when clicked
+                  const chatbotButton = document.querySelector('[data-chatbot-toggle]');
+                  if (chatbotButton) chatbotButton.click();
+                }}
+                className={`group flex items-center justify-center gap-3 px-10 py-5 bg-panacea-primary hover:bg-panacea-dark text-white rounded-full font-extrabold text-xl md:text-2xl transition-all duration-300 shadow-2xl hover:shadow-panacea-primary/50 transform hover:scale-110 border-4 border-white/30 ${isRTL ? "flex-row-reverse" : ""}`}
+              >
+                <span>{t("freeConsultation") || "Free Consultation"}</span>
+                <svg className={`w-7 h-7 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
-              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-panacea-accent hover:bg-red-700 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-panacea-accent/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
+              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-white/50 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <span>{t("patientStories")}</span>
                 <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

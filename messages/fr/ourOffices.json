@@ -1,0 +1,23 @@
+{
+  "title": "Nos bureaux",
+  "subtitle": "Visitez-nous ou contactez-nous pour obtenir de l'aide",
+  "globalPresence": "Présence mondiale",
+  "globalPresenceDesc": "Servir les patients sur tous les continents avec des partenaires de santé de confiance",
+  "ourOffices": "Nos bureaux",
+  "ourOfficesDesc": "Visitez-nous dans nos bureaux ou contactez-nous pour obtenir de l'aide",
+  "gurgaon": {
+    "name": "Bureau de Gurgaon",
+    "address": "123 Plaza Healthcare, Secteur 44, Gurgaon, Haryana, Inde"
+  },
+  "delhiNcr": {
+    "name": "Bureau de Delhi NCR",
+    "address": "456 District médical, New Delhi, Inde"
+  },
+  "africa": "Afrique",
+  "africaCountries": "Ouganda, Tanzanie, Kenya",
+  "middleEast": "Moyen-Orient",
+  "middleEastCountries": "EAU, Arabie Saoudite",
+  "asia": "Asie",
+  "asiaCountries": "Népal, Bangladesh"
+}
+

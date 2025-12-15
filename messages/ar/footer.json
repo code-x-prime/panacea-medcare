@@ -3,7 +3,17 @@
   "tagline": "شريكك الموثوق في الرعاية الصحية العالمية",
   "contactTitle": "تواصل معنا",
   "phone": "+1-XXX-XXX-XXXX",
-  "email": "info@panaceamedcare.com",
+  "email": "care@panaceamedcare.com",
+  "ourOffices": {
+    "title": "مكاتبنا",
+    "offices": [
+      {
+        "name": "المكتب الرئيسي",
+        "address": "123 ساحة الرعاية الصحية، المنطقة الطبية، المدينة، البلد",
+        "phone": "+1-XXX-XXX-XXXX"
+      }
+    ]
+  },
   "address": "123 ساحة الرعاية الصحية، المنطقة الطبية، المدينة، البلد",
   "quickLinks": {
     "title": "روابط سريعة",

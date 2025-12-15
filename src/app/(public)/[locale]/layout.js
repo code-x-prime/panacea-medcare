@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import env from "@/config/env";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -24,6 +25,7 @@ export default async function PublicLayout({ children, params }) {
         <main className="flex-1">{children}</main>
         <Footer locale={locale} />
         <Chatbot locale={locale} />
+        <WhatsAppButton locale={locale} />
       </div>
     </NextIntlClientProvider>
   );

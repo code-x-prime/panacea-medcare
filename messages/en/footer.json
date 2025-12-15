@@ -3,7 +3,17 @@
   "tagline": "Your Trusted Partner in Global Healthcare",
   "contactTitle": "Get in Touch",
   "phone": "+1-XXX-XXX-XXXX",
-  "email": "info@panaceamedcare.com",
+  "email": "care@panaceamedcare.com",
+  "ourOffices": {
+    "title": "Our Offices",
+    "offices": [
+      {
+        "name": "Head Office",
+        "address": "123 Healthcare Plaza, Medical District, City, Country",
+        "phone": "+1-XXX-XXX-XXXX"
+      }
+    ]
+  },
   "address": "123 Healthcare Plaza, Medical District, City, Country",
   "quickLinks": {
     "title": "Quick Links",

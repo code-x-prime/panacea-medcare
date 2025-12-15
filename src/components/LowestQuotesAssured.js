@@ -81,18 +81,18 @@ export default function LowestQuotesAssured({ locale }) {
                                     {t(`treatments.${treatment.id}`)}
                                 </h3>
 
-                                {/* Price */}
+                                {/* Price - Red Color */}
                                 <div className={`mb-1 ${isRTL ? "text-right" : "text-left"}`}>
                                     <p className="text-xs text-gray-500 mb-1">{t("starting")}</p>
-                                    <p className="text-2xl font-extrabold text-panacea-primary">
+                                    <p className="text-2xl font-extrabold text-panacea-accent">
                                         {t(`prices.${treatment.id}`)}
                                     </p>
                                 </div>
 
-                                {/* Get Quote Button */}
+                                {/* Get Quote Button - Teal Color */}
                                 <button
                                     onClick={() => handleGetQuote(treatment)}
-                                    className="w-full py-3 bg-panacea-accent hover:bg-panacea-accent/90 text-white rounded-lg font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg"
+                                    className="w-full py-3 bg-panacea-primary hover:bg-panacea-dark text-white rounded-lg font-bold text-sm transition-all duration-300 shadow-md hover:shadow-lg"
                                 >
                                     {t("getQuote")}
                                 </button>

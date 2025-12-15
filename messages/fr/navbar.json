@@ -4,19 +4,17 @@
       { "name": "Accueil", "slug": "/" },
       { "name": "À propos", "slug": "/about" },
       { "name": "Patients internationaux", "slug": "/international-patients" },
+      { "name": "Solutions IA", "slug": "/services/ai-solutions" },
+      { "name": "Équipement médical", "slug": "/equipment" },
+      { "name": "Forfaits de traitement", "slug": "/treatment-packages", "color": "teal" },
       { "name": "Services", "type": "dropdown", "key": "services" },
       { "name": "Médecins", "slug": "/doctors" },
       { "name": "Hôpitaux", "slug": "/hospitals" },
-      { "name": "Équipement", "slug": "/equipment" },
       { "name": "Témoignages", "slug": "/testimonials" },
       { "name": "Blog", "slug": "/blog" },
       { "name": "Contact", "slug": "/contact" }
     ],
     "services": [
-      { "name": "Téléconsultation", "slug": "/services/teleconsultation" },
-      { "name": "Téléradiologie", "slug": "/services/tele-radiology" },
-      { "name": "Télépathologie", "slug": "/services/tele-pathology" },
-      { "name": "Solutions IA", "slug": "/services/ai-solutions" },
       { "name": "Tourisme médical", "slug": "/services/medical-tourism" }
     ]
   }

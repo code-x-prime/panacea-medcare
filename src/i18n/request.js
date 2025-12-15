@@ -27,6 +27,8 @@ export default getRequestConfig(async ({ locale }) => {
     footer: (await import(`../../messages/${validLocale}/footer.json`)).default,
     notFound: (await import(`../../messages/${validLocale}/notFound.json`)).default,
     chatbot: (await import(`../../messages/${validLocale}/chatbot.json`)).default,
+    patientStories: (await import(`../../messages/${validLocale}/patientStories.json`)).default,
+    whatsapp: (await import(`../../messages/${validLocale}/whatsapp.json`)).default,
   };
 
   return {

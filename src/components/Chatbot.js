@@ -8,7 +8,7 @@ export default function Chatbot({ locale }) {
   const t = useTranslations('chatbot');
   const isRTL = locale === 'ar';
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true); // Open automatically on load
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);

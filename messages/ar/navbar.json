@@ -4,19 +4,17 @@
       { "name": "الرئيسية", "slug": "/" },
       { "name": "عن الشركة", "slug": "/about" },
       { "name": "المرضى الدوليون", "slug": "/international-patients" },
+      { "name": "حلول الذكاء الاصطناعي", "slug": "/services/ai-solutions" },
+      { "name": "المعدات الطبية", "slug": "/equipment" },
+      { "name": "باقات العلاج", "slug": "/treatment-packages", "color": "teal" },
       { "name": "الخدمات", "type": "dropdown", "key": "services" },
       { "name": "الأطباء", "slug": "/doctors" },
       { "name": "المستشفيات", "slug": "/hospitals" },
-      { "name": "المعدات", "slug": "/equipment" },
       { "name": "آراء المرضى", "slug": "/testimonials" },
       { "name": "المدونة", "slug": "/blog" },
       { "name": "اتصل بنا", "slug": "/contact" }
     ],
     "services": [
-      { "name": "الاستشارة عن بعد", "slug": "/services/teleconsultation" },
-      { "name": "الأشعة عن بعد", "slug": "/services/tele-radiology" },
-      { "name": "علم الأمراض عن بعد", "slug": "/services/tele-pathology" },
-      { "name": "حلول الذكاء الاصطناعي", "slug": "/services/ai-solutions" },
       { "name": "السياحة العلاجية", "slug": "/services/medical-tourism" }
     ]
   }

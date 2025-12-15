@@ -94,13 +94,13 @@ export default function Footer({ locale }) {
               </a>
 
               <a
-                href={`mailto:${t("email")}`}
+                href="mailto:care@panaceamedcare.com"
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
                 <div className="w-10 h-10 bg-panacea-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="break-all">{t("email")}</span>
+                <span className="break-all">care@panaceamedcare.com</span>
               </a>
 
               <a
@@ -159,6 +159,25 @@ export default function Footer({ locale }) {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Our Offices */}
+          <div>
+            <h4 className="font-bold text-xl mb-6">{t("ourOffices.title") || "Our Offices"}</h4>
+            <div className="space-y-3 mb-8">
+              {t.raw("ourOffices.offices")?.map((office, idx) => (
+                <div key={idx} className="text-panacea-light/90">
+                  <p className="font-semibold text-white mb-1">{office.name}</p>
+                  <p className="text-sm">{office.address}</p>
+                  {office.phone && <p className="text-sm">{office.phone}</p>}
+                </div>
+              )) || (
+                  <div className="text-panacea-light/90">
+                    <p className="font-semibold text-white mb-1">Head Office</p>
+                    <p className="text-sm">123 Healthcare Plaza, Medical District, City, Country</p>
+                  </div>
+                )}
+            </div>
           </div>
 
           {/* Newsletter & Social */}

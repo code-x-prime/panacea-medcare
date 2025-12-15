@@ -3,7 +3,17 @@
   "tagline": "Votre partenaire de confiance en santé mondiale",
   "contactTitle": "Contactez-nous",
   "phone": "+1-XXX-XXX-XXXX",
-  "email": "info@panaceamedcare.com",
+  "email": "care@panaceamedcare.com",
+  "ourOffices": {
+    "title": "Nos bureaux",
+    "offices": [
+      {
+        "name": "Siège social",
+        "address": "123 Plaza Healthcare, District médical, Ville, Pays",
+        "phone": "+1-XXX-XXX-XXXX"
+      }
+    ]
+  },
   "address": "123 Plaza Healthcare, District médical, Ville, Pays",
   "quickLinks": {
     "title": "Liens rapides",

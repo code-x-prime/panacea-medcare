@@ -4,19 +4,17 @@
       { "name": "Home", "slug": "/" },
       { "name": "About", "slug": "/about" },
       { "name": "International Patients", "slug": "/international-patients" },
+      { "name": "AI Solutions", "slug": "/services/ai-solutions" },
+      { "name": "Medical Equipment", "slug": "/equipment" },
+      { "name": "Treatment Packages", "slug": "/treatment-packages", "color": "teal" },
       { "name": "Services", "type": "dropdown", "key": "services" },
       { "name": "Doctors", "slug": "/doctors" },
       { "name": "Hospitals", "slug": "/hospitals" },
-      { "name": "Equipment", "slug": "/equipment" },
       { "name": "Testimonials", "slug": "/testimonials" },
       { "name": "Blog", "slug": "/blog" },
       { "name": "Contact", "slug": "/contact" }
     ],
     "services": [
-      { "name": "Teleconsultation", "slug": "/services/teleconsultation" },
-      { "name": "Tele-radiology", "slug": "/services/tele-radiology" },
-      { "name": "Tele-pathology", "slug": "/services/tele-pathology" },
-      { "name": "AI Solutions", "slug": "/services/ai-solutions" },
       { "name": "Medical Tourism", "slug": "/services/medical-tourism" }
     ]
   }

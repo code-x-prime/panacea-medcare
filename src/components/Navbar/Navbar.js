@@ -120,10 +120,14 @@ export default function Navbar({ locale = "en" }) {
                   handleMenuClick(e, item);
                 }}
                 className={
-                  "flex items-center gap-1.5 text-base font-semibold tracking-wide transition-all h-full px-3 border-b-2 hover:text-teal-600 cursor-pointer " +
-                  (isActive
-                    ? "text-teal-600 border-teal-500"
-                    : "text-gray-700 border-transparent") +
+                  "flex items-center gap-1.5 text-base font-semibold tracking-wide transition-all h-full px-3 border-b-2 cursor-pointer " +
+                  (item.color === "teal"
+                    ? (isActive
+                      ? "text-panacea-primary border-panacea-primary bg-teal-50"
+                      : "text-panacea-primary border-transparent hover:text-panacea-dark hover:bg-teal-50")
+                    : (isActive
+                      ? "text-teal-600 border-teal-500"
+                      : "text-gray-700 border-transparent hover:text-teal-600")) +
                   " " +
                   (isRTL ? "flex-row-reverse" : "")
                 }
@@ -329,7 +333,12 @@ export default function Navbar({ locale = "en" }) {
                               ? "/" + locale
                               : "/" + locale + item.slug
                           }
-                          className="text-lg font-semibold text-gray-800 hover:text-panacea-primary transition-colors flex-1"
+                          className={
+                            "text-lg font-semibold transition-colors flex-1 " +
+                            (item.color === "teal"
+                              ? "text-panacea-primary hover:text-panacea-dark"
+                              : "text-gray-800 hover:text-panacea-primary")
+                          }
                           onClick={closeMobileMenu}
                         >
                           {item.name}

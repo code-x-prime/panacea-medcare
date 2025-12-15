@@ -1,6 +1,5 @@
 "use client";
 import { FcGoogle } from "react-icons/fc";
-import QuoteForm from "./QuoteForm";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -30,11 +29,10 @@ export default function HeroSection({ locale }) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ">
-          {/* Text Content - Left for LTR, Right for RTL */}
+        <div className="max-w-4xl mx-auto">
+          {/* Text Content - Centered */}
           <div
-            className={`text-white space-y-6 ${isRTL ? "lg:order-2 text-right" : "lg:order-1 text-left"
-              }`}
+            className={`text-white space-y-6 text-center ${isRTL ? "rtl" : "ltr"}`}
           >
             {/* World's Best Hospitals Badge */}
             <div className={`inline-flex ${isRTL ? "flex-row-reverse" : ""}`}>
@@ -114,53 +112,25 @@ export default function HeroSection({ locale }) {
               </div>
             </div>
 
-            {/* CTA Buttons - Hidden on Desktop */}
+            {/* CTA Buttons */}
             <div
-              className={`lg:hidden flex ${isRTL ? "flex-row-reverse" : ""
-                } gap-4 pt-6 flex-wrap`}
+              className={`flex ${isRTL ? "flex-row-reverse" : ""} justify-center gap-4 pt-6 flex-wrap`}
             >
-              <button className={`group flex items-center justify-center gap-2 px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-lg font-semibold text-base transition-all duration-300 shadow-xl hover:shadow-teal-500/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
+              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-panacea-primary hover:bg-panacea-dark text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-panacea-primary/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <span>{t("aboutUs")}</span>
-                <svg className={`w-5 h-5 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
-              <button className={`group flex items-center justify-center gap-2 px-6 py-3 bg-panacea-accent hover:bg-red-700 text-white rounded-lg font-semibold text-base transition-all duration-300 shadow-xl hover:shadow-panacea-accent/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
+              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-panacea-accent hover:bg-red-700 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-panacea-accent/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
                 <span>{t("patientStories")}</span>
-                <svg className={`w-5 h-5 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
             </div>
           </div>
-
-          {/* Form - Right for LTR, Left for RTL */}
-          <div
-            className={`${isRTL ? "lg:order-1" : "lg:order-2"
-              }`}
-          >
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-gray-100">
-              <QuoteForm embedded={true} />
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Buttons - Only visible on Desktop */}
-        <div className={`hidden lg:flex ${isRTL ? "flex-row-reverse justify-end" : "justify-start"} gap-4 mt-8`}>
-          <button className={`group flex items-center gap-3 px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-teal-500/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
-            <span>{t("aboutUs")}</span>
-            <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          <button className={`group flex items-center gap-3 px-8 py-4 bg-panacea-accent hover:bg-red-700 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-panacea-accent/50 transform hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}>
-            <span>{t("patientStories")}</span>
-            <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
         </div>
       </div>
     </section>

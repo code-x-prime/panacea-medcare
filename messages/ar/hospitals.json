@@ -1,0 +1,45 @@
+{
+  "title": "تفاصيل المستشفى",
+  "subtitle": "مرافق رعاية صحية عالمية المستوى",
+  "ratings": "التقييمات",
+  "location": "الموقع",
+  "beds": "عدد الأسرة",
+  "specialty": "التخصص",
+  "established": "تأسس في",
+  "accreditations": "الاعتمادات",
+  "bookAppointment": "حجز موعد",
+  "whatsappUs": "واتساب",
+  "aboutHospital": "حول المستشفى",
+  "departments": "الأقسام",
+  "doctors": "الأطباء",
+  "topDoctors": "أفضل الأطباء",
+  "yearsExperience": "سنوات من الخبرة",
+  "internationalPatientServices": "خدمات المرضى الدوليين",
+  "internationalServicesDesc": "هو وجهة مفضلة للمرضى الدوليين، ويقدم رعاية شاملة ومخصصة:",
+  "infrastructure": "البنية التحتية",
+  "infrastructureDesc": "مجهز ببنية تحتية وتكنولوجيا حديثة، ويقدم رعاية صحية عالمية المستوى.",
+  "totalArea": "المساحة الإجمالية",
+  "operationalBeds": "سرير تشغيلي",
+  "icuBeds": "أسرة العناية المركزة",
+  "operationTheatres": "مسارح العمليات",
+  "modularOTs": "مسارح عمليات معيارية",
+  "technologies": "التقنيات",
+  "facilities": "المرافق",
+  "facilitiesTab": {
+    "comfortDuringStay": "الراحة أثناء الإقامة",
+    "moneyMatters": "الأمور المالية",
+    "food": "الطعام",
+    "treatmentRelated": "المتعلقة بالعلاج",
+    "language": "اللغة",
+    "transportation": "النقل"
+  },
+  "services": {
+    "preArrivalConsultation": "الاستشارة قبل الوصول ومراجعة الحالة: آراء طبية وتقديرات تكلفة العلاج من استشاريين كبار.",
+    "visaAssistance": "مساعدة التأشيرة والسفر: خطابات دعوة التأشيرة الطبية والدعم لترتيبات السفر.",
+    "airportPickup": "الاستقبال من المطار/الوصول إلى المطار: يتم ترتيب النقل المجاني من وإلى المطار.",
+    "multilingualInterpreters": "مترجمون متعددو اللغات: مترجمون محترفون متاحون للتواصل.",
+    "dedicatedCoordinators": "تسجيل سريع وصالة مخصصة ومنسقون شخصيون: خدمات سريعة ودعم مستمر.",
+    "accommodationAssistance": "المساعدة في الإقامة وترتيبات الطعام: المساعدة في الفنادق/بيوت الضيافة وخطط الوجبات المخصصة."
+  }
+}
+

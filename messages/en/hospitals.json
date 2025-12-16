@@ -1,0 +1,45 @@
+{
+  "title": "Hospital Details",
+  "subtitle": "World-class healthcare facilities",
+  "ratings": "Ratings",
+  "location": "Location",
+  "beds": "Number of beds",
+  "specialty": "Specialty",
+  "established": "Established in",
+  "accreditations": "Accreditations",
+  "bookAppointment": "Book Appointment",
+  "whatsappUs": "Whatsapp Us",
+  "aboutHospital": "About Hospital",
+  "departments": "Departments",
+  "doctors": "Doctors",
+  "topDoctors": "Top Doctors",
+  "yearsExperience": "years of experience",
+  "internationalPatientServices": "International Patient Services",
+  "internationalServicesDesc": "is a preferred destination for international patients, offering comprehensive and personalised care:",
+  "infrastructure": "Infrastructure",
+  "infrastructureDesc": "is equipped with state-of-the-art infrastructure and technology, delivering world-class healthcare.",
+  "totalArea": "Total Area",
+  "operationalBeds": "operational beds",
+  "icuBeds": "ICU beds",
+  "operationTheatres": "Operation Theatres",
+  "modularOTs": "modular operating theatres",
+  "technologies": "Technologies",
+  "facilities": "Facilities",
+  "facilitiesTab": {
+    "comfortDuringStay": "Comfort During Stay",
+    "moneyMatters": "Money Matters",
+    "food": "Food",
+    "treatmentRelated": "Treatment Related",
+    "language": "Language",
+    "transportation": "Transportation"
+  },
+  "services": {
+    "preArrivalConsultation": "Pre-arrival Consultation and Case Review: Medical opinions and treatment cost estimates from senior consultants.",
+    "visaAssistance": "Visa & Travel Assistance: Medical visa invitation letters and support for travel arrangements.",
+    "airportPickup": "Airport Pick-up/Drop-off: Complimentary transportation is arranged from and to the airport.",
+    "multilingualInterpreters": "Multilingual Interpreters: Professional interpreters are available for communication.",
+    "dedicatedCoordinators": "Express Check-in, Dedicated Lounge & Personal Coordinators: Fast-tracked services and continuous support.",
+    "accommodationAssistance": "Assistance with Accommodation and Food Arrangements: Help with hotels/guesthouses and customised meal plans."
+  }
+}
+

@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "version": "1.0",
+    "type": "hospital-directory",
+    "structure": "country > city > hospitals",
+    "generatedFor": "dynamic-hospital-pages"
+  },
+  "countries": [
+    {
+      "country": "India",
+      "code": "IN",
+      "cities": [
+        {
+          "city": "Gurgaon",
+          "hospitals": [
+            {
+              "id": "marengo-asia-hospital-gurgaon",
+              "slug": "marengo-asia-hospital-gurgaon",
+              "name": "Marengo Asia Hospitals Gurgaon",
+              "rating": {
+                "score": 4.4,
+                "totalReviews": 23
+              },
+              "establishedYear": 1995,
+              "specialtyType": "Multi Specialty",
+              "beds": 110,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "Marengo Asia Hospitals Gurgaon is a flagship hospital of the Pratiksha Group with strong expertise in IVF, orthopedics, neurology and critical care.",
+                "full": "Established in 1995, Marengo Asia Hospitals, Formerly W Pratiksha Hospital, is a flagship hospital of the Pratiksha group. The group has 3 hospitals and multiple clinics across India. In 2018, the hospital has treated more than 25,000 people, provided more than 6000 joint replacements, 1,500 IVF treatments, managed more than 2000 births, 5000 Arthroscopic ACL Reconstruction, and critical care for 1000 premature newborns. The chairman of Pratiksha Group – Dr. Pramod Kumar Sharma, is one of the pioneers of IVF treatment. The hospital has done more than 5500+ IVF success stories.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 2 },
+                { "name": "Orthopedics", "doctors": 4 },
+                { "name": "Neurology & Neurosurgery", "doctors": 3 },
+                { "name": "IVF & Infertility", "doctors": 5 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Hemant Sharma",
+                  "specialization": "Orthopaedic & Joint Replacement Surgeon",
+                  "experience": 29
+                },
+                {
+                  "name": "Dr Praveen Gupta",
+                  "specialization": "Neurologist",
+                  "experience": 27
+                }
+              ],
+              "address": {
+                "line1": "Golf Course Extension Road, Sector 56",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122011",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 19,
+                "metroKm": 1
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Spa and wellness", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Beauty Salon", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available", "Multiple payment methods"],
+                "food": ["International cuisine", "Vegetarian options", "Custom meal plans", "Dietitian services"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy"],
+                "language": ["English", "Hindi", "Arabic", "French"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance", "Ambulance services"]
+              },
+              "infrastructure": {
+                "totalArea": "Modern facility with state-of-the-art infrastructure",
+                "beds": 110,
+                "icuBeds": 20,
+                "operationTheatres": 4,
+                "technologies": ["Modern physiotherapy unit", "Advanced diagnostic equipment", "Modular operation theatres"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              }
+            },
+            {
+              "id": "fortis-manesar-gurgaon",
+              "slug": "fortis-hospital-manesar-gurgaon",
+              "name": "Fortis Hospital Manesar",
+              "rating": {
+                "score": 4.4,
+                "totalReviews": 14
+              },
+              "establishedYear": 2013,
+              "specialtyType": "Multi Specialty",
+              "beds": 350,
+              "accreditations": ["NABH", "NABL"],
+              "about": {
+                "short": "Fortis Hospital Manesar is a tertiary care hospital with expertise in cardiology, oncology, neurology and emergency care.",
+                "full": "Established in 2013, Fortis Hospital is an accredited multi-speciality tertiary care hospital. It is India's first hospital to collaborate with Japanese companies for the betterment of health equipment. It specializes in cosmetic surgery, bariatric surgery, laparoscopic surgery, gastroenterology, neurosciences, and renal sciences. Equipped with OPD, Emergency, life-saving Therapeutic and Curative Secondary Care and also Tertiary Care facilities.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 4 },
+                { "name": "Oncology", "doctors": 4 },
+                { "name": "Neurology & Neurosurgery", "doctors": 4 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Vinay Samuel Gaikwad",
+                  "specialization": "Surgical Oncologist",
+                  "experience": 24
+                }
+              ],
+              "address": {
+                "line1": "Sector 5, IMT Manesar",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122050",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "totalArea": "5 lac sq. ft",
+                "beds": 350,
+                "icuBeds": 95,
+                "operationTheatres": 9,
+                "technologies": ["2 Intervention Cath Labs", "Emergency and Trauma Services", "Rehabilitation services", "Swimming pool", "Gymnasium"]
+              }
+            }
+          ]
+        },
+        {
+          "city": "New Delhi",
+          "hospitals": [
+            {
+              "id": "indraprastha-apollo-new-delhi",
+              "slug": "indraprastha-apollo-hospital-new-delhi",
+              "name": "Indraprastha Apollo Hospital",
+              "rating": {
+                "score": 4.3,
+                "totalReviews": 86
+              },
+              "establishedYear": 1995,
+              "specialtyType": "Multi Super Specialty",
+              "beds": 710,
+              "accreditations": ["JCI", "NABH", "NABL"],
+              "about": {
+                "short": "Indraprastha Apollo Hospital is India's first JCI-accredited hospital and a global leader in cardiac sciences and organ transplants.",
+                "full": "Indraprastha Apollo Hospital, the Apollo Hospitals Group's flagship, is India's premier multi-super specialty hospital. It was founded as a joint venture with the Government of Delhi and has constantly ranked at the top of medical quality. Indraprastha Apollo, India's first hospital to be globally recognised by JCI in 2005, has established itself as a worldwide leader in organ transplantation and cardiac sciences.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 21 },
+                { "name": "Oncology", "doctors": 11 },
+                { "name": "Orthopedics", "doctors": 16 },
+                { "name": "Neurology & Neurosurgery", "doctors": 13 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Rakesh Mahajan",
+                  "specialization": "Vascular Surgeon",
+                  "experience": 40
+                },
+                {
+                  "name": "Dr P. L. Dhingra",
+                  "specialization": "ENT Surgeon",
+                  "experience": 51,
+                  "rating": 5.0,
+                  "totalRatings": 13
+                }
+              ],
+              "address": {
+                "line1": "Sarita Vihar, Mathura Road",
+                "city": "New Delhi",
+                "state": "Delhi",
+                "pincode": "110076",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 22,
+                "metroKm": 2.5,
+                "railwayKm": 8
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Spa and wellness", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available", "Multiple payment methods"],
+                "food": ["International cuisine", "Vegetarian options", "Custom meal plans", "Dietitian services"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy", "Blood Bank"],
+                "language": ["English", "Hindi", "Arabic", "French", "Spanish"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance", "Ambulance services"]
+              },
+              "infrastructure": {
+                "totalArea": "15-acre campus with over 600,000 square feet of built-up area",
+                "beds": 710,
+                "icuBeds": 250,
+                "operationTheatres": 15,
+                "technologies": ["3 Tesla MRI", "128-Slice CT Scanner", "Da Vinci Robotic Surgical System", "PET-CT & PET-MR", "NovalisTx & TomoTherapy", "BrainLab Navigation System", "Largest sleep lab in Asia", "Hyperbaric oxygen chamber"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              }
+            },
+            {
+              "id": "manipal-hospitals-dwarka",
+              "slug": "manipal-hospital-dwarka",
+              "name": "Manipal Hospitals Dwarka",
+              "rating": {
+                "score": 4.4,
+                "totalReviews": 54
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 380,
+              "accreditations": ["NABH", "NABL"],
+              "about": {
+                "short": "Manipal Hospital Dwarka is a leading tertiary care hospital known for cardiac surgery, oncology and orthopedics.",
+                "full": "Manipal Hospital Dwarka is a multi-super speciality tertiary care facility that delivers world-class healthcare at an optimum cost. The facility is part of the renowned Manipal Education and Medical Group, which was established in 1953 as Kasturba Medical College in Manipal, Karnataka, making it the third-largest established player in India.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 9 },
+                { "name": "Oncology", "doctors": 18 },
+                { "name": "Orthopedics", "doctors": 5 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Y K Mishraa",
+                  "specialization": "Cardiac Surgeon",
+                  "experience": 44,
+                  "rating": 4.9,
+                  "totalRatings": 271
+                }
+              ],
+              "address": {
+                "line1": "Sector 6, Dwarka",
+                "city": "New Delhi",
+                "state": "Delhi",
+                "pincode": "110075",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Spa and wellness", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Beauty Salon", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "totalArea": "560,000 square feet",
+                "beds": 380,
+                "icuBeds": 118,
+                "operationTheatres": 13,
+                "technologies": ["Telemedicine", "Remote monitoring", "AI", "Electronic Medical Record (EMR) system"]
+              }
+            }
+          ]
+        },
+        {
+          "city": "Mumbai",
+          "hospitals": [
+            {
+              "id": "apollo-navi-mumbai",
+              "slug": "apollo-hospital-mumbai",
+              "name": "Apollo Hospitals Navi Mumbai",
+              "rating": {
+                "score": 4.0,
+                "totalReviews": 20
+              },
+              "beds": 500,
+              "accreditations": ["JCI", "NABH"],
+              "about": {
+                "short": "Apollo Hospitals Navi Mumbai is one of the most advanced multi-speciality tertiary care hospitals in Maharashtra.",
+                "full": "Apollo Hospitals, Navi Mumbai, is one of the most advanced multi-speciality tertiary care hospitals in Maharashtra. It offers comprehensive services under one roof. It is the 66th hospital of the Apollo Group and is accredited by the Joint Commission International (JCI) and the National Accreditation Board for Hospitals and Healthcare Providers (NABH).",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 7 },
+                { "name": "Neurosurgery", "doctors": 8 }
+              ],
+              "address": {
+                "line1": "CBD Belapur, Navi Mumbai",
+                "city": "Mumbai",
+                "state": "Maharashtra",
+                "pincode": "400614",
+                "country": "India"
+              }
+            }
+          ]
+        },
+        {
+          "city": "Hyderabad",
+          "hospitals": [
+            {
+              "id": "apollo-jubilee-hills",
+              "slug": "apollo-hospital-hyderabad",
+              "name": "Apollo Hospitals Jubilee Hills",
+              "rating": {
+                "score": 4.1,
+                "totalReviews": 44
+              },
+              "beds": 550,
+              "accreditations": ["JCI", "NABH"],
+              "about": {
+                "short": "Apollo Hospitals Jubilee Hills is the flagship facility of Asia's pioneering Apollo Health City.",
+                "full": "Apollo Hospitals, located in Jubilee Hills and established in 1988, is the flagship facility of Asia's pioneering Apollo Health City. It is a world-renowned institution that has consistently set new benchmarks in Indian healthcare.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiac Surgery", "doctors": 8 },
+                { "name": "Oncology", "doctors": 8 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Vijay Dikshit",
+                  "specialization": "Cardiac Surgeon",
+                  "experience": 53
+                }
+              ],
+              "address": {
+                "line1": "Road No 72, Film Nagar",
+                "city": "Hyderabad",
+                "state": "Telangana",
+                "pincode": "500033",
+                "country": "India"
+              }
+            }
+          ]
+        },
+        {
+          "city": "Chennai",
+          "hospitals": [
+            {
+              "id": "apollo-greams-road-chennai",
+              "slug": "apollo-hospital-greams-road-chennai",
+              "name": "Apollo Hospital Greams Road",
+              "rating": {
+                "score": 4.7,
+                "totalReviews": 125
+              },
+              "establishedYear": 1983,
+              "specialtyType": "Multi Specialty",
+              "beds": 560,
+              "accreditations": ["JCI", "NABH", "NABL"],
+              "about": {
+                "short": "Apollo Hospitals Greams Road is the Apollo Group's flagship hospital and a pioneer in corporate healthcare in India.",
+                "full": "Apollo Hospitals, located on Greams Road in Chennai, was founded in 1983 by the visionary Dr. Prathap C. Reddy. It is the Apollo Group's flagship hospital and a pioneer in corporate healthcare in India. For four decades, this historic institution has been at the forefront of medical innovation.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 21 },
+                { "name": "Gastroenterology", "doctors": 19 },
+                { "name": "Orthopedics", "doctors": 15 }
+              ],
+              "address": {
+                "line1": "Greams Lane, 21, Greams Rd",
+                "city": "Chennai",
+                "state": "Tamil Nadu",
+                "pincode": "600006",
+                "country": "India"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Turkey",
+      "code": "TR",
+      "cities": [
+        {
+          "city": "Istanbul",
+          "hospitals": [
+            {
+              "id": "memorial-hospitals-istanbul",
+              "slug": "memorial-hospital-turkey",
+              "name": "Memorial Hospitals Group",
+              "rating": {
+                "score": 4.6,
+                "totalReviews": 22
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 1500,
+              "accreditations": ["JCI"],
+              "about": {
+                "short": "Memorial Hospitals Group is one of Turkey's largest healthcare networks and a pioneer in robotic surgery and IVF.",
+                "full": "Founded with a mission to deliver world-class medical care with a focus on patient experience, Memorial Hospitals Group is one of Turkiye's largest and most respected healthcare providers. Memorial Sisli was the first hospital in Turkiye to receive JCI accreditation, setting a new standard for quality in the region.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "IVF & Infertility", "doctors": 4 },
+                { "name": "Organ Transplant", "doctors": 10 },
+                { "name": "Oncology", "doctors": 10 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Prof. Semra Kahraman",
+                  "specialization": "IVF Specialist",
+                  "experience": 33,
+                  "rating": 4.7,
+                  "totalRatings": 111
+                }
+              ],
+              "address": {
+                "line1": "Sisli",
+                "city": "Istanbul",
+                "country": "Turkey",
+                "pincode": "34676"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Thailand",
+      "code": "TH",
+      "cities": [
+        {
+          "city": "Bangkok",
+          "hospitals": [
+            {
+              "id": "bumrungrad-bangkok",
+              "slug": "bumrungrad-hospital-thailand",
+              "name": "Bumrungrad International Hospital",
+              "rating": {
+                "score": 4.2,
+                "totalReviews": 32
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 580,
+              "accreditations": ["JCI"],
+              "about": {
+                "short": "Bumrungrad International Hospital is Southeast Asia's leading private hospital serving patients from 190+ countries.",
+                "full": "Bumrungrad International Hospital, established in 1980, is one of the largest private multispecialty tertiary care hospitals in Southeast Asia. Its global reputation is founded upon its unparalleled medical excellence. The hospital treats over 1.1 million patients every year, including over 5,20,000 international patients from 190 countries.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 18 },
+                { "name": "Neurosurgery", "doctors": 25 },
+                { "name": "Oncology", "doctors": 13 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Kittichai Luengtaviboon",
+                  "specialization": "Cardiac Surgeon",
+                  "experience": 45
+                }
+              ],
+              "address": {
+                "line1": "Sukhumvit 3",
+                "city": "Bangkok",
+                "country": "Thailand",
+                "pincode": "10110"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Israel",
+      "code": "IL",
+      "cities": [
+        {
+          "city": "Tel Aviv",
+          "hospitals": [
+            {
+              "id": "sheeba-hospital-israel",
+              "slug": "sheeba-hospital-israel",
+              "name": "Sheeba Hospital",
+              "rating": {
+                "score": 4.8,
+                "totalReviews": 45
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 1700,
+              "accreditations": ["JCI"],
+              "about": {
+                "short": "Sheeba Hospital is one of Israel's largest and most advanced medical centers.",
+                "full": "Sheeba Medical Center is one of Israel's largest and most advanced medical centers, providing comprehensive medical care and research.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 25 },
+                { "name": "Oncology", "doctors": 20 }
+              ],
+              "address": {
+                "line1": "Tel Hashomer",
+                "city": "Tel Aviv",
+                "country": "Israel"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Nepal",
+      "code": "NP",
+      "cities": [
+        {
+          "city": "Kathmandu",
+          "hospitals": [
+            {
+              "id": "nepal-mediciti",
+              "slug": "nepal-mediciti",
+              "name": "Nepal Mediciti",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 30
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 400,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "Nepal Mediciti is a leading private hospital in Nepal providing world-class healthcare services.",
+                "full": "Nepal Mediciti Hospital is a leading private hospital in Nepal, providing comprehensive healthcare services with modern infrastructure and experienced medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 8 },
+                { "name": "General Surgery", "doctors": 10 }
+              ],
+              "address": {
+                "line1": "Nakkhu",
+                "city": "Kathmandu",
+                "country": "Nepal"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

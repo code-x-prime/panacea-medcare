@@ -1,0 +1,45 @@
+{
+  "title": "Détails de l'hôpital",
+  "subtitle": "Établissements de santé de classe mondiale",
+  "ratings": "Évaluations",
+  "location": "Emplacement",
+  "beds": "Nombre de lits",
+  "specialty": "Spécialité",
+  "established": "Établi en",
+  "accreditations": "Accréditations",
+  "bookAppointment": "Prendre rendez-vous",
+  "whatsappUs": "WhatsApp",
+  "aboutHospital": "À propos de l'hôpital",
+  "departments": "Départements",
+  "doctors": "Médecins",
+  "topDoctors": "Meilleurs médecins",
+  "yearsExperience": "années d'expérience",
+  "internationalPatientServices": "Services aux patients internationaux",
+  "internationalServicesDesc": "est une destination privilégiée pour les patients internationaux, offrant des soins complets et personnalisés:",
+  "infrastructure": "Infrastructure",
+  "infrastructureDesc": "est équipé d'une infrastructure et d'une technologie de pointe, offrant des soins de santé de classe mondiale.",
+  "totalArea": "Superficie totale",
+  "operationalBeds": "lits opérationnels",
+  "icuBeds": "lits de soins intensifs",
+  "operationTheatres": "Blocs opératoires",
+  "modularOTs": "blocs opératoires modulaires",
+  "technologies": "Technologies",
+  "facilities": "Installations",
+  "facilitiesTab": {
+    "comfortDuringStay": "Confort pendant le séjour",
+    "moneyMatters": "Questions financières",
+    "food": "Nourriture",
+    "treatmentRelated": "Lié au traitement",
+    "language": "Langue",
+    "transportation": "Transport"
+  },
+  "services": {
+    "preArrivalConsultation": "Consultation avant l'arrivée et examen du dossier: Avis médicaux et estimations des coûts de traitement de consultants seniors.",
+    "visaAssistance": "Assistance visa et voyage: Lettres d'invitation pour visa médical et soutien pour les arrangements de voyage.",
+    "airportPickup": "Prise en charge/retour à l'aéroport: Transport gratuit organisé depuis et vers l'aéroport.",
+    "multilingualInterpreters": "Interprètes multilingues: Interprètes professionnels disponibles pour la communication.",
+    "dedicatedCoordinators": "Enregistrement express, salon dédié et coordinateurs personnels: Services accélérés et soutien continu.",
+    "accommodationAssistance": "Assistance pour l'hébergement et les arrangements alimentaires: Aide pour les hôtels/maisons d'hôtes et plans de repas personnalisés."
+  }
+}
+

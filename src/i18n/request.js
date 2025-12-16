@@ -33,6 +33,7 @@ export default getRequestConfig(async ({ locale }) => {
     blog: (await import(`../../messages/${validLocale}/blog.json`)).default,
     ourOffices: (await import(`../../messages/${validLocale}/ourOffices.json`)).default,
     treatmentPackages: (await import(`../../messages/${validLocale}/treatmentPackages.json`)).default,
+    hospitals: (await import(`../../messages/${validLocale}/hospitals.json`)).default,
   };
 
   return {

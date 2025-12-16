@@ -9,7 +9,6 @@ export default function NetworkOfTopHospitals({ locale }) {
     const t = useTranslations("networkHospitals");
     const isRTL = locale === "ar";
 
-    // India hospitals organized by city
     const indiaHospitals = {
         "delhi-ncr": [
             { name: "Asian Hospital", slug: "asian-hospital-delhi" },
@@ -53,9 +52,39 @@ export default function NetworkOfTopHospitals({ locale }) {
         ],
     };
 
-    // Helper function to get hospital image
+    // Helper function to get hospital image - returns image path or placeholder
     const getHospitalImage = (slug) => {
-        return `https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop`;
+        // Image mapping for hospitals with actual images
+        const imageMap = {
+            // Delhi NCR
+            "asian-hospital-delhi": "/hospitals/asian-hospital-delhi.jpg",
+            "marengo-asia-hospital-gurgaon": "/hospitals/marengo-asia-hospital-gurgaon.jpg",
+            "indraprastha-apollo-hospital-new-delhi": "/hospitals/indraprastha-apollo-hospital-new-delhi.jpg",
+            "apollo-hospitals-all": "/hospitals/apollo-hospitals-all.jpg",
+            "fortis-hospital-gurgaon": "/hospitals/fortis-hospital-gurgaon.jpg",
+            "max-hospital-saket": "/hospitals/max-hospital-saket.jpg",
+            "blk-max-hospital-pusa-road": "/hospitals/blk-max-hospital-pusa-road.jpg",
+            "medanta-hospital-gurgaon": "/hospitals/medanta-hospital-gurgaon.jpg",
+            "neelkanth-maternity-ivf-hospital-gurgaon": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon.jpg",
+            "manipal-hospital-dwarka": "/hospitals/manipal-hospital-dwarka.jpg",
+            // Chennai
+            "apollo-hospital-greams-road-chennai": "/hospitals/apollo-hospital-greams-road-chennai.jpg",
+            // Mumbai
+            "stem-rx-hospital-mumbai": "/hospitals/stem-rx-hospital-mumbai.jpg",
+            "apollo-hospital-mumbai": "/hospitals/apollo-hospital-mumbai.jpg",
+            "fortis-hospital-mumbai": "/hospitals/fortis-hospital-mumbai.jpg",
+            // Hyderabad
+            "tx-hospital-hyderabad": "/hospitals/tx-hospital-hyderabad.jpg",
+            "apollo-hospital-hyderabad": "/hospitals/apollo-hospital-hyderabad.jpg",
+            // International
+            "memorial-hospital-turkey": "/hospitals/memorial-hospital-turkey.jpg",
+            "bumrungrad-hospital-thailand": "/hospitals/bumrungrad-hospital-thailand.jpg",
+            "sheeba-hospital-israel": "/hospitals/sheeba-hospital-israel.jpg",
+            "nepal-mediciti": "/hospitals/nepal-mediciti.jpg",
+        };
+
+        // Return image if exists, otherwise return placeholder
+        return imageMap[slug] || "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
     };
 
     return (
@@ -242,6 +271,9 @@ export default function NetworkOfTopHospitals({ locale }) {
                                                     alt={hospital.name}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             </div>
@@ -273,6 +305,9 @@ export default function NetworkOfTopHospitals({ locale }) {
                                                     alt={hospital.name}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             </div>
@@ -304,6 +339,9 @@ export default function NetworkOfTopHospitals({ locale }) {
                                                     alt={hospital.name}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             </div>
@@ -335,6 +373,9 @@ export default function NetworkOfTopHospitals({ locale }) {
                                                     alt={hospital.name}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    onError={(e) => {
+                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
+                                                    }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                             </div>

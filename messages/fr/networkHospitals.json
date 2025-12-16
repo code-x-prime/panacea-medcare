@@ -15,29 +15,5 @@
   "nepal": "Népal",
   "accreditation": "Hôpitaux avec accréditation la plus élevée",
   "contactHospital": "Contacter l'hôpital",
-  "chat": "Discuter",
-  "countries": {
-    "india": "Inde",
-    "turkey": "Turquie",
-    "uae": "EAU",
-    "thailand": "Thaïlande",
-    "germany": "Allemagne",
-    "egypt": "Égypte"
-  },
-  "hospitals": {
-    "medanta-gurgaon": "Medanta, Gurgaon",
-    "indraprastha-apollo-hospital-new-delhi": "Indraprastha Apollo, New Delhi",
-    "kokilaben-hospital-mumbai": "Kokilaben, Mumbai",
-    "apollo-hospital-chennai": "Apollo, Chennai",
-    "medical-park-istanbul": "Medical Park, Istanbul",
-    "memorial-hospitals-istanbul": "Memorial Hospitals, Istanbul",
-    "burjeel-abu-dhabi": "Burjeel, Abu Dhabi",
-    "saudi-german-dubai": "Saudi German, Dubaï",
-    "bumrungrad-bangkok": "Bumrungrad, Bangkok",
-    "bangkok-hospital-bangkok": "Bangkok Hospital, Bangkok",
-    "charite-berlin": "Charité, Berlin",
-    "heidelberg-university-heidelberg": "Université de Heidelberg, Heidelberg",
-    "arab-contractors-medical-centre-cairo": "Centre médical Arab Contractors, Le Caire",
-    "as-salam-international-hospital-cairo": "Hôpital international As-Salam, Le Caire"
-  }
+  "chat": "Discuter"
 }

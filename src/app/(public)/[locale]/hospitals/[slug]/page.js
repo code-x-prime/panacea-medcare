@@ -68,13 +68,18 @@ export default function HospitalDetailPage({ params }) {
         { id: "transportation", label: t("facilitiesTab.transportation") || "Transportation" },
     ];
 
+    // Get localized content
+    const hospitalName = locale === "ar" ? (hospital.nameAr || hospital.name) : locale === "fr" ? (hospital.nameFr || hospital.name) : hospital.name;
+    const hospitalShortDesc = locale === "ar" ? (hospital.about?.shortAr || hospital.about?.short || "") : locale === "fr" ? (hospital.about?.shortFr || hospital.about?.short || "") : (hospital.about?.short || "");
+    const hospitalFullDesc = locale === "ar" ? (hospital.about?.fullAr || hospital.about?.full || "") : locale === "fr" ? (hospital.about?.fullFr || hospital.about?.full || "") : (hospital.about?.full || "");
+
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
             <PageHero
                 locale={locale}
                 namespace="hospitals"
-                title={hospital.name}
-                subtitle={hospital.about?.short || ""}
+                title={hospitalName}
+                subtitle={hospitalShortDesc}
                 backgroundImage={getHospitalImage(hospital.slug)}
                 fallbackImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=600&fit=crop"
             />
@@ -187,14 +192,14 @@ export default function HospitalDetailPage({ params }) {
                         {/* Main Content */}
                         <div className="lg:col-span-2 space-y-12">
                             {/* About Hospital */}
-                            {hospital.about?.full && (
+                            {hospitalFullDesc && (
                                 <div>
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("aboutHospital") || "About Hospital"}
                                     </h2>
                                     <div className="prose max-w-none">
                                         <p className={`text-gray-700 leading-relaxed ${isRTL ? "text-right" : "text-left"}`}>
-                                            {hospital.about.full}
+                                            {hospitalFullDesc}
                                         </p>
                                     </div>
                                 </div>

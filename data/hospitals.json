@@ -17,6 +17,8 @@
               "id": "marengo-asia-hospital-gurgaon",
               "slug": "marengo-asia-hospital-gurgaon",
               "name": "Marengo Asia Hospitals Gurgaon",
+              "nameAr": "مستشفى مارينغو آسيا جورجاون",
+              "nameFr": "Hôpitaux Marengo Asia Gurgaon",
               "rating": {
                 "score": 4.4,
                 "totalReviews": 23
@@ -27,7 +29,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "Marengo Asia Hospitals Gurgaon is a flagship hospital of the Pratiksha Group with strong expertise in IVF, orthopedics, neurology and critical care.",
+                "shortAr": "مستشفى مارينغو آسيا جورجاون هو مستشفى رئيسي لمجموعة براتيشا مع خبرة قوية في التلقيح الاصطناعي، وجراحة العظام، وطب الأعصاب والرعاية الحرجة.",
+                "shortFr": "Les hôpitaux Marengo Asia Gurgaon sont un hôpital phare du groupe Pratiksha avec une expertise solide en FIV, orthopédie, neurologie et soins intensifs.",
                 "full": "Established in 1995, Marengo Asia Hospitals, Formerly W Pratiksha Hospital, is a flagship hospital of the Pratiksha group. The group has 3 hospitals and multiple clinics across India. In 2018, the hospital has treated more than 25,000 people, provided more than 6000 joint replacements, 1,500 IVF treatments, managed more than 2000 births, 5000 Arthroscopic ACL Reconstruction, and critical care for 1000 premature newborns. The chairman of Pratiksha Group – Dr. Pramod Kumar Sharma, is one of the pioneers of IVF treatment. The hospital has done more than 5500+ IVF success stories.",
+                "fullAr": "تأسس مستشفى مارينغو آسيا، المعروف سابقًا بمستشفى دبليو براتيشا، في عام 1995 وهو مستشفى رئيسي لمجموعة براتيشا. تضم المجموعة 3 مستشفيات وعيادات متعددة في جميع أنحاء الهند. في عام 2018، عالج المستشفى أكثر من 25000 شخص، وأجرى أكثر من 6000 استبدال للمفاصل، و1500 علاج للتلقيح الاصطناعي، وأدار أكثر من 2000 ولادة، و5000 إعادة بناء للرباط الصليبي الأمامي بالمنظار، ورعاية حرجة لـ 1000 مولود مبتسر. رئيس مجموعة براتيشا - الدكتور برامود كumar شارما، هو أحد رواد علاج التلقيح الاصطناعي. أنجز المستشفى أكثر من 5500 قصة نجاح للتلقيح الاصطناعي.",
+                "fullFr": "Établi en 1995, les hôpitaux Marengo Asia, anciennement hôpital W Pratiksha, est un hôpital phare du groupe Pratiksha. Le groupe compte 3 hôpitaux et plusieurs cliniques à travers l'Inde. En 2018, l'hôpital a traité plus de 25 000 personnes, effectué plus de 6 000 remplacements d'articulations, 1 500 traitements de FIV, géré plus de 2 000 naissances, 5 000 reconstructions ACL arthroscopiques et des soins intensifs pour 1 000 nouveau-nés prématurés. Le président du groupe Pratiksha - Dr. Pramod Kumar Sharma, est l'un des pionniers du traitement de la FIV. L'hôpital a réalisé plus de 5 500+ histoires de succès de FIV.",
                 "internationalPatients": true
               },
               "departments": [
@@ -87,6 +93,8 @@
               "id": "fortis-manesar-gurgaon",
               "slug": "fortis-hospital-manesar-gurgaon",
               "name": "Fortis Hospital Manesar",
+              "nameAr": "مستشفى فورتيس مانيسار",
+              "nameFr": "Hôpital Fortis Manesar",
               "rating": {
                 "score": 4.4,
                 "totalReviews": 14
@@ -97,7 +105,11 @@
               "accreditations": ["NABH", "NABL"],
               "about": {
                 "short": "Fortis Hospital Manesar is a tertiary care hospital with expertise in cardiology, oncology, neurology and emergency care.",
+                "shortAr": "مستشفى فورتيس مانيسار هو مستشفى رعاية ثالثية مع خبرة في أمراض القلب، والأورام، وطب الأعصاب والرعاية الطارئة.",
+                "shortFr": "L'hôpital Fortis Manesar est un hôpital de soins tertiaires avec une expertise en cardiologie, oncologie, neurologie et soins d'urgence.",
                 "full": "Established in 2013, Fortis Hospital is an accredited multi-speciality tertiary care hospital. It is India's first hospital to collaborate with Japanese companies for the betterment of health equipment. It specializes in cosmetic surgery, bariatric surgery, laparoscopic surgery, gastroenterology, neurosciences, and renal sciences. Equipped with OPD, Emergency, life-saving Therapeutic and Curative Secondary Care and also Tertiary Care facilities.",
+                "fullAr": "تأسس مستشفى فورتيس في عام 2013 وهو مستشفى رعاية ثالثية متعدد التخصصات معتمد. وهو أول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية. يتخصص في جراحة التجميل، وجراحة السمنة، والجراحة بالمنظار، وأمراض الجهاز الهضمي، وعلوم الأعصاب، وعلوم الكلى. مجهز بعيادات خارجية، وطوارئ، ورعاية علاجية وعلاجية ثانوية منقذة للحياة وأيضًا مرافق رعاية ثالثية.",
+                "fullFr": "Établi en 2013, l'hôpital Fortis est un hôpital de soins tertiaires multi-spécialités accrédité. C'est le premier hôpital d'Inde à collaborer avec des entreprises japonaises pour l'amélioration de l'équipement de santé. Il se spécialise en chirurgie esthétique, chirurgie bariatrique, chirurgie laparoscopique, gastro-entérologie, neurosciences et sciences rénales. Équipé de services externes, d'urgence, de soins thérapeutiques et curatifs secondaires vitaux et également d'installations de soins tertiaires.",
                 "internationalPatients": true
               },
               "departments": [
@@ -139,6 +151,8 @@
               "id": "fortis-hospital-gurgaon",
               "slug": "fortis-hospital-gurgaon",
               "name": "Fortis Hospital Gurgaon",
+              "nameAr": "مستشفى فورتيس جورجاون",
+              "nameFr": "Hôpital Fortis Gurgaon",
               "rating": {
                 "score": 4.5,
                 "totalReviews": 35
@@ -149,7 +163,11 @@
               "accreditations": ["JCI", "NABH"],
               "about": {
                 "short": "Fortis Hospital Gurgaon is a leading multi-specialty hospital providing comprehensive healthcare services.",
+                "shortAr": "مستشفى فورتيس جورجاون هو مستشفى رائد متعدد التخصصات يقدم خدمات رعاية صحية شاملة.",
+                "shortFr": "L'hôpital Fortis Gurgaon est un hôpital multi-spécialités de premier plan offrant des services de soins de santé complets.",
                 "full": "Fortis Hospital Gurgaon is a state-of-the-art multi-specialty hospital offering world-class medical care with advanced technology and experienced medical professionals.",
+                "fullAr": "مستشفى فورتيس جورجاون هو مستشفى متعدد التخصصات حديث يقدم رعاية طبية عالمية المستوى مع تقنيات متقدمة ومهنيين طبيين ذوي خبرة.",
+                "fullFr": "L'hôpital Fortis Gurgaon est un hôpital multi-spécialités de pointe offrant des soins médicaux de classe mondiale avec une technologie avancée et des professionnels médicaux expérimentés.",
                 "internationalPatients": true
               },
               "departments": [
@@ -184,6 +202,8 @@
               "id": "medanta-hospital-gurgaon",
               "slug": "medanta-hospital-gurgaon",
               "name": "Medanta Hospital, Gurgaon",
+              "nameAr": "مستشفى ميدانتا جورجاون",
+              "nameFr": "Hôpital Medanta Gurgaon",
               "rating": {
                 "score": 4.6,
                 "totalReviews": 120
@@ -194,7 +214,11 @@
               "accreditations": ["JCI", "NABH", "NABL"],
               "about": {
                 "short": "Medanta Hospital Gurgaon is one of India's largest multi-super specialty hospitals with world-class infrastructure.",
+                "shortAr": "مستشفى ميدانتا جورجاون هو واحد من أكبر المستشفيات متعددة التخصصات الفائقة في الهند مع بنية تحتية عالمية المستوى.",
+                "shortFr": "L'hôpital Medanta Gurgaon est l'un des plus grands hôpitaux multi-super spécialités d'Inde avec une infrastructure de classe mondiale.",
                 "full": "Medanta - The Medicity is one of India's largest multi-super specialty hospitals. Founded by renowned cardiac surgeon Dr. Naresh Trehan, it offers comprehensive healthcare services across 20+ super specialties with state-of-the-art technology and internationally trained medical professionals.",
+                "fullAr": "ميدانتا - المدينة الطبية هي واحدة من أكبر المستشفيات متعددة التخصصات الفائقة في الهند. تأسست على يد جراح القلب الشهير الدكتور ناريش تريهان، وتقدم خدمات رعاية صحية شاملة عبر أكثر من 20 تخصصًا فائقًا مع تقنيات حديثة ومهنيين طبيين مدربين دوليًا.",
+                "fullFr": "Medanta - The Medicity est l'un des plus grands hôpitaux multi-super spécialités d'Inde. Fondé par le célèbre chirurgien cardiaque Dr. Naresh Trehan, il offre des services de soins de santé complets dans plus de 20 super spécialités avec une technologie de pointe et des professionnels médicaux formés internationalement.",
                 "internationalPatients": true
               },
               "departments": [
@@ -245,6 +269,8 @@
               "id": "neelkanth-maternity-ivf-hospital-gurgaon",
               "slug": "neelkanth-maternity-ivf-hospital-gurgaon",
               "name": "Neelkanth Maternity & IVF Hospital Gurgaon",
+              "nameAr": "مستشفى نيلكانث للولادة والتلقيح الاصطناعي جورجاون",
+              "nameFr": "Hôpital Neelkanth Maternity & IVF Gurgaon",
               "rating": {
                 "score": 4.3,
                 "totalReviews": 28
@@ -254,7 +280,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "Neelkanth Maternity & IVF Hospital is a specialized hospital focusing on maternity care, IVF, and reproductive health.",
+                "shortAr": "مستشفى نيلكانث للولادة والتلقيح الاصطناعي هو مستشفى متخصص يركز على رعاية الأمومة، والتلقيح الاصطناعي، والصحة الإنجابية.",
+                "shortFr": "L'hôpital Neelkanth Maternity & IVF est un hôpital spécialisé axé sur les soins de maternité, la FIV et la santé reproductive.",
                 "full": "Neelkanth Maternity & IVF Hospital Gurgaon is a dedicated facility specializing in maternity care, IVF treatments, and reproductive health services. The hospital provides comprehensive care for expecting mothers and couples seeking fertility treatments.",
+                "fullAr": "مستشفى نيلكانث للولادة والتلقيح الاصطناعي جورجاون هو منشأة مخصصة متخصصة في رعاية الأمومة، وعلاجات التلقيح الاصطناعي، وخدمات الصحة الإنجابية. يوفر المستشفى رعاية شاملة للأمهات الحوامل والأزواج الذين يسعون للحصول على علاجات الخصوبة.",
+                "fullFr": "L'hôpital Neelkanth Maternity & IVF Gurgaon est une installation dédiée spécialisée dans les soins de maternité, les traitements de FIV et les services de santé reproductive. L'hôpital fournit des soins complets aux futures mères et aux couples recherchant des traitements de fertilité.",
                 "internationalPatients": true
               },
               "departments": [
@@ -293,6 +323,8 @@
               "id": "indraprastha-apollo-new-delhi",
               "slug": "indraprastha-apollo-hospital-new-delhi",
               "name": "Indraprastha Apollo Hospital",
+              "nameAr": "مستشفى إندرابراستا أبولو",
+              "nameFr": "Hôpital Indraprastha Apollo",
               "rating": {
                 "score": 4.3,
                 "totalReviews": 86
@@ -303,7 +335,11 @@
               "accreditations": ["JCI", "NABH", "NABL"],
               "about": {
                 "short": "Indraprastha Apollo Hospital is India's first JCI-accredited hospital and a global leader in cardiac sciences and organ transplants.",
+                "shortAr": "مستشفى إندرابراستا أبولو هو أول مستشفى معتمد من JCI في الهند وقائد عالمي في علوم القلب وزراعة الأعضاء.",
+                "shortFr": "L'hôpital Indraprastha Apollo est le premier hôpital accrédité JCI d'Inde et un leader mondial en sciences cardiaques et transplantations d'organes.",
                 "full": "Indraprastha Apollo Hospital, the Apollo Hospitals Group's flagship, is India's premier multi-super specialty hospital. It was founded as a joint venture with the Government of Delhi and has constantly ranked at the top of medical quality. Indraprastha Apollo, India's first hospital to be globally recognised by JCI in 2005, has established itself as a worldwide leader in organ transplantation and cardiac sciences.",
+                "fullAr": "مستشفى إندرابراستا أبولو، المستشفى الرئيسي لمجموعة مستشفيات أبولو، هو المستشفى الرائد متعدد التخصصات الفائقة في الهند. تأسس كمشروع مشترك مع حكومة دلهي واحتل باستمرار المرتبة الأولى في الجودة الطبية. إندرابراستا أبولو، أول مستشفى في الهند يحصل على اعتراف عالمي من JCI في عام 2005، أثبت نفسه كقائد عالمي في زراعة الأعضاء وعلوم القلب.",
+                "fullFr": "L'hôpital Indraprastha Apollo, le fleuron du groupe Apollo Hospitals, est le principal hôpital multi-super spécialités d'Inde. Il a été fondé en tant que coentreprise avec le gouvernement de Delhi et s'est constamment classé au sommet de la qualité médicale. Indraprastha Apollo, premier hôpital d'Inde à être reconnu mondialement par la JCI en 2005, s'est établi comme leader mondial en transplantation d'organes et sciences cardiaques.",
                 "internationalPatients": true
               },
               "departments": [
@@ -366,6 +402,8 @@
               "id": "manipal-hospitals-dwarka",
               "slug": "manipal-hospital-dwarka",
               "name": "Manipal Hospitals Dwarka",
+              "nameAr": "مستشفى مانيبال دواركا",
+              "nameFr": "Hôpitaux Manipal Dwarka",
               "rating": {
                 "score": 4.4,
                 "totalReviews": 54
@@ -375,7 +413,11 @@
               "accreditations": ["NABH", "NABL"],
               "about": {
                 "short": "Manipal Hospital Dwarka is a leading tertiary care hospital known for cardiac surgery, oncology and orthopedics.",
+                "shortAr": "مستشفى مانيبال دواركا هو مستشفى رعاية ثالثية رائد معروف بجراحة القلب، والأورام، وجراحة العظام.",
+                "shortFr": "L'hôpital Manipal Dwarka est un hôpital de soins tertiaires de premier plan connu pour la chirurgie cardiaque, l'oncologie et l'orthopédie.",
                 "full": "Manipal Hospital Dwarka is a multi-super speciality tertiary care facility that delivers world-class healthcare at an optimum cost. The facility is part of the renowned Manipal Education and Medical Group, which was established in 1953 as Kasturba Medical College in Manipal, Karnataka, making it the third-largest established player in India.",
+                "fullAr": "مستشفى مانيبال دواركا هو منشأة رعاية ثالثية متعددة التخصصات الفائقة التي تقدم رعاية صحية عالمية المستوى بتكلفة مثلى. المنشأة جزء من مجموعة مانيبال التعليمية والطبية الشهيرة، التي تأسست في عام 1953 ككلية كاستوربا الطبية في مانيبال، كارناتاكا، مما يجعلها ثالث أكبر لاعب راسخ في الهند.",
+                "fullFr": "L'hôpital Manipal Dwarka est une installation de soins tertiaires multi-super spécialités qui offre des soins de santé de classe mondiale à un coût optimal. L'installation fait partie du renommé groupe Manipal Education and Medical, qui a été établi en 1953 sous le nom de Kasturba Medical College à Manipal, Karnataka, ce qui en fait le troisième plus grand acteur établi en Inde.",
                 "internationalPatients": true
               },
               "departments": [
@@ -419,6 +461,8 @@
               "id": "asian-hospital-delhi",
               "slug": "asian-hospital-delhi",
               "name": "Asian Hospital",
+              "nameAr": "مستشفى آسيان",
+              "nameFr": "Hôpital Asian",
               "rating": {
                 "score": 4.2,
                 "totalReviews": 18
@@ -428,7 +472,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "Asian Hospital is a well-established multi-specialty hospital providing quality healthcare services in Delhi.",
+                "shortAr": "مستشفى آسيان هو مستشفى متعدد التخصصات راسخ يقدم خدمات رعاية صحية عالية الجودة في دلهي.",
+                "shortFr": "L'hôpital Asian est un hôpital multi-spécialités bien établi offrant des services de soins de santé de qualité à Delhi.",
                 "full": "Asian Hospital is a trusted multi-specialty healthcare facility in Delhi, offering comprehensive medical services with modern infrastructure and experienced medical professionals.",
+                "fullAr": "مستشفى آسيان هو منشأة رعاية صحية متعددة التخصصات موثوقة في دلهي، تقدم خدمات طبية شاملة مع بنية تحتية حديثة ومهنيين طبيين ذوي خبرة.",
+                "fullFr": "L'hôpital Asian est une installation de soins de santé multi-spécialités de confiance à Delhi, offrant des services médicaux complets avec une infrastructure moderne et des professionnels médicaux expérimentés.",
                 "internationalPatients": true
               },
               "departments": [
@@ -461,6 +509,8 @@
               "id": "apollo-hospitals-all",
               "slug": "apollo-hospitals-all",
               "name": "All Apollo Hospitals (All Cities)",
+              "nameAr": "جميع مستشفيات أبولو (جميع المدن)",
+              "nameFr": "Tous les hôpitaux Apollo (toutes les villes)",
               "rating": {
                 "score": 4.5,
                 "totalReviews": 500
@@ -470,7 +520,11 @@
               "accreditations": ["JCI", "NABH", "NABL"],
               "about": {
                 "short": "Apollo Hospitals Group is India's largest healthcare network with hospitals across all major cities.",
+                "shortAr": "مجموعة مستشفيات أبولو هي أكبر شبكة رعاية صحية في الهند مع مستشفيات في جميع المدن الكبرى.",
+                "shortFr": "Le groupe Apollo Hospitals est le plus grand réseau de soins de santé d'Inde avec des hôpitaux dans toutes les grandes villes.",
                 "full": "Apollo Hospitals is India's largest and most trusted healthcare group, with a network of hospitals across all major cities including Delhi, Mumbai, Chennai, Hyderabad, Bangalore, and more. Founded in 1983, Apollo has been at the forefront of healthcare innovation in India, offering world-class medical care with JCI-accredited facilities.",
+                "fullAr": "مستشفيات أبولو هي أكبر مجموعة رعاية صحية وأكثرها ثقة في الهند، مع شبكة من المستشفيات في جميع المدن الكبرى بما في ذلك دلهي، ومومباي، وتشيناي، وحيدر أباد، وبانغالور، والمزيد. تأسست في عام 1983، كانت أبولو في طليعة الابتكار في الرعاية الصحية في الهند، وتقدم رعاية طبية عالمية المستوى مع مرافق معتمدة من JCI.",
+                "fullFr": "Apollo Hospitals est le plus grand et le plus fiable groupe de soins de santé d'Inde, avec un réseau d'hôpitaux dans toutes les grandes villes, notamment Delhi, Mumbai, Chennai, Hyderabad, Bangalore, et plus encore. Fondé en 1983, Apollo a été à l'avant-garde de l'innovation en soins de santé en Inde, offrant des soins médicaux de classe mondiale avec des installations accréditées JCI.",
                 "internationalPatients": true
               },
               "departments": [
@@ -510,6 +564,8 @@
               "id": "max-hospital-saket",
               "slug": "max-hospital-saket",
               "name": "Max Hospital Saket",
+              "nameAr": "مستشفى ماكس ساكيت",
+              "nameFr": "Hôpital Max Saket",
               "rating": {
                 "score": 3.8,
                 "totalReviews": 49
@@ -520,7 +576,11 @@
               "accreditations": ["JCI", "NABH"],
               "about": {
                 "short": "Max Super Speciality Hospital Saket is a top healthcare facility known for cutting-edge medical technology and patient-centred treatment.",
+                "shortAr": "مستشفى ماكس للتخصصات الفائقة ساكيت هو منشأة رعاية صحية رائدة معروفة بتقنيتها الطبية المتطورة والعلاج المرتكز على المريض.",
+                "shortFr": "L'hôpital Max Super Speciality Saket est une installation de soins de santé de premier plan connue pour sa technologie médicale de pointe et son traitement centré sur le patient.",
                 "full": "Established in 2005, Max Super Speciality Hospital, Saket, is a top healthcare facility in India, renowned for its cutting-edge medical technology and patient-centred treatment. Accredited by NABH, ISO, and JCI, the hospital is widely recognised nationally and internationally for its expertise in various specialities.",
+                "fullAr": "تأسس مستشفى ماكس للتخصصات الفائقة، ساكيت، في عام 2005 وهو منشأة رعاية صحية رائدة في الهند، مشهور بتقنيته الطبية المتطورة والعلاج المرتكز على المريض. معتمد من NABH و ISO و JCI، المستشفى معترف به على نطاق واسع محليًا ودوليًا لخبرته في مختلف التخصصات.",
+                "fullFr": "Établi en 2005, l'hôpital Max Super Speciality, Saket, est une installation de soins de santé de premier plan en Inde, réputée pour sa technologie médicale de pointe et son traitement centré sur le patient. Accrédité par NABH, ISO et JCI, l'hôpital est largement reconnu nationalement et internationalement pour son expertise dans diverses spécialités.",
                 "internationalPatients": true
               },
               "departments": [
@@ -578,6 +638,8 @@
               "id": "blk-max-hospital-pusa-road",
               "slug": "blk-max-hospital-pusa-road",
               "name": "BLK Max Hospital Pusa Road",
+              "nameAr": "مستشفى BLK ماكس طريق بوسا",
+              "nameFr": "Hôpital BLK Max Pusa Road",
               "rating": {
                 "score": 4.4,
                 "totalReviews": 65
@@ -587,7 +649,11 @@
               "accreditations": ["JCI", "NABH", "NABL"],
               "about": {
                 "short": "BLK Max Hospital is one of Delhi's largest private hospitals with world-class medical facilities.",
+                "shortAr": "مستشفى BLK Max هو واحد من أكبر المستشفيات الخاصة في دلهي مع مرافق طبية عالمية المستوى.",
+                "shortFr": "L'hôpital BLK Max est l'un des plus grands hôpitaux privés de Delhi avec des installations médicales de classe mondiale.",
                 "full": "BLK Max Super Speciality Hospital is one of Delhi's largest private hospitals, offering comprehensive healthcare services across multiple super specialties. The hospital is equipped with state-of-the-art technology and staffed by experienced medical professionals.",
+                "fullAr": "مستشفى BLK Max للتخصصات الفائقة هو واحد من أكبر المستشفيات الخاصة في دلهي، يقدم خدمات رعاية صحية شاملة عبر تخصصات فائقة متعددة. المستشفى مجهز بتقنيات حديثة ويعمل به مهنيون طبيون ذوو خبرة.",
+                "fullFr": "L'hôpital BLK Max Super Speciality est l'un des plus grands hôpitaux privés de Delhi, offrant des services de soins de santé complets dans plusieurs super spécialités. L'hôpital est équipé d'une technologie de pointe et doté de professionnels médicaux expérimentés.",
                 "internationalPatients": true
               },
               "departments": [
@@ -627,6 +693,8 @@
               "id": "apollo-navi-mumbai",
               "slug": "apollo-hospital-mumbai",
               "name": "Apollo Hospitals Navi Mumbai",
+              "nameAr": "مستشفيات أبولو نافي مومباي",
+              "nameFr": "Hôpitaux Apollo Navi Mumbai",
               "rating": {
                 "score": 4.0,
                 "totalReviews": 20
@@ -635,7 +703,11 @@
               "accreditations": ["JCI", "NABH"],
               "about": {
                 "short": "Apollo Hospitals Navi Mumbai is one of the most advanced multi-speciality tertiary care hospitals in Maharashtra.",
+                "shortAr": "مستشفيات أبولو نافي مومباي هي واحدة من أكثر المستشفيات المتقدمة متعددة التخصصات للرعاية الثلاثية في ماهاراشترا.",
+                "shortFr": "Les hôpitaux Apollo Navi Mumbai sont l'un des hôpitaux de soins tertiaires multi-spécialités les plus avancés du Maharashtra.",
                 "full": "Apollo Hospitals, Navi Mumbai, is one of the most advanced multi-speciality tertiary care hospitals in Maharashtra. It offers comprehensive services under one roof. It is the 66th hospital of the Apollo Group and is accredited by the Joint Commission International (JCI) and the National Accreditation Board for Hospitals and Healthcare Providers (NABH).",
+                "fullAr": "مستشفيات أبولو، نافي مومباي، هي واحدة من أكثر المستشفيات المتقدمة متعددة التخصصات للرعاية الثلاثية في ماهاراشترا. تقدم خدمات شاملة تحت سقف واحد. إنه المستشفى السادس والستون لمجموعة أبولو وهو معتمد من قبل اللجنة الدولية المشتركة (JCI) والمجلس الوطني للاعتماد للمستشفيات ومقدمي الرعاية الصحية (NABH).",
+                "fullFr": "Les hôpitaux Apollo, Navi Mumbai, sont l'un des hôpitaux de soins tertiaires multi-spécialités les plus avancés du Maharashtra. Il offre des services complets sous un même toit. C'est le 66e hôpital du groupe Apollo et est accrédité par la Commission internationale mixte (JCI) et le Conseil national d'accréditation pour les hôpitaux et les prestataires de soins de santé (NABH).",
                 "internationalPatients": true
               },
               "departments": [
@@ -654,6 +726,8 @@
               "id": "stem-rx-hospital-mumbai",
               "slug": "stem-rx-hospital-mumbai",
               "name": "Stem Rx Hospital",
+              "nameAr": "مستشفى ستيم آر إكس",
+              "nameFr": "Hôpital Stem Rx",
               "rating": {
                 "score": 4.3,
                 "totalReviews": 22
@@ -663,7 +737,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "Stem Rx Hospital is a specialized facility focusing on stem cell therapy and regenerative medicine.",
+                "shortAr": "مستشفى ستيم آر إكس هو منشأة متخصصة تركز على علاج الخلايا الجذعية والطب التجديدي.",
+                "shortFr": "L'hôpital Stem Rx est une installation spécialisée axée sur la thérapie par cellules souches et la médecine régénérative.",
                 "full": "Stem Rx Hospital is a leading center for stem cell therapy and regenerative medicine in India. The hospital specializes in advanced stem cell treatments for various medical conditions, offering cutting-edge regenerative medicine solutions.",
+                "fullAr": "مستشفى ستيم آر إكس هو مركز رائد لعلاج الخلايا الجذعية والطب التجديدي في الهند. يتخصص المستشفى في علاجات الخلايا الجذعية المتقدمة لحالات طبية مختلفة، ويقدم حلول الطب التجديدي المتطورة.",
+                "fullFr": "L'hôpital Stem Rx est un centre de premier plan pour la thérapie par cellules souches et la médecine régénérative en Inde. L'hôpital se spécialise dans les traitements avancés par cellules souches pour diverses conditions médicales, offrant des solutions de médecine régénérative de pointe.",
                 "internationalPatients": true
               },
               "departments": [
@@ -695,6 +773,8 @@
               "id": "fortis-hospital-mumbai",
               "slug": "fortis-hospital-mumbai",
               "name": "Fortis Hospital Mumbai",
+              "nameAr": "مستشفى فورتيس مومباي",
+              "nameFr": "Hôpital Fortis Mumbai",
               "rating": {
                 "score": 4.3,
                 "totalReviews": 27
@@ -705,7 +785,11 @@
               "accreditations": ["JCI", "NABH"],
               "about": {
                 "short": "Fortis Hospital Mulund is a multi-speciality quaternary care hospital and the only hospital in Mumbai to have been JCI-accredited seven times in a row.",
+                "shortAr": "مستشفى فورتيس مولوند هو مستشفى رعاية رباعية متعدد التخصصات والمستشفى الوحيد في مومباي الذي حصل على اعتماد JCI سبع مرات متتالية.",
+                "shortFr": "L'hôpital Fortis Mulund est un hôpital de soins quaternaires multi-spécialités et le seul hôpital de Mumbai à avoir été accrédité JCI sept fois de suite.",
                 "full": "Fortis Hospital, Mulund, is a multi-speciality quaternary care hospital and the only hospital in Mumbai to have been JCI-accredited seven times in a row. It is also accredited by NABH. This facility is the largest centre for multi-organ transplants in Maharashtra and was the first in Western India to conduct over 100 heart transplants in under four years.",
+                "fullAr": "مستشفى فورتيس، مولوند، هو مستشفى رعاية رباعية متعدد التخصصات والمستشفى الوحيد في مومباي الذي حصل على اعتماد JCI سبع مرات متتالية. كما أنه معتمد من NABH. هذه المنشأة هي أكبر مركز لزراعة الأعضاء المتعددة في ماهاراشترا وكانت الأولى في غرب الهند التي أجرت أكثر من 100 عملية زراعة قلب في أقل من أربع سنوات.",
+                "fullFr": "L'hôpital Fortis, Mulund, est un hôpital de soins quaternaires multi-spécialités et le seul hôpital de Mumbai à avoir été accrédité JCI sept fois de suite. Il est également accrédité par NABH. Cette installation est le plus grand centre de transplantations multi-organes du Maharashtra et a été le premier en Inde occidentale à effectuer plus de 100 transplantations cardiaques en moins de quatre ans.",
                 "internationalPatients": true
               },
               "departments": [
@@ -767,6 +851,8 @@
               "id": "apollo-jubilee-hills",
               "slug": "apollo-hospital-hyderabad",
               "name": "Apollo Hospitals Jubilee Hills",
+              "nameAr": "مستشفيات أبولو جوبيلي هيلز",
+              "nameFr": "Hôpitaux Apollo Jubilee Hills",
               "rating": {
                 "score": 4.1,
                 "totalReviews": 44
@@ -775,7 +861,11 @@
               "accreditations": ["JCI", "NABH"],
               "about": {
                 "short": "Apollo Hospitals Jubilee Hills is the flagship facility of Asia's pioneering Apollo Health City.",
+                "shortAr": "مستشفيات أبولو جوبيلي هيلز هي المنشأة الرئيسية لمدينة أبولو الصحية الرائدة في آسيا.",
+                "shortFr": "Les hôpitaux Apollo Jubilee Hills sont l'installation phare de la ville de santé Apollo pionnière de l'Asie.",
                 "full": "Apollo Hospitals, located in Jubilee Hills and established in 1988, is the flagship facility of Asia's pioneering Apollo Health City. It is a world-renowned institution that has consistently set new benchmarks in Indian healthcare.",
+                "fullAr": "مستشفيات أبولو، الواقعة في جوبيلي هيلز والمؤسسة في عام 1988، هي المنشأة الرئيسية لمدينة أبولو الصحية الرائدة في آسيا. إنها مؤسسة عالمية الشهرة وضعت باستمرار معايير جديدة في الرعاية الصحية الهندية.",
+                "fullFr": "Les hôpitaux Apollo, situés à Jubilee Hills et établis en 1988, sont l'installation phare de la ville de santé Apollo pionnière de l'Asie. C'est une institution de renommée mondiale qui a constamment établi de nouveaux référentiels dans les soins de santé indiens.",
                 "internationalPatients": true
               },
               "departments": [
@@ -801,6 +891,8 @@
               "id": "tx-hospital-hyderabad",
               "slug": "tx-hospital-hyderabad",
               "name": "TX Hospital",
+              "nameAr": "مستشفى TX",
+              "nameFr": "Hôpital TX",
               "rating": {
                 "score": 4.2,
                 "totalReviews": 15
@@ -810,7 +902,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "TX Hospital is a modern multi-specialty hospital providing quality healthcare services in Hyderabad.",
+                "shortAr": "مستشفى TX هو مستشفى حديث متعدد التخصصات يقدم خدمات رعاية صحية عالية الجودة في حيدر أباد.",
+                "shortFr": "L'hôpital TX est un hôpital multi-spécialités moderne offrant des services de soins de santé de qualité à Hyderabad.",
                 "full": "TX Hospital is a well-equipped multi-specialty healthcare facility in Hyderabad, offering comprehensive medical services with modern infrastructure and experienced medical professionals.",
+                "fullAr": "مستشفى TX هو منشأة رعاية صحية متعددة التخصصات مجهزة تجهيزًا جيدًا في حيدر أباد، تقدم خدمات طبية شاملة مع بنية تحتية حديثة ومهنيين طبيين ذوي خبرة.",
+                "fullFr": "L'hôpital TX est une installation de soins de santé multi-spécialités bien équipée à Hyderabad, offrant des services médicaux complets avec une infrastructure moderne et des professionnels médicaux expérimentés.",
                 "internationalPatients": true
               },
               "departments": [
@@ -848,6 +944,8 @@
               "id": "apollo-greams-road-chennai",
               "slug": "apollo-hospital-greams-road-chennai",
               "name": "Apollo Hospital Greams Road",
+              "nameAr": "مستشفى أبولو طريق جريمز",
+              "nameFr": "Hôpital Apollo Greams Road",
               "rating": {
                 "score": 4.7,
                 "totalReviews": 125
@@ -858,7 +956,11 @@
               "accreditations": ["JCI", "NABH", "NABL"],
               "about": {
                 "short": "Apollo Hospitals Greams Road is the Apollo Group's flagship hospital and a pioneer in corporate healthcare in India.",
+                "shortAr": "مستشفيات أبولو طريق جريمز هي المستشفى الرئيسي لمجموعة أبولو ورائد في الرعاية الصحية المؤسسية في الهند.",
+                "shortFr": "Les hôpitaux Apollo Greams Road sont l'hôpital phare du groupe Apollo et un pionnier des soins de santé d'entreprise en Inde.",
                 "full": "Apollo Hospitals, located on Greams Road in Chennai, was founded in 1983 by the visionary Dr. Prathap C. Reddy. It is the Apollo Group's flagship hospital and a pioneer in corporate healthcare in India. For four decades, this historic institution has been at the forefront of medical innovation.",
+                "fullAr": "مستشفيات أبولو، الواقعة على طريق جريمز في تشيناي، تأسست في عام 1983 على يد الرؤيوي الدكتور براثاب سي ريدي. إنه المستشفى الرئيسي لمجموعة أبولو ورائد في الرعاية الصحية المؤسسية في الهند. لأربعة عقود، كانت هذه المؤسسة التاريخية في طليعة الابتكار الطبي.",
+                "fullFr": "Les hôpitaux Apollo, situés sur Greams Road à Chennai, ont été fondés en 1983 par le visionnaire Dr. Prathap C. Reddy. C'est l'hôpital phare du groupe Apollo et un pionnier des soins de santé d'entreprise en Inde. Pendant quatre décennies, cette institution historique a été à l'avant-garde de l'innovation médicale.",
                 "internationalPatients": true
               },
               "departments": [
@@ -889,6 +991,8 @@
               "id": "memorial-hospitals-istanbul",
               "slug": "memorial-hospital-turkey",
               "name": "Memorial Hospitals Group",
+              "nameAr": "مجموعة مستشفيات ميموريال",
+              "nameFr": "Groupe d'hôpitaux Memorial",
               "rating": {
                 "score": 4.6,
                 "totalReviews": 22
@@ -898,7 +1002,11 @@
               "accreditations": ["JCI"],
               "about": {
                 "short": "Memorial Hospitals Group is one of Turkey's largest healthcare networks and a pioneer in robotic surgery and IVF.",
+                "shortAr": "مجموعة مستشفيات ميموريال هي واحدة من أكبر شبكات الرعاية الصحية في تركيا ورائدة في الجراحة الروبوتية والتلقيح الاصطناعي.",
+                "shortFr": "Le groupe d'hôpitaux Memorial est l'un des plus grands réseaux de soins de santé de Turquie et un pionnier de la chirurgie robotique et de la FIV.",
                 "full": "Founded with a mission to deliver world-class medical care with a focus on patient experience, Memorial Hospitals Group is one of Turkiye's largest and most respected healthcare providers. Memorial Sisli was the first hospital in Turkiye to receive JCI accreditation, setting a new standard for quality in the region.",
+                "fullAr": "تأسست بمهمة تقديم رعاية طبية عالمية المستوى مع التركيز على تجربة المريض، مجموعة مستشفيات ميموريال هي واحدة من أكبر مقدمي الرعاية الصحية وأكثرهم احترامًا في تركيا. كان ميموريال شيشلي أول مستشفى في تركيا يحصل على اعتماد JCI، مما وضع معيارًا جديدًا للجودة في المنطقة.",
+                "fullFr": "Fondé avec la mission de fournir des soins médicaux de classe mondiale en mettant l'accent sur l'expérience du patient, le groupe d'hôpitaux Memorial est l'un des plus grands et des plus respectés prestataires de soins de santé de Turquie. Memorial Sisli a été le premier hôpital de Turquie à recevoir l'accréditation JCI, établissant une nouvelle norme de qualité dans la région.",
                 "internationalPatients": true
               },
               "departments": [
@@ -937,6 +1045,8 @@
               "id": "bumrungrad-bangkok",
               "slug": "bumrungrad-hospital-thailand",
               "name": "Bumrungrad International Hospital",
+              "nameAr": "مستشفى بومرونغراد الدولي",
+              "nameFr": "Hôpital international Bumrungrad",
               "rating": {
                 "score": 4.2,
                 "totalReviews": 32
@@ -946,7 +1056,11 @@
               "accreditations": ["JCI"],
               "about": {
                 "short": "Bumrungrad International Hospital is Southeast Asia's leading private hospital serving patients from 190+ countries.",
+                "shortAr": "مستشفى بومرونغراد الدولي هو المستشفى الخاص الرائد في جنوب شرق آسيا الذي يخدم المرضى من أكثر من 190 دولة.",
+                "shortFr": "L'hôpital international Bumrungrad est le principal hôpital privé d'Asie du Sud-Est desservant des patients de plus de 190 pays.",
                 "full": "Bumrungrad International Hospital, established in 1980, is one of the largest private multispecialty tertiary care hospitals in Southeast Asia. Its global reputation is founded upon its unparalleled medical excellence. The hospital treats over 1.1 million patients every year, including over 5,20,000 international patients from 190 countries.",
+                "fullAr": "مستشفى بومرونغراد الدولي، الذي تأسس في عام 1980، هو واحد من أكبر المستشفيات الخاصة متعددة التخصصات للرعاية الثلاثية في جنوب شرق آسيا. سمعته العالمية تأسست على التميز الطبي الذي لا مثيل له. يعالج المستشفى أكثر من 1.1 مليون مريض كل عام، بما في ذلك أكثر من 520،000 مريض دولي من 190 دولة.",
+                "fullFr": "L'hôpital international Bumrungrad, établi en 1980, est l'un des plus grands hôpitaux privés multi-spécialités de soins tertiaires d'Asie du Sud-Est. Sa réputation mondiale est fondée sur son excellence médicale inégalée. L'hôpital traite plus de 1,1 million de patients chaque année, dont plus de 520 000 patients internationaux de 190 pays.",
                 "internationalPatients": true
               },
               "departments": [
@@ -983,6 +1097,8 @@
               "id": "sheeba-hospital-israel",
               "slug": "sheeba-hospital-israel",
               "name": "Sheeba Hospital",
+              "nameAr": "مستشفى شيبة",
+              "nameFr": "Hôpital Sheeba",
               "rating": {
                 "score": 4.8,
                 "totalReviews": 45
@@ -992,7 +1108,11 @@
               "accreditations": ["JCI"],
               "about": {
                 "short": "Sheeba Hospital is one of Israel's largest and most advanced medical centers.",
+                "shortAr": "مستشفى شيبة هو واحد من أكبر المراكز الطبية وأكثرها تقدمًا في إسرائيل.",
+                "shortFr": "L'hôpital Sheeba est l'un des plus grands et des plus avancés centres médicaux d'Israël.",
                 "full": "Sheeba Medical Center is one of Israel's largest and most advanced medical centers, providing comprehensive medical care and research.",
+                "fullAr": "المركز الطبي شيبة هو واحد من أكبر المراكز الطبية وأكثرها تقدمًا في إسرائيل، ويقدم رعاية طبية شاملة وبحوث.",
+                "fullFr": "Le centre médical Sheeba est l'un des plus grands et des plus avancés centres médicaux d'Israël, fournissant des soins médicaux complets et des recherches.",
                 "internationalPatients": true
               },
               "departments": [
@@ -1020,6 +1140,8 @@
               "id": "nepal-mediciti",
               "slug": "nepal-mediciti",
               "name": "Nepal Mediciti",
+              "nameAr": "نيبال ميديسيتي",
+              "nameFr": "Nepal Mediciti",
               "rating": {
                 "score": 4.5,
                 "totalReviews": 30
@@ -1029,7 +1151,11 @@
               "accreditations": ["NABH"],
               "about": {
                 "short": "Nepal Mediciti is a leading private hospital in Nepal providing world-class healthcare services.",
+                "shortAr": "نيبال ميديسيتي هو مستشفى خاص رائد في نيبال يقدم خدمات رعاية صحية عالمية المستوى.",
+                "shortFr": "Nepal Mediciti est un hôpital privé de premier plan au Népal offrant des services de soins de santé de classe mondiale.",
                 "full": "Nepal Mediciti Hospital is a leading private hospital in Nepal, providing comprehensive healthcare services with modern infrastructure and experienced medical professionals.",
+                "fullAr": "مستشفى نيبال ميديسيتي هو مستشفى خاص رائد في نيبال، يقدم خدمات رعاية صحية شاملة مع بنية تحتية حديثة ومهنيين طبيين ذوي خبرة.",
+                "fullFr": "L'hôpital Nepal Mediciti est un hôpital privé de premier plan au Népal, offrant des services de soins de santé complets avec une infrastructure moderne et des professionnels médicaux expérimentés.",
                 "internationalPatients": true
               },
               "departments": [

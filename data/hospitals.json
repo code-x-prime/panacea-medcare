@@ -134,6 +134,155 @@
                 "operationTheatres": 9,
                 "technologies": ["2 Intervention Cath Labs", "Emergency and Trauma Services", "Rehabilitation services", "Swimming pool", "Gymnasium"]
               }
+            },
+            {
+              "id": "fortis-hospital-gurgaon",
+              "slug": "fortis-hospital-gurgaon",
+              "name": "Fortis Hospital Gurgaon",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 35
+              },
+              "establishedYear": 2011,
+              "specialtyType": "Multi Specialty",
+              "beds": 300,
+              "accreditations": ["JCI", "NABH"],
+              "about": {
+                "short": "Fortis Hospital Gurgaon is a leading multi-specialty hospital providing comprehensive healthcare services.",
+                "full": "Fortis Hospital Gurgaon is a state-of-the-art multi-specialty hospital offering world-class medical care with advanced technology and experienced medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 8 },
+                { "name": "Oncology", "doctors": 6 },
+                { "name": "Orthopedics", "doctors": 5 }
+              ],
+              "address": {
+                "line1": "Sector 44",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122001",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "totalArea": "Modern facility",
+                "beds": 300,
+                "icuBeds": 50,
+                "operationTheatres": 8,
+                "technologies": ["Advanced diagnostic equipment", "Modular operation theatres"]
+              }
+            },
+            {
+              "id": "medanta-hospital-gurgaon",
+              "slug": "medanta-hospital-gurgaon",
+              "name": "Medanta Hospital, Gurgaon",
+              "rating": {
+                "score": 4.6,
+                "totalReviews": 120
+              },
+              "establishedYear": 2009,
+              "specialtyType": "Multi Super Specialty",
+              "beds": 1250,
+              "accreditations": ["JCI", "NABH", "NABL"],
+              "about": {
+                "short": "Medanta Hospital Gurgaon is one of India's largest multi-super specialty hospitals with world-class infrastructure.",
+                "full": "Medanta - The Medicity is one of India's largest multi-super specialty hospitals. Founded by renowned cardiac surgeon Dr. Naresh Trehan, it offers comprehensive healthcare services across 20+ super specialties with state-of-the-art technology and internationally trained medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 25 },
+                { "name": "Oncology", "doctors": 18 },
+                { "name": "Orthopedics", "doctors": 12 },
+                { "name": "Neurology & Neurosurgery", "doctors": 15 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Naresh Trehan",
+                  "specialization": "Cardiac Surgeon",
+                  "experience": 45
+                }
+              ],
+              "address": {
+                "line1": "Sector 38",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122001",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Spa and wellness", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Beauty Salon", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available", "Multiple payment methods"],
+                "food": ["International cuisine", "Vegetarian options", "Custom meal plans", "Dietitian services"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy", "Blood Bank"],
+                "language": ["English", "Hindi", "Arabic", "French"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance", "Ambulance services"]
+              },
+              "infrastructure": {
+                "totalArea": "43-acre campus",
+                "beds": 1250,
+                "icuBeds": 300,
+                "operationTheatres": 45,
+                "technologies": ["Da Vinci Robotic System", "3 Tesla MRI", "256-Slice CT Scanner", "PET-CT", "CyberKnife", "TrueBeam STx"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              }
+            },
+            {
+              "id": "neelkanth-maternity-ivf-hospital-gurgaon",
+              "slug": "neelkanth-maternity-ivf-hospital-gurgaon",
+              "name": "Neelkanth Maternity & IVF Hospital Gurgaon",
+              "rating": {
+                "score": 4.3,
+                "totalReviews": 28
+              },
+              "specialtyType": "Maternity & IVF",
+              "beds": 50,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "Neelkanth Maternity & IVF Hospital is a specialized hospital focusing on maternity care, IVF, and reproductive health.",
+                "full": "Neelkanth Maternity & IVF Hospital Gurgaon is a dedicated facility specializing in maternity care, IVF treatments, and reproductive health services. The hospital provides comprehensive care for expecting mothers and couples seeking fertility treatments.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Obstetrics & Gynecology", "doctors": 6 },
+                { "name": "IVF & Infertility", "doctors": 4 }
+              ],
+              "address": {
+                "line1": "Sector 14",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122001",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Family accommodation", "Laundry", "Welcome"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["Vegetarian options", "Custom meal plans"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "totalArea": "Specialized maternity facility",
+                "beds": 50,
+                "icuBeds": 10,
+                "operationTheatres": 3,
+                "technologies": ["Advanced IVF lab", "Ultrasound equipment", "Laparoscopic surgery facilities"]
+              }
             }
           ]
         },
@@ -265,6 +414,209 @@
                 "operationTheatres": 13,
                 "technologies": ["Telemedicine", "Remote monitoring", "AI", "Electronic Medical Record (EMR) system"]
               }
+            },
+            {
+              "id": "asian-hospital-delhi",
+              "slug": "asian-hospital-delhi",
+              "name": "Asian Hospital",
+              "rating": {
+                "score": 4.2,
+                "totalReviews": 18
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 200,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "Asian Hospital is a well-established multi-specialty hospital providing quality healthcare services in Delhi.",
+                "full": "Asian Hospital is a trusted multi-specialty healthcare facility in Delhi, offering comprehensive medical services with modern infrastructure and experienced medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 5 },
+                { "name": "General Surgery", "doctors": 4 },
+                { "name": "Orthopedics", "doctors": 3 }
+              ],
+              "address": {
+                "line1": "Delhi",
+                "city": "New Delhi",
+                "state": "Delhi",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Family accommodation", "Laundry"],
+                "moneyMatters": ["Insurance accepted"],
+                "food": ["Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "beds": 200,
+                "icuBeds": 20,
+                "operationTheatres": 5,
+                "technologies": ["Modern diagnostic equipment"]
+              }
+            },
+            {
+              "id": "apollo-hospitals-all",
+              "slug": "apollo-hospitals-all",
+              "name": "All Apollo Hospitals (All Cities)",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 500
+              },
+              "specialtyType": "Multi Super Specialty",
+              "beds": 10000,
+              "accreditations": ["JCI", "NABH", "NABL"],
+              "about": {
+                "short": "Apollo Hospitals Group is India's largest healthcare network with hospitals across all major cities.",
+                "full": "Apollo Hospitals is India's largest and most trusted healthcare group, with a network of hospitals across all major cities including Delhi, Mumbai, Chennai, Hyderabad, Bangalore, and more. Founded in 1983, Apollo has been at the forefront of healthcare innovation in India, offering world-class medical care with JCI-accredited facilities.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 200 },
+                { "name": "Oncology", "doctors": 150 },
+                { "name": "Orthopedics", "doctors": 120 },
+                { "name": "Neurology & Neurosurgery", "doctors": 100 }
+              ],
+              "address": {
+                "line1": "Multiple locations across India",
+                "city": "All Major Cities",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Spa and wellness", "Café", "Business centre services", "Shop", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available", "Multiple payment methods"],
+                "food": ["International cuisine", "Vegetarian options", "Custom meal plans"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy", "Blood Bank"],
+                "language": ["English", "Hindi", "Arabic", "French", "Spanish"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance", "Ambulance services"]
+              },
+              "infrastructure": {
+                "totalArea": "Network of hospitals across India",
+                "beds": 10000,
+                "technologies": ["Da Vinci Robotic System", "3 Tesla MRI", "PET-CT", "CyberKnife", "Proton Therapy"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              }
+            },
+            {
+              "id": "max-hospital-saket",
+              "slug": "max-hospital-saket",
+              "name": "Max Hospital Saket",
+              "rating": {
+                "score": 3.8,
+                "totalReviews": 49
+              },
+              "establishedYear": 2005,
+              "specialtyType": "Super Specialty",
+              "beds": 539,
+              "accreditations": ["JCI", "NABH"],
+              "about": {
+                "short": "Max Super Speciality Hospital Saket is a top healthcare facility known for cutting-edge medical technology and patient-centred treatment.",
+                "full": "Established in 2005, Max Super Speciality Hospital, Saket, is a top healthcare facility in India, renowned for its cutting-edge medical technology and patient-centred treatment. Accredited by NABH, ISO, and JCI, the hospital is widely recognised nationally and internationally for its expertise in various specialities.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 16 },
+                { "name": "Oncology", "doctors": 11 },
+                { "name": "Orthopedics", "doctors": 9 },
+                { "name": "Neurology & Neurosurgery", "doctors": 7 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Subhash Gupta",
+                  "specialization": "Liver Transplant Surgeon",
+                  "experience": 38,
+                  "rating": 4.9,
+                  "totalRatings": 32
+                }
+              ],
+              "address": {
+                "line1": "Press Enclave Road, Mandir Marg, Saket",
+                "city": "New Delhi",
+                "state": "Delhi",
+                "pincode": "110017",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 19.2,
+                "metroKm": 2.8,
+                "railwayKm": 16.4
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Café", "Business centre services", "Shop", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy"],
+                "language": ["English", "Hindi", "Arabic"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance"]
+              },
+              "infrastructure": {
+                "totalArea": "3 acres",
+                "beds": 539,
+                "icuBeds": 50,
+                "operationTheatres": 12,
+                "technologies": ["Brain Suite with Intraoperative MRI", "TrueBeam Linac", "Da Vinci Xi Robotic System", "Bi-Plane Digital Cath Lab", "MRI 3.0 Tesla"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              }
+            },
+            {
+              "id": "blk-max-hospital-pusa-road",
+              "slug": "blk-max-hospital-pusa-road",
+              "name": "BLK Max Hospital Pusa Road",
+              "rating": {
+                "score": 4.4,
+                "totalReviews": 65
+              },
+              "specialtyType": "Multi Super Specialty",
+              "beds": 650,
+              "accreditations": ["JCI", "NABH", "NABL"],
+              "about": {
+                "short": "BLK Max Hospital is one of Delhi's largest private hospitals with world-class medical facilities.",
+                "full": "BLK Max Super Speciality Hospital is one of Delhi's largest private hospitals, offering comprehensive healthcare services across multiple super specialties. The hospital is equipped with state-of-the-art technology and staffed by experienced medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 18 },
+                { "name": "Oncology", "doctors": 12 },
+                { "name": "Orthopedics", "doctors": 10 },
+                { "name": "Neurology & Neurosurgery", "doctors": 9 }
+              ],
+              "address": {
+                "line1": "Pusa Road",
+                "city": "New Delhi",
+                "state": "Delhi",
+                "pincode": "110005",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Café", "Business centre services", "Shop", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy"],
+                "language": ["English", "Hindi", "Arabic"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "beds": 650,
+                "icuBeds": 125,
+                "operationTheatres": 17,
+                "technologies": ["Advanced diagnostic equipment", "Robotic surgery systems", "Modular operation theatres"]
+              }
             }
           ]
         },
@@ -296,6 +648,114 @@
                 "state": "Maharashtra",
                 "pincode": "400614",
                 "country": "India"
+              }
+            },
+            {
+              "id": "stem-rx-hospital-mumbai",
+              "slug": "stem-rx-hospital-mumbai",
+              "name": "Stem Rx Hospital",
+              "rating": {
+                "score": 4.3,
+                "totalReviews": 22
+              },
+              "specialtyType": "Stem Cell & Regenerative Medicine",
+              "beds": 100,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "Stem Rx Hospital is a specialized facility focusing on stem cell therapy and regenerative medicine.",
+                "full": "Stem Rx Hospital is a leading center for stem cell therapy and regenerative medicine in India. The hospital specializes in advanced stem cell treatments for various medical conditions, offering cutting-edge regenerative medicine solutions.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Stem Cell Therapy", "doctors": 5 },
+                { "name": "Regenerative Medicine", "doctors": 3 }
+              ],
+              "address": {
+                "line1": "Mumbai",
+                "city": "Mumbai",
+                "state": "Maharashtra",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Family accommodation", "Laundry"],
+                "moneyMatters": ["Insurance accepted"],
+                "food": ["Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "beds": 100,
+                "icuBeds": 15,
+                "operationTheatres": 3,
+                "technologies": ["Stem cell laboratory", "Advanced regenerative medicine facilities"]
+              }
+            },
+            {
+              "id": "fortis-hospital-mumbai",
+              "slug": "fortis-hospital-mumbai",
+              "name": "Fortis Hospital Mumbai",
+              "rating": {
+                "score": 4.3,
+                "totalReviews": 27
+              },
+              "establishedYear": 2002,
+              "specialtyType": "Multi Specialty",
+              "beds": 400,
+              "accreditations": ["JCI", "NABH"],
+              "about": {
+                "short": "Fortis Hospital Mulund is a multi-speciality quaternary care hospital and the only hospital in Mumbai to have been JCI-accredited seven times in a row.",
+                "full": "Fortis Hospital, Mulund, is a multi-speciality quaternary care hospital and the only hospital in Mumbai to have been JCI-accredited seven times in a row. It is also accredited by NABH. This facility is the largest centre for multi-organ transplants in Maharashtra and was the first in Western India to conduct over 100 heart transplants in under four years.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 11 },
+                { "name": "Oncology", "doctors": 6 },
+                { "name": "Organ Transplant", "doctors": 8 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr Rajiv Karnik",
+                  "specialization": "Interventional Cardiologist",
+                  "experience": 44,
+                  "rating": 4.9,
+                  "totalRatings": 12
+                }
+              ],
+              "address": {
+                "line1": "Mulund-Goregaon Link Road",
+                "city": "Mumbai",
+                "state": "Maharashtra",
+                "pincode": "400078",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 16,
+                "metroKm": 7,
+                "railwayKm": 3
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Dry cleaning", "Personal assistance / Concierge", "Religious facilities", "Fitness", "Spa and wellness", "Café", "Business centre services", "Shop", "Dedicated smoking areas", "Beauty Salon", "Special offer for group stays", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Payment plans available"],
+                "food": ["International cuisine", "Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy", "Blood Bank"],
+                "language": ["English", "Hindi", "Arabic"],
+                "transportation": ["Airport pickup/drop", "Local transport assistance"]
+              },
+              "infrastructure": {
+                "totalArea": "Modern facility",
+                "beds": 400,
+                "icuBeds": 108,
+                "operationTheatres": 12,
+                "technologies": ["256-slice Brilliance iCT Scanner", "Digital MRI technology 3 Tesla", "Brain Suite with Intraoperative CT", "Da Vinci Robotic System"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
               }
             }
           ]
@@ -335,6 +795,48 @@
                 "state": "Telangana",
                 "pincode": "500033",
                 "country": "India"
+              }
+            },
+            {
+              "id": "tx-hospital-hyderabad",
+              "slug": "tx-hospital-hyderabad",
+              "name": "TX Hospital",
+              "rating": {
+                "score": 4.2,
+                "totalReviews": 15
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 150,
+              "accreditations": ["NABH"],
+              "about": {
+                "short": "TX Hospital is a modern multi-specialty hospital providing quality healthcare services in Hyderabad.",
+                "full": "TX Hospital is a well-equipped multi-specialty healthcare facility in Hyderabad, offering comprehensive medical services with modern infrastructure and experienced medical professionals.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology", "doctors": 4 },
+                { "name": "General Surgery", "doctors": 3 },
+                { "name": "Orthopedics", "doctors": 2 }
+              ],
+              "address": {
+                "line1": "Hyderabad",
+                "city": "Hyderabad",
+                "state": "Telangana",
+                "country": "India"
+              },
+              "facilities": {
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Family accommodation", "Laundry"],
+                "moneyMatters": ["Insurance accepted"],
+                "food": ["Vegetarian options"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
+                "language": ["English", "Hindi"],
+                "transportation": ["Airport pickup/drop"]
+              },
+              "infrastructure": {
+                "beds": 150,
+                "icuBeds": 15,
+                "operationTheatres": 4,
+                "technologies": ["Modern diagnostic equipment"]
               }
             }
           ]

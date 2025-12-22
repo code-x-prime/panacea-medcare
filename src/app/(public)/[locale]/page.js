@@ -10,10 +10,10 @@ import FAQ from '@/components/FAQ';
 import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeBlogPreview from '@/components/HomeBlogPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
-import HomeTestimonials from '@/components/HomeTestimonials';
 
 export default function HomePage({ params }) {
   const { locale } = params;
@@ -33,7 +33,7 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
-      <HomeTestimonials locale={locale} />
+      <TestimonialsCarousel />
       <FAQ locale={locale} />
     </div>
   );

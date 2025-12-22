@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import LowestQuotesAssured from "@/components/LowestQuotesAssured";
 
 export default function TreatmentPackagesPage({ params }) {
@@ -9,10 +9,11 @@ export default function TreatmentPackagesPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="treatmentPackages"
-                backgroundImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
             <LowestQuotesAssured locale={locale} />
         </main>

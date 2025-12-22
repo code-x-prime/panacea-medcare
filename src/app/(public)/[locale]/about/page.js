@@ -1,21 +1,31 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default function AboutPage({ params }) {
     const { locale } = params;
     const t = useTranslations("about");
     const isRTL = locale === "ar";
 
+    const breadcrumbItems = [
+        { label: locale === "ar" ? "الرئيسية" : locale === "fr" ? "Accueil" : "Home", href: `/${locale}` },
+        { label: locale === "ar" ? "من نحن" : locale === "fr" ? "À propos de nous" : "About Us", href: `/${locale}/about` }
+    ];
+
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="about"
-                backgroundImage="/images/about-hero.jpg"
-                fallbackImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
+
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <Breadcrumb items={breadcrumbItems} locale={locale} />
+            </section>
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 {/* Who We Are */}

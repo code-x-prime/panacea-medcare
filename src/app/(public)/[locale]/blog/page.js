@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
@@ -51,10 +51,11 @@ export default function BlogPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="blog"
-                backgroundImage="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">

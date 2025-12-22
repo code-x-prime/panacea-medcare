@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
@@ -32,12 +32,13 @@ export default function CaseStudyDetailPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="caseStudies"
                 title={title}
                 subtitle={`${t("patient")}: ${name} | ${t("country")}: ${country}`}
-                backgroundImage={study.image}
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import Link from "next/link";
 import equipment from "@/data/equipment.json";
 
@@ -10,13 +10,13 @@ export default function EquipmentPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="heroSection"
                 title={locale === "ar" ? "المعدات الطبية" : locale === "fr" ? "Équipement médical" : "Medical Equipment"}
                 subtitle={locale === "ar" ? "أحدث التقنيات الطبية المتاحة" : locale === "fr" ? "Technologies médicales de pointe disponibles" : "State-of-the-art medical technology available"}
-                backgroundImage="/images/equipment-hero.jpg"
-                fallbackImage="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">

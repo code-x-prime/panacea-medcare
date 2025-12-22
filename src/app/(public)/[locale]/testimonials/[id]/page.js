@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import { notFound } from "next/navigation";
 import testimonials from "@/data/testimonials.json";
 
@@ -21,13 +21,13 @@ export default function TestimonialDetailPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="heroSection"
                 title={name}
                 subtitle={treatment}
-                backgroundImage={testimonial.image}
-                fallbackImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">

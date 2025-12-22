@@ -2,20 +2,16 @@
   "menu": {
     "main": [
       { "name": "Home", "slug": "/" },
-      { "name": "About", "slug": "/about" },
-      { "name": "International Patients", "slug": "/international-patients" },
-      { "name": "AI Solutions", "slug": "/services/ai-solutions" },
-      { "name": "Medical Equipment", "slug": "/equipment" },
-      { "name": "Treatment Packages", "slug": "/treatment-packages", "color": "teal" },
-      { "name": "Services", "type": "dropdown", "key": "services" },
+      { "name": "About Us", "slug": "/about" },
+      { "name": "Why India", "slug": "/why-india" },
+      { "name": "Hospitals", "slug": "/hospitals", "highlight": "JCI Accredited" },
       { "name": "Doctors", "slug": "/doctors" },
-      { "name": "Hospitals", "slug": "/hospitals" },
-      { "name": "Testimonials", "slug": "/testimonials" },
-      { "name": "Blog", "slug": "/blog" },
-      { "name": "Contact", "slug": "/contact" }
-    ],
-    "services": [
-      { "name": "Medical Tourism", "slug": "/services/medical-tourism" }
+      { "name": "Treatments", "slug": "/treatments" },
+      { "name": "International Patients", "slug": "/international-patients" },
+      { "name": "AI Healthcare Solutions", "slug": "/services/ai-solutions" },
+      { "name": "Medical Equipment", "slug": "/equipment" },
+      { "name": "Partner With Us", "slug": "/partner-with-us" },
+      { "name": "Tourism & Leisure", "slug": "/tourism-leisure" }
     ]
   }
 }

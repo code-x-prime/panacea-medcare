@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 
 export default function MedicalTourismPage({ params }) {
     const { locale } = params;
@@ -34,13 +34,13 @@ export default function MedicalTourismPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="heroSection"
                 title={t.title}
                 subtitle={t.subtitle}
-                backgroundImage="/images/medical-tourism-hero.jpg"
-                fallbackImage="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">

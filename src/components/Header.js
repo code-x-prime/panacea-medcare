@@ -91,9 +91,6 @@ export default function Header({ locale }) {
                   {t.requestConsultation}
                 </Link>
                 <LanguageSwitcher currentLocale={locale} />
-                <div className="lg:hidden">
-                  <Navbar locale={locale} />
-                </div>
               </div>
             </div>
           </div>
@@ -102,16 +99,10 @@ export default function Header({ locale }) {
 
       {/* Navigation Bar - Desktop - STICKY - Outside header */}
       <div
-        className="sticky top-0 bg-white border-b border-gray-100 z-50 shadow-sm"
+        className="sticky top-0 bg-white z-50"
         dir={isRTL ? "rtl" : "ltr"}
       >
-        <div className="container mx-auto px-4">
-          <div
-            className={"hidden lg:block " + (isRTL ? "flex justify-end" : "")}
-          >
-            <Navbar locale={locale} />
-          </div>
-        </div>
+        <Navbar locale={locale} />
       </div>
     </>
   );

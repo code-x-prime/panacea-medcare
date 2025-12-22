@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState } from "react";
@@ -75,13 +75,13 @@ export default function HospitalDetailPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="hospitals"
                 title={hospitalName}
                 subtitle={hospitalShortDesc}
-                backgroundImage={getHospitalImage(hospital.slug)}
-                fallbackImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=600&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">

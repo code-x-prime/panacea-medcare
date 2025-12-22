@@ -2,20 +2,16 @@
   "menu": {
     "main": [
       { "name": "Accueil", "slug": "/" },
-      { "name": "À propos", "slug": "/about" },
-      { "name": "Patients internationaux", "slug": "/international-patients" },
-      { "name": "Solutions IA", "slug": "/services/ai-solutions" },
-      { "name": "Équipement médical", "slug": "/equipment" },
-      { "name": "Forfaits de traitement", "slug": "/treatment-packages", "color": "teal" },
-      { "name": "Services", "type": "dropdown", "key": "services" },
+      { "name": "À propos de nous", "slug": "/about" },
+      { "name": "Pourquoi l'Inde", "slug": "/why-india" },
+      { "name": "Hôpitaux", "slug": "/hospitals", "highlight": "Accrédité JCI" },
       { "name": "Médecins", "slug": "/doctors" },
-      { "name": "Hôpitaux", "slug": "/hospitals" },
-      { "name": "Témoignages", "slug": "/testimonials" },
-      { "name": "Blog", "slug": "/blog" },
-      { "name": "Contact", "slug": "/contact" }
-    ],
-    "services": [
-      { "name": "Tourisme médical", "slug": "/services/medical-tourism" }
+      { "name": "Traitements", "slug": "/treatments" },
+      { "name": "Patients internationaux", "slug": "/international-patients" },
+      { "name": "Solutions de santé IA", "slug": "/services/ai-solutions" },
+      { "name": "Équipement médical", "slug": "/equipment" },
+      { "name": "Devenez partenaire", "slug": "/partner-with-us" },
+      { "name": "Tourisme et loisirs", "slug": "/tourism-leisure" }
     ]
   }
 }

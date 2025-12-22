@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 
 export default function AISolutionsPage({ params }) {
     const { locale } = params;
@@ -34,13 +34,13 @@ export default function AISolutionsPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="heroSection"
                 title={t.title}
                 subtitle={t.subtitle}
-                backgroundImage="/images/ai-solutions-hero.jpg"
-                fallbackImage="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
@@ -67,3 +67,4 @@ export default function AISolutionsPage({ params }) {
         </main>
     );
 }
+

@@ -1,6 +1,6 @@
 "use client";
 
-import PageHero from "@/components/PageHero";
+import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
@@ -37,13 +37,13 @@ export default function TestimonialsPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <PageHero
+            <TopBanner
                 locale={locale}
                 namespace="heroSection"
                 title={locale === "ar" ? "آراء المرضى" : locale === "fr" ? "Témoignages" : "Patient Testimonials"}
                 subtitle={locale === "ar" ? "اقرأ قصص نجاح مرضانا" : locale === "fr" ? "Lisez les histoires de réussite de nos patients" : "Read our patients' success stories"}
-                backgroundImage="/images/testimonials-hero.jpg"
-                fallbackImage="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+                variant="gradient"
+                size="md"
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
@@ -56,11 +56,11 @@ export default function TestimonialsPage({ params }) {
                         {locale === "ar" ? "ماذا يقول مرضانا" : locale === "fr" ? "Ce que disent nos patients" : "What Our Patients Say"}
                     </h2>
                     <p className="text-gray-600 text-lg">
-                        {locale === "ar" 
-                            ? "شاهد قصص نجاح مرضانا من جميع أنحاء العالم" 
-                            : locale === "fr" 
-                            ? "Découvrez les histoires de réussite de nos patients du monde entier" 
-                            : "Watch success stories from our patients around the world"}
+                        {locale === "ar"
+                            ? "شاهد قصص نجاح مرضانا من جميع أنحاء العالم"
+                            : locale === "fr"
+                                ? "Découvrez les histoires de réussite de nos patients du monde entier"
+                                : "Watch success stories from our patients around the world"}
                     </p>
                 </div>
 
@@ -87,13 +87,13 @@ export default function TestimonialsPage({ params }) {
                                                 e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                                             }}
                                         />
-                                        
+
                                         {/* Overlay with Play Button */}
                                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
                                             <div className="w-16 h-16 bg-panacea-accent rounded-full flex items-center justify-center shadow-2xl transform group-hover:scale-110 transition-transform duration-300">
-                                                <svg 
-                                                    className={`w-8 h-8 text-white ${isRTL ? "mr-0.5" : "ml-1"}`} 
-                                                    fill="currentColor" 
+                                                <svg
+                                                    className={`w-8 h-8 text-white ${isRTL ? "mr-0.5" : "ml-1"}`}
+                                                    fill="currentColor"
                                                     viewBox="0 0 20 20"
                                                 >
                                                     <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
@@ -110,18 +110,18 @@ export default function TestimonialsPage({ params }) {
                                     {/* Video Info */}
                                     <div className="p-4 md:p-6">
                                         <h3 className={`font-semibold text-panacea-dark mb-2 ${isRTL ? "text-right" : "text-left"}`}>
-                                            {locale === "ar" 
-                                                ? `شهادة المريض ${index + 1}` 
-                                                : locale === "fr" 
-                                                ? `Témoignage Patient ${index + 1}` 
-                                                : `Patient Testimonial ${index + 1}`}
+                                            {locale === "ar"
+                                                ? `شهادة المريض ${index + 1}`
+                                                : locale === "fr"
+                                                    ? `Témoignage Patient ${index + 1}`
+                                                    : `Patient Testimonial ${index + 1}`}
                                         </h3>
                                         <p className={`text-sm text-gray-600 ${isRTL ? "text-right" : "text-left"}`}>
-                                            {locale === "ar" 
-                                                ? "انقر لمشاهدة الفيديو الكامل" 
-                                                : locale === "fr" 
-                                                ? "Cliquez pour voir la vidéo complète" 
-                                                : "Click to watch full video"}
+                                            {locale === "ar"
+                                                ? "انقر لمشاهدة الفيديو الكامل"
+                                                : locale === "fr"
+                                                    ? "Cliquez pour voir la vidéo complète"
+                                                    : "Click to watch full video"}
                                         </p>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@ export default function TestimonialsPage({ params }) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
-                        
+
                         {/* YouTube Embed */}
                         <iframe
                             src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1&rel=0&modestbranding=1`}

@@ -432,6 +432,114 @@ export default function Page({ params }) {
 
 ---
 
+## TopBanner Component
+
+### Usage
+
+The `TopBanner` component is a reusable banner component for all pages that displays page headings with a distinct background color, following Panacea design system. It's simpler and more compact than the HeroSection component, perfect for internal pages.
+
+```jsx
+import TopBanner from "@/components/TopBanner";
+
+export default function Page({ params }) {
+  const { locale } = params;
+
+  return (
+    <main dir={isRTL ? "rtl" : "ltr"}>
+      <TopBanner
+        locale={locale}
+        namespace="pageName"
+        variant="gradient"
+        size="md"
+      />
+
+      <section className="container mx-auto px-4 py-12">
+        {/* Page content */}
+      </section>
+    </main>
+  );
+}
+```
+
+### Props
+
+| Prop         | Type   | Required | Default    | Description                                                                 |
+| ------------ | ------ | -------- | ---------- | --------------------------------------------------------------------------- |
+| `locale`     | string | Yes      | -          | Current locale (en/ar/fr)                                                   |
+| `namespace`  | string | Yes      | -          | Translation namespace to use (e.g., "about", "services")                     |
+| `title`      | string | No       | -          | Optional title override (uses translation if not provided)                 |
+| `subtitle`   | string | No       | -          | Optional subtitle override                                                  |
+| `variant`    | string | No       | `"gradient"` | Banner variant: `"gradient"` \| `"primary"` \| `"secondary"` \| `"light"` |
+| `size`       | string | No       | `"md"`     | Banner size: `"sm"` \| `"md"` \| `"lg"`                                     |
+
+### Variants
+
+- **`gradient`** (default): Uses Panacea gradient (`bg-panacea-gradient`) with white text
+- **`primary`**: Uses primary teal (`bg-panacea-primary`) with white text
+- **`secondary`**: Uses secondary teal (`bg-panacea-secondary`) with white text
+- **`light`**: Uses light teal (`bg-panacea-light`) with dark text
+
+### Sizes
+
+- **`sm`**: Compact banner (`py-8 md:py-10`)
+- **`md`** (default): Standard banner (`py-12 md:py-16`)
+- **`lg`**: Large banner (`py-16 md:py-20`)
+
+### Features
+
+- ✅ Full RTL support for Arabic
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ Distinct background color (different from page body)
+- ✅ Clear page heading display
+- ✅ Follows Panacea spacing, typography, and color tokens
+- ✅ Translation support via next-intl
+- ✅ Consistent across all pages
+- ✅ Accessible (semantic HTML, ARIA labels)
+
+### Example Usage
+
+```jsx
+// Basic usage with translations
+<TopBanner locale={locale} namespace="about" />
+
+// With custom title
+<TopBanner
+  locale={locale}
+  namespace="about"
+  title="About Panacea Medcare"
+  subtitle="Your trusted healthcare partner"
+/>
+
+// Light variant for pages with light backgrounds
+<TopBanner
+  locale={locale}
+  namespace="services"
+  variant="light"
+  size="sm"
+/>
+
+// Large banner for important pages
+<TopBanner
+  locale={locale}
+  namespace="contact"
+  variant="gradient"
+  size="lg"
+/>
+```
+
+### Translation File Structure
+
+Ensure your translation files include `title` and optionally `subtitle`:
+
+```json
+{
+  "title": "About Us",
+  "subtitle": "Your trusted healthcare partner"
+}
+```
+
+---
+
 ## Translation System
 
 ### Adding a New Page

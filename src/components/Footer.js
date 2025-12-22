@@ -16,7 +16,16 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function Footer({ locale }) {
   const t = useTranslations("footer");
+  const tCTA = useTranslations("contactCTA");
   const isRTL = locale === "ar";
+
+  const phoneNumber = "+91-9958800961";
+  const whatsappNumber = "919958800961";
+  const email = "care@panaceamedcare.com";
+  const whatsappMessage = encodeURIComponent(
+    tCTA("whatsappMessage") || "Hello, I need medical assistance from Panacea Medcare"
+  );
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const quickLinks = [
     { key: "aboutUs", href: "/about" },
@@ -84,27 +93,35 @@ export default function Footer({ locale }) {
               <h4 className="font-bold text-lg mb-3">{t("contactTitle")}</h4>
 
               <a
-                href={`tel:${t("phone")}`}
+                href={`tel:${phoneNumber.replace(/-/g, "")}`}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
                 <div className="w-10 h-10 bg-panacea-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Phone className="w-5 h-5" />
                 </div>
-                <span>{t("phone")}</span>
+                <div className="flex flex-col">
+                  <span className="font-semibold">{tCTA("phoneLabel") || "Call Us Now"}</span>
+                  <span className="text-sm">{phoneNumber}</span>
+                  <span className="text-xs text-panacea-light/70">{tCTA("phoneSubtext") || "24/7 Available"}</span>
+                </div>
               </a>
 
               <a
-                href="mailto:care@panaceamedcare.com"
+                href={`mailto:${email}`}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
                 <div className="w-10 h-10 bg-panacea-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Mail className="w-5 h-5" />
                 </div>
-                <span className="break-all">care@panaceamedcare.com</span>
+                <div className="flex flex-col">
+                  <span className="font-semibold">{tCTA("emailLabel") || "Email Us"}</span>
+                  <span className="text-sm break-all">{email}</span>
+                  <span className="text-xs text-panacea-light/70">{tCTA("emailSubtext") || "We'll respond quickly"}</span>
+                </div>
               </a>
 
               <a
-                href="https://wa.me/1234567890"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
@@ -112,7 +129,24 @@ export default function Footer({ locale }) {
                 <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                   <FaWhatsapp className="w-5 h-5" />
                 </div>
-                <span>WhatsApp</span>
+                <div className="flex flex-col">
+                  <span className="font-semibold">{tCTA("whatsappLabel") || "WhatsApp Us"}</span>
+                  <span className="text-sm">{tCTA("whatsappSubtext") || "Instant Response"}</span>
+                  <span className="text-xs text-green-300">{tCTA("whatsappBadge") || "Click to Chat"}</span>
+                </div>
+              </a>
+
+              <a
+                href={`/${locale}/services/teleconsultation`}
+                className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group mt-4 pt-4 border-t border-white/10"
+              >
+                <div className="w-10 h-10 bg-panacea-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Send className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-semibold">{tCTA("teleconsultLabel") || "Free Teleconsultation"}</span>
+                  <span className="text-sm">{tCTA("teleconsultSubtext") || "Book Today"}</span>
+                </div>
               </a>
             </div>
           </div>

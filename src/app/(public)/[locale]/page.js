@@ -14,7 +14,6 @@ import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeBlogPreview from '@/components/HomeBlogPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
-
 export default function HomePage({ params }) {
   const { locale } = params;
 

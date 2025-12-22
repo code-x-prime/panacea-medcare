@@ -1,0 +1,25 @@
+{
+  "title": "Why Choose India for Medical Treatment?",
+  "subtitle": "World-class healthcare at affordable prices",
+  "breadcrumb": {
+    "home": "Home",
+    "whyIndia": "Why India"
+  },
+  "heading": "Why Choose India for Medical Treatment?",
+  "intro": "India has emerged as a leading destination for medical tourism, offering world-class healthcare at affordable prices.",
+  "benefits": {
+    "worldClass": "World-Class Healthcare",
+    "worldClassDesc": "JCI-accredited hospitals with state-of-the-art medical facilities and technology.",
+    "affordable": "Affordable Treatment",
+    "affordableDesc": "Significantly lower costs compared to Western countries without compromising quality.",
+    "experts": "Expert Doctors",
+    "expertsDesc": "Internationally trained and experienced medical professionals.",
+    "noWaiting": "No Waiting Times",
+    "noWaitingDesc": "Immediate access to treatment without long waiting periods.",
+    "multilingual": "Multilingual Support",
+    "multilingualDesc": "Support in multiple languages for international patients.",
+    "travel": "Easy Travel",
+    "travelDesc": "Simplified visa process and travel arrangements for medical tourists."
+  }
+}
+

@@ -1,141 +1,139 @@
 "use client";
-import { FcGoogle } from "react-icons/fc";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Play } from "lucide-react";
 
 export default function HeroSection({ locale }) {
   const t = useTranslations("home");
-
   const isRTL = locale === "ar";
+
+  // Tagline - exact as client specified
+  const tagline = {
+    en: "Global Care – Indian Compassion – Redefining Medical Tourism",
+    ar: "رعاية عالمية – رحمة هندية – إعادة تعريف السياحة العلاجية",
+    fr: "Soins Mondiaux – Compassion Indienne – Redéfinir le Tourisme Médical"
+  };
 
   return (
     <section
-      className={`relative min-h-[70vh] overflow-hidden`}
+      className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden"
       dir={isRTL ? "rtl" : "ltr"}
+      role="banner"
+      aria-label="Hero Section"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Image - Medical/Surgery Scene like Sheeba */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop"
-          alt="Medical professionals"
-          width={2080}
-          height={1080}
-          className="w-full h-full object-cover"
+          src="/bg-hero.jpg"
+          alt="World-class medical care in India"
+          fill
+          className="object-cover object-center"
+          priority
+          quality={100}
         />
-        <div className={`absolute inset-0 ${isRTL
-          ? "bg-gradient-to-l from-panacea-primary/30 via-panacea-primary/80 to-panacea-primary/95"
-          : "bg-gradient-to-r from-panacea-primary/95 via-panacea-primary/80 to-panacea-primary/30"
-          }`}></div>
+        {/* Blue Teal Overlay - Like Sheeba */}
+        <div className="absolute inset-0 bg-panacea-primary/60" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Text Content - Centered */}
-          <div
-            className={`text-white space-y-6 text-center ${isRTL ? "rtl" : "ltr"}`}
-          >
-            {/* World's Best Hospitals Badge */}
-            <div className={`inline-flex ${isRTL ? "flex-row-reverse" : ""}`}>
-              <div className="bg-white rounded-xl shadow-2xl px-6 py-4 inline-block">
-                <div className="flex items-center gap-3">
-                  <div className="flex flex-col items-center">
-                    <div className="flex gap-1 mb-1">
-                      {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-panacea-accent text-sm">★</span>
-                      ))}
-                    </div>
-                    <span className="text-gray-900 font-bold text-sm leading-tight">{t("badgeWorlds")}</span>
-                    <span className="text-gray-900 font-bold text-sm leading-tight">{t("badgeBest")}</span>
-                    <span className="text-gray-900 font-bold text-sm leading-tight">{t("badgeHospitals")}</span>
-                  </div>
-                  <div className="border-l-2 border-gray-300 pl-3 flex flex-col items-start">
-                    <span className="text-3xl font-bold text-gray-900 leading-none">2025</span>
-                    <span className="text-xs text-gray-700 font-semibold mt-1">Newsweek</span>
-                    <span className="text-xs text-gray-600">statista</span>
-                  </div>
+      {/* Decorative Dot Pattern - Like Sheeba */}
+      <div className="absolute inset-0 z-[1] opacity-20">
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-64"
+          style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 2px, transparent 2px)',
+            backgroundSize: '20px 20px'
+          }}
+        />
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[85vh] lg:min-h-[90vh] flex items-center">
+        <div className={`w-full ${isRTL ? 'text-right' : 'text-left'}`}>
+
+          {/* World's Best Hospitals Badge - Like Sheeba */}
+          <div className={`mb-8 ${isRTL ? 'flex justify-end' : ''}`}>
+            <div className="inline-block bg-white rounded-lg shadow-xl overflow-hidden">
+              <div className="flex">
+                {/* Red Section */}
+                <div className="bg-red-600 text-white px-3 py-2 flex flex-col justify-center">
+                  <span className="text-[10px] font-bold leading-tight">WORLD&apos;S</span>
+                  <span className="text-[10px] font-bold leading-tight">BEST</span>
+                  <span className="text-[10px] font-bold leading-tight">HOSPITALS</span>
+                </div>
+                {/* White Section */}
+                <div className="px-3 py-2 flex flex-col justify-center border-l">
+                  <span className="text-2xl font-bold text-gray-900 leading-none">2025</span>
+                  <span className="text-[10px] text-red-600 font-semibold">Newsweek</span>
+                  <span className="text-[8px] text-gray-500">statista</span>
                 </div>
               </div>
-            </div>
-
-            {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl  font-extrabold leading-tight">
-              <span className="block text-white drop-shadow-2xl">
-                {t("heroTitleLine1")}
-              </span>
-              <span className="block text-white drop-shadow-2xl mt-2">
-                {t("heroTitleLine2")}
-              </span>
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-normal">
-              {t("heroSubtitle")}
-            </p>
-
-            {/* Stats/Trust Indicators - Centered */}
-            <div className="flex justify-center items-center gap-6 pt-4 flex-wrap">
-              {/* Patients Avatars */}
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-3">
-                  <Image src="https://i.pravatar.cc/150?img=1" alt="Patient 1" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <Image src="https://i.pravatar.cc/150?img=5" alt="Patient 2" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <Image src="https://i.pravatar.cc/150?img=9" alt="Patient 3" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                  <Image src="https://i.pravatar.cc/150?img=8" alt="Patient 4" width={150} height={150} className="w-14 h-14 rounded-full border-4 border-white shadow-lg" />
-                </div>
-                <div className="text-center">
-                  <p className="text-base font-bold text-white leading-tight">
-                    {t("patientsAssisted")}
-                  </p>
-                  <p className="text-sm text-white/80 font-normal">
-                    {t("since2016")}
-                  </p>
-                </div>
-              </div>
-
-              {/* Google Rating */}
-              <div className="flex items-center gap-3">
-                <FcGoogle className="w-12 h-12" />
-                <div className="text-center">
-                  <p className="text-3xl font-extrabold text-white leading-none">4.9</p>
-                  <div className="flex gap-0.5 mt-1 justify-center">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-sm">★</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div
-              className={`flex ${isRTL ? "flex-row-reverse" : ""} justify-center gap-4 pt-6 flex-wrap items-center`}
-            >
-              {/* Free Consultation - Bigger, Bolder, Teal Color */}
-              <button
-                onClick={() => {
-                  // Open chatbot when clicked
-                  const chatbotButton = document.querySelector('[data-chatbot-toggle]');
-                  if (chatbotButton) chatbotButton.click();
-                }}
-                className={`group flex items-center justify-center gap-3 px-10 py-5 bg-panacea-primary hover:bg-panacea-dark text-white rounded-full font-extrabold text-xl md:text-2xl transition-all duration-300 shadow-2xl hover:shadow-panacea-primary/50 transform hover:scale-110 border-4 border-white/30 ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <span>{t("freeConsultation") || "Free Consultation"}</span>
-                <svg className={`w-7 h-7 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              <button className={`group flex items-center justify-center gap-2 px-8 py-4 bg-white/20 backdrop-blur-md hover:bg-white/30 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 border-2 border-white/50 ${isRTL ? "flex-row-reverse" : ""}`}>
-                <span>{t("patientStories")}</span>
-                <svg className={`w-6 h-6 transform transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
             </div>
           </div>
+
+          {/* Main Heading - Like Sheeba Style */}
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[1.1] mb-6"
+            style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}
+          >
+            <span className="block">World-Class Medicine</span>
+            <span className="block italic">with a Personal Touch</span>
+          </h1>
+
+          {/* Tagline */}
+          <p
+            className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium mb-10 max-w-2xl"
+            style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}
+          >
+            {tagline[locale] || tagline.en}
+          </p>
+
+          {/* CTA Buttons - Like Sheeba Style */}
+          <div className={`flex flex-wrap gap-4 ${isRTL ? 'justify-end' : 'justify-start'}`}>
+            {/* About Us - Teal/Green Button */}
+            <Link
+              href={`/${locale}/about`}
+              className={`group inline-flex items-center gap-3 px-8 py-4 bg-panacea-secondary hover:bg-panacea-primary text-white rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              <span>{locale === "ar" ? "من نحن" : locale === "fr" ? "À propos" : "About us"}</span>
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+              </div>
+            </Link>
+
+            {/* Patient Stories - Pink/Accent Outline Button */}
+            <Link
+              href={`/${locale}/testimonials`}
+              className={`group inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-panacea-accent text-white hover:bg-panacea-accent rounded-full font-semibold text-lg transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              <span>{locale === "ar" ? "قصص المرضى" : locale === "fr" ? "Témoignages" : "Patient Stories"}</span>
+              <div className="w-8 h-8 rounded-full border-2 border-current flex items-center justify-center group-hover:border-white transition-colors">
+                <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
+              </div>
+            </Link>
+          </div>
+
+          {/* Optional: Free Consultation CTA - Orange (for conversion) */}
+          <div className={`mt-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+            <button
+              onClick={() => {
+                const chatbotButton = document.querySelector('[data-chatbot-toggle]');
+                if (chatbotButton) chatbotButton.click();
+              }}
+              className={`inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
+            >
+              <Play className="w-5 h-5 fill-panacea-accent text-panacea-accent" />
+              <span className="underline underline-offset-4">
+                {locale === "ar" ? "احصل على استشارة مجانية" : locale === "fr" ? "Obtenez une consultation gratuite" : "Get Free Consultation"}
+              </span>
+            </button>
+          </div>
+
         </div>
       </div>
+
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/10 to-transparent z-[1]" />
     </section>
   );
 }
-

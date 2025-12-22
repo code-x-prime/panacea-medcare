@@ -83,6 +83,13 @@ export default function Header({ locale }) {
                   (isRTL ? "order-1 flex-row-reverse" : "order-3")
                 }
               >
+                {/* Book Teleconsultation - Orange CTA Button */}
+                <Link
+                  href={`/${locale}/services/teleconsultation`}
+                  className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-panacea-accent hover:bg-panacea-orange-600 text-white font-semibold rounded-lg shadow-panacea-orange hover:shadow-lg transition-all duration-300"
+                >
+                  {t.requestConsultation}
+                </Link>
                 <LanguageSwitcher currentLocale={locale} />
                 <div className="lg:hidden">
                   <Navbar locale={locale} />

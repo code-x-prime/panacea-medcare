@@ -24,7 +24,7 @@ const PageHero = ({
   const heroImage = backgroundImage || fallbackImage;
 
   return (
-    <section className="relative w-full min-h-[450px] md:min-h-[550px] lg:min-h-[650px] overflow-hidden bg-panacea-dark">
+    <section className="relative w-full min-h-[450px] md:min-h-[550px] lg:min-h-[650px] overflow-hidden bg-panacea-primary">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -36,13 +36,13 @@ const PageHero = ({
           quality={90}
         />
         
-        {/* Panacea Brand Gradient Overlay */}
+        {/* Panacea Brand Gradient Overlay - Teal Gradient */}
         <div 
           className="absolute inset-0"
           style={{
             background: isRTL
-              ? "linear-gradient(135deg, rgba(4, 109, 138, 0.92) 0%, rgba(10, 74, 94, 0.88) 50%, rgba(200, 45, 51, 0.15) 100%)"
-              : "linear-gradient(135deg, rgba(200, 45, 51, 0.15) 0%, rgba(10, 74, 94, 0.88) 50%, rgba(4, 109, 138, 0.92) 100%)",
+              ? "linear-gradient(135deg, rgba(11, 77, 94, 0.95) 0%, rgba(20, 145, 155, 0.90) 50%, rgba(243, 112, 33, 0.15) 100%)"
+              : "linear-gradient(135deg, rgba(243, 112, 33, 0.15) 0%, rgba(20, 145, 155, 0.90) 50%, rgba(11, 77, 94, 0.95) 100%)",
           }}
         />
         
@@ -66,13 +66,13 @@ const PageHero = ({
             customContent
           ) : (
             <div className="space-y-6 md:space-y-8">
-              {/* Decorative Top Line */}
+              {/* Decorative Top Line - Orange Accent */}
               <div
                 className={`w-20 h-1 bg-panacea-accent rounded-full ${
                   isRTL ? "mr-0 ml-auto" : "ml-0 mr-auto"
                 }`}
                 style={{
-                  boxShadow: "0 0 20px rgba(200, 45, 51, 0.6)",
+                  boxShadow: "0 0 20px rgba(243, 112, 33, 0.6)",
                 }}
               />
 
@@ -82,7 +82,7 @@ const PageHero = ({
                   isRTL ? "font-arabic" : ""
                 }`}
                 style={{
-                  textShadow: "4px 4px 12px rgba(0,0,0,0.8), 0 0 40px rgba(4, 109, 138, 0.3)",
+                  textShadow: "4px 4px 12px rgba(0,0,0,0.8), 0 0 40px rgba(11, 77, 94, 0.3)",
                   letterSpacing: isRTL ? "normal" : "-0.02em",
                 }}
               >
@@ -101,14 +101,14 @@ const PageHero = ({
                 {displaySubtitle}
               </p>
 
-              {/* Accent Line with Glow */}
+              {/* Accent Line with Glow - Orange Gradient */}
               <div
                 className={`w-32 h-1.5 rounded-full ${
                   isRTL ? "mr-0 ml-auto" : "ml-0 mr-auto"
                 }`}
                 style={{
-                  background: "linear-gradient(90deg, #c82d33 0%, #ff6b6b 100%)",
-                  boxShadow: "0 4px 20px rgba(200, 45, 51, 0.6), 0 0 40px rgba(200, 45, 51, 0.4)",
+                  background: "linear-gradient(90deg, #F37021 0%, #F79F4F 100%)",
+                  boxShadow: "0 4px 20px rgba(243, 112, 33, 0.6), 0 0 40px rgba(243, 112, 33, 0.4)",
                 }}
               />
             </div>
@@ -120,15 +120,15 @@ const PageHero = ({
       <div 
         className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: "linear-gradient(to top, rgba(4, 109, 138, 0.3), transparent)",
+          background: "linear-gradient(to top, rgba(11, 77, 94, 0.3), transparent)",
         }}
       />
       
-      {/* Corner Accent (Bottom Right for LTR, Bottom Left for RTL) */}
+      {/* Corner Accent (Bottom Right for LTR, Bottom Left for RTL) - Orange */}
       <div 
         className={`absolute bottom-0 ${isRTL ? "left-0" : "right-0"} w-64 h-64 pointer-events-none`}
         style={{
-          background: "radial-gradient(circle at center, rgba(200, 45, 51, 0.2) 0%, transparent 70%)",
+          background: "radial-gradient(circle at center, rgba(243, 112, 33, 0.2) 0%, transparent 70%)",
         }}
       />
     </section>

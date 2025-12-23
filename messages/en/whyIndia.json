@@ -1,24 +1,61 @@
 {
-  "title": "Why Choose India for Medical Treatment?",
+  "title": "What is Medical Value Travel & Why Should You Choose India",
   "subtitle": "World-class healthcare at affordable prices",
   "breadcrumb": {
     "home": "Home",
     "whyIndia": "Why India"
   },
-  "heading": "Why Choose India for Medical Treatment?",
-  "intro": "India has emerged as a leading destination for medical tourism, offering world-class healthcare at affordable prices.",
-  "benefits": {
-    "worldClass": "World-Class Healthcare",
-    "worldClassDesc": "JCI-accredited hospitals with state-of-the-art medical facilities and technology.",
-    "affordable": "Affordable Treatment",
-    "affordableDesc": "Significantly lower costs compared to Western countries without compromising quality.",
-    "experts": "Expert Doctors",
-    "expertsDesc": "Internationally trained and experienced medical professionals.",
-    "noWaiting": "No Waiting Times",
-    "noWaitingDesc": "Immediate access to treatment without long waiting periods.",
-    "multilingual": "Multilingual Support",
-    "multilingualDesc": "Support in multiple languages for international patients.",
-    "travel": "Easy Travel",
-    "travelDesc": "Simplified visa process and travel arrangements for medical tourists."
-  }
+  "mainTitle": "What is Medical Value Travel & Why Should You Choose India",
+  "intro1": "Medical Value Travel (MVT) is the practice of traveling across international borders to obtain medical care, typically at a lower cost, with higher quality, or access to treatments not available in one's home country. This type of travel includes various medical procedures, from elective surgeries and specialized treatments to wellness and preventive care.",
+  "intro2": "India has become one of the leading destinations for Medical Value Travel (MVT) due to several compelling reasons. Here's why patients from around the world choose India for medical treatments:",
+  "reasons": {
+    "highQuality": {
+      "title": "High-Quality Healthcare Services",
+      "point1": "World-Class Hospitals: India is home to many internationally accredited hospitals (e.g., JCI, NABH) that offer world-class facilities and state-of-the-art technology.",
+      "point2": "Skilled Medical Professionals: Indian doctors and surgeons are globally recognized for their expertise, with many trained or having practiced in the USA, UK, or other developed countries."
+    },
+    "costEffective": {
+      "title": "Cost-Effective Treatment",
+      "point1": "Affordable Care: Medical procedures in India are significantly more affordable compared to Western countries, often at a fraction of the cost, without compromising on quality.",
+      "point2": "Transparent Pricing: Patients can get clear cost estimates before their treatment, which helps in better financial planning."
+    },
+    "wideRange": {
+      "title": "Wide Range of Medical Treatments",
+      "point1": "Advanced Medical Procedures: India offers a wide range of medical treatments, from complex surgeries like cardiac and orthopedic procedures to fertility treatments, cosmetic surgery, and alternative therapies such as Ayurveda.",
+      "point2": "Availability of Latest Technology: Indian hospitals are equipped with the latest medical technologies, including robotic surgery, advanced imaging, and modern diagnostic equipment."
+    },
+    "noWaiting": {
+      "title": "No Waiting Lists",
+      "point1": "Timely Treatment: Unlike in many Western countries, India's healthcare system often has minimal or no waiting times, allowing patients to receive timely medical attention."
+    },
+    "communication": {
+      "title": "Ease of Communication",
+      "point1": "English Proficiency: English is widely spoken in India, especially among medical professionals, making communication easy for international patients.",
+      "point2": "Dedicated Patient Support: Many hospitals have dedicated international patient departments that assist with communication, travel arrangements, and other logistics."
+    },
+    "holistic": {
+      "title": "Holistic and Wellness Care",
+      "point1": "Integrative Medicine: India is known for its holistic approach to healthcare, integrating modern medicine with traditional practices such as Ayurveda, Yoga, and Naturopathy. This offers patients comprehensive care, including preventive and wellness therapies.",
+      "point2": "Post-Treatment Care: India offers excellent rehabilitation services, including physical therapy and wellness programs to ensure a smooth recovery."
+    },
+    "tourism": {
+      "title": "Tourism Opportunities",
+      "point1": "Rich Cultural Heritage: Patients can combine their medical treatment with tourism, exploring India's rich cultural heritage, historical landmarks, and natural beauty.",
+      "point2": "Medical Tourism Packages: Many hospitals and travel agencies offer packages that include sightseeing tours, accommodation, and other services tailored to international patients."
+    },
+    "government": {
+      "title": "Supportive Government Policies",
+      "point1": "Medical Visa: The Indian government offers a specific visa category for medical tourists, simplifying the process for patients and their companions.",
+      "point2": "Patient-Friendly Policies: The government and healthcare providers have implemented various initiatives to make the MVT experience smooth and hassle-free."
+    },
+    "success": {
+      "title": "Positive Outcomes and Success Stories",
+      "point1": "Proven Track Record: India has a strong track record of successful medical treatments, with numerous positive patient testimonials and high satisfaction rates from international patients."
+    },
+    "connectivity": {
+      "title": "Global Connectivity",
+      "point1": "Well-Connected Airports: Major Indian cities like Delhi, Mumbai, Chennai, and Bangalore are well-connected with direct flights from many international destinations, making travel convenient for patients."
+    }
+  },
+  "summary": "India's combination of quality healthcare, affordability, and a wide range of treatment options makes it a top choice for medical value travel."
 }

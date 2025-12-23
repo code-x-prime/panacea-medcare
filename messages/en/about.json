@@ -1,12 +1,41 @@
 {
-  "title": "About Panacea MedCare",
+  "title": "About Panacea Health",
   "subtitle": "Your trusted partner in global healthcare",
-  "heading": "Who We Are",
-  "description": "Panacea MedCare is a leading medical tourism facilitator connecting international patients with world-class healthcare facilities in India. With over 8 years of experience, we have helped thousands of patients receive quality medical care at affordable prices.",
-  "mission": "Our Mission",
-  "missionText": "To provide accessible, affordable, and world-class medical care to patients worldwide through our network of top-tier hospitals and experienced medical professionals.",
-  "vision": "Our Vision",
-  "visionText": "To be the most trusted global healthcare partner, transforming lives through exceptional medical care and personalized patient experiences.",
+  "heading": "About Us",
+  "intro": "Panacea Health is a premier medical tourism company with a distinguished track record spanning over 14 years. Specializing in providing world-class healthcare services to international patients, Panacea Health has established itself as a leader in the industry.",
+  "companyDesc": "The company prides itself on offering comprehensive medical tourism solutions that encompass every aspect of patient care, from initial consultation and travel arrangements to post-treatment follow-ups. Panacea Health continues to build on its legacy of excellence, expanding its services and enhancing patient experiences to meet the evolving needs of the global healthcare landscape.",
+  "feature1": {
+    "title": "Extensive Network of Accredited Hospitals and Clinics",
+    "desc": "Panacea Health partners with top-tier hospitals and clinics worldwide, ensuring access to the latest medical technologies and highly skilled healthcare professionals."
+  },
+  "feature2": {
+    "title": "Patient-Centered Approach",
+    "desc": "The company's patient-centric philosophy emphasizes personalized care, with tailored treatment plans that address the unique needs and preferences of each patient."
+  },
+  "feature3": {
+    "title": "Wide Range of Medical Services",
+    "desc": "From elective procedures and specialized surgeries to wellness programs and preventive care, Panacea Health offers a diverse array of medical services across multiple specialties."
+  },
+  "feature4": {
+    "title": "Experienced Team",
+    "desc": "With over 14 years of experience, the Panacea Health team comprises seasoned professionals who bring a wealth of expertise and knowledge to the medical tourism sector."
+  },
+  "feature5": {
+    "title": "Seamless Travel and Accommodation Arrangements",
+    "desc": "Understanding the complexities of international travel, Panacea Health provides end-to-end support, including visa assistance, flight bookings, and accommodation arrangements to ensure a stress-free experience for patients and their families."
+  },
+  "feature6": {
+    "title": "Commitment to Quality and Safety",
+    "desc": "Patient safety and quality care are at the forefront of Panacea Health's operations. The company adheres to stringent standards and protocols to deliver the highest level of medical care."
+  },
+  "feature7": {
+    "title": "Post-Treatment Support",
+    "desc": "Panacea Health offers robust post-treatment care, including follow-up consultations and rehabilitation services, to ensure optimal recovery and patient satisfaction."
+  },
+  "mission": "Mission",
+  "missionText": "To provide unparalleled healthcare services to international patients through innovation, compassion, and a commitment to excellence.",
+  "vision": "Vision",
+  "visionText": "To be the global leader in medical tourism, renowned for transforming lives through exceptional healthcare experiences.",
   "values": "Our Values",
   "valuesItems": {
     "quality": "Quality Care",

@@ -49,11 +49,9 @@ export default function Footer({ locale }) {
 
   const destinations = [
     "india",
+    "nepal",
     "turkey",
     "thailand",
-    "uae",
-    "germany",
-    "egypt",
   ];
 
   const legalLinks = [
@@ -175,14 +173,14 @@ export default function Footer({ locale }) {
             <ul className="space-y-3 mb-8">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-panacea-light/90">
+                  <span className="text-panacea-light/90 hover:text-white transition-colors">
                     {t(`services.${service}`)}
                   </span>
                 </li>
               ))}
             </ul>
 
-            {/* Destinations */}
+            {/* Destinations - Text Only, No Links */}
             <h4 className="font-bold text-xl mb-6">{t("destinations.title")}</h4>
             <ul className="space-y-3">
               {destinations.map((dest) => (
@@ -195,22 +193,20 @@ export default function Footer({ locale }) {
             </ul>
           </div>
 
-          {/* Our Offices */}
+          {/* Our Offices - Fixed */}
           <div>
             <h4 className="font-bold text-xl mb-6">{t("ourOffices.title") || "Our Offices"}</h4>
-            <div className="space-y-3 mb-8">
-              {t.raw("ourOffices.offices")?.map((office, idx) => (
-                <div key={idx} className="text-panacea-light/90">
-                  <p className="font-semibold text-white mb-1">{office.name}</p>
-                  <p className="text-sm">{office.address}</p>
-                  {office.phone && <p className="text-sm">{office.phone}</p>}
-                </div>
-              )) || (
-                  <div className="text-panacea-light/90">
-                    <p className="font-semibold text-white mb-1">Head Office</p>
-                    <p className="text-sm">123 Healthcare Plaza, Medical District, City, Country</p>
-                  </div>
-                )}
+            <div className="space-y-4">
+              {/* Head Office */}
+              <div className="text-panacea-light/90">
+                <p className="font-semibold text-white mb-2">{locale === "ar" ? "المكتب الرئيسي" : locale === "fr" ? "Bureau Principal" : "Head Office"}</p>
+                <p className="text-sm leading-relaxed mb-1">Suite No. 402, Plot No. 996,</p>
+                <p className="text-sm leading-relaxed mb-1">Sector 38, Gurgaon – 122001</p>
+                <p className="text-sm leading-relaxed mb-2">Delhi NCR, India</p>
+                <p className="text-sm font-semibold text-white mt-3">Sumiit Gupta</p>
+                <p className="text-sm">+91-9958800961</p>
+                <p className="text-sm break-all mt-2">care@panaceamedcare.com</p>
+              </div>
             </div>
           </div>
 

@@ -1,77 +1,113 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
 
-export default function HomeOfficesPreview({ locale }) {
+export default function HomeOfficesPreview({ locale: localeProp }) {
+  const locale = useLocale() || localeProp || "en";
   const t = useTranslations("ourOffices");
   const isRTL = locale === "ar";
 
   const offices = [
+    // Nigeria Offices
     {
-      id: "gurgaon",
-      name: t("gurgaon.name"),
-      address: t("gurgaon.address"),
+      id: "nigeria-abuja",
+      country: t("nigeria.country") || "Nigeria",
+      city: t("nigeria.abuja.city") || "Abuja",
+      address: t("nigeria.abuja.address") || "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT",
     },
     {
-      id: "delhi-ncr",
-      name: t("delhiNcr.name"),
-      address: t("delhiNcr.address"),
+      id: "nigeria-lagos",
+      country: t("nigeria.country") || "Nigeria",
+      city: t("nigeria.lagos.city") || "Lagos",
+      address: t("nigeria.lagos.address") || "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigeria",
+    },
+    {
+      id: "nigeria-kano",
+      country: t("nigeria.country") || "Nigeria",
+      city: t("nigeria.kano.city") || "Kano",
+      address: t("nigeria.kano.address") || "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano",
+    },
+    // Kenya Offices
+    {
+      id: "kenya-nairobi",
+      country: t("kenya.country") || "Kenya",
+      city: t("kenya.nairobi.city") || "Nairobi",
+      address: t("kenya.nairobi.address") || "Mayfair Office Suites, Parklands Road, Nairobi, Kenya",
+    },
+    // Ethiopia Offices
+    {
+      id: "ethiopia-debre-markos",
+      country: t("ethiopia.country") || "Ethiopia",
+      city: t("ethiopia.debreMarkos.city") || "Debre Markos",
+      address: t("ethiopia.debreMarkos.address") || "Debre Markos, East Gojjam District, Addis Ababa, Ethiopia",
     },
   ];
 
   return (
     <section
-      className="py-12 md:py-16 bg-gradient-to-br from-panacea-light via-white to-blue-50"
+      className="py-12 md:py-16 bg-gradient-to-br from-panacea-light/30 via-white to-panacea-light/20"
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="flex items-center justify-between mb-8 gap-4">
-          <div className={isRTL ? "text-right" : "text-left"}>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
-              {t("ourOffices")}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Header */}
+        <div className={`flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4 ${isRTL ? "text-right" : "text-left"}`}>
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-panacea-accent mb-3 tracking-tight">
+              {t("ourOffices") || "Panacea Patient Assistance Centres"}
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              {t("ourOfficesDesc")}
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
+              {t("ourOfficesDesc") || "Visit us at our offices or reach out for assistance"}
             </p>
           </div>
           <Link
             href={`/${locale}/our-offices`}
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
+            className="px-6 py-3 rounded-lg bg-panacea-primary text-white font-semibold hover:bg-panacea-secondary transition-all shadow-md hover:shadow-lg whitespace-nowrap"
           >
-            <span>{isRTL ? "عرض جميع المكاتب" : "View all offices"}</span>
+            {locale === "ar" ? "عرض جميع المكاتب" : locale === "fr" ? "Voir tous les bureaux" : "View all offices"}
           </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {offices.map((office) => (
-            <div
-              key={office.id}
-              className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 flex items-start gap-4"
-            >
-              <div className="w-12 h-12 rounded-full bg-panacea-primary text-white flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6" />
-              </div>
-              <div className={isRTL ? "text-right" : "text-left"}>
-                <h3 className="text-lg font-bold text-gray-900 mb-1">
-                  {office.name}
-                </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {office.address}
-                </p>
+        {/* Office Cards - Grouped by Country */}
+        <div className="space-y-8">
+          {Object.entries(
+            offices.reduce((acc, office) => {
+              if (!acc[office.country]) {
+                acc[office.country] = [];
+              }
+              acc[office.country].push(office);
+              return acc;
+            }, {})
+          ).map(([country, countryOffices]) => (
+            <div key={country}>
+              <h3 className="text-2xl md:text-3xl font-bold text-panacea-primary mb-6">
+                {country}:
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {countryOffices.map((office) => (
+                  <div
+                    key={office.id}
+                    className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 group"
+                  >
+                    <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
+                      <div className="w-12 h-12 rounded-full bg-panacea-primary text-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md">
+                        <MapPin className="w-6 h-6" />
+                      </div>
+                      <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
+                        <h4 className="text-lg md:text-xl font-bold text-panacea-primary mb-2">
+                          {office.city}
+                        </h4>
+                        <p className="text-gray-700 leading-relaxed text-sm">
+                          {office.address}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-6 flex justify-center md:hidden">
-          <Link
-            href={`/${locale}/our-offices`}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
-          >
-            <span>{isRTL ? "عرض جميع المكاتب" : "View all offices"}</span>
-          </Link>
         </div>
       </div>
     </section>

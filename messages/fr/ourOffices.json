@@ -3,21 +3,35 @@
   "subtitle": "Visitez-nous ou contactez-nous pour obtenir de l'aide",
   "globalPresence": "Présence mondiale",
   "globalPresenceDesc": "Servir les patients sur tous les continents avec des partenaires de santé de confiance",
-  "ourOffices": "Nos bureaux",
+  "ourOffices": "Centres d'assistance aux patients Panacea",
   "ourOfficesDesc": "Visitez-nous dans nos bureaux ou contactez-nous pour obtenir de l'aide",
-  "gurgaon": {
-    "name": "Bureau de Gurgaon",
-    "address": "123 Plaza Healthcare, Secteur 44, Gurgaon, Haryana, Inde"
+  "nigeria": {
+    "country": "Nigéria",
+    "abuja": {
+      "city": "Abuja",
+      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT"
+    },
+    "lagos": {
+      "city": "Lagos",
+      "address": "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigéria"
+    },
+    "kano": {
+      "city": "Kano",
+      "address": "Chambre No. 15, Bloc B. Hôpital d'enseignement Amino Kano, Kano"
+    }
   },
-  "delhiNcr": {
-    "name": "Bureau de Delhi NCR",
-    "address": "456 District médical, New Delhi, Inde"
+  "kenya": {
+    "country": "Kenya",
+    "nairobi": {
+      "city": "Nairobi",
+      "address": "Mayfair Office Suites, Parklands Road, Nairobi, Kenya"
+    }
   },
-  "africa": "Afrique",
-  "africaCountries": "Ouganda, Tanzanie, Kenya",
-  "middleEast": "Moyen-Orient",
-  "middleEastCountries": "EAU, Arabie Saoudite",
-  "asia": "Asie",
-  "asiaCountries": "Népal, Bangladesh"
+  "ethiopia": {
+    "country": "Éthiopie",
+    "debreMarkos": {
+      "city": "Debre Markos",
+      "address": "Debre Markos, District d'East Gojjam, Addis-Abeba, Éthiopie"
+    }
+  }
 }
-

@@ -3,21 +3,35 @@
   "subtitle": "Visit us or reach out for assistance",
   "globalPresence": "Global Presence",
   "globalPresenceDesc": "Serving patients across continents with trusted healthcare partners",
-  "ourOffices": "Our Offices",
+  "ourOffices": "Panacea Patient Assistance Centres",
   "ourOfficesDesc": "Visit us at our offices or reach out for assistance",
-  "gurgaon": {
-    "name": "Gurgaon Office",
-    "address": "123 Healthcare Plaza, Sector 44, Gurgaon, Haryana, India"
+  "nigeria": {
+    "country": "Nigeria",
+    "abuja": {
+      "city": "Abuja",
+      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT"
+    },
+    "lagos": {
+      "city": "Lagos",
+      "address": "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigeria"
+    },
+    "kano": {
+      "city": "Kano",
+      "address": "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano"
+    }
   },
-  "delhiNcr": {
-    "name": "Delhi NCR Office",
-    "address": "456 Medical District, New Delhi, India"
+  "kenya": {
+    "country": "Kenya",
+    "nairobi": {
+      "city": "Nairobi",
+      "address": "Mayfair Office Suites, Parklands Road, Nairobi, Kenya"
+    }
   },
-  "africa": "Africa",
-  "africaCountries": "Uganda, Tanzania, Kenya",
-  "middleEast": "Middle East",
-  "middleEastCountries": "UAE, Saudi Arabia",
-  "asia": "Asia",
-  "asiaCountries": "Nepal, Bangladesh"
+  "ethiopia": {
+    "country": "Ethiopia",
+    "debreMarkos": {
+      "city": "Debre Markos",
+      "address": "Debre Markos, East Gojjam District, Addis Ababa, Ethiopia"
+    }
+  }
 }
-

@@ -2,34 +2,84 @@
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
-import { MapPin, Phone, Mail, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Globe, Building2 } from "lucide-react";
 
 export default function OurOfficesPage({ params }) {
     const { locale } = params;
     const isRTL = locale === "ar";
     const t = useTranslations("ourOffices");
 
-    const offices = [
+    // Head Office
+    const headOffice = {
+        name: locale === "ar" ? "المكتب الرئيسي" : locale === "fr" ? "Bureau Principal" : "Head Office",
+        address: [
+            "Suite No. 402, Plot No. 996,",
+            "Sector 38, Gurgaon – 122001",
+            "Delhi NCR, India"
+        ],
+        contact: "Sumiit Gupta",
+        phone: "+91-9958800961",
+        email: "care@panaceamedcare.com"
+    };
+
+    // Patient Assistance Centres
+    const assistanceCentres = [
         {
-            id: "gurgaon",
-            name: t("gurgaon.name") || "Gurgaon Office",
-            address: t("gurgaon.address") || "123 Healthcare Plaza, Sector 44, Gurgaon, Haryana, India",
-            phone: "+91-XXX-XXX-XXXX",
-            email: "gurgaon@panaceamedcare.com"
+            country: locale === "ar" ? "نيجيريا" : locale === "fr" ? "Nigéria" : "Nigeria",
+            flag: "🇳🇬",
+            offices: [
+                {
+                    city: locale === "ar" ? "أبوجا" : locale === "fr" ? "Abuja" : "Abuja",
+                    address: [
+                        "No. 17, Benghazi Street, Wuse Zone 4,",
+                        "Abuja, FCT"
+                    ]
+                },
+                {
+                    city: locale === "ar" ? "لاغوس" : locale === "fr" ? "Lagos" : "Lagos",
+                    address: [
+                        "311A, Kola Opere Street,",
+                        "Buknor Estate, Isolo,",
+                        "Lagos, Nigeria"
+                    ]
+                },
+                {
+                    city: locale === "ar" ? "كانو" : locale === "fr" ? "Kano" : "Kano",
+                    address: [
+                        "Room No. 15, Block B.",
+                        "Amino Kano Teaching Hospital",
+                        "Kano"
+                    ]
+                }
+            ]
         },
         {
-            id: "delhi-ncr",
-            name: t("delhiNcr.name") || "Delhi NCR Office",
-            address: t("delhiNcr.address") || "456 Medical District, New Delhi, India",
-            phone: "+91-XXX-XXX-XXXX",
-            email: "delhi@panaceamedcare.com"
+            country: locale === "ar" ? "كينيا" : locale === "fr" ? "Kenya" : "Kenya",
+            flag: "🇰🇪",
+            offices: [
+                {
+                    city: locale === "ar" ? "نيروبي" : locale === "fr" ? "Nairobi" : "Nairobi",
+                    address: [
+                        "Mayfair Office Suites,",
+                        "Parklands Road,",
+                        "Nairobi, Kenya"
+                    ]
+                }
+            ]
+        },
+        {
+            country: locale === "ar" ? "إثيوبيا" : locale === "fr" ? "Éthiopie" : "Ethiopia",
+            flag: "🇪🇹",
+            offices: [
+                {
+                    city: locale === "ar" ? "دبر ماركوس" : locale === "fr" ? "Debre Markos" : "Debre Markos",
+                    address: [
+                        "East Gojjam District",
+                        "Addis Ababa, Ethiopia"
+                    ]
+                }
+            ]
         }
-    ];
-
-    const internationalPresence = [
-        { region: t("africa") || "Africa", countries: t("africaCountries") || "Uganda, Tanzania, Kenya" },
-        { region: t("middleEast") || "Middle East", countries: t("middleEastCountries") || "UAE, Saudi Arabia" },
-        { region: t("asia") || "Asia", countries: t("asiaCountries") || "Nepal, Bangladesh" }
     ];
 
     return (
@@ -42,69 +92,102 @@ export default function OurOfficesPage({ params }) {
             />
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-                {/* World Map Section */}
+                {/* Head Office Section */}
                 <div className="mb-16">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            {t("globalPresence") || "Global Presence"}
+                        <h2 className="text-3xl md:text-4xl font-bold text-panacea-primary mb-4">
+                            {locale === "ar" ? "المكتب الرئيسي" : locale === "fr" ? "Bureau Principal" : "Head Office"}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            {t("globalPresenceDesc") || "Serving patients across continents with trusted healthcare partners"}
+                            {locale === "ar" ? "باناسيا ميدكير تعمل من مكتبها الرئيسي في جورجاون - مركز الأعمال في دلهي NCR" : locale === "fr" ? "Panacea Medcare opère depuis son bureau principal à Gurgaon - le centre d'affaires de Delhi NCR" : "Panacea Medcare operates from its Head office at Gurgaon – the business hub of Delhi NCR"}
                         </p>
                     </div>
 
-                    {/* Simple Map Representation */}
-                    <div className="bg-gradient-to-br from-panacea-light to-white rounded-3xl p-8 md:p-12 shadow-lg border border-gray-100">
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {internationalPresence.map((presence, idx) => (
-                                <div key={idx} className="text-center">
-                                    <div className="w-20 h-20 bg-panacea-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                                        <Globe className="w-10 h-10 text-white" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{presence.region}</h3>
-                                    <p className="text-gray-600">{presence.countries}</p>
+                    <div className="max-w-4xl mx-auto">
+                        <div className="bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-2xl p-8 md:p-12 text-white shadow-panacea-lg">
+                            <div className={`flex items-start gap-6 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <Building2 className="w-8 h-8 text-white" />
                                 </div>
-                            ))}
+                                <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-6">{headOffice.name}</h3>
+                                    <div className="space-y-3 mb-6">
+                                        {headOffice.address.map((line, idx) => (
+                                            <p key={idx} className="text-white/90 leading-relaxed">{line}</p>
+                                        ))}
+                                    </div>
+                                    <div className="space-y-3 pt-6 border-t border-white/20">
+                                        <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                            <Phone className="w-5 h-5 flex-shrink-0" />
+                                            <div>
+                                                <p className="font-semibold">{headOffice.contact}</p>
+                                                <a href={`tel:${headOffice.phone.replace(/-/g, "")}`} className="hover:underline">
+                                                    {headOffice.phone}
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                            <Mail className="w-5 h-5 flex-shrink-0" />
+                                            <a href={`mailto:${headOffice.email}`} className="break-all hover:underline">
+                                                {headOffice.email}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Office Cards */}
+                {/* Patient Assistance Centres Section */}
                 <div className="mb-12">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            {t("ourOffices") || "Our Offices"}
+                        <h2 className="text-3xl md:text-4xl font-bold text-panacea-primary mb-4">
+                            {locale === "ar" ? "مراكز مساعدة المرضى" : locale === "fr" ? "Centres d'Assistance aux Patients" : "Panacea Patient Assistance Centres"}
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            {t("ourOfficesDesc") || "Visit us at our offices or reach out for assistance"}
+                            {locale === "ar" ? "مراكزنا في جميع أنحاء العالم" : locale === "fr" ? "Nos centres à travers le monde" : "Our assistance centres across the globe"}
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        {offices.map((office) => (
-                            <div key={office.id} className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
-                                <h3 className={`text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    {office.name}
-                                </h3>
-
-                                <div className={`space-y-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                    <div className="flex items-start gap-3">
-                                        <MapPin className={`w-6 h-6 text-panacea-primary flex-shrink-0 mt-1 ${isRTL ? "order-2" : ""}`} />
-                                        <p className="text-gray-700 leading-relaxed">{office.address}</p>
+                    <div className="space-y-8">
+                        {assistanceCentres.map((country, countryIdx) => (
+                            <div key={countryIdx} className="bg-white rounded-2xl shadow-panacea-lg border border-gray-100 overflow-hidden">
+                                {/* Country Header */}
+                                <div className="bg-gradient-to-r from-panacea-primary to-panacea-secondary p-6">
+                                    <div className={`flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                        <span className="text-4xl">{country.flag}</span>
+                                        <h3 className="text-2xl md:text-3xl font-bold text-white">
+                                            {country.country}
+                                        </h3>
                                     </div>
+                                </div>
 
-                                    <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-                                        <Phone className="w-6 h-6 text-panacea-primary flex-shrink-0" />
-                                        <a href={`tel:${office.phone}`} className="text-gray-700 hover:text-panacea-primary transition-colors">
-                                            {office.phone}
-                                        </a>
-                                    </div>
-
-                                    <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
-                                        <Mail className="w-6 h-6 text-panacea-primary flex-shrink-0" />
-                                        <a href={`mailto:${office.email}`} className="text-gray-700 hover:text-panacea-primary transition-colors break-all">
-                                            {office.email}
-                                        </a>
+                                {/* Offices Grid */}
+                                <div className="p-6 md:p-8">
+                                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                        {country.offices.map((office, officeIdx) => (
+                                            <div
+                                                key={officeIdx}
+                                                className="bg-panacea-light/30 rounded-xl p-6 border border-panacea-primary/10 hover:shadow-md transition-all"
+                                            >
+                                                <div className={`flex items-start gap-3 mb-4 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                                    <div className="w-12 h-12 bg-panacea-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <MapPin className="w-6 h-6 text-white" />
+                                                    </div>
+                                                    <h4 className="text-xl font-bold text-panacea-primary">
+                                                        {office.city}
+                                                    </h4>
+                                                </div>
+                                                <div className={`space-y-1 ${isRTL ? "text-right" : "text-left"}`}>
+                                                    {office.address.map((line, lineIdx) => (
+                                                        <p key={lineIdx} className="text-gray-700 text-sm leading-relaxed">
+                                                            {line}
+                                                        </p>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

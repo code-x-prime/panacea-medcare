@@ -38,11 +38,9 @@
   "destinations": {
     "title": "Top Destinations",
     "india": "India",
+    "nepal": "Nepal",
     "turkey": "Turkey",
-    "thailand": "Thailand",
-    "uae": "UAE",
-    "germany": "Germany",
-    "egypt": "Egypt"
+    "thailand": "Thailand"
   },
   "legal": {
     "title": "Legal",

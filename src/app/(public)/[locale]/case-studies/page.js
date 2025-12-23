@@ -55,7 +55,7 @@ export default function CaseStudiesPage({ params }) {
                                     <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-panacea-primary transition-colors line-clamp-2">
                                         {title}
                                     </h3>
-                                    
+
                                     <div className="space-y-2 mb-4">
                                         <div className="flex items-center gap-2 text-sm text-gray-600">
                                             <span className="font-semibold">{t("patient")}:</span>

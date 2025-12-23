@@ -10,10 +10,10 @@
   "selectCity": "اختر المدينة",
   "phoneNumber": "رقم الهاتف",
   "phonePlaceholder": "رقم هاتفك",
+  "whatsappNumber": "رقم واتساب",
+  "whatsappPlaceholder": "رقم واتساب (اختياري)",
   "medicalProblem": "المشكلة الطبية",
   "medicalProblemPlaceholder": "اوصف المشكلة الطبية الحالية ..",
-  "ageOrDob": "العمر أو تاريخ الميلاد",
-  "ageOrDobPlaceholder": "مثال: 30 سنة أو 29-05-1985",
   "submitButton": "احصل على عرض أسعار مجاني",
   "submitSuccess": "شكراً لك! سنتواصل معك قريباً.",
   "termsText": "بإرسال النموذج أوافق على",
@@ -81,9 +81,3 @@
     "vietnam": "فيتنام"
   }
 }
-
-
-
-
-
-

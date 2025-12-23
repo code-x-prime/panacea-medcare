@@ -4,7 +4,11 @@
       { "name": "Home", "slug": "/" },
       { "name": "About Us", "slug": "/about" },
       { "name": "Why India", "slug": "/why-india" },
-      { "name": "Hospitals", "slug": "/hospitals", "highlight": "JCI Accredited" },
+      {
+        "name": "Hospitals",
+        "slug": "/hospitals",
+        "highlight": "JCI Accredited"
+      },
       { "name": "Doctors", "slug": "/doctors" },
       { "name": "Treatments", "slug": "/treatments" },
       { "name": "International Patients", "slug": "/international-patients" },

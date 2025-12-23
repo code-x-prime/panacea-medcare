@@ -463,14 +463,14 @@ export default function Page({ params }) {
 
 ### Props
 
-| Prop         | Type   | Required | Default    | Description                                                                 |
-| ------------ | ------ | -------- | ---------- | --------------------------------------------------------------------------- |
-| `locale`     | string | Yes      | -          | Current locale (en/ar/fr)                                                   |
-| `namespace`  | string | Yes      | -          | Translation namespace to use (e.g., "about", "services")                     |
-| `title`      | string | No       | -          | Optional title override (uses translation if not provided)                 |
-| `subtitle`   | string | No       | -          | Optional subtitle override                                                  |
-| `variant`    | string | No       | `"gradient"` | Banner variant: `"gradient"` \| `"primary"` \| `"secondary"` \| `"light"` |
-| `size`       | string | No       | `"md"`     | Banner size: `"sm"` \| `"md"` \| `"lg"`                                     |
+| Prop        | Type   | Required | Default      | Description                                                               |
+| ----------- | ------ | -------- | ------------ | ------------------------------------------------------------------------- |
+| `locale`    | string | Yes      | -            | Current locale (en/ar/fr)                                                 |
+| `namespace` | string | Yes      | -            | Translation namespace to use (e.g., "about", "services")                  |
+| `title`     | string | No       | -            | Optional title override (uses translation if not provided)                |
+| `subtitle`  | string | No       | -            | Optional subtitle override                                                |
+| `variant`   | string | No       | `"gradient"` | Banner variant: `"gradient"` \| `"primary"` \| `"secondary"` \| `"light"` |
+| `size`      | string | No       | `"md"`       | Banner size: `"sm"` \| `"md"` \| `"lg"`                                   |
 
 ### Variants
 

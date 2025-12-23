@@ -4,7 +4,8 @@ import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState } from "react";
-import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
+import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay } from "react-icons/fa";
 import hospitalsData from "@/data/hospitals.json";
 
 export default function HospitalDetailPage({ params }) {
@@ -36,6 +37,14 @@ export default function HospitalDetailPage({ params }) {
         // Try local path first, fallback to placeholder
         return `https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=600&fit=crop&auto=format`;
     };
+
+    // Hospital videos (can be added to hospital data later)
+    const hospitalVideos = hospital.videos || [
+        { id: 1, thumbnail: getHospitalImage(slug), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Hospital Tour" },
+        { id: 2, thumbnail: getHospitalImage(slug), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Patient Testimonial" },
+    ];
+
+    const [selectedVideo, setSelectedVideo] = useState(null);
 
     // Render star rating
     const renderStars = (score) => {
@@ -75,14 +84,26 @@ export default function HospitalDetailPage({ params }) {
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            <TopBanner
-                locale={locale}
-                namespace="hospitals"
-                title={hospitalName}
-                subtitle={hospitalShortDesc}
-                variant="gradient"
-                size="md"
-            />
+            {/* Blurred Hospital Image Header */}
+            <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
+                <Image
+                    src={getHospitalImage(slug)}
+                    alt={hospitalName}
+                    fill
+                    className="object-cover blur-sm scale-110"
+                    priority
+                    unoptimized
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-panacea-primary/80 via-panacea-primary/60 to-panacea-primary/80"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <div className={`text-center text-white px-4 ${isRTL ? "text-right" : "text-left"}`}>
+                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{hospitalName}</h1>
+                        {hospitalShortDesc && (
+                            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">{hospitalShortDesc}</p>
+                        )}
+                    </div>
+                </div>
+            </div>
 
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
                 <div className="max-w-7xl mx-auto">
@@ -333,6 +354,43 @@ export default function HospitalDetailPage({ params }) {
                                 </div>
                             )}
 
+                            {/* Hospital Videos */}
+                            {hospitalVideos && hospitalVideos.length > 0 && (
+                                <div>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("videos") || "Hospital Videos"}
+                                    </h2>
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        {hospitalVideos.map((video) => (
+                                            <div
+                                                key={video.id}
+                                                className="relative group cursor-pointer bg-gray-900 rounded-xl overflow-hidden"
+                                                onClick={() => setSelectedVideo(video)}
+                                            >
+                                                <div className="relative aspect-video">
+                                                    <Image
+                                                        src={video.thumbnail}
+                                                        alt={video.title}
+                                                        fill
+                                                        className="object-cover"
+                                                        loading="lazy"
+                                                        unoptimized
+                                                    />
+                                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                                                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                            <FaPlay className="w-6 h-6 text-panacea-primary ml-1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                                                    <h3 className="text-white font-semibold">{video.title}</h3>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* Infrastructure */}
                             {hospital.infrastructure && (
                                 <div>
@@ -428,6 +486,29 @@ export default function HospitalDetailPage({ params }) {
                     </div>
                 </div>
             </section>
+
+            {/* Video Modal */}
+            {selectedVideo && (
+                <div
+                    className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                    onClick={() => setSelectedVideo(null)}
+                >
+                    <div className="relative w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden">
+                        <button
+                            onClick={() => setSelectedVideo(null)}
+                            className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white text-xl font-bold transition-colors"
+                        >
+                            ×
+                        </button>
+                        <iframe
+                            src={selectedVideo.videoUrl}
+                            className="w-full h-full"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }

@@ -10,10 +10,10 @@
   "selectCity": "Select City",
   "phoneNumber": "Phone Number",
   "phonePlaceholder": "Your Phone number",
+  "whatsappNumber": "WhatsApp Number",
+  "whatsappPlaceholder": "Your WhatsApp number (optional)",
   "medicalProblem": "Medical Problem",
   "medicalProblemPlaceholder": "Describe The Current Medical Problem ..",
-  "ageOrDob": "Age or Date of Birth",
-  "ageOrDobPlaceholder": "Example: 30 Yrs or 29-05-1985",
   "submitButton": "Get FREE Quote",
   "submitSuccess": "Thank you! We'll contact you soon.",
   "termsText": "By submitting the form I agree to the",
@@ -81,9 +81,3 @@
     "vietnam": "Vietnam"
   }
 }
-
-
-
-
-
-

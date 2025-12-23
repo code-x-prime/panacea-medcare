@@ -11,50 +11,41 @@ export default function TopMedicalDestinations({ locale }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedCountry, setSelectedCountry] = useState("");
 
+    // Countries: India, Nepal, Turkey, Thailand (alphabetically sorted)
     const countries = [
         {
             id: "india",
             flag: "🇮🇳",
+            code: "IN",
             name: t("india"),
             image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&h=300&fit=crop",
             color: "from-orange-500 to-green-600"
         },
         {
-            id: "turkey",
-            flag: "🇹🇷",
-            name: t("turkey"),
-            image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=400&h=300&fit=crop",
-            color: "from-red-500 to-red-600"
+            id: "nepal",
+            flag: "🇳🇵",
+            code: "NP",
+            name: t("nepal") || "Nepal",
+            image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop",
+            color: "from-red-500 to-blue-600"
         },
         {
             id: "thailand",
             flag: "🇹🇭",
+            code: "TH",
             name: t("thailand"),
             image: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=300&fit=crop",
             color: "from-blue-500 to-red-500"
         },
         {
-            id: "uae",
-            flag: "🇦🇪",
-            name: t("uae"),
-            image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop",
-            color: "from-green-600 to-red-600"
+            id: "turkey",
+            flag: "🇹🇷",
+            code: "TR",
+            name: t("turkey"),
+            image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=400&h=300&fit=crop",
+            color: "from-red-500 to-red-600"
         },
-        {
-            id: "egypt",
-            flag: "🇪🇬",
-            name: t("egypt"),
-            image: "https://images.unsplash.com/photo-1572252009286-268acec5ca0a?w=400&h=300&fit=crop",
-            color: "from-yellow-500 to-red-600"
-        },
-        {
-            id: "germany",
-            flag: "🇩🇪",
-            name: t("germany"),
-            image: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&h=300&fit=crop",
-            color: "from-gray-800 to-red-600"
-        },
-    ];
+    ].sort((a, b) => a.name.localeCompare(b.name));
 
     const handleCountryClick = (country) => {
         setSelectedCountry(country.name);
@@ -94,8 +85,8 @@ export default function TopMedicalDestinations({ locale }) {
                         </p>
                     </div>
 
-                    {/* Country Cards Grid - 2 cols mobile, 3 cols tablet, 6 cols desktop */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto">
+                    {/* Country Cards Grid - 2 cols mobile, 2 cols tablet, 4 cols desktop */}
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                         {countries.map((country) => (
                             <button
                                 key={country.id}
@@ -114,9 +105,10 @@ export default function TopMedicalDestinations({ locale }) {
                                     {/* Gradient Overlay */}
                                     <div className={`absolute inset-0 bg-gradient-to-br ${country.color} opacity-50 group-hover:opacity-40 transition-opacity duration-300`}></div>
 
-                                    {/* Flag Badge */}
-                                    <div className="absolute top-2 left-2 bg-white/95 backdrop-blur-sm rounded-full w-12 h-12 flex items-center justify-center text-3xl shadow-md">
-                                        {country.flag}
+                                    {/* Country Code Badge */}
+                                    <div className={`absolute top-2 ${isRTL ? "right-2" : "left-2"} bg-panacea-cream/95 backdrop-blur-sm rounded-full w-12 h-12 flex flex-col items-center justify-center shadow-md border-2 border-white/50`}>
+                                        <span className="text-xs font-bold text-panacea-dark">{country.code}</span>
+                                        <span className="text-lg leading-none">{country.flag}</span>
                                     </div>
                                 </div>
 

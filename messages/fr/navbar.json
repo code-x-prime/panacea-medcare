@@ -4,7 +4,11 @@
       { "name": "Accueil", "slug": "/" },
       { "name": "À propos de nous", "slug": "/about" },
       { "name": "Pourquoi l'Inde", "slug": "/why-india" },
-      { "name": "Hôpitaux", "slug": "/hospitals", "highlight": "Accrédité JCI" },
+      {
+        "name": "Hôpitaux",
+        "slug": "/hospitals",
+        "highlight": "Accrédité JCI"
+      },
       { "name": "Médecins", "slug": "/doctors" },
       { "name": "Traitements", "slug": "/treatments" },
       { "name": "Patients internationaux", "slug": "/international-patients" },

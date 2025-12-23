@@ -14,7 +14,7 @@ export default function NetworkOfTopHospitals({ locale }) {
             { name: "Asian Hospital", slug: "asian-hospital-delhi" },
             { name: "Marengo Asia Hospital, Gurgaon", slug: "marengo-asia-hospital-gurgaon" },
             { name: "Indraprastha Apollo Hospital", slug: "indraprastha-apollo-hospital-new-delhi" },
-            { name: "All Apollo Hospitals (All Cities)", slug: "apollo-hospitals-all" },
+
             { name: "Fortis Hospital Gurgaon", slug: "fortis-hospital-gurgaon" },
             { name: "Max Hospital Saket", slug: "max-hospital-saket" },
             { name: "BLK Max Hospital Pusa Road", slug: "blk-max-hospital-pusa-road" },
@@ -36,16 +36,13 @@ export default function NetworkOfTopHospitals({ locale }) {
         ],
     };
 
-    // International hospitals
+    // International hospitals - Only India, Nepal, Turkey, Thailand
     const internationalHospitals = {
         "turkey": [
             { name: "Memorial Hospital", slug: "memorial-hospital-turkey" },
         ],
         "thailand": [
             { name: "Bumrungrad Hospital", slug: "bumrungrad-hospital-thailand" },
-        ],
-        "israel": [
-            { name: "Sheeba Hospital", slug: "sheeba-hospital-israel" },
         ],
         "nepal": [
             { name: "Nepal Mediciti", slug: "nepal-mediciti" },
@@ -57,7 +54,7 @@ export default function NetworkOfTopHospitals({ locale }) {
         // Image mapping for hospitals with actual images
         const imageMap = {
             // Delhi NCR
-            "asian-hospital-delhi": "/hospitals/asian-hospital-delhi.jpg",
+            "asian-hospital-delhi": "/hospitals/asian-hospital.jpg",
             "marengo-asia-hospital-gurgaon": "/hospitals/marengo-asia-hospital-gurgaon.jpg",
             "indraprastha-apollo-hospital-new-delhi": "/hospitals/indraprastha-apollo-hospital-new-delhi.jpg",
             "apollo-hospitals-all": "/hospitals/apollo-hospitals-all.jpg",
@@ -79,7 +76,6 @@ export default function NetworkOfTopHospitals({ locale }) {
             // International
             "memorial-hospital-turkey": "/hospitals/memorial-hospital-turkey.jpg",
             "bumrungrad-hospital-thailand": "/hospitals/bumrungrad-hospital-thailand.jpg",
-            "sheeba-hospital-israel": "/hospitals/sheeba-hospital-israel.jpg",
             "nepal-mediciti": "/hospitals/nepal-mediciti.jpg",
         };
 
@@ -123,8 +119,8 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("delhiNcr") || "Delhi NCR"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                                {indiaHospitals["delhi-ncr"].map((hospital, idx) => (
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                                {[...indiaHospitals["delhi-ncr"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
                                         href={`/${locale}/hospitals/${hospital.slug}`}
@@ -154,8 +150,8 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("chennai") || "Chennai"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                                {indiaHospitals["chennai"].map((hospital, idx) => (
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                                {[...indiaHospitals["chennai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
                                         href={`/${locale}/hospitals/${hospital.slug}`}
@@ -185,8 +181,8 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("mumbai") || "Mumbai"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                                {indiaHospitals["mumbai"].map((hospital, idx) => (
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                                {[...indiaHospitals["mumbai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
                                         href={`/${locale}/hospitals/${hospital.slug}`}
@@ -216,8 +212,8 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("hyderabad") || "Hyderabad"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-                                {indiaHospitals["hyderabad"].map((hospital, idx) => (
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                                {[...indiaHospitals["hyderabad"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
                                         href={`/${locale}/hospitals/${hospital.slug}`}
@@ -252,143 +248,48 @@ export default function NetworkOfTopHospitals({ locale }) {
                             </h3>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {/* Turkey */}
-                            <div>
-                                <h4 className={`text-xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    🇹🇷 {t("turkey") || "Turkey"}
-                                </h4>
-                                <div className="space-y-4">
-                                    {internationalHospitals["turkey"].map((hospital, idx) => (
-                                        <Link
-                                            key={idx}
-                                            href={`/${locale}/hospitals/${hospital.slug}`}
-                                            className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-                                        >
-                                            <div className="relative h-32 overflow-hidden bg-gray-100">
-                                                <Image
-                                                    src={getHospitalImage(hospital.slug)}
-                                                    alt={hospital.name}
-                                                    fill
-                                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    onError={(e) => {
-                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
-                                                    }}
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            </div>
-                                            <div className={`p-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                                <h5 className="text-sm md:text-base font-bold text-gray-900 group-hover:text-panacea-primary transition-colors">
-                                                    {hospital.name}
-                                                </h5>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
+                        {/* Flatten and sort all international hospitals alphabetically */}
+                        {(() => {
+                            const allInternationalHospitals = [
+                                ...internationalHospitals["nepal"].map(h => ({ ...h, country: "nepal", countryName: t("nepal") || "Nepal", flag: "🇳🇵" })),
+                                ...internationalHospitals["thailand"].map(h => ({ ...h, country: "thailand", countryName: t("thailand") || "Thailand", flag: "🇹🇭" })),
+                                ...internationalHospitals["turkey"].map(h => ({ ...h, country: "turkey", countryName: t("turkey") || "Turkey", flag: "🇹🇷" })),
+                            ].sort((a, b) => a.name.localeCompare(b.name));
 
-                            {/* Thailand */}
-                            <div>
-                                <h4 className={`text-xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    🇹🇭 {t("thailand") || "Thailand"}
-                                </h4>
-                                <div className="space-y-4">
-                                    {internationalHospitals["thailand"].map((hospital, idx) => (
+                            return (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    {allInternationalHospitals.map((hospital, idx) => (
                                         <Link
                                             key={idx}
                                             href={`/${locale}/hospitals/${hospital.slug}`}
                                             className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                         >
-                                            <div className="relative h-32 overflow-hidden bg-gray-100">
+                                            <div className="relative h-40 overflow-hidden bg-gray-100">
                                                 <Image
                                                     src={getHospitalImage(hospital.slug)}
                                                     alt={hospital.name}
                                                     fill
                                                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                                    loading="lazy"
                                                     onError={(e) => {
                                                         e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
                                                     }}
                                                 />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                                <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-semibold">
+                                                    {hospital.flag} {hospital.countryName}
+                                                </div>
                                             </div>
                                             <div className={`p-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                                <h5 className="text-sm md:text-base font-bold text-gray-900 group-hover:text-panacea-primary transition-colors">
+                                                <h5 className="text-sm md:text-base font-bold text-gray-900 group-hover:text-panacea-primary transition-colors line-clamp-2">
                                                     {hospital.name}
                                                 </h5>
                                             </div>
                                         </Link>
                                     ))}
                                 </div>
-                            </div>
-
-                            {/* Israel */}
-                            <div>
-                                <h4 className={`text-xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    🇮🇱 {t("israel") || "Israel"}
-                                </h4>
-                                <div className="space-y-4">
-                                    {internationalHospitals["israel"].map((hospital, idx) => (
-                                        <Link
-                                            key={idx}
-                                            href={`/${locale}/hospitals/${hospital.slug}`}
-                                            className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-                                        >
-                                            <div className="relative h-32 overflow-hidden bg-gray-100">
-                                                <Image
-                                                    src={getHospitalImage(hospital.slug)}
-                                                    alt={hospital.name}
-                                                    fill
-                                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    onError={(e) => {
-                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
-                                                    }}
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            </div>
-                                            <div className={`p-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                                <h5 className="text-sm md:text-base font-bold text-gray-900 group-hover:text-panacea-primary transition-colors">
-                                                    {hospital.name}
-                                                </h5>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Nepal */}
-                            <div>
-                                <h4 className={`text-xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    🇳🇵 {t("nepal") || "Nepal"}
-                                </h4>
-                                <div className="space-y-4">
-                                    {internationalHospitals["nepal"].map((hospital, idx) => (
-                                        <Link
-                                            key={idx}
-                                            href={`/${locale}/hospitals/${hospital.slug}`}
-                                            className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-                                        >
-                                            <div className="relative h-32 overflow-hidden bg-gray-100">
-                                                <Image
-                                                    src={getHospitalImage(hospital.slug)}
-                                                    alt={hospital.name}
-                                                    fill
-                                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    onError={(e) => {
-                                                        e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
-                                                    }}
-                                                />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            </div>
-                                            <div className={`p-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                                <h5 className="text-sm md:text-base font-bold text-gray-900 group-hover:text-panacea-primary transition-colors">
-                                                    {hospital.name}
-                                                </h5>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                            );
+                        })()}
                     </div>
                 </div>
 

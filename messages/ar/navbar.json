@@ -4,11 +4,18 @@
       { "name": "الرئيسية", "slug": "/" },
       { "name": "من نحن", "slug": "/about" },
       { "name": "لماذا الهند", "slug": "/why-india" },
-      { "name": "المستشفيات", "slug": "/hospitals", "highlight": "معتمد من JCI" },
+      {
+        "name": "المستشفيات",
+        "slug": "/hospitals",
+        "highlight": "معتمد من JCI"
+      },
       { "name": "الأطباء", "slug": "/doctors" },
       { "name": "العلاجات", "slug": "/treatments" },
       { "name": "المرضى الدوليون", "slug": "/international-patients" },
-      { "name": "حلول الرعاية الصحية بالذكاء الاصطناعي", "slug": "/services/ai-solutions" },
+      {
+        "name": "حلول الرعاية الصحية بالذكاء الاصطناعي",
+        "slug": "/services/ai-solutions"
+      },
       { "name": "المعدات الطبية", "slug": "/equipment" },
       { "name": "كن شريكاً معنا", "slug": "/partner-with-us" },
       { "name": "السياحة والترفيه", "slug": "/tourism-leisure" }

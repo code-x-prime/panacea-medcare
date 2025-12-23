@@ -32,8 +32,9 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
     city: "",
     phoneCode: "+91",
     phoneNumber: "",
+    whatsappCode: "+91",
+    whatsappNumber: "",
     medicalProblem: "",
-    ageOrDob: "",
   });
 
   const countries = [
@@ -114,8 +115,9 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
       city: "",
       phoneCode: "+91",
       phoneNumber: "",
+      whatsappCode: "+91",
+      whatsappNumber: "",
       medicalProblem: "",
-      ageOrDob: "",
     });
   };
 
@@ -140,7 +142,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             value={formData.patientName}
             onChange={(e) => setFormData({ ...formData, patientName: e.target.value })}
             required
-            className={`w-full bg-white ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`w-full bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
 
@@ -154,7 +156,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             onValueChange={(value) => setFormData({ ...formData, country: value })}
             required
           >
-            <SelectTrigger className={`w-full bg-white ${isRTL ? 'text-right' : 'text-left'}`}>
+            <SelectTrigger className={`w-full bg-panacea-light/30 border-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}>
               <SelectValue placeholder={t("selectCountry")} />
             </SelectTrigger>
             <SelectContent className="bg-white max-h-[150px]">
@@ -180,7 +182,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             value={formData.city}
             onChange={(e) => setFormData({ ...formData, city: e.target.value })}
             required
-            className={`w-full bg-white ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`w-full bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
 
@@ -194,7 +196,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
               value={formData.phoneCode}
               onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
             >
-              <SelectTrigger className="w-24 bg-white">
+              <SelectTrigger className="w-24 bg-panacea-light/30 border-panacea-secondary/20">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-white max-h-[200px]">
@@ -211,9 +213,40 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
               value={formData.phoneNumber}
               onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
               required
-              className={`flex-1 bg-white ${isRTL ? 'text-right' : 'text-left'}`}
+              className={`flex-1 bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
             />
           </div>
+        </div>
+      </div>
+
+      {/* WhatsApp Number */}
+      <div>
+        <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+          {t("whatsappNumber")}
+        </label>
+        <div className={`flex gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <Select
+            value={formData.whatsappCode}
+            onValueChange={(value) => setFormData({ ...formData, whatsappCode: value })}
+          >
+            <SelectTrigger className="w-24 bg-panacea-light/30 border-panacea-secondary/20">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent className="bg-white max-h-[200px]">
+              {phoneCodes.map((code, index) => (
+                <SelectItem key={`whatsapp-${index}`} value={code.value}>
+                  {code.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Input
+            type="tel"
+            placeholder={t("whatsappPlaceholder")}
+            value={formData.whatsappNumber}
+            onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+            className={`flex-1 bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
+          />
         </div>
       </div>
 
@@ -228,29 +261,14 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           onChange={(e) => setFormData({ ...formData, medicalProblem: e.target.value })}
           required
           rows={embedded ? 3 : 4}
-          className={`flex min-h-[60px] w-full rounded-md border border-input bg-white px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 ${isRTL ? 'text-right' : 'text-left'}`}
-        />
-      </div>
-
-      {/* Age or DOB */}
-      <div>
-        <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
-          {t("ageOrDob")}
-        </label>
-        <Input
-          type="text"
-          placeholder={t("ageOrDobPlaceholder")}
-          value={formData.ageOrDob}
-          onChange={(e) => setFormData({ ...formData, ageOrDob: e.target.value })}
-          required
-          className={`w-full bg-white ${isRTL ? 'text-right' : 'text-left'}`}
+          className={`flex min-h-[60px] w-full rounded-md border border-panacea-secondary/20 bg-panacea-light/30 px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-panacea-secondary/30 focus-visible:border-panacea-secondary disabled:cursor-not-allowed disabled:opacity-50 ${isRTL ? 'text-right' : 'text-left'}`}
         />
       </div>
 
       {/* Submit Button */}
       <Button
         type="submit"
-        className={`w-full bg-panacea-accent hover:bg-panacea-accent/90 text-white ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold`}
+        className={`w-full bg-panacea-secondary hover:bg-panacea-secondary/90 text-white shadow-md hover:shadow-lg transition-all ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold`}
       >
         {t("submitButton")}
       </Button>
@@ -273,9 +291,9 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
   // Embedded form (no dialog)
   if (embedded) {
     return (
-      <div dir={isRTL ? "rtl" : "ltr"}>
+      <div dir={isRTL ? "rtl" : "ltr"} className="bg-gradient-to-br from-panacea-cream/30 to-panacea-light/30 p-6 rounded-xl border border-panacea-secondary/10">
         <div className="mb-4">
-          <h3 className={`text-xl font-bold text-gray-800 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <h3 className={`text-xl font-bold text-panacea-primary ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("title")}
           </h3>
           <p className={`text-sm text-gray-600 mt-1 ${isRTL ? 'text-right' : 'text-left'}`}>{t("description")}</p>
@@ -294,14 +312,14 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
         {trigger || defaultTrigger}
       </DialogTrigger>
       <DialogContent
-        className={`sm:mix-w-[500px] max-h-[95vh] overflow-y-auto ${isRTL ? "rtl" : "ltr"}`}
+        className={`sm:mix-w-[500px] max-h-[95vh] overflow-y-auto bg-gradient-to-br from-panacea-cream/50 to-panacea-light/50 ${isRTL ? "rtl" : "ltr"}`}
         dir={isRTL ? "rtl" : "ltr"}
       >
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold text-gray-800">
+          <DialogTitle className="text-xl font-bold text-panacea-primary">
             {t("title")}
           </DialogTitle>
-          <DialogDescription className="text-sm">{t("description")}</DialogDescription>
+          <DialogDescription className="text-sm text-gray-600">{t("description")}</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-3 mt-2">
           <FormFields />

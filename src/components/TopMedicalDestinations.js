@@ -86,7 +86,7 @@ export default function TopMedicalDestinations({ locale }) {
                     </div>
 
                     {/* Country Cards Grid - 2 cols mobile, 2 cols tablet, 4 cols desktop */}
-                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14 max-w-7xl mx-auto">
                         {countries.map((country) => (
                             <button
                                 key={country.id}

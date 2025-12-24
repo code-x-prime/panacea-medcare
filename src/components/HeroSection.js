@@ -2,138 +2,159 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function HeroSection({ locale }) {
   const t = useTranslations("home");
   const isRTL = locale === "ar";
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Tagline - exact as client specified
-  const tagline = {
+  // Headline - MANDATORY as per client
+  const headline = {
     en: "Global Care – Indian Compassion – Redefining Medical Tourism",
     ar: "رعاية عالمية – رحمة هندية – إعادة تعريف السياحة العلاجية",
     fr: "Soins Mondiaux – Compassion Indienne – Redéfinir le Tourisme Médical"
   };
 
+  // Supporting text - MANDATORY as per client
+  const supportingText = {
+    en: "World-class treatments, expert doctors, and personalized care — guiding you at every step of your healing journey.",
+    ar: "علاجات عالمية المستوى، أطباء خبراء، ورعاية مخصصة — نرشدك في كل خطوة من رحلة شفائك.",
+    fr: "Traitements de classe mondiale, médecins experts et soins personnalisés — vous guider à chaque étape de votre parcours de guérison."
+  };
+
+  // WhatsApp number from Footer
+  const whatsappNumber = "919958800961";
+  const whatsappMessage = encodeURIComponent(
+    locale === "ar"
+      ? "مرحبا، أحتاج إلى مساعدة طبية من باناسيا ميدكير"
+      : locale === "fr"
+        ? "Bonjour, j'ai besoin d'une assistance médicale de Panacea Medcare"
+        : "Hello, I need medical assistance from Panacea Medcare"
+  );
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <section
-      className="relative min-h-[85vh] lg:min-h-[90vh] overflow-hidden"
+      className="relative min-h-[90vh] md:min-h-[100vh] overflow-hidden"
       dir={isRTL ? "rtl" : "ltr"}
       role="banner"
       aria-label="Hero Section"
     >
-      {/* Background Image - Medical/Surgery Scene like Sheeba */}
+      {/* Full-width Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/bg-hero.jpg"
-          alt="World-class medical care in India"
+          src="/hero-banner.png"
+          alt="World-class medical care with compassionate doctors and happy patients"
           fill
-          className="object-cover object-center"
+          className="object-cover object-center hidden md:block"
           priority
-          quality={100}
-        />
-        {/* Blue Teal Overlay - Like Sheeba */}
-        <div className="absolute inset-0 bg-panacea-primary/60" />
-      </div>
-
-      {/* Decorative Dot Pattern - Like Sheeba */}
-      <div className="absolute inset-0 z-[1] opacity-20">
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-64"
+          quality={90}
+          sizes="100vw"
           style={{
-            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.4) 2px, transparent 2px)',
-            backgroundSize: '20px 20px'
+            objectPosition: isRTL ? "right center" : "left center",
+          }}
+        />
+        <Image
+          src="/bg-sm.png"
+          alt="World-class medical care with compassionate doctors and happy patients"
+          fill
+          className="object-cover object-center block md:hidden"
+          priority
+          quality={90}
+          sizes="100vw"
+          style={{
+            objectPosition: isRTL ? "right center" : "left center",
+          }}
+        />
+
+        {/* Soft Overlay Gradient - Blue to Cyan */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(
+              rgba(0, 102, 204, 0.65),
+              rgba(0, 194, 209, 0.65)
+            )`,
           }}
         />
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[85vh] lg:min-h-[90vh] flex items-center">
-        <div className={`w-full ${isRTL ? 'text-right' : 'text-left'}`}>
-
-          {/* World's Best Hospitals Badge - Like Sheeba */}
-          <div className={`mb-8 ${isRTL ? 'flex justify-end' : ''}`}>
-            <div className="inline-block bg-white rounded-lg shadow-xl overflow-hidden">
-              <div className="flex">
-                {/* Red Section */}
-                <div className="bg-red-600 text-white px-3 py-2 flex flex-col justify-center">
-                  <span className="text-[10px] font-bold leading-tight">WORLD&apos;S</span>
-                  <span className="text-[10px] font-bold leading-tight">BEST</span>
-                  <span className="text-[10px] font-bold leading-tight">HOSPITALS</span>
-                </div>
-                {/* White Section */}
-                <div className="px-3 py-2 flex flex-col justify-center border-l">
-                  <span className="text-2xl font-bold text-gray-900 leading-none">2025</span>
-                  <span className="text-[10px] text-red-600 font-semibold">Newsweek</span>
-                  <span className="text-[8px] text-gray-500">statista</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Main Heading - Like Sheeba Style */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[85vh] md:min-h-[90vh] flex items-center">
+        <div
+          className={`w-full max-w-4xl ${isRTL ? "text-right ml-auto" : "text-left"
+            } ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-700`}
+        >
+          {/* Headline (H1) - Bold & Prominent */}
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white leading-[1.1] mb-6"
-            style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
           >
-            <span className="block">World-Class Medicine</span>
-            <span className="block italic">with a Personal Touch</span>
+            {headline[locale] || headline.en}
           </h1>
 
-          {/* Tagline */}
+          {/* Supporting Text (1-2 lines) */}
           <p
-            className="text-lg sm:text-xl md:text-2xl text-white/90 font-medium mb-10 max-w-2xl"
-            style={{ fontFamily: 'var(--font-raleway), Raleway, sans-serif' }}
+            className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-10 max-w-3xl leading-relaxed"
+            style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
           >
-            {tagline[locale] || tagline.en}
+            {supportingText[locale] || supportingText.en}
           </p>
 
-          {/* CTA Buttons - Like Sheeba Style */}
-          <div className={`flex flex-wrap gap-4 ${isRTL ? 'justify-end' : 'justify-start'}`}>
-            {/* About Us - Teal/Green Button */}
+          {/* CTA Buttons */}
+          <div
+            className={`flex flex-col sm:flex-row gap-4 ${isRTL ? "justify-end" : "justify-start"
+              }`}
+          >
+            {/* Primary CTA - Contact Us / Free Teleconsultation */}
             <Link
-              href={`/${locale}/about`}
-              className={`group inline-flex items-center gap-3 px-8 py-4 bg-panacea-secondary hover:bg-panacea-primary text-white rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl ${isRTL ? 'flex-row-reverse' : ''}`}
+              href={`/${locale}/services/teleconsultation`}
+              className={`group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-panacea-primary rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
             >
-              <span>{locale === "ar" ? "من نحن" : locale === "fr" ? "À propos" : "About us"}</span>
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
-                <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
-              </div>
-            </Link>
-
-            {/* Patient Stories - Pink/Accent Outline Button */}
-            <Link
-              href={`/${locale}/testimonials`}
-              className={`group inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-panacea-accent text-white hover:bg-panacea-accent rounded-full font-semibold text-lg transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
-            >
-              <span>{locale === "ar" ? "قصص المرضى" : locale === "fr" ? "Témoignages" : "Patient Stories"}</span>
-              <div className="w-8 h-8 rounded-full border-2 border-current flex items-center justify-center group-hover:border-white transition-colors">
-                <ArrowRight className={`w-4 h-4 ${isRTL ? 'rotate-180' : ''}`} />
-              </div>
-            </Link>
-          </div>
-
-          {/* Optional: Free Consultation CTA - Orange (for conversion) */}
-          <div className={`mt-8 ${isRTL ? 'text-right' : 'text-left'}`}>
-            <button
-              onClick={() => {
-                const chatbotButton = document.querySelector('[data-chatbot-toggle]');
-                if (chatbotButton) chatbotButton.click();
-              }}
-              className={`inline-flex items-center gap-2 text-white/80 hover:text-white font-medium transition-colors ${isRTL ? 'flex-row-reverse' : ''}`}
-            >
-              <Play className="w-5 h-5 fill-panacea-accent text-panacea-accent" />
-              <span className="underline underline-offset-4">
-                {locale === "ar" ? "احصل على استشارة مجانية" : locale === "fr" ? "Obtenez une consultation gratuite" : "Get Free Consultation"}
+              <span>
+                {locale === "ar"
+                  ? "احصل على استشارة مجانية"
+                  : locale === "fr"
+                    ? "Obtenez une téléconsultation gratuite"
+                    : "Get a Free Teleconsultation"}
               </span>
-            </button>
-          </div>
+              <ArrowRight
+                className={`w-5 h-5 transition-transform ${isRTL
+                  ? "rotate-180 group-hover:-translate-x-1"
+                  : "group-hover:translate-x-1"
+                  }`}
+              />
+            </Link>
 
+            {/* Secondary CTA - WhatsApp */}
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group inline-flex items-center justify-center gap-3 px-8 py-4 bg-panacea-accent text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
+              aria-label="Chat on WhatsApp"
+            >
+              <MessageCircle className="w-5 h-5" />
+              <span>
+                {locale === "ar"
+                  ? "تواصل عبر واتساب"
+                  : locale === "fr"
+                    ? "Discuter sur WhatsApp"
+                    : "Chat on WhatsApp"}
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Bottom Gradient Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white/10 to-transparent z-[1]" />
+      {/* Bottom Fade to White */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 }

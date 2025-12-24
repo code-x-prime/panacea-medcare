@@ -8,84 +8,138 @@ This guide documents the multi-language template system for Panacea MedCare, fea
 
 ## 🎨 Color Scheme (Brand Design)
 
-### Primary Colors
+### 🔵 Primary Brand Colors (MAIN)
 
-| Color Name                 | Hex Code  | Usage                                       |
-| -------------------------- | --------- | ------------------------------------------- |
-| **Primary Teal (Dark)**    | `#0B4D5E` | Hero backgrounds, primary buttons, headings |
-| **Secondary Teal (Light)** | `#14919B` | Gradient end, hover states, icons           |
-| **Accent Orange**          | `#F37021` | CTA buttons, highlights, important links    |
-| **Navy Dark**              | `#1A365D` | Body text, headings                         |
+These colors will be the base everywhere (buttons, links, CTAs):
 
-### Background Colors
+| Color Name       | Hex Code  | Usage                                                                                      |
+| ---------------- | --------- | ------------------------------------------------------------------------------------------ |
+| **Panacea Blue** | `#0066CC` | Main primary color - Trust, medical professionalism. Primary buttons, links, headings, CTA |
+| **Healing Cyan** | `#00C2D1` | AI + tech feel. Icons, highlights, gradients, chatbot, AI sections                         |
 
-| Color Name      | Hex Code  | Usage                                    |
-| --------------- | --------- | ---------------------------------------- |
-| **White**       | `#FFFFFF` | Main content, cards                      |
-| **Light Teal**  | `#E6F4F5` | Card backgrounds, subtle sections        |
-| **Cream/Beige** | `#FFF8E7` | Testimonials section, alternate sections |
-| **Light Blue**  | `#F0F9FF` | Very light backgrounds                   |
+### 🟠 Secondary / Accent Colors
+
+| Color Name          | Hex Code  | Usage                                                             |
+| ------------------- | --------- | ----------------------------------------------------------------- |
+| **Vitality Orange** | `#FF6B35` | Action & warmth. Book Teleconsult, WhatsApp button, important CTA |
+| **Fresh Green**     | `#0BA35A` | Health & success. Success messages, confirmation states           |
+
+### ⚫ Text & Background Colors
+
+| Color Name        | Hex Code  | Usage                                             |
+| ----------------- | --------- | ------------------------------------------------- |
+| **Midnight Navy** | `#003459` | Headers, footer, dark sections, video lightbox    |
+| **Soft Gray**     | `#F5F7FA` | Page background, cards background (white se soft) |
+| **Slate Gray**    | `#6D7A8A` | Body text, secondary text                         |
+| **Warm Yellow**   | `#FFD166` | Small highlights, icons, testimonial accents      |
 
 ### Tailwind Config Colors
 
 ```javascript
 colors: {
   panacea: {
-    // Primary Teal Colors
-    primary: "#0B4D5E",      // Dark Teal - Main primary
-    secondary: "#14919B",    // Light Teal - Gradient end
+    // Primary Brand Colors (MAIN)
+    primary: "#0066CC",       // Panacea Blue - Main primary color
+    secondary: "#00C2D1",    // Healing Cyan - AI + tech feel
 
-    // Accent Orange (Buttons)
-    accent: "#F37021",       // Bright Orange - CTA buttons
+    // Secondary / Accent Colors
+    accent: "#FF6B35",       // Vitality Orange - Action & warmth
+    green: "#0BA35A",        // Fresh Green - Health & success
 
-    // Dark Navy (Text)
-    dark: "#1A365D",         // Navy - Headings
+    // Text & Background Colors
+    dark: "#003459",         // Midnight Navy - Headers, footer, dark sections
+    light: "#F5F7FA",        // Soft Gray - Page background, cards
+    gray: "#6D7A8A",         // Slate Gray - Body text, secondary text
+    yellow: "#FFD166",       // Warm Yellow - Highlights, icons, testimonial accents
 
-    // Light Backgrounds
-    light: "#E6F4F5",        // Light teal bg for cards
-    cream: "#FFF8E7",        // Cream/Beige for sections
-    lightBlue: "#F0F9FF",    // Very light blue
-
-    // Teal Scale
-    teal: {
-      50: "#E6F4F5",
-      100: "#CCE9EB",
-      200: "#99D3D7",
-      300: "#66BDC3",
-      400: "#33A7AF",
-      500: "#14919B",
-      600: "#0B4D5E",
-      700: "#083D4B",
-      800: "#062D38",
-      900: "#041D25",
+    // Blue Scale (Panacea Blue)
+    blue: {
+      DEFAULT: "#0066CC",
+      50: "#E6F2FF",
+      100: "#CCE5FF",
+      200: "#99CBFF",
+      300: "#66B1FF",
+      400: "#3397FF",
+      500: "#0066CC",
+      600: "#0052A3",
+      700: "#003D7A",
+      800: "#002952",
+      900: "#001429",
     },
 
-    // Orange Scale
+    // Cyan Scale (Healing Cyan)
+    cyan: {
+      DEFAULT: "#00C2D1",
+      50: "#E6F9FB",
+      100: "#CCF3F7",
+      200: "#99E7EF",
+      300: "#66DBE7",
+      400: "#33CFDF",
+      500: "#00C2D1",
+      600: "#009BA7",
+      700: "#00747D",
+      800: "#004D53",
+      900: "#002629",
+    },
+
+    // Orange Scale (Vitality Orange)
     orange: {
-      50: "#FEF3E9",
-      100: "#FDE7D3",
-      200: "#FBCFA7",
-      300: "#F9B77B",
-      400: "#F79F4F",
-      500: "#F37021",
-      600: "#D45E15",
-      700: "#A54910",
-      800: "#76340B",
-      900: "#471F07",
+      DEFAULT: "#FF6B35",
+      50: "#FFF4F0",
+      100: "#FFE9E1",
+      200: "#FFD3C3",
+      300: "#FFBDA5",
+      400: "#FFA787",
+      500: "#FF6B35",
+      600: "#CC562A",
+      700: "#994020",
+      800: "#662B15",
+      900: "#33150B",
     },
 
-    // Navy Scale
+    // Green Scale (Fresh Green)
+    green: {
+      DEFAULT: "#0BA35A",
+      50: "#E6F7F0",
+      100: "#CCEFE1",
+      200: "#99DFC3",
+      300: "#66CFA5",
+      400: "#33BF87",
+      500: "#0BA35A",
+      600: "#088248",
+      700: "#066236",
+      800: "#044124",
+      900: "#022112",
+    },
+
+    // Navy Scale (Midnight Navy)
     navy: {
-      50: "#E8EDF3",
-      100: "#D1DBE7",
-      200: "#A3B7CF",
-      300: "#7593B7",
-      400: "#476F9F",
-      500: "#2C5282",
-      600: "#1A365D",
-      700: "#142B4A",
-      800: "#0F2037",
-      900: "#0A1524",
+      DEFAULT: "#003459",
+      50: "#E6EDF2",
+      100: "#CCDBE5",
+      200: "#99B7CB",
+      300: "#6693B1",
+      400: "#336F97",
+      500: "#003459",
+      600: "#002A47",
+      700: "#001F35",
+      800: "#001523",
+      900: "#000A12",
+    },
+
+    // Yellow Scale (Warm Yellow)
+    yellow: {
+      DEFAULT: "#FFD166",
+      50: "#FFFBF0",
+      100: "#FFF7E1",
+      200: "#FFEFC3",
+      300: "#FFE7A5",
+      400: "#FFDF87",
+      500: "#FFD166",
+      600: "#CCA752",
+      700: "#997D3D",
+      800: "#665429",
+      900: "#332A14",
     },
   }
 }
@@ -95,26 +149,77 @@ colors: {
 
 ```css
 :root {
-  --panacea-primary: #0b4d5e;
-  --panacea-secondary: #14919b;
-  --panacea-accent: #f37021;
-  --panacea-dark: #1a365d;
-  --panacea-light: #e6f4f5;
-  --panacea-cream: #fff8e7;
-  --panacea-light-blue: #f0f9ff;
+  /* Primary Brand Colors */
+  --panacea-primary: #0066cc; /* Panacea Blue */
+  --panacea-secondary: #00c2d1; /* Healing Cyan */
+
+  /* Secondary / Accent Colors */
+  --panacea-accent: #ff6b35; /* Vitality Orange */
+  --panacea-green: #0ba35a; /* Fresh Green */
+
+  /* Text & Background Colors */
+  --panacea-dark: #003459; /* Midnight Navy */
+  --panacea-light: #f5f7fa; /* Soft Gray */
+  --panacea-gray: #6d7a8a; /* Slate Gray */
+  --panacea-yellow: #ffd166; /* Warm Yellow */
 
   /* Gradients */
-  --panacea-gradient: linear-gradient(135deg, #0b4d5e 0%, #14919b 100%);
+  --panacea-gradient: linear-gradient(
+    135deg,
+    #00c2d1 0%,
+    #0066cc 100%
+  ); /* AI Healthcare Glow */
+  --panacea-gradient-ai: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+  --panacea-gradient-warmth: linear-gradient(
+    135deg,
+    #ff6b35 0%,
+    #ffd166 100%
+  ); /* Human Touch Warmth */
+  --panacea-gradient-futuristic: linear-gradient(
+    135deg,
+    #0ba35a 0%,
+    #00c2d1 100%
+  ); /* Med-Tech Futuristic */
+  --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #0066cc 100%);
 }
 ```
 
-### Gradients
+### 🌈 Gradients (IMPORTANT – client ko ye pasand hai)
+
+1️⃣ **AI Healthcare Glow**
+
+```css
+linear-gradient(135deg, #00C2D1 → #0066CC)
+```
+
+👉 Hero section, AI services, Tech sections
+
+2️⃣ **Human Touch Warmth**
+
+```css
+linear-gradient(135deg, #FF6B35 → #FFD166)
+```
+
+👉 Testimonials, Emotional CTAs, Patient stories
+
+3️⃣ **Med-Tech Futuristic**
+
+```css
+linear-gradient(135deg, #0BA35A → #00C2D1)
+```
+
+👉 Health + AI mix sections
+
+### Tailwind Gradient Classes
 
 ```javascript
 backgroundImage: {
-  'panacea-gradient': 'linear-gradient(135deg, #0B4D5E 0%, #14919B 100%)',
-  'panacea-gradient-dark': 'linear-gradient(135deg, #041D25 0%, #0B4D5E 100%)',
-  'panacea-gradient-light': 'linear-gradient(135deg, #14919B 0%, #66BDC3 100%)',
+  'panacea-gradient': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',        // AI Healthcare Glow
+  'panacea-gradient-ai': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
+  'panacea-gradient-warmth': 'linear-gradient(135deg, #FF6B35 0%, #FFD166 100%)', // Human Touch Warmth
+  'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #00C2D1 100%)', // Med-Tech Futuristic
+  'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #0066CC 100%)',
+  'panacea-gradient-light': 'linear-gradient(135deg, #E6F2FF 0%, #F5F7FA 100%)',
 }
 ```
 
@@ -122,9 +227,11 @@ backgroundImage: {
 
 ```javascript
 boxShadow: {
-  'panacea': '0 4px 14px 0 rgba(11, 77, 94, 0.15)',
-  'panacea-lg': '0 10px 40px 0 rgba(11, 77, 94, 0.2)',
-  'panacea-orange': '0 4px 14px 0 rgba(243, 112, 33, 0.3)',
+  'panacea': '0 4px 14px 0 rgba(0, 102, 204, 0.15)',
+  'panacea-lg': '0 10px 40px 0 rgba(0, 102, 204, 0.2)',
+  'panacea-orange': '0 4px 14px 0 rgba(255, 107, 53, 0.3)',
+  'panacea-cyan': '0 4px 14px 0 rgba(0, 194, 209, 0.2)',
+  'panacea-green': '0 4px 14px 0 rgba(11, 163, 90, 0.2)',
 }
 ```
 
@@ -132,30 +239,103 @@ boxShadow: {
 
 ## 🎯 Color Usage Examples
 
-### Hero Section
+### 🏠 Home Page
+
+**Hero Section:**
 
 ```jsx
-<div className="bg-panacea-gradient text-white">
+<div className="bg-panacea-gradient-ai text-white">
   <h1 className="text-4xl font-bold">Transforming Healthcare</h1>
-  <button className="bg-panacea-accent hover:bg-panacea-orange-600 text-white px-6 py-3 rounded-lg">
+  <button className="bg-panacea-primary hover:bg-panacea-blue-600 text-white px-6 py-3 rounded-lg">
     Get Started
+  </button>
+  <button className="bg-panacea-accent hover:bg-panacea-orange-600 text-white px-6 py-3 rounded-lg">
+    Book Teleconsult
   </button>
 </div>
 ```
 
-### Service Cards (White Background)
+**Background:** White / Soft Gray (`bg-white` or `bg-panacea-light`)
+
+### 🤖 AI / Services Pages
+
+**Background:** White / Soft Gray (`bg-white` or `bg-panacea-light`)
+
+**Icons & highlights:** Cyan (`text-panacea-secondary`, `bg-panacea-cyan-50`)
+
+**Section headers:** Navy (`text-panacea-dark`)
 
 ```jsx
 <div className="bg-white rounded-xl shadow-panacea p-6 hover:shadow-panacea-lg transition-all">
   <div className="w-16 h-16 bg-panacea-light rounded-full flex items-center justify-center mb-4">
-    <Icon className="w-8 h-8 text-panacea-primary" />
+    <Icon className="w-8 h-8 text-panacea-secondary" />
   </div>
-  <h3 className="text-xl font-bold text-panacea-dark mb-2">Medical Tourism</h3>
-  <p className="text-gray-600">Description text here</p>
+  <h3 className="text-xl font-bold text-panacea-dark mb-2">AI Services</h3>
+  <p className="text-panacea-gray">Description text here</p>
 </div>
 ```
 
-### Testimonials Section (Cream Background)
+### 🩺 Teleconsult / Booking
+
+**Main CTA:** Panacea Blue (`bg-panacea-primary`)
+
+**WhatsApp / urgent:** Orange (`bg-panacea-accent`)
+
+**Success:** Green (`bg-panacea-green`, `text-panacea-green`)
+
+```jsx
+<button className="bg-panacea-primary hover:bg-panacea-blue-600 text-white px-6 py-3 rounded-lg">
+  Book Appointment
+</button>
+<button className="bg-panacea-accent hover:bg-panacea-orange-600 text-white px-6 py-3 rounded-lg">
+  WhatsApp Us
+</button>
+```
+
+### 💬 Testimonials
+
+**Cards:** White (`bg-white`)
+
+**Border & play icon:** Cyan (`border-panacea-secondary`, `text-panacea-secondary`)
+
+**Accent:** Orange / Yellow (`bg-panacea-gradient-warmth`)
+
+**Video popup:** Dark Navy (`bg-panacea-dark`)
+
+```jsx
+<div className="bg-white rounded-xl shadow-panacea p-6 border-2 border-panacea-secondary">
+  <div className="w-16 h-16 bg-panacea-gradient-warmth rounded-full flex items-center justify-center">
+    <PlayIcon className="w-8 h-8 text-white" />
+  </div>
+</div>
+```
+
+### 🧾 Footer
+
+**Background:** Midnight Navy (`bg-panacea-dark`)
+
+**Text:** White (`text-white`)
+
+**Accent links/icons:** Cyan (`text-panacea-secondary hover:text-panacea-cyan-300`)
+
+```jsx
+<footer className="bg-panacea-dark text-white">
+  <a href="#" className="text-panacea-secondary hover:text-panacea-cyan-300">
+    Link
+  </a>
+</footer>
+```
+
+### ❌ Kya NAHI karna (important)
+
+❌ Black heavy background  
+❌ Dark fintech-style UI  
+❌ Red aggressive colors  
+❌ Overly colorful / neon UI
+
+👉 Site medical + human + AI feel wali honi chahiye, Sheba Online type vibe.
+
+### Testimonials Section (Warmth Gradient Background)
 
 ```jsx
 <section className="bg-panacea-cream py-16">
@@ -241,71 +421,193 @@ panacea-medcare/
 - CTA Button: `bg-panacea-accent` (Orange)
 - Links: `text-panacea-dark hover:text-panacea-primary`
 
-### Hero Section (Home Page) - Sheeba Style
+### 🎯 Hero Section (Home Page) - High-Impact Medical Tourism Design
 
-**Main Heading:** `"World-Class Medicine with a Personal Touch"`
+**Objective:**
 
-**Tagline:** `"Global Care – Indian Compassion – Redefining Medical Tourism"`
+- Instantly communicate global medical care with Indian compassion
+- Create emotional trust for international patients
+- Highlight medical tourism + treatment journey
+- Encourage users to contact / book consultation
 
-**Font:** Raleway (same as logo) - `var(--font-raleway)`
+**🎨 Visual Style & Background (MANDATORY):**
 
-**Design (Like Sheeba Medical Tourism):**
+- **Full-width background image** with warm, hopeful, human theme:
+
+  - Smiling, happy patients
+  - Doctors interacting compassionately with patients
+  - Hospital or treatment environment
+  - Must feel warm, hopeful, and human (similar to Sheba Medical Center)
+
+- **Soft overlay gradient** for text readability:
+
+  ```css
+  linear-gradient(
+    rgba(0, 102, 204, 0.65),
+    rgba(0, 194, 209, 0.65)
+  )
+  ```
+
+- **Text color:** White (`text-white`)
+
+**📝 Hero Content (MANDATORY – client provided):**
+
+**Headline (H1 – bold & prominent):**
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  ┌─────────────┐                                        │
-│  │ WORLD'S     │ 2025                                   │
-│  │ BEST        │ Newsweek                               │
-│  │ HOSPITALS   │ statista                               │
-│  └─────────────┘                                        │
-│                                                         │
-│  World-Class Medicine                                   │
-│  with a Personal Touch                                  │
-│                                                         │
-│  Global Care – Indian Compassion –                      │
-│  Redefining Medical Tourism                             │
-│                                        • • • • • •      │
-│  [🟢 About us →]  [🔴 Patient Stories →]  • • • • •    │
-│                                        • • • • • •      │
-│  ▶ Get Free Consultation                                │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+"Global Care – Indian Compassion – Redefining Medical Tourism"
 ```
 
-**Structure:**
+**Supporting text (1–2 short lines only):**
 
-- Clean medical/surgery background image
-- Solid teal overlay (`bg-panacea-primary/75`)
-- Decorative dot pattern in center
-- World's Best Hospitals 2025 badge (Newsweek/Statista)
-- Main heading in light font weight + italic second line
-- Two rounded CTA buttons (teal + accent outline)
+```
+"World-class treatments, expert doctors, and personalized care — guiding you at every step of your healing journey."
+```
 
-**Colors:**
+**🎯 CTA Buttons:**
 
-- Background Overlay: `bg-panacea-primary/75`
-- Primary CTA: `bg-panacea-secondary` (Teal button)
-- Secondary CTA: `border-panacea-accent` (Orange outline)
-- Text: `text-white`
+**Primary CTA (main):**
 
-**Accessibility:**
+- "Get a Free Teleconsultation" or "Contact Us Now"
+- White background (`bg-white`) with blue text (`text-panacea-primary`)
+- Large, prominent button
 
+**Secondary CTA (optional, subtle):**
+
+- WhatsApp icon + "Chat on WhatsApp"
+- Orange background (`bg-panacea-accent`)
+- Opens WhatsApp chat
+
+**❌ Maximum 2 CTAs only**
+
+**📱 Layout & Responsiveness:**
+
+**Mobile-first design:**
+
+- Background image cropped carefully (faces visible)
+- Text centered
+- CTA buttons full-width on mobile
+
+**Desktop:**
+
+- Center-aligned or left-aligned text
+- Image stays immersive and emotional
+- Maintain enough padding so content never touches edges
+
+**⚡ Performance Rules:**
+
+- Background image must be:
+  - Highly optimized (WebP / AVIF)
+  - Lazy-loaded (except hero - use `priority`)
+  - Max visual quality with low file size
+- **No video background**
+- **No slider in hero**
+- **No heavy animation**
+
+**🎬 Subtle Enhancements (Allowed):**
+
+- Soft fade-in text animation
+- Slight CTA hover animation
+- Gentle zoom/parallax effect on background image (VERY subtle)
+
+**♿ Accessibility:**
+
+- High contrast overlay for readability
+- Clear button labels
+- Keyboard accessible CTAs
 - `role="banner"` and `aria-label` on section
 - Meaningful alt text on images
-- Focus-visible states on buttons
+
+**❌ Explicitly Avoid:**
+
+- Dark black hero
+- Aggressive fintech look
+- Too many texts
+- Stock-photo looking cheap images
+
+**Code Example:**
 
 ```jsx
-// Main Heading Style
-<h1 className="font-light text-white">
-  <span>World-Class Medicine</span>
-  <span className="italic">with a Personal Touch</span>
-</h1>
+<section
+  className="relative min-h-[85vh] md:min-h-[90vh] overflow-hidden"
+  role="banner"
+  aria-label="Hero Section"
+>
+  {/* Full-width Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/images/hero-medical-care.webp"
+      alt="World-class medical care with compassionate doctors and happy patients"
+      fill
+      className="object-cover object-center"
+      priority
+      quality={90}
+      sizes="100vw"
+    />
 
-// Tagline
-<p style={{ fontFamily: "var(--font-raleway)" }}>
-  Global Care – Indian Compassion – Redefining Medical Tourism
-</p>
+    {/* Soft Overlay Gradient */}
+    <div
+      className="absolute inset-0"
+      style={{
+        background: `linear-gradient(
+          rgba(0, 102, 204, 0.65),
+          rgba(0, 194, 209, 0.65)
+        )`,
+      }}
+    />
+  </div>
+
+  {/* Content */}
+  <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[85vh] md:min-h-[90vh] flex items-center">
+    <div className="w-full max-w-4xl">
+      {/* Headline */}
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Global Care – Indian Compassion – Redefining Medical Tourism
+      </h1>
+
+      {/* Supporting Text */}
+      <p className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-10 max-w-3xl leading-relaxed">
+        World-class treatments, expert doctors, and personalized care — guiding
+        you at every step of your healing journey.
+      </p>
+
+      {/* CTA Buttons */}
+      <div className="flex flex-col sm:flex-row gap-4">
+        {/* Primary CTA */}
+        <Link
+          href="/services/teleconsultation"
+          className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-panacea-primary rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+        >
+          Get a Free Teleconsultation
+          <ArrowRight className="w-5 h-5" />
+        </Link>
+
+        {/* Secondary CTA - WhatsApp */}
+        <a
+          href="https://wa.me/919958800961"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-panacea-accent text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+        >
+          <MessageCircle className="w-5 h-5" />
+          Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 ```
+
+**🧩 Tech Stack:**
+
+- Next.js
+- Tailwind CSS
+- Optimized responsive images (Next.js Image component)
+- WebP/AVIF format for performance
+
+**Design Philosophy:**
+
+The Hero section should feel **premium, emotional, trustworthy, and human**, clearly positioning Panacea Medcare as a global medical tourism brand with Indian compassion, similar in warmth and credibility to Sheba Medical Center.
 
 ### Service/Feature Cards
 
@@ -338,19 +640,24 @@ panacea-medcare/
 ## 🎨 Utility Classes (Pre-defined in globals.css)
 
 ```css
-/* Hero Gradient Background */
+/* Hero Gradient Background - AI Healthcare Glow */
 .bg-panacea-hero {
-  background: linear-gradient(135deg, #0b4d5e 0%, #14919b 100%);
+  background: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
 }
 
-/* Orange CTA Button */
+/* Orange CTA Button - Vitality Orange */
 .btn-panacea-cta {
   @apply bg-panacea-accent hover:bg-panacea-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-orange hover:shadow-lg;
 }
 
-/* Primary Teal Button */
+/* Primary Blue Button - Panacea Blue */
 .btn-panacea-primary {
-  @apply bg-panacea-primary hover:bg-panacea-teal-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea hover:shadow-panacea-lg;
+  @apply bg-panacea-primary hover:bg-panacea-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea hover:shadow-panacea-lg;
+}
+
+/* Secondary Cyan Button - Healing Cyan */
+.btn-panacea-secondary {
+  @apply bg-panacea-secondary hover:bg-panacea-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-cyan hover:shadow-lg;
 }
 
 /* Secondary Outline Button */
@@ -363,14 +670,14 @@ panacea-medcare/
   @apply bg-white rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300;
 }
 
-/* Section with cream background */
-.section-cream {
-  @apply bg-panacea-cream;
-}
-
-/* Section with light teal background */
+/* Section with soft gray background */
 .section-light {
   @apply bg-panacea-light;
+}
+
+/* Section with white background */
+.section-white {
+  @apply bg-white;
 }
 
 /* Heading with navy color */
@@ -378,8 +685,13 @@ panacea-medcare/
   @apply text-panacea-dark font-bold;
 }
 
-/* Icon container */
+/* Icon container - Cyan for AI/Tech */
 .icon-panacea {
+  @apply w-16 h-16 rounded-full bg-panacea-light flex items-center justify-center text-panacea-secondary;
+}
+
+/* Icon container - Blue for primary */
+.icon-panacea-primary {
   @apply w-16 h-16 rounded-full bg-panacea-light flex items-center justify-center text-panacea-primary;
 }
 ```

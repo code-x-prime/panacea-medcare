@@ -47,23 +47,23 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
 
   return (
     <section
-      className="py-12 md:py-16 bg-gradient-to-br from-panacea-light/30 via-white to-panacea-light/20"
+      className="py-12 md:py-16 bg-panacea-light"
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
         <div className={`flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4 ${isRTL ? "text-right" : "text-left"}`}>
           <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-panacea-accent mb-3 tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-panacea-primary mb-3 tracking-tight">
               {t("ourOffices") || "Panacea Patient Assistance Centres"}
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl">
+            <p className="text-lg md:text-xl text-panacea-gray max-w-2xl">
               {t("ourOfficesDesc") || "Visit us at our offices or reach out for assistance"}
             </p>
           </div>
           <Link
             href={`/${locale}/our-offices`}
-            className="px-6 py-3 rounded-lg bg-panacea-primary text-white font-semibold hover:bg-panacea-secondary transition-all shadow-md hover:shadow-lg whitespace-nowrap"
+            className="px-6 py-3 rounded-lg bg-panacea-primary text-white font-semibold hover:bg-panacea-blue-600 transition-all shadow-panacea hover:shadow-panacea-lg whitespace-nowrap"
           >
             {locale === "ar" ? "عرض جميع المكاتب" : locale === "fr" ? "Voir tous les bureaux" : "View all offices"}
           </Link>
@@ -81,24 +81,24 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
             }, {})
           ).map(([country, countryOffices]) => (
             <div key={country}>
-              <h3 className="text-2xl md:text-3xl font-bold text-panacea-primary mb-6">
+              <h3 className="text-2xl md:text-3xl font-bold text-panacea-dark mb-6">
                 {country}:
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {countryOffices.map((office) => (
                   <div
                     key={office.id}
-                    className="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 group"
+                    className="bg-white rounded-xl shadow-panacea border border-gray-200 p-6 hover:shadow-panacea-lg transition-all duration-300 group"
                   >
                     <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
-                      <div className="w-12 h-12 rounded-full bg-panacea-primary text-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md">
+                      <div className="w-12 h-12 rounded-full bg-panacea-primary text-white flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-panacea">
                         <MapPin className="w-6 h-6" />
                       </div>
                       <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
                         <h4 className="text-lg md:text-xl font-bold text-panacea-primary mb-2">
                           {office.city}
                         </h4>
-                        <p className="text-gray-700 leading-relaxed text-sm">
+                        <p className="text-panacea-gray leading-relaxed text-sm">
                           {office.address}
                         </p>
                       </div>

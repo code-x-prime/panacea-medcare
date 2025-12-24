@@ -119,7 +119,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("delhiNcr") || "Delhi NCR"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-16">
                                 {[...indiaHospitals["delhi-ncr"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
@@ -150,7 +150,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("chennai") || "Chennai"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-16">
                                 {[...indiaHospitals["chennai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
@@ -181,7 +181,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("mumbai") || "Mumbai"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-16">
                                 {[...indiaHospitals["mumbai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
@@ -212,7 +212,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                             <h4 className={`text-xl md:text-2xl font-bold text-panacea-primary mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("hyderabad") || "Hyderabad"}
                             </h4>
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-16">
                                 {[...indiaHospitals["hyderabad"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}

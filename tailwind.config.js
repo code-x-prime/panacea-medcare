@@ -12,58 +12,111 @@ module.exports = {
         sans: ["var(--font-raleway)", "sans-serif"],
       },
       colors: {
-        // Panacea Brand Colors (as per design image)
+        // Panacea Brand Colors (New Color Scheme)
         panacea: {
-          // Primary Teal Colors (Hero Gradient)
-          primary: "#0B4D5E",      // Dark Teal - Main primary
-          secondary: "#14919B",    // Light Teal - Gradient end
-          teal: {
-            DEFAULT: "#0B4D5E",
-            50: "#E6F4F5",
-            100: "#CCE9EB",
-            200: "#99D3D7",
-            300: "#66BDC3",
-            400: "#33A7AF",
-            500: "#14919B",
-            600: "#0B4D5E",
-            700: "#083D4B",
-            800: "#062D38",
-            900: "#041D25",
+          // Primary Brand Colors (MAIN)
+          primary: "#0066CC",       // Panacea Blue - Main primary color
+          secondary: "#00C2D1",    // Healing Cyan - AI + tech feel
+
+          // Secondary / Accent Colors
+          accent: "#FF6B35",       // Vitality Orange - Action & warmth
+          green: "#0BA35A",        // Fresh Green - Health & success
+
+          // Text & Background Colors
+          dark: "#003459",         // Midnight Navy - Headers, footer, dark sections
+          light: "#F5F7FA",        // Soft Gray - Page background, cards
+          gray: "#6D7A8A",         // Slate Gray - Body text, secondary text
+          yellow: "#FFD166",        // Warm Yellow - Highlights, icons, testimonial accents
+
+          // Blue Scale (Panacea Blue)
+          blue: {
+            DEFAULT: "#0066CC",
+            50: "#E6F2FF",
+            100: "#CCE5FF",
+            200: "#99CBFF",
+            300: "#66B1FF",
+            400: "#3397FF",
+            500: "#0066CC",
+            600: "#0052A3",
+            700: "#003D7A",
+            800: "#002952",
+            900: "#001429",
           },
-          // Accent Orange (Buttons)
-          accent: "#F37021",       // Bright Orange - CTA buttons
+
+          // Cyan Scale (Healing Cyan)
+          cyan: {
+            DEFAULT: "#00C2D1",
+            50: "#E6F9FB",
+            100: "#CCF3F7",
+            200: "#99E7EF",
+            300: "#66DBE7",
+            400: "#33CFDF",
+            500: "#00C2D1",
+            600: "#009BA7",
+            700: "#00747D",
+            800: "#004D53",
+            900: "#002629",
+          },
+
+          // Orange Scale (Vitality Orange)
           orange: {
-            DEFAULT: "#F37021",
-            50: "#FEF3E9",
-            100: "#FDE7D3",
-            200: "#FBCFA7",
-            300: "#F9B77B",
-            400: "#F79F4F",
-            500: "#F37021",
-            600: "#D45E15",
-            700: "#A54910",
-            800: "#76340B",
-            900: "#471F07",
+            DEFAULT: "#FF6B35",
+            50: "#FFF4F0",
+            100: "#FFE9E1",
+            200: "#FFD3C3",
+            300: "#FFBDA5",
+            400: "#FFA787",
+            500: "#FF6B35",
+            600: "#CC562A",
+            700: "#994020",
+            800: "#662B15",
+            900: "#33150B",
           },
-          // Dark Navy (Text)
-          dark: "#1A365D",         // Navy - Headings
+
+          // Green Scale (Fresh Green)
+          green: {
+            DEFAULT: "#0BA35A",
+            50: "#E6F7F0",
+            100: "#CCEFE1",
+            200: "#99DFC3",
+            300: "#66CFA5",
+            400: "#33BF87",
+            500: "#0BA35A",
+            600: "#088248",
+            700: "#066236",
+            800: "#044124",
+            900: "#022112",
+          },
+
+          // Navy Scale (Midnight Navy)
           navy: {
-            DEFAULT: "#1A365D",
-            50: "#E8EDF3",
-            100: "#D1DBE7",
-            200: "#A3B7CF",
-            300: "#7593B7",
-            400: "#476F9F",
-            500: "#2C5282",
-            600: "#1A365D",
-            700: "#142B4A",
-            800: "#0F2037",
-            900: "#0A1524",
+            DEFAULT: "#003459",
+            50: "#E6EDF2",
+            100: "#CCDBE5",
+            200: "#99B7CB",
+            300: "#6693B1",
+            400: "#336F97",
+            500: "#003459",
+            600: "#002A47",
+            700: "#001F35",
+            800: "#001523",
+            900: "#000A12",
           },
-          // Light Backgrounds
-          light: "#E6F4F5",        // Light teal bg for cards
-          cream: "#FFF8E7",        // Cream/Beige for sections
-          lightBlue: "#F0F9FF",    // Very light blue
+
+          // Yellow Scale (Warm Yellow)
+          yellow: {
+            DEFAULT: "#FFD166",
+            50: "#FFFBF0",
+            100: "#FFF7E1",
+            200: "#FFEFC3",
+            300: "#FFE7A5",
+            400: "#FFDF87",
+            500: "#FFD166",
+            600: "#CCA752",
+            700: "#997D3D",
+            800: "#665429",
+            900: "#332A14",
+          },
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -107,10 +160,19 @@ module.exports = {
         },
       },
       backgroundImage: {
-        // Hero Gradient (Teal gradient from image)
-        'panacea-gradient': 'linear-gradient(135deg, #0B4D5E 0%, #14919B 100%)',
-        'panacea-gradient-dark': 'linear-gradient(135deg, #041D25 0%, #0B4D5E 100%)',
-        'panacea-gradient-light': 'linear-gradient(135deg, #14919B 0%, #66BDC3 100%)',
+        // AI Healthcare Glow Gradient
+        'panacea-gradient': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
+        'panacea-gradient-ai': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
+
+        // Human Touch Warmth Gradient
+        'panacea-gradient-warmth': 'linear-gradient(135deg, #FF6B35 0%, #FFD166 100%)',
+
+        // Med-Tech Futuristic Gradient
+        'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #00C2D1 100%)',
+
+        // Dark variants
+        'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #0066CC 100%)',
+        'panacea-gradient-light': 'linear-gradient(135deg, #E6F2FF 0%, #F5F7FA 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -118,9 +180,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        'panacea': '0 4px 14px 0 rgba(11, 77, 94, 0.15)',
-        'panacea-lg': '0 10px 40px 0 rgba(11, 77, 94, 0.2)',
-        'panacea-orange': '0 4px 14px 0 rgba(243, 112, 33, 0.3)',
+        'panacea': '0 4px 14px 0 rgba(0, 102, 204, 0.15)',
+        'panacea-lg': '0 10px 40px 0 rgba(0, 102, 204, 0.2)',
+        'panacea-orange': '0 4px 14px 0 rgba(255, 107, 53, 0.3)',
+        'panacea-cyan': '0 4px 14px 0 rgba(0, 194, 209, 0.2)',
+        'panacea-green': '0 4px 14px 0 rgba(11, 163, 90, 0.2)',
       },
     },
   },

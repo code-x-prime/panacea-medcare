@@ -125,7 +125,7 @@ export default function Navbar({ locale = "en" }) {
                         handleMenuClick(e, item);
                       }}
                       className={
-                        "flex items-center justify-center text-xs lg:text-sm xl:text-base font-semibold text-gray-700 hover:text-panacea-primary transition-all h-full px-1.5 xl:px-2 py-2 cursor-pointer " +
+                        "flex items-center justify-center text-xs lg:text-sm  font-semibold text-gray-700 hover:text-panacea-primary transition-all h-full px-1.5 xl:px-2 py-2 cursor-pointer " +
                         (isActive ? "text-panacea-primary" : "")
                       }
                       style={{ whiteSpace: 'nowrap' }}

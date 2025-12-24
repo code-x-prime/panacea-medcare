@@ -10,33 +10,54 @@
 
 @layer base {
   :root {
-    /* Panacea Brand Colors */
-    --panacea-primary: #0b4d5e;
-    --panacea-secondary: #14919b;
-    --panacea-accent: #f37021;
-    --panacea-dark: #1a365d;
-    --panacea-light: #e6f4f5;
-    --panacea-cream: #fff8e7;
-    --panacea-light-blue: #f0f9ff;
+    /* Panacea Brand Colors - New Color Scheme */
+    /* Primary Brand Colors */
+    --panacea-primary: #0066cc; /* Panacea Blue */
+    --panacea-secondary: #00c2d1; /* Healing Cyan */
+
+    /* Secondary / Accent Colors */
+    --panacea-accent: #ff6b35; /* Vitality Orange */
+    --panacea-green: #0ba35a; /* Fresh Green */
+
+    /* Text & Background Colors */
+    --panacea-dark: #003459; /* Midnight Navy */
+    --panacea-light: #f5f7fa; /* Soft Gray */
+    --panacea-gray: #6d7a8a; /* Slate Gray */
+    --panacea-yellow: #ffd166; /* Warm Yellow */
 
     /* Gradients */
-    --panacea-gradient: linear-gradient(135deg, #0b4d5e 0%, #14919b 100%);
-    --panacea-gradient-dark: linear-gradient(135deg, #041d25 0%, #0b4d5e 100%);
+    --panacea-gradient: linear-gradient(
+      135deg,
+      #00c2d1 0%,
+      #0066cc 100%
+    ); /* AI Healthcare Glow */
+    --panacea-gradient-ai: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+    --panacea-gradient-warmth: linear-gradient(
+      135deg,
+      #ff6b35 0%,
+      #ffd166 100%
+    ); /* Human Touch Warmth */
+    --panacea-gradient-futuristic: linear-gradient(
+      135deg,
+      #0ba35a 0%,
+      #00c2d1 100%
+    ); /* Med-Tech Futuristic */
+    --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #0066cc 100%);
 
-    /* shadcn/ui variables */
+    /* shadcn/ui variables - Updated to match new color scheme */
     --background: 0 0% 100%;
-    --foreground: 213 47% 23%;
+    --foreground: 210 25% 18%; /* Midnight Navy */
     --card: 0 0% 100%;
-    --card-foreground: 213 47% 23%;
+    --card-foreground: 210 25% 18%;
     --popover: 0 0% 100%;
-    --popover-foreground: 213 47% 23%;
-    --primary: 192 78% 21%;
+    --popover-foreground: 210 25% 18%;
+    --primary: 210 100% 40%; /* Panacea Blue */
     --primary-foreground: 0 0% 100%;
-    --secondary: 180 44% 34%;
+    --secondary: 185 100% 41%; /* Healing Cyan */
     --secondary-foreground: 0 0% 100%;
-    --muted: 180 30% 96%;
-    --muted-foreground: 213 20% 45%;
-    --accent: 24 91% 54%;
+    --muted: 210 20% 96%; /* Soft Gray */
+    --muted-foreground: 210 10% 45%; /* Slate Gray */
+    --accent: 12 100% 60%; /* Vitality Orange */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -90,19 +111,24 @@
 
 /* Panacea Custom Utility Classes */
 @layer components {
-  /* Hero Gradient Background */
+  /* Hero Gradient Background - AI Healthcare Glow */
   .bg-panacea-hero {
-    background: linear-gradient(135deg, #0b4d5e 0%, #14919b 100%);
+    background: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
   }
 
-  /* Orange CTA Button */
+  /* Orange CTA Button - Vitality Orange */
   .btn-panacea-cta {
     @apply bg-panacea-accent hover:bg-panacea-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-orange hover:shadow-lg;
   }
 
-  /* Primary Teal Button */
+  /* Primary Blue Button - Panacea Blue */
   .btn-panacea-primary {
-    @apply bg-panacea-primary hover:bg-panacea-teal-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea hover:shadow-panacea-lg;
+    @apply bg-panacea-primary hover:bg-panacea-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea hover:shadow-panacea-lg;
+  }
+
+  /* Secondary Cyan Button - Healing Cyan */
+  .btn-panacea-secondary {
+    @apply bg-panacea-secondary hover:bg-panacea-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-cyan hover:shadow-lg;
   }
 
   /* Secondary Outline Button */
@@ -115,14 +141,14 @@
     @apply bg-white rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300;
   }
 
-  /* Section with cream background */
-  .section-cream {
-    @apply bg-panacea-cream;
-  }
-
-  /* Section with light teal background */
+  /* Section with soft gray background */
   .section-light {
     @apply bg-panacea-light;
+  }
+
+  /* Section with white background */
+  .section-white {
+    @apply bg-white;
   }
 
   /* Heading with navy color */
@@ -130,8 +156,13 @@
     @apply text-panacea-dark font-bold;
   }
 
-  /* Icon container */
+  /* Icon container - Cyan for AI/Tech */
   .icon-panacea {
+    @apply w-16 h-16 rounded-full bg-panacea-light flex items-center justify-center text-panacea-secondary;
+  }
+
+  /* Icon container - Blue for primary */
+  .icon-panacea-primary {
     @apply w-16 h-16 rounded-full bg-panacea-light flex items-center justify-center text-panacea-primary;
   }
 }
@@ -171,26 +202,26 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6f4f5;
+  background: #f5f7fa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #14919b;
+  background: #00c2d1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0b4d5e;
+  background: #0066cc;
 }
 
 /* Focus ring with Panacea primary */
 *:focus-visible {
-  outline: 2px solid #14919b;
+  outline: 2px solid #0066cc;
   outline-offset: 2px;
 }
 
 /* Selection color */
 ::selection {
-  background-color: #14919b;
+  background-color: #0066cc;
   color: white;
 }

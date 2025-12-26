@@ -62,7 +62,7 @@ export default function PatientStories({ locale }) {
                 </div>
 
                 {/* Video Thumbnails Grid - One Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 max-w-7xl mx-auto">
                     {videos.map((video) => (
                         <div
                             key={video.id}

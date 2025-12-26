@@ -74,7 +74,7 @@ export default function MultiSpecialtyFocus({ locale }) {
                     </div>
 
                     {/* Specialty Cards Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-4 gap-2 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-16 gap-10 max-w-7xl mx-auto">
                         {specialties.map((specialty) => {
                             return (
                                 <div

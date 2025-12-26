@@ -52,7 +52,7 @@ export default function HowWeWork({ locale }) {
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
                     {/* Left Side - Steps */}
                     <div className="space-y-6">
                         {steps.map((step, idx) => {

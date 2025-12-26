@@ -257,7 +257,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                             ].sort((a, b) => a.name.localeCompare(b.name));
 
                             return (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16">
                                     {allInternationalHospitals.map((hospital, idx) => (
                                         <Link
                                             key={idx}

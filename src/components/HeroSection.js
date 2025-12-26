@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, Phone, Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeroSection({ locale }) {
@@ -107,46 +107,45 @@ export default function HeroSection({ locale }) {
             {supportingText[locale] || supportingText.en}
           </p>
 
+
           {/* CTA Buttons */}
           <div
             className={`flex flex-col sm:flex-row gap-4 ${isRTL ? "justify-end" : "justify-start"
               }`}
           >
-            {/* Primary CTA - Contact Us / Free Teleconsultation */}
+            {/* Primary CTA - Get a Free Teleconsultation Today */}
             <Link
               href={`/${locale}/services/teleconsultation`}
-              className={`group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-panacea-primary rounded-lg font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
+              className={`group inline-flex items-center justify-center gap-3 px-6 py-5 bg-white text-panacea-primary rounded-lg font-semibold text-base  transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
             >
               <span>
                 {locale === "ar"
-                  ? "احصل على استشارة مجانية"
+                  ? "احصل على استشارة مجانية اليوم"
                   : locale === "fr"
-                    ? "Obtenez une téléconsultation gratuite"
-                    : "Get a Free Teleconsultation"}
+                    ? "Obtenez une téléconsultation gratuite aujourd'hui"
+                    : "Get a Free Teleconsultation Today"}
               </span>
               <ArrowRight
-                className={`w-5 h-5 transition-transform ${isRTL
+                className={`w-6 h-6 transition-transform ${isRTL
                   ? "rotate-180 group-hover:-translate-x-1"
                   : "group-hover:translate-x-1"
                   }`}
               />
             </Link>
 
-            {/* Secondary CTA - WhatsApp */}
+            {/* Secondary CTA - Contact Us Now */}
             <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group inline-flex items-center justify-center gap-3 px-8 py-4 bg-panacea-accent text-white rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
-              aria-label="Chat on WhatsApp"
+              href="tel:+919958800961"
+              className={`group inline-flex items-center justify-center gap-3 px-6 py-5 bg-panacea-accent text-white rounded-lg font-semibold text-base  transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
+              aria-label="Contact Us Now"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-6 h-6" />
               <span>
                 {locale === "ar"
-                  ? "تواصل عبر واتساب"
+                  ? "اتصل بنا الآن: +91-9958800961"
                   : locale === "fr"
-                    ? "Discuter sur WhatsApp"
-                    : "Chat on WhatsApp"}
+                    ? "Contactez-nous maintenant: +91-9958800961"
+                    : "Contact Us Now: +91-9958800961"}
               </span>
             </a>
           </div>

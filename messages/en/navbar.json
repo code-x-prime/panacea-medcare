@@ -10,12 +10,70 @@
         "highlight": "JCI Accredited"
       },
       { "name": "Doctors", "slug": "/doctors" },
-      { "name": "Treatments", "slug": "/treatments" },
+      {
+        "name": "Treatments",
+        "slug": "/treatments",
+        "type": "dropdown",
+        "key": "treatments"
+      },
       { "name": "International Patients", "slug": "/international-patients" },
       { "name": "AI Healthcare Solutions", "slug": "/services/ai-solutions" },
       { "name": "Medical Equipment", "slug": "/equipment" },
       { "name": "Partner With Us", "slug": "/partner-with-us" },
       { "name": "Tourism & Leisure", "slug": "/tourism-leisure" }
+    ],
+    "treatments": [
+      { "name": "Cardiac Sciences", "slug": "/treatments/cardiac" },
+      { "name": "Neurosciences", "slug": "/treatments/neurosurgery" },
+      {
+        "name": "Orthopedics & Joint Replacement",
+        "slug": "/treatments/orthopedics"
+      },
+      { "name": "Oncology (Cancer Care)", "slug": "/treatments/oncology" },
+      { "name": "Bone Marrow Transplant (BMT)", "slug": "/treatments/bmt" },
+      {
+        "name": "Organ Transplantation",
+        "slug": "/treatments/organ-transplant"
+      },
+      {
+        "name": "Gastroenterology & Hepatology",
+        "slug": "/treatments/gastroenterology"
+      },
+      {
+        "name": "Gynecology & Women's Health",
+        "slug": "/treatments/gynecology"
+      },
+      {
+        "name": "Paediatrics & Paediatric Surgery",
+        "slug": "/treatments/pediatrics"
+      },
+      { "name": "Laparoscopic Surgery", "slug": "/treatments/laparoscopic" },
+      { "name": "Robotic Surgery", "slug": "/treatments/robotic" },
+      {
+        "name": "Ophthalmology (Eye Care)",
+        "slug": "/treatments/ophthalmology"
+      },
+      {
+        "name": "Dental Care & Cosmetic Dentistry",
+        "slug": "/treatments/dental"
+      },
+      {
+        "name": "Aesthetic, Cosmetic & Plastic Surgery",
+        "slug": "/treatments/aesthetic"
+      },
+      {
+        "name": "Mental Health & Wellness",
+        "slug": "/treatments/mental-health"
+      },
+      {
+        "name": "Diagnostics & Advanced Imaging",
+        "slug": "/treatments/diagnostics"
+      },
+      {
+        "name": "Rehabilitation & Recovery",
+        "slug": "/treatments/rehabilitation"
+      },
+      { "name": "Ayurveda & Holistic Wellness", "slug": "/treatments/ayurveda" }
     ]
   }
 }

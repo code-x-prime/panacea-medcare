@@ -1,0 +1,48 @@
+{
+  "title": "Soins dentaires et dentisterie esthétique en Inde",
+  "intro": "Traitements dentaires de haute qualité en Inde aux normes mondiales avec des dentistes experts, une technologie dentaire moderne et des soins bucco-dentaires complets. Panacea Medcare connecte les patients aux principales cliniques dentaires pour tous les besoins dentaires et esthétiques.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "dental": "Soins dentaires"
+  },
+  "sectionTitle": "Traitements dentaires disponibles",
+  "treatments": {
+    "implants": {
+      "title": "Implants dentaires",
+      "description": "Procédures avancées d'implants dentaires en Inde avec des implants de haute qualité, des chirurgiens buccaux experts et des services complets de restauration d'implants."
+    },
+    "rehabilitation": {
+      "title": "Réhabilitation buccale complète",
+      "description": "Reconstruction buccale complète en Inde, notamment implants, couronnes, bridges et facettes pour une restauration dentaire complète."
+    },
+    "smile": {
+      "title": "Design du sourire",
+      "description": "Design esthétique du sourire en Inde avec facettes en porcelaine, blanchiment des dents et planification numérique du sourire pour amélioration esthétique dentaire."
+    },
+    "crowns": {
+      "title": "Couronnes en zirconia et céramique",
+      "description": "Couronnes céramiques et zirconia de haute qualité en Inde pour restauration dentaire durable et naturelle avec excellente esthétique."
+    },
+    "rootCanal": {
+      "title": "Traitement de canal radiculaire",
+      "description": "Thérapie avancée de canal radiculaire en Inde utilisant des techniques et équipements modernes pour traitement indolore et préservation dentaire."
+    },
+    "whitening": {
+      "title": "Blanchiment des dents",
+      "description": "Blanchiment professionnel des dents en Inde, notamment systèmes de blanchiment au cabinet et à domicile pour sourires éclatants et blancs."
+    },
+    "pediatric": {
+      "title": "Dentisterie pédiatrique",
+      "description": "Soins dentaires adaptés aux enfants en Inde avec des dentistes pédiatriques spécialisés et approches de traitement douces pour les enfants."
+    },
+    "oral": {
+      "title": "Chirurgie orale et maxillo-faciale",
+      "description": "Chirurgie orale et maxillo-faciale experte en Inde pour extraction des dents de sagesse, chirurgie de la mâchoire et procédures de reconstruction faciale."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

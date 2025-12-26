@@ -1,0 +1,40 @@
+{
+  "title": "Transplantation d'organes en Inde",
+  "intro": "L'Inde offre des programmes de transplantation d'organes éthiques, réglementés et à fort taux de succès, notamment les transplantations de foie, de rein, de cœur, de poumon et de pancréas. Panacea Medcare connecte les patients internationaux aux principaux centres de transplantation avec une coordination complète des soins.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "transplant": "Transplantation d'organes"
+  },
+  "sectionTitle": "Procédures de transplantation d'organes disponibles",
+  "treatments": {
+    "liver": {
+      "title": "Transplantation hépatique",
+      "description": "La transplantation hépatique en Inde comprend des options de donneur vivant et décédé, avec des taux de succès élevés, des équipes d'hépatologie expertes et des soins post-transplantation complets pour les patients internationaux."
+    },
+    "kidney": {
+      "title": "Transplantation rénale",
+      "description": "La transplantation rénale en Inde offre des options de donneur vivant et décédé avec d'excellents résultats, des protocoles d'immunosuppression avancés et des soins néphrologiques spécialisés."
+    },
+    "heart": {
+      "title": "Transplantation cardiaque",
+      "description": "Les programmes de transplantation cardiaque en Inde fournissent une transplantation cardiaque salvatrice avec des chirurgiens cardiothoraciques expérimentés, une préservation avancée des organes et des unités de soins de transplantation dédiées."
+    },
+    "lung": {
+      "title": "Transplantation pulmonaire",
+      "description": "La transplantation pulmonaire en Inde comprend les transplantations pulmonaires simple et double, réalisées par des chirurgiens thoraciques experts avec des soins post-opératoires spécialisés et des programmes de rééducation."
+    },
+    "pancreas": {
+      "title": "Transplantation pancréatique",
+      "description": "La transplantation pancréatique en Inde offre un traitement pour le diabète de type 1 et les troubles pancréatiques, avec des options de transplantation combinée rein-pancréas pour des soins complets."
+    },
+    "combined": {
+      "title": "Transplantations d'organes combinées",
+      "description": "L'Inde effectue des transplantations multi-organes complexes, notamment foie-rein, cœur-poumon et d'autres procédures combinées avec des équipes de transplantation spécialisées et des protocoles de soins complets."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

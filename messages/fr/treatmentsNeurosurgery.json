@@ -1,0 +1,59 @@
+{
+  "title": "Neurochirurgie et soins de la colonne vertébrale en Inde",
+  "intro": "L'Inde est reconnue mondialement pour la neurochirurgie, offrant des procédures avancées du cerveau et de la colonne vertébrale réalisées par des neurochirurgiens formés internationalement utilisant une technologie de pointe.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "neurosurgery": "Neurochirurgie"
+  },
+  "sectionTitle": "Traitements neurochirurgicaux disponibles",
+  "treatments": {
+    "brainTumor": {
+      "title": "Chirurgie des tumeurs cérébrales",
+      "description": "La chirurgie des tumeurs cérébrales en Inde utilise la navigation avancée, les microscopes et les approches mini-invasives pour retirer les tumeurs en toute sécurité tout en préservant la fonction neurologique."
+    },
+    "spine": {
+      "title": "Chirurgie de la colonne vertébrale et de la moelle épinière",
+      "description": "Les hôpitaux indiens traitent la compression de la moelle épinière, le prolapsus discal et les déformations avec une chirurgie mini-invasive de la colonne vertébrale, réduisant la douleur et améliorant la mobilité."
+    },
+    "stroke": {
+      "title": "Accident vasculaire cérébral et neuro-intervention",
+      "description": "Le traitement de l'AVC en Inde comprend la thrombolyse rapide et les procédures neuro-interventionnelles, améliorant considérablement la survie et les résultats de récupération."
+    },
+    "dbs": {
+      "title": "Stimulation cérébrale profonde (SCP)",
+      "description": "La chirurgie SCP en Inde traite efficacement la maladie de Parkinson et les troubles du mouvement en utilisant un placement précis des électrodes et des soins neurologiques experts."
+    },
+    "pediatric": {
+      "title": "Neurochirurgie pédiatrique",
+      "description": "L'Inde offre une neurochirurgie pédiatrique spécialisée pour les troubles cérébraux et spinaux congénitaux avec d'excellents standards de sécurité et des résultats à long terme."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi l'Inde est-elle reconnue pour la neurochirurgie et la chirurgie de la colonne vertébrale ?",
+      "answer": "L'Inde a des neurochirurgiens très expérimentés, une technologie avancée du cerveau et de la colonne vertébrale, des techniques mini-invasives et des options de traitement abordables pour les conditions neurologiques complexes."
+    },
+    "q2": {
+      "question": "Quels traitements neurochirurgicaux sont disponibles en Inde ?",
+      "answer": "Les traitements comprennent la chirurgie des tumeurs cérébrales, la chirurgie de la colonne vertébrale et de la moelle épinière, l'intervention pour AVC, la stimulation cérébrale profonde (SCP) et la neurochirurgie pédiatrique."
+    },
+    "q3": {
+      "question": "La chirurgie mini-invasive du cerveau et de la colonne vertébrale est-elle disponible en Inde ?",
+      "answer": "Oui. De nombreux hôpitaux indiens offrent une neurochirurgie mini-invasive, entraînant moins de douleur, des séjours hospitaliers plus courts et une récupération plus rapide."
+    },
+    "q4": {
+      "question": "Les rapports médicaux et les scans peuvent-ils être examinés avant de voyager en Inde ?",
+      "answer": "Oui. Panacea Medcare organise des examens de cas avant le voyage et des évaluations d'imagerie avec des neurochirurgiens de premier plan pour planifier le traitement à l'avance."
+    },
+    "q5": {
+      "question": "Comment Panacea Medcare soutient-il les patients en neurochirurgie ?",
+      "answer": "Panacea Medcare aide à la sélection du médecin, à la planification du traitement, au soutien pour les visas, à la coordination hospitalière et aux arrangements de rééducation."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

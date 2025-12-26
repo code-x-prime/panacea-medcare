@@ -1,0 +1,44 @@
+{
+  "title": "Gynécologie et santé des femmes en Inde",
+  "intro": "Soins complets centrés sur les femmes en Inde avec des gynécologues experts, une chirurgie mini-invasive avancée, des traitements de fertilité et des services de santé spécialisés pour les femmes. Panacea Medcare assure une coordination complète des soins pour les patients internationaux.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "gynecology": "Gynécologie et santé des femmes"
+  },
+  "sectionTitle": "Traitements disponibles",
+  "treatments": {
+    "fibroid": {
+      "title": "Traitement des fibromes",
+      "description": "Le traitement avancé des fibromes en Inde comprend la prise en charge médicale, les procédures mini-invasives et l'ablation chirurgicale avec préservation des options de fertilité."
+    },
+    "endometriosis": {
+      "title": "Chirurgie de l'endométriose",
+      "description": "Le traitement expert de l'endométriose en Inde comprend la chirurgie laparoscopique et robotique pour soulager la douleur et améliorer les résultats de fertilité."
+    },
+    "laparoscopic": {
+      "title": "Chirurgie gynécologique laparoscopique et robotique",
+      "description": "La chirurgie gynécologique mini-invasive en Inde comprend l'hystérectomie laparoscopique, la myomectomie et les procédures robotiques avec récupération plus rapide et cicatrices minimales."
+    },
+    "oncology": {
+      "title": "Oncologie gynécologique",
+      "description": "Le traitement complet du cancer gynécologique en Inde comprend la chirurgie, la chimiothérapie et la radiothérapie pour les cancers du col de l'utérus, de l'ovaire et de l'utérus."
+    },
+    "hormonal": {
+      "title": "Troubles menstruels et hormonaux",
+      "description": "Prise en charge experte des troubles menstruels et hormonaux en Inde, notamment le SOPK, l'endométriose et la gestion de la ménopause."
+    },
+    "pregnancy": {
+      "title": "Soins de grossesse à haut risque",
+      "description": "Soins spécialisés de grossesse à haut risque en Inde avec des spécialistes en médecine materno-fœtale et une surveillance avancée pour les grossesses complexes."
+    },
+    "ivf": {
+      "title": "FIV et technologies de procréation assistée",
+      "description": "Traitements avancés de FIV et de fertilité en Inde avec des taux de succès élevés, des endocrinologues de la reproduction expérimentés et des soins de fertilité complets."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Ayurveda & Holistic Wellness in India",
+  "intro": "Authentic Ayurveda and holistic wellness programs in India for chronic illness, stress management, recovery, and overall well-being. Panacea Medcare connects patients to accredited Ayurvedic centers for comprehensive natural healing.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "ayurveda": "Ayurveda & Holistic Wellness"
+  },
+  "sectionTitle": "Available Ayurvedic Treatments",
+  "treatments": {
+    "panchakarma": {
+      "title": "Panchakarma Detoxification Therapy",
+      "description": "Authentic Panchakarma detoxification in India with traditional Ayurvedic cleansing therapies for overall health and wellness restoration."
+    },
+    "arthritis": {
+      "title": "Ayurvedic Treatment for Arthritis & Joint Pain",
+      "description": "Natural Ayurvedic treatment for arthritis and joint pain in India using herbal medicines, therapeutic oils, and lifestyle modifications."
+    },
+    "chronicPain": {
+      "title": "Chronic Pain & Spine Disorders Management",
+      "description": "Ayurvedic management of chronic pain and spinal disorders in India with specialized treatments including Abhyanga, Kati Basti, and therapeutic massages."
+    },
+    "digestive": {
+      "title": "Digestive Disorders Treatment",
+      "description": "Ayurvedic treatment for digestive disorders in India including IBS, gastritis, and other gastrointestinal conditions with natural remedies and dietary guidance."
+    },
+    "diabetes": {
+      "title": "Diabetes & Lifestyle Disease Management",
+      "description": "Holistic Ayurvedic management of diabetes and lifestyle diseases in India with herbal medicines, diet therapy, and lifestyle modifications."
+    },
+    "stress": {
+      "title": "Stress, Anxiety & Sleep Disorder Management",
+      "description": "Ayurvedic treatments for stress, anxiety, and sleep disorders in India with Shirodhara, meditation, and personalized wellness programs."
+    },
+    "integrative": {
+      "title": "Integrative Care (Ayurveda with Modern Medicine)",
+      "description": "Integrative healthcare in India combining Ayurveda with modern medicine for comprehensive treatment and optimal recovery outcomes."
+    },
+    "wellness": {
+      "title": "Wellness Retreats & Healing Programs",
+      "description": "Ayurvedic wellness retreats in India offering holistic healing, rejuvenation therapies, and comprehensive wellness programs for international patients."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What is Ayurveda and how can it help in healing?",
+      "answer": "Ayurveda is an ancient Indian system of medicine that focuses on treating the root cause of illness through natural therapies, lifestyle correction, herbal medicines, and detoxification."
+    },
+    "q2": {
+      "question": "Why do patients from Africa and the Middle East choose Ayurveda in India?",
+      "answer": "India offers authentic Ayurveda with medically supervised treatments, personalized wellness programs, and natural healing methods not commonly available in many countries."
+    },
+    "q3": {
+      "question": "What conditions can be treated with Ayurveda?",
+      "answer": "Ayurveda is commonly used for arthritis, chronic pain, digestive disorders, diabetes, stress, skin conditions, post-cancer recovery, and overall immunity enhancement."
+    },
+    "q4": {
+      "question": "Can Ayurveda be combined with modern medical treatment?",
+      "answer": "Yes. Many Indian centers offer integrative care where Ayurveda supports modern medical treatment, especially for recovery, immunity, and long-term wellness."
+    },
+    "q5": {
+      "question": "How does Panacea Medcare assist Ayurveda & wellness patients?",
+      "answer": "Panacea Medcare helps select accredited Ayurveda centers, plan treatment programs, arrange stay, and coordinate wellness journeys for international patients."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

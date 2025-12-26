@@ -10,7 +10,12 @@
         "highlight": "معتمد من JCI"
       },
       { "name": "الأطباء", "slug": "/doctors" },
-      { "name": "العلاجات", "slug": "/treatments" },
+      {
+        "name": "العلاجات",
+        "slug": "/treatments",
+        "type": "dropdown",
+        "key": "treatments"
+      },
       { "name": "المرضى الدوليون", "slug": "/international-patients" },
       {
         "name": "حلول الرعاية الصحية بالذكاء الاصطناعي",
@@ -19,6 +24,41 @@
       { "name": "المعدات الطبية", "slug": "/equipment" },
       { "name": "كن شريكاً معنا", "slug": "/partner-with-us" },
       { "name": "السياحة والترفيه", "slug": "/tourism-leisure" }
+    ],
+    "treatments": [
+      { "name": "علوم القلب", "slug": "/treatments/cardiac" },
+      { "name": "علوم الأعصاب", "slug": "/treatments/neurosurgery" },
+      {
+        "name": "جراحة العظام واستبدال المفاصل",
+        "slug": "/treatments/orthopedics"
+      },
+      { "name": "علم الأورام (رعاية السرطان)", "slug": "/treatments/oncology" },
+      { "name": "زراعة نخاع العظم", "slug": "/treatments/bmt" },
+      { "name": "زراعة الأعضاء", "slug": "/treatments/organ-transplant" },
+      {
+        "name": "أمراض الجهاز الهضمي والكبد",
+        "slug": "/treatments/gastroenterology"
+      },
+      { "name": "طب النساء وصحة المرأة", "slug": "/treatments/gynecology" },
+      { "name": "طب الأطفال وجراحة الأطفال", "slug": "/treatments/pediatrics" },
+      { "name": "جراحة بالمنظار", "slug": "/treatments/laparoscopic" },
+      { "name": "الجراحة الروبوتية", "slug": "/treatments/robotic" },
+      { "name": "طب العيون", "slug": "/treatments/ophthalmology" },
+      {
+        "name": "رعاية الأسنان وطب الأسنان التجميلي",
+        "slug": "/treatments/dental"
+      },
+      { "name": "جراحة التجميل والجمال", "slug": "/treatments/aesthetic" },
+      { "name": "الصحة النفسية والعافية", "slug": "/treatments/mental-health" },
+      { "name": "التشخيص والتصوير المتقدم", "slug": "/treatments/diagnostics" },
+      {
+        "name": "إعادة التأهيل والتعافي",
+        "slug": "/treatments/rehabilitation"
+      },
+      {
+        "name": "العلاج بالأيورفيدا والعافية الشاملة",
+        "slug": "/treatments/ayurveda"
+      }
     ]
   }
 }

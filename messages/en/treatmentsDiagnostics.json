@@ -1,0 +1,40 @@
+{
+  "title": "Diagnostics & Advanced Imaging in India",
+  "intro": "Accurate diagnosis using latest technology in India with advanced imaging equipment, AI-enabled diagnostics, and expert radiologists. Panacea Medcare connects patients to leading diagnostic centers for comprehensive medical imaging and testing.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "diagnostics": "Diagnostics & Advanced Imaging"
+  },
+  "sectionTitle": "Available Diagnostic Services",
+  "treatments": {
+    "teleradiology": {
+      "title": "AI-Enabled Teleradiology",
+      "description": "Advanced AI-powered teleradiology services in India for accurate and rapid radiological diagnosis with expert radiologists and cutting-edge technology."
+    },
+    "imaging": {
+      "title": "MRI, CT Scan, PET-CT",
+      "description": "Advanced imaging services in India including high-resolution MRI, CT scans, and PET-CT for precise diagnosis and treatment planning."
+    },
+    "mammography": {
+      "title": "Digital Mammography",
+      "description": "Advanced breast imaging in India with digital mammography for early detection and screening of breast cancer with high accuracy."
+    },
+    "cardiac": {
+      "title": "Cardiac Imaging",
+      "description": "Comprehensive cardiac imaging in India including echocardiography, cardiac MRI, and CT angiography for detailed heart evaluation."
+    },
+    "interventional": {
+      "title": "Interventional Radiology",
+      "description": "Expert interventional radiology in India for image-guided minimally invasive procedures and treatments for various conditions."
+    },
+    "pathology": {
+      "title": "Pathology & Molecular Diagnostics",
+      "description": "Advanced pathology and molecular diagnostics in India including genetic testing, cancer markers, and precision medicine diagnostics."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

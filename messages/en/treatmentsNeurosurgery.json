@@ -1,0 +1,59 @@
+{
+  "title": "Neurosurgery & Spine Care in India",
+  "intro": "India is globally trusted for neurosurgery, offering advanced brain and spine procedures performed by internationally trained neurosurgeons using state-of-the-art technology.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "neurosurgery": "Neurosurgery"
+  },
+  "sectionTitle": "Available Neurosurgical Treatments",
+  "treatments": {
+    "brainTumor": {
+      "title": "Brain Tumor Surgery",
+      "description": "Brain tumor surgery in India uses advanced navigation, microscopes, and minimally invasive approaches to safely remove tumors while preserving neurological function."
+    },
+    "spine": {
+      "title": "Spine & Spinal Cord Surgery",
+      "description": "Indian hospitals treat spinal cord compression, disc prolapse, and deformities with minimally invasive spine surgery, reducing pain and improving mobility."
+    },
+    "stroke": {
+      "title": "Stroke & Neuro-intervention",
+      "description": "Stroke treatment in India includes rapid thrombolysis and neuro-interventional procedures, significantly improving survival and recovery outcomes."
+    },
+    "dbs": {
+      "title": "Deep Brain Stimulation (DBS)",
+      "description": "DBS surgery in India effectively treats Parkinson's disease and movement disorders using precise electrode placement and expert neurological care."
+    },
+    "pediatric": {
+      "title": "Pediatric Neurosurgery",
+      "description": "India offers specialized pediatric neurosurgery for congenital brain and spinal disorders with excellent safety standards and long-term outcomes."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why is India trusted for neurosurgery and spine surgery?",
+      "answer": "India has highly experienced neurosurgeons, advanced brain and spine technology, minimally invasive techniques, and affordable treatment options for complex neurological conditions."
+    },
+    "q2": {
+      "question": "What neurosurgical treatments are available in India?",
+      "answer": "Treatments include brain tumor surgery, spine and spinal cord surgery, stroke intervention, deep brain stimulation (DBS), and pediatric neurosurgery."
+    },
+    "q3": {
+      "question": "Is minimally invasive brain and spine surgery available in India?",
+      "answer": "Yes. Many Indian hospitals offer minimally invasive neurosurgery, leading to less pain, shorter hospital stays, and faster recovery."
+    },
+    "q4": {
+      "question": "Can medical reports and scans be reviewed before traveling to India?",
+      "answer": "Yes. Panacea Medcare arranges pre-travel case reviews and imaging evaluations with leading neurosurgeons to plan treatment in advance."
+    },
+    "q5": {
+      "question": "How does Panacea Medcare support neurosurgery patients?",
+      "answer": "Panacea Medcare assists with doctor selection, treatment planning, visa support, hospital coordination, and rehabilitation arrangements."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

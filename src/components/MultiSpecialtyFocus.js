@@ -3,10 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import {
-    Activity, Brain, Bone, Heart, Footprints, Baby,
-    Users, Sparkles, Scale, Droplet, Syringe, Dna
-} from "lucide-react";
+import Image from "next/image";
 
 export default function MultiSpecialtyFocus({ locale }) {
     const t = useTranslations("specialties");
@@ -16,18 +13,18 @@ export default function MultiSpecialtyFocus({ locale }) {
     const [selectedCountry, setSelectedCountry] = useState(null);
 
     const specialties = [
-        { id: "oncology", icon: Activity, name: t("oncology"), desc: t("oncologyDesc") },
-        { id: "neurosurgery", icon: Brain, name: t("neurosurgery"), desc: t("neurosurgeryDesc") },
-        { id: "spine-surgery", icon: Bone, name: t("spineSurgery"), desc: t("spineSurgeryDesc") },
-        { id: "cardiology", icon: Heart, name: t("cardiology"), desc: t("cardiologyDesc") },
-        { id: "orthopedics", icon: Footprints, name: t("orthopedics"), desc: t("orthopedicsDesc") },
-        { id: "ivf", icon: Baby, name: t("ivf"), desc: t("ivfDesc") },
-        { id: "gynecology", icon: Users, name: t("gynecology"), desc: t("gynecologyDesc") },
-        { id: "cosmetic", icon: Sparkles, name: t("cosmetic"), desc: t("cosmeticDesc") },
-        { id: "weight-loss", icon: Scale, name: t("weightLoss"), desc: t("weightLossDesc") },
-        { id: "liver-transplant", icon: Droplet, name: t("liverTransplant"), desc: t("liverTransplantDesc") },
-        { id: "kidney-transplant", icon: Syringe, name: t("kidneyTransplant"), desc: t("kidneyTransplantDesc") },
-        { id: "bone-marrow", icon: Dna, name: t("boneMarrow"), desc: t("boneMarrowDesc") },
+        { id: "oncology", svg: "/specialty/oncology.svg", name: t("oncology"), desc: t("oncologyDesc") },
+        { id: "neurosurgery", svg: "/specialty/neurosurgery.svg", name: t("neurosurgery"), desc: t("neurosurgeryDesc") },
+        { id: "spine-surgery", svg: "/specialty/spine-surgery.svg", name: t("spineSurgery"), desc: t("spineSurgeryDesc") },
+        { id: "cardiology", svg: "/specialty/cardiology.svg", name: t("cardiology"), desc: t("cardiologyDesc") },
+        { id: "orthopedics", svg: "/specialty/orthopedics.svg", name: t("orthopedics"), desc: t("orthopedicsDesc") },
+        { id: "ivf", svg: "/specialty/ivf.svg", name: t("ivf"), desc: t("ivfDesc") },
+        { id: "gynecology", svg: "/specialty/gynecology.svg", name: t("gynecology"), desc: t("gynecologyDesc") },
+        { id: "cosmetic", svg: "/specialty/cosmetic.svg", name: t("cosmetic"), desc: t("cosmeticDesc") },
+        { id: "weight-loss", svg: "/specialty/weight-loss.svg", name: t("weightLoss"), desc: t("weightLossDesc") },
+        { id: "liver-transplant", svg: "/specialty/liver-transplant.svg", name: t("liverTransplant"), desc: t("liverTransplantDesc") },
+        { id: "kidney-transplant", svg: "/specialty/kidney-transplant.svg", name: t("kidneyTransplant"), desc: t("kidneyTransplantDesc") },
+        { id: "bone-marrow", svg: "/specialty/bone-marrow.svg", name: t("boneMarrow"), desc: t("boneMarrowDesc") },
     ];
 
     const countries = [
@@ -79,7 +76,6 @@ export default function MultiSpecialtyFocus({ locale }) {
                     {/* Specialty Cards Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-4 gap-2 max-w-7xl mx-auto">
                         {specialties.map((specialty) => {
-                            const Icon = specialty.icon;
                             return (
                                 <div
                                     key={specialty.id}
@@ -90,7 +86,13 @@ export default function MultiSpecialtyFocus({ locale }) {
                                     {/* Icon with Background */}
                                     <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
                                         <div className="flex-shrink-0 w-16 h-16 bg-panacea-light rounded-xl flex items-center justify-center border-2 border-panacea-primary/20 group-hover:border-panacea-primary group-hover:scale-110 transition-all duration-300">
-                                            <Icon className="w-8 h-8 text-panacea-primary" />
+                                            <Image
+                                                src={specialty.svg}
+                                                alt={specialty.name}
+                                                width={32}
+                                                height={32}
+                                                className="w-12 h-12     object-contain"
+                                            />
                                         </div>
 
                                         <div className="flex-1 pt-1">
@@ -139,7 +141,15 @@ export default function MultiSpecialtyFocus({ locale }) {
                         {/* Specialty Header with Icon */}
                         <div className="mb-8 flex items-center gap-4">
                             <div className="w-16 h-16 bg-panacea-light rounded-xl flex items-center justify-center border-2 border-panacea-primary shadow-md">
-                                {selectedSpecialty.icon && <selectedSpecialty.icon className="w-8 h-8 text-panacea-primary" />}
+                                {selectedSpecialty.svg && (
+                                    <Image
+                                        src={selectedSpecialty.svg}
+                                        alt={selectedSpecialty.name}
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain"
+                                    />
+                                )}
                             </div>
                             <div className="flex-1">
                                 <h3 className="text-3xl font-bold text-gray-900 mb-1">

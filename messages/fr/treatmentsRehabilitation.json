@@ -1,0 +1,36 @@
+{
+  "title": "Réadaptation et récupération en Inde",
+  "intro": "Récupération complète au-delà du traitement en Inde avec physiothérapeutes experts, spécialistes de réadaptation et programmes de récupération complets. Panacea Medcare assure une coordination transparente pour réadaptation et récupération post-traitement.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "rehabilitation": "Réadaptation et récupération"
+  },
+  "sectionTitle": "Services de réadaptation disponibles",
+  "treatments": {
+    "physiotherapy": {
+      "title": "Physiothérapie et réadaptation",
+      "description": "Services complets de physiothérapie en Inde avec physiothérapeutes experts fournissant réadaptation pour blessures orthopédiques, neurologiques et sportives."
+    },
+    "neuro": {
+      "title": "Réadaptation neurologique pour AVC",
+      "description": "Réadaptation spécialisée de l'AVC en Inde avec équipes multidisciplinaires pour récupération motrice, orthophonie et restauration fonctionnelle."
+    },
+    "postSurgical": {
+      "title": "Programmes de récupération post-chirurgicale",
+      "description": "Réadaptation post-chirurgicale structurée en Inde pour récupération plus rapide après chirurgies orthopédiques, cardiaques et autres chirurgies majeures."
+    },
+    "pain": {
+      "title": "Gestion de la douleur",
+      "description": "Gestion experte de la douleur en Inde, notamment procédures de douleur interventionnelle, gestion des médicaments et techniques non invasives de soulagement de la douleur."
+    },
+    "sports": {
+      "title": "Réadaptation sportive",
+      "description": "Médecine du sport et réadaptation spécialisées en Inde pour athlètes avec récupération de blessures, optimisation de performance et programmes de retour au sport."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

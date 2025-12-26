@@ -1,0 +1,59 @@
+{
+  "title": "Oncologie (Traitement du cancer en Inde)",
+  "intro": "L'Inde est une destination de premier plan pour le traitement avancé du cancer, offrant des soins oncologiques complets, une technologie de radiothérapie moderne et des thérapies personnalisées. Panacea Medcare connecte les patients d'Afrique, du Moyen-Orient et d'Europe à des centres de cancérologie de confiance en Inde avec des taux de succès élevés.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "oncology": "Oncologie"
+  },
+  "sectionTitle": "Traitements contre le cancer disponibles",
+  "treatments": {
+    "medical": {
+      "title": "Oncologie médicale",
+      "description": "L'oncologie médicale en Inde comprend la chimiothérapie, l'immunothérapie et la thérapie ciblée utilisant des protocoles internationaux, garantissant un contrôle efficace du cancer avec des plans de traitement personnalisés et une surveillance étroite par des oncologues expérimentés."
+    },
+    "surgical": {
+      "title": "Oncologie chirurgicale",
+      "description": "Les hôpitaux indiens fournissent une oncologie chirurgicale avancée utilisant des techniques mini-invasives et robotiques pour retirer les tumeurs en toute sécurité, préserver la fonction des organes et améliorer les résultats de récupération pour les patients atteints de cancers solides."
+    },
+    "radiation": {
+      "title": "Oncologie radiothérapeutique",
+      "description": "La radiothérapie en Inde utilise des technologies avancées comme l'IMRT, l'IGRT, la SRS et la SBRT pour cibler précisément la tumeur tout en minimisant les dommages aux tissus sains."
+    },
+    "breast": {
+      "title": "Traitement du cancer du sein",
+      "description": "Les soins complets du cancer du sein en Inde comprennent la chirurgie, la chimiothérapie, la radiothérapie, la reconstruction et la thérapie hormonale, dispensés par des équipes multidisciplinaires pour des résultats de survie et esthétiques optimaux."
+    },
+    "headNeck": {
+      "title": "Traitement du cancer de la tête et du cou",
+      "description": "L'Inde est mondialement reconnue pour le traitement des cancers de la tête et du cou avec une chirurgie avancée, une radiothérapie et une rééducation, en particulier pour les patients d'Afrique et du Moyen-Orient."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi les patients atteints de cancer d'Afrique et du Moyen-Orient choisissent-ils l'Inde pour le traitement ?",
+      "answer": "L'Inde offre des soins contre le cancer avancés avec une technologie moderne, des oncologues expérimentés, des temps d'attente plus courts et des coûts de traitement considérablement inférieurs par rapport à l'Europe et au Moyen-Orient."
+    },
+    "q2": {
+      "question": "Quels types de traitements contre le cancer sont disponibles en Inde ?",
+      "answer": "Le traitement du cancer en Inde comprend la chimiothérapie, l'immunothérapie, la thérapie ciblée, la radiothérapie avancée, la chirurgie robotique et mini-invasive du cancer et la greffe de moelle osseuse."
+    },
+    "q3": {
+      "question": "Le traitement du cancer en Inde est-il sûr pour les patients internationaux ?",
+      "answer": "Oui. Les principaux hôpitaux indiens suivent des protocoles de traitement internationaux, détiennent des accréditations NABH et JCI et traitent des milliers de patients internationaux atteints de cancer chaque année."
+    },
+    "q4": {
+      "question": "À quelle rapidité le traitement du cancer peut-il commencer en Inde ?",
+      "answer": "La plupart des traitements contre le cancer en Inde peuvent commencer dans quelques jours après l'arrivée, aidant les patients à éviter les longues périodes d'attente courantes dans de nombreux pays."
+    },
+    "q5": {
+      "question": "Comment Panacea Medcare soutient-il les patients internationaux atteints de cancer ?",
+      "answer": "Panacea Medcare fournit un soutien complet, notamment la sélection d'hôpitaux, la planification des traitements, l'assistance aux visas, l'hébergement, le soutien linguistique et le suivi post-traitement."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

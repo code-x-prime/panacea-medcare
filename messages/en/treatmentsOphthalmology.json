@@ -1,0 +1,40 @@
+{
+  "title": "Ophthalmology (Eye Care) in India",
+  "intro": "Advanced vision correction and eye surgery in India with expert ophthalmologists, cutting-edge technology, and comprehensive eye care services. Panacea Medcare connects patients to leading eye care centers for all ophthalmic needs.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "ophthalmology": "Ophthalmology"
+  },
+  "sectionTitle": "Available Eye Care Treatments",
+  "treatments": {
+    "cataract": {
+      "title": "Cataract Surgery (Premium IOLs)",
+      "description": "Advanced cataract surgery in India with premium intraocular lenses for vision correction, including multifocal and toric IOLs with excellent visual outcomes."
+    },
+    "lasik": {
+      "title": "LASIK & Refractive Surgery",
+      "description": "LASIK and refractive surgery in India for vision correction including PRK, SMILE, and other advanced techniques with high precision and success rates."
+    },
+    "cornea": {
+      "title": "Cornea Transplant",
+      "description": "Cornea transplantation in India including full-thickness and partial-thickness grafts with advanced techniques and excellent graft survival rates."
+    },
+    "retina": {
+      "title": "Retina & Vitreous Surgery",
+      "description": "Expert retinal surgery in India for conditions like retinal detachment, macular degeneration, diabetic retinopathy, and vitreous disorders."
+    },
+    "glaucoma": {
+      "title": "Glaucoma Treatment",
+      "description": "Comprehensive glaucoma management in India including medical treatment, laser procedures, and surgical options to preserve vision and prevent progression."
+    },
+    "pediatric": {
+      "title": "Paediatric Ophthalmology",
+      "description": "Specialized pediatric eye care in India for children with strabismus, amblyopia, congenital cataracts, and other pediatric eye conditions."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

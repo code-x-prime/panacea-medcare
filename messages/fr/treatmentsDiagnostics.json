@@ -1,0 +1,40 @@
+{
+  "title": "Diagnostic et imagerie avancée en Inde",
+  "intro": "Diagnostic précis utilisant la dernière technologie en Inde avec équipement d'imagerie avancé, diagnostics activés par IA et radiologues experts. Panacea Medcare connecte les patients aux principaux centres de diagnostic pour imagerie médicale et tests complets.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "diagnostics": "Diagnostic et imagerie avancée"
+  },
+  "sectionTitle": "Services de diagnostic disponibles",
+  "treatments": {
+    "teleradiology": {
+      "title": "Téléradiologie activée par IA",
+      "description": "Services avancés de téléradiologie activés par IA en Inde pour diagnostic radiologique précis et rapide avec radiologues experts et technologie de pointe."
+    },
+    "imaging": {
+      "title": "IRM, Scanner CT, TEP-CT",
+      "description": "Services d'imagerie avancés en Inde, notamment IRM haute résolution, scanners CT et TEP-CT pour diagnostic précis et planification de traitement."
+    },
+    "mammography": {
+      "title": "Mammographie numérique",
+      "description": "Imagerie mammaire avancée en Inde avec mammographie numérique pour détection précoce et dépistage du cancer du sein avec haute précision."
+    },
+    "cardiac": {
+      "title": "Imagerie cardiaque",
+      "description": "Imagerie cardiaque complète en Inde, notamment échocardiographie, IRM cardiaque et angiographie CT pour évaluation cardiaque détaillée."
+    },
+    "interventional": {
+      "title": "Radiologie interventionnelle",
+      "description": "Radiologie interventionnelle experte en Inde pour procédures et traitements mini-invasifs guidés par imagerie pour diverses conditions."
+    },
+    "pathology": {
+      "title": "Pathologie et diagnostics moléculaires",
+      "description": "Pathologie et diagnostics moléculaires avancés en Inde, notamment tests génétiques, marqueurs cancéreux et diagnostics de médecine de précision."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

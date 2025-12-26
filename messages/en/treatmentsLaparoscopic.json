@@ -1,0 +1,48 @@
+{
+  "title": "Laparoscopic Surgery in India",
+  "intro": "Minimally invasive laparoscopic surgery in India offers smaller incisions, faster recovery, less pain, and reduced scarring compared to traditional open surgery. Panacea Medcare connects patients to expert laparoscopic surgeons across multiple specialties.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "laparoscopic": "Laparoscopic Surgery"
+  },
+  "sectionTitle": "Available Laparoscopic Procedures",
+  "treatments": {
+    "gallbladder": {
+      "title": "Laparoscopic Gallbladder Surgery (Cholecystectomy)",
+      "description": "Minimally invasive gallbladder removal in India with smaller incisions, faster recovery, and reduced post-operative pain compared to traditional open surgery."
+    },
+    "hernia": {
+      "title": "Laparoscopic Hernia Repair",
+      "description": "Expert laparoscopic hernia repair in India using mesh techniques with minimal scarring, faster recovery, and lower recurrence rates."
+    },
+    "appendix": {
+      "title": "Laparoscopic Appendix Surgery",
+      "description": "Laparoscopic appendectomy in India provides safe removal of the appendix with minimal invasion, shorter hospital stay, and quicker return to normal activities."
+    },
+    "hysterectomy": {
+      "title": "Laparoscopic Hysterectomy",
+      "description": "Minimally invasive hysterectomy in India with preservation of surrounding tissues, less blood loss, and faster recovery compared to open procedures."
+    },
+    "colorectal": {
+      "title": "Laparoscopic Colorectal Surgery",
+      "description": "Advanced laparoscopic colorectal surgery in India for conditions like colon cancer, diverticulitis, and inflammatory bowel disease with improved outcomes."
+    },
+    "bariatric": {
+      "title": "Laparoscopic Bariatric (Weight Loss) Surgery",
+      "description": "Laparoscopic bariatric procedures in India including gastric bypass and sleeve gastrectomy with high success rates for sustainable weight loss."
+    },
+    "urology": {
+      "title": "Laparoscopic Urology Procedures",
+      "description": "Minimally invasive urological surgeries in India including laparoscopic nephrectomy, prostate surgery, and kidney procedures with faster recovery."
+    },
+    "cancer": {
+      "title": "Laparoscopic Cancer Surgeries",
+      "description": "Laparoscopic cancer surgery in India for gastrointestinal, gynecologic, and urologic cancers with precise tumor removal and improved outcomes."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

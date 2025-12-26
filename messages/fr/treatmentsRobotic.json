@@ -1,0 +1,59 @@
+{
+  "title": "Chirurgie robotique en Inde",
+  "intro": "L'Inde est un centre mondial de chirurgie robotique, offrant des procédures de haute précision et peu invasives dans plusieurs spécialités avec récupération plus rapide et complications réduites pour les patients internationaux.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "robotic": "Chirurgie robotique"
+  },
+  "sectionTitle": "Procédures de chirurgie robotique disponibles",
+  "treatments": {
+    "cancer": {
+      "title": "Chirurgie robotique du cancer",
+      "description": "La chirurgie robotique du cancer en Inde permet une ablation précise des tumeurs avec des dommages minimes aux tissus environnants, améliorant les résultats dans les cancers de la prostate, colorectal, gynécologique et de la tête et du cou."
+    },
+    "urology": {
+      "title": "Chirurgie urologique robotique",
+      "description": "Les chirurgies robotiques de la prostate et du rein en Inde offrent une précision supérieure, de meilleurs résultats de continence et des séjours hospitaliers plus courts pour les patients atteints de conditions urologiques."
+    },
+    "gynecology": {
+      "title": "Chirurgie gynécologique robotique",
+      "description": "Les chirurgies robotiques d'hystérectomie et de cancer gynécologique en Inde offrent des cicatrices minimales, une douleur réduite et un retour plus rapide à la vie normale."
+    },
+    "cardiac": {
+      "title": "Chirurgie cardiaque robotique",
+      "description": "La chirurgie cardiaque robotique en Inde permet des procédures cardiaques complexes par de petites incisions, réduisant le traumatisme et accélérant la récupération."
+    },
+    "gi": {
+      "title": "Chirurgie gastro-intestinale robotique",
+      "description": "Les chirurgies gastro-intestinales robotiques en Inde améliorent la précision dans les procédures colorectal et abdominal, garantissant de meilleures marges chirurgicales et le confort du patient."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Qu'est-ce que la chirurgie robotique et en quoi diffère-t-elle de la chirurgie traditionnelle ?",
+      "answer": "La chirurgie robotique utilise des systèmes robotiques avancés contrôlés par des chirurgiens pour effectuer des procédures avec une précision plus élevée, des incisions plus petites, moins de perte de sang et une récupération plus rapide par rapport à la chirurgie ouverte traditionnelle."
+    },
+    "q2": {
+      "question": "Pourquoi les patients internationaux choisissent-ils l'Inde pour la chirurgie robotique ?",
+      "answer": "L'Inde offre une chirurgie robotique avancée dans plusieurs spécialités avec des chirurgiens expérimentés, des plateformes robotiques modernes et des coûts considérablement inférieurs par rapport à l'Europe et au Moyen-Orient."
+    },
+    "q3": {
+      "question": "Quels types de chirurgies robotiques sont disponibles en Inde ?",
+      "answer": "La chirurgie robotique en Inde est couramment utilisée pour la chirurgie du cancer, l'urologie, la gynécologie, la chirurgie cardiaque, la chirurgie gastro-intestinale et le remplacement articulaire."
+    },
+    "q4": {
+      "question": "La chirurgie robotique est-elle sûre pour les patients internationaux ?",
+      "answer": "Oui. Les chirurgies robotiques en Inde sont réalisées dans les principaux hôpitaux en utilisant des protocoles mondialement acceptés, une technologie avancée et des chirurgiens robotiques hautement formés."
+    },
+    "q5": {
+      "question": "Comment Panacea Medcare soutient-il les patients en chirurgie robotique ?",
+      "answer": "Panacea Medcare aide à la sélection du chirurgien, à la planification du traitement, à la coordination hospitalière, aux arrangements de voyage et au suivi post-chirurgie pour les patients internationaux."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

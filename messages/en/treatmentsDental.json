@@ -1,0 +1,48 @@
+{
+  "title": "Dental Care & Cosmetic Dentistry in India",
+  "intro": "High-quality dental treatments in India at global standards with expert dentists, modern dental technology, and comprehensive oral care. Panacea Medcare connects patients to leading dental clinics for all dental and cosmetic dentistry needs.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "dental": "Dental Care"
+  },
+  "sectionTitle": "Available Dental Treatments",
+  "treatments": {
+    "implants": {
+      "title": "Dental Implants",
+      "description": "Advanced dental implant procedures in India with high-quality implants, expert oral surgeons, and comprehensive implant restoration services."
+    },
+    "rehabilitation": {
+      "title": "Full Mouth Rehabilitation",
+      "description": "Complete full mouth reconstruction in India including implants, crowns, bridges, and veneers for comprehensive dental restoration."
+    },
+    "smile": {
+      "title": "Smile Design",
+      "description": "Cosmetic smile design in India with porcelain veneers, teeth whitening, and digital smile planning for aesthetic dental enhancement."
+    },
+    "crowns": {
+      "title": "Zirconia & Ceramic Crowns",
+      "description": "High-quality ceramic and zirconia crowns in India for durable, natural-looking tooth restoration with excellent aesthetics."
+    },
+    "rootCanal": {
+      "title": "Root Canal Treatment",
+      "description": "Advanced root canal therapy in India using modern techniques and equipment for pain-free treatment and tooth preservation."
+    },
+    "whitening": {
+      "title": "Teeth Whitening",
+      "description": "Professional teeth whitening in India including in-office and take-home whitening systems for bright, white smiles."
+    },
+    "pediatric": {
+      "title": "Paediatric Dentistry",
+      "description": "Child-friendly dental care in India with specialized pediatric dentists and gentle treatment approaches for children."
+    },
+    "oral": {
+      "title": "Oral & Maxillofacial Surgery",
+      "description": "Expert oral and maxillofacial surgery in India for wisdom teeth removal, jaw surgery, and facial reconstruction procedures."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "title": "Gastro-entérologie et hépatologie en Inde",
+  "intro": "Soins digestifs et hépatiques avancés en Inde avec des gastro-entérologues, des hépatologues et des installations endoscopiques de pointe. Panacea Medcare connecte les patients internationaux aux principaux centres de soins GI et hépatiques.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "gastroenterology": "Gastro-entérologie et hépatologie"
+  },
+  "sectionTitle": "Traitements disponibles",
+  "treatments": {
+    "liver": {
+      "title": "Gestion des maladies du foie et de la cirrhose",
+      "description": "Le traitement complet des maladies du foie en Inde comprend la gestion avancée de la cirrhose, de l'hépatite et de l'insuffisance hépatique avec des équipes d'hépatologie expertes et des installations de pointe."
+    },
+    "endoscopy": {
+      "title": "Endoscopie avancée et coloscopie",
+      "description": "L'Inde offre des procédures endoscopiques avancées, notamment la coloscopie, l'endoscopie digestive haute et l'endoscopie thérapeutique pour le diagnostic et le traitement des troubles digestifs."
+    },
+    "ercp": {
+      "title": "ERCP et EUS",
+      "description": "Les procédures de cholangiopancréatographie rétrograde endoscopique (ERCP) et d'échographie endoscopique (EUS) en Inde fournissent un diagnostic et un traitement précis des maladies pancréatiques et biliaires."
+    },
+    "ibd": {
+      "title": "Traitement de la maladie inflammatoire de l'intestin (MII)",
+      "description": "Le traitement spécialisé de la MII en Inde comprend la gestion de la maladie de Crohn et de la colite ulcéreuse avec des médicaments avancés, des biologiques et des options chirurgicales si nécessaire."
+    },
+    "cancer": {
+      "title": "Chirurgie du cancer gastro-intestinal",
+      "description": "La chirurgie experte du cancer GI en Inde comprend le traitement des cancers œsophagiens, gastriques, colorectaux et pancréatiques en utilisant des techniques mini-invasives et robotiques."
+    },
+    "bariatric": {
+      "title": "Chirurgie bariatrique et métabolique",
+      "description": "La chirurgie bariatrique en Inde aide les patients à atteindre une perte de poids significative et à gérer des conditions métaboliques comme le diabète de type 2 avec des taux de succès élevés et un soutien complet."
+    },
+    "pancreas": {
+      "title": "Traitement des troubles pancréatiques",
+      "description": "Le traitement des troubles pancréatiques en Inde comprend la gestion de la pancréatite, des tumeurs pancréatiques et de l'insuffisance pancréatique avec des équipes expertes en gastro-entérologie et chirurgie."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

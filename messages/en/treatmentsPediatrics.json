@@ -1,0 +1,40 @@
+{
+  "title": "Paediatrics & Paediatric Surgery in India",
+  "intro": "Specialized care for children in India with expert pediatricians, pediatric surgeons, and child-friendly hospitals. Panacea Medcare connects families to leading pediatric centers for comprehensive children's healthcare.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "pediatrics": "Paediatrics & Paediatric Surgery"
+  },
+  "sectionTitle": "Available Treatments",
+  "treatments": {
+    "cardiac": {
+      "title": "Paediatric Cardiac Surgery",
+      "description": "Expert pediatric cardiac surgery in India for congenital heart defects with excellent outcomes, specialized pediatric cardiac ICUs, and compassionate care for children."
+    },
+    "oncology": {
+      "title": "Paediatric Oncology & BMT",
+      "description": "Comprehensive pediatric cancer treatment and bone marrow transplantation in India with specialized pediatric oncology teams and dedicated care for children."
+    },
+    "nicu": {
+      "title": "Neonatal Intensive Care (NICU)",
+      "description": "Advanced NICU facilities in India for premature and critically ill newborns with experienced neonatologists and state-of-the-art life support systems."
+    },
+    "congenital": {
+      "title": "Congenital Defect Correction",
+      "description": "Expert correction of congenital defects in children including cleft lip/palate, congenital heart defects, and other birth anomalies with multidisciplinary teams."
+    },
+    "neurology": {
+      "title": "Paediatric Neurology & Neurosurgery",
+      "description": "Specialized pediatric neurology and neurosurgery in India for brain tumors, epilepsy, spina bifida, and other neurological conditions in children."
+    },
+    "growth": {
+      "title": "Growth & Development Disorders",
+      "description": "Comprehensive management of growth and development disorders in children including growth hormone therapy, developmental delays, and endocrine disorders."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

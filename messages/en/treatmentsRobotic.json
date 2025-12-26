@@ -1,0 +1,59 @@
+{
+  "title": "Robotic Surgery in India",
+  "intro": "India is a global hub for robotic surgery, offering high-precision, minimally invasive procedures across multiple specialties with faster recovery and reduced complications for international patients.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "robotic": "Robotic Surgery"
+  },
+  "sectionTitle": "Available Robotic Surgery Procedures",
+  "treatments": {
+    "cancer": {
+      "title": "Robotic Cancer Surgery",
+      "description": "Robotic cancer surgery in India allows precise tumor removal with minimal damage to surrounding tissues, improving outcomes in prostate, colorectal, gynecological, and head & neck cancers."
+    },
+    "urology": {
+      "title": "Robotic Urology Surgery",
+      "description": "Robotic prostate and kidney surgeries in India offer superior precision, better continence outcomes, and shorter hospital stays for patients with urological conditions."
+    },
+    "gynecology": {
+      "title": "Robotic Gynecological Surgery",
+      "description": "Robotic hysterectomy and gynecologic cancer surgeries in India provide minimal scarring, reduced pain, and faster return to normal life."
+    },
+    "cardiac": {
+      "title": "Robotic Cardiac Surgery",
+      "description": "Robotic heart surgery in India enables complex cardiac procedures through small incisions, reducing trauma and speeding up recovery."
+    },
+    "gi": {
+      "title": "Robotic Gastrointestinal Surgery",
+      "description": "Robotic GI surgeries in India improve precision in colorectal and abdominal procedures, ensuring better surgical margins and patient comfort."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What is robotic surgery and how is it different from traditional surgery?",
+      "answer": "Robotic surgery uses advanced robotic systems controlled by surgeons to perform procedures with higher precision, smaller incisions, less blood loss, and faster recovery compared to traditional open surgery."
+    },
+    "q2": {
+      "question": "Why do international patients choose India for robotic surgery?",
+      "answer": "India offers advanced robotic surgery across multiple specialties with experienced surgeons, modern robotic platforms, and significantly lower costs compared to Europe and the Middle East."
+    },
+    "q3": {
+      "question": "What types of robotic surgeries are available in India?",
+      "answer": "Robotic surgery in India is commonly used for cancer surgery, urology, gynecology, cardiac surgery, gastrointestinal surgery, and joint replacement."
+    },
+    "q4": {
+      "question": "Is robotic surgery safe for international patients?",
+      "answer": "Yes. Robotic surgeries in India are performed at leading hospitals using globally accepted protocols, advanced technology, and highly trained robotic surgeons."
+    },
+    "q5": {
+      "question": "How does Panacea Medcare support robotic surgery patients?",
+      "answer": "Panacea Medcare assists with surgeon selection, treatment planning, hospital coordination, travel arrangements, and post-surgery follow-up for international patients."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "title": "Cardiac Treatments in India",
+  "intro": "India is a global destination for advanced cardiac care, offering internationally trained heart specialists, cutting-edge technology, and excellent success rates. Panacea Medcare connects global patients to leading Indian hospitals for safe, affordable, and timely heart treatments.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "cardiac": "Cardiac Sciences"
+  },
+  "sectionTitle": "Available Cardiac Treatments",
+  "treatments": {
+    "cabg": {
+      "title": "Coronary Artery Bypass Grafting (CABG)",
+      "description": "CABG surgery in India is performed using advanced techniques, including minimally invasive and off-pump methods, to restore blood flow to the heart, reduce symptoms of heart disease, and significantly improve long-term survival."
+    },
+    "angiography": {
+      "title": "Angiography & Angioplasty (Stent Placement)",
+      "description": "Indian hospitals offer world-class angiography and angioplasty using the latest drug-eluting stents, ensuring precise blockage detection, rapid intervention, shorter hospital stays, and excellent outcomes for patients with coronary artery disease."
+    },
+    "valve": {
+      "title": "Heart Valve Repair & Replacement",
+      "description": "Heart valve surgeries in India include mechanical and tissue valve options, performed through open, minimally invasive, or catheter-based approaches, ensuring improved heart function, durability, and faster recovery for international patients."
+    },
+    "robotic": {
+      "title": "Minimally Invasive & Robotic Cardiac Surgery",
+      "description": "Minimally invasive and robotic cardiac surgeries in India provide high surgical precision with smaller incisions, reduced blood loss, less pain, and quicker recovery, making them ideal for complex heart procedures."
+    },
+    "pediatric": {
+      "title": "Pediatric Cardiac Surgery",
+      "description": "India is highly trusted for pediatric heart surgery, offering advanced correction of congenital heart defects with excellent survival rates, specialized pediatric ICUs, and compassionate care for infants and children."
+    },
+    "pacemaker": {
+      "title": "Pacemaker & ICD Implantation",
+      "description": "Pacemaker and ICD implantation in India helps regulate abnormal heart rhythms using advanced devices, improving quality of life and preventing life-threatening cardiac events under expert electrophysiology care."
+    },
+    "heartFailure": {
+      "title": "Heart Failure Management",
+      "description": "Comprehensive heart failure treatment in India includes advanced medications, device therapy, lifestyle management, and surgical options, delivered by multidisciplinary cardiac teams to improve heart function and long-term outcomes."
+    },
+    "tavi": {
+      "title": "TAVI / TAVR (Transcatheter Aortic Valve Replacement)",
+      "description": "TAVI/TAVR in India offers a minimally invasive solution for high-risk patients with aortic valve disease, allowing faster recovery, reduced hospital stay, and excellent clinical results without open-heart surgery."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why do patients from Africa and the Middle East choose India for heart treatment?",
+      "answer": "India offers advanced cardiac technology, internationally trained heart surgeons, shorter waiting times, and significantly affordable treatment compared to Europe and Gulf countries, with excellent success rates."
+    },
+    "q2": {
+      "question": "What heart treatments are commonly performed in India?",
+      "answer": "India provides CABG bypass surgery, angioplasty with stents, valve replacement, minimally invasive and robotic heart surgery, pacemaker implantation, and pediatric cardiac surgery."
+    },
+    "q3": {
+      "question": "Is heart surgery in India safe for international patients?",
+      "answer": "Yes. Leading Indian hospitals follow international safety protocols, have NABH/JCI accreditations, and perform thousands of successful heart surgeries every year for global patients."
+    },
+    "q4": {
+      "question": "How long is the hospital stay for cardiac surgery in India?",
+      "answer": "Hospital stay typically ranges from 5 to 10 days, depending on the procedure, followed by a short recovery period before patients can safely return home."
+    },
+    "q5": {
+      "question": "Is cardiac treatment in India affordable compared to Europe or the Middle East?",
+      "answer": "Yes. Heart treatment in India is significantly more affordable while maintaining international standards, making it a preferred destination for patients seeking high-quality yet cost-effective care."
+    },
+    "q6": {
+      "question": "Can Panacea Medcare help with visas, travel, and hospital coordination?",
+      "answer": "Absolutely. Panacea Medcare provides end-to-end support including medical visa assistance, hospital selection, treatment coordination, accommodation, and post-treatment follow-up."
+    },
+    "q7": {
+      "question": "Are minimally invasive and robotic heart surgeries available in India?",
+      "answer": "Yes. Many leading hospitals in India offer minimally invasive and robotic cardiac surgery, resulting in less pain, smaller scars, faster recovery, and improved outcomes."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Orthopédie et remplacement articulaire en Inde",
+  "intro": "L'Inde est une destination préférée pour le traitement orthopédique, offrant un remplacement articulaire avancé, des soins pour blessures sportives et une chirurgie de la colonne vertébrale avec récupération plus rapide et d'excellents résultats pour les patients internationaux.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "orthopedics": "Orthopédie"
+  },
+  "sectionTitle": "Traitements orthopédiques disponibles",
+  "treatments": {
+    "knee": {
+      "title": "Chirurgie de remplacement du genou",
+      "description": "Le remplacement du genou en Inde utilise des implants avancés et une assistance robotique pour soulager la douleur, restaurer la mobilité et assurer une durabilité à long terme avec un séjour hospitalier minimal."
+    },
+    "hip": {
+      "title": "Chirurgie de remplacement de la hanche",
+      "description": "Les chirurgies de remplacement de la hanche en Inde sont réalisées à l'aide de techniques mini-invasives, permettant une rééducation plus rapide et d'excellents résultats fonctionnels pour les patients âgés et jeunes."
+    },
+    "robotic": {
+      "title": "Remplacement articulaire robotique",
+      "description": "Le remplacement articulaire assisté par robot en Inde assure un placement précis de l'implant, un meilleur alignement, une réduction de la douleur et une récupération plus rapide pour les patients atteints d'arthrite du genou et de la hanche."
+    },
+    "spine": {
+      "title": "Chirurgie de la colonne vertébrale",
+      "description": "Les centres de la colonne vertébrale indiens offrent des chirurgies mini-invasives et complexes de la colonne vertébrale pour les maladies discales, les déformations et la compression nerveuse avec imagerie avancée et neuro-monitoring."
+    },
+    "sports": {
+      "title": "Blessures sportives et arthroscopie",
+      "description": "La médecine du sport en Inde fournit un traitement arthroscopique pour les blessures des ligaments, du cartilage et de l'épaule, permettant aux athlètes et aux personnes actives de retourner à une activité normale plus rapidement."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi les patients internationaux choisissent-ils l'Inde pour la chirurgie de remplacement articulaire ?",
+      "answer": "L'Inde offre une chirurgie de remplacement articulaire avancée utilisant des implants modernes et une technologie robotique à des coûts abordables, avec une récupération plus rapide et d'excellents résultats à long terme."
+    },
+    "q2": {
+      "question": "Quelles chirurgies orthopédiques sont couramment pratiquées en Inde ?",
+      "answer": "Les procédures courantes comprennent le remplacement du genou, le remplacement de la hanche, la chirurgie articulaire robotique, la chirurgie de la colonne vertébrale et le traitement arthroscopique des blessures sportives."
+    },
+    "q3": {
+      "question": "Combien de temps dure la récupération après une chirurgie de remplacement articulaire en Inde ?",
+      "answer": "La plupart des patients commencent à marcher dans 1 à 2 jours après la chirurgie et peuvent rentrer en toute sécurité dans les 2 à 3 semaines avec une rééducation appropriée."
+    },
+    "q4": {
+      "question": "La physiothérapie est-elle fournie après la chirurgie orthopédique ?",
+      "answer": "Oui. Les hôpitaux indiens fournissent des programmes structurés de physiothérapie et de réadaptation pour assurer une récupération sûre et une mobilité à long terme."
+    },
+    "q5": {
+      "question": "Panacea Medcare assiste-t-il avec les soins post-chirurgicaux ?",
+      "answer": "Oui. Panacea Medcare coordonne la physiothérapie, les consultations de suivi et la planification de la récupération même après que les patients rentrent chez eux."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "title": "Aesthetic, Cosmetic & Plastic Surgery in India",
+  "intro": "Safe, ethical, and globally trusted cosmetic care in India with board-certified plastic surgeons, modern facilities, and comprehensive aesthetic services. Panacea Medcare provides discreet coordination for all cosmetic procedures.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "aesthetic": "Aesthetic & Cosmetic Surgery"
+  },
+  "sectionTitle": "Available Aesthetic Treatments",
+  "treatments": {
+    "rhinoplasty": {
+      "title": "Rhinoplasty (Nose Reshaping)",
+      "description": "Expert rhinoplasty in India for nasal reshaping and correction with natural-looking results and comprehensive pre and post-operative care."
+    },
+    "liposuction": {
+      "title": "Liposuction",
+      "description": "Advanced liposuction procedures in India using modern techniques for body contouring and fat removal with minimal scarring and faster recovery."
+    },
+    "tummyTuck": {
+      "title": "Tummy Tuck (Abdominoplasty)",
+      "description": "Abdominoplasty in India for abdominal contouring and muscle tightening with expert plastic surgeons and excellent aesthetic outcomes."
+    },
+    "breast": {
+      "title": "Breast Augmentation / Reduction",
+      "description": "Breast enhancement and reduction surgery in India with safe implants, natural results, and personalized treatment plans."
+    },
+    "gynecomastia": {
+      "title": "Gynecomastia Surgery",
+      "description": "Male breast reduction surgery in India for gynecomastia with minimally invasive techniques and excellent cosmetic results."
+    },
+    "facelift": {
+      "title": "Face Lift & Neck Lift",
+      "description": "Advanced facial rejuvenation in India including facelift and neck lift procedures for natural-looking anti-aging results."
+    },
+    "botox": {
+      "title": "Botox & Dermal Fillers",
+      "description": "Non-surgical cosmetic treatments in India including Botox injections and dermal fillers for wrinkle reduction and facial enhancement."
+    },
+    "hair": {
+      "title": "Hair Transplant (FUE / FUT)",
+      "description": "Advanced hair transplant in India using FUE and FUT techniques with natural hairline design and high graft survival rates."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -3,17 +3,8 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import QuoteForm from "./QuoteForm";
-import {
-    Heart,
-    Brain,
-    Bone,
-    Eye,
-    Activity,
-    Stethoscope,
-    Scissors,
-    Wind
-} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import Image from "next/image";
 
 export default function LowestQuotesAssured({ locale }) {
     const t = useTranslations("lowestQuotes");
@@ -22,18 +13,18 @@ export default function LowestQuotesAssured({ locale }) {
     const [selectedTreatment, setSelectedTreatment] = useState("");
 
     const treatments = [
-        { id: "knee-replacement", icon: Bone },
-        { id: "hip-replacement", icon: Bone },
-        { id: "brain-tumor", icon: Brain },
-        { id: "heart-bypass", icon: Heart },
-        { id: "valve-replacement", icon: Heart },
-        { id: "breast-cancer", icon: Activity },
-        { id: "lung-cancer", icon: Wind },
-        { id: "rhinoplasty", icon: Scissors },
-        { id: "breast-implants", icon: Scissors },
-        { id: "hair-transplant", icon: Scissors },
-        { id: "cervical-cancer", icon: Activity },
-        { id: "hysterectomy", icon: Stethoscope },
+        { id: "knee-replacement", svg: "/pack/knee-replacement.svg" },
+        { id: "hip-replacement", svg: "/pack/hip-replacement.svg" },
+        { id: "brain-tumor", svg: "/pack/brain-tumor.svg" },
+        { id: "heart-bypass", svg: "/pack/heart-bypass-surgery.svg" },
+        { id: "valve-replacement", svg: "/pack/valve-replacement.svg" },
+        { id: "breast-cancer", svg: "/pack/breast-cancer.svg" },
+        { id: "lung-cancer", svg: "/pack/lung-cancer.svg" },
+        { id: "rhinoplasty", svg: "/pack/rhinoplasty.svg" },
+        { id: "breast-implants", svg: "/pack/breast-implants.svg" },
+        { id: "hair-transplant", svg: "/pack/hair-transplant.svg" },
+        { id: "cervical-cancer", svg: "/pack/cervical-cancer.svg" },
+        { id: "hysterectomy", svg: "/pack/hysterectomy.svg" },
     ];
 
     const handleGetQuote = (treatment) => {
@@ -65,15 +56,20 @@ export default function LowestQuotesAssured({ locale }) {
                 {/* Treatment Cards Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-2 mb-12">
                     {treatments.map((treatment, idx) => {
-                        const IconComponent = treatment.icon;
                         return (
                             <div
                                 key={idx}
                                 className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200"
                             >
                                 {/* Icon */}
-                                <div className="w-14 h-14 bg-panacea-light rounded-full flex items-center justify-center mb-4 group-hover:bg-panacea-primary/10 transition-colors duration-300">
-                                    <IconComponent className="w-7 h-7 text-panacea-primary" />
+                                <div className="w-16 h-16 bg-panacea-light rounded-full flex items-center justify-center mb-4 group-hover:bg-panacea-primary/10 transition-colors duration-300">
+                                    <Image
+                                        src={treatment.svg}
+                                        alt={t(`treatments.${treatment.id}`)}
+                                        width={40}
+                                        height={40}
+                                        className="w-12 h-12 object-contain"
+                                    />
                                 </div>
 
                                 {/* Treatment Name */}

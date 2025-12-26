@@ -1,0 +1,44 @@
+{
+  "title": "Gastroenterology & Hepatology in India",
+  "intro": "Advanced digestive and liver care in India with expert gastroenterologists, hepatologists, and state-of-the-art endoscopic facilities. Panacea Medcare connects international patients to leading GI and liver care centers.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "gastroenterology": "Gastroenterology & Hepatology"
+  },
+  "sectionTitle": "Available Treatments",
+  "treatments": {
+    "liver": {
+      "title": "Liver Disease & Cirrhosis Management",
+      "description": "Comprehensive liver disease treatment in India includes advanced management of cirrhosis, hepatitis, and liver failure with expert hepatology teams and state-of-the-art facilities."
+    },
+    "endoscopy": {
+      "title": "Advanced Endoscopy & Colonoscopy",
+      "description": "India offers advanced endoscopic procedures including colonoscopy, upper GI endoscopy, and therapeutic endoscopy for diagnosis and treatment of digestive disorders."
+    },
+    "ercp": {
+      "title": "ERCP & EUS",
+      "description": "Endoscopic Retrograde Cholangiopancreatography (ERCP) and Endoscopic Ultrasound (EUS) procedures in India provide precise diagnosis and treatment of pancreatic and biliary diseases."
+    },
+    "ibd": {
+      "title": "Inflammatory Bowel Disease (IBD) Treatment",
+      "description": "Specialized IBD treatment in India includes management of Crohn's disease and ulcerative colitis with advanced medications, biologics, and surgical options when needed."
+    },
+    "cancer": {
+      "title": "Gastrointestinal Cancer Surgery",
+      "description": "Expert GI cancer surgery in India includes treatment for esophageal, gastric, colorectal, and pancreatic cancers using minimally invasive and robotic techniques."
+    },
+    "bariatric": {
+      "title": "Bariatric & Metabolic Surgery",
+      "description": "Bariatric surgery in India helps patients achieve significant weight loss and manage metabolic conditions like type 2 diabetes with high success rates and comprehensive support."
+    },
+    "pancreas": {
+      "title": "Pancreatic Disorders Treatment",
+      "description": "Pancreatic disorder treatment in India includes management of pancreatitis, pancreatic tumors, and pancreatic insufficiency with expert gastroenterology and surgical teams."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

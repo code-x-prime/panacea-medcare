@@ -1,0 +1,71 @@
+{
+  "title": "Ayurveda et bien-être holistique en Inde",
+  "intro": "Programmes authentiques d'Ayurveda et de bien-être holistique en Inde pour maladie chronique, gestion du stress, récupération et bien-être général. Panacea Medcare connecte les patients aux centres ayurvédiques accrédités pour guérison naturelle complète.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "ayurveda": "Ayurveda et bien-être holistique"
+  },
+  "sectionTitle": "Traitements ayurvédiques disponibles",
+  "treatments": {
+    "panchakarma": {
+      "title": "Thérapie de désintoxication Panchakarma",
+      "description": "Désintoxication Panchakarma authentique en Inde avec thérapies de nettoyage ayurvédiques traditionnelles pour restauration globale de la santé et du bien-être."
+    },
+    "arthritis": {
+      "title": "Traitement ayurvédique de l'arthrite et des douleurs articulaires",
+      "description": "Traitement ayurvédique naturel de l'arthrite et des douleurs articulaires en Inde utilisant médecines à base de plantes, huiles thérapeutiques et modifications du mode de vie."
+    },
+    "chronicPain": {
+      "title": "Gestion de la douleur chronique et des troubles de la colonne vertébrale",
+      "description": "Gestion ayurvédique de la douleur chronique et des troubles spinaux en Inde avec traitements spécialisés incluant Abhyanga, Kati Basti et massages thérapeutiques."
+    },
+    "digestive": {
+      "title": "Traitement des troubles digestifs",
+      "description": "Traitement ayurvédique des troubles digestifs en Inde, notamment SII, gastrite et autres conditions gastro-intestinales avec remèdes naturels et conseils diététiques."
+    },
+    "diabetes": {
+      "title": "Gestion du diabète et des maladies liées au mode de vie",
+      "description": "Gestion holistique ayurvédique du diabète et des maladies liées au mode de vie en Inde avec médecines à base de plantes, thérapie diététique et modifications du mode de vie."
+    },
+    "stress": {
+      "title": "Gestion du stress, de l'anxiété et des troubles du sommeil",
+      "description": "Traitements ayurvédiques du stress, de l'anxiété et des troubles du sommeil en Inde avec Shirodhara, méditation et programmes de bien-être personnalisés."
+    },
+    "integrative": {
+      "title": "Soins intégratifs (Ayurveda avec médecine moderne)",
+      "description": "Soins de santé intégratifs en Inde combinant Ayurveda avec médecine moderne pour traitement complet et résultats de récupération optimaux."
+    },
+    "wellness": {
+      "title": "Retraites de bien-être et programmes de guérison",
+      "description": "Retraites de bien-être ayurvédiques en Inde offrant guérison holistique, thérapies de rajeunissement et programmes de bien-être complets pour patients internationaux."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Qu'est-ce que l'Ayurveda et comment peut-il aider à guérir ?",
+      "answer": "L'Ayurveda est un système médical indien ancien qui se concentre sur le traitement de la cause racine de la maladie grâce à thérapies naturelles, correction du mode de vie, médecines à base de plantes et désintoxication."
+    },
+    "q2": {
+      "question": "Pourquoi les patients d'Afrique et du Moyen-Orient choisissent-ils l'Ayurveda en Inde ?",
+      "answer": "L'Inde offre un Ayurveda authentique avec traitements supervisés médicalement, programmes de bien-être personnalisés et méthodes de guérison naturelles non couramment disponibles dans de nombreux pays."
+    },
+    "q3": {
+      "question": "Quelles conditions peuvent être traitées avec l'Ayurveda ?",
+      "answer": "L'Ayurveda est couramment utilisé pour l'arthrite, la douleur chronique, les troubles digestifs, le diabète, le stress, les conditions cutanées, la récupération post-cancer et l'amélioration globale de l'immunité."
+    },
+    "q4": {
+      "question": "L'Ayurveda peut-il être combiné avec un traitement médical moderne ?",
+      "answer": "Oui. De nombreux centres indiens offrent des soins intégratifs où l'Ayurveda soutient le traitement médical moderne, en particulier pour récupération, immunité et bien-être à long terme."
+    },
+    "q5": {
+      "question": "Comment Panacea Medcare assiste-t-il les patients Ayurveda et bien-être ?",
+      "answer": "Panacea Medcare aide à sélectionner des centres ayurvédiques accrédités, planifier des programmes de traitement, organiser le séjour et coordonner les voyages de bien-être pour les patients internationaux."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

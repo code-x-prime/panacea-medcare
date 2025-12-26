@@ -104,11 +104,11 @@ export default function AboutPage({ params }) {
                         <div className="bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-3xl p-8 md:p-12 mb-12 text-white shadow-panacea-lg">
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center`}>
                                 {t("heading") || "About Us"}
-                            </h2>
+                    </h2>
                             <p className={`text-lg md:text-xl text-white/90 leading-relaxed text-center max-w-4xl mx-auto ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("intro") || "Panacea Health is a premier medical tourism company with a distinguished track record spanning over 14 years. Specializing in providing world-class healthcare services to international patients, Panacea Health has established itself as a leader in the industry."}
-                            </p>
-                        </div>
+                    </p>
+                </div>
 
                         <div className={`grid md:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 ${isRTL ? "flex-row-reverse" : ""}`}>
                             {/* Group Photo */}
@@ -350,7 +350,7 @@ export default function AboutPage({ params }) {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                             </svg>
-                        </div>
+                    </div>
                         <h3 className="text-2xl font-bold mb-4">{t("vision") || "Vision"}</h3>
                         <p className="text-white/90 leading-relaxed">{t("visionText") || "To be the global leader in medical tourism, renowned for transforming lives through exceptional healthcare experiences."}</p>
                     </div>

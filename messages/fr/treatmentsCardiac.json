@@ -1,0 +1,79 @@
+{
+  "title": "Traitements cardiaques en Inde",
+  "intro": "L'Inde est une destination mondiale pour les soins cardiaques avancés, offrant des spécialistes cardiaques formés internationalement, une technologie de pointe et d'excellents taux de succès. Panacea Medcare connecte les patients du monde entier aux principaux hôpitaux indiens pour des traitements cardiaques sûrs, abordables et opportuns.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "cardiac": "Sciences cardiaques"
+  },
+  "sectionTitle": "Traitements cardiaques disponibles",
+  "treatments": {
+    "cabg": {
+      "title": "Pontage aorto-coronarien (CABG)",
+      "description": "La chirurgie CABG en Inde est réalisée à l'aide de techniques avancées, notamment des méthodes mini-invasives et sans pompe, pour rétablir le flux sanguin vers le cœur, réduire les symptômes des maladies cardiaques et améliorer considérablement la survie à long terme."
+    },
+    "angiography": {
+      "title": "Angiographie et angioplastie (pose de stent)",
+      "description": "Les hôpitaux indiens offrent une angiographie et une angioplastie de classe mondiale utilisant les derniers stents à libération de médicament, garantissant une détection précise des blocages, une intervention rapide, des séjours hospitaliers plus courts et d'excellents résultats pour les patients atteints de maladie coronarienne."
+    },
+    "valve": {
+      "title": "Réparation et remplacement des valves cardiaques",
+      "description": "Les chirurgies des valves cardiaques en Inde incluent des options de valves mécaniques et tissulaires, réalisées par des approches ouvertes, mini-invasives ou par cathéter, garantissant une fonction cardiaque améliorée, une durabilité et une récupération plus rapide pour les patients internationaux."
+    },
+    "robotic": {
+      "title": "Chirurgie cardiaque mini-invasive et robotique",
+      "description": "Les chirurgies cardiaques mini-invasives et robotiques en Inde offrent une grande précision chirurgicale avec des incisions plus petites, une perte de sang réduite, moins de douleur et une récupération plus rapide, ce qui les rend idéales pour les procédures cardiaques complexes."
+    },
+    "pediatric": {
+      "title": "Chirurgie cardiaque pédiatrique",
+      "description": "L'Inde est très fiable pour la chirurgie cardiaque pédiatrique, offrant une correction avancée des malformations cardiaques congénitales avec d'excellents taux de survie, des unités de soins intensifs pédiatriques spécialisées et des soins compatissants pour les nourrissons et les enfants."
+    },
+    "pacemaker": {
+      "title": "Implantation de stimulateur cardiaque et de DAI",
+      "description": "L'implantation de stimulateur cardiaque et de DAI en Inde aide à réguler les rythmes cardiaques anormaux en utilisant des appareils avancés, améliorant la qualité de vie et prévenant les événements cardiaques potentiellement mortels sous les soins experts d'électrophysiologie."
+    },
+    "heartFailure": {
+      "title": "Gestion de l'insuffisance cardiaque",
+      "description": "Le traitement complet de l'insuffisance cardiaque en Inde comprend des médicaments avancés, une thérapie par dispositif, une gestion du mode de vie et des options chirurgicales, dispensés par des équipes cardiaques multidisciplinaires pour améliorer la fonction cardiaque et les résultats à long terme."
+    },
+    "tavi": {
+      "title": "TAVI / TAVR (Remplacement valvulaire aortique par cathéter)",
+      "description": "TAVI/TAVR en Inde offre une solution mini-invasive pour les patients à haut risque atteints de maladie valvulaire aortique, permettant une récupération plus rapide, une réduction de la durée d'hospitalisation et d'excellents résultats cliniques sans chirurgie à cœur ouvert."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi les patients d'Afrique et du Moyen-Orient choisissent-ils l'Inde pour le traitement cardiaque ?",
+      "answer": "L'Inde offre une technologie cardiaque avancée, des chirurgiens cardiaques formés internationalement, des temps d'attente plus courts et un traitement considérablement abordable par rapport à l'Europe et aux pays du Golfe, avec d'excellents taux de succès."
+    },
+    "q2": {
+      "question": "Quels traitements cardiaques sont couramment pratiqués en Inde ?",
+      "answer": "L'Inde fournit la chirurgie de pontage CABG, l'angioplastie avec stents, le remplacement valvulaire, la chirurgie cardiaque mini-invasive et robotique, l'implantation de stimulateur cardiaque et la chirurgie cardiaque pédiatrique."
+    },
+    "q3": {
+      "question": "La chirurgie cardiaque en Inde est-elle sûre pour les patients internationaux ?",
+      "answer": "Oui. Les principaux hôpitaux indiens suivent des protocoles de sécurité internationaux, ont des accréditations NABH/JCI et réalisent des milliers de chirurgies cardiaques réussies chaque année pour les patients du monde entier."
+    },
+    "q4": {
+      "question": "Quelle est la durée du séjour à l'hôpital pour la chirurgie cardiaque en Inde ?",
+      "answer": "Le séjour à l'hôpital varie généralement de 5 à 10 jours, selon la procédure, suivi d'une courte période de récupération avant que les patients puissent rentrer en toute sécurité."
+    },
+    "q5": {
+      "question": "Le traitement cardiaque en Inde est-il abordable par rapport à l'Europe ou au Moyen-Orient ?",
+      "answer": "Oui. Le traitement cardiaque en Inde est considérablement plus abordable tout en maintenant des normes internationales, ce qui en fait une destination préférée pour les patients recherchant des soins de haute qualité mais rentables."
+    },
+    "q6": {
+      "question": "Panacea Medcare peut-il aider avec les visas, les voyages et la coordination hospitalière ?",
+      "answer": "Absolument. Panacea Medcare fournit un soutien de bout en bout, notamment l'assistance pour les visas médicaux, la sélection d'hôpitaux, la coordination des traitements, l'hébergement et le suivi post-traitement."
+    },
+    "q7": {
+      "question": "Les chirurgies cardiaques mini-invasives et robotiques sont-elles disponibles en Inde ?",
+      "answer": "Oui. De nombreux hôpitaux indiens de premier plan offrent une chirurgie cardiaque mini-invasive et robotique, entraînant moins de douleur, des cicatrices plus petites, une récupération plus rapide et de meilleurs résultats."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

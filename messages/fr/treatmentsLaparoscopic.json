@@ -1,0 +1,48 @@
+{
+  "title": "Chirurgie laparoscopique en Inde",
+  "intro": "La chirurgie laparoscopique mini-invasive en Inde offre des incisions plus petites, une récupération plus rapide, moins de douleur et des cicatrices réduites par rapport à la chirurgie ouverte traditionnelle. Panacea Medcare connecte les patients aux chirurgiens laparoscopiques experts dans plusieurs spécialités.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "laparoscopic": "Chirurgie laparoscopique"
+  },
+  "sectionTitle": "Procédures laparoscopiques disponibles",
+  "treatments": {
+    "gallbladder": {
+      "title": "Chirurgie laparoscopique de la vésicule biliaire (Cholécystectomie)",
+      "description": "Ablation de la vésicule biliaire mini-invasive en Inde avec des incisions plus petites, une récupération plus rapide et moins de douleur post-opératoire par rapport à la chirurgie ouverte traditionnelle."
+    },
+    "hernia": {
+      "title": "Réparation laparoscopique de hernie",
+      "description": "Réparation experte de hernie laparoscopique en Inde utilisant des techniques de maille avec des cicatrices minimales, une récupération plus rapide et des taux de récidive plus faibles."
+    },
+    "appendix": {
+      "title": "Chirurgie laparoscopique de l'appendice",
+      "description": "L'appendicectomie laparoscopique en Inde offre une ablation sûre de l'appendice avec une invasion minimale, un séjour hospitalier plus court et un retour plus rapide aux activités normales."
+    },
+    "hysterectomy": {
+      "title": "Hystérectomie laparoscopique",
+      "description": "Hystérectomie mini-invasive en Inde avec préservation des tissus environnants, moins de perte de sang et récupération plus rapide par rapport aux procédures ouvertes."
+    },
+    "colorectal": {
+      "title": "Chirurgie laparoscopique colorectal",
+      "description": "Chirurgie laparoscopique colorectal avancée en Inde pour des conditions comme le cancer du côlon, la diverticulite et la maladie inflammatoire de l'intestin avec des résultats améliorés."
+    },
+    "bariatric": {
+      "title": "Chirurgie bariatrique laparoscopique (Perte de poids)",
+      "description": "Procédures bariatriques laparoscopiques en Inde, notamment bypass gastrique et gastrectomie manchon avec des taux de succès élevés pour une perte de poids durable."
+    },
+    "urology": {
+      "title": "Procédures urologiques laparoscopiques",
+      "description": "Chirurgies urologiques mini-invasives en Inde, notamment néphrectomie laparoscopique, chirurgie de la prostate et procédures rénales avec récupération plus rapide."
+    },
+    "cancer": {
+      "title": "Chirurgies laparoscopiques du cancer",
+      "description": "Chirurgie laparoscopique du cancer en Inde pour les cancers gastro-intestinaux, gynécologiques et urologiques avec ablation précise des tumeurs et résultats améliorés."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

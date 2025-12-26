@@ -1,0 +1,55 @@
+{
+  "title": "Greffe de moelle osseuse en Inde",
+  "intro": "L'Inde est l'une des principales destinations mondiales pour la greffe de moelle osseuse, connue pour ses taux de succès élevés, ses équipes de transplantation expérimentées et son contrôle avancé des infections. Panacea Medcare facilite la greffe de moelle osseuse pour les patients d'Afrique, du Moyen-Orient et d'Europe.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "bmt": "Greffe de moelle osseuse"
+  },
+  "sectionTitle": "Procédures de greffe de moelle osseuse disponibles",
+  "treatments": {
+    "autologous": {
+      "title": "Greffe de moelle osseuse autologue",
+      "description": "La greffe de moelle osseuse autologue en Inde utilise les propres cellules souches du patient pour traiter les cancers du sang comme le myélome multiple et le lymphome, garantissant une récupération plus rapide et un risque réduit de rejet."
+    },
+    "allogeneic": {
+      "title": "Greffe de moelle osseuse allogénique",
+      "description": "Les greffes allogéniques en Inde utilisent des cellules souches de donneur compatibles pour traiter la leucémie et les troubles sanguins génétiques, soutenues par une correspondance HLA avancée et des unités de transplantation spécialisées."
+    },
+    "haploidentical": {
+      "title": "Greffe haploidentique",
+      "description": "Les greffes haploidentiques en Inde permettent aux donneurs familiaux partiellement compatibles, élargissant l'accès à la transplantation pour les patients internationaux sans donneurs entièrement compatibles."
+    },
+    "pediatric": {
+      "title": "Greffe de moelle osseuse pédiatrique",
+      "description": "L'Inde offre des programmes spécialisés de greffe de moelle osseuse pédiatrique pour les enfants atteints de leucémie, de thalassémie et de troubles immunitaires, soutenus par des unités de soins intensifs pédiatriques dédiées et des médecins de transplantation expérimentés."
+    }
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi l'Inde est-elle une destination préférée pour la greffe de moelle osseuse ?",
+      "answer": "L'Inde est mondialement reconnue pour ses taux de succès élevés en greffe de moelle osseuse, ses équipes de transplantation expérimentées, son contrôle avancé des infections et son traitement rentable pour les patients internationaux."
+    },
+    "q2": {
+      "question": "Quels types de greffes de moelle osseuse sont pratiqués en Inde ?",
+      "answer": "L'Inde offre des greffes de moelle osseuse autologues, allogéniques, haploidentiques, de donneur non apparenté compatible (MUD) et pédiatriques."
+    },
+    "q3": {
+      "question": "Combien de temps un patient de greffe de moelle osseuse doit-il rester en Inde ?",
+      "answer": "Les patients doivent généralement rester en Inde pendant environ 6 à 10 semaines, selon la récupération et les exigences de surveillance post-transplantation."
+    },
+    "q4": {
+      "question": "Le jumelage des donneurs et les tests pré-transplantation sont-ils effectués en Inde ?",
+      "answer": "Oui. Les hôpitaux indiens fournissent un jumelage complet des donneurs, des tests HLA et une évaluation pré-transplantation en utilisant des laboratoires avancés et des équipes spécialisées."
+    },
+    "q5": {
+      "question": "Panacea Medcare soutient-il les familles pendant le long traitement de greffe de moelle osseuse ?",
+      "answer": "Oui. Panacea Medcare aide à l'hébergement, au soutien des soignants, à la coordination hospitalière, à la logistique quotidienne et aux soins de suivi à long terme."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

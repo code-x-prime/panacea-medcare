@@ -1,0 +1,40 @@
+{
+  "title": "Ophtalmologie (Soins oculaires) en Inde",
+  "intro": "Correction de la vision avancée et chirurgie oculaire en Inde avec des ophtalmologistes experts, une technologie de pointe et des services de soins oculaires complets. Panacea Medcare connecte les patients aux principaux centres de soins oculaires pour tous les besoins ophtalmiques.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "ophthalmology": "Ophtalmologie"
+  },
+  "sectionTitle": "Traitements de soins oculaires disponibles",
+  "treatments": {
+    "cataract": {
+      "title": "Chirurgie de la cataracte (LIO Premium)",
+      "description": "Chirurgie avancée de la cataracte en Inde avec des lentilles intraoculaires premium pour la correction de la vision, notamment des LIO multifocales et toriques avec d'excellents résultats visuels."
+    },
+    "lasik": {
+      "title": "LASIK et chirurgie réfractive",
+      "description": "LASIK et chirurgie réfractive en Inde pour la correction de la vision, notamment PRK, SMILE et autres techniques avancées avec une haute précision et des taux de succès."
+    },
+    "cornea": {
+      "title": "Transplantation de cornée",
+      "description": "Transplantation de cornée en Inde, notamment greffes à pleine épaisseur et partielle avec des techniques avancées et d'excellents taux de survie des greffes."
+    },
+    "retina": {
+      "title": "Chirurgie de la rétine et du vitré",
+      "description": "Chirurgie rétinienne experte en Inde pour des conditions comme le décollement de la rétine, la dégénérescence maculaire, la rétinopathie diabétique et les troubles du vitré."
+    },
+    "glaucoma": {
+      "title": "Traitement du glaucome",
+      "description": "Gestion complète du glaucome en Inde, notamment traitement médical, procédures au laser et options chirurgicales pour préserver la vision et prévenir la progression."
+    },
+    "pediatric": {
+      "title": "Ophtalmologie pédiatrique",
+      "description": "Soins oculaires pédiatriques spécialisés en Inde pour les enfants atteints de strabisme, d'amblyopie, de cataractes congénitales et d'autres affections oculaires pédiatriques."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

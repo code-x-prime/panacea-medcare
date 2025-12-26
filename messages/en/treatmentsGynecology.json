@@ -1,0 +1,44 @@
+{
+  "title": "Gynecology & Women's Health in India",
+  "intro": "Comprehensive women-centric care in India with expert gynecologists, advanced minimally invasive surgery, fertility treatments, and specialized women's health services. Panacea Medcare provides complete care coordination for international patients.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "gynecology": "Gynecology & Women's Health"
+  },
+  "sectionTitle": "Available Treatments",
+  "treatments": {
+    "fibroid": {
+      "title": "Fibroid Treatment",
+      "description": "Advanced fibroid treatment in India includes medical management, minimally invasive procedures, and surgical removal with preservation of fertility options."
+    },
+    "endometriosis": {
+      "title": "Endometriosis Surgery",
+      "description": "Expert endometriosis treatment in India includes laparoscopic and robotic surgery for pain relief and improved fertility outcomes."
+    },
+    "laparoscopic": {
+      "title": "Laparoscopic & Robotic Gynecologic Surgery",
+      "description": "Minimally invasive gynecologic surgery in India includes laparoscopic hysterectomy, myomectomy, and robotic procedures with faster recovery and minimal scarring."
+    },
+    "oncology": {
+      "title": "Gynecologic Oncology",
+      "description": "Comprehensive gynecologic cancer treatment in India includes surgery, chemotherapy, and radiation for cervical, ovarian, and uterine cancers."
+    },
+    "hormonal": {
+      "title": "Menstrual & Hormonal Disorders",
+      "description": "Expert management of menstrual and hormonal disorders in India including PCOS, endometriosis, and menopause management."
+    },
+    "pregnancy": {
+      "title": "High-Risk Pregnancy Care",
+      "description": "Specialized high-risk pregnancy care in India with maternal-fetal medicine specialists and advanced monitoring for complex pregnancies."
+    },
+    "ivf": {
+      "title": "IVF & Assisted Reproductive Technologies",
+      "description": "Advanced IVF and fertility treatments in India with high success rates, experienced reproductive endocrinologists, and comprehensive fertility care."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

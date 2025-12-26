@@ -10,12 +10,76 @@
         "highlight": "Accrédité JCI"
       },
       { "name": "Médecins", "slug": "/doctors" },
-      { "name": "Traitements", "slug": "/treatments" },
+      {
+        "name": "Traitements",
+        "slug": "/treatments",
+        "type": "dropdown",
+        "key": "treatments"
+      },
       { "name": "Patients internationaux", "slug": "/international-patients" },
       { "name": "Solutions de santé IA", "slug": "/services/ai-solutions" },
       { "name": "Équipement médical", "slug": "/equipment" },
       { "name": "Devenez partenaire", "slug": "/partner-with-us" },
       { "name": "Tourisme et loisirs", "slug": "/tourism-leisure" }
+    ],
+    "treatments": [
+      { "name": "Sciences cardiaques", "slug": "/treatments/cardiac" },
+      { "name": "Neurosciences", "slug": "/treatments/neurosurgery" },
+      {
+        "name": "Orthopédie et remplacement articulaire",
+        "slug": "/treatments/orthopedics"
+      },
+      { "name": "Oncologie (Soins du cancer)", "slug": "/treatments/oncology" },
+      { "name": "Greffe de moelle osseuse", "slug": "/treatments/bmt" },
+      {
+        "name": "Transplantation d'organes",
+        "slug": "/treatments/organ-transplant"
+      },
+      {
+        "name": "Gastro-entérologie et hépatologie",
+        "slug": "/treatments/gastroenterology"
+      },
+      {
+        "name": "Gynécologie et santé des femmes",
+        "slug": "/treatments/gynecology"
+      },
+      {
+        "name": "Pédiatrie et chirurgie pédiatrique",
+        "slug": "/treatments/pediatrics"
+      },
+      {
+        "name": "Chirurgie laparoscopique",
+        "slug": "/treatments/laparoscopic"
+      },
+      { "name": "Chirurgie robotique", "slug": "/treatments/robotic" },
+      {
+        "name": "Ophtalmologie (Soins oculaires)",
+        "slug": "/treatments/ophthalmology"
+      },
+      {
+        "name": "Soins dentaires et dentisterie esthétique",
+        "slug": "/treatments/dental"
+      },
+      {
+        "name": "Chirurgie esthétique, cosmétique et plastique",
+        "slug": "/treatments/aesthetic"
+      },
+      {
+        "name": "Santé mentale et bien-être",
+        "slug": "/treatments/mental-health"
+      },
+      {
+        "name": "Diagnostic et imagerie avancée",
+        "slug": "/treatments/diagnostics"
+      },
+      {
+        "name": "Réadaptation et récupération",
+        "slug": "/treatments/rehabilitation"
+      },
+      {
+        "name": "Ayurveda et bien-être holistique",
+        "slug": "/treatments/ayurveda"
+      }
     ]
   }
 }

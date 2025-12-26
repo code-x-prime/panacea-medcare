@@ -1,0 +1,40 @@
+{
+  "title": "Organ Transplantation in India",
+  "intro": "India offers ethical, regulated, and high-success organ transplantation programs including liver, kidney, heart, lung, and pancreas transplants. Panacea Medcare connects international patients to leading transplant centers with comprehensive care coordination.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "transplant": "Organ Transplantation"
+  },
+  "sectionTitle": "Available Organ Transplant Procedures",
+  "treatments": {
+    "liver": {
+      "title": "Liver Transplant",
+      "description": "Liver transplant in India includes both living and deceased donor options, with high success rates, expert hepatology teams, and comprehensive post-transplant care for international patients."
+    },
+    "kidney": {
+      "title": "Kidney Transplant",
+      "description": "Kidney transplantation in India offers living and deceased donor options with excellent outcomes, advanced immunosuppression protocols, and specialized nephrology care."
+    },
+    "heart": {
+      "title": "Heart Transplant",
+      "description": "Heart transplant programs in India provide life-saving cardiac transplantation with experienced cardiothoracic surgeons, advanced organ preservation, and dedicated transplant care units."
+    },
+    "lung": {
+      "title": "Lung Transplant",
+      "description": "Lung transplantation in India includes single and double lung transplants, performed by expert thoracic surgeons with specialized post-operative care and rehabilitation programs."
+    },
+    "pancreas": {
+      "title": "Pancreas Transplant",
+      "description": "Pancreas transplant in India offers treatment for type 1 diabetes and pancreatic disorders, with combined kidney-pancreas transplant options for comprehensive care."
+    },
+    "combined": {
+      "title": "Combined Organ Transplants",
+      "description": "India performs complex multi-organ transplants including liver-kidney, heart-lung, and other combined procedures with specialized transplant teams and comprehensive care protocols."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

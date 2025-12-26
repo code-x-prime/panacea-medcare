@@ -1,0 +1,36 @@
+{
+  "title": "Santé mentale et bien-être en Inde",
+  "intro": "Soins de santé mentale holistiques en Inde avec des psychiatres, des psychologues et des programmes de bien-être mental complets. Panacea Medcare fournit un soutien compatissant et connecte les patients aux principaux centres de santé mentale.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "mentalHealth": "Santé mentale et bien-être"
+  },
+  "sectionTitle": "Services de santé mentale disponibles",
+  "treatments": {
+    "psychiatry": {
+      "title": "Services de psychiatrie et psychologie",
+      "description": "Services complets de santé mentale en Inde avec des psychiatres et psychologues experts fournissant diagnostic, thérapie et traitement pour diverses conditions de santé mentale."
+    },
+    "depression": {
+      "title": "Gestion de la dépression et de l'anxiété",
+      "description": "Traitement spécialisé de la dépression et de l'anxiété en Inde, notamment gestion des médicaments, psychothérapie et thérapie cognitivo-comportementale avec soins compatissants."
+    },
+    "addiction": {
+      "title": "Traitement de la toxicomanie",
+      "description": "Programmes complets de traitement de la toxicomanie en Inde pour abus de substances avec désintoxication, réadaptation et soutien de récupération à long terme."
+    },
+    "stress": {
+      "title": "Thérapie du stress et de l'épuisement",
+      "description": "Gestion experte du stress et thérapie de l'épuisement en Inde avec counseling, modification du mode de vie et interventions thérapeutiques pour stress lié au travail."
+    },
+    "sleep": {
+      "title": "Traitement des troubles du sommeil",
+      "description": "Médecine du sommeil spécialisée en Inde pour insomnie, apnée du sommeil et autres troubles du sommeil avec évaluation complète et plans de traitement."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

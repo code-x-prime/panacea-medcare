@@ -156,7 +156,7 @@ export default function Navbar({ locale = "en" }) {
                   {item.type === "dropdown" && isActive && subMenuItems && (
                     <div
                       className={
-                        "absolute top-full z-50 w-auto min-w-[600px] bg-white shadow-xl rounded-lg border border-gray-100 p-5 " +
+                        "absolute top-full z-50 w-auto min-w-[280px] sm:min-w-[500px] md:min-w-[800px] max-w-[90vw] bg-white shadow-xl rounded-lg border border-gray-100 p-3 sm:p-4 md:p-5 " +
                         (isRTL ? "right-0" : "left-0")
                       }
                       dir={isRTL ? "rtl" : "ltr"}
@@ -169,7 +169,7 @@ export default function Navbar({ locale = "en" }) {
                       }}
                     >
                       <div
-                        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4"
+                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-2 "
                         dir={isRTL ? "rtl" : "ltr"}
                       >
                         {subMenuItems.map((subItem, sIdx) => (
@@ -177,8 +177,13 @@ export default function Navbar({ locale = "en" }) {
                             key={sIdx}
                             href={"/" + locale + subItem.slug}
                             onClick={closeMenu}
-                            className="block px-5 py-4 text-lg text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded whitespace-nowrap font-medium text-left"
-                            style={{ textAlign: isRTL ? "right" : "left" }}
+                            className="block px-3 sm:px-4 md:px-5 py-2 sm:py-3 md:py-4 text-xs sm:text-sm  text-gray-700 hover:bg-panacea-primary/5 hover:text-panacea-primary transition-colors rounded font-medium break-words text-nowrap"
+                            style={{
+                              textAlign: isRTL ? "right" : "left",
+                              wordBreak: 'break-word',
+                              hyphens: 'auto',
+                              lineHeight: '1.4'
+                            }}
                           >
                             {subItem.name}
                           </Link>
@@ -400,7 +405,7 @@ export default function Navbar({ locale = "en" }) {
                     {hasSubMenu && isExpanded && subMenuItems && (
                       <div
                         className={
-                          "pb-3 space-y-2 bg-panacea-light rounded-lg p-3 mb-2 " +
+                          "pb-3 space-y-1 sm:space-y-2 bg-panacea-light rounded-lg p-2 sm:p-3 mb-2 " +
                           (isRTL ? "mr-2" : "ml-2")
                         }
                       >
@@ -409,7 +414,12 @@ export default function Navbar({ locale = "en" }) {
                           <Link
                             key={sIdx}
                             href={"/" + locale + sub.slug}
-                            className="block py-2.5 text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-3 transition-colors"
+                            className="block py-2 sm:py-2.5 text-xs sm:text-sm md:text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-2 sm:px-3 transition-colors break-words"
+                            style={{
+                              wordBreak: 'break-word',
+                              hyphens: 'auto',
+                              lineHeight: '1.4'
+                            }}
                             onClick={closeMobileMenu}
                           >
                             {sub.name}

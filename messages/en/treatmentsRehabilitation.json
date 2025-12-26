@@ -1,0 +1,36 @@
+{
+  "title": "Rehabilitation & Recovery in India",
+  "intro": "Complete recovery beyond treatment in India with expert physiotherapists, rehabilitation specialists, and comprehensive recovery programs. Panacea Medcare ensures seamless coordination for post-treatment rehabilitation and recovery.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "rehabilitation": "Rehabilitation & Recovery"
+  },
+  "sectionTitle": "Available Rehabilitation Services",
+  "treatments": {
+    "physiotherapy": {
+      "title": "Physiotherapy & Rehabilitation",
+      "description": "Comprehensive physiotherapy services in India with expert physiotherapists providing rehabilitation for orthopedic, neurological, and sports injuries."
+    },
+    "neuro": {
+      "title": "Neuro-rehabilitation for Stroke",
+      "description": "Specialized stroke rehabilitation in India with multidisciplinary teams for motor recovery, speech therapy, and functional restoration."
+    },
+    "postSurgical": {
+      "title": "Post-Surgical Recovery Programs",
+      "description": "Structured post-surgical rehabilitation in India for faster recovery after orthopedic, cardiac, and other major surgeries."
+    },
+    "pain": {
+      "title": "Pain Management",
+      "description": "Expert pain management in India including interventional pain procedures, medication management, and non-invasive pain relief techniques."
+    },
+    "sports": {
+      "title": "Sports Rehabilitation",
+      "description": "Specialized sports medicine and rehabilitation in India for athletes with injury recovery, performance optimization, and return-to-sport programs."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

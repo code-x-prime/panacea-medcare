@@ -1,0 +1,36 @@
+{
+  "title": "Mental Health & Wellness in India",
+  "intro": "Holistic mental healthcare in India with expert psychiatrists, psychologists, and comprehensive mental wellness programs. Panacea Medcare provides compassionate support and connects patients to leading mental health centers.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "mentalHealth": "Mental Health & Wellness"
+  },
+  "sectionTitle": "Available Mental Health Services",
+  "treatments": {
+    "psychiatry": {
+      "title": "Psychiatry & Psychology Services",
+      "description": "Comprehensive mental health services in India with expert psychiatrists and psychologists providing diagnosis, therapy, and treatment for various mental health conditions."
+    },
+    "depression": {
+      "title": "Depression & Anxiety Management",
+      "description": "Specialized treatment for depression and anxiety in India including medication management, psychotherapy, and cognitive-behavioral therapy with compassionate care."
+    },
+    "addiction": {
+      "title": "Addiction Treatment",
+      "description": "Comprehensive addiction treatment programs in India for substance abuse with detoxification, rehabilitation, and long-term recovery support."
+    },
+    "stress": {
+      "title": "Stress & Burnout Therapy",
+      "description": "Expert stress management and burnout therapy in India with counseling, lifestyle modification, and therapeutic interventions for work-related stress."
+    },
+    "sleep": {
+      "title": "Sleep Disorders Treatment",
+      "description": "Specialized sleep medicine in India for insomnia, sleep apnea, and other sleep disorders with comprehensive evaluation and treatment plans."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Oncology (Cancer Treatment in India)",
+  "intro": "India is a leading destination for advanced cancer treatment, offering comprehensive oncology care, modern radiation technology, and personalized therapies. Panacea Medcare connects patients from Africa, the Middle East, and Europe to trusted Indian cancer centers with high success rates.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "oncology": "Oncology"
+  },
+  "sectionTitle": "Available Cancer Treatments",
+  "treatments": {
+    "medical": {
+      "title": "Medical Oncology",
+      "description": "Medical oncology in India includes chemotherapy, immunotherapy, and targeted therapy using international protocols, ensuring effective cancer control with personalized treatment plans and close monitoring by experienced oncologists."
+    },
+    "surgical": {
+      "title": "Surgical Oncology",
+      "description": "Indian hospitals provide advanced surgical oncology using minimally invasive and robotic techniques to remove tumors safely, preserve organ function, and improve recovery outcomes for patients with solid cancers."
+    },
+    "radiation": {
+      "title": "Radiation Oncology",
+      "description": "Radiation therapy in India uses advanced technologies like IMRT, IGRT, SRS, and SBRT to deliver precise tumor targeting while minimizing damage to healthy tissues."
+    },
+    "breast": {
+      "title": "Breast Cancer Treatment",
+      "description": "Comprehensive breast cancer care in India includes surgery, chemotherapy, radiation, reconstruction, and hormonal therapy, delivered by multidisciplinary teams for optimal survival and cosmetic outcomes."
+    },
+    "headNeck": {
+      "title": "Head & Neck Cancer Treatment",
+      "description": "India is globally recognized for treating head and neck cancers with advanced surgery, radiation, and rehabilitation, especially for patients from Africa and the Middle East."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why do cancer patients from Africa and the Middle East choose India for treatment?",
+      "answer": "India offers advanced cancer care with modern technology, experienced oncologists, shorter waiting times, and significantly lower treatment costs compared to Europe and the Middle East."
+    },
+    "q2": {
+      "question": "What types of cancer treatments are available in India?",
+      "answer": "Cancer treatment in India includes chemotherapy, immunotherapy, targeted therapy, advanced radiation therapy, robotic and minimally invasive cancer surgery, and bone marrow transplant."
+    },
+    "q3": {
+      "question": "Is cancer treatment in India safe for international patients?",
+      "answer": "Yes. Leading Indian hospitals follow international treatment protocols, hold NABH and JCI accreditations, and treat thousands of international cancer patients every year."
+    },
+    "q4": {
+      "question": "How quickly can cancer treatment start in India?",
+      "answer": "Most cancer treatments in India can begin within a few days after arrival, helping patients avoid long waiting periods common in many countries."
+    },
+    "q5": {
+      "question": "How does Panacea Medcare support international cancer patients?",
+      "answer": "Panacea Medcare provides end-to-end support including hospital selection, treatment planning, visa assistance, accommodation, language support, and post-treatment follow-up."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Bone Marrow Transplant (BMT) in India",
+  "intro": "India is among the top global destinations for bone marrow transplantation, known for high success rates, experienced transplant teams, and advanced infection control. Panacea Medcare facilitates BMT for patients from Africa, the Middle East, and Europe.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "bmt": "Bone Marrow Transplant"
+  },
+  "sectionTitle": "Available BMT Procedures",
+  "treatments": {
+    "autologous": {
+      "title": "Autologous Bone Marrow Transplant",
+      "description": "Autologous BMT in India uses the patient's own stem cells to treat blood cancers like multiple myeloma and lymphoma, ensuring faster recovery and reduced risk of rejection."
+    },
+    "allogeneic": {
+      "title": "Allogeneic Bone Marrow Transplant",
+      "description": "Allogeneic transplants in India use matched donor stem cells to treat leukemia and genetic blood disorders, supported by advanced HLA matching and specialized transplant units."
+    },
+    "haploidentical": {
+      "title": "Haploidentical Transplant",
+      "description": "Haploidentical transplants in India allow partially matched family donors, expanding transplant access for international patients without fully matched donors."
+    },
+    "pediatric": {
+      "title": "Pediatric Bone Marrow Transplant",
+      "description": "India offers specialized pediatric BMT programs for children with leukemia, thalassemia, and immune disorders, supported by dedicated pediatric ICUs and expert transplant physicians."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why is India a preferred destination for bone marrow transplant?",
+      "answer": "India is globally recognized for high success rates in bone marrow transplants, experienced transplant teams, advanced infection control, and cost-effective treatment for international patients."
+    },
+    "q2": {
+      "question": "What types of bone marrow transplants are done in India?",
+      "answer": "India offers autologous, allogeneic, haploidentical, matched unrelated donor (MUD), and pediatric bone marrow transplants."
+    },
+    "q3": {
+      "question": "How long does a bone marrow transplant patient need to stay in India?",
+      "answer": "Patients usually need to stay in India for approximately 6 to 10 weeks, depending on recovery and post-transplant monitoring requirements."
+    },
+    "q4": {
+      "question": "Is donor matching and pre-transplant testing done in India?",
+      "answer": "Yes. Indian hospitals provide complete donor matching, HLA testing, and pre-transplant evaluation using advanced laboratories and specialist teams."
+    },
+    "q5": {
+      "question": "Does Panacea Medcare support families during long BMT treatment?",
+      "answer": "Yes. Panacea Medcare assists with accommodation, caregiver support, hospital coordination, daily logistics, and long-term follow-up care."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

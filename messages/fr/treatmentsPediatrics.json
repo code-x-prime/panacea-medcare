@@ -1,0 +1,40 @@
+{
+  "title": "Pédiatrie et chirurgie pédiatrique en Inde",
+  "intro": "Soins spécialisés pour enfants en Inde avec des pédiatres, des chirurgiens pédiatriques et des hôpitaux adaptés aux enfants. Panacea Medcare connecte les familles aux principaux centres pédiatriques pour des soins de santé complets pour enfants.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "pediatrics": "Pédiatrie et chirurgie pédiatrique"
+  },
+  "sectionTitle": "Traitements disponibles",
+  "treatments": {
+    "cardiac": {
+      "title": "Chirurgie cardiaque pédiatrique",
+      "description": "Chirurgie cardiaque pédiatrique experte en Inde pour les malformations cardiaques congénitales avec d'excellents résultats, des unités de soins intensifs cardiaques pédiatriques spécialisées et des soins compatissants pour les enfants."
+    },
+    "oncology": {
+      "title": "Oncologie pédiatrique et greffe de moelle osseuse",
+      "description": "Traitement complet du cancer pédiatrique et greffe de moelle osseuse en Inde avec des équipes d'oncologie pédiatrique spécialisées et des soins dédiés aux enfants."
+    },
+    "nicu": {
+      "title": "Soins intensifs néonatals (NICU)",
+      "description": "Installations NICU avancées en Inde pour les nouveau-nés prématurés et gravement malades avec des néonatologistes expérimentés et des systèmes de support vital de pointe."
+    },
+    "congenital": {
+      "title": "Correction des malformations congénitales",
+      "description": "Correction experte des malformations congénitales chez les enfants, notamment fente labiale/palatine, malformations cardiaques congénitales et autres anomalies de naissance avec des équipes multidisciplinaires."
+    },
+    "neurology": {
+      "title": "Neurologie et neurochirurgie pédiatriques",
+      "description": "Neurologie et neurochirurgie pédiatriques spécialisées en Inde pour les tumeurs cérébrales, l'épilepsie, le spina bifida et d'autres conditions neurologiques chez les enfants."
+    },
+    "growth": {
+      "title": "Troubles de la croissance et du développement",
+      "description": "Gestion complète des troubles de la croissance et du développement chez les enfants, notamment thérapie à l'hormone de croissance, retards de développement et troubles endocriniens."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

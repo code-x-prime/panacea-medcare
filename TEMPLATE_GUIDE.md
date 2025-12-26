@@ -726,7 +726,7 @@ export default function Page({ params }) {
 | Prop              | Type      | Required | Description                                          |
 | ----------------- | --------- | -------- | ---------------------------------------------------- |
 | `locale`          | string    | Yes      | Current locale (en/ar/fr)                            |
-| `namespace`       | string    | Yes      | Translation namespace to use                         |
+| `namespace`       | string    | Yes      | Current locale (en/ar/fr)                            |
 | `title`           | string    | No       | Override title (uses translation if not provided)    |
 | `subtitle`        | string    | No       | Override subtitle (uses translation if not provided) |
 | `backgroundImage` | string    | No       | Custom background image path                         |

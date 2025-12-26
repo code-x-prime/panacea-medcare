@@ -1,0 +1,48 @@
+{
+  "title": "Chirurgie esthétique, cosmétique et plastique en Inde",
+  "intro": "Soins cosmétiques sûrs, éthiques et reconnus mondialement en Inde avec des chirurgiens plasticiens certifiés, des installations modernes et des services esthétiques complets. Panacea Medcare assure une coordination discrète pour toutes les procédures cosmétiques.",
+  "breadcrumb": {
+    "home": "Accueil",
+    "treatments": "Traitements",
+    "aesthetic": "Chirurgie esthétique et cosmétique"
+  },
+  "sectionTitle": "Traitements esthétiques disponibles",
+  "treatments": {
+    "rhinoplasty": {
+      "title": "Rhinoplastie (Remodelage du nez)",
+      "description": "Rhinoplastie experte en Inde pour remodelage et correction nasale avec résultats naturels et soins pré et post-opératoires complets."
+    },
+    "liposuction": {
+      "title": "Liposuccion",
+      "description": "Procédures avancées de liposuccion en Inde utilisant des techniques modernes pour contour corporel et élimination des graisses avec cicatrices minimales et récupération plus rapide."
+    },
+    "tummyTuck": {
+      "title": "Abdominoplastie",
+      "description": "Abdominoplastie en Inde pour contour abdominal et resserrement musculaire avec chirurgiens plasticiens experts et excellents résultats esthétiques."
+    },
+    "breast": {
+      "title": "Augmentation/Réduction mammaire",
+      "description": "Chirurgie d'augmentation et de réduction mammaire en Inde avec implants sûrs, résultats naturels et plans de traitement personnalisés."
+    },
+    "gynecomastia": {
+      "title": "Chirurgie de la gynécomastie",
+      "description": "Chirurgie de réduction mammaire masculine en Inde pour gynécomastie avec techniques mini-invasives et excellents résultats cosmétiques."
+    },
+    "facelift": {
+      "title": "Lifting du visage et du cou",
+      "description": "Rajeunissement facial avancé en Inde, notamment procédures de lifting du visage et du cou pour résultats anti-âge naturels."
+    },
+    "botox": {
+      "title": "Botox et produits de comblement dermique",
+      "description": "Traitements cosmétiques non chirurgicaux en Inde, notamment injections Botox et produits de comblement dermique pour réduction des rides et amélioration faciale."
+    },
+    "hair": {
+      "title": "Greffe de cheveux (FUE / FUT)",
+      "description": "Greffe de cheveux avancée en Inde utilisant techniques FUE et FUT avec design de ligne de cheveux naturel et taux de survie des greffes élevés."
+    }
+  },
+  "cta": {
+    "consultation": "Obtenir une consultation gratuite",
+    "quote": "Obtenir un devis de traitement"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Orthopedics & Joint Replacement in India",
+  "intro": "India is a preferred destination for orthopedic treatment, offering advanced joint replacement, sports injury care, and spine surgery with faster recovery and excellent outcomes for international patients.",
+  "breadcrumb": {
+    "home": "Home",
+    "treatments": "Treatments",
+    "orthopedics": "Orthopedics"
+  },
+  "sectionTitle": "Available Orthopedic Treatments",
+  "treatments": {
+    "knee": {
+      "title": "Knee Replacement Surgery",
+      "description": "Knee replacement in India uses advanced implants and robotic assistance to relieve pain, restore mobility, and ensure long-term durability with minimal hospital stay."
+    },
+    "hip": {
+      "title": "Hip Replacement Surgery",
+      "description": "Hip replacement surgeries in India are performed using minimally invasive techniques, enabling quicker rehabilitation and excellent functional outcomes for elderly and young patients alike."
+    },
+    "robotic": {
+      "title": "Robotic Joint Replacement",
+      "description": "Robotic-assisted joint replacement in India ensures precise implant placement, improved alignment, reduced pain, and faster recovery for knee and hip arthritis patients."
+    },
+    "spine": {
+      "title": "Spine Surgery",
+      "description": "Indian spine centers offer minimally invasive and complex spine surgeries for disc disease, deformities, and nerve compression with advanced imaging and neuro-monitoring."
+    },
+    "sports": {
+      "title": "Sports Injury & Arthroscopy",
+      "description": "Sports medicine in India provides arthroscopic treatment for ligament, cartilage, and shoulder injuries, allowing athletes and active individuals to return to normal activity faster."
+    }
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why do international patients choose India for joint replacement surgery?",
+      "answer": "India offers advanced joint replacement surgery using modern implants and robotic technology at affordable costs, with faster recovery and excellent long-term outcomes."
+    },
+    "q2": {
+      "question": "What orthopedic surgeries are commonly performed in India?",
+      "answer": "Common procedures include knee replacement, hip replacement, robotic joint surgery, spine surgery, and arthroscopic treatment for sports injuries."
+    },
+    "q3": {
+      "question": "How long is recovery after joint replacement surgery in India?",
+      "answer": "Most patients begin walking within 1–2 days after surgery and can safely travel back home within 2–3 weeks with proper rehabilitation."
+    },
+    "q4": {
+      "question": "Is physiotherapy provided after orthopedic surgery?",
+      "answer": "Yes. Indian hospitals provide structured physiotherapy and rehabilitation programs to ensure safe recovery and long-term mobility."
+    },
+    "q5": {
+      "question": "Does Panacea Medcare assist with post-surgery care?",
+      "answer": "Yes. Panacea Medcare coordinates physiotherapy, follow-up consultations, and recovery planning even after patients return home."
+    }
+  },
+  "cta": {
+    "consultation": "Get Free Consultation",
+    "quote": "Get Treatment Quote"
+  }
+}

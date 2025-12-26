@@ -12,7 +12,6 @@ import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
-import HomeBlogPreview from '@/components/HomeBlogPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
 export default function HomePage({ params }) {
   const { locale } = params;
@@ -27,7 +26,6 @@ export default function HomePage({ params }) {
       <HomeCaseStudiesPreview locale={locale} />
       <MultiSpecialtyFocus locale={locale} />
       <WhyChoosePanacea locale={locale} />
-      <HomeBlogPreview locale={locale} />
       <HomeOfficesPreview locale={locale} />
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />

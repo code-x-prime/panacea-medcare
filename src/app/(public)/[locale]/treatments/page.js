@@ -38,8 +38,8 @@ export default function TreatmentsPage({ params }) {
             name: t("treatments.orthopedics") || "Orthopedics & Joint Replacement",
             svg: "/treatment/orthopedics-joint-replacement.svg",
             slug: "/treatments/orthopedics",
-            color: "from-blue-50 to-blue-100",
-            borderColor: "border-blue-200 hover:border-blue-400"
+            color: "from-panacea-blue-50 to-panacea-blue-100",
+            borderColor: "border-panacea-blue-200 hover:border-panacea-blue-400"
         },
         {
             key: "oncology",

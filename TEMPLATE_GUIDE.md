@@ -12,10 +12,10 @@ This guide documents the multi-language template system for Panacea MedCare, fea
 
 These colors will be the base everywhere (buttons, links, CTAs):
 
-| Color Name       | Hex Code  | Usage                                                                                      |
-| ---------------- | --------- | ------------------------------------------------------------------------------------------ |
-| **Panacea Blue** | `#0066CC` | Main primary color - Trust, medical professionalism. Primary buttons, links, headings, CTA |
-| **Healing Cyan** | `#00C2D1` | AI + tech feel. Icons, highlights, gradients, chatbot, AI sections                         |
+| Color Name    | Hex Code  | Usage                                                                                      |
+| ------------- | --------- | ------------------------------------------------------------------------------------------ |
+| **Logo Teal** | `#066F89` | Main primary color - Trust, medical professionalism. Primary buttons, links, headings, CTA |
+| **Logo Teal** | `#066F89` | AI + tech feel. Icons, highlights, gradients, chatbot, AI sections                         |
 
 ### 🟠 Secondary / Accent Colors
 
@@ -39,8 +39,8 @@ These colors will be the base everywhere (buttons, links, CTAs):
 colors: {
   panacea: {
     // Primary Brand Colors (MAIN)
-    primary: "#0066CC",       // Panacea Blue - Main primary color
-    secondary: "#00C2D1",    // Healing Cyan - AI + tech feel
+    primary: "#066F89",       // Logo Teal - Main primary color
+    secondary: "#066F89",    // Logo Teal - AI + tech feel
 
     // Secondary / Accent Colors
     accent: "#FF6B35",       // Vitality Orange - Action & warmth
@@ -52,34 +52,34 @@ colors: {
     gray: "#6D7A8A",         // Slate Gray - Body text, secondary text
     yellow: "#FFD166",       // Warm Yellow - Highlights, icons, testimonial accents
 
-    // Blue Scale (Panacea Blue)
+    // Teal Scale (Logo Teal #066F89)
     blue: {
-      DEFAULT: "#0066CC",
-      50: "#E6F2FF",
-      100: "#CCE5FF",
-      200: "#99CBFF",
-      300: "#66B1FF",
-      400: "#3397FF",
-      500: "#0066CC",
-      600: "#0052A3",
-      700: "#003D7A",
-      800: "#002952",
-      900: "#001429",
+      DEFAULT: "#066F89",
+      50: "#E6F4F7",
+      100: "#CCE9EF",
+      200: "#99D3DF",
+      300: "#66BDCF",
+      400: "#33A7BF",
+      500: "#066F89",
+      600: "#05596D",
+      700: "#044351",
+      800: "#022D35",
+      900: "#01171A",
     },
 
-    // Cyan Scale (Healing Cyan)
+    // Teal Scale (Logo Teal #066F89)
     cyan: {
-      DEFAULT: "#00C2D1",
-      50: "#E6F9FB",
-      100: "#CCF3F7",
-      200: "#99E7EF",
-      300: "#66DBE7",
-      400: "#33CFDF",
-      500: "#00C2D1",
-      600: "#009BA7",
-      700: "#00747D",
-      800: "#004D53",
-      900: "#002629",
+      DEFAULT: "#066F89",
+      50: "#E6F4F7",
+      100: "#CCE9EF",
+      200: "#99D3DF",
+      300: "#66BDCF",
+      400: "#33A7BF",
+      500: "#066F89",
+      600: "#05596D",
+      700: "#044351",
+      800: "#022D35",
+      900: "#01171A",
     },
 
     // Orange Scale (Vitality Orange)
@@ -150,8 +150,8 @@ colors: {
 ```css
 :root {
   /* Primary Brand Colors */
-  --panacea-primary: #0066cc; /* Panacea Blue */
-  --panacea-secondary: #00c2d1; /* Healing Cyan */
+  --panacea-primary: #066f89; /* Logo Teal */
+  --panacea-secondary: #066f89; /* Logo Teal */
 
   /* Secondary / Accent Colors */
   --panacea-accent: #ff6b35; /* Vitality Orange */
@@ -166,10 +166,10 @@ colors: {
   /* Gradients */
   --panacea-gradient: linear-gradient(
     135deg,
-    #00c2d1 0%,
-    #0066cc 100%
+    #066f89 0%,
+    #066f89 100%
   ); /* AI Healthcare Glow */
-  --panacea-gradient-ai: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+  --panacea-gradient-ai: linear-gradient(135deg, #066f89 0%, #066f89 100%);
   --panacea-gradient-warmth: linear-gradient(
     135deg,
     #ff6b35 0%,
@@ -178,9 +178,9 @@ colors: {
   --panacea-gradient-futuristic: linear-gradient(
     135deg,
     #0ba35a 0%,
-    #00c2d1 100%
+    #066f89 100%
   ); /* Med-Tech Futuristic */
-  --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #0066cc 100%);
+  --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #066f89 100%);
 }
 ```
 
@@ -189,7 +189,7 @@ colors: {
 1️⃣ **AI Healthcare Glow**
 
 ```css
-linear-gradient(135deg, #00C2D1 → #0066CC)
+linear-gradient(135deg, #066F89 → #066F89)
 ```
 
 👉 Hero section, AI services, Tech sections
@@ -205,7 +205,7 @@ linear-gradient(135deg, #FF6B35 → #FFD166)
 3️⃣ **Med-Tech Futuristic**
 
 ```css
-linear-gradient(135deg, #0BA35A → #00C2D1)
+linear-gradient(135deg, #0BA35A → #066F89)
 ```
 
 👉 Health + AI mix sections
@@ -214,12 +214,12 @@ linear-gradient(135deg, #0BA35A → #00C2D1)
 
 ```javascript
 backgroundImage: {
-  'panacea-gradient': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',        // AI Healthcare Glow
-  'panacea-gradient-ai': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
+  'panacea-gradient': 'linear-gradient(135deg, #066F89 0%, #066F89 100%)',        // AI Healthcare Glow
+  'panacea-gradient-ai': 'linear-gradient(135deg, #066F89 0%, #066F89 100%)',
   'panacea-gradient-warmth': 'linear-gradient(135deg, #FF6B35 0%, #FFD166 100%)', // Human Touch Warmth
-  'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #00C2D1 100%)', // Med-Tech Futuristic
-  'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #0066CC 100%)',
-  'panacea-gradient-light': 'linear-gradient(135deg, #E6F2FF 0%, #F5F7FA 100%)',
+  'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #066F89 100%)', // Med-Tech Futuristic
+  'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #066F89 100%)',
+  'panacea-gradient-light': 'linear-gradient(135deg, #E6F4F7 0%, #F5F7FA 100%)',
 }
 ```
 
@@ -277,7 +277,7 @@ boxShadow: {
 
 ### 🩺 Teleconsult / Booking
 
-**Main CTA:** Panacea Blue (`bg-panacea-primary`)
+**Main CTA:** Logo Teal (`bg-panacea-primary`)
 
 **WhatsApp / urgent:** Orange (`bg-panacea-accent`)
 
@@ -642,7 +642,7 @@ The Hero section should feel **premium, emotional, trustworthy, and human**, cle
 ```css
 /* Hero Gradient Background - AI Healthcare Glow */
 .bg-panacea-hero {
-  background: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+  background: linear-gradient(135deg, #066f89 0%, #066f89 100%);
 }
 
 /* Orange CTA Button - Vitality Orange */
@@ -650,12 +650,12 @@ The Hero section should feel **premium, emotional, trustworthy, and human**, cle
   @apply bg-panacea-accent hover:bg-panacea-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-orange hover:shadow-lg;
 }
 
-/* Primary Blue Button - Panacea Blue */
+/* Primary Teal Button - Logo Teal */
 .btn-panacea-primary {
   @apply bg-panacea-primary hover:bg-panacea-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea hover:shadow-panacea-lg;
 }
 
-/* Secondary Cyan Button - Healing Cyan */
+/* Secondary Teal Button - Logo Teal */
 .btn-panacea-secondary {
   @apply bg-panacea-secondary hover:bg-panacea-cyan-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 shadow-panacea-cyan hover:shadow-lg;
 }

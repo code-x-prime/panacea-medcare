@@ -78,7 +78,7 @@ export default function OrthopedicsTreatmentPage({ params }) {
                 <Breadcrumb items={breadcrumbItems} locale={locale} />
             </section>
 
-            <section className="bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 md:py-16">
+            <section className="bg-gradient-to-br from-panacea-blue-50 via-white to-panacea-blue-50 py-12 md:py-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center justify-center w-20 h-20 bg-panacea-primary/10 rounded-full mb-6">

@@ -44,7 +44,7 @@ export default function HomeTestimonials({ locale }) {
 
     return (
         <>
-            <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-blue-50/30 relative overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
+            <section className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-panacea-blue-50/30 relative overflow-hidden" dir={isRTL ? "rtl" : "ltr"}>
                 {/* Decorative Background Elements */}
                 <div className="absolute top-0 left-0 w-64 h-64 bg-panacea-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-panacea-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>

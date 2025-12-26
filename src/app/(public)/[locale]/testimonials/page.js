@@ -46,7 +46,7 @@ export default function TestimonialsPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-panacea-blue-50/30">
                 {/* Section Header */}
                 <div className={`max-w-4xl mx-auto mb-12 md:mb-16 ${isRTL ? "text-right" : "text-left"}`}>
                     <p className="text-panacea-accent font-semibold mb-3 tracking-wide uppercase text-sm">

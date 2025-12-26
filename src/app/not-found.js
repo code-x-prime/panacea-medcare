@@ -62,7 +62,7 @@ export default function NotFound() {
 
     return (
         <div
-            className="min-h-screen bg-gradient-to-br from-panacea-light via-white to-blue-50 flex items-center justify-center px-4 py-12"
+            className="min-h-screen bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 flex items-center justify-center px-4 py-12"
             dir={isRTL ? "rtl" : "ltr"}
         >
             <div className="max-w-3xl w-full">
@@ -104,7 +104,7 @@ export default function NotFound() {
                         </p>
 
                         {/* Info Box */}
-                        <div className="bg-gradient-to-br from-panacea-light to-blue-50 rounded-2xl border-2 border-panacea-primary/20 p-6 mb-8 shadow-sm">
+                        <div className="bg-gradient-to-br from-panacea-light to-panacea-blue-50 rounded-2xl border-2 border-panacea-primary/20 p-6 mb-8 shadow-sm">
                             <div className={`flex items-start gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                 <div className="flex-shrink-0 w-12 h-12 bg-panacea-accent rounded-xl flex items-center justify-center shadow-md">
                                     <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">

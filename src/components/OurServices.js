@@ -130,7 +130,7 @@ export default function OurServices({ locale }) {
                 </div>
 
                 {/* Bottom Notice & CTA */}
-                <div className="bg-gradient-to-br from-panacea-light via-white to-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
+                <div className="bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
                     <div className="text-center mb-6">
                         <p className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                             {t("freeNotice")}

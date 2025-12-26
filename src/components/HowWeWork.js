@@ -12,7 +12,7 @@ export default function HowWeWork({ locale }) {
         {
             id: "step1",
             icon: MessageCircle,
-            color: "from-panacea-primary to-cyan-500",
+            color: "from-panacea-primary to-panacea-cyan-500",
         },
         {
             id: "step2",

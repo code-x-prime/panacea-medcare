@@ -12,8 +12,8 @@
   :root {
     /* Panacea Brand Colors - New Color Scheme */
     /* Primary Brand Colors */
-    --panacea-primary: #0066cc; /* Panacea Blue */
-    --panacea-secondary: #00c2d1; /* Healing Cyan */
+    --panacea-primary: #066f89; /* Logo Teal */
+    --panacea-secondary: #066f89; /* Logo Teal */
 
     /* Secondary / Accent Colors */
     --panacea-accent: #ff6b35; /* Vitality Orange */
@@ -28,10 +28,10 @@
     /* Gradients */
     --panacea-gradient: linear-gradient(
       135deg,
-      #00c2d1 0%,
-      #0066cc 100%
+      #066f89 0%,
+      #066f89 100%
     ); /* AI Healthcare Glow */
-    --panacea-gradient-ai: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+    --panacea-gradient-ai: linear-gradient(135deg, #066f89 0%, #066f89 100%);
     --panacea-gradient-warmth: linear-gradient(
       135deg,
       #ff6b35 0%,
@@ -40,9 +40,9 @@
     --panacea-gradient-futuristic: linear-gradient(
       135deg,
       #0ba35a 0%,
-      #00c2d1 100%
+      #066f89 100%
     ); /* Med-Tech Futuristic */
-    --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #0066cc 100%);
+    --panacea-gradient-dark: linear-gradient(135deg, #003459 0%, #066f89 100%);
 
     /* shadcn/ui variables - Updated to match new color scheme */
     --background: 0 0% 100%;
@@ -51,9 +51,9 @@
     --card-foreground: 210 25% 18%;
     --popover: 0 0% 100%;
     --popover-foreground: 210 25% 18%;
-    --primary: 210 100% 40%; /* Panacea Blue */
+    --primary: 192 92% 28%; /* Logo Teal */
     --primary-foreground: 0 0% 100%;
-    --secondary: 185 100% 41%; /* Healing Cyan */
+    --secondary: 192 92% 28%; /* Logo Teal */
     --secondary-foreground: 0 0% 100%;
     --muted: 210 20% 96%; /* Soft Gray */
     --muted-foreground: 210 10% 45%; /* Slate Gray */
@@ -113,7 +113,7 @@
 @layer components {
   /* Hero Gradient Background - AI Healthcare Glow */
   .bg-panacea-hero {
-    background: linear-gradient(135deg, #00c2d1 0%, #0066cc 100%);
+    background: linear-gradient(135deg, #066f89 0%, #066f89 100%);
   }
 
   /* Orange CTA Button - Vitality Orange */
@@ -206,22 +206,22 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00c2d1;
+  background: #066f89;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0066cc;
+  background: #066f89;
 }
 
 /* Focus ring with Panacea primary */
 *:focus-visible {
-  outline: 2px solid #0066cc;
+  outline: 2px solid #066f89;
   outline-offset: 2px;
 }
 
 /* Selection color */
 ::selection {
-  background-color: #0066cc;
+  background-color: #066f89;
   color: white;
 }

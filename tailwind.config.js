@@ -15,8 +15,8 @@ module.exports = {
         // Panacea Brand Colors (New Color Scheme)
         panacea: {
           // Primary Brand Colors (MAIN)
-          primary: "#0066CC",       // Panacea Blue - Main primary color
-          secondary: "#00C2D1",    // Healing Cyan - AI + tech feel
+          primary: "#066F89",       // Logo Teal - Main primary color
+          secondary: "#066F89",    // Logo Teal - AI + tech feel
 
           // Secondary / Accent Colors
           accent: "#FF6B35",       // Vitality Orange - Action & warmth
@@ -28,34 +28,34 @@ module.exports = {
           gray: "#6D7A8A",         // Slate Gray - Body text, secondary text
           yellow: "#FFD166",        // Warm Yellow - Highlights, icons, testimonial accents
 
-          // Blue Scale (Panacea Blue)
+          // Teal Scale (Logo Teal #066F89)
           blue: {
-            DEFAULT: "#0066CC",
-            50: "#E6F2FF",
-            100: "#CCE5FF",
-            200: "#99CBFF",
-            300: "#66B1FF",
-            400: "#3397FF",
-            500: "#0066CC",
-            600: "#0052A3",
-            700: "#003D7A",
-            800: "#002952",
-            900: "#001429",
+            DEFAULT: "#066F89",
+            50: "#E6F4F7",
+            100: "#CCE9EF",
+            200: "#99D3DF",
+            300: "#66BDCF",
+            400: "#33A7BF",
+            500: "#066F89",
+            600: "#05596D",
+            700: "#044351",
+            800: "#022D35",
+            900: "#01171A",
           },
 
-          // Cyan Scale (Healing Cyan)
+          // Teal Scale (Logo Teal #066F89)
           cyan: {
-            DEFAULT: "#00C2D1",
-            50: "#E6F9FB",
-            100: "#CCF3F7",
-            200: "#99E7EF",
-            300: "#66DBE7",
-            400: "#33CFDF",
-            500: "#00C2D1",
-            600: "#009BA7",
-            700: "#00747D",
-            800: "#004D53",
-            900: "#002629",
+            DEFAULT: "#066F89",
+            50: "#E6F4F7",
+            100: "#CCE9EF",
+            200: "#99D3DF",
+            300: "#66BDCF",
+            400: "#33A7BF",
+            500: "#066F89",
+            600: "#05596D",
+            700: "#044351",
+            800: "#022D35",
+            900: "#01171A",
           },
 
           // Orange Scale (Vitality Orange)
@@ -161,18 +161,18 @@ module.exports = {
       },
       backgroundImage: {
         // AI Healthcare Glow Gradient
-        'panacea-gradient': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
-        'panacea-gradient-ai': 'linear-gradient(135deg, #00C2D1 0%, #0066CC 100%)',
+        'panacea-gradient': 'linear-gradient(135deg, #066F89 0%, #066F89 100%)',
+        'panacea-gradient-ai': 'linear-gradient(135deg, #066F89 0%, #066F89 100%)',
 
         // Human Touch Warmth Gradient
         'panacea-gradient-warmth': 'linear-gradient(135deg, #FF6B35 0%, #FFD166 100%)',
 
         // Med-Tech Futuristic Gradient
-        'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #00C2D1 100%)',
+        'panacea-gradient-futuristic': 'linear-gradient(135deg, #0BA35A 0%, #066F89 100%)',
 
         // Dark variants
-        'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #0066CC 100%)',
-        'panacea-gradient-light': 'linear-gradient(135deg, #E6F2FF 0%, #F5F7FA 100%)',
+        'panacea-gradient-dark': 'linear-gradient(135deg, #003459 0%, #066F89 100%)',
+        'panacea-gradient-light': 'linear-gradient(135deg, #E6F4F7 0%, #F5F7FA 100%)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -180,10 +180,10 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        'panacea': '0 4px 14px 0 rgba(0, 102, 204, 0.15)',
-        'panacea-lg': '0 10px 40px 0 rgba(0, 102, 204, 0.2)',
+        'panacea': '0 4px 14px 0 rgba(6, 111, 137, 0.15)',
+        'panacea-lg': '0 10px 40px 0 rgba(6, 111, 137, 0.2)',
         'panacea-orange': '0 4px 14px 0 rgba(255, 107, 53, 0.3)',
-        'panacea-cyan': '0 4px 14px 0 rgba(0, 194, 209, 0.2)',
+        'panacea-cyan': '0 4px 14px 0 rgba(6, 111, 137, 0.2)',
         'panacea-green': '0 4px 14px 0 rgba(11, 163, 90, 0.2)',
       },
     },

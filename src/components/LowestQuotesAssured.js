@@ -98,7 +98,7 @@ export default function LowestQuotesAssured({ locale }) {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="text-center bg-gradient-to-br from-panacea-light via-white to-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
+                <div className="text-center bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
                     <p className="text-gray-700 mb-6 text-lg font-semibold">
                         {t("discoverText")}
                     </p>
@@ -124,7 +124,7 @@ export default function LowestQuotesAssured({ locale }) {
                     onClick={() => setIsModalOpen(false)}
                 >
                     <div
-                        className="relative bg-gradient-to-br from-panacea-light via-white to-blue-50 rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300"
+                        className="relative bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-300"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}

@@ -73,13 +73,13 @@ export default function HeroSection({ locale }) {
           }}
         />
 
-        {/* Soft Overlay Gradient - Blue to Cyan */}
+        {/* Soft Overlay Gradient - Logo Teal */}
         <div
           className="absolute inset-0"
           style={{
             background: `linear-gradient(
-              rgba(0, 102, 204, 0.65),
-              rgba(0, 194, 209, 0.65)
+              rgba(6, 111, 137, 0.65),
+              rgba(6, 111, 137, 0.65)
             )`,
           }}
         />

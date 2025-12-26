@@ -294,7 +294,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                 </div>
 
                 {/* Bottom Accreditation Section */}
-                <div className="mt-16 bg-gradient-to-br from-panacea-light via-white to-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
+                <div className="mt-16 bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                         <div className="flex items-center gap-4 flex-wrap justify-center lg:justify-start">
                             <span className="text-sm md:text-base font-semibold text-gray-700">

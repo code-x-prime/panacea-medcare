@@ -73,13 +73,13 @@ export default function HeroSection({ locale }) {
           }}
         />
 
-        {/* Soft Overlay Gradient - Logo Teal */}
+        {/* Logo Teal Overlay - #066F89 */}
         <div
           className="absolute inset-0"
           style={{
             background: `linear-gradient(
-              rgba(6, 111, 137, 0.65),
-              rgba(6, 111, 137, 0.65)
+              rgba(6, 111, 137, 0.75),
+              rgba(6, 111, 137, 0.80)
             )`,
           }}
         />

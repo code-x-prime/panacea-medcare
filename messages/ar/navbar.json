@@ -7,7 +7,9 @@
       {
         "name": "المستشفيات",
         "slug": "/hospitals",
-        "highlight": "معتمد من JCI"
+        "highlight": "معتمد من JCI",
+        "type": "dropdown",
+        "key": "hospitals"
       },
       { "name": "الأطباء", "slug": "/doctors" },
       {
@@ -59,6 +61,68 @@
         "name": "العلاج بالأيورفيدا والعافية الشاملة",
         "slug": "/treatments/ayurveda"
       }
+    ],
+    "hospitals": [
+      { "name": "مستشفى آسيان", "slug": "/hospitals/asian-hospital-delhi" },
+      {
+        "name": "مستشفى مارينغو آسيا، جورجاون",
+        "slug": "/hospitals/marengo-asia-hospital-gurgaon"
+      },
+      {
+        "name": "مستشفى إندرابراستا أبولو",
+        "slug": "/hospitals/indraprastha-apollo-hospital-new-delhi"
+      },
+      {
+        "name": "مستشفى فورتيس جورجاون",
+        "slug": "/hospitals/fortis-hospital-gurgaon"
+      },
+      { "name": "مستشفى ماكس ساكيت", "slug": "/hospitals/max-hospital-saket" },
+      {
+        "name": "مستشفى BLK ماكس بوسا رود",
+        "slug": "/hospitals/blk-max-hospital-pusa-road"
+      },
+      {
+        "name": "مستشفى ميدانتا، جورجاون",
+        "slug": "/hospitals/medanta-hospital-gurgaon"
+      },
+      {
+        "name": "مستشفى نيلكانث للولادة وأطفال الأنابيب",
+        "slug": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon"
+      },
+      {
+        "name": "مستشفى مانipal دواركا",
+        "slug": "/hospitals/manipal-hospital-dwarka"
+      },
+      {
+        "name": "مستشفى أبولو جريمز رود",
+        "slug": "/hospitals/apollo-hospital-greams-road-chennai"
+      },
+      {
+        "name": "مستشفى ستيم آر إكس",
+        "slug": "/hospitals/stem-rx-hospital-mumbai"
+      },
+      {
+        "name": "مستشفى أبولو مومباي",
+        "slug": "/hospitals/apollo-hospital-mumbai"
+      },
+      {
+        "name": "مستشفى فورتيس مومباي",
+        "slug": "/hospitals/fortis-hospital-mumbai"
+      },
+      { "name": "مستشفى TX", "slug": "/hospitals/tx-hospital-hyderabad" },
+      {
+        "name": "مستشفى أبولو حيدر أباد",
+        "slug": "/hospitals/apollo-hospital-hyderabad"
+      },
+      {
+        "name": "مستشفى ميموريال",
+        "slug": "/hospitals/memorial-hospital-turkey"
+      },
+      {
+        "name": "مستشفى بومرونجراد",
+        "slug": "/hospitals/bumrungrad-hospital-thailand"
+      },
+      { "name": "نيبال ميديسيتي", "slug": "/hospitals/nepal-mediciti" }
     ]
   }
 }

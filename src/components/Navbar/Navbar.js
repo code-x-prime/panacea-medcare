@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -20,6 +21,7 @@ export default function Navbar({ locale = "en" }) {
   var [activeMenu, setActiveMenu] = useState(null);
   var [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   var [mobileExpandedItem, setMobileExpandedItem] = useState(null);
+  var [isSticky, setIsSticky] = useState(false);
 
   // Close menus on locale change
   useEffect(() => {
@@ -51,6 +53,15 @@ export default function Navbar({ locale = "en" }) {
       document.body.style.overflow = "";
     };
   }, [mobileMenuOpen]);
+
+  // Handle sticky navbar on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Early return if no menu data
   if (!navbarMenu || !navbarMenu.main || !Array.isArray(navbarMenu.main)) {
@@ -84,181 +95,115 @@ export default function Navbar({ locale = "en" }) {
 
   return (
     <nav
-      className="navbar-container bg-white sticky top-0 z-50"
+      className={`navbar-container bg-white ${isSticky ? 'sticky top-0 z-50' : ''}`}
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Desktop Menu */}
-      <div className="bg-white">
-        <div className="container mx-auto">
-          <ul
-            className={
-              "hidden lg:flex items-center justify-center gap-1 xl:gap-2 2xl:gap-3 px-2 py-3 " +
-              (isRTL ? "flex-row-reverse" : "")
-            }
-            style={{ flexWrap: 'nowrap' }}
-          >
-            {navbarMenu.main.map((item, idx) => {
-              var hasSubMenu = item.type === "mega" || item.type === "dropdown";
-              var subMenuItems = item.key ? navbarMenu[item.key] : null;
-              var isActive = activeMenu === item.key;
-              var isHospitals = item.slug === "/hospitals" && item.highlight;
+      <div className="bg-white relative">
+        <div className="container mx-auto relative">
+          <div className={`hidden lg:flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
+            {/* Desktop menu items */}
 
-              return (
-                <li
-                  key={idx}
-                  className="h-full flex items-center relative flex-shrink-0"
-                  onMouseEnter={() => {
-                    if (hasSubMenu) {
-                      setActiveMenu(item.key);
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    setActiveMenu(null);
-                  }}
-                >
-                  <div className="flex items-center gap-1.5">
-                    <Link
-                      href={
-                        item.slug === "/" ? "/" + locale : "/" + locale + item.slug
-                      }
-                      onClick={(e) => {
-                        handleMenuClick(e, item);
-                      }}
-                      className={
-                        "flex items-center justify-center text-xs lg:text-sm  font-semibold text-gray-700 hover:text-panacea-primary transition-all h-full px-1.5 xl:px-2 py-2 cursor-pointer " +
-                        (isActive ? "text-panacea-primary" : "")
-                      }
-                      style={{ whiteSpace: 'nowrap' }}
-                    >
-                      <span className="block leading-tight whitespace-nowrap">{item.name}</span>
-                      {hasSubMenu && (
-                        <ChevronDown
-                          className={
-                            "w-3 h-3 transition-transform duration-200 ml-1 " +
-                            (isActive ? "rotate-180" : "")
-                          }
-                        />
-                      )}
-                    </Link>
+            <ul
+              className={
+                "flex items-center justify-center gap-1 xl:gap-2 2xl:gap-3 px-2 py-3 flex-1 " +
+                (isRTL ? "flex-row-reverse" : "")
+              }
+              style={{ flexWrap: 'nowrap', position: 'relative' }}
+            >
+              {navbarMenu.main.map((item, idx) => {
+                var hasSubMenu = item.type === "mega" || item.type === "dropdown";
+                var subMenuItems = item.key ? navbarMenu[item.key] : null;
+                var isActive = activeMenu === item.key;
+                var isHospitals = item.slug === "/hospitals" && item.highlight;
 
-                    {/* JCI Accredited Badge/Tag - Attached to Hospitals */}
-                    {isHospitals && (
+                return (
+                  <li
+                    key={idx}
+                    className="h-full flex items-center relative flex-shrink-0"
+                    style={{ position: "relative", overflow: "visible" }}
+                    onMouseEnter={() => {
+                      if (hasSubMenu) {
+                        setActiveMenu(item.key);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      setActiveMenu(null);
+                    }}
+                  >
+                    <div className="flex items-center gap-1.5">
                       <Link
-                        href={"/" + locale + item.slug}
-                        className="bg-panacea-primary text-white px-2 xl:px-3 py-1 xl:py-1.5 rounded-lg font-bold text-[9px] xl:text-[10px] leading-tight hover:bg-panacea-teal-700 transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md whitespace-nowrap"
+                        href={
+                          item.slug === "/" ? "/" + locale : "/" + locale + item.slug
+                        }
+                        onClick={(e) => {
+                          handleMenuClick(e, item);
+                        }}
+                        className={
+                          "flex items-center justify-center text-xs lg:text-sm  font-semibold text-gray-700 hover:text-panacea-primary transition-all h-full px-1.5 xl:px-2 py-2 cursor-pointer " +
+                          (isActive ? "text-panacea-primary" : "")
+                        }
+                        style={{ whiteSpace: 'nowrap' }}
                       >
-                        <span>JCI Accredited</span>
+                        <span className="block leading-tight whitespace-nowrap">{item.name}</span>
+                        {hasSubMenu && (
+                          <ChevronDown
+                            className={
+                              "w-3 h-3 transition-transform duration-200 ml-1 " +
+                              (isActive ? "rotate-180" : "")
+                            }
+                          />
+                        )}
                       </Link>
-                    )}
-                  </div>
 
-                  {/* Dropdown for knowledge and simple menus */}
-                  {item.type === "dropdown" && isActive && subMenuItems && (
-                    <div
-                      className={
-                        "absolute top-full z-50 w-auto min-w-[280px] sm:min-w-[500px] md:min-w-[800px] max-w-[90vw] bg-white shadow-xl rounded-lg border border-gray-100 p-3 sm:p-4 md:p-5 " +
-                        (isRTL ? "right-0" : "left-0")
-                      }
-                      dir={isRTL ? "rtl" : "ltr"}
-                      style={isRTL ? { right: 0 } : { left: 0 }}
-                      onMouseEnter={() => {
-                        setActiveMenu(item.key);
-                      }}
-                      onMouseLeave={() => {
-                        setActiveMenu(null);
-                      }}
-                    >
-                      <div
-                        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-2 "
-                        dir={isRTL ? "rtl" : "ltr"}
-                      >
-                        {subMenuItems.map((subItem, sIdx) => (
-                          <Link
-                            key={sIdx}
-                            href={"/" + locale + subItem.slug}
-                            onClick={closeMenu}
-                            className="block px-3 sm:px-4 md:px-5 py-2 sm:py-3 md:py-4 text-xs sm:text-sm  text-gray-700 hover:bg-panacea-primary/5 hover:text-panacea-primary transition-colors rounded font-medium break-words text-nowrap"
-                            style={{
-                              textAlign: isRTL ? "right" : "left",
-                              wordBreak: 'break-word',
-                              hyphens: 'auto',
-                              lineHeight: '1.4'
-                            }}
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Dropdown for mega menus (Hospitals, Doctors, Cost) - showing as grid dropdown */}
-                  {item.type === "mega" && isActive && subMenuItems && (
-                    <div
-                      className={
-                        "absolute top-full z-50 w-auto min-w-[750px] max-w-[1100px] bg-white shadow-xl rounded-lg border border-gray-100 p-6 max-h-[70vh] overflow-y-auto " +
-                        (isRTL ? "right-0" : "left-0")
-                      }
-                      dir={isRTL ? "rtl" : "ltr"}
-                      style={
-                        isRTL
-                          ? { right: 0, transform: "translateX(0)" }
-                          : { left: 0, transform: "translateX(0)" }
-                      }
-                      onMouseEnter={() => {
-                        setActiveMenu(item.key);
-                      }}
-                      onMouseLeave={() => {
-                        setActiveMenu(null);
-                      }}
-                    >
-                      {/* For hospitals and cost - show countries with treatments in grid */}
-                      {(item.key === "hospitals" || item.key === "cost") && (
-                        <div
-                          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"
-                          dir={isRTL ? "rtl" : "ltr"}
+                      {/* JCI Accredited Badge/Tag - Attached to Hospitals */}
+                      {isHospitals && (
+                        <Link
+                          href={"/" + locale + item.slug}
+                          className="bg-panacea-primary text-white px-2 xl:px-3 py-1 xl:py-1.5 rounded-lg font-bold text-[9px] xl:text-[10px] leading-tight hover:bg-panacea-teal-700 transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md whitespace-nowrap"
                         >
-                          {subMenuItems.map((countryItem, cIdx) => (
-                            <div key={cIdx} className="space-y-3">
-                              <Link
-                                href={"/" + locale + countryItem.slug}
-                                onClick={closeMenu}
-                                className="block px-4 py-3 font-bold text-lg text-teal-600 hover:bg-teal-50 hover:text-teal-700 transition-colors rounded border-b-2 border-teal-100"
-                                style={{ textAlign: isRTL ? "right" : "left" }}
-                              >
-                                {countryItem.country}
-                              </Link>
-                              {countryItem.treatments && (
-                                <div className="space-y-2 mt-3">
-                                  {countryItem.treatments.map((treatment, tIdx) => (
-                                    <Link
-                                      key={tIdx}
-                                      href={"/" + locale + treatment.slug}
-                                      onClick={closeMenu}
-                                      className="block px-4 py-3 text-base text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded"
-                                      style={{ textAlign: isRTL ? "right" : "left" }}
-                                    >
-                                      <span className="block leading-relaxed font-medium">
-                                        {treatment.name}
-                                      </span>
-                                      {treatment.sub && (
-                                        <span className="text-sm text-gray-400 block leading-relaxed mt-1.5">
-                                          {treatment.sub}
-                                        </span>
-                                      )}
-                                    </Link>
-                                  ))}
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
+                          <span>JCI Accredited</span>
+                        </Link>
                       )}
+                    </div>
 
-                      {/* For doctors - grid layout */}
-                      {item.key === "doctors" && (
+                    {/* Dropdown for knowledge and simple menus */}
+                    {item.type === "dropdown" && isActive && subMenuItems && (
+                      <div
+                        className={
+                          "absolute top-full z-50 bg-white shadow-xl rounded-lg border border-gray-100 p-3 sm:p-4 md:p-5 max-h-[70vh] overflow-y-auto " +
+                          (isRTL ? "right-0 left-auto" : "left-0 right-auto")
+                        }
+                        dir={isRTL ? "rtl" : "ltr"}
+                        style={
+                          isRTL
+                            ? {
+                              right: 0,
+                              left: "auto",
+                              minWidth: "280px",
+                              maxWidth: "min(90vw, calc(100vw - 1rem))",
+                              width: "max(280px, min(750px, calc(90vw - 1rem)))"
+                            }
+                            : {
+                              left: 0,
+                              right: "auto",
+                              minWidth: "280px",
+                              maxWidth: "min(90vw, calc(100vw - 1rem))",
+                              width: "max(280px, min(750px, calc(90vw - 1rem)))"
+                            }
+                        }
+                        onMouseEnter={() => {
+                          setActiveMenu(item.key);
+                        }}
+                        onMouseLeave={() => {
+                          setActiveMenu(null);
+                        }}
+                      >
                         <div
-                          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4"
+                          className={`grid gap-2 ${item.key === "hospitals"
+                            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                            }`}
                           dir={isRTL ? "rtl" : "ltr"}
                         >
                           {subMenuItems.map((subItem, sIdx) => (
@@ -266,20 +211,120 @@ export default function Navbar({ locale = "en" }) {
                               key={sIdx}
                               href={"/" + locale + subItem.slug}
                               onClick={closeMenu}
-                              className="block px-5 py-4 text-lg text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded whitespace-nowrap font-medium"
-                              style={{ textAlign: isRTL ? "right" : "left" }}
+                              className={`block px-3 sm:px-4 md:px-5 py-2 sm:py-3 text-xs sm:text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary transition-all duration-200 rounded-lg font-medium ${item.key === "hospitals" ? "whitespace-normal" : "whitespace-nowrap"
+                                }`}
+                              style={{
+                                textAlign: isRTL ? "right" : "left",
+                                wordBreak: item.key === "hospitals" ? 'break-word' : 'normal',
+                                lineHeight: '1.5'
+                              }}
                             >
-                              {subItem.country || subItem.name}
+                              {subItem.name}
                             </Link>
                           ))}
                         </div>
-                      )}
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+                      </div>
+                    )}
+
+                    {/* Dropdown for mega menus (Hospitals, Doctors, Cost) - showing as grid dropdown */}
+                    {item.type === "mega" && isActive && subMenuItems && (
+                      <div
+                        className={
+                          "absolute top-full z-50 w-auto min-w-[750px] bg-white shadow-xl rounded-lg border border-gray-100 p-6 max-h-[70vh] overflow-y-auto " +
+                          (isRTL ? "right-0 left-auto" : "left-0 right-auto")
+                        }
+                        dir={isRTL ? "rtl" : "ltr"}
+                        style={
+                          isRTL
+                            ? {
+                              right: 0,
+                              left: "auto",
+                              maxWidth: "min(90vw, calc(100vw - 1rem))",
+                              width: "auto"
+                            }
+                            : {
+                              left: 0,
+                              right: "auto",
+                              maxWidth: "min(90vw, calc(100vw - 1rem))",
+                              width: "auto"
+                            }
+                        }
+                        onMouseEnter={() => {
+                          setActiveMenu(item.key);
+                        }}
+                        onMouseLeave={() => {
+                          setActiveMenu(null);
+                        }}
+                      >
+                        {/* For hospitals and cost - show countries with treatments in grid */}
+                        {(item.key === "hospitals" || item.key === "cost") && (
+                          <div
+                            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"
+                            dir={isRTL ? "rtl" : "ltr"}
+                          >
+                            {subMenuItems.map((countryItem, cIdx) => (
+                              <div key={cIdx} className="space-y-3">
+                                <Link
+                                  href={"/" + locale + countryItem.slug}
+                                  onClick={closeMenu}
+                                  className="block px-4 py-3 font-bold text-lg text-teal-600 hover:bg-teal-50 hover:text-teal-700 transition-colors rounded border-b-2 border-teal-100"
+                                  style={{ textAlign: isRTL ? "right" : "left" }}
+                                >
+                                  {countryItem.country}
+                                </Link>
+                                {countryItem.treatments && (
+                                  <div className="space-y-2 mt-3">
+                                    {countryItem.treatments.map((treatment, tIdx) => (
+                                      <Link
+                                        key={tIdx}
+                                        href={"/" + locale + treatment.slug}
+                                        onClick={closeMenu}
+                                        className="block px-4 py-3 text-base text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded"
+                                        style={{ textAlign: isRTL ? "right" : "left" }}
+                                      >
+                                        <span className="block leading-relaxed font-medium">
+                                          {treatment.name}
+                                        </span>
+                                        {treatment.sub && (
+                                          <span className="text-sm text-gray-400 block leading-relaxed mt-1.5">
+                                            {treatment.sub}
+                                          </span>
+                                        )}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* For doctors - grid layout */}
+                        {item.key === "doctors" && (
+                          <div
+                            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4"
+                            dir={isRTL ? "rtl" : "ltr"}
+                          >
+                            {subMenuItems.map((subItem, sIdx) => (
+                              <Link
+                                key={sIdx}
+                                href={"/" + locale + subItem.slug}
+                                onClick={closeMenu}
+                                className="block px-5 py-4 text-lg text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded whitespace-nowrap font-medium"
+                                style={{ textAlign: isRTL ? "right" : "left" }}
+                              >
+                                {subItem.country || subItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
           {/* Gradient Bar Below Navigation */}
           <div className="hidden lg:block h-0.5 bg-gradient-to-r from-panacea-primary via-panacea-secondary to-panacea-secondary/50"></div>
@@ -289,6 +334,18 @@ export default function Navbar({ locale = "en" }) {
       {/* Mobile Menu Button */}
       <div className="lg:hidden bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 flex items-end gap-3 py-2">
+          {isSticky && (
+            <Link href={"/" + locale} className="flex-shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Panacea Medcare Logo"
+                width={150}
+                height={60}
+                className="h-12 w-auto"
+                priority
+              />
+            </Link>
+          )}
           <button
             className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0 ml-auto"
             onClick={toggleMobileMenu}

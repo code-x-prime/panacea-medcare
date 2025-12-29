@@ -7,7 +7,9 @@
       {
         "name": "Hôpitaux",
         "slug": "/hospitals",
-        "highlight": "Accrédité JCI"
+        "highlight": "Accrédité JCI",
+        "type": "dropdown",
+        "key": "hospitals"
       },
       { "name": "Médecins", "slug": "/doctors" },
       {
@@ -80,6 +82,26 @@
         "name": "Ayurveda et bien-être holistique",
         "slug": "/treatments/ayurveda"
       }
+    ],
+    "hospitals": [
+      { "name": "Asian Hospital", "slug": "/hospitals/asian-hospital-delhi" },
+      { "name": "Marengo Asia Hospital, Gurgaon", "slug": "/hospitals/marengo-asia-hospital-gurgaon" },
+      { "name": "Indraprastha Apollo Hospital", "slug": "/hospitals/indraprastha-apollo-hospital-new-delhi" },
+      { "name": "Fortis Hospital Gurgaon", "slug": "/hospitals/fortis-hospital-gurgaon" },
+      { "name": "Max Hospital Saket", "slug": "/hospitals/max-hospital-saket" },
+      { "name": "BLK Max Hospital Pusa Road", "slug": "/hospitals/blk-max-hospital-pusa-road" },
+      { "name": "Medanta Hospital, Gurgaon", "slug": "/hospitals/medanta-hospital-gurgaon" },
+      { "name": "Neelkanth Maternity & IVF Hospital", "slug": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon" },
+      { "name": "Manipal Hospital Dwarka", "slug": "/hospitals/manipal-hospital-dwarka" },
+      { "name": "Apollo Hospital Greams Road", "slug": "/hospitals/apollo-hospital-greams-road-chennai" },
+      { "name": "Stem Rx Hospital", "slug": "/hospitals/stem-rx-hospital-mumbai" },
+      { "name": "Apollo Hospital Mumbai", "slug": "/hospitals/apollo-hospital-mumbai" },
+      { "name": "Fortis Hospital Mumbai", "slug": "/hospitals/fortis-hospital-mumbai" },
+      { "name": "TX Hospital", "slug": "/hospitals/tx-hospital-hyderabad" },
+      { "name": "Apollo Hospital Hyderabad", "slug": "/hospitals/apollo-hospital-hyderabad" },
+      { "name": "Memorial Hospital", "slug": "/hospitals/memorial-hospital-turkey" },
+      { "name": "Bumrungrad Hospital", "slug": "/hospitals/bumrungrad-hospital-thailand" },
+      { "name": "Nepal Mediciti", "slug": "/hospitals/nepal-mediciti" }
     ]
   }
 }

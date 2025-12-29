@@ -50,7 +50,7 @@ export default function AboutPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/team-photo.jpg"
+                                        src="/about/team.png"
                                         alt="Panacea Medcare Team"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -96,7 +96,7 @@ export default function AboutPage({ params }) {
                                 <div className={`relative ${isRTL ? "md:order-2" : ""}`}>
                                     <div className="relative h-full min-h-[400px]">
                                         <Image
-                                            src="/images/sumiit-gupta.jpg"
+                                            src="/about/mr-sumiit-gupta.png"
                                             alt={teamMembers.sumiitGupta.name}
                                             fill
                                             className="object-cover"
@@ -119,7 +119,7 @@ export default function AboutPage({ params }) {
                                 <div className={`relative ${isRTL ? "md:order-2" : ""}`}>
                                     <div className="relative h-full min-h-[400px]">
                                         <Image
-                                            src="/images/dr-mandakini-chopra.jpg"
+                                            src="/about/dr-mandakini-chopra.png"
                                             alt={teamMembers.drMandakiniChopra.name}
                                             fill
                                             className="object-cover"
@@ -153,10 +153,10 @@ export default function AboutPage({ params }) {
                                 <div className={`relative ${isRTL ? "md:order-2" : ""}`}>
                                     <div className="relative h-full min-h-[400px]">
                                         <Image
-                                            src="/images/dr-prerna.jpg"
+                                            src="/about/dr-prerna.png"
                                             alt={teamMembers.drPrerna.name}
                                             fill
-                                            className="object-cover"
+                                            className="object-contain"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                     </div>
@@ -183,7 +183,7 @@ export default function AboutPage({ params }) {
                                 <div className={`relative ${isRTL ? "md:order-2" : ""}`}>
                                     <div className="relative h-full min-h-[400px]">
                                         <Image
-                                            src="/images/dr-deepika.jpg"
+                                            src="/about/dr-deepika.png"
                                             alt={teamMembers.drDeepika.name}
                                             fill
                                             className="object-cover"

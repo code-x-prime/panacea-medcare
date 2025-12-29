@@ -15,7 +15,6 @@ import {
     Users,
     CheckCircle2,
     ArrowRight,
-    Brain,
     Shield,
     Globe
 } from "lucide-react";

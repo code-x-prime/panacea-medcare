@@ -1,0 +1,35 @@
+{
+  "title": "Tourism & Leisure",
+  "subtitle": "Combine your medical treatment with an unforgettable travel experience",
+  "breadcrumb": {
+    "home": "Home",
+    "tourism": "Tourism & Leisure"
+  },
+  "heading": "Tourism & Leisure",
+  "intro": "Combine your medical treatment with an unforgettable travel experience in India. We offer comprehensive tourism and leisure packages designed specifically for medical tourists.",
+  "services": {
+    "title": "Our Tourism & Leisure Services",
+    "spa": {
+      "title": "Spa & Ayurvedic Services",
+      "description": "We have tie ups with several local bodies providing international level services for spa, ayurvedic massages etc."
+    },
+    "sightseeing": {
+      "title": "Local Sightseeing Tours",
+      "description": "We arrange local sightseeing tours escorted by our service executives."
+    },
+    "rejuvenative": {
+      "title": "Rejuvenative & Recuperative Tours",
+      "description": "We arrange Rejuvenative And Recuperative Tours to various well known destinations in India like Agra, Kerala, Goa, Rajasthan etc."
+    },
+    "special": {
+      "title": "Special Tours",
+      "description": "Special Tours can also be organized like Ananda Spa/Ecotourism etc."
+    }
+  },
+  "destinations": {
+    "agra": "Agra - Home of the iconic Taj Mahal",
+    "kerala": "Kerala - Backwaters and Ayurvedic wellness",
+    "goa": "Goa - Beautiful beaches and Portuguese heritage",
+    "rajasthan": "Rajasthan - Royal palaces and desert experiences"
+  }
+}

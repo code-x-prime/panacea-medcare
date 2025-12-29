@@ -3,7 +3,7 @@
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
-import { Award, DollarSign, Users, Clock, Globe, Plane, Stethoscope, Heart, Shield, CheckCircle } from "lucide-react";
+import { Award, DollarSign, Clock, Globe, Plane, Stethoscope, Heart, Shield, CheckCircle, TrendingDown } from "lucide-react";
 
 export default function WhyIndiaPage({ params }) {
     const { locale } = params;
@@ -174,6 +174,71 @@ export default function WhyIndiaPage({ params }) {
                             </div>
                         );
                     })}
+                </div>
+
+                {/* Price Comparison Table Section */}
+                <div className="max-w-7xl mx-auto mb-16">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                        <div className="flex items-center justify-center gap-4 mb-4">
+                            <TrendingDown className="w-8 h-8 md:w-10 md:h-10" />
+                            <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
+                                {t("priceComparison.title") || "Advantage India"}
+                            </h2>
+                        </div>
+                        <p className="text-center text-lg md:text-xl text-white/90">
+                            {t("priceComparison.subtitle") || "Price Comparison in USD ($)"}
+                        </p>
+                    </div>
+
+                    <div className="bg-white rounded-2xl shadow-panacea-lg border border-gray-100 overflow-hidden">
+                        <div className="overflow-x-auto">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="bg-gradient-to-r from-panacea-primary to-panacea-secondary text-white">
+                                        <th className={`px-4 py-4 md:px-6 md:py-5 text-left font-bold text-sm md:text-base ${isRTL ? "text-right" : "text-left"}`}>
+                                            {t("priceComparison.table.surgery") || "Surgery"}
+                                        </th>
+                                        <th className={`px-4 py-4 md:px-6 md:py-5 text-center font-bold text-sm md:text-base`}>
+                                            {t("priceComparison.table.usa") || "USA"}
+                                        </th>
+                                        <th className={`px-4 py-4 md:px-6 md:py-5 text-center font-bold text-sm md:text-base bg-panacea-accent/20`}>
+                                            {t("priceComparison.table.india") || "India"}
+                                        </th>
+                                        <th className={`px-4 py-4 md:px-6 md:py-5 text-center font-bold text-sm md:text-base`}>
+                                            {t("priceComparison.table.singapore") || "Singapore"}
+                                        </th>
+                                        <th className={`px-4 py-4 md:px-6 md:py-5 text-center font-bold text-sm md:text-base`}>
+                                            {t("priceComparison.table.thailand") || "Thailand"}
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {t.raw("priceComparison.table.procedures").map((procedure, idx) => (
+                                        <tr
+                                            key={idx}
+                                            className={`border-b border-gray-200 hover:bg-panacea-light/50 transition-colors ${idx % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+                                        >
+                                            <td className={`px-4 py-4 md:px-6 md:py-5 font-semibold text-panacea-dark text-sm md:text-base ${isRTL ? "text-right" : "text-left"}`}>
+                                                {procedure.name}
+                                            </td>
+                                            <td className="px-4 py-4 md:px-6 md:py-5 text-center text-gray-700 text-sm md:text-base">
+                                                ${procedure.usa}
+                                            </td>
+                                            <td className="px-4 py-4 md:px-6 md:py-5 text-center font-bold text-panacea-primary text-sm md:text-base bg-panacea-accent/10">
+                                                ${procedure.india}
+                                            </td>
+                                            <td className="px-4 py-4 md:px-6 md:py-5 text-center text-gray-700 text-sm md:text-base">
+                                                ${procedure.singapore}
+                                            </td>
+                                            <td className="px-4 py-4 md:px-6 md:py-5 text-center text-gray-700 text-sm md:text-base">
+                                                ${procedure.thailand}
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Summary Section - Enhanced */}

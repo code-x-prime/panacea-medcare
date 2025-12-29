@@ -1,0 +1,77 @@
+{
+  "title": "Partner With Us",
+  "subtitle": "Join our global healthcare network",
+  "breadcrumb": {
+    "home": "Home",
+    "partner": "Partner With Us"
+  },
+  "heading": "Partner With Us",
+  "intro": "Join Panacea Medcare International team and become part of a billion dollar growing industry. We offer partnership opportunities on profit sharing basis with representative offices in your country.",
+  "proposition": {
+    "title": "The Proposition",
+    "points": [
+      "Be a part of Panacea Medcare International team",
+      "Partners on profit sharing basis",
+      "Panacea Medcare representative office in your country"
+    ]
+  },
+  "whatYouCanExpect": {
+    "title": "What you can expect from us",
+    "points": [
+      "Top of the line treatment for your patients",
+      "State of the art hospitals (JCI/ ISO accredited)",
+      "World class, accredited medical expertise",
+      "Reasonable costs",
+      "Complete peace of mind",
+      "Comprehensive coordination of all logistics of the patient; from traveling to accommodations and treatment.",
+      "Single point of contact for all our interactions with you and your patients.",
+      "24x7 availability for any issue resolution.",
+      "Appropriate commissions/ financial remuneration.",
+      "We can support you in various India based activities.",
+      "We can support/partner for other business Opportunities In Medical field- viz. Supply of Medicines/Equipment or any other"
+    ]
+  },
+  "whatWeExpect": {
+    "title": "What we expect from you",
+    "points": [
+      "You help popularize India and Panacea Medcare as a favored destination for world-class medical treatment.",
+      "You inform and recommend your patients to us.",
+      "You assure patients of world class services from us.",
+      "You provide us with medical history, reports and your perspective of the patients and their condition, to facilitate their treatment.",
+      "Other details you would think as necessary that we should know at the time of sending the patient for treatment.",
+      "If the patient needs ambulance – Road / Air",
+      "If the patient needs accommodation post treatment / surgery, what category ?",
+      "Details of patients present condition.",
+      "You provide inputs on patient feedback on our services."
+    ]
+  },
+  "propositionDetails": {
+    "title": "The Proposition",
+    "patient": {
+      "title": "Patient",
+      "points": [
+        "The patient will avail top class treatment from best doctors and world class accredited hospitals.",
+        "A single point of contact will provide comprehensive coordination and facilitation to the patient.",
+        "We will manage the complete trip so the patient doesn't have to worry about anything."
+      ]
+    },
+    "you": {
+      "title": "You",
+      "points": [
+        "You get to be a part of a billion Dollar growing industry.",
+        "You are providing a complete treatment package to your patients at affordable costs.",
+        "You will find a trustworthy partner in Panacea Medcare, with an expert team",
+        "You will find absolute transparency in our dealings",
+        "You will be a share-holder of the profits with us."
+      ]
+    },
+    "panaceaMedcare": {
+      "title": "Panacea Medcare",
+      "points": [
+        "You will help us in building our strong network.",
+        "You will help us market our services.",
+        "By promoting Panacea Medcare you will help us build our Brand name."
+      ]
+    }
+  }
+}

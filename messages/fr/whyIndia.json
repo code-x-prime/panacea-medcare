@@ -1,24 +1,165 @@
 {
-  "title": "Pourquoi choisir l'Inde pour le traitement médical?",
+  "title": "Qu'est-ce que le Voyage à Valeur Médicale et Pourquoi Devriez-Vous Choisir l'Inde",
   "subtitle": "Soins de santé de classe mondiale à des prix abordables",
   "breadcrumb": {
     "home": "Accueil",
     "whyIndia": "Pourquoi l'Inde"
   },
-  "heading": "Pourquoi choisir l'Inde pour le traitement médical?",
-  "intro": "L'Inde est devenue une destination de premier plan pour le tourisme médical, offrant des soins de santé de classe mondiale à des prix abordables.",
-  "benefits": {
-    "worldClass": "Soins de santé de classe mondiale",
-    "worldClassDesc": "Hôpitaux accrédités JCI avec des installations médicales et une technologie de pointe.",
-    "affordable": "Traitement abordable",
-    "affordableDesc": "Coûts considérablement inférieurs par rapport aux pays occidentaux sans compromettre la qualité.",
-    "experts": "Médecins experts",
-    "expertsDesc": "Professionnels médicaux formés et expérimentés à l'international.",
-    "noWaiting": "Pas de temps d'attente",
-    "noWaitingDesc": "Accès immédiat au traitement sans longues périodes d'attente.",
-    "multilingual": "Support multilingue",
-    "multilingualDesc": "Support en plusieurs langues pour les patients internationaux.",
-    "travel": "Voyage facile",
-    "travelDesc": "Processus de visa simplifié et arrangements de voyage pour les touristes médicaux."
+  "mainTitle": "Qu'est-ce que le Voyage à Valeur Médicale et Pourquoi Devriez-Vous Choisir l'Inde",
+  "intro1": "Le Voyage à Valeur Médicale (MVT) est la pratique de voyager à travers les frontières internationales pour obtenir des soins médicaux, généralement à un coût inférieur, avec une qualité supérieure, ou pour accéder à des traitements non disponibles dans son pays d'origine. Ce type de voyage comprend diverses procédures médicales, des chirurgies électives et traitements spécialisés aux soins de bien-être et préventifs.",
+  "intro2": "L'Inde est devenue l'une des destinations de premier plan pour le Voyage à Valeur Médicale (MVT) en raison de plusieurs raisons convaincantes. Voici pourquoi les patients du monde entier choisissent l'Inde pour les traitements médicaux:",
+  "reasons": {
+    "highQuality": {
+      "title": "Services de Soins de Santé de Haute Qualité",
+      "point1": "Hôpitaux de Classe Mondiale: L'Inde abrite de nombreux hôpitaux accrédités internationalement (par exemple, JCI, NABH) qui offrent des installations de classe mondiale et une technologie de pointe.",
+      "point2": "Professionnels Médicaux Qualifiés: Les médecins et chirurgiens indiens sont mondialement reconnus pour leur expertise, beaucoup ayant été formés ou ayant pratiqué aux États-Unis, au Royaume-Uni ou dans d'autres pays développés."
+    },
+    "costEffective": {
+      "title": "Traitement Rentable",
+      "point1": "Soins Abordables: Les procédures médicales en Inde sont considérablement plus abordables par rapport aux pays occidentaux, souvent à une fraction du coût, sans compromettre la qualité.",
+      "point2": "Tarification Transparente: Les patients peuvent obtenir des estimations de coût claires avant leur traitement, ce qui aide à une meilleure planification financière."
+    },
+    "wideRange": {
+      "title": "Large Gamme de Traitements Médicaux",
+      "point1": "Procédures Médicales Avancées: L'Inde offre une large gamme de traitements médicaux, des chirurgies complexes comme les procédures cardiaques et orthopédiques aux traitements de fertilité, chirurgie esthétique et thérapies alternatives telles que l'Ayurveda.",
+      "point2": "Disponibilité de la Dernière Technologie: Les hôpitaux indiens sont équipés des dernières technologies médicales, y compris la chirurgie robotique, l'imagerie avancée et l'équipement de diagnostic moderne."
+    },
+    "noWaiting": {
+      "title": "Pas de Listes d'Attente",
+      "point1": "Traitement en Temps Opportun: Contrairement à de nombreux pays occidentaux, le système de santé indien a souvent des temps d'attente minimes ou inexistants, permettant aux patients de recevoir une attention médicale en temps opportun."
+    },
+    "communication": {
+      "title": "Facilité de Communication",
+      "point1": "Maîtrise de l'Anglais: L'anglais est largement parlé en Inde, en particulier parmi les professionnels de la santé, facilitant la communication pour les patients internationaux.",
+      "point2": "Support Dédié aux Patients: De nombreux hôpitaux ont des départements dédiés aux patients internationaux qui aident à la communication, aux arrangements de voyage et à d'autres aspects logistiques."
+    },
+    "holistic": {
+      "title": "Soins Holistiques et de Bien-être",
+      "point1": "Médecine Intégrative: L'Inde est connue pour son approche holistique des soins de santé, intégrant la médecine moderne avec des pratiques traditionnelles telles que l'Ayurveda, le Yoga et la Naturopathie. Cela offre aux patients des soins complets, y compris des thérapies préventives et de bien-être.",
+      "point2": "Soins Post-Traitement: L'Inde offre d'excellents services de réadaptation, y compris la physiothérapie et les programmes de bien-être pour assurer une récupération en douceur."
+    },
+    "tourism": {
+      "title": "Opportunités Touristiques",
+      "point1": "Riche Patrimoine Culturel: Les patients peuvent combiner leur traitement médical avec le tourisme, explorant le riche patrimoine culturel de l'Inde, les sites historiques et la beauté naturelle.",
+      "point2": "Forfaits de Tourisme Médical: De nombreux hôpitaux et agences de voyage offrent des forfaits qui incluent des visites touristiques, l'hébergement et d'autres services adaptés aux patients internationaux."
+    },
+    "government": {
+      "title": "Politiques Gouvernementales Favorables",
+      "point1": "Visa Médical: Le gouvernement indien offre une catégorie de visa spécifique pour les touristes médicaux, simplifiant le processus pour les patients et leurs accompagnateurs.",
+      "point2": "Politiques Favorables aux Patients: Le gouvernement et les prestataires de soins de santé ont mis en œuvre diverses initiatives pour rendre l'expérience du Voyage à Valeur Médicale (MVT) fluide et sans tracas."
+    },
+    "success": {
+      "title": "Résultats Positifs et Histoires de Succès",
+      "point1": "Bilan Prouvé: L'Inde a un solide bilan de traitements médicaux réussis, avec de nombreux témoignages positifs de patients et des taux de satisfaction élevés de la part des patients internationaux."
+    },
+    "connectivity": {
+      "title": "Connectivité Mondiale",
+      "point1": "Aéroports Bien Connectés: Les grandes villes indiennes comme Delhi, Mumbai, Chennai et Bangalore sont bien connectées avec des vols directs depuis de nombreuses destinations internationales, rendant les voyages pratiques pour les patients."
+    }
+  },
+  "summary": "La combinaison de l'Inde en matière de soins de santé de qualité, d'accessibilité financière et d'une large gamme d'options de traitement en fait un choix de premier plan pour le voyage à valeur médicale.",
+  "priceComparison": {
+    "title": "Avantage Inde",
+    "subtitle": "Comparaison des Prix en USD ($)",
+    "table": {
+      "surgery": "Chirurgie",
+      "usa": "États-Unis",
+      "india": "Inde",
+      "singapore": "Singapour",
+      "thailand": "Thaïlande",
+      "procedures": [
+        {
+          "name": "Pontage Cardiaque",
+          "usa": "144,000",
+          "india": "8,500",
+          "singapore": "13,500",
+          "thailand": "24,000"
+        },
+        {
+          "name": "Angioplastie",
+          "usa": "57,000",
+          "india": "5,000",
+          "singapore": "11,200",
+          "thailand": "13,000"
+        },
+        {
+          "name": "Remplacement de Valvule Cardiaque",
+          "usa": "170,000",
+          "india": "9,000",
+          "singapore": "12,500",
+          "thailand": "11,000"
+        },
+        {
+          "name": "Remplacement de Hanche",
+          "usa": "50,000",
+          "india": "5,800",
+          "singapore": "9,200",
+          "thailand": "12,000"
+        },
+        {
+          "name": "Resurfaçage de Hanche",
+          "usa": "50,000",
+          "india": "8,000",
+          "singapore": "12,100",
+          "thailand": "16,000"
+        },
+        {
+          "name": "Remplacement de Genou",
+          "usa": "50,000",
+          "india": "6,200",
+          "singapore": "11,000",
+          "thailand": "10,000"
+        },
+        {
+          "name": "Fusion Vertébrale",
+          "usa": "100,000",
+          "india": "5,500",
+          "singapore": "9,000",
+          "thailand": "7,000"
+        },
+        {
+          "name": "Implant Dentaire",
+          "usa": "2,000 - 10,000",
+          "india": "700",
+          "singapore": "2,900",
+          "thailand": "3,000"
+        },
+        {
+          "name": "Anneau Gastrique",
+          "usa": "30,000",
+          "india": "7,500",
+          "singapore": "12,000",
+          "thailand": "12,000"
+        },
+        {
+          "name": "Implants Mammaires",
+          "usa": "10,000",
+          "india": "4,500",
+          "singapore": "5,400",
+          "thailand": "4,500"
+        },
+        {
+          "name": "Rhinoplastie",
+          "usa": "8,000",
+          "india": "3,500",
+          "singapore": "2,700",
+          "thailand": "3,400"
+        },
+        {
+          "name": "Lifting du Visage",
+          "usa": "15,000",
+          "india": "5,000",
+          "singapore": "5,000",
+          "thailand": "6,600"
+        },
+        {
+          "name": "Hystérectomie",
+          "usa": "15,000",
+          "india": "2,300",
+          "singapore": "6,000",
+          "thailand": "4,500"
+        }
+      ]
+    }
   }
 }

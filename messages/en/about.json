@@ -1,36 +1,68 @@
 {
-  "title": "About Panacea Health",
+  "title": "About Panacea Medcare",
   "subtitle": "Your trusted partner in global healthcare",
+  "breadcrumb": {
+    "home": "Home",
+    "about": "About Us"
+  },
   "heading": "About Us",
-  "intro": "Panacea Health is a premier medical tourism company with a distinguished track record spanning over 14 years. Specializing in providing world-class healthcare services to international patients, Panacea Health has established itself as a leader in the industry.",
-  "companyDesc": "The company prides itself on offering comprehensive medical tourism solutions that encompass every aspect of patient care, from initial consultation and travel arrangements to post-treatment follow-ups. Panacea Health continues to build on its legacy of excellence, expanding its services and enhancing patient experiences to meet the evolving needs of the global healthcare landscape.",
-  "feature1": {
-    "title": "Extensive Network of Accredited Hospitals and Clinics",
-    "desc": "Panacea Health partners with top-tier hospitals and clinics worldwide, ensuring access to the latest medical technologies and highly skilled healthcare professionals."
-  },
-  "feature2": {
-    "title": "Patient-Centered Approach",
-    "desc": "The company's patient-centric philosophy emphasizes personalized care, with tailored treatment plans that address the unique needs and preferences of each patient."
-  },
-  "feature3": {
-    "title": "Wide Range of Medical Services",
-    "desc": "From elective procedures and specialized surgeries to wellness programs and preventive care, Panacea Health offers a diverse array of medical services across multiple specialties."
-  },
-  "feature4": {
-    "title": "Experienced Team",
-    "desc": "With over 14 years of experience, the Panacea Health team comprises seasoned professionals who bring a wealth of expertise and knowledge to the medical tourism sector."
-  },
-  "feature5": {
-    "title": "Seamless Travel and Accommodation Arrangements",
-    "desc": "Understanding the complexities of international travel, Panacea Health provides end-to-end support, including visa assistance, flight bookings, and accommodation arrangements to ensure a stress-free experience for patients and their families."
-  },
-  "feature6": {
-    "title": "Commitment to Quality and Safety",
-    "desc": "Patient safety and quality care are at the forefront of Panacea Health's operations. The company adheres to stringent standards and protocols to deliver the highest level of medical care."
-  },
-  "feature7": {
-    "title": "Post-Treatment Support",
-    "desc": "Panacea Health offers robust post-treatment care, including follow-up consultations and rehabilitation services, to ensure optimal recovery and patient satisfaction."
+  "intro": "Panacea Medcare is a premier medical tourism company based in Delhi NCR, India, with a distinguished track record spanning over 12 years. Specializing in providing Affordable and world-class healthcare services to international patients, Panacea Medcare has established itself as a leader in the industry.",
+  "points": [
+    "Panacea Medcare is a premier medical tourism company based in Delhi NCR, India, with a distinguished track record spanning over 12 years. Specializing in providing Affordable and world-class healthcare services to international patients, Panacea Medcare has established itself as a leader in the industry.",
+    "A Professional organization which understands and takes care of the needs of a traveling patient with a total medical experience of over 50 years.",
+    "The company's patient-centric philosophy emphasizes personalized care, with tailored treatment plans that address the unique needs and preferences of each patient.",
+    "A Comprehensive solution provider who helps in satisfying all needs, \"Quality, Financial, Psychological and Logistics\"",
+    "A trustworthy, reliable and dependable partner.",
+    "We also help clients experience the rich natural and cultural and historical facets of India."
+  ],
+  "coreTeam": {
+    "title": "The Core Team",
+    "members": {
+      "sumiitGupta": {
+        "name": "Mr. Sumiit Gupta",
+        "title": "Founder Director",
+        "description": "With over 30 years of diverse and rich experience in production, manufacturing, operations, logistics, purchase, projects, commercial, and finance, I am a seasoned corporate executive who can handle complex and challenging business scenarios. I have a strong engineering and business management background, with a PGDBM in Materials and Finance and a BTech degree.",
+        "roles": "As the Director at Panacea Medcare, I am passionate about helping people get affordable and quality medical treatment in India. As Director, Athena Land & Real Estate, I leverage my extensive domain knowledge and expertise in land aggregation, industrial real estate, government liaisoning and approvals to handle land acquisition for corporates across India. I also serve as the Director of Business Development for Famsun Storage Co. Ltd. China, where I offer complete silo storage and material handling solutions for the grain and feed mill industry. I am passionate about revolutionizing the food grain storage infrastructure in India and creating value for my clients and stakeholders."
+      },
+      "drMandakiniChopra": {
+        "name": "Dr. Mandakini Chopra",
+        "title": "Women Health specialist, Certified Pregnancy Fitness Educator, Certified Lactation Counsellor, Yoga expert/Trainer. Corporate Wellness Coach",
+        "description": "Sr. Physiotherapist, Ergonomics trainer and a Certified Pregnancy fitness educator, Certified Pilates Instructor, Certified Manual therapist, Certified Lactation Counsellor with 13+years of physical therapy experience. I have aligned my passion for helping people and to offer compassionate care by providing treatment to variety of patients",
+        "workshops": [
+          "Corporate ergonomic sessions",
+          "Antenatal workshops for pregnant mothers",
+          "Resource person to various webinars on Women health, PCOD, Lactating mothers, Fitness and Good posture for leading Corporates",
+          "Panellist on webinars conducted by Menopause society and ICOG on women health viz, Pelvic floor dysfunction, Bone strength in menopause etc."
+        ],
+        "specialties": "Specialities/Expertise: Neurology, Musculoskeletal, Women Health. Expertise in treating PCOD, Infertility, Dysmenorrhea, Vulvodynia, Dyspareunia, Pelvic floor dysfunctions."
+      },
+      "drPrerna": {
+        "name": "Dr. Prerna",
+        "title": "M.D Nephrology",
+        "description": "Dr. Prerna has Bachelor of Medicine and Surgery degree and MD- Nephrology and a Transplant Expert, with over 16 years of experience.",
+        "qualifications": [
+          "She has a certification from the American Board of Internal Medicine.",
+          "She has taught extensively in University of Illinois, University of Iowa Hospitals and Clinic and completed a fellowship in Transplant Nephrology.",
+          "She has also worked at the Albert Einstein College of Medicine New York for several years.",
+          "She has extensive Research experience and has published number of Papers in Medical Journals,",
+          "She is also into Reiki healing and Energy Medicine."
+        ]
+      },
+      "drDeepika": {
+        "name": "Dr. Deepika",
+        "title": "Ayurveda and Holistic Medicine",
+        "experience": "Dr. Deepika has over 22 years of experience in the field of Ayurveda with a degree in Ayurvedic Medicine",
+        "aboutAyurveda": "Ayurveda, India's holistic, integrated, physiotherapeutic medical system is based upon the universal natural law of balancing the five elements (ether, air, fire, water and earth) that make up the physical body.",
+        "aboutClinic": "Dr Deepika operates her Wellness Clinic under the name of Sanovide which is a 100% natural health clinic based on therapies & techniques of ancient Indian medical system. This included combining best elements from the great ancient texts of Ayurveda & Yoga with modern research based nutrition to provide treatments & therapies best suited in today's fast paced life. The legacy of researching inter-relation between human body & nature lays the foundation of Sanovide.",
+        "treatments": [
+          "Panchakarma - Detoxification and purification of the body",
+          "Abhyanga - Ayurvedic Massage - Rejuvenation, relaxation, and improving circulation",
+          "Shirodhara - Mental relaxation, stress relief, and treating insomnia",
+          "Swedana -Herbal Steam Therapy- Detoxification, relief from muscle stiffness, and promoting sweating",
+          "Udwarthanam - Weight loss, skin exfoliation, and improving skin tone"
+        ]
+      }
+    }
   },
   "mission": "Mission",
   "missionText": "To provide unparalleled healthcare services to international patients through innovation, compassion, and a commitment to excellence.",

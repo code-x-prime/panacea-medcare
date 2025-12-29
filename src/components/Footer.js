@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -79,9 +80,18 @@ export default function Footer({ locale }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
-              {t("companyName")}
-            </h3>
+            {/* Logo */}
+            <Link href={`/${locale}`} className="inline-block mb-2">
+              <Image
+                src="/logo.png"
+                alt="Panacea Medcare Logo"
+                width={200}
+                height={100}
+                className="h-16 md:h-20 w-auto  "
+                priority
+              />
+            </Link>
+
             <p className="text-panacea-light/90 mb-6 leading-relaxed">
               {t("tagline")}
             </p>

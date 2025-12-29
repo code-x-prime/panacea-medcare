@@ -1,8 +1,83 @@
 {
   "title": "International Patients",
   "subtitle": "Comprehensive healthcare services for patients worldwide",
+  "breadcrumb": {
+    "home": "Home",
+    "internationalPatients": "International Patients"
+  },
   "heading": "Welcome International Patients",
   "intro": "We specialize in providing world-class medical care to international patients, offering comprehensive support from consultation to recovery.",
+  "topConcerns": {
+    "title": "Top Concerns for Traveling Patients",
+    "subtitle": "We understand your concerns and address each one with our comprehensive services",
+    "concerns": [
+      "Identification and evaluation of hospitals and doctors for treatment.",
+      "Comprehensive coordination of travel, stay, treatment, recuperation etc.",
+      "Lack of ground level information and reality check.",
+      "Lack of knowledge of local language, customs, traditions and dos & don'ts.",
+      "Apprehension to travel to an unknown place for treatment.",
+      "Post Treatment Care and Follow up",
+      "Cost Transparency and hidden charges",
+      "Safety and Security"
+    ]
+  },
+  "stepByStepGuide": {
+    "title": "Your Step by Step Guide",
+    "subtitle": "Role of Panacea Medcare",
+    "description": "This can help future patients in their decision-making process.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Research and Selection of Hospitals/Clinic",
+        "description": "You send the patients reports to us by email/whatsapp. Our expert team goes thru the reports and consults few hospitals/doctors who are best suited for that particular treatment also keeping in mind the budget of the patient."
+      },
+      {
+        "number": 2,
+        "title": "Consultation with Healthcare Providers",
+        "description": "We can also arrange video conference facility with the doctor to understand the procedure, recovery time, and any pre-treatment requirements. Basis the reports and consultation we Obtain a detailed treatment plan, including costs, expected duration etc."
+      },
+      {
+        "number": 3,
+        "title": "Visa and Travel Arrangements",
+        "description": "Panacea will arrange the Visa Invitation letter from the hospital and help in getting the visa from Indian Embassy in your country. Also Air tickets can be arranged if desired, by our travel partners at no extra charge."
+      },
+      {
+        "number": 4,
+        "title": "Accommodation and Local Transportation",
+        "description": "Panacea will arrange for pick up from the airport and all logistics for your stay at the hospital or stay during and after treatment for attendants and all local travel arrangements."
+      },
+      {
+        "number": 5,
+        "title": "Hospital Admission and Pre treatment",
+        "description": "Panacea will have its representative to assist you for admission in the hospital, pretreatment tests and diagnostics etc."
+      },
+      {
+        "number": 6,
+        "title": "Billing and Payment",
+        "description": "Panacea will assist you in settling the hospital bills/arrange for currency conversion or any other assistance regarding bill amount etc. We also ensure no hidden charges are billed to the patient and that the charges are as per the estimate submitted, except for extra procedures that may be required on case to case basis."
+      },
+      {
+        "number": 7,
+        "title": "Rehabilitation and Recovery",
+        "description": "Panacea will provide support for post-operative care and/or rehabilitation programs recommended by the hospital."
+      },
+      {
+        "number": 8,
+        "title": "Travel Back Home",
+        "description": "After a final check-up and clearance from the doctor, Panacea will help to get all your reports, book your flight back home. Panacea has several tie-ups for exploring the exotic locations in India, and we will assist you in the best possible way for sightseeing and shopping."
+      },
+      {
+        "number": 9,
+        "title": "Follow-Up from Home",
+        "description": "WE offer telemedicine services for follow-up at home for any further advice or treatment if required."
+      },
+      {
+        "number": 10,
+        "title": "Feedback and Testimonial",
+        "description": "Share your experience with the hospital and provide testimonials if you're satisfied with the care received."
+      }
+    ]
+  },
   "servicesTitle": "Services for International Patients",
   "services": {
     "visa": "Visa Assistance",

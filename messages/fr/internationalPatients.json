@@ -1,8 +1,83 @@
 {
   "title": "Patients internationaux",
   "subtitle": "Services de santé complets pour les patients du monde entier",
+  "breadcrumb": {
+    "home": "Accueil",
+    "internationalPatients": "Patients internationaux"
+  },
   "heading": "Bienvenue aux patients internationaux",
   "intro": "Nous sommes spécialisés dans la fourniture de soins médicaux de classe mondiale aux patients internationaux, offrant un soutien complet de la consultation à la convalescence.",
+  "topConcerns": {
+    "title": "Principales Préoccupations des Patients Voyageurs",
+    "subtitle": "Nous comprenons vos préoccupations et répondons à chacune avec nos services complets",
+    "concerns": [
+      "Identification et évaluation des hôpitaux et médecins pour le traitement.",
+      "Coordination complète du voyage, du séjour, du traitement, de la convalescence, etc.",
+      "Manque d'informations au niveau du terrain et vérification de la réalité.",
+      "Manque de connaissances de la langue locale, des coutumes, des traditions et des choses à faire et à ne pas faire.",
+      "Appréhension de voyager dans un endroit inconnu pour le traitement.",
+      "Soins Post-Traitement et Suivi",
+      "Transparence des Coûts et Frais Cachés",
+      "Sécurité et Protection"
+    ]
+  },
+  "stepByStepGuide": {
+    "title": "Votre Guide Étape par Étape",
+    "subtitle": "Rôle de Panacea Medcare",
+    "description": "Cela peut aider les futurs patients dans leur processus de prise de décision.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Recherche et Sélection d'Hôpitaux/Cliniques",
+        "description": "Vous nous envoyez les rapports des patients par email/whatsapp. Notre équipe d'experts examine les rapports et consulte quelques hôpitaux/médecins qui sont les mieux adaptés pour ce traitement particulier, en tenant également compte du budget du patient."
+      },
+      {
+        "number": 2,
+        "title": "Consultation avec les Prestataires de Soins de Santé",
+        "description": "Nous pouvons également organiser une installation de vidéoconférence avec le médecin pour comprendre la procédure, le temps de récupération et toute exigence pré-traitement. Sur la base des rapports et de la consultation, nous obtenons un plan de traitement détaillé, y compris les coûts, la durée prévue, etc."
+      },
+      {
+        "number": 3,
+        "title": "Visa et Arrangements de Voyage",
+        "description": "Panacea organisera la lettre d'invitation de visa de l'hôpital et aidera à obtenir le visa de l'ambassade indienne dans votre pays. Les billets d'avion peuvent également être organisés si vous le souhaitez, par nos partenaires de voyage sans frais supplémentaires."
+      },
+      {
+        "number": 4,
+        "title": "Hébergement et Transport Local",
+        "description": "Panacea organisera la prise en charge depuis l'aéroport et toute la logistique pour votre séjour à l'hôpital ou le séjour pendant et après le traitement pour les accompagnants et tous les arrangements de voyage locaux."
+      },
+      {
+        "number": 5,
+        "title": "Admission à l'Hôpital et Pré-Traitement",
+        "description": "Panacea aura son représentant pour vous assister pour l'admission à l'hôpital, les tests pré-traitement et les diagnostics, etc."
+      },
+      {
+        "number": 6,
+        "title": "Facturation et Paiement",
+        "description": "Panacea vous aidera à régler les factures de l'hôpital/organiser la conversion de devises ou toute autre assistance concernant le montant de la facture, etc. Nous garantissons également qu'aucun frais caché n'est facturé au patient et que les frais sont conformes à l'estimation soumise, sauf pour les procédures supplémentaires qui peuvent être requises au cas par cas."
+      },
+      {
+        "number": 7,
+        "title": "Réadaptation et Récupération",
+        "description": "Panacea fournira un soutien pour les soins post-opératoires et/ou les programmes de réadaptation recommandés par l'hôpital."
+      },
+      {
+        "number": 8,
+        "title": "Retour au Pays",
+        "description": "Après un examen final et l'autorisation du médecin, Panacea vous aidera à obtenir tous vos rapports, réserver votre vol de retour. Panacea a plusieurs partenariats pour explorer les destinations exotiques en Inde, et nous vous assisterons de la meilleure façon possible pour le tourisme et les achats."
+      },
+      {
+        "number": 9,
+        "title": "Suivi depuis le Domicile",
+        "description": "NOUS offrons des services de télémédecine pour le suivi à domicile pour tout conseil ou traitement supplémentaire si nécessaire."
+      },
+      {
+        "number": 10,
+        "title": "Commentaires et Témoignage",
+        "description": "Partagez votre expérience avec l'hôpital et fournissez des témoignages si vous êtes satisfait des soins reçus."
+      }
+    ]
+  },
   "servicesTitle": "Services pour les patients internationaux",
   "services": {
     "visa": "Assistance visa",

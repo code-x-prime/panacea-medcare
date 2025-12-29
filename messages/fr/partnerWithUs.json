@@ -1,0 +1,78 @@
+{
+  "title": "Partenariat avec nous",
+  "subtitle": "Rejoignez notre réseau mondial de soins de santé",
+  "breadcrumb": {
+    "home": "Accueil",
+    "partner": "Partenariat avec nous"
+  },
+  "heading": "Partenariat avec nous",
+  "intro": "Rejoignez l'équipe internationale de Panacea Medcare et faites partie d'une industrie en croissance de plusieurs milliards de dollars. Nous offrons des opportunités de partenariat sur une base de partage des bénéfices avec des bureaux de représentation dans votre pays.",
+  "proposition": {
+    "title": "La Proposition",
+    "points": [
+      "Faites partie de l'équipe internationale de Panacea Medcare",
+      "Partenaires sur une base de partage des bénéfices",
+      "Bureau de représentation de Panacea Medcare dans votre pays"
+    ]
+  },
+  "whatYouCanExpect": {
+    "title": "Ce que vous pouvez attendre de nous",
+    "points": [
+      "Traitement de pointe pour vos patients",
+      "Hôpitaux de pointe (accrédités JCI/ ISO)",
+      "Expertise médicale accréditée de classe mondiale",
+      "Coûts raisonnables",
+      "Tranquillité d'esprit complète",
+      "Coordination complète de toute la logistique du patient; du voyage à l'hébergement et au traitement.",
+      "Point de contact unique pour toutes nos interactions avec vous et vos patients.",
+      "Disponibilité 24h/24 et 7j/7 pour la résolution de tout problème.",
+      "Commissions/ rémunération financière appropriées.",
+      "Nous pouvons vous soutenir dans diverses activités basées en Inde.",
+      "Nous pouvons soutenir/partenariat pour d'autres opportunités commerciales dans le domaine médical - à savoir. Fourniture de médicaments/équipements ou tout autre"
+    ]
+  },
+  "whatWeExpect": {
+    "title": "Ce que nous attendons de vous",
+    "points": [
+      "Vous aidez à populariser l'Inde et Panacea Medcare comme destination privilégiée pour le traitement médical de classe mondiale.",
+      "Vous informez et recommandez vos patients à nous.",
+      "Vous assurez aux patients des services de classe mondiale de notre part.",
+      "Vous nous fournissez les antécédents médicaux, les rapports et votre perspective sur les patients et leur état, pour faciliter leur traitement.",
+      "Autres détails que vous jugeriez nécessaires que nous devrions connaître au moment d'envoyer le patient pour traitement.",
+      "Si le patient a besoin d'une ambulance – Route / Air",
+      "Si le patient a besoin d'un hébergement post-traitement / chirurgie, quelle catégorie ?",
+      "Détails de l'état actuel du patient.",
+      "Vous fournissez des commentaires sur les commentaires des patients sur nos services."
+    ]
+  },
+  "propositionDetails": {
+    "title": "La Proposition",
+    "patient": {
+      "title": "Patient",
+      "points": [
+        "Le patient bénéficiera d'un traitement de première classe des meilleurs médecins et d'hôpitaux accrédités de classe mondiale.",
+        "Un point de contact unique fournira une coordination et une facilitation complètes au patient.",
+        "Nous gérerons le voyage complet afin que le patient n'ait pas à s'inquiéter de quoi que ce soit."
+      ]
+    },
+    "you": {
+      "title": "Vous",
+      "points": [
+        "Vous faites partie d'une industrie en croissance de plusieurs milliards de dollars.",
+        "Vous fournissez un package de traitement complet à vos patients à des coûts abordables.",
+        "Vous trouverez un partenaire de confiance en Panacea Medcare, avec une équipe d'experts",
+        "Vous trouverez une transparence absolue dans nos transactions",
+        "Vous serez actionnaire des bénéfices avec nous."
+      ]
+    },
+    "panaceaMedcare": {
+      "title": "Panacea Medcare",
+      "points": [
+        "Vous nous aiderez à construire notre réseau solide.",
+        "Vous nous aiderez à commercialiser nos services.",
+        "En promouvant Panacea Medcare, vous nous aiderez à construire notre nom de marque."
+      ]
+    }
+  }
+}
+

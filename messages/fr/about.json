@@ -1,18 +1,73 @@
 {
-  "title": "À propos de Panacea MedCare",
+  "title": "À propos de Panacea Medcare",
   "subtitle": "Votre partenaire de confiance en santé mondiale",
+  "breadcrumb": {
+    "home": "Accueil",
+    "about": "À propos de nous"
+  },
   "heading": "À propos de nous",
-  "description": "Panacea MedCare est un facilitateur de tourisme médical de premier plan qui met en relation des patients internationaux avec des établissements de santé de classe mondiale en Inde. Avec plus de 12 ans d'expérience, nous avons aidé des milliers de patients à recevoir des soins médicaux de qualité à des prix abordables.",
-  "point1": "Panacea Medcare est une entreprise de tourisme médical de premier plan basée à Delhi NCR, en Inde, avec un bilan distingué de plus de 12 ans. Spécialisée dans la fourniture de services de santé abordables et de classe mondiale aux patients internationaux, Panacea Medica s'est établie comme leader dans l'industrie.",
-  "point2": "Une organisation professionnelle qui comprend et prend soin des besoins d'un patient voyageur avec une expérience médicale totale de plus de 50 ans.",
-  "point3": "La philosophie centrée sur le patient de l'entreprise met l'accent sur les soins personnalisés, avec des plans de traitement sur mesure qui répondent aux besoins et préférences uniques de chaque patient.",
-  "point4": "Un fournisseur de solutions complètes qui aide à satisfaire tous les besoins, 'Qualité, Financier, Psychologique et Logistique'",
-  "point5": "Un partenaire de confiance, fiable et digne de confiance.",
-  "point6": "Nous aidons également les clients à découvrir les facettes naturelles, culturelles et historiques riches de l'Inde.",
-  "mission": "Notre mission",
-  "missionText": "Fournir des soins médicaux accessibles, abordables et de classe mondiale aux patients du monde entier grâce à notre réseau d'hôpitaux de premier ordre et de professionnels médicaux expérimentés.",
-  "vision": "Notre vision",
-  "visionText": "Être le partenaire de santé mondial le plus fiable, transformant des vies grâce à des soins médicaux exceptionnels et des expériences patient personnalisées.",
+  "intro": "Panacea Medcare est une entreprise de tourisme médical de premier plan basée à Delhi NCR, en Inde, avec un bilan distingué de plus de 12 ans. Spécialisée dans la fourniture de services de santé abordables et de classe mondiale aux patients internationaux, Panacea Medcare s'est établie comme leader dans l'industrie.",
+  "points": [
+    "Panacea Medcare est une entreprise de tourisme médical de premier plan basée à Delhi NCR, en Inde, avec un bilan distingué de plus de 12 ans. Spécialisée dans la fourniture de services de santé abordables et de classe mondiale aux patients internationaux, Panacea Medcare s'est établie comme leader dans l'industrie.",
+    "Une organisation professionnelle qui comprend et prend soin des besoins d'un patient voyageur avec une expérience médicale totale de plus de 50 ans.",
+    "La philosophie centrée sur le patient de l'entreprise met l'accent sur les soins personnalisés, avec des plans de traitement sur mesure qui répondent aux besoins et préférences uniques de chaque patient.",
+    "Un fournisseur de solutions complètes qui aide à satisfaire tous les besoins, \"Qualité, Financier, Psychologique et Logistique\"",
+    "Un partenaire de confiance, fiable et digne de confiance.",
+    "Nous aidons également les clients à découvrir les facettes naturelles, culturelles et historiques riches de l'Inde."
+  ],
+  "coreTeam": {
+    "title": "L'Équipe Principale",
+    "members": {
+      "sumiitGupta": {
+        "name": "M. Sumiit Gupta",
+        "title": "Fondateur Directeur",
+        "description": "Avec plus de 30 ans d'expérience diverse et riche dans la production, la fabrication, les opérations, la logistique, les achats, les projets, le commercial et les finances, je suis un dirigeant d'entreprise chevronné qui peut gérer des scénarios commerciaux complexes et difficiles. J'ai une solide formation en ingénierie et en gestion d'entreprise, notamment un PGDBM en Matériaux et Finance et un diplôme BTech.",
+        "roles": "En tant que Directeur chez Panacea Medcare, je suis passionné par l'aide aux personnes pour obtenir un traitement médical abordable et de qualité en Inde. En tant que Directeur, Athena Land & Real Estate, j'exploite ma vaste connaissance du domaine et mon expertise en agrégation de terres, immobilier industriel, liaison gouvernementale et approbations pour gérer l'acquisition de terres pour les entreprises à travers l'Inde. Je sers également en tant que Directeur du développement commercial pour Famsun Storage Co. Ltd. China, où j'offre des solutions complètes de stockage en silo et de manutention de matériaux pour l'industrie des moulins à grains et à aliments. Je suis passionné par la révolution de l'infrastructure de stockage des céréales alimentaires en Inde et la création de valeur pour mes clients et parties prenantes."
+      },
+      "drMandakiniChopra": {
+        "name": "Dr. Mandakini Chopra",
+        "title": "Spécialiste de la santé des femmes, Éducatrice certifiée en conditionnement physique prénatal, Conseillère certifiée en lactation, Experte/Formatrice en Yoga. Coach en bien-être d'entreprise",
+        "description": "Physiothérapeute principale, formatrice en ergonomie et éducatrice certifiée en conditionnement physique prénatal, Instructrice certifiée Pilates, Thérapeute manuelle certifiée, Conseillère certifiée en lactation avec plus de 13 ans d'expérience en physiothérapie. J'ai aligné ma passion pour aider les gens et offrir des soins compatissants en fournissant un traitement à une variété de patients",
+        "workshops": [
+          "Sessions ergonomiques d'entreprise",
+          "Ateliers prénatals pour les mères enceintes",
+          "Personne ressource pour divers webinaires sur la santé des femmes, le SOPK, les mères allaitantes, la forme physique et la bonne posture pour les entreprises leaders",
+          "Panéliste sur les webinaires organisés par la société de la Ménopause et l'ICOG sur la santé des femmes, à savoir, la dysfonction du plancher pelvien, la force osseuse dans la ménopause, etc."
+        ],
+        "specialties": "Spécialités/Expertise: Neurologie, Musculosquelettique, Santé des femmes. Expertise dans le traitement du SOPK, de l'infertilité, de la dysménorrhée, de la vulvodynie, de la dyspareunie, des dysfonctionnements du plancher pelvien."
+      },
+      "drPrerna": {
+        "name": "Dr. Prerna",
+        "title": "M.D. Néphrologie",
+        "description": "Dr. Prerna est titulaire d'un diplôme de Bachelor of Medicine and Surgery et d'un MD en Néphrologie et experte en transplantation, avec plus de 16 ans d'expérience.",
+        "qualifications": [
+          "Elle est certifiée par l'American Board of Internal Medicine.",
+          "Elle a enseigné largement à l'Université de l'Illinois, aux hôpitaux et cliniques de l'Université de l'Iowa et a terminé une bourse en transplantation rénale.",
+          "Elle a également travaillé au Albert Einstein College of Medicine de New York pendant plusieurs années.",
+          "Elle a une vaste expérience en recherche et a publié plusieurs articles dans des revues médicales,",
+          "Elle pratique également la guérison Reiki et la médecine énergétique."
+        ]
+      },
+      "drDeepika": {
+        "name": "Dr. Deepika",
+        "title": "Ayurveda et Médecine Holistique",
+        "experience": "Dr. Deepika a plus de 22 ans d'expérience dans le domaine de l'Ayurveda avec un diplôme en médecine ayurvédique",
+        "aboutAyurveda": "L'Ayurveda, système médical holistique, intégré et physiothérapeutique de l'Inde, est basé sur la loi naturelle universelle d'équilibrage des cinq éléments (éther, air, feu, eau et terre) qui composent le corps physique.",
+        "aboutClinic": "Dr Deepika exploite sa clinique de bien-être sous le nom de Sanovide qui est une clinique de santé 100% naturelle basée sur les thérapies et techniques de l'ancien système médical indien. Cela incluait la combinaison des meilleurs éléments des grands textes anciens de l'Ayurveda et du Yoga avec la nutrition basée sur la recherche moderne pour fournir des traitements et thérapies les mieux adaptés à la vie rapide d'aujourd'hui. L'héritage de la recherche sur l'interrelation entre le corps humain et la nature pose les fondations de Sanovide.",
+        "treatments": [
+          "Panchakarma - Désintoxication et purification du corps",
+          "Abhyanga - Massage Ayurvédique - Rajeunissement, relaxation et amélioration de la circulation",
+          "Shirodhara - Relaxation mentale, soulagement du stress et traitement de l'insomnie",
+          "Swedana - Thérapie à la vapeur à base de plantes - Désintoxication, soulagement de la raideur musculaire et promotion de la transpiration",
+          "Udwarthanam - Perte de poids, exfoliation de la peau et amélioration du teint"
+        ]
+      }
+    }
+  },
+  "mission": "Mission",
+  "missionText": "Fournir des services de santé inégalés aux patients internationaux grâce à l'innovation, la compassion et un engagement envers l'excellence.",
+  "vision": "Vision",
+  "visionText": "Être le leader mondial du tourisme médical, réputé pour transformer des vies grâce à des expériences de soins de santé exceptionnelles.",
   "values": "Nos valeurs",
   "valuesItems": {
     "quality": "Soins de qualité",

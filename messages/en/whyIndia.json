@@ -46,7 +46,7 @@
     "government": {
       "title": "Supportive Government Policies",
       "point1": "Medical Visa: The Indian government offers a specific visa category for medical tourists, simplifying the process for patients and their companions.",
-      "point2": "Patient-Friendly Policies: The government and healthcare providers have implemented various initiatives to make the MVT experience smooth and hassle-free."
+      "point2": "Patient-Friendly Policies: The government and healthcare providers have implemented various initiatives to make the Medical Value Travel (MVT) experience smooth and hassle-free."
     },
     "success": {
       "title": "Positive Outcomes and Success Stories",
@@ -57,5 +57,109 @@
       "point1": "Well-Connected Airports: Major Indian cities like Delhi, Mumbai, Chennai, and Bangalore are well-connected with direct flights from many international destinations, making travel convenient for patients."
     }
   },
-  "summary": "India's combination of quality healthcare, affordability, and a wide range of treatment options makes it a top choice for medical value travel."
+  "summary": "India's combination of quality healthcare, affordability, and a wide range of treatment options makes it a top choice for medical value travel.",
+  "priceComparison": {
+    "title": "Advantage India",
+    "subtitle": "Price Comparison in USD ($)",
+    "table": {
+      "surgery": "Surgery",
+      "usa": "USA",
+      "india": "India",
+      "singapore": "Singapore",
+      "thailand": "Thailand",
+      "procedures": [
+        {
+          "name": "Heart Bypass",
+          "usa": "144,000",
+          "india": "8,500",
+          "singapore": "13,500",
+          "thailand": "24,000"
+        },
+        {
+          "name": "Angioplasty",
+          "usa": "57,000",
+          "india": "5,000",
+          "singapore": "11,200",
+          "thailand": "13,000"
+        },
+        {
+          "name": "Heart Valve Replacement",
+          "usa": "170,000",
+          "india": "9,000",
+          "singapore": "12,500",
+          "thailand": "11,000"
+        },
+        {
+          "name": "Hip Replacement",
+          "usa": "50,000",
+          "india": "5,800",
+          "singapore": "9,200",
+          "thailand": "12,000"
+        },
+        {
+          "name": "Hip Resurfacing",
+          "usa": "50,000",
+          "india": "8,000",
+          "singapore": "12,100",
+          "thailand": "16,000"
+        },
+        {
+          "name": "Knee Replacement",
+          "usa": "50,000",
+          "india": "6,200",
+          "singapore": "11,000",
+          "thailand": "10,000"
+        },
+        {
+          "name": "Spinal Fusion",
+          "usa": "100,000",
+          "india": "5,500",
+          "singapore": "9,000",
+          "thailand": "7,000"
+        },
+        {
+          "name": "Dental Implant",
+          "usa": "2,000 - 10,000",
+          "india": "700",
+          "singapore": "2,900",
+          "thailand": "3,000"
+        },
+        {
+          "name": "Lap Band",
+          "usa": "30,000",
+          "india": "7,500",
+          "singapore": "12,000",
+          "thailand": "12,000"
+        },
+        {
+          "name": "Breast Implants",
+          "usa": "10,000",
+          "india": "4,500",
+          "singapore": "5,400",
+          "thailand": "4,500"
+        },
+        {
+          "name": "Rhinoplasty",
+          "usa": "8,000",
+          "india": "3,500",
+          "singapore": "2,700",
+          "thailand": "3,400"
+        },
+        {
+          "name": "Face Lift",
+          "usa": "15,000",
+          "india": "5,000",
+          "singapore": "5,000",
+          "thailand": "6,600"
+        },
+        {
+          "name": "Hysterectomy",
+          "usa": "15,000",
+          "india": "2,300",
+          "singapore": "6,000",
+          "thailand": "4,500"
+        }
+      ]
+    }
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "title": "Tourisme et Loisirs",
+  "subtitle": "Combinez votre traitement médical avec une expérience de voyage inoubliable",
+  "breadcrumb": {
+    "home": "Accueil",
+    "tourism": "Tourisme et Loisirs"
+  },
+  "heading": "Tourisme et Loisirs",
+  "intro": "Combinez votre traitement médical avec une expérience de voyage inoubliable en Inde. Nous offrons des forfaits touristiques et de loisirs complets conçus spécifiquement pour les touristes médicaux.",
+  "services": {
+    "title": "Nos Services de Tourisme et Loisirs",
+    "spa": {
+      "title": "Services Spa et Ayurvediques",
+      "description": "Nous avons des partenariats avec plusieurs organismes locaux fournissant des services de niveau international pour le spa, les massages ayurvédiques, etc."
+    },
+    "sightseeing": {
+      "title": "Visites Touristiques Locales",
+      "description": "Nous organisons des visites touristiques locales accompagnées par nos responsables de service."
+    },
+    "rejuvenative": {
+      "title": "Tours de Rajeunissement et de Récupération",
+      "description": "Nous organisons des tours de rajeunissement et de récupération vers diverses destinations bien connues en Inde comme Agra, Kerala, Goa, Rajasthan, etc."
+    },
+    "special": {
+      "title": "Tours Spéciaux",
+      "description": "Des tours spéciaux peuvent également être organisés comme Ananda Spa/Ecotourisme, etc."
+    }
+  },
+  "destinations": {
+    "agra": "Agra - Maison du célèbre Taj Mahal",
+    "kerala": "Kerala - Backwaters et bien-être ayurvédique",
+    "goa": "Goa - Belles plages et patrimoine portugais",
+    "rajasthan": "Rajasthan - Palais royaux et expériences désertiques"
+  }
+}
+

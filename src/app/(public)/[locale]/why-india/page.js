@@ -115,11 +115,11 @@ export default function WhyIndiaPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <section className="mx-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <Breadcrumb items={breadcrumbItems} locale={locale} />
             </section>
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+            <section className="mx-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Introduction Section - Enhanced */}
                 <div className="max-w-5xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
@@ -140,7 +140,7 @@ export default function WhyIndiaPage({ params }) {
                 </div>
 
                 {/* Reasons Grid - Enhanced */}
-                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12 mx-w-7xl mx-auto">
                     {reasons.map((reason) => {
                         return (
                             <div

@@ -1,0 +1,126 @@
+{
+  "title": "AI-Powered Digital Health Solutions",
+  "subtitle": "Expanding Access to Quality Healthcare Through AI & Digital Technologies",
+  "breadcrumb": {
+    "home": "Home",
+    "services": "Services",
+    "aiSolutions": "AI Solutions"
+  },
+  "hero": {
+    "title": "AI-Powered Digital Health Solutions",
+    "subheading": "Expanding Access to Quality Healthcare Through AI & Digital Technologies",
+    "intro": "Panacea Medcare delivers AI-enabled digital healthcare solutions designed to address critical workforce shortages, delayed diagnoses, and rising disease burdens across Africa, the Middle East, and emerging markets. Our platforms combine telemedicine, artificial intelligence, and global medical expertise to deliver scalable, cost-effective, and impactful healthcare solutions."
+  },
+  "sections": {
+    "telemedicine": {
+      "title": "Telemedicine & Virtual Care Platforms",
+      "tagline": "Specialist Care Without Geographical Barriers",
+      "content": "Our telemedicine platform connects patients, hospitals, and healthcare facilities with Indian and international specialists using secure digital platforms. This enables seamless consultations, follow-ups, and multidisciplinary discussions, breaking down geographical barriers to quality healthcare.",
+      "capabilities": [
+        "Video consultations with global specialists",
+        "Multispecialty OPD & IPD support",
+        "Remote follow-ups & continuity of care",
+        "Integration with diagnostics & EMR",
+        "Ideal for remote & underserved regions"
+      ],
+      "idealFor": "Hospitals, government programs, corporate healthcare, embassies & NGOs"
+    },
+    "aiTeleradiology": {
+      "title": "AI Teleradiology",
+      "tagline": "24×7 Reporting | Faster Diagnosis | Reduced Radiologist Dependency",
+      "content": "Our AI-assisted radiology reporting combines artificial intelligence with expert radiologists in India, enabling fast, accurate, round-the-clock diagnostics. This solution significantly reduces dependency on local radiologists while maintaining high diagnostic accuracy.",
+      "capabilities": [
+        "AI-assisted CT, MRI, X-ray & Mammography",
+        "Sub-specialty reporting (Neuro, Chest, Oncology, MSK)",
+        "Rapid turnaround times",
+        "Secure cloud-based image transfer"
+      ]
+    },
+    "aiTBScreening": {
+      "title": "AI-Based TB Screening",
+      "tagline": "Early Detection for High-Burden Populations",
+      "content": "Our AI analysis of chest X-rays enables early TB detection, especially for mass screening in high-prevalence regions. This technology helps identify suspected cases rapidly, enabling timely intervention and treatment.",
+      "capabilities": [
+        "AI detection of pulmonary TB from chest X-rays",
+        "Rapid triaging of suspected cases",
+        "Scalable for mass screening programs",
+        "Works in low-resource & mobile screening setups",
+        "Reduces dependency on specialist radiologists"
+      ],
+      "idealFor": "National TB programs, public hospitals, NGOs, mobile health units, prisons & refugee camps"
+    },
+    "aiTelepathology": {
+      "title": "AI Telepathology",
+      "tagline": "Digitized Pathology for Faster, Consistent Diagnoses",
+      "content": "Our telepathology solution digitizes pathology slides, enabling AI-based analysis and remote expert reporting. This ensures faster, more consistent diagnoses while maintaining the highest standards of accuracy.",
+      "capabilities": [
+        "Whole Slide Imaging (WSI) integration",
+        "AI-assisted cancer & abnormal cell detection",
+        "Remote expert pathology reporting",
+        "Standardized and consistent diagnoses"
+      ]
+    },
+    "aiCancerScreening": {
+      "title": "AI Cancer Screening",
+      "tagline": "Detect Early. Treat Early. Save Lives.",
+      "content": "Our AI-powered cancer screening solutions enable early detection for population-level screening, leading to better treatment outcomes and improved survival rates.",
+      "applications": [
+        "Breast cancer (Mammography AI)",
+        "Lung cancer (CT-based AI)",
+        "Oral cancer (Image-based screening)",
+        "Cervical cancer (AI-assisted screening)"
+      ]
+    },
+    "aiSecondOpinion": {
+      "title": "AI Second Opinion Platforms",
+      "tagline": "Expert Validation for Critical Medical Decisions",
+      "content": "Our AI-structured medical data platform connects patients and clinicians with leading global specialists for accurate second opinions. This ensures critical medical decisions are validated by world-class expertise.",
+      "content2": "The platform organizes patient data, medical history, and diagnostic reports in a structured format, enabling specialists to provide comprehensive second opinions efficiently."
+    },
+    "hospitalAnalytics": {
+      "title": "Hospital Analytics & AI-Clinical Decision Support Systems",
+      "tagline": "From Data to Decisions",
+      "content": "Our hospital analytics and AI-Clinical Decision Support Systems provide real-time analytics, decision support, early warning systems, and hospital efficiency improvements. These solutions transform healthcare data into actionable insights.",
+      "capabilities": [
+        "Clinical decision support for doctors",
+        "Early warning systems for critical care",
+        "Operational & resource utilization analytics",
+        "Integration with HIS, RIS & LIS"
+      ]
+    },
+    "publicHealth": {
+      "title": "Public Health–Focused Digital & AI Healthcare Solutions",
+      "content": "Our solutions are specifically designed for governments, NGOs, Public-Private Partnerships (PPPs), donor-funded programs, and national health initiatives. We understand the unique challenges of public health systems and deliver solutions that address them effectively.",
+      "advantages": [
+        "Rapid deployment with minimal infrastructure",
+        "Supports task-shifting & specialist shortages",
+        "Population-scale screening & diagnostics",
+        "Interoperable with national health systems",
+        "Data security & confidentiality compliant",
+        "Monitoring, reporting & outcome measurement"
+      ],
+      "applicablePrograms": [
+        "National TB control programs",
+        "Cancer screening initiatives",
+        "Rural telemedicine",
+        "Diagnostic capacity strengthening",
+        "PPP digital health pilots"
+      ]
+    },
+    "whyPanacea": {
+      "title": "Why Panacea Medcare?",
+      "points": [
+        "Deep execution experience in Africa & high-burden regions",
+        "Indian medical expertise + global AI technology partners",
+        "Scalable, cost-effective deployment models",
+        "Ideal for government, PPP & NGO programs",
+        "End-to-end implementation, training & support"
+      ]
+    },
+    "cta": {
+      "heading": "Let's Build Smarter, Accessible Healthcare Systems",
+      "content": "Partner with Panacea Medcare to deploy AI-powered digital health solutions that deliver real impact at scale.",
+      "line": "Contact us today for pilots, demonstrations, or partnerships."
+    }
+  }
+}

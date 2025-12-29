@@ -1,0 +1,126 @@
+{
+  "title": "Solutions de Santé Numériques Alimentées par l'IA",
+  "subtitle": "Élargir l'Accès aux Soins de Santé de Qualité Grâce à l'IA et aux Technologies Numériques",
+  "breadcrumb": {
+    "home": "Accueil",
+    "services": "Services",
+    "aiSolutions": "Solutions IA"
+  },
+  "hero": {
+    "title": "Solutions de Santé Numériques Alimentées par l'IA",
+    "subheading": "Élargir l'Accès aux Soins de Santé de Qualité Grâce à l'IA et aux Technologies Numériques",
+    "intro": "Panacea Medcare fournit des solutions de soins de santé numériques alimentées par l'IA conçues pour répondre aux pénuries critiques de main-d'œuvre, aux diagnostics retardés et aux fardeaux de maladies croissants en Afrique, au Moyen-Orient et dans les marchés émergents. Nos plateformes combinent la télémédecine, l'intelligence artificielle et l'expertise médicale mondiale pour fournir des solutions de soins de santé évolutives, rentables et impactantes."
+  },
+  "sections": {
+    "telemedicine": {
+      "title": "Plateformes de Télémédecine et de Soins Virtuels",
+      "tagline": "Soins Spécialisés Sans Barrières Géographiques",
+      "content": "Notre plateforme de télémédecine connecte les patients, les hôpitaux et les établissements de soins de santé avec des spécialistes indiens et internationaux en utilisant des plateformes numériques sécurisées. Cela permet des consultations fluides, des suivis et des discussions multidisciplinaires, brisant les barrières géographiques aux soins de santé de qualité.",
+      "capabilities": [
+        "Consultations vidéo avec des spécialistes mondiaux",
+        "Support multispécialité OPD & IPD",
+        "Suivis à distance & continuité des soins",
+        "Intégration avec diagnostics & DME",
+        "Idéal pour les régions éloignées & mal desservies"
+      ],
+      "idealFor": "Hôpitaux, programmes gouvernementaux, soins de santé d'entreprise, ambassades & ONG"
+    },
+    "aiTeleradiology": {
+      "title": "Télémédecine IA",
+      "tagline": "Rapports 24×7 | Diagnostic Plus Rapide | Réduction de la Dépendance aux Radiologues",
+      "content": "Notre rapport de radiologie assisté par IA combine l'intelligence artificielle avec des radiologues experts en Inde, permettant des diagnostics rapides, précis et disponibles 24h/24. Cette solution réduit considérablement la dépendance aux radiologues locaux tout en maintenant une précision diagnostique élevée.",
+      "capabilities": [
+        "CT, IRM, radiographie & mammographie assistées par IA",
+        "Rapports de sous-spécialité (Neuro, Thorax, Oncologie, MSK)",
+        "Délais de traitement rapides",
+        "Transfert d'images sécurisé basé sur le cloud"
+      ]
+    },
+    "aiTBScreening": {
+      "title": "Dépistage de la TB Basé sur l'IA",
+      "tagline": "Détection Précoce pour les Populations à Forte Charge",
+      "content": "Notre analyse IA des radiographies pulmonaires permet la détection précoce de la TB, en particulier pour le dépistage de masse dans les régions à forte prévalence. Cette technologie aide à identifier rapidement les cas suspects, permettant une intervention et un traitement en temps opportun.",
+      "capabilities": [
+        "Détection IA de la TB pulmonaire à partir de radiographies pulmonaires",
+        "Tri rapide des cas suspects",
+        "Évolutif pour les programmes de dépistage de masse",
+        "Fonctionne dans des configurations à faibles ressources & de dépistage mobile",
+        "Réduit la dépendance aux radiologues spécialistes"
+      ],
+      "idealFor": "Programmes nationaux de TB, hôpitaux publics, ONG, unités de santé mobiles, prisons & camps de réfugiés"
+    },
+    "aiTelepathology": {
+      "title": "Télépathologie IA",
+      "tagline": "Pathologie Numérisée pour des Diagnostics Plus Rapides et Cohérents",
+      "content": "Notre solution de télépathologie numérise les lames de pathologie, permettant une analyse basée sur l'IA et un rapport d'expert à distance. Cela garantit des diagnostics plus rapides et plus cohérents tout en maintenant les normes les plus élevées de précision.",
+      "capabilities": [
+        "Intégration d'imagerie de lame complète (WSI)",
+        "Détection assistée par IA du cancer & des cellules anormales",
+        "Rapport de pathologie d'expert à distance",
+        "Diagnostics standardisés et cohérents"
+      ]
+    },
+    "aiCancerScreening": {
+      "title": "Dépistage du Cancer par IA",
+      "tagline": "Détectez Tôt. Traitez Tôt. Sauvez des Vies.",
+      "content": "Nos solutions de dépistage du cancer alimentées par l'IA permettent la détection précoce pour le dépistage au niveau de la population, conduisant à de meilleurs résultats de traitement et à des taux de survie améliorés.",
+      "applications": [
+        "Cancer du sein (Mammographie IA)",
+        "Cancer du poumon (IA basée sur CT)",
+        "Cancer de la bouche (Dépistage basé sur l'image)",
+        "Cancer du col de l'utérus (Dépistage assisté par IA)"
+      ]
+    },
+    "aiSecondOpinion": {
+      "title": "Plateformes de Deuxième Avis IA",
+      "tagline": "Validation d'Expert pour les Décisions Médicales Critiques",
+      "content": "Notre plateforme de données médicales structurées par IA connecte les patients et les cliniciens avec des spécialistes mondiaux de premier plan pour des deuxièmes avis précis. Cela garantit que les décisions médicales critiques sont validées par une expertise de classe mondiale.",
+      "content2": "La plateforme organise les données des patients, les antécédents médicaux et les rapports de diagnostic dans un format structuré, permettant aux spécialistes de fournir des deuxièmes avis complets efficacement."
+    },
+    "hospitalAnalytics": {
+      "title": "Analytique Hospitalière & Systèmes d'Aide à la Décision Clinique IA",
+      "tagline": "Des Données aux Décisions",
+      "content": "Notre analytique hospitalière et systèmes d'aide à la décision clinique IA fournissent des analyses en temps réel, un support décisionnel, des systèmes d'alerte précoce et des améliorations de l'efficacité hospitalière. Ces solutions transforment les données de soins de santé en informations exploitables.",
+      "capabilities": [
+        "Support décisionnel clinique pour les médecins",
+        "Systèmes d'alerte précoce pour les soins critiques",
+        "Analytique opérationnelle & d'utilisation des ressources",
+        "Intégration avec HIS, RIS & LIS"
+      ]
+    },
+    "publicHealth": {
+      "title": "Solutions de Soins de Santé Numériques & IA Axées sur la Santé Publique",
+      "content": "Nos solutions sont spécifiquement conçues pour les gouvernements, les ONG, les Partenariats Public-Privé (PPP), les programmes financés par des donateurs et les initiatives de santé nationale. Nous comprenons les défis uniques des systèmes de santé publique et fournissons des solutions qui les abordent efficacement.",
+      "advantages": [
+        "Déploiement rapide avec une infrastructure minimale",
+        "Soutient le transfert de tâches & les pénuries de spécialistes",
+        "Dépistage & diagnostics à l'échelle de la population",
+        "Interopérable avec les systèmes de santé nationaux",
+        "Conforme à la sécurité & confidentialité des données",
+        "Surveillance, reporting & mesure des résultats"
+      ],
+      "applicablePrograms": [
+        "Programmes nationaux de contrôle de la TB",
+        "Initiatives de dépistage du cancer",
+        "Télémédecine rurale",
+        "Renforcement de la capacité diagnostique",
+        "Pilotes de santé numérique PPP"
+      ]
+    },
+    "whyPanacea": {
+      "title": "Pourquoi Panacea Medcare ?",
+      "points": [
+        "Expérience d'exécution approfondie en Afrique & régions à forte charge",
+        "Expertise médicale indienne + partenaires technologiques IA mondiaux",
+        "Modèles de déploiement évolutifs et rentables",
+        "Idéal pour les programmes gouvernementaux, PPP & ONG",
+        "Mise en œuvre, formation & support de bout en bout"
+      ]
+    },
+    "cta": {
+      "heading": "Construisons des Systèmes de Soins de Santé Plus Intelligents et Accessibles",
+      "content": "Partenaire avec Panacea Medcare pour déployer des solutions de santé numériques alimentées par l'IA qui offrent un impact réel à grande échelle.",
+      "line": "Contactez-nous aujourd'hui pour des pilotes, des démonstrations ou des partenariats."
+    }
+  }
+}

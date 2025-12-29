@@ -57,6 +57,7 @@ export default getRequestConfig(async ({ locale }) => {
     treatmentsAyurveda: (await import(`../../messages/${validLocale}/treatmentsAyurveda.json`)).default,
     tourismLeisure: (await import(`../../messages/${validLocale}/tourismLeisure.json`)).default,
     partnerWithUs: (await import(`../../messages/${validLocale}/partnerWithUs.json`)).default,
+    aiSolutions: (await import(`../../messages/${validLocale}/aiSolutions.json`)).default,
   };
 
   return {

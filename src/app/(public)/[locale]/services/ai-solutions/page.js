@@ -5,18 +5,8 @@ import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
 import Image from "next/image";
 import {
-    Video,
-    Scan,
-    Stethoscope,
-    Microscope,
-    Activity,
-    FileCheck,
-    BarChart3,
-    Users,
     CheckCircle2,
-    ArrowRight,
-    Shield,
-    Globe
+    ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 
@@ -71,7 +61,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/telemedicine.jpg"
+                                        src="/ai/Telemedicine.png"
                                         alt="Telemedicine & Virtual Care"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -82,8 +72,14 @@ export default function AISolutionsPage({ params }) {
                         </div>
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Video className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/telemedicine.svg"
+                                        alt="Telemedicine"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.telemedicine.title}
@@ -115,8 +111,14 @@ export default function AISolutionsPage({ params }) {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Scan className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/teleradiology.svg"
+                                        alt="AI Teleradiology"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.aiTeleradiology.title}
@@ -141,7 +143,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/teleradiology.jpg"
+                                        src="/ai/Teleradiology.png"
                                         alt="AI Teleradiology"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -160,7 +162,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/tb-screening.jpg"
+                                        src="/ai/ai-based-screening.png"
                                         alt="AI TB Screening"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -171,8 +173,14 @@ export default function AISolutionsPage({ params }) {
                         </div>
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Stethoscope className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/aI-based.svg"
+                                        alt="AI TB Screening"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.aiTBScreening.title}
@@ -204,8 +212,14 @@ export default function AISolutionsPage({ params }) {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Microscope className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/telepathology.svg"
+                                        alt="AI Telepathology"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.aiTelepathology.title}
@@ -230,7 +244,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/telepathology.jpg"
+                                        src="/ai/Telepathology.png"
                                         alt="AI Telepathology"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -249,7 +263,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/cancer-screening.jpg"
+                                        src="/ai/aI-second.png"
                                         alt="AI Cancer Screening"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -260,8 +274,14 @@ export default function AISolutionsPage({ params }) {
                         </div>
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Activity className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/cancer.svg"
+                                        alt="AI Cancer Screening"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.aiCancerScreening.title}
@@ -293,8 +313,14 @@ export default function AISolutionsPage({ params }) {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <FileCheck className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/aI-second.svg"
+                                        alt="AI Second Opinion"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.aiSecondOpinion.title}
@@ -314,7 +340,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/second-opinion.jpg"
+                                        src="/ai/ai-second-opinion-platforms.png"
                                         alt="AI Second Opinion"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -333,7 +359,7 @@ export default function AISolutionsPage({ params }) {
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                     <Image
-                                        src="/images/ai/hospital-analytics.jpg"
+                                        src="/ai/hospital-analytics-ai-clinical.png"
                                         alt="Hospital Analytics & AI-CDSS"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -344,8 +370,14 @@ export default function AISolutionsPage({ params }) {
                         </div>
                         <div className={`${isRTL ? "md:order-1 text-right" : "text-left"}`}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <BarChart3 className="w-6 h-6 text-white" />
+                                <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-2">
+                                    <Image
+                                        src="/ai/hospital-analytics.svg"
+                                        alt="Hospital Analytics"
+                                        width={32}
+                                        height={32}
+                                        className="w-8 h-8 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {sections.hospitalAnalytics.title}
@@ -373,7 +405,15 @@ export default function AISolutionsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <Users className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/ai/public-health.svg"
+                                    alt="Public Health"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl font-bold text-center`}>
                                 {sections.publicHealth.title}
                             </h2>
@@ -414,7 +454,7 @@ export default function AISolutionsPage({ params }) {
                         <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg">
                             <div className="aspect-[16/9] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                                 <Image
-                                    src="/images/ai/public-health.jpg"
+                                    src="/ai/public-health.png"
                                     alt="Public Health AI Solutions"
                                     fill
                                     className="object-cover"
@@ -429,7 +469,15 @@ export default function AISolutionsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <Shield className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/ai/why-panacea.svg"
+                                    alt="Why Panacea"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl font-bold text-center`}>
                                 {sections.whyPanacea.title}
                             </h2>
@@ -455,7 +503,7 @@ export default function AISolutionsPage({ params }) {
                     <div className="mt-8 relative rounded-2xl overflow-hidden shadow-panacea-lg">
                         <div className="aspect-[16/9] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                             <Image
-                                src="/images/ai/why-panacea.jpg"
+                                src="/ai/why-panacea.png"
                                 alt="Why Panacea Medcare"
                                 fill
                                 className="object-cover"
@@ -469,7 +517,15 @@ export default function AISolutionsPage({ params }) {
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg text-center">
                         <div className="flex items-center justify-center gap-4 mb-6">
-                            <Globe className="w-10 h-10 md:w-12 md:h-12" />
+                            <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center">
+                                <Image
+                                    src="/ai/let-build.svg"
+                                    alt="Let's Build"
+                                    width={56}
+                                    height={56}
+                                    className="w-12 h-12 md:w-14 md:h-14 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className="text-3xl md:text-4xl font-bold">
                                 {sections.cta.heading}
                             </h2>
@@ -504,7 +560,7 @@ export default function AISolutionsPage({ params }) {
                     <div className="mt-8 relative rounded-2xl overflow-hidden shadow-panacea-lg">
                         <div className="aspect-[16/9] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
                             <Image
-                                src="/images/ai/cta-hero.jpg"
+                                src="/ai/let-build-smarter.png"
                                 alt="Let's Build Smarter Healthcare"
                                 fill
                                 className="object-cover"

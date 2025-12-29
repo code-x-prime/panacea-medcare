@@ -4,7 +4,7 @@ import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
 import Image from "next/image";
-import { CheckCircle2, Users, Handshake, Building2, Heart, Shield, DollarSign } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export default function PartnerWithUsPage({ params }) {
     const { locale } = params;
@@ -49,7 +49,15 @@ export default function PartnerWithUsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <Handshake className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/partner/proposition.svg"
+                                    alt="Proposition"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
                                 {t("proposition.title")}
                             </h2>
@@ -76,7 +84,15 @@ export default function PartnerWithUsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <Heart className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/partner/what-you.svg"
+                                    alt="What You Can Expect"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
                                 {t("whatYouCanExpect.title")}
                             </h2>
@@ -102,7 +118,15 @@ export default function PartnerWithUsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <Shield className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/partner/what-we.svg"
+                                    alt="What We Expect"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
                                 {t("whatWeExpect.title")}
                             </h2>
@@ -135,8 +159,14 @@ export default function PartnerWithUsPage({ params }) {
                         {/* Patient Column */}
                         <div className="bg-white rounded-2xl shadow-panacea p-6 md:p-8 hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-primary/30">
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center">
-                                    <Users className="w-8 h-8 text-white" />
+                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center p-3">
+                                    <Image
+                                        src="/partner/patient.svg"
+                                        alt="Patient"
+                                        width={40}
+                                        height={40}
+                                        className="w-10 h-10 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-panacea-primary">
                                     {propositionDetails.patient.title}
@@ -157,8 +187,14 @@ export default function PartnerWithUsPage({ params }) {
                         {/* You Column */}
                         <div className="bg-white rounded-2xl shadow-panacea p-6 md:p-8 hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-accent/30">
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-accent to-panacea-orange-600 rounded-xl flex items-center justify-center">
-                                    <Handshake className="w-8 h-8 text-white" />
+                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-accent to-panacea-orange-600 rounded-xl flex items-center justify-center p-3">
+                                    <Image
+                                        src="/partner/you.svg"
+                                        alt="You"
+                                        width={40}
+                                        height={40}
+                                        className="w-10 h-10 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-panacea-accent">
                                     {propositionDetails.you.title}
@@ -179,8 +215,14 @@ export default function PartnerWithUsPage({ params }) {
                         {/* Panacea Medcare Column */}
                         <div className="bg-white rounded-2xl shadow-panacea p-6 md:p-8 hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-secondary/30">
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-secondary to-panacea-primary rounded-xl flex items-center justify-center">
-                                    <Building2 className="w-8 h-8 text-white" />
+                                <div className="w-16 h-16 bg-gradient-to-br from-panacea-secondary to-panacea-primary rounded-xl flex items-center justify-center p-3">
+                                    <Image
+                                        src="/partner/panacea.svg"
+                                        alt="Panacea Medcare"
+                                        width={40}
+                                        height={40}
+                                        className="w-10 h-10 object-contain filter brightness-0 invert"
+                                    />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-panacea-secondary">
                                     {propositionDetails.panaceaMedcare.title}

@@ -3,7 +3,8 @@
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
-import { Award, DollarSign, Clock, Globe, Plane, Stethoscope, Heart, Shield, CheckCircle, TrendingDown } from "lucide-react";
+import Image from "next/image";
+import { CheckCircle } from "lucide-react";
 
 export default function WhyIndiaPage({ params }) {
     const { locale } = params;
@@ -18,7 +19,7 @@ export default function WhyIndiaPage({ params }) {
     const reasons = [
         {
             id: 1,
-            icon: Award,
+            icon: "/why-india/high-quality.svg",
             title: t("reasons.highQuality.title"),
             points: [
                 t("reasons.highQuality.point1"),
@@ -27,7 +28,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 2,
-            icon: DollarSign,
+            icon: "/why-india/cost-effective.svg",
             title: t("reasons.costEffective.title"),
             points: [
                 t("reasons.costEffective.point1"),
@@ -36,7 +37,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 3,
-            icon: Stethoscope,
+            icon: "/why-india/wide-range.svg",
             title: t("reasons.wideRange.title"),
             points: [
                 t("reasons.wideRange.point1"),
@@ -45,7 +46,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 4,
-            icon: Clock,
+            icon: "/why-india/no-waiting.svg",
             title: t("reasons.noWaiting.title"),
             points: [
                 t("reasons.noWaiting.point1")
@@ -53,7 +54,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 5,
-            icon: Globe,
+            icon: "/why-india/ease-communication.svg",
             title: t("reasons.communication.title"),
             points: [
                 t("reasons.communication.point1"),
@@ -62,7 +63,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 6,
-            icon: Heart,
+            icon: "/why-india/holistic-wellness.svg",
             title: t("reasons.holistic.title"),
             points: [
                 t("reasons.holistic.point1"),
@@ -71,7 +72,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 7,
-            icon: Plane,
+            icon: "/why-india/tourism-opportunities.svg",
             title: t("reasons.tourism.title"),
             points: [
                 t("reasons.tourism.point1"),
@@ -80,7 +81,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 8,
-            icon: Shield,
+            icon: "/why-india/supportive-government.svg",
             title: t("reasons.government.title"),
             points: [
                 t("reasons.government.point1"),
@@ -89,7 +90,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 9,
-            icon: CheckCircle,
+            icon: "/why-india/positive-outcomes.svg",
             title: t("reasons.success.title"),
             points: [
                 t("reasons.success.point1")
@@ -97,7 +98,7 @@ export default function WhyIndiaPage({ params }) {
         },
         {
             id: 10,
-            icon: Plane,
+            icon: "/why-india/global-connectivity.svg",
             title: t("reasons.connectivity.title"),
             points: [
                 t("reasons.connectivity.point1")
@@ -141,7 +142,6 @@ export default function WhyIndiaPage({ params }) {
                 {/* Reasons Grid - Enhanced */}
                 <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
                     {reasons.map((reason) => {
-                        const IconComponent = reason.icon;
                         return (
                             <div
                                 key={reason.id}
@@ -151,8 +151,14 @@ export default function WhyIndiaPage({ params }) {
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-panacea-primary/5 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
                                 <div className={`flex items-start gap-4 relative z-10 ${isRTL ? "flex-row-reverse" : ""}`}>
-                                    <div className="w-16 h-16 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md group-hover:shadow-lg">
-                                        <IconComponent className="w-8 h-8 text-white" />
+                                    <div className="w-16 h-16 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md group-hover:shadow-lg p-3">
+                                        <Image
+                                            src={reason.icon}
+                                            alt={reason.title}
+                                            width={40}
+                                            height={40}
+                                            className="w-10 h-10 object-contain filter brightness-0 invert"
+                                        />
                                     </div>
                                     <div className="flex-1">
                                         <div className={`flex items-center gap-3 mb-4 ${isRTL ? "flex-row-reverse" : ""}`}>
@@ -180,7 +186,15 @@ export default function WhyIndiaPage({ params }) {
                 <div className="max-w-7xl mx-auto mb-16">
                     <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
-                            <TrendingDown className="w-8 h-8 md:w-10 md:h-10" />
+                            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
+                                <Image
+                                    src="/why-india/advantage-india.svg"
+                                    alt="Advantage India"
+                                    width={48}
+                                    height={48}
+                                    className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert"
+                                />
+                            </div>
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
                                 {t("priceComparison.title") || "Advantage India"}
                             </h2>

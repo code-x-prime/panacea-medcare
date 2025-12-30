@@ -67,7 +67,7 @@ export default function TestimonialsCarousel() {
     const showNavigation = testimonials.length > 2;
 
     return (
-        <section className=" py-12 md:py-16  bg-gradient-to-br from-gray-50 to-panacea-blue-50/30 relative overflow-hidden">
+        <section id="testimonials" className=" py-12 md:py-16  bg-gradient-to-br from-gray-50 to-panacea-blue-50/30 relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-64 h-64 bg-panacea-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-panacea-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
@@ -127,7 +127,84 @@ function TestimonialCard({ testimonial }) {
         ? testimonial.videoUrl.split('embed/')[1]?.split('?')[0]
         : null;
 
-    // Layout with video on left, details on right
+    const hasContent = testimonial.description || (testimonial.name && testimonial.name !== 'Anonymous');
+
+    // Video-focused layout (when no description/name)
+    if (testimonial.videoUrl && videoId && !hasContent) {
+        return (
+            <div className="group h-full">
+                <div className="bg-white rounded-2xl overflow-hidden h-full shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative flex flex-col">
+                    {/* Video Container */}
+                    <div className="relative aspect-video w-full bg-gray-900">
+                        <iframe
+                            src={`https://www.youtube.com/embed/${videoId}?controls=0&modestbranding=1&rel=0`}
+                            title="Testimonial Video"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            className="w-full h-full absolute inset-0"
+                        ></iframe>
+                        {/* Play Button Overlay */}
+                        <button
+                            onClick={() => setShowVideo(true)}
+                            className="absolute inset-0 flex items-center justify-center group/play bg-black/30 hover:bg-black/50 transition-all duration-300"
+                            aria-label="Play video"
+                        >
+                            <div className="w-16 h-16 bg-panacea-accent rounded-full flex items-center justify-center shadow-2xl transform group-hover/play:scale-110 transition-transform duration-300">
+                                <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+
+                    {/* Minimal Footer for Rating */}
+                    <div className="p-4 bg-white flex justify-center items-center">
+                        <div className="flex gap-1">
+                            {[...Array(5)].map((_, i) => (
+                                <FaStar
+                                    key={i}
+                                    className={`w-4 h-4 ${i < (testimonial.rating || 5)
+                                        ? "text-yellow-400"
+                                        : "text-gray-300"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Video Modal (Full Screen) */}
+                    {showVideo && (
+                        <div
+                            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+                            onClick={() => setShowVideo(false)}
+                        >
+                            <div
+                                className="relative w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <button
+                                    onClick={() => setShowVideo(false)}
+                                    className="absolute top-4 right-4 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white z-10 backdrop-blur-sm"
+                                >
+                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                                    title="Testimonial Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full h-full"
+                                ></iframe>
+                            </div>
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    }
+
+    // Standard Layout (with Video & Content)
     if (testimonial.videoUrl && videoId) {
         return (
             <div className="group h-full">

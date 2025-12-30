@@ -2,7 +2,7 @@
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
-import { MapPin, Phone, Mail, Globe, Building2 } from "lucide-react";
+import { MapPin, Phone, Mail, Building2 } from "lucide-react";
 
 export default function OurOfficesPage({ params }) {
     const { locale } = params;

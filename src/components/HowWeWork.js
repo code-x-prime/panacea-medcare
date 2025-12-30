@@ -94,7 +94,7 @@ export default function HowWeWork({ locale }) {
                             <div className="bg-black rounded-2xl overflow-hidden aspect-video">
                                 <iframe
                                     className="w-full h-full"
-                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                    src="https://www.youtube.com/embed/kA_19g5gu04"
                                     title={t("videoTitle")}
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

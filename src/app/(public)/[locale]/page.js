@@ -11,7 +11,7 @@ import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
-import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
+// import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
 export default function HomePage({ params }) {
   const { locale } = params;
@@ -23,7 +23,8 @@ export default function HomePage({ params }) {
       <TopMedicalDestinations locale={locale} />
       <NetworkOfTopHospitals locale={locale} />
       <LowestQuotesAssured locale={locale} />
-      <HomeCaseStudiesPreview locale={locale} />
+      <LowestQuotesAssured locale={locale} />
+      {/* <HomeCaseStudiesPreview locale={locale} /> */}
       <MultiSpecialtyFocus locale={locale} />
       <WhyChoosePanacea locale={locale} />
       <HomeOfficesPreview locale={locale} />

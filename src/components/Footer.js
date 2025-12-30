@@ -213,7 +213,7 @@ export default function Footer({ locale }) {
                 <p className="text-sm leading-relaxed mb-1">Suite No. 402, Plot No. 996,</p>
                 <p className="text-sm leading-relaxed mb-1">Sector 38, Gurgaon – 122001</p>
                 <p className="text-sm leading-relaxed mb-2">Delhi NCR, India</p>
-                <p className="text-sm font-semibold text-white mt-3">Sumiit Gupta</p>
+
                 <p className="text-sm">+91-9958800961</p>
                 <p className="text-sm break-all mt-2">care@panaceamedcare.com</p>
               </div>

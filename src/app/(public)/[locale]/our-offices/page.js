@@ -17,7 +17,7 @@ export default function OurOfficesPage({ params }) {
             "Sector 38, Gurgaon – 122001",
             "Delhi NCR, India"
         ],
-        contact: "Sumiit Gupta",
+        contact: "",
         phone: "+91-9958800961",
         email: "care@panaceamedcare.com"
     };

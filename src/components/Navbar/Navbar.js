@@ -156,15 +156,7 @@ export default function Navbar({ locale = "en" }) {
                         )}
                       </Link>
 
-                      {/* JCI Accredited Badge/Tag - Attached to Hospitals */}
-                      {isHospitals && (
-                        <Link
-                          href={"/" + locale + item.slug}
-                          className="bg-panacea-primary text-white px-2 xl:px-3 py-1 xl:py-1.5 rounded-lg font-bold text-[9px] xl:text-[10px] leading-tight hover:bg-panacea-teal-700 transition-all duration-300 flex items-center justify-center shadow-sm hover:shadow-md whitespace-nowrap"
-                        >
-                          <span>JCI Accredited</span>
-                        </Link>
-                      )}
+
                     </div>
 
                     {/* Dropdown for knowledge and simple menus */}

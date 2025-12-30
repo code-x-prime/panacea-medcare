@@ -63,23 +63,7 @@ export default function WhyChoosePanacea({ locale }) {
                                 {/* Gradient Overlay */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-panacea-primary/80 via-transparent to-transparent"></div>
 
-                                {/* Floating Stats Card */}
-                                <div className="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20">
-                                    <div className="grid grid-cols-3 gap-6">
-                                        <div className="text-center">
-                                            <div className="text-3xl font-extrabold bg-gradient-to-r from-panacea-accent to-panacea-orange-400 bg-clip-text text-transparent">50+</div>
-                                            <div className="text-xs text-gray-600 mt-1 font-semibold">{t("countries")}</div>
-                                        </div>
-                                        <div className="text-center border-x border-gray-200">
-                                            <div className="text-3xl font-extrabold bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent">10K+</div>
-                                            <div className="text-xs text-gray-600 mt-1 font-semibold">{t("patients")}</div>
-                                        </div>
-                                        <div className="text-center">
-                                            <div className="text-3xl font-extrabold bg-gradient-to-r from-panacea-accent to-panacea-orange-400 bg-clip-text text-transparent">500+</div>
-                                            <div className="text-xs text-gray-600 mt-1 font-semibold">{t("hospitals")}</div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
 
                             {/* Decorative Dots - Using new accent color */}

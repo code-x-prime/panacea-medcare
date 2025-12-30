@@ -87,7 +87,7 @@ export default function Footer({ locale }) {
                 alt="Panacea Medcare Logo"
                 width={200}
                 height={100}
-                className="h-16 md:h-20 w-auto  "
+                className="h-16 md:h-20 w-auto brightness-0 invert"
                 priority
               />
             </Link>

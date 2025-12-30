@@ -1,39 +1,29 @@
 "use client";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, MessageCircle, Phone, Mail } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function HeroSection({ locale }) {
-  const t = useTranslations("home");
   const isRTL = locale === "ar";
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Headline - MANDATORY as per client
   const headline = {
-    en: "Global Care – Indian Compassion – Redefining Medical Tourism",
-    ar: "رعاية عالمية – رحمة هندية – إعادة تعريف السياحة العلاجية",
-    fr: "Soins Mondiaux – Compassion Indienne – Redéfinir le Tourisme Médical"
+    en: "India’s First AI-Driven International Patient Care Platform",
+    ar: "أول منصة في الهند لرعاية المرضى الدوليين مدعومة بالذكاء الاصطناعي",
+    fr: "La première plateforme indienne de soins aux patients internationaux pilotée par l'IA"
   };
 
   // Supporting text - MANDATORY as per client
   const supportingText = {
-    en: "World-class treatments, expert doctors, and personalized care — guiding you at every step of your healing journey.",
-    ar: "علاجات عالمية المستوى، أطباء خبراء، ورعاية مخصصة — نرشدك في كل خطوة من رحلة شفائك.",
-    fr: "Traitements de classe mondiale, médecins experts et soins personnalisés — vous guider à chaque étape de votre parcours de guérison."
+    en: "Where Global Care Meets Indian Compassion.",
+    ar: "حيث تلتقي الرعاية العالمية بالرحمة الهندية.",
+    fr: "Où les soins mondiaux rencontrent la compassion indienne."
   };
 
-  // WhatsApp number from Footer
-  const whatsappNumber = "919958800961";
-  const whatsappMessage = encodeURIComponent(
-    locale === "ar"
-      ? "مرحبا، أحتاج إلى مساعدة طبية من باناسيا ميدكير"
-      : locale === "fr"
-        ? "Bonjour, j'ai besoin d'une assistance médicale de Panacea Medcare"
-        : "Hello, I need medical assistance from Panacea Medcare"
-  );
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+
 
   useEffect(() => {
     setIsLoaded(true);

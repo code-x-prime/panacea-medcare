@@ -7,8 +7,6 @@ import {
   LayoutDashboard,
   Users,
   MessageSquare,
-  Settings,
-  LogOut,
   Menu,
   X,
   Bell,
@@ -25,7 +23,7 @@ export default function AdminLayout({ children }) {
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Leads", href: "/admin/leads", icon: Users },
     { name: "Testimonials", href: "/admin/testimonials", icon: MessageSquare },
-    { name: "Settings", href: "/admin/settings", icon: Settings },
+    // { name: "Settings", href: "/admin/settings", icon: Settings },
   ];
 
   return (
@@ -46,8 +44,8 @@ export default function AdminLayout({ children }) {
                 key={item.href}
                 href={item.href}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
-                    ? "bg-panacea-primary text-white shadow-lg shadow-panacea-primary/30"
-                    : "text-panacea-light/70 hover:bg-white/5 hover:text-white"
+                  ? "bg-panacea-primary text-white shadow-lg shadow-panacea-primary/30"
+                  : "text-panacea-light/70 hover:bg-white/5 hover:text-white"
                   }`}
               >
                 <Icon className="w-5 h-5" />
@@ -89,8 +87,8 @@ export default function AdminLayout({ children }) {
                 href={item.href}
                 onClick={() => setIsSidebarOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
-                    ? "bg-panacea-primary text-white shadow-lg"
-                    : "text-panacea-light/70 hover:bg-white/5 hover:text-white"
+                  ? "bg-panacea-primary text-white shadow-lg"
+                  : "text-panacea-light/70 hover:bg-white/5 hover:text-white"
                   }`}
               >
                 <Icon className="w-5 h-5" />

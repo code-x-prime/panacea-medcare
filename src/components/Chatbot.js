@@ -112,15 +112,15 @@ export default function Chatbot({ locale }) {
 
   // Quick action buttons
   const quickActions = [
-    { 
+    {
       label: locale === 'ar' ? 'استشارة مجانية' : locale === 'fr' ? 'Consultation' : 'Free Consultation',
       message: locale === 'ar' ? 'أريد استشارة طبية مجانية' : locale === 'fr' ? 'Je veux une consultation gratuite' : 'I want a free medical consultation'
     },
-    { 
+    {
       label: locale === 'ar' ? 'تكلفة العلاج' : locale === 'fr' ? 'Coût' : 'Treatment Cost',
       message: locale === 'ar' ? 'ما هي تكلفة العلاج؟' : locale === 'fr' ? 'Quel est le coût du traitement?' : 'What is the treatment cost?'
     },
-    { 
+    {
       label: locale === 'ar' ? 'المستشفيات' : locale === 'fr' ? 'Hôpitaux' : 'Hospitals',
       message: locale === 'ar' ? 'أخبرني عن المستشفيات' : locale === 'fr' ? 'Parlez-moi des hôpitaux' : 'Tell me about hospitals'
     },
@@ -138,10 +138,12 @@ export default function Chatbot({ locale }) {
           className={`fixed bottom-24 ${isRTL ? 'left-6' : 'right-6'} z-50 animate-bounce-slow`}
           onClick={openChat}
         >
-          <div className="relative bg-white rounded-2xl shadow-2xl p-4 max-w-[280px] cursor-pointer hover:shadow-panacea-lg transition-shadow border border-gray-100">
+          <div
+            data-chat-greeting
+            className="relative bg-white rounded-2xl shadow-2xl p-4 max-w-[280px] cursor-pointer hover:shadow-panacea-lg transition-shadow border border-gray-100">
             {/* Arrow pointing to button */}
             <div className={`absolute -bottom-2 ${isRTL ? 'left-6' : 'right-6'} w-4 h-4 bg-white transform rotate-45 border-r border-b border-gray-100`}></div>
-            
+
             <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
               <div className="w-10 h-10 bg-panacea-gradient rounded-full flex items-center justify-center flex-shrink-0">
                 <MessageCircle className="w-5 h-5 text-white" />
@@ -151,7 +153,7 @@ export default function Chatbot({ locale }) {
                   {locale === 'ar' ? 'مرحباً! 👋' : locale === 'fr' ? 'Bonjour! 👋' : 'Hi there! 👋'}
                 </p>
                 <p className="text-xs text-gray-600">
-                  {locale === 'ar' 
+                  {locale === 'ar'
                     ? 'هل تحتاج مساعدة طبية؟'
                     : locale === 'fr'
                       ? 'Besoin d\'aide médicale?'
@@ -159,7 +161,7 @@ export default function Chatbot({ locale }) {
                 </p>
               </div>
             </div>
-            
+
             {/* Close greeting */}
             <button
               onClick={(e) => { e.stopPropagation(); setShowGreeting(false); }}
@@ -177,11 +179,10 @@ export default function Chatbot({ locale }) {
           className={`fixed ${isRTL ? 'left-4' : 'right-4'} ${isMinimized ? 'bottom-24' : 'bottom-20 sm:bottom-6'} z-50 transition-all duration-300`}
           dir={isRTL ? "rtl" : "ltr"}
         >
-          <div className={`bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 ${
-            isMinimized 
-              ? 'w-[280px] h-[60px]' 
+          <div className={`bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 ${isMinimized
+              ? 'w-[280px] h-[60px]'
               : 'w-[320px] sm:w-[360px] h-[450px] sm:h-[480px]'
-          }`}>
+            }`}>
             {/* Compact Header */}
             <div className="bg-panacea-gradient p-3 flex-shrink-0">
               <div className={`flex items-center justify-between ${isRTL ? 'flex-row-reverse' : ''}`}>
@@ -235,7 +236,7 @@ export default function Chatbot({ locale }) {
                         className={`max-w-[80%] px-3 py-2 rounded-2xl text-sm ${msg.role === 'user'
                           ? 'bg-panacea-gradient text-white rounded-br-sm'
                           : 'bg-white text-gray-800 border border-gray-200 rounded-bl-sm shadow-sm'
-                        } ${isRTL ? 'text-right' : 'text-left'}`}
+                          } ${isRTL ? 'text-right' : 'text-left'}`}
                       >
                         <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
                       </div>

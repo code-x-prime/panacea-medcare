@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Users, Globe, Award, Heart, Shield, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -18,11 +18,11 @@ export default function WhyChoosePanacea({ locale }) {
     }, [isRTL]);
 
     const features = [
-        { icon: Users, key: "feature1" },
-        { icon: Globe, key: "feature2" },
-        { icon: Award, key: "feature3" },
-        { icon: Heart, key: "feature4" },
-        { icon: Shield, key: "feature5" },
+        { svg: "/why-choose/expert-medical-network.svg", key: "feature1" },
+        { svg: "/why-choose/global-reach-local-care.svg", key: "feature2" },
+        { svg: "/why-choose/accredited-excellenc.svg", key: "feature3" },
+        { svg: "/why-choose/compassionate-support.svg", key: "feature4" },
+        { svg: "/why-choose/transparent-pricing.svg", key: "feature5" },
     ];
 
     return (
@@ -94,14 +94,19 @@ export default function WhyChoosePanacea({ locale }) {
                         {/* Features List */}
                         <div className="space-y-5 mb-10">
                             {features.map((feature) => {
-                                const Icon = feature.icon;
                                 return (
                                     <div
                                         key={feature.key}
                                         className={`flex items-start gap-4 group ${isRTL ? "flex-row-reverse" : ""}`}
                                     >
-                                        <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                            <Icon className="w-7 h-7 text-white" />
+                                        <div className="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                            <Image
+                                                src={feature.svg}
+                                                alt={feature.key}
+                                                width={64}
+                                                height={64}
+                                                className="w-full h-full object-contain"
+                                            />
                                         </div>
                                         <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
                                             <h3 className="text-lg font-bold text-panacea-dark mb-1">

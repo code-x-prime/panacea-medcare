@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { MessageCircle, FileText, Plane, HeartPulse } from "lucide-react";
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function HowWeWork({ locale }) {
@@ -11,23 +11,19 @@ export default function HowWeWork({ locale }) {
     const steps = [
         {
             id: "step1",
-            icon: MessageCircle,
-            color: "from-panacea-primary to-panacea-cyan-500",
+            svg: "/process/share-your-medical-needs.svg",
         },
         {
             id: "step2",
-            icon: FileText,
-            color: "from-panacea-accent to-red-500",
+            svg: "/process/receive-expert-consultation.svg",
         },
         {
             id: "step3",
-            icon: Plane,
-            color: "from-purple-500 to-pink-500",
+            svg: "/process/travel-arrangements.svg",
         },
         {
             id: "step4",
-            icon: HeartPulse,
-            color: "from-green-500 to-emerald-500",
+            svg: "/process/treatment-sftercare.svg",
         },
     ];
 
@@ -56,7 +52,6 @@ export default function HowWeWork({ locale }) {
                     {/* Left Side - Steps */}
                     <div className="space-y-6">
                         {steps.map((step, idx) => {
-                            const IconComponent = step.icon;
                             return (
                                 <div
                                     key={idx}
@@ -64,8 +59,14 @@ export default function HowWeWork({ locale }) {
                                 >
                                     {/* Step Number & Icon */}
                                     <div className="flex-shrink-0">
-                                        <div className={`w-16 h-16 bg-gradient-to-br ${step.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                                            <IconComponent className="w-8 h-8 text-white" />
+                                        <div className="w-20 h-20 flex items-center justify-center shadow-sm rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                                            <Image
+                                                src={step.svg}
+                                                alt={t(`steps.${step.id}.title`)}
+                                                width={80}
+                                                height={80}
+                                                className="w-full h-full object-contain"
+                                            />
                                         </div>
                                         <div className="mt-2 text-center">
                                             <span className="text-xs font-bold text-gray-400">

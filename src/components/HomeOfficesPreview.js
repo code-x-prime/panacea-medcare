@@ -50,7 +50,7 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
       className="py-12 md:py-16 bg-panacea-light"
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Header */}
         <div className={`flex flex-col md:flex-row items-start md:items-center justify-between mb-12 gap-4 ${isRTL ? "text-right" : "text-left"}`}>
           <div className="flex-1">

@@ -49,7 +49,7 @@ export default function HomeTestimonials({ locale }) {
                 <div className="absolute top-0 left-0 w-64 h-64 bg-panacea-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-panacea-accent/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-                <div className="max-w-7xl mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-4 relative z-10">
                     {/* Section Header */}
                     <div className={`max-w-3xl mb-12 md:mb-16 ${isRTL ? "text-right" : "text-left"}`}>
                         <p className="text-panacea-accent font-semibold mb-3 tracking-wide uppercase text-sm">
@@ -62,8 +62,8 @@ export default function HomeTestimonials({ locale }) {
                             {locale === "ar"
                                 ? "شاهد قصص نجاح مرضانا من جميع أنحاء العالم"
                                 : locale === "fr"
-                                ? "Découvrez les histoires de réussite de nos patients du monde entier"
-                                : "Hear from our satisfied patients about their experiences with Panacea MedCare"}
+                                    ? "Découvrez les histoires de réussite de nos patients du monde entier"
+                                    : "Hear from our satisfied patients about their experiences with Panacea MedCare"}
                         </p>
                     </div>
 
@@ -129,15 +129,15 @@ export default function HomeTestimonials({ locale }) {
                                                         {locale === "ar"
                                                             ? `شهادة المريض ${index + 1}`
                                                             : locale === "fr"
-                                                            ? `Témoignage ${index + 1}`
-                                                            : `Patient Testimonial ${index + 1}`}
+                                                                ? `Témoignage ${index + 1}`
+                                                                : `Patient Testimonial ${index + 1}`}
                                                     </h3>
                                                     <p className={`text-xs text-gray-500 ${isRTL ? "text-right" : "text-left"}`}>
                                                         {locale === "ar"
                                                             ? "انقر للمشاهدة"
                                                             : locale === "fr"
-                                                            ? "Cliquez pour voir"
-                                                            : "Click to watch"}
+                                                                ? "Cliquez pour voir"
+                                                                : "Click to watch"}
                                                     </p>
                                                 </div>
                                             </div>

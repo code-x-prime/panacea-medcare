@@ -23,7 +23,6 @@ export default function HomePage({ params }) {
       <TopMedicalDestinations locale={locale} />
       <NetworkOfTopHospitals locale={locale} />
       <LowestQuotesAssured locale={locale} />
-      <LowestQuotesAssured locale={locale} />
       {/* <HomeCaseStudiesPreview locale={locale} /> */}
       <MultiSpecialtyFocus locale={locale} />
       <WhyChoosePanacea locale={locale} />

@@ -36,7 +36,7 @@ export default function HowWeWork({ locale }) {
             className=" py-12 md:py-16  bg-gradient-to-br from-white via-panacea-light/30 to-gray-50"
             dir={isRTL ? "rtl" : "ltr"}
         >
-            <div className="container mx-auto px-4 max-w-7xl">
+            <div className="container mx-auto px-4 ">
                 {/* Header */}
                 <div className={`text-center mb-12 md:mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">

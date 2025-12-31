@@ -22,8 +22,12 @@ export default function HeroSection({ locale }) {
     fr: "Où les soins mondiaux rencontrent la compassion indienne."
   };
 
-
-
+  // Matter line - Additional descriptive text
+  const matterLine = {
+    en: "Experience world-class healthcare with personalized care, advanced technology, and compassionate support throughout your medical journey.",
+    ar: "استمتع برعاية صحية عالمية المستوى مع رعاية شخصية وتقنية متقدمة ودعم رحيم طوال رحلتك الطبية.",
+    fr: "Découvrez des soins de santé de classe mondiale avec une prise en charge personnalisée, une technologie avancée et un soutien compatissant tout au long de votre parcours médical."
+  };
 
   useEffect(() => {
     setIsLoaded(true);
@@ -91,14 +95,21 @@ export default function HeroSection({ locale }) {
 
           {/* Supporting Text (1-2 lines) */}
           <p
-            className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-10 max-w-3xl leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-4 max-w-3xl leading-relaxed"
             style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
           >
             {supportingText[locale] || supportingText.en}
           </p>
 
+          {/* Matter Line - Additional descriptive text */}
+          <p
+            className="text-base sm:text-lg text-white/80 mb-10 max-w-3xl leading-relaxed"
+            style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
+          >
+            {matterLine[locale] || matterLine.en}
+          </p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button - Single Primary CTA */}
           <div
             className={`flex flex-col sm:flex-row gap-4 ${isRTL ? "justify-end" : "justify-start"
               }`}
@@ -122,22 +133,6 @@ export default function HeroSection({ locale }) {
                   }`}
               />
             </Link>
-
-            {/* Secondary CTA - Contact Us Now */}
-            <a
-              href="tel:+919958800961"
-              className={`group inline-flex items-center justify-center gap-3 px-6 py-5 bg-panacea-accent text-white rounded-lg font-semibold text-base  transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
-              aria-label="Contact Us Now"
-            >
-              <MessageCircle className="w-6 h-6" />
-              <span>
-                {locale === "ar"
-                  ? "اتصل بنا الآن: +91-9958800961"
-                  : locale === "fr"
-                    ? "Contactez-nous maintenant: +91-9958800961"
-                    : "Contact Us Now: +91-9958800961"}
-              </span>
-            </a>
           </div>
         </div>
       </div>

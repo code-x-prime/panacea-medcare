@@ -81,7 +81,7 @@ export default function PatientStories({ locale }) {
             className="py-12 md:py-16 bg-gradient-to-br from-white via-gray-50 to-panacea-light/20"
             dir={isRTL ? "rtl" : "ltr"}
         >
-            <div className="container mx-auto px-4 max-w-7xl">
+            <div className="container mx-auto px-4 ">
                 {/* Header */}
                 <div className={`text-center mb-12 md:mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">
@@ -98,7 +98,7 @@ export default function PatientStories({ locale }) {
                 </div>
 
                 {/* Video Thumbnails Grid - One Row */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 max-w-7xl mx-auto mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-14 max-w-7xl mx-auto mb-12">
                     {videos.slice(0, 4).map((video) => (
                         <div
                             key={video.id}

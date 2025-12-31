@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Navbar from "./Navbar/Navbar";
+import { FaWhatsapp } from "react-icons/fa";
+import { Mail } from "lucide-react";
 
 export default function Header({ locale }) {
   var isRTL = locale === "ar";
@@ -53,11 +55,37 @@ export default function Header({ locale }) {
         className="bg-white shadow-md"
         dir={isRTL ? "rtl" : "ltr"}
       >
+        {/* Top Contact Bar */}
+        <div className="bg-panacea-primary text-white py-2">
+          <div className="container mx-auto px-4">
+            <div className={`flex items-center justify-center gap-6 text-sm ${isRTL ? "flex-row-reverse" : ""}`}>
+              {/* WhatsApp Contact */}
+              <a
+                href="https://wa.me/919958800961"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-2 hover:text-panacea-accent transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
+              >
+                <FaWhatsapp className="w-4 h-4" />
+                <span>+91 9958800961</span>
+              </a>
+              {/* Email */}
+              <a
+                href="mailto:care@panaceamedcare.com"
+                className={`flex items-center gap-2 hover:text-panacea-accent transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
+              >
+                <Mail className="w-4 h-4" />
+                <span>care@panaceamedcare.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Main Header */}
         <div className="bg-white border-b border-gray-200">
           <div className="container mx-auto px-4 py-1">
             <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
-              {/* Logo - RTL: right side, LTR: left side */}
+              {/* Logo - RTL: right side, LTR: left side - Reduced height */}
               <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
                 <div
                   className={
@@ -67,9 +95,9 @@ export default function Header({ locale }) {
                   <Image
                     src="/logo.png"
                     alt="Panacea Medcare Logo"
-                    width={200}
-                    height={100}
-                    className="h-24 w-auto"
+                    width={160}
+                    height={64}
+                    className="h-16 w-auto"
                     priority
                   />
                 </div>

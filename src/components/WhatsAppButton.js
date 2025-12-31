@@ -20,7 +20,7 @@ export default function WhatsAppButton({ locale }) {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`fixed bottom-28 ${isRTL ? "left-6" : "right-6"} w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-green-500/50 transition-all flex items-center justify-center z-40 transform hover:scale-110 group`}
+            className={`fixed bottom-48 ${isRTL ? "left-6" : "right-6"} w-16 h-16 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-green-500/50 transition-all flex items-center justify-center z-40 transform hover:scale-110 group`}
             aria-label={tCTA("whatsappButton") || tWhatsapp("buttonLabel") || "Chat on WhatsApp"}
             title={tCTA("whatsappLabel") || "WhatsApp Us"}
         >

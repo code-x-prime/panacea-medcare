@@ -3,27 +3,14 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 
-/**
- * TopBanner Component
- * 
- * A reusable banner component for all pages that displays page headings
- * with a distinct background color, following Panacea design system.
- * 
- * @param {Object} props
- * @param {string} props.locale - Current locale (en/ar/fr)
- * @param {string} props.namespace - Translation namespace (e.g., "about", "services")
- * @param {string} [props.title] - Optional title override (uses translation if not provided)
- * @param {string} [props.subtitle] - Optional subtitle override
- * @param {string} [props.variant] - Banner variant: "gradient" (default) | "primary" | "secondary" | "light"
- * @param {string} [props.size] - Banner size: "sm" | "md" (default) | "lg"
- */
+
 export default function TopBanner({
     locale,
     namespace,
     title,
     subtitle,
-    variant = "gradient",
-    size = "md",
+    variant = "secondary",
+    size = "sm",
 }) {
     const t = useTranslations(namespace);
     const isRTL = locale === "ar";
@@ -53,11 +40,11 @@ export default function TopBanner({
         light: "bg-panacea-light",
     };
 
-    // Size styles
+    // Size styles - reduced for smaller banner
     const sizeStyles = {
-        sm: "py-8 md:py-10",
-        md: "py-12 md:py-16",
-        lg: "py-16 md:py-20",
+        sm: "py-6 md:py-8",
+        md: "py-8 md:py-10",
+        lg: "py-12 md:py-14",
     };
 
     // Text color based on variant

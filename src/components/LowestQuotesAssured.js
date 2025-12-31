@@ -37,7 +37,7 @@ export default function LowestQuotesAssured({ locale }) {
             className=" py-12 md:py-16  bg-gradient-to-br from-white via-gray-50 to-panacea-light/20"
             dir={isRTL ? "rtl" : "ltr"}
         >
-            <div className="container mx-auto px-4 max-w-7xl">
+            <div className="container mx-auto px-4 ">
                 {/* Header */}
                 <div className={`text-center mb-12 md:mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">
@@ -54,7 +54,7 @@ export default function LowestQuotesAssured({ locale }) {
                 </div>
 
                 {/* Treatment Cards Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-16 gap-10 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-14 gap-10 mb-12">
                     {treatments.map((treatment, idx) => {
                         return (
                             <div

@@ -95,237 +95,163 @@ export default function Navbar({ locale = "en" }) {
 
   return (
     <nav
-      className={`navbar-container bg-white ${isSticky ? 'sticky top-0 z-50' : ''}`}
+      className="navbar-container bg-white shadow-sm"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Desktop Menu */}
-      <div className="bg-white relative">
-        <div className="container mx-auto relative">
-          <div className={`hidden lg:flex items-center gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
-            {/* Desktop menu items */}
+      <div className="bg-white relative border-b border-gray-100 hidden lg:block">
+        <div className="container mx-auto xl:max-w-7xl">
+          {/* Row 1 - First 6 menu items */}
+          <ul
+            className={
+              "flex items-center justify-center gap-4 px-2 py-1 w-full border-b border-gray-50 " +
+              (isRTL ? "flex-row-reverse" : "")
+            }
+          >
+            {navbarMenu.main.slice(0, 6).map((item, idx) => {
+              var hasSubMenu = item.type === "mega" || item.type === "dropdown";
+              var subMenuItems = item.key ? navbarMenu[item.key] : null;
+              var isActive = activeMenu === item.key;
 
-            <ul
-              className={
-                "flex items-center justify-center gap-1 xl:gap-2 2xl:gap-3 px-2 py-3 flex-1 " +
-                (isRTL ? "flex-row-reverse" : "")
-              }
-              style={{ flexWrap: 'nowrap', position: 'relative' }}
-            >
-              {navbarMenu.main.map((item, idx) => {
-                var hasSubMenu = item.type === "mega" || item.type === "dropdown";
-                var subMenuItems = item.key ? navbarMenu[item.key] : null;
-                var isActive = activeMenu === item.key;
-                var isHospitals = item.slug === "/hospitals" && item.highlight;
-
-                return (
-                  <li
-                    key={idx}
-                    className="h-full flex items-center relative flex-shrink-0"
-                    style={{ position: "relative", overflow: "visible" }}
-                    onMouseEnter={() => {
-                      if (hasSubMenu) {
-                        setActiveMenu(item.key);
-                      }
-                    }}
-                    onMouseLeave={() => {
-                      setActiveMenu(null);
-                    }}
+              return (
+                <li
+                  key={idx}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (hasSubMenu) setActiveMenu(item.key);
+                  }}
+                  onMouseLeave={() => setActiveMenu(null)}
+                >
+                  <Link
+                    href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
+                    onClick={(e) => handleMenuClick(e, item)}
+                    className={
+                      "flex items-center text-sm font-semibold px-3 py-1.5 rounded-md transition-all duration-200 " +
+                      (isActive
+                        ? "text-panacea-primary bg-panacea-primary/10"
+                        : "text-gray-700 hover:text-panacea-primary hover:bg-panacea-primary/5")
+                    }
                   >
-                    <div className="flex items-center gap-1.5">
-                      <Link
-                        href={
-                          item.slug === "/" ? "/" + locale : "/" + locale + item.slug
-                        }
-                        onClick={(e) => {
-                          handleMenuClick(e, item);
-                        }}
+                    <span className="whitespace-nowrap">{item.name}</span>
+                    {hasSubMenu && (
+                      <ChevronDown
                         className={
-                          "flex items-center justify-center text-xs lg:text-sm  font-semibold text-gray-700 hover:text-panacea-primary transition-all h-full px-1.5 xl:px-2 py-2 cursor-pointer " +
-                          (isActive ? "text-panacea-primary" : "")
+                          "w-3 h-3 ml-1 transition-transform duration-200 " +
+                          (isActive ? "rotate-180" : "")
                         }
-                        style={{ whiteSpace: 'nowrap' }}
-                      >
-                        <span className="block leading-tight whitespace-nowrap">{item.name}</span>
-                        {hasSubMenu && (
-                          <ChevronDown
-                            className={
-                              "w-3 h-3 transition-transform duration-200 ml-1 " +
-                              (isActive ? "rotate-180" : "")
-                            }
-                          />
-                        )}
-                      </Link>
+                      />
+                    )}
+                  </Link>
 
-
+                  {/* Dropdown - 3 column grid, centered */}
+                  {hasSubMenu && isActive && subMenuItems && (
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 top-full z-[100] bg-white shadow-2xl rounded-xl border border-gray-200 p-5 mt-2"
+                      style={{
+                        width: "min(700px, 95vw)",
+                        maxHeight: "70vh",
+                        overflowY: "auto"
+                      }}
+                      onMouseEnter={() => setActiveMenu(item.key)}
+                      onMouseLeave={() => setActiveMenu(null)}
+                    >
+                      <div className="grid grid-cols-3 gap-2">
+                        {subMenuItems.map((subItem, sIdx) => (
+                          <Link
+                            key={sIdx}
+                            href={"/" + locale + (subItem.slug || "")}
+                            onClick={closeMenu}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
+                          >
+                            {subItem.name || subItem.country}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
 
-                    {/* Dropdown for knowledge and simple menus */}
-                    {item.type === "dropdown" && isActive && subMenuItems && (
-                      <div
+          {/* Row 2 - Remaining menu items (6+) */}
+          <ul
+            className={
+              "flex items-center justify-center gap-4 px-2 py-1 w-full " +
+              (isRTL ? "flex-row-reverse" : "")
+            }
+          >
+            {navbarMenu.main.slice(6).map((item, idx) => {
+              var hasSubMenu = item.type === "mega" || item.type === "dropdown";
+              var subMenuItems = item.key ? navbarMenu[item.key] : null;
+              var isActive = activeMenu === item.key;
+
+              return (
+                <li
+                  key={idx + 6}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (hasSubMenu) setActiveMenu(item.key);
+                  }}
+                  onMouseLeave={() => setActiveMenu(null)}
+                >
+                  <Link
+                    href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
+                    onClick={(e) => handleMenuClick(e, item)}
+                    className={
+                      "flex items-center text-sm font-semibold px-3 py-1.5 rounded-md transition-all duration-200 " +
+                      (isActive
+                        ? "text-panacea-primary bg-panacea-primary/10"
+                        : "text-gray-700 hover:text-panacea-primary hover:bg-panacea-primary/5")
+                    }
+                  >
+                    <span className="whitespace-nowrap">{item.name}</span>
+                    {hasSubMenu && (
+                      <ChevronDown
                         className={
-                          "absolute top-full z-50 bg-white shadow-xl rounded-lg border border-gray-100 p-3 sm:p-4 md:p-5 max-h-[70vh] overflow-y-auto " +
-                          (isRTL ? "right-0 left-auto" : "left-0 right-auto")
+                          "w-3 h-3 ml-1 transition-transform duration-200 " +
+                          (isActive ? "rotate-180" : "")
                         }
-                        dir={isRTL ? "rtl" : "ltr"}
-                        style={
-                          isRTL
-                            ? {
-                              right: 0,
-                              left: "auto",
-                              minWidth: "280px",
-                              maxWidth: "min(90vw, calc(100vw - 1rem))",
-                              width: "max(280px, min(750px, calc(90vw - 1rem)))"
-                            }
-                            : {
-                              left: 0,
-                              right: "auto",
-                              minWidth: "280px",
-                              maxWidth: "min(90vw, calc(100vw - 1rem))",
-                              width: "max(280px, min(750px, calc(90vw - 1rem)))"
-                            }
-                        }
-                        onMouseEnter={() => {
-                          setActiveMenu(item.key);
-                        }}
-                        onMouseLeave={() => {
-                          setActiveMenu(null);
-                        }}
-                      >
-                        <div
-                          className={`grid gap-2 ${item.key === "hospitals"
-                            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-                            }`}
-                          dir={isRTL ? "rtl" : "ltr"}
-                        >
-                          {subMenuItems.map((subItem, sIdx) => (
-                            <Link
-                              key={sIdx}
-                              href={"/" + locale + subItem.slug}
-                              onClick={closeMenu}
-                              className={`block px-3 sm:px-4 md:px-5 py-2 sm:py-3 text-xs sm:text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary transition-all duration-200 rounded-lg font-medium ${item.key === "hospitals" ? "whitespace-normal" : "whitespace-nowrap"
-                                }`}
-                              style={{
-                                textAlign: isRTL ? "right" : "left",
-                                wordBreak: item.key === "hospitals" ? 'break-word' : 'normal',
-                                lineHeight: '1.5'
-                              }}
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                      />
                     )}
+                  </Link>
 
-                    {/* Dropdown for mega menus (Hospitals, Doctors, Cost) - showing as grid dropdown */}
-                    {item.type === "mega" && isActive && subMenuItems && (
-                      <div
-                        className={
-                          "absolute top-full z-50 w-auto min-w-[750px] bg-white shadow-xl rounded-lg border border-gray-100 p-6 max-h-[70vh] overflow-y-auto " +
-                          (isRTL ? "right-0 left-auto" : "left-0 right-auto")
-                        }
-                        dir={isRTL ? "rtl" : "ltr"}
-                        style={
-                          isRTL
-                            ? {
-                              right: 0,
-                              left: "auto",
-                              maxWidth: "min(90vw, calc(100vw - 1rem))",
-                              width: "auto"
-                            }
-                            : {
-                              left: 0,
-                              right: "auto",
-                              maxWidth: "min(90vw, calc(100vw - 1rem))",
-                              width: "auto"
-                            }
-                        }
-                        onMouseEnter={() => {
-                          setActiveMenu(item.key);
-                        }}
-                        onMouseLeave={() => {
-                          setActiveMenu(null);
-                        }}
-                      >
-                        {/* For hospitals and cost - show countries with treatments in grid */}
-                        {(item.key === "hospitals" || item.key === "cost") && (
-                          <div
-                            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5"
-                            dir={isRTL ? "rtl" : "ltr"}
+                  {/* Dropdown - 3 column grid, centered */}
+                  {hasSubMenu && isActive && subMenuItems && (
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 top-full z-[100] bg-white shadow-2xl rounded-xl border border-gray-200 p-5 mt-2"
+                      style={{
+                        width: "min(700px, 95vw)",
+                        maxHeight: "70vh",
+                        overflowY: "auto"
+                      }}
+                      onMouseEnter={() => setActiveMenu(item.key)}
+                      onMouseLeave={() => setActiveMenu(null)}
+                    >
+                      <div className="grid grid-cols-3 gap-2">
+                        {subMenuItems.map((subItem, sIdx) => (
+                          <Link
+                            key={sIdx}
+                            href={"/" + locale + (subItem.slug || "")}
+                            onClick={closeMenu}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
                           >
-                            {subMenuItems.map((countryItem, cIdx) => (
-                              <div key={cIdx} className="space-y-3">
-                                <Link
-                                  href={"/" + locale + countryItem.slug}
-                                  onClick={closeMenu}
-                                  className="block px-4 py-3 font-bold text-lg text-teal-600 hover:bg-teal-50 hover:text-teal-700 transition-colors rounded border-b-2 border-teal-100"
-                                  style={{ textAlign: isRTL ? "right" : "left" }}
-                                >
-                                  {countryItem.country}
-                                </Link>
-                                {countryItem.treatments && (
-                                  <div className="space-y-2 mt-3">
-                                    {countryItem.treatments.map((treatment, tIdx) => (
-                                      <Link
-                                        key={tIdx}
-                                        href={"/" + locale + treatment.slug}
-                                        onClick={closeMenu}
-                                        className="block px-4 py-3 text-base text-gray-600 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded"
-                                        style={{ textAlign: isRTL ? "right" : "left" }}
-                                      >
-                                        <span className="block leading-relaxed font-medium">
-                                          {treatment.name}
-                                        </span>
-                                        {treatment.sub && (
-                                          <span className="text-sm text-gray-400 block leading-relaxed mt-1.5">
-                                            {treatment.sub}
-                                          </span>
-                                        )}
-                                      </Link>
-                                    ))}
-                                  </div>
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        )}
-
-                        {/* For doctors - grid layout */}
-                        {item.key === "doctors" && (
-                          <div
-                            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-4"
-                            dir={isRTL ? "rtl" : "ltr"}
-                          >
-                            {subMenuItems.map((subItem, sIdx) => (
-                              <Link
-                                key={sIdx}
-                                href={"/" + locale + subItem.slug}
-                                onClick={closeMenu}
-                                className="block px-5 py-4 text-lg text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors rounded whitespace-nowrap font-medium"
-                                style={{ textAlign: isRTL ? "right" : "left" }}
-                              >
-                                {subItem.country || subItem.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
+                            {subItem.name || subItem.country}
+                          </Link>
+                        ))}
                       </div>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          {/* Gradient Bar Below Navigation */}
-          <div className="hidden lg:block h-0.5 bg-gradient-to-r from-panacea-primary via-panacea-secondary to-panacea-secondary/50"></div>
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
 
       {/* Mobile Menu Button */}
       <div className="lg:hidden bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4 flex items-end gap-3 py-2">
+        <div className="container mx-auto px-4 xl:max-w-7xl flex items-end gap-3 py-2">
           {isSticky && (
             <Link href={"/" + locale} className="flex-shrink-0">
               <Image
@@ -482,7 +408,8 @@ export default function Navbar({ locale = "en" }) {
             </ul>
           </div>
         </div>
-      )}
-    </nav>
+      )
+      }
+    </nav >
   );
 }

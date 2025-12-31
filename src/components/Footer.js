@@ -225,7 +225,7 @@ export default function Footer({ locale }) {
 
       {/* Disclaimer */}
       <div className="border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 xl:max-w-7xl py-6">
           <p className="text-sm text-panacea-light/70 text-center leading-relaxed">
             {t("disclaimer")}
           </p>
@@ -234,7 +234,7 @@ export default function Footer({ locale }) {
 
       {/* Bottom Bar */}
       <div className="bg-panacea-dark/50 border-t border-white/10">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 xl:max-w-7xl py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <p className="text-sm text-panacea-light/80">

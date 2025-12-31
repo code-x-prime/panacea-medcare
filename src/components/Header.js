@@ -56,9 +56,9 @@ export default function Header({ locale }) {
         dir={isRTL ? "rtl" : "ltr"}
       >
         {/* Top Contact Bar */}
-        <div className="bg-panacea-primary text-white py-2">
-          <div className="container mx-auto px-4">
-            <div className={`flex items-center justify-center gap-6 text-sm ${isRTL ? "flex-row-reverse" : ""}`}>
+        <div className="bg-panacea-primary text-white py-1.5">
+          <div className="container mx-auto px-4 xl:max-w-7xl">
+            <div className={`flex items-center justify-center gap-6 text-xs ${isRTL ? "flex-row-reverse" : ""}`}>
               {/* WhatsApp Contact */}
               <a
                 href="https://wa.me/919958800961"
@@ -82,8 +82,8 @@ export default function Header({ locale }) {
         </div>
 
         {/* Main Header */}
-        <div className="bg-white border-b border-gray-200">
-          <div className="container mx-auto px-4 py-1">
+        <div className="bg-gradient-to-r from-panacea-primary/5 via-white to-panacea-secondary/5 border-b border-panacea-primary/10">
+          <div className="container mx-auto px-4 xl:max-w-7xl py-[0.5px]">
             <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
               {/* Logo - RTL: right side, LTR: left side - Reduced height */}
               <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
@@ -97,7 +97,7 @@ export default function Header({ locale }) {
                     alt="Panacea Medcare Logo"
                     width={160}
                     height={64}
-                    className="h-16 w-auto"
+                    className="h-20 w-auto"
                     priority
                   />
                 </div>
@@ -114,7 +114,7 @@ export default function Header({ locale }) {
                 {/* Book Teleconsultation - Orange CTA Button */}
                 <Link
                   href={`/${locale}/services/teleconsultation`}
-                  className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-panacea-accent hover:bg-panacea-orange-600 text-white font-semibold rounded-lg shadow-panacea-orange hover:shadow-lg transition-all duration-300"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-panacea-primary hover:bg-panacea-primary text-white text-xs  rounded-lg shadow-panacea-primary hover:shadow-lg transition-all duration-300"
                 >
                   {t.requestConsultation}
                 </Link>
@@ -125,13 +125,8 @@ export default function Header({ locale }) {
         </div>
       </header>
 
-      {/* Navigation Bar - Desktop - STICKY - Outside header */}
-      <div
-        className="sticky top-0 bg-white z-50"
-        dir={isRTL ? "rtl" : "ltr"}
-      >
-        <Navbar locale={locale} />
-      </div>
+      {/* Navigation Bar - Desktop - Outside header */}
+      <Navbar locale={locale} />
     </>
   );
 }

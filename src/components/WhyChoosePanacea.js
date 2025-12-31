@@ -37,7 +37,7 @@ export default function WhyChoosePanacea({ locale }) {
                 }}></div>
             </div>
 
-            <div className="container mx-auto px-4 relative z-10">
+            <div className="container mx-auto px-4 xl:max-w-7xl relative z-10">
                 <div
                     ref={containerRef}
                     className="flex flex-col lg:flex-row gap-16 items-center"

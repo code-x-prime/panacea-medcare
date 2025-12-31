@@ -94,13 +94,13 @@ export default function CardiacTreatmentPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-8">
                 <Breadcrumb items={breadcrumbItems} locale={locale} />
             </section>
 
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-red-50 via-white to-red-50 py-12 md:py-16">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center justify-center w-20 h-20 bg-panacea-primary/10 rounded-full mb-6">
                             <Image
@@ -137,7 +137,7 @@ export default function CardiacTreatmentPage({ params }) {
             </section>
 
             {/* Treatments List */}
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-16 md:py-20">
                 <div className="max-w-5xl mx-auto">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-panacea-dark mb-12 text-center break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.3' }}>
                         {t("sectionTitle")}
@@ -163,7 +163,7 @@ export default function CardiacTreatmentPage({ params }) {
 
             {/* FAQ Section */}
             <section className="bg-panacea-light py-16 md:py-20">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-panacea-dark mb-12 text-center break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.3' }}>
                             {t("faqs.title")}
@@ -188,7 +188,7 @@ export default function CardiacTreatmentPage({ params }) {
             </section>
 
             {/* Quote Form Section */}
-            <section id="quote-form" className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+            <section id="quote-form" className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-16 md:py-20">
                 <div className="max-w-3xl mx-auto">
                     <QuoteForm locale={locale} />
                 </div>

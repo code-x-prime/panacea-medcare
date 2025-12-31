@@ -79,7 +79,7 @@ export default function LanguageSwitcher({ currentLocale }) {
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
+        className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-all duration-200"
         aria-label="Change language"
       >
         <Globe className="w-4 h-4 text-gray-500" />
@@ -104,13 +104,13 @@ export default function LanguageSwitcher({ currentLocale }) {
                   handleLanguageChange(lang.code);
                 }}
                 className={
-                  "w-full flex items-center gap-3 px-4 py-3 text-sm transition-colors " +
+                  "w-full flex items-center gap-3 px-4 py-3 text-xs transition-colors " +
                   (isActive
-                    ? "bg-teal-50 text-teal-700 font-semibold"
+                    ? "bg-teal-50 text-teal-700"
                     : "text-gray-700 hover:bg-gray-50")
                 }
               >
-                <span className="text-lg">{lang.flag}</span>
+                <span className="text-xs">{lang.flag}</span>
                 <span>{lang.name}</span>
                 {isActive && (
                   <span className="ml-auto w-2 h-2 bg-teal-500 rounded-full"></span>

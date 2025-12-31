@@ -57,7 +57,7 @@ const PageHero = ({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[450px] md:min-h-[550px] lg:min-h-[650px] flex items-center">
+      <div className="relative z-10 container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 h-full min-h-[450px] md:min-h-[550px] lg:min-h-[650px] flex items-center">
         <div
           className={`max-w-5xl ${isRTL ? "text-right mr-0 ml-auto" : "text-left ml-0 mr-auto"} w-full`}
           dir={isRTL ? "rtl" : "ltr"}

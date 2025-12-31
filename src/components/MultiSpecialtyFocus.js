@@ -44,7 +44,7 @@ export default function MultiSpecialtyFocus({ locale }) {
             className="py-12 md:py-16 bg-white"
             dir={isRTL ? "rtl" : "ltr"}
         >
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 xl:max-w-7xl">
                 {/* Heading */}
                 <div className={`text-center mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">

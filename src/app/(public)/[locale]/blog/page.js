@@ -58,7 +58,7 @@ export default function BlogPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 {/* Categories */}
                 <div className="mb-12">
                     <div className={`flex flex-wrap gap-3 justify-center ${isRTL ? "flex-row-reverse" : ""}`}>

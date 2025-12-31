@@ -85,17 +85,17 @@ export default function HeroSection({ locale }) {
           className={`w-full max-w-4xl ${isRTL ? "text-right ml-auto" : "text-left"
             } ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-700`}
         >
-          {/* Headline (H1) - Bold & Prominent */}
+          {/* Headline (H1) - Reduced size */}
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4"
             style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
           >
             {headline[locale] || headline.en}
           </h1>
 
-          {/* Supporting Text (1-2 lines) */}
+          {/* Supporting Text - similar sizing */}
           <p
-            className="text-lg sm:text-xl md:text-2xl text-white/95 font-medium mb-4 max-w-3xl leading-relaxed"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/95 font-semibold mb-4 max-w-3xl leading-relaxed"
             style={{ fontFamily: "var(--font-raleway), Raleway, sans-serif" }}
           >
             {supportingText[locale] || supportingText.en}

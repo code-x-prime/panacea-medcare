@@ -30,7 +30,7 @@ export default function EquipmentDetailPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg">
                         <div className={`mb-8 ${isRTL ? "text-right" : "text-left"}`}>

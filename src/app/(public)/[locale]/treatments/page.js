@@ -172,12 +172,12 @@ export default function TreatmentsPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-8">
                 <Breadcrumb items={breadcrumbItems} locale={locale} />
             </section>
 
             {/* Intro Section */}
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-8 md:py-12">
                 <div className="max-w-4xl mx-auto text-center">
                     <p className="text-base sm:text-lg md:text-xl text-panacea-gray font-medium break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.6' }}>
                         {t("subtitle")}
@@ -186,7 +186,7 @@ export default function TreatmentsPage({ params }) {
             </section>
 
             {/* Treatments Grid */}
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:pb-20 lg:pb-24">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 pb-16 md:pb-20 lg:pb-24">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
                     {treatments.map((treatment) => (
                         <Link

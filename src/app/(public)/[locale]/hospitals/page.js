@@ -103,11 +103,11 @@ export default function HospitalsPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-5">
                 <Breadcrumb items={breadcrumbItems} locale={locale} />
             </section>
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 ">
                 {/* Header Section */}
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="text-center mb-8">

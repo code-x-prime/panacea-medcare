@@ -98,7 +98,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
                 </div>
 
                 {/* Content */}
-                <div className="relative h-full container mx-auto px-4 flex items-center">
+                <div className="relative h-full container mx-auto px-4 xl:max-w-7xl flex items-center">
                     <div className={`max-w-3xl ${isRTL ? "text-right" : "text-left"}`}>
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
                             {hospital.name}
@@ -169,7 +169,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Stats Bar */}
             <section className="bg-panacea-primary text-white py-8">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                         {hospital.stats.map((stat, index) => (
                             <div
@@ -188,7 +188,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Overview Section */}
             <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className="max-w-4xl mx-auto">
                         <h2
                             className={`text-3xl md:text-4xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"
@@ -233,7 +233,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Specialties Section */}
             <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             {t("specialties.title")}
@@ -266,7 +266,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Facilities Section */}
             <section className="py-16 bg-gradient-to-br from-panacea-light to-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             {t("facilities.title")}
@@ -293,7 +293,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Doctors Section */}
             <section className="py-16 bg-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                             {t("doctors.title")}
@@ -352,7 +352,7 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
 
             {/* Contact & Quote Section */}
             <section className="py-16 bg-gradient-to-br from-panacea-primary to-panacea-dark text-white">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                             {/* Contact Info */}

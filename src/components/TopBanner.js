@@ -42,9 +42,9 @@ export default function TopBanner({
 
     // Size styles - reduced for smaller banner
     const sizeStyles = {
-        sm: "py-6 md:py-8",
-        md: "py-8 md:py-10",
-        lg: "py-12 md:py-14",
+        sm: "py-8 md:py-10",
+        md: "py-10 md:py-12",
+        lg: "py-12 md:py-16",
     };
 
     // Text color based on variant
@@ -72,32 +72,25 @@ export default function TopBanner({
                 />
             )}
 
-            {/* Content Container */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-                <div
-                    className={`max-w-4xl ${isRTL ? "text-right mr-0 ml-auto" : "text-left ml-0 mr-auto"}`}
-                >
-                    {/* Decorative accent line */}
+            {/* Content Container - Centered 2-Line Layout */}
+            <div className="relative z-10 container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8">
+                <div className="text-center max-w-4xl mx-auto">
+                    {/* Decorative accent line - centered */}
                     {variant !== "light" && (
                         <div
-                            className={`w-16 h-1 bg-panacea-accent rounded-full mb-6 ${isRTL ? "mr-0 ml-auto" : "ml-0 mr-auto"
-                                }`}
+                            className="w-16 h-1 bg-panacea-accent rounded-full mb-4 mx-auto"
                             style={{
                                 boxShadow: "0 0 12px rgba(243, 112, 33, 0.5)",
                             }}
                         />
                     )}
 
-                    {/* Title */}
+                    {/* Title - Line 1 */}
                     {displayTitle && (
                         <h1
-                            className={`${textColor} text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 ${isRTL ? "font-arabic" : ""
-                                }`}
+                            className={`${textColor} text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ${isRTL ? "font-arabic" : ""}`}
                             style={{
-                                fontFamily:
-                                    variant === "light"
-                                        ? "var(--font-raleway), Raleway, sans-serif"
-                                        : "var(--font-raleway), Raleway, sans-serif",
+                                fontFamily: "var(--font-raleway), Raleway, sans-serif",
                                 textShadow:
                                     variant !== "light"
                                         ? "2px 2px 8px rgba(0,0,0,0.3)"
@@ -108,14 +101,13 @@ export default function TopBanner({
                         </h1>
                     )}
 
-                    {/* Subtitle */}
+                    {/* Subtitle - Line 2 */}
                     {displaySubtitle && (
                         <p
                             className={`${variant === "light"
                                 ? "text-panacea-dark/80"
                                 : "text-white/90"
-                                } text-lg sm:text-xl md:text-2xl font-medium leading-relaxed max-w-3xl ${isRTL ? "font-arabic" : ""
-                                }`}
+                                } text-base sm:text-lg md:text-xl font-medium leading-relaxed mt-3 ${isRTL ? "font-arabic" : ""}`}
                             style={{
                                 textShadow:
                                     variant !== "light"
@@ -125,6 +117,13 @@ export default function TopBanner({
                         >
                             {displaySubtitle}
                         </p>
+                    )}
+
+                    {/* Bottom decorative line - centered */}
+                    {variant !== "light" && (
+                        <div
+                            className="w-24 h-0.5 bg-white/30 rounded-full mt-4 mx-auto"
+                        />
                     )}
                 </div>
             </div>

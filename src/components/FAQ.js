@@ -20,7 +20,7 @@ export default function FAQ({ locale }) {
             className="py-12 md:py-16 bg-gradient-to-br from-white via-panacea-light/30 to-gray-50"
             dir={isRTL ? "rtl" : "ltr"}
         >
-            <div className="container mx-auto px-4 max-w-5xl">
+            <div className="container mx-auto px-4 xl:max-w-7xl max-w-5xl">
                 {/* Header */}
                 <div className={`text-center mb-12 md:mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">
@@ -59,8 +59,8 @@ export default function FAQ({ locale }) {
                                     {/* Icon */}
                                     <div
                                         className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen
-                                                ? "bg-panacea-primary text-white rotate-180"
-                                                : "bg-gray-100 text-panacea-primary"
+                                            ? "bg-panacea-primary text-white rotate-180"
+                                            : "bg-gray-100 text-panacea-primary"
                                             }`}
                                     >
                                         {isOpen ? (

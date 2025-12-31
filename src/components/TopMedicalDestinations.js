@@ -69,7 +69,7 @@ export default function TopMedicalDestinations({ locale }) {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-teal-100 rounded-full blur-3xl opacity-20 -z-10"></div>
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-20 -z-10"></div>
 
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 xl:max-w-7xl">
                     {/* Heading */}
                     <div className={`text-center mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                         <div className="inline-block mb-4">

@@ -91,7 +91,7 @@ export default function OurOfficesPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 {/* Head Office Section */}
                 <div className="mb-16">
                     <div className={`text-center mb-12 ${isRTL ? "rtl" : "ltr"}`}>

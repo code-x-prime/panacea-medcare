@@ -41,7 +41,7 @@ export default function CaseStudyDetailPage({ params }) {
                 size="md"
             />
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16">
                 <div className="max-w-4xl mx-auto">
                     {/* Patient Details Card */}
                     <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">

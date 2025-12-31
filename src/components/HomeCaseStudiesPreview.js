@@ -18,7 +18,7 @@ export default function HomeCaseStudiesPreview({ locale }) {
       className="py-12 md:py-16 bg-gradient-to-br from-white via-panacea-light/30 to-gray-50"
       dir={isRTL ? "rtl" : "ltr"}
     >
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4 xl:max-w-7xl max-w-6xl">
         <div className="flex items-center justify-between mb-8 gap-4">
           <div className={isRTL ? "text-right" : "text-left"}>
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">

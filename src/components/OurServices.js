@@ -1,21 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import {
-    FileText,
-    Plane,
-    CreditCard,
-    DollarSign,
-    Languages,
-    Car,
-    Home,
-    ClipboardList,
-    HeartPulse,
-    UserCheck,
-    Video,
-    Wallet,
-    FolderOpen,
-} from "lucide-react";
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function OurServices({ locale }) {
@@ -25,68 +11,68 @@ export default function OurServices({ locale }) {
     const services = [
         {
             id: "medicalOpinion",
-            icon: FileText,
+            svg: "/care-solutions/medical-opinion-cost.svg",
             image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop"
         },
         {
             id: "caseManagement",
-            icon: UserCheck,
+            svg: "/care-solutions/dedicated-international-patient-services.svg",
             image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop"
         },
         {
             id: "telemedicine",
-            icon: Video,
+            svg: "/care-solutions/telemedicine-video-consultation-with-expert.svg",
             image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
         },
         {
             id: "preTravelConsult",
-            icon: Plane,
+            svg: "/care-solutions/pre-travel-consultation.svg",
             image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop"
         },
         {
             id: "visaSupport",
-            icon: ClipboardList,
+            svg: "/care-solutions/visa-assistance.svg",
             image: "https://images.unsplash.com/photo-1569098644584-210bcd375b59?w=400&h=300&fit=crop"
         },
         {
             id: "currencyExchange",
-            icon: DollarSign,
+            svg: "/care-solutions/currency-exchange.svg",
             image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=300&fit=crop"
         },
         {
             id: "interpreters",
-            icon: Languages,
+            svg: "/care-solutions/language-interpreters.svg",
             image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&h=300&fit=crop"
         },
         {
             id: "transportation",
-            icon: Car,
+            svg: "/care-solutions/transportation-services.svg",
             image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&h=300&fit=crop"
         },
         {
             id: "accommodation",
-            icon: Home,
+            svg: "/care-solutions/accommodation-arrangements.svg",
             image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=300&fit=crop"
         },
         {
             id: "admissionSupport",
-            icon: CreditCard,
+            svg: "/care-solutions/hospital-coordination.svg",
             image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=400&h=300&fit=crop"
         },
         {
             id: "nursingCare",
-            icon: HeartPulse,
+            svg: "/care-solutions/private-nursing-care.svg",
             image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop"
         },
         {
             id: "flexiblePayment",
-            icon: Wallet,
+            svg: "/care-solutions/flexible-payment-options.svg",
             image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
         },
         {
             id: "patientPortal",
-            icon: FolderOpen,
-            image: "https://images.unsplash.com/photo-1554224311-beee460ae6ba?w=400&h=300&fit=crop"
+            svg: "/care-solutions/patient-portal-records.svg",
+            image: "https://images.unsplash.com/photo-1753172227512-6ab138c99d7f?q=80&w=1170&auto=format&fit=crop"
         },
     ];
 
@@ -114,7 +100,6 @@ export default function OurServices({ locale }) {
                 {/* Services Grid with Background Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-16 gap-10 mb-12">
                     {services.map((service, idx) => {
-                        const IconComponent = service.icon;
                         return (
                             <div
                                 key={idx}
@@ -133,9 +118,15 @@ export default function OurServices({ locale }) {
 
                                 {/* Content */}
                                 <div className="relative p-6 h-full flex flex-col">
-                                    {/* Icon */}
-                                    <div className="w-14 h-14 bg-gradient-to-br from-panacea-primary to-panacea-dark rounded-xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <IconComponent className="w-7 h-7 text-white" />
+                                    {/* SVG Image */}
+                                    <div className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                        <Image
+                                            src={service.svg}
+                                            alt={t(`services.${service.id}.title`)}
+                                            width={64}
+                                            height={64}
+                                            className="w-full h-full object-contain"
+                                        />
                                     </div>
 
                                     {/* Service Title */}

@@ -9,6 +9,14 @@
       "title": "Medical Opinion & Cost Analysis",
       "description": "Receive expert medical opinions and detailed cost breakdowns from leading specialists."
     },
+    "caseManagement": {
+      "title": "Dedicated International Patient Services & Case Management",
+      "description": "Personalized case manager assigned to coordinate all aspects of your medical journey."
+    },
+    "telemedicine": {
+      "title": "Telemedicine - Video Consultation with Expert Doctors",
+      "description": "Connect with top specialists through secure video consultations from anywhere in the world."
+    },
     "preTravelConsult": {
       "title": "Pre-Travel Consultation",
       "description": "Comprehensive guidance about your procedure, preparation, and what to expect during your visit."
@@ -40,6 +48,14 @@
     "nursingCare": {
       "title": "Private Nursing Care",
       "description": "Arrangements for dedicated private nursing care when medically required."
+    },
+    "flexiblePayment": {
+      "title": "Flexible Payment Options",
+      "description": "Multiple payment methods and flexible installment plans to make your treatment affordable."
+    },
+    "patientPortal": {
+      "title": "Patient Portal and Records Management",
+      "description": "Secure online access to your medical records, reports, and treatment history anytime."
     }
   }
 }

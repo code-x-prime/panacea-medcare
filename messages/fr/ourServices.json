@@ -9,6 +9,14 @@
       "title": "Avis médical et analyse des coûts",
       "description": "Recevez des avis médicaux d'experts et des détails de coûts complets de spécialistes de premier plan."
     },
+    "caseManagement": {
+      "title": "Services dédiés aux patients internationaux et gestion de cas",
+      "description": "Gestionnaire de cas personnalisé assigné pour coordonner tous les aspects de votre parcours médical."
+    },
+    "telemedicine": {
+      "title": "Télémédecine - Consultation vidéo avec des médecins experts",
+      "description": "Connectez-vous avec des spécialistes de premier plan via des consultations vidéo sécurisées partout dans le monde."
+    },
     "preTravelConsult": {
       "title": "Consultation pré-voyage",
       "description": "Conseils complets sur votre procédure, la préparation et ce à quoi vous attendre lors de votre visite."
@@ -40,6 +48,14 @@
     "nursingCare": {
       "title": "Soins infirmiers privés",
       "description": "Arrangements pour des soins infirmiers privés dédiés lorsque médicalement requis."
+    },
+    "flexiblePayment": {
+      "title": "Options de paiement flexibles",
+      "description": "Plusieurs méthodes de paiement et plans de versements flexibles pour rendre votre traitement abordable."
+    },
+    "patientPortal": {
+      "title": "Portail patient et gestion des dossiers médicaux",
+      "description": "Accès en ligne sécurisé à vos dossiers médicaux, rapports et historique de traitement à tout moment."
     }
   }
 }

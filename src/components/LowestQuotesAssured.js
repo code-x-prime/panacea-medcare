@@ -109,10 +109,15 @@ export default function LowestQuotesAssured({ locale }) {
                         >
                             {t("contactHospital")}
                         </button>
-                        <button className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+                        >
                             <FaWhatsapp className="w-5 h-5" />
                             <span>{t("chat")}</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

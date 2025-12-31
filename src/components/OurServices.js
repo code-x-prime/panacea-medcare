@@ -11,6 +11,10 @@ import {
     Home,
     ClipboardList,
     HeartPulse,
+    UserCheck,
+    Video,
+    Wallet,
+    FolderOpen,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -23,6 +27,16 @@ export default function OurServices({ locale }) {
             id: "medicalOpinion",
             icon: FileText,
             image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop"
+        },
+        {
+            id: "caseManagement",
+            icon: UserCheck,
+            image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop"
+        },
+        {
+            id: "telemedicine",
+            icon: Video,
+            image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
         },
         {
             id: "preTravelConsult",
@@ -63,6 +77,16 @@ export default function OurServices({ locale }) {
             id: "nursingCare",
             icon: HeartPulse,
             image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=300&fit=crop"
+        },
+        {
+            id: "flexiblePayment",
+            icon: Wallet,
+            image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop"
+        },
+        {
+            id: "patientPortal",
+            icon: FolderOpen,
+            image: "https://images.unsplash.com/photo-1554224311-beee460ae6ba?w=400&h=300&fit=crop"
         },
     ];
 
@@ -138,10 +162,15 @@ export default function OurServices({ locale }) {
                     </div>
 
                     <div className={`flex flex-wrap gap-4 justify-center ${isRTL ? "flex-row-reverse" : ""}`}>
-                        <button className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+                        >
                             <FaWhatsapp className="w-5 h-5" />
                             <span>{t("chatWithUs")}</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

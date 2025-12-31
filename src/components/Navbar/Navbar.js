@@ -99,19 +99,21 @@ export default function Navbar({ locale = "en" }) {
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Desktop Menu */}
-      <div className="bg-white relative border-b border-gray-100 hidden lg:block">
+      <div className="relative hidden lg:block" style={{ backgroundColor: 'rgba(6, 111, 137, 0.1)' }}>
         <div className="container mx-auto xl:max-w-7xl">
-          {/* Row 1 - First 6 menu items */}
+          {/* All menu items in one row */}
           <ul
             className={
-              "flex items-center justify-center gap-4 px-2 py-1 w-full border-b border-gray-50 " +
+              "flex items-center justify-center gap-4 px-1 py-2 w-full " +
               (isRTL ? "flex-row-reverse" : "")
             }
           >
-            {navbarMenu.main.slice(0, 6).map((item, idx) => {
+            {navbarMenu.main.map((item, idx) => {
               var hasSubMenu = item.type === "mega" || item.type === "dropdown";
               var subMenuItems = item.key ? navbarMenu[item.key] : null;
               var isActive = activeMenu === item.key;
+              // Only wrap long menu names (3+ words)
+              var shouldWrap = item.name.split(" ").length >= 3;
 
               return (
                 <li
@@ -126,13 +128,14 @@ export default function Navbar({ locale = "en" }) {
                     href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
                     onClick={(e) => handleMenuClick(e, item)}
                     className={
-                      "flex items-center text-sm font-semibold px-3 py-1.5 rounded-md transition-all duration-200 " +
+                      "flex items-center text-sm font-semibold px-2 py-1 rounded-md transition-all duration-200 " +
+                      (shouldWrap ? "max-w-[150px] " : "") +
                       (isActive
-                        ? "text-panacea-primary bg-panacea-primary/10"
-                        : "text-gray-700 hover:text-panacea-primary hover:bg-panacea-primary/5")
+                        ? "text-[#066F89] bg-white"
+                        : "text-gray-700 hover:text-[#066F89] hover:bg-white/50")
                     }
                   >
-                    <span className="whitespace-nowrap">{item.name}</span>
+                    <span className={shouldWrap ? "text-center leading-tight" : "whitespace-nowrap"}>{item.name}</span>
                     {hasSubMenu && (
                       <ChevronDown
                         className={
@@ -161,80 +164,7 @@ export default function Navbar({ locale = "en" }) {
                             key={sIdx}
                             href={"/" + locale + (subItem.slug || "")}
                             onClick={closeMenu}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
-                          >
-                            {subItem.name || subItem.country}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
-
-          {/* Row 2 - Remaining menu items (6+) */}
-          <ul
-            className={
-              "flex items-center justify-center gap-4 px-2 py-1 w-full " +
-              (isRTL ? "flex-row-reverse" : "")
-            }
-          >
-            {navbarMenu.main.slice(6).map((item, idx) => {
-              var hasSubMenu = item.type === "mega" || item.type === "dropdown";
-              var subMenuItems = item.key ? navbarMenu[item.key] : null;
-              var isActive = activeMenu === item.key;
-
-              return (
-                <li
-                  key={idx + 6}
-                  className="relative"
-                  onMouseEnter={() => {
-                    if (hasSubMenu) setActiveMenu(item.key);
-                  }}
-                  onMouseLeave={() => setActiveMenu(null)}
-                >
-                  <Link
-                    href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
-                    onClick={(e) => handleMenuClick(e, item)}
-                    className={
-                      "flex items-center text-sm font-semibold px-3 py-1.5 rounded-md transition-all duration-200 " +
-                      (isActive
-                        ? "text-panacea-primary bg-panacea-primary/10"
-                        : "text-gray-700 hover:text-panacea-primary hover:bg-panacea-primary/5")
-                    }
-                  >
-                    <span className="whitespace-nowrap">{item.name}</span>
-                    {hasSubMenu && (
-                      <ChevronDown
-                        className={
-                          "w-3 h-3 ml-1 transition-transform duration-200 " +
-                          (isActive ? "rotate-180" : "")
-                        }
-                      />
-                    )}
-                  </Link>
-
-                  {/* Dropdown - 3 column grid, centered */}
-                  {hasSubMenu && isActive && subMenuItems && (
-                    <div
-                      className="absolute left-1/2 -translate-x-1/2 top-full z-[100] bg-white shadow-2xl rounded-xl border border-gray-200 p-5 mt-2"
-                      style={{
-                        width: "min(700px, 95vw)",
-                        maxHeight: "70vh",
-                        overflowY: "auto"
-                      }}
-                      onMouseEnter={() => setActiveMenu(item.key)}
-                      onMouseLeave={() => setActiveMenu(null)}
-                    >
-                      <div className="grid grid-cols-3 gap-2">
-                        {subMenuItems.map((subItem, sIdx) => (
-                          <Link
-                            key={sIdx}
-                            href={"/" + locale + (subItem.slug || "")}
-                            onClick={closeMenu}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-panacea-primary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#066F89]/10 hover:text-[#066F89] rounded-lg transition-all duration-200 font-medium"
                           >
                             {subItem.name || subItem.country}
                           </Link>

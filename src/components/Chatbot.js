@@ -15,6 +15,7 @@ export default function Chatbot({ locale }) {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
+  const [leadInfo, setLeadInfo] = useState({ name: null, email: null, phone: null, country: null, submitted: false });
 
   // Auto-open chatbot after 2 seconds with greeting
   useEffect(() => {
@@ -38,10 +39,10 @@ export default function Chatbot({ locale }) {
       setMessages([{
         role: 'assistant',
         content: locale === 'ar'
-          ? 'مرحباً! 👋 أنا مساعدك الطبي. كيف يمكنني مساعدتك اليوم؟'
+          ? 'مرحباً! 👋 أنا إيفا... كيف يمكنني مساعدتك؟'
           : locale === 'fr'
-            ? 'Bonjour! 👋 Je suis votre assistant médical. Comment puis-je vous aider?'
-            : 'Hello! 👋 I\'m your medical assistant. How can I help you today?'
+            ? 'Bonjour! 👋 Je suis Eva... Comment puis-je vous aider?'
+            : 'Hi! 👋 I am Eva... How can I help you?'
       }]);
     }
   };
@@ -76,30 +77,42 @@ export default function Chatbot({ locale }) {
       if (response.ok) {
         setMessages((prev) => [...prev, { role: 'assistant', content: data.reply }]);
 
-        // Create lead if user provided contact info
-        if (input.toLowerCase().includes('@') || input.match(/\d{10,}/)) {
-          try {
-            const emailMatch = input.match(/[\w\.-]+@[\w\.-]+\.\w+/);
-            const phoneMatch = input.match(/\d{10,}/);
-            const nameMatch = input.match(/(?:my name is|i'm|i am|name:)\s*([A-Za-z\s]+)/i);
+        // Accumulate lead info from conversation
+        const emailMatch = input.match(/[\w\.-]+@[\w\.-]+\.\w+/);
+        const phoneMatch = input.match(/(?:\+?\d{1,3}[-.\s]?)?\d{10,}/);
+        const nameMatch = input.match(/(?:my name is|i'm|i am|name:|mera naam|naam)\s*([A-Za-z\s]+)/i);
+        const countryMatch = input.match(/(?:from|country:|i am from|i'm from)\s*([A-Za-z\s]+)/i);
 
-            if (emailMatch || phoneMatch) {
-              await fetch('/api/leads', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  name: nameMatch ? nameMatch[1].trim() : 'Chat User',
-                  email: emailMatch ? emailMatch[0] : 'no-email@example.com',
-                  phone: phoneMatch ? phoneMatch[0] : null,
-                  message: input,
-                  source: 'chatbot',
-                }),
-              });
-            }
+        // Update accumulated lead info
+        const newLeadInfo = { ...leadInfo };
+        if (emailMatch && !newLeadInfo.email) newLeadInfo.email = emailMatch[0];
+        if (phoneMatch && !newLeadInfo.phone) newLeadInfo.phone = phoneMatch[0];
+        if (nameMatch && !newLeadInfo.name) newLeadInfo.name = nameMatch[1].trim();
+        if (countryMatch && !newLeadInfo.country) newLeadInfo.country = countryMatch[1].trim();
+
+        // Only submit lead when we have email OR phone, and haven't submitted yet
+        if ((newLeadInfo.email || newLeadInfo.phone) && !leadInfo.submitted) {
+          try {
+            await fetch('/api/leads', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: newLeadInfo.name || 'Chat User',
+                email: newLeadInfo.email || null,
+                phone: newLeadInfo.phone || null,
+                country: newLeadInfo.country || null,
+                message: messages.map(m => m.content).join('\n'),
+                source: 'chatbot',
+              }),
+            });
+            newLeadInfo.submitted = true;
+            console.log('Lead submitted successfully:', newLeadInfo);
           } catch (err) {
-            // Silently fail lead creation
+            console.error('Lead submission error:', err);
           }
         }
+
+        setLeadInfo(newLeadInfo);
       } else {
         setMessages((prev) => [...prev, { role: 'assistant', content: t('errorMessage') }]);
       }
@@ -150,14 +163,14 @@ export default function Chatbot({ locale }) {
               </div>
               <div className={isRTL ? 'text-right' : 'text-left'}>
                 <p className="text-sm font-semibold text-panacea-dark mb-1">
-                  {locale === 'ar' ? 'مرحباً! 👋' : locale === 'fr' ? 'Bonjour! 👋' : 'Hi there! 👋'}
+                  {locale === 'ar' ? 'مرحباً! 👋 أنا إيفا' : locale === 'fr' ? 'Bonjour! 👋 Je suis Eva' : 'Hi! 👋 I am Eva'}
                 </p>
                 <p className="text-xs text-gray-600">
                   {locale === 'ar'
-                    ? 'هل تحتاج مساعدة طبية؟'
+                    ? 'كيف يمكنني مساعدتك؟'
                     : locale === 'fr'
-                      ? 'Besoin d\'aide médicale?'
-                      : 'Need medical assistance?'}
+                      ? 'Comment puis-je vous aider?'
+                      : 'How can I help you?'}
                 </p>
               </div>
             </div>
@@ -180,8 +193,8 @@ export default function Chatbot({ locale }) {
           dir={isRTL ? "rtl" : "ltr"}
         >
           <div className={`bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 ${isMinimized
-              ? 'w-[280px] h-[60px]'
-              : 'w-[320px] sm:w-[360px] h-[450px] sm:h-[480px]'
+            ? 'w-[280px] h-[60px]'
+            : 'w-[320px] sm:w-[360px] h-[450px] sm:h-[480px]'
             }`}>
             {/* Compact Header */}
             <div className="bg-panacea-gradient p-3 flex-shrink-0">
@@ -279,19 +292,34 @@ export default function Chatbot({ locale }) {
 
                 {/* Input Area */}
                 <form onSubmit={sendMessage} className="p-3 bg-white border-t border-gray-100 flex-shrink-0">
-                  <div className={`flex items-center gap-2 bg-gray-50 rounded-full px-3 py-2 border border-gray-200 focus-within:border-panacea-primary focus-within:ring-1 focus-within:ring-panacea-primary/20 transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <input
-                      type="text"
+                  <div className={`flex items-end gap-2 bg-gray-50 rounded-2xl px-3 py-2 border border-gray-200 focus-within:border-panacea-primary focus-within:ring-1 focus-within:ring-panacea-primary/20 transition-all ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <textarea
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
+                      onKeyDown={(e) => {
+                        // Enter without Shift sends the message
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                          e.preventDefault();
+                          if (input.trim() && !isLoading) {
+                            sendMessage(e);
+                          }
+                        }
+                        // Shift+Enter allows new line (default behavior)
+                      }}
                       placeholder={t('inputPlaceholder')}
-                      className={`flex-1 bg-transparent border-none focus:outline-none text-sm text-gray-800 placeholder-gray-400 ${isRTL ? 'text-right' : 'text-left'}`}
+                      className={`flex-1 bg-transparent border-none focus:outline-none text-sm text-gray-800 placeholder-gray-400 resize-none min-h-[36px] max-h-[100px] ${isRTL ? 'text-right' : 'text-left'}`}
                       disabled={isLoading}
+                      rows={1}
+                      style={{ height: 'auto', overflow: 'hidden' }}
+                      onInput={(e) => {
+                        e.target.style.height = 'auto';
+                        e.target.style.height = Math.min(e.target.scrollHeight, 100) + 'px';
+                      }}
                     />
                     <button
                       type="submit"
                       disabled={isLoading || !input.trim()}
-                      className="w-8 h-8 bg-panacea-gradient text-white rounded-full flex items-center justify-center hover:shadow-md transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-8 h-8 bg-panacea-gradient text-white rounded-full flex items-center justify-center hover:shadow-md transition-all disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
                     >
                       <Send className="w-4 h-4" />
                     </button>

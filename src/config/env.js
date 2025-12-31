@@ -27,7 +27,7 @@ if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.trim() === "") {
 const env = {
   DATABASE_URL: process.env.DATABASE_URL,
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
-  OPENAI_MODEL: process.env.OPENAI_MODEL || "gpt-4.1-mini",
+  OPENAI_MODEL: process.env.OPENAI_MODEL || "gpt-4o-mini",
   JWT_SECRET: process.env.JWT_SECRET,
   NEXT_PUBLIC_SITE_NAME: process.env.NEXT_PUBLIC_SITE_NAME || "Panacea Medcare",
   FROM_EMAIL: process.env.FROM_EMAIL,

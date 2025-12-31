@@ -22,6 +22,7 @@ export default function Header({ locale }) {
       cancerCenter: "Cancer Center",
       search: "Search",
       getQuote: "Get Quote",
+      contactUs: "Contact Us",
     },
     ar: {
       findDoctor: "ابحث عن طبيب",
@@ -33,6 +34,7 @@ export default function Header({ locale }) {
       cancerCenter: "مركز السرطان",
       search: "بحث",
       getQuote: "احصل على عرض",
+      contactUs: "اتصل بنا",
     },
     fr: {
       findDoctor: "Trouver un médecin",
@@ -44,6 +46,7 @@ export default function Header({ locale }) {
       cancerCenter: "Centre du cancer",
       search: "Rechercher",
       getQuote: "Obtenir un devis",
+      contactUs: "Contactez-nous",
     }
   };
 
@@ -52,38 +55,13 @@ export default function Header({ locale }) {
   return (
     <>
       <header
-        className="bg-white shadow-md"
+        className="shadow-md"
         dir={isRTL ? "rtl" : "ltr"}
+        style={{ backgroundColor: 'rgba(6, 111, 137, 0.05)' }}
       >
-        {/* Top Contact Bar */}
-        <div className="bg-panacea-primary text-white py-1.5">
-          <div className="container mx-auto px-4 xl:max-w-7xl">
-            <div className={`flex items-center justify-center gap-6 text-xs ${isRTL ? "flex-row-reverse" : ""}`}>
-              {/* WhatsApp Contact */}
-              <a
-                href="https://wa.me/919958800961"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`flex items-center gap-2 hover:text-panacea-accent transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <FaWhatsapp className="w-4 h-4" />
-                <span>+91 9958800961</span>
-              </a>
-              {/* Email */}
-              <a
-                href="mailto:care@panaceamedcare.com"
-                className={`flex items-center gap-2 hover:text-panacea-accent transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
-              >
-                <Mail className="w-4 h-4" />
-                <span>care@panaceamedcare.com</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Main Header */}
-        <div className="bg-gradient-to-r from-panacea-primary/5 via-white to-panacea-secondary/5 border-b border-panacea-primary/10">
-          <div className="container mx-auto px-4 xl:max-w-7xl py-[0.5px]">
+        <div className="border-b border-[#066F89]/10">
+          <div className="container mx-auto px-4  py-[0.5px]">
             <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
               {/* Logo - RTL: right side, LTR: left side - Reduced height */}
               <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
@@ -111,10 +89,28 @@ export default function Header({ locale }) {
                   (isRTL ? "order-1 flex-row-reverse" : "order-3")
                 }
               >
+                {/* Contact Us WhatsApp Button */}
+                <a
+                  href="https://wa.me/919958800961"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <FaWhatsapp className="w-4 h-4" />
+                  {t.contactUs} : +91 995 880 0961
+                </a>
+                {/* Email Button */}
+                <a
+                  href="mailto:care@panaceamedcare.com"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#066F89] hover:bg-[#055a70] text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                >
+                  <Mail className="w-4 h-4" />
+                  care@panaceamedcare.com
+                </a>
                 {/* Book Teleconsultation - Orange CTA Button */}
                 <Link
                   href={`/${locale}/services/teleconsultation`}
-                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-panacea-primary hover:bg-panacea-primary text-white text-xs  rounded-lg shadow-panacea-primary hover:shadow-lg transition-all duration-300"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#F5841F] hover:bg-[#E07316] text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   {t.requestConsultation}
                 </Link>

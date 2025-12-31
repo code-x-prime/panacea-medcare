@@ -77,18 +77,72 @@ export default function Chatbot({ locale }) {
       if (response.ok) {
         setMessages((prev) => [...prev, { role: 'assistant', content: data.reply }]);
 
-        // Accumulate lead info from conversation
-        const emailMatch = input.match(/[\w\.-]+@[\w\.-]+\.\w+/);
-        const phoneMatch = input.match(/(?:\+?\d{1,3}[-.\s]?)?\d{10,}/);
-        const nameMatch = input.match(/(?:my name is|i'm|i am|name:|mera naam|naam)\s*([A-Za-z\s]+)/i);
-        const countryMatch = input.match(/(?:from|country:|i am from|i'm from)\s*([A-Za-z\s]+)/i);
+        // Accumulate lead info from ALL user messages (not just current input)
+        const allUserText = [...messages.filter(m => m.role === 'user').map(m => m.content), input].join('\n');
+
+        const emailMatch = allUserText.match(/[\w\.-]+@[\w\.-]+\.\w+/);
+        const phoneMatch = allUserText.match(/(?:\+?[\d\s\-\(\)]{10,})/);
+
+        // Split ALL user text into lines for detection
+        const allLines = allUserText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+        // Common country names for detection
+        const countries = ['india', 'usa', 'uk', 'uae', 'dubai', 'saudi', 'qatar', 'oman', 'kuwait', 'bahrain', 'canada', 'australia', 'germany', 'france', 'bangladesh', 'pakistan', 'nepal', 'sri lanka', 'afghanistan', 'iraq', 'iran', 'nigeria', 'kenya', 'south africa', 'egypt', 'morocco', 'russia', 'china', 'japan', 'singapore', 'malaysia', 'indonesia', 'thailand', 'vietnam', 'philippines', 'brazil', 'mexico', 'united states', 'united kingdom', 'saudi arabia'];
+
+        // Words to skip when detecting names (common conversation words)
+        const skipWords = ['hello', 'hi', 'hey', 'help', 'interested', 'looking', 'need', 'want', 'please', 'thanks', 'thank', 'yes', 'no', 'ok', 'okay', 'sure', 'fine', 'good', 'great', 'nice', 'treatment', 'surgery', 'doctor', 'hospital', 'medical', 'health', 'care', 'cost', 'price', 'information', 'info'];
+
+        // Try to detect name from various patterns
+        let nameMatch = null;
+
+        // Pattern 1: Explicit name declaration like "my name is John" or "I am John"
+        const namePattern1 = allUserText.match(/(?:my name is|i'm called|name is|name:|mera naam|naam hai)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)/i);
+        if (namePattern1 && !skipWords.includes(namePattern1[1].toLowerCase())) {
+          nameMatch = namePattern1;
+        }
+
+        // Pattern 2: Any line that looks like ONLY a name (single word or two words, starts with capital)
+        if (!nameMatch) {
+          for (const line of allLines) {
+            const lineLower = line.toLowerCase();
+            // Skip if it's a country, email, has numbers, or is a common word
+            if (countries.includes(lineLower) ||
+              line.includes('@') ||
+              /\d/.test(line) ||
+              skipWords.includes(lineLower)) continue;
+            // Check if it looks like a proper name: 2-25 chars, only letters and maybe one space
+            if (/^[A-Za-z]+(\s[A-Za-z]+)?$/.test(line) && line.length >= 2 && line.length <= 25) {
+              nameMatch = [line, line];
+              console.log('Name detected from line:', line);
+              break;
+            }
+          }
+        }
+
+        // Detect country
+        let countryMatch = null;
+        // Pattern 1: "from India", "country: India", etc.
+        const countryPattern1 = allUserText.match(/(?:from|country:|i am from|i'm from|living in|based in)\s*([A-Za-z\s]{2,30})/i);
+        if (countryPattern1) countryMatch = countryPattern1;
+
+        // Pattern 2: Check if any line matches a known country name
+        if (!countryMatch) {
+          for (const line of allLines) {
+            if (countries.includes(line.toLowerCase())) {
+              countryMatch = [line, line];
+              break;
+            }
+          }
+        }
 
         // Update accumulated lead info
         const newLeadInfo = { ...leadInfo };
         if (emailMatch && !newLeadInfo.email) newLeadInfo.email = emailMatch[0];
-        if (phoneMatch && !newLeadInfo.phone) newLeadInfo.phone = phoneMatch[0];
+        if (phoneMatch && !newLeadInfo.phone) newLeadInfo.phone = phoneMatch[0].replace(/[\s\-\(\)]/g, '');
         if (nameMatch && !newLeadInfo.name) newLeadInfo.name = nameMatch[1].trim();
         if (countryMatch && !newLeadInfo.country) newLeadInfo.country = countryMatch[1].trim();
+
+        console.log('Lead info accumulated:', newLeadInfo);
 
         // Only submit lead when we have email OR phone, and haven't submitted yet
         if ((newLeadInfo.email || newLeadInfo.phone) && !leadInfo.submitted) {

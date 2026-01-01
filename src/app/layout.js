@@ -14,6 +14,9 @@ const raleway = Raleway({
 export const metadata = {
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
+  verification: {
+    google: "vqT3m2txIN7qhJcc-I8YO4ptTR0WKiJAqusG2YEMCvU",
+  },
 };
 
 export default async function RootLayout({ children }) {

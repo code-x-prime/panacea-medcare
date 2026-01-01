@@ -350,7 +350,7 @@ export default function HospitalsPage({ params }) {
                                 {t("contactHospital") || "Contact Hospital"}
                             </Link>
                             <a
-                                href={whatsappUrl}
+                                href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"

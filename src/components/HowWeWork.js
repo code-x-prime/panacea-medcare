@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function HowWeWork({ locale }) {
@@ -112,9 +113,12 @@ export default function HowWeWork({ locale }) {
 
                 {/* Bottom CTA Buttons */}
                 <div className={`flex flex-wrap gap-4 justify-center mt-12 ${isRTL ? "flex-row-reverse" : ""}`}>
-                    <button className="px-8 py-3 bg-panacea-accent hover:bg-panacea-accent/90 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                    <Link
+                        href={`/${locale}/contact`}
+                        className="px-8 py-3 bg-[#F5841F] hover:bg-[#E07316] text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 block text-center"
+                    >
                         {t("getStarted")}
-                    </button>
+                    </Link>
                     <a
                         href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
                         target="_blank"

@@ -302,9 +302,12 @@ export default function NetworkOfTopHospitals({ locale }) {
                             </span>
                         </div>
                         <div className={`flex flex-wrap gap-4 justify-center ${isRTL ? "flex-row-reverse" : ""}`}>
-                            <button className="px-6 md:px-8 py-3 bg-panacea-accent hover:bg-panacea-accent/90 text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                            <Link
+                                href={`/${locale}/contact`}
+                                className="px-6 md:px-8 py-3 bg-[#F5841F] hover:bg-[#E07316] text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 block text-center"
+                            >
                                 {t("contactHospital") || "Contact Hospital"}
-                            </button>
+                            </Link>
                             <a
                                 href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
                                 target="_blank"

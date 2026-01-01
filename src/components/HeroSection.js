@@ -148,7 +148,7 @@ export default function HeroSection({ locale }) {
 
             {/* Secondary CTA - Talk to a Care Expert (WhatsApp) */}
             <a
-              href="https://wa.me/918860036536"
+              href="https://api.whatsapp.com/send/?phone=919958800961&text=Hello%2C+I+need+medical+assistance+from+Panacea+Medcare&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className={`group inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-lg font-semibold text-base transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}

@@ -2,7 +2,7 @@ import doctors from "@/data/doctors.json";
 import caseStudies from "@/data/caseStudies.json";
 
 export default function sitemap() {
-    const baseUrl = 'https://panacea-medcare.vercel.app';
+    const baseUrl = 'https://panaceamedcare.com';
     const locales = ['en', 'ar', 'fr'];
 
     // Static routes

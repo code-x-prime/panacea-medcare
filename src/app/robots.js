@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/admin/',
         },
-        sitemap: 'https://panacea-medcare.vercel.app/sitemap.xml',
+        sitemap: 'https://panaceamedcare.com/sitemap.xml',
     }
 }

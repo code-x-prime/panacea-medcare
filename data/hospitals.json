@@ -460,49 +460,88 @@
             {
               "id": "asian-hospital-delhi",
               "slug": "asian-hospital-delhi",
-              "name": "Asian Hospital",
-              "nameAr": "مستشفى آسيان",
-              "nameFr": "Hôpital Asian",
+              "name": "Asian Institute of Medical Sciences",
+              "nameAr": "معهد آسيان للعلوم الطبية",
+              "nameFr": "Institut asiatique des sciences médicales",
               "rating": {
-                "score": 4.2,
-                "totalReviews": 18
+                "score": 4.5,
+                "totalReviews": 128
               },
-              "specialtyType": "Multi Specialty",
-              "beds": 200,
-              "accreditations": ["NABH"],
+              "specialtyType": "Super Specialty",
+              "beds": 425,
+              "accreditations": ["NABH", "NABL"],
               "about": {
-                "short": "Asian Hospital is a well-established multi-specialty hospital providing quality healthcare services in Delhi.",
-                "shortAr": "مستشفى آسيان هو مستشفى متعدد التخصصات راسخ يقدم خدمات رعاية صحية عالية الجودة في دلهي.",
-                "shortFr": "L'hôpital Asian est un hôpital multi-spécialités bien établi offrant des services de soins de santé de qualité à Delhi.",
-                "full": "Asian Hospital is a trusted multi-specialty healthcare facility in Delhi, offering comprehensive medical services with modern infrastructure and experienced medical professionals.",
-                "fullAr": "مستشفى آسيان هو منشأة رعاية صحية متعددة التخصصات موثوقة في دلهي، تقدم خدمات طبية شاملة مع بنية تحتية حديثة ومهنيين طبيين ذوي خبرة.",
-                "fullFr": "L'hôpital Asian est une installation de soins de santé multi-spécialités de confiance à Delhi, offrant des services médicaux complets avec une infrastructure moderne et des professionnels médicaux expérimentés.",
+                "short": "Asian Institute of Medical Sciences is a super specialty tertiary care hospital providing state-of-the-art healthcare.",
+                "shortAr": "معهد آسيان للعلوم الطبية هو مستشفى رعاية ثالثية فائق التخصص يقدم رعاية صحية حديثة.",
+                "shortFr": "L'Institut asiatique des sciences médicales est un hôpital de soins tertiaires super spécialisé offrant des soins de santé de pointe.",
+                "full": "Asian Institute of Medical Sciences (Asian Hospital) is a super specialty tertiary care hospital having state-of-the-art infrastructure and technology. Rated as one of the best hospitals in Delhi NCR, it provides comprehensive medical services with a patient-centric approach. The hospital has been ranked among the best healthcare brands in India.",
+                "fullAr": "معهد آسيان للعلوم الطبية (مستشفى آسيان) هو مستشفى رعاية ثالثية فائق التخصص يتمتع ببنية تحتية وتكنولوجيا حديثة. تم تصنيفه كواحد من أفضل المستشفيات في دلهي، ويقدم خدمات طبية شاملة بنهج يركز على المريض. تم تصنيف المستشفى من بين أفضل العلامات التجارية للرعاية الصحية في الهند.",
+                "fullFr": "L'Institut asiatique des sciences médicales (Hôpital Asian) est un hôpital de soins tertiaires super spécialisé doté d'une infrastructure et d'une technologie de pointe. Classé comme l'un des meilleurs hôpitaux de Delhi NCR, il fournit des services médicaux complets avec une approche centrée sur le patient. L'hôpital a été classé parmi les meilleures marques de soins de santé en Inde.",
                 "internationalPatients": true
               },
               "departments": [
-                { "name": "Cardiology", "doctors": 5 },
-                { "name": "General Surgery", "doctors": 4 },
-                { "name": "Orthopedics", "doctors": 3 }
+                { "name": "Cardiology", "doctors": 8 },
+                { "name": "Oncology", "doctors": 6 },
+                { "name": "Orthopedics", "doctors": 5 },
+                { "name": "Neurology & Neurosurgery", "doctors": 5 },
+                { "name": "Gastroenterology", "doctors": 4 },
+                { "name": "Urology", "doctors": 3 }
+              ],
+              "topDoctors": [
+                {
+                  "name": "Dr. N.K. Pandey",
+                  "specialization": "Gastroenterologist & Hepatologist",
+                  "experience": 38,
+                  "rating": 4.9,
+                  "totalRatings": 450
+                },
+                {
+                  "name": "Dr. Rishi Gupta",
+                  "specialization": "Cardiologist",
+                  "experience": 22,
+                  "rating": 4.8,
+                  "totalRatings": 320
+                },
+                {
+                  "name": "Dr. Amit Chaudhary",
+                  "specialization": "Spine Surgeon",
+                  "experience": 18,
+                  "rating": 4.7,
+                  "totalRatings": 150
+                }
               ],
               "address": {
-                "line1": "Delhi",
-                "city": "New Delhi",
-                "state": "Delhi",
+                "line1": "Badkal Flyover Road, Sector 21A",
+                "city": "Faridabad (Delhi NCR)",
+                "state": "Haryana",
+                "pincode": "121001",
                 "country": "India"
               },
+              "location": {
+                "airportKm": 35,
+                "metroKm": 3
+              },
               "facilities": {
-                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Family accommodation", "Laundry"],
-                "moneyMatters": ["Insurance accepted"],
-                "food": ["Vegetarian options"],
-                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres"],
-                "language": ["English", "Hindi"],
-                "transportation": ["Airport pickup/drop"]
+                "comfortDuringStay": ["TV in room", "Private rooms", "Free Wifi", "Phone in Room", "Mobility accessible rooms", "Family accommodation", "Laundry", "Welcome", "Safe in the room", "Nursery / Nanny services", "Personal assistance / Concierge", "Prayer Room", "Café", "Shop", "Parking available"],
+                "moneyMatters": ["Insurance accepted", "Credit Cards", "Cash", "Wire Transfer"],
+                "food": ["International cuisine", "Vegetarian options", "Halal Food Available", "Dietitian services"],
+                "treatmentRelated": ["24/7 Emergency", "ICU", "Operation Theatres", "Diagnostic services", "Pharmacy", "Blood Bank"],
+                "language": ["English", "Hindi", "Arabic", "French", "Russian"],
+                "transportation": ["Airport pickup/drop", "Ambulance services", "Cab services"]
+              },
+              "internationalPatientServices": {
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
               },
               "infrastructure": {
-                "beds": 200,
-                "icuBeds": 20,
-                "operationTheatres": 5,
-                "technologies": ["Modern diagnostic equipment"]
+                "beds": 425,
+                "icuBeds": 45,
+                "operationTheatres": 11,
+                "technologies": ["TrueBeam STx", "MRI 3.0 Tesla", "PET-CT", "Gamma Camera", "Digital Mammography"]
               }
             },
             {

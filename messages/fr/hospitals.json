@@ -25,6 +25,17 @@
   "modularOTs": "blocs opératoires modulaires",
   "technologies": "Technologies",
   "facilities": "Installations",
+  "videos": "Vidéos de l'hôpital",
+  "gallery": "Galerie",
+  "address": "Adresse",
+  "viewOnMap": "Voir sur Google Maps",
+  "teamAndSpecialties": "Équipe et spécialités",
+  "centersOfExcellence": "Centres d'excellence",
+  "awards": "Prix",
+  "milestones": "Étapes clés",
+  "airport": "Aéroport",
+  "metro": "Station de métro",
+  "railway": "Gare ferroviaire",
   "facilitiesTab": {
     "comfortDuringStay": "Confort pendant le séjour",
     "moneyMatters": "Questions financières",
@@ -42,4 +53,3 @@
     "accommodationAssistance": "Assistance pour l'hébergement et les arrangements alimentaires: Aide pour les hôtels/maisons d'hôtes et plans de repas personnalisés."
   }
 }
-

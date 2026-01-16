@@ -25,6 +25,17 @@
   "modularOTs": "مسارح عمليات معيارية",
   "technologies": "التقنيات",
   "facilities": "المرافق",
+  "videos": "فيديوهات المستشفى",
+  "gallery": "المعرض",
+  "address": "العنوان",
+  "viewOnMap": "عرض على خرائط جوجل",
+  "teamAndSpecialties": "الفريق والتخصصات",
+  "centersOfExcellence": "مراكز التميز",
+  "awards": "الجوائز",
+  "milestones": "الإنجازات",
+  "airport": "المطار",
+  "metro": "محطة المترو",
+  "railway": "محطة السكة الحديد",
   "facilitiesTab": {
     "comfortDuringStay": "الراحة أثناء الإقامة",
     "moneyMatters": "الأمور المالية",
@@ -42,4 +53,3 @@
     "accommodationAssistance": "المساعدة في الإقامة وترتيبات الطعام: المساعدة في الفنادق/بيوت الضيافة وخطط الوجبات المخصصة."
   }
 }
-

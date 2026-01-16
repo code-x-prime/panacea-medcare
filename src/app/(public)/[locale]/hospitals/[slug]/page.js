@@ -1,12 +1,12 @@
 "use client";
 
-import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay } from "react-icons/fa";
+import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import hospitalsData from "@/data/hospitals.json";
+import QuoteForm from "@/components/QuoteForm";
 
 export default function HospitalDetailPage({ params }) {
     const { locale, slug } = params;
@@ -31,18 +31,40 @@ export default function HospitalDetailPage({ params }) {
     }
 
     const [activeFacilityTab, setActiveFacilityTab] = useState("comfortDuringStay");
+    const [galleryIndex, setGalleryIndex] = useState(0);
 
-    // Get hospital image - returns placeholder if image doesn't exist
-    const getHospitalImage = (slug) => {
-        // Try local path first, fallback to placeholder
-        return `https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=600&fit=crop&auto=format`;
+    // Get hospital images - returns placeholder if images don't exist
+    const getHospitalImages = (hospital) => {
+        if (hospital.images && hospital.images.length > 0) {
+            return hospital.images;
+        }
+        // Default placeholder images
+        return [
+            `https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1200&h=600&fit=crop&auto=format`,
+            `https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&h=600&fit=crop&auto=format`
+        ];
     };
 
-    // Hospital videos (can be added to hospital data later)
-    const hospitalVideos = hospital.videos || [
-        { id: 1, thumbnail: getHospitalImage(slug), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Hospital Tour" },
-        { id: 2, thumbnail: getHospitalImage(slug), videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Patient Testimonial" },
+    const hospitalImages = getHospitalImages(hospital);
+
+    // Hospital videos - only use if they exist in hospital data
+    const hospitalVideos = hospital.videos || [];
+
+    // Gallery: Only images (videos will be added only if they exist)
+    const galleryItems = [
+        ...hospitalImages.map((img, idx) => ({ type: 'image', src: img, id: `img-${idx}` })),
+        ...(hospitalVideos.length > 0 ? hospitalVideos.map((video) => ({ type: 'video', ...video })) : [])
     ];
+
+    const totalGallerySlides = Math.ceil(galleryItems.length / 2);
+
+    const nextGallery = () => {
+        setGalleryIndex((prev) => (prev + 1) % totalGallerySlides);
+    };
+
+    const prevGallery = () => {
+        setGalleryIndex((prev) => (prev - 1 + totalGallerySlides) % totalGallerySlides);
+    };
 
     const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -82,18 +104,26 @@ export default function HospitalDetailPage({ params }) {
     const hospitalShortDesc = locale === "ar" ? (hospital.about?.shortAr || hospital.about?.short || "") : locale === "fr" ? (hospital.about?.shortFr || hospital.about?.short || "") : (hospital.about?.short || "");
     const hospitalFullDesc = locale === "ar" ? (hospital.about?.fullAr || hospital.about?.full || "") : locale === "fr" ? (hospital.about?.fullFr || hospital.about?.full || "") : (hospital.about?.full || "");
 
+    // WhatsApp message with hospital name and link
+    const whatsappMessage = encodeURIComponent(
+        `Hello, please contact me regarding ${hospitalName} - https://panaceamedcare.com/${locale}/hospitals/${slug}?source=wpchat_HDSB, Thank you!`
+    );
+    const whatsappUrl = `https://wa.me/919958800961?text=${whatsappMessage}`;
+
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
-            {/* Blurred Hospital Image Header */}
-            <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
-                <Image
-                    src={getHospitalImage(slug)}
-                    alt={hospitalName}
-                    fill
-                    className="object-cover blur-sm scale-110"
-                    priority
-                    unoptimized
-                />
+            {/* Single Image Header */}
+            <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
+                {hospitalImages.length > 0 && (
+                    <Image
+                        src={hospitalImages[0]}
+                        alt={hospitalName}
+                        fill
+                        className="object-cover"
+                        priority
+                        unoptimized
+                    />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-panacea-primary/80 via-panacea-primary/60 to-panacea-primary/80"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className={`text-center text-white px-4 ${isRTL ? "text-right" : "text-left"}`}>
@@ -105,8 +135,8 @@ export default function HospitalDetailPage({ params }) {
                 </div>
             </div>
 
-            <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16">
-                <div className="max-w-7xl mx-auto">
+            <section className="container mx-auto px-4  sm:px-6 lg:px-8 py-12 md:py-16">
+                <div className=" mx-auto">
                     {/* Hospital Overview Card */}
                     <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -199,7 +229,7 @@ export default function HospitalDetailPage({ params }) {
                             <span>{t("bookAppointment") || "Book Appointment"}</span>
                         </button>
                         <a
-                            href="https://wa.me/1234567890"
+                            href={whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3"
@@ -208,6 +238,105 @@ export default function HospitalDetailPage({ params }) {
                             <span>{t("whatsappUs") || "Whatsapp Us"}</span>
                         </a>
                     </div>
+
+                    {/* Gallery Carousel - Below Banner */}
+                    {galleryItems.length > 0 && (
+                        <div className="mb-12 max-w-7xl">
+                            <h2 className={`text-2xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
+                                {t("gallery") || "Gallery"}
+                            </h2>
+                            <div className="relative">
+                                {/* Carousel Container */}
+                                <div className="overflow-hidden rounded-lg">
+                                    <div
+                                        className="flex transition-transform duration-500 ease-in-out"
+                                        style={{ transform: `translateX(-${galleryIndex * 100}%)` }}
+                                    >
+                                        {Array.from({ length: totalGallerySlides }).map((_, slideIdx) => (
+                                            <div key={slideIdx} className="min-w-full grid grid-cols-2 gap-4">
+                                                {galleryItems.slice(slideIdx * 2, slideIdx * 2 + 2).map((item, itemIdx) => (
+                                                    <div key={item.id || itemIdx} className="w-full">
+                                                        {item.type === 'image' ? (
+                                                            <div className="relative group rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                                                                <Image
+                                                                    src={item.src}
+                                                                    alt={`${hospitalName} - Image`}
+                                                                    fill
+                                                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                    loading="lazy"
+                                                                    unoptimized
+                                                                />
+                                                            </div>
+                                                        ) : (
+                                                            <div
+                                                                className="relative group cursor-pointer rounded-lg overflow-hidden"
+                                                                style={{ aspectRatio: '16/9' }}
+                                                                onClick={() => setSelectedVideo(item)}
+                                                            >
+                                                                <Image
+                                                                    src={item.thumbnail}
+                                                                    alt={item.title}
+                                                                    fill
+                                                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                    loading="lazy"
+                                                                    unoptimized
+                                                                />
+                                                                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                                                    <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                                        <FaPlay className="w-5 h-5 text-panacea-primary ml-1" />
+                                                                    </div>
+                                                                </div>
+                                                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+                                                                    <h3 className="text-white text-sm font-medium">{item.title}</h3>
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Navigation Arrows */}
+                                {totalGallerySlides > 1 && (
+                                    <>
+                                        <button
+                                            onClick={prevGallery}
+                                            className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10"
+                                            aria-label="Previous"
+                                        >
+                                            <FaChevronLeft className="w-4 h-4" />
+                                        </button>
+                                        <button
+                                            onClick={nextGallery}
+                                            className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10"
+                                            aria-label="Next"
+                                        >
+                                            <FaChevronRight className="w-4 h-4" />
+                                        </button>
+                                    </>
+                                )}
+                            </div>
+
+                            {/* Dots Indicator */}
+                            {totalGallerySlides > 1 && (
+                                <div className="flex justify-center gap-2 mt-4">
+                                    {Array.from({ length: totalGallerySlides }).map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setGalleryIndex(index)}
+                                            className={`h-2 rounded-full transition-all ${index === galleryIndex
+                                                ? "bg-panacea-primary w-6"
+                                                : "bg-gray-300 hover:bg-gray-400 w-2"
+                                                }`}
+                                            aria-label={`Go to slide ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
@@ -297,94 +426,140 @@ export default function HospitalDetailPage({ params }) {
                                         {t("internationalPatientServices") || "International Patient Services"}
                                     </h2>
                                     <div className="bg-panacea-light/30 rounded-xl p-6">
-                                        <p className={`text-gray-700 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                            {hospital.name} {t("internationalServicesDesc") || "is a preferred destination for international patients, offering comprehensive and personalised care:"}
-                                        </p>
-                                        <ul className={`space-y-3 ${isRTL ? "text-right" : "text-left"}`}>
-                                            {hospital.internationalPatientServices.preArrivalConsultation && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.preArrivalConsultation") || "Pre-arrival Consultation and Case Review: Medical opinions and treatment cost estimates from senior consultants."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                            {hospital.internationalPatientServices.visaAssistance && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.visaAssistance") || "Visa & Travel Assistance: Medical visa invitation letters and support for travel arrangements."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                            {hospital.internationalPatientServices.airportPickup && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.airportPickup") || "Airport Pick-up/Drop-off: Complimentary transportation is arranged from and to the airport."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                            {hospital.internationalPatientServices.multilingualInterpreters && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.multilingualInterpreters") || "Multilingual Interpreters: Professional interpreters are available for communication."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                            {hospital.internationalPatientServices.dedicatedCoordinators && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.dedicatedCoordinators") || "Express Check-in, Dedicated Lounge & Personal Coordinators: Fast-tracked services and continuous support."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                            {hospital.internationalPatientServices.accommodationAssistance && (
-                                                <li className="flex items-start gap-3">
-                                                    <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700">
-                                                        {t("services.accommodationAssistance") || "Assistance with Accommodation and Food Arrangements: Help with hotels/guesthouses and customised meal plans."}
-                                                    </span>
-                                                </li>
-                                            )}
-                                        </ul>
+                                        {hospital.internationalPatientServices.description ? (
+                                            <div className={`text-gray-700 leading-relaxed whitespace-pre-line ${isRTL ? "text-right" : "text-left"}`}>
+                                                {locale === "ar" ? (hospital.internationalPatientServices.descriptionAr || hospital.internationalPatientServices.description) : locale === "fr" ? (hospital.internationalPatientServices.descriptionFr || hospital.internationalPatientServices.description) : hospital.internationalPatientServices.description}
+                                            </div>
+                                        ) : (
+                                            <>
+                                                <p className={`text-gray-700 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
+                                                    {hospital.name} {t("internationalServicesDesc") || "is a preferred destination for international patients, offering comprehensive and personalised care:"}
+                                                </p>
+                                                <ul className={`space-y-3 ${isRTL ? "text-right" : "text-left"}`}>
+                                                    {hospital.internationalPatientServices.preArrivalConsultation && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.preArrivalConsultation") || "Pre-arrival Consultation and Case Review: Medical opinions and treatment cost estimates from senior consultants."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                    {hospital.internationalPatientServices.visaAssistance && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.visaAssistance") || "Visa & Travel Assistance: Medical visa invitation letters and support for travel arrangements."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                    {hospital.internationalPatientServices.airportPickup && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.airportPickup") || "Airport Pick-up/Drop-off: Complimentary transportation is arranged from and to the airport."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                    {hospital.internationalPatientServices.multilingualInterpreters && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.multilingualInterpreters") || "Multilingual Interpreters: Professional interpreters are available for communication."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                    {hospital.internationalPatientServices.dedicatedCoordinators && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.dedicatedCoordinators") || "Express Check-in, Dedicated Lounge & Personal Coordinators: Fast-tracked services and continuous support."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                    {hospital.internationalPatientServices.accommodationAssistance && (
+                                                        <li className="flex items-start gap-3">
+                                                            <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                                                            <span className="text-gray-700">
+                                                                {t("services.accommodationAssistance") || "Assistance with Accommodation and Food Arrangements: Help with hotels/guesthouses and customised meal plans."}
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                </ul>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             )}
 
-                            {/* Hospital Videos */}
-                            {hospitalVideos && hospitalVideos.length > 0 && (
+                            {/* Team and Specialties */}
+                            {hospital.teamAndSpecialties && (
                                 <div>
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                        {t("videos") || "Hospital Videos"}
+                                        {t("teamAndSpecialties") || "Team and Specialties"}
                                     </h2>
-                                    <div className="grid md:grid-cols-2 gap-6">
-                                        {hospitalVideos.map((video) => (
-                                            <div
-                                                key={video.id}
-                                                className="relative group cursor-pointer bg-gray-900 rounded-xl overflow-hidden"
-                                                onClick={() => setSelectedVideo(video)}
-                                            >
-                                                <div className="relative aspect-video">
-                                                    <Image
-                                                        src={video.thumbnail}
-                                                        alt={video.title}
-                                                        fill
-                                                        className="object-cover"
-                                                        loading="lazy"
-                                                        unoptimized
-                                                    />
-                                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
-                                                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                                                            <FaPlay className="w-6 h-6 text-panacea-primary ml-1" />
+                                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                                        <p className={`text-gray-700 leading-relaxed mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                            {locale === "ar" ? (hospital.teamAndSpecialties.descriptionAr || hospital.teamAndSpecialties.description) : locale === "fr" ? (hospital.teamAndSpecialties.descriptionFr || hospital.teamAndSpecialties.description) : hospital.teamAndSpecialties.description}
+                                        </p>
+                                        {hospital.teamAndSpecialties.centersOfExcellence && hospital.teamAndSpecialties.centersOfExcellence.length > 0 && (
+                                            <div>
+                                                <h3 className={`text-xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
+                                                    {t("centersOfExcellence") || "Centres of Excellence"}
+                                                </h3>
+                                                <div className="grid md:grid-cols-2 gap-4">
+                                                    {hospital.teamAndSpecialties.centersOfExcellence.map((center, idx) => (
+                                                        <div key={idx} className="bg-panacea-light/30 rounded-lg p-4">
+                                                            <h4 className="font-semibold text-gray-900 mb-2">
+                                                                {locale === "ar" ? (center.nameAr || center.name) : locale === "fr" ? (center.nameFr || center.name) : center.name}
+                                                            </h4>
+                                                            <p className={`text-sm text-gray-600 ${isRTL ? "text-right" : "text-left"}`}>
+                                                                {locale === "ar" ? (center.descriptionAr || center.description) : locale === "fr" ? (center.descriptionFr || center.description) : center.description}
+                                                            </p>
                                                         </div>
-                                                    </div>
+                                                    ))}
                                                 </div>
-                                                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                                                    <h3 className="text-white font-semibold">{video.title}</h3>
-                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Awards */}
+                            {hospital.awards && hospital.awards.length > 0 && (
+                                <div>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("awards") || "Awards"}
+                                    </h2>
+                                    <div className="grid md:grid-cols-2 gap-4">
+                                        {hospital.awards.map((award, idx) => (
+                                            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-4 flex items-start gap-3">
+                                                <FaCheckCircle className="w-5 h-5 text-panacea-primary flex-shrink-0 mt-1" />
+                                                <p className="text-gray-700">
+                                                    {locale === "ar" ? (award.nameAr || award.name) : locale === "fr" ? (award.nameFr || award.name) : award.name}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Milestones */}
+                            {hospital.milestones && hospital.milestones.length > 0 && (
+                                <div>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("milestones") || "Milestones"}
+                                    </h2>
+                                    <div className="space-y-4">
+                                        {hospital.milestones.map((milestone, idx) => (
+                                            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6">
+                                                <h3 className="font-semibold text-gray-900 mb-2">
+                                                    {locale === "ar" ? (milestone.nameAr || milestone.name) : locale === "fr" ? (milestone.nameFr || milestone.name) : milestone.name}
+                                                </h3>
+                                                {milestone.description && (
+                                                    <p className={`text-gray-600 ${isRTL ? "text-right" : "text-left"}`}>
+                                                        {locale === "ar" ? (milestone.descriptionAr || milestone.description) : locale === "fr" ? (milestone.descriptionFr || milestone.description) : milestone.description}
+                                                    </p>
+                                                )}
                                             </div>
                                         ))}
                                     </div>
@@ -439,11 +614,95 @@ export default function HospitalDetailPage({ params }) {
                                     </div>
                                 </div>
                             )}
+
+                            {/* Location Details */}
+                            {hospital.location && (
+                                <div>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("location") || "Location"}
+                                    </h2>
+                                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                                        {hospital.address && (
+                                            <div className={`mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                                <h3 className="font-semibold text-gray-900 mb-2">{t("address") || "Address"}</h3>
+                                                <p className="text-gray-700">
+                                                    {hospital.address.line1 && <>{hospital.address.line1}<br /></>}
+                                                    {hospital.address.city && <>{hospital.address.city}, {hospital.address.state && `${hospital.address.state}, `}{hospital.address.pincode && `${hospital.address.pincode}`}<br /></>}
+                                                    {hospital.address.country}
+                                                </p>
+                                            </div>
+                                        )}
+                                        {hospital.location.coordinates && (
+                                            <div className="mb-6">
+                                                <a
+                                                    href={`https://www.google.com/maps?q=${hospital.location.coordinates.lat},${hospital.location.coordinates.lng}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center gap-2 text-panacea-primary hover:text-panacea-primary/80 font-semibold"
+                                                >
+                                                    <FaMapMarkerAlt className="w-5 h-5" />
+                                                    <span>{t("viewOnMap") || "View on Google Maps"}</span>
+                                                </a>
+                                            </div>
+                                        )}
+                                        <div className="space-y-3">
+                                            {hospital.location.airportKm && (
+                                                <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                                    <FaMapMarkerAlt className="w-5 h-5 text-panacea-primary flex-shrink-0 mt-1" />
+                                                    <div className={isRTL ? "text-right" : "text-left"}>
+                                                        <p className="font-semibold text-gray-900">
+                                                            {hospital.location.airportName || t("airport") || "Airport"}
+                                                        </p>
+                                                        <p className="text-gray-600">
+                                                            {hospital.location.airportKm} km
+                                                            {hospital.location.airportDuration && ` • ${hospital.location.airportDuration}`}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {hospital.location.metroKm && (
+                                                <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                                    <FaMapMarkerAlt className="w-5 h-5 text-panacea-primary flex-shrink-0 mt-1" />
+                                                    <div className={isRTL ? "text-right" : "text-left"}>
+                                                        <p className="font-semibold text-gray-900">
+                                                            {hospital.location.metroName || t("metro") || "Metro Station"}
+                                                        </p>
+                                                        <p className="text-gray-600">
+                                                            {hospital.location.metroKm} km
+                                                            {hospital.location.metroDuration && ` • ${hospital.location.metroDuration}`}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                            {hospital.location.railwayKm && (
+                                                <div className={`flex items-start gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                                    <FaMapMarkerAlt className="w-5 h-5 text-panacea-primary flex-shrink-0 mt-1" />
+                                                    <div className={isRTL ? "text-right" : "text-left"}>
+                                                        <p className="font-semibold text-gray-900">
+                                                            {hospital.location.railwayName || t("railway") || "Railway Station"}
+                                                        </p>
+                                                        <p className="text-gray-600">
+                                                            {hospital.location.railwayKm} km
+                                                            {hospital.location.railwayDuration && ` • ${hospital.location.railwayDuration}`}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
-                        {/* Sidebar - Facilities */}
-                        <div className="lg:col-span-1">
-                            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 sticky top-24">
+                        {/* Sidebar - QuoteForm and Facilities */}
+                        <div className="lg:col-span-1 space-y-6">
+                            {/* Quote Form */}
+                            <div className="bg-white rounded-2xl shadow-lg border border-gray-100">
+                                <QuoteForm embedded={true} />
+                            </div>
+
+                            {/* Facilities */}
+                            <div className="bg-white rounded-2xl shadow-lg border border-gray-100">
                                 <div className="p-6 border-b border-gray-200">
                                     <h2 className={`text-2xl font-bold text-gray-900 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("facilities") || "Facilities"}

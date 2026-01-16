@@ -25,6 +25,17 @@
   "modularOTs": "modular operating theatres",
   "technologies": "Technologies",
   "facilities": "Facilities",
+  "videos": "Hospital Videos",
+  "gallery": "Gallery",
+  "address": "Address",
+  "viewOnMap": "View on Google Maps",
+  "teamAndSpecialties": "Team and Specialties",
+  "centersOfExcellence": "Centres of Excellence",
+  "awards": "Awards",
+  "milestones": "Milestones",
+  "airport": "Airport",
+  "metro": "Metro Station",
+  "railway": "Railway Station",
   "facilitiesTab": {
     "comfortDuringStay": "Comfort During Stay",
     "moneyMatters": "Money Matters",
@@ -42,4 +53,3 @@
     "accommodationAssistance": "Assistance with Accommodation and Food Arrangements: Help with hotels/guesthouses and customised meal plans."
   }
 }
-

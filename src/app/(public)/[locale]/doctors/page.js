@@ -1,12 +1,75 @@
 "use client";
 
+import { useState, useMemo, useEffect } from "react";
 import TopBanner from "@/components/TopBanner";
 import Link from "next/link";
+import Image from "next/image";
 import doctors from "@/data/doctors.json";
+import { FaUserMd, FaSearch, FaChevronLeft, FaChevronRight, FaWhatsapp, FaCalendarCheck } from "react-icons/fa";
+import BookingModal from "@/components/BookingModal";
+import { CONTACT_CONFIG } from "@/config/contact";
 
 export default function DoctorsPage({ params }) {
     const { locale } = params;
     const isRTL = locale === "ar";
+    const [searchQuery, setSearchQuery] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
+    const [selectedDoctor, setSelectedDoctor] = useState(null);
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+    const doctorsPerPage = 12;
+
+    // Filter doctors based on search query
+    const filteredDoctors = useMemo(() => {
+        if (!searchQuery.trim()) {
+            return doctors;
+        }
+        const query = searchQuery.toLowerCase();
+        return doctors.filter(doctor => {
+            const name = doctor.name?.toLowerCase() || "";
+            const specialty = doctor.specialty?.toLowerCase() || "";
+            const designation = doctor.designation?.toLowerCase() || "";
+            const hospital = doctor.hospital?.toLowerCase() || "";
+            const qualification = doctor.qualification?.toLowerCase() || "";
+
+            return name.includes(query) ||
+                specialty.includes(query) ||
+                designation.includes(query) ||
+                hospital.includes(query) ||
+                qualification.includes(query);
+        });
+    }, [searchQuery]);
+
+    // Pagination calculations
+    const totalPages = Math.ceil(filteredDoctors.length / doctorsPerPage);
+    const startIndex = (currentPage - 1) * doctorsPerPage;
+    const endIndex = startIndex + doctorsPerPage;
+    const currentDoctors = filteredDoctors.slice(startIndex, endIndex);
+
+    // Reset to page 1 when search changes
+    useEffect(() => {
+        setCurrentPage(1);
+    }, [searchQuery]);
+
+    const goToPage = (page) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    const openBookingModal = (doctor) => {
+        setSelectedDoctor(doctor);
+        setIsBookingModalOpen(true);
+    };
+
+    const handleWhatsApp = (doctor) => {
+        const message = encodeURIComponent(
+            `Hi! I would like to book an appointment with ${doctor.name}.\n\n` +
+            `Doctor: ${doctor.name}\n` +
+            `Specialty: ${doctor.specialty || ""}\n` +
+            `Hospital: ${doctor.hospital || ""}\n\n` +
+            `Please contact me for scheduling.`
+        );
+        window.open(`https://wa.me/${CONTACT_CONFIG.whatsappNumber}?text=${message}`, "_blank");
+    };
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
@@ -20,38 +83,197 @@ export default function DoctorsPage({ params }) {
             />
 
             <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {doctors.map((doctor) => {
-                        const name = locale === "ar" ? doctor.nameAr : locale === "fr" ? doctor.nameFr : doctor.name;
-                        const specialty = locale === "ar" ? doctor.specialtyAr : locale === "fr" ? doctor.specialtyFr : doctor.specialty;
-                        const qualification = locale === "ar" ? doctor.qualificationAr : locale === "fr" ? doctor.qualificationFr : doctor.qualification;
-                        const experience = locale === "ar" ? doctor.experienceAr : locale === "fr" ? doctor.experienceFr : doctor.experience;
-                        const hospital = locale === "ar" ? doctor.hospitalAr : locale === "fr" ? doctor.hospitalFr : doctor.hospital;
-
-                        return (
-                            <Link
-                                key={doctor.id}
-                                href={`/${locale}/doctors/${doctor.id}`}
-                                className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-panacea-primary"
-                            >
-                                <div className="aspect-square bg-gray-200 relative overflow-hidden">
-                                    <div className="absolute inset-0 bg-gradient-to-t from-panacea-primary/80 to-transparent flex items-end p-6">
-                                        <div className={isRTL ? "text-right w-full" : "text-left w-full"}>
-                                            <h3 className="text-2xl font-bold text-white">{name}</h3>
-                                            <p className="text-white/90">{specialty}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className={`p-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    <p className="text-sm text-gray-600 mb-2">{qualification}</p>
-                                    <p className="text-sm font-semibold text-panacea-accent mb-2">{experience}</p>
-                                    <p className="text-sm text-gray-700">{hospital}</p>
-                                </div>
-                            </Link>
-                        );
-                    })}
+                {/* Search Bar */}
+                <div className="mb-8">
+                    <div className="relative max-w-2xl mx-auto">
+                        <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <input
+                            type="text"
+                            placeholder={locale === "ar" ? "ابحث عن طبيب..." : locale === "fr" ? "Rechercher un médecin..." : "Search for a doctor..."}
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg focus:border-panacea-primary focus:outline-none text-lg"
+                            dir={isRTL ? "rtl" : "ltr"}
+                        />
+                    </div>
+                    {searchQuery && (
+                        <p className="text-center mt-4 text-gray-600">
+                            {filteredDoctors.length} {filteredDoctors.length === 1 ? "doctor found" : "doctors found"}
+                        </p>
+                    )}
                 </div>
+
+                {/* Doctors Grid */}
+                {filteredDoctors.length > 0 ? (
+                    <>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {currentDoctors.map((doctor) => {
+                                const name = doctor.name || "";
+                                const specialty = doctor.specialty || "";
+                                const designation = doctor.designation || "";
+                                const qualification = doctor.qualification || "";
+                                const experience = doctor.experience || "";
+                                const hospital = doctor.hospital || "";
+                                const hospitalSlug = doctor.hospitalSlug || "";
+
+                                return (
+                                    <article
+                                        key={doctor.id}
+                                        className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-panacea-primary flex flex-col"
+                                    >
+                                        <Link href={`/${locale}/doctors/${doctor.id}`} className="flex-1 flex flex-col">
+                                            <span className="aspect-square bg-gray-200 relative overflow-hidden block">
+                                                {doctor.image ? (
+                                                    <Image
+                                                        src={doctor.image}
+                                                        alt={name}
+                                                        fill
+                                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                        loading="lazy"
+                                                        unoptimized
+                                                    />
+                                                ) : (
+                                                    <span className="absolute inset-0 bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center">
+                                                        <FaUserMd className="w-20 h-20 text-panacea-primary/50" />
+                                                    </span>
+                                                )}
+                                                <span className="absolute inset-0 bg-gradient-to-t from-panacea-primary/80 via-panacea-primary/40 to-transparent flex items-end p-6">
+                                                    <span className={isRTL ? "text-right w-full block" : "text-left w-full block"}>
+                                                        <span className="text-2xl font-bold text-white block">{name}</span>
+                                                        <span className="text-white/90 block">{specialty}</span>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                            <span className={`p-6 flex-1 flex flex-col ${isRTL ? "text-right" : "text-left"}`} style={{ display: 'flex' }}>
+                                                {designation && (
+                                                    <span className="text-sm text-panacea-primary font-semibold mb-2 block">{designation}</span>
+                                                )}
+                                                {qualification && (
+                                                    <span className="text-sm text-gray-600 mb-2 block">{qualification}</span>
+                                                )}
+                                                {experience && (
+                                                    <span className="text-sm font-semibold text-panacea-accent mb-2 block">{experience}</span>
+                                                )}
+                                                {hospital && (
+                                                    <span className="flex items-center gap-2 mt-auto">
+                                                        <span className="text-sm text-gray-700">{hospital}</span>
+                                                    </span>
+                                                )}
+                                            </span>
+                                        </Link>
+                                        <div className="p-6 pt-0 space-y-3">
+                                            {hospitalSlug && (
+                                                <Link
+                                                    href={`/${locale}/hospitals/${hospitalSlug}`}
+                                                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
+                                                >
+                                                    View Hospital
+                                                </Link>
+                                            )}
+                                            <div className="flex gap-2">
+                                                <button
+                                                    onClick={() => handleWhatsApp(doctor)}
+                                                    className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                                                >
+                                                    <FaWhatsapp className="w-5 h-5" />
+                                                    WhatsApp
+                                                </button>
+                                                <button
+                                                    onClick={() => openBookingModal(doctor)}
+                                                    className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                                                >
+                                                    <FaCalendarCheck className="w-4 h-4" />
+                                                    Book Now
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                );
+                            })}
+                        </div>
+
+                        {/* Pagination */}
+                        {totalPages > 1 && (
+                            <div className={`flex items-center justify-center gap-2 mt-12 ${isRTL ? "flex-row-reverse" : ""}`}>
+                                <button
+                                    onClick={() => goToPage(currentPage - 1)}
+                                    disabled={currentPage === 1}
+                                    className={`p-2 rounded-lg border ${currentPage === 1
+                                        ? "border-gray-300 text-gray-400 cursor-not-allowed"
+                                        : "border-gray-300 text-gray-700 hover:bg-panacea-primary hover:text-white hover:border-panacea-primary"
+                                        } transition-all`}
+                                >
+                                    <FaChevronLeft className="w-4 h-4" />
+                                </button>
+
+                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                                    if (
+                                        page === 1 ||
+                                        page === totalPages ||
+                                        (page >= currentPage - 2 && page <= currentPage + 2)
+                                    ) {
+                                        return (
+                                            <button
+                                                key={page}
+                                                onClick={() => goToPage(page)}
+                                                className={`px-4 py-2 rounded-lg border transition-all ${currentPage === page
+                                                    ? "bg-panacea-primary text-white border-panacea-primary"
+                                                    : "border-gray-300 text-gray-700 hover:bg-panacea-primary hover:text-white hover:border-panacea-primary"
+                                                    }`}
+                                            >
+                                                {page}
+                                            </button>
+                                        );
+                                    } else if (
+                                        page === currentPage - 3 ||
+                                        page === currentPage + 3
+                                    ) {
+                                        return (
+                                            <span key={page} className="px-2 text-gray-500">
+                                                ...
+                                            </span>
+                                        );
+                                    }
+                                    return null;
+                                })}
+
+                                <button
+                                    onClick={() => goToPage(currentPage + 1)}
+                                    disabled={currentPage === totalPages}
+                                    className={`p-2 rounded-lg border ${currentPage === totalPages
+                                        ? "border-gray-300 text-gray-400 cursor-not-allowed"
+                                        : "border-gray-300 text-gray-700 hover:bg-panacea-primary hover:text-white hover:border-panacea-primary"
+                                        } transition-all`}
+                                >
+                                    <FaChevronRight className="w-4 h-4" />
+                                </button>
+                            </div>
+                        )}
+
+                        <div className={`text-center mt-4 text-gray-600 ${isRTL ? "text-right" : "text-left"}`}>
+                            Showing {startIndex + 1} to {Math.min(endIndex, filteredDoctors.length)} of {filteredDoctors.length} doctors
+                        </div>
+                    </>
+                ) : (
+                    <div className="text-center py-12">
+                        <FaUserMd className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                        <p className="text-xl text-gray-600">
+                            {locale === "ar" ? "لم يتم العثور على أطباء" : locale === "fr" ? "Aucun médecin trouvé" : "No doctors found"}
+                        </p>
+                        <p className="text-gray-500 mt-2">
+                            {locale === "ar" ? "حاول البحث بكلمات مختلفة" : locale === "fr" ? "Essayez de rechercher avec d'autres mots" : "Try searching with different keywords"}
+                        </p>
+                    </div>
+                )}
             </section>
+
+            {/* Booking Modal */}
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                doctor={selectedDoctor}
+                locale={locale}
+            />
         </main>
     );
 }

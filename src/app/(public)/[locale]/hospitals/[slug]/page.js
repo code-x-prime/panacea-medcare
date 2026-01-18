@@ -4,9 +4,13 @@ import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
-import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight, FaCalendarCheck } from "react-icons/fa";
 import hospitalsData from "@/data/hospitals.json";
+import doctorsData from "@/data/doctors.json";
 import QuoteForm from "@/components/QuoteForm";
+import BookingModal from "@/components/BookingModal";
+import { CONTACT_CONFIG } from "@/config/contact";
+import Link from "next/link";
 
 export default function HospitalDetailPage({ params }) {
     const { locale, slug } = params;
@@ -32,6 +36,25 @@ export default function HospitalDetailPage({ params }) {
 
     const [activeFacilityTab, setActiveFacilityTab] = useState("comfortDuringStay");
     const [galleryIndex, setGalleryIndex] = useState(0);
+    const [doctorCarouselIndex, setDoctorCarouselIndex] = useState(0);
+    const [selectedDoctor, setSelectedDoctor] = useState(null);
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+    const openBookingModal = (doctor) => {
+        setSelectedDoctor(doctor);
+        setIsBookingModalOpen(true);
+    };
+
+    const handleWhatsApp = (doctor) => {
+        const message = encodeURIComponent(
+            `Hi! I would like to book an appointment with ${doctor.name}.\n\n` +
+            `Doctor: ${doctor.name}\n` +
+            `Specialty: ${doctor.specialty || ""}\n` +
+            `Hospital: ${hospital.name}\n\n` +
+            `Please contact me for scheduling.`
+        );
+        window.open(`https://wa.me/${CONTACT_CONFIG.whatsappNumber}?text=${message}`, "_blank");
+    };
 
     // Get hospital images - returns placeholder if images don't exist
     const getHospitalImages = (hospital) => {
@@ -109,6 +132,9 @@ export default function HospitalDetailPage({ params }) {
         `Hello, please contact me regarding ${hospitalName} - https://panaceamedcare.com/${locale}/hospitals/${slug}?source=wpchat_HDSB, Thank you!`
     );
     const whatsappUrl = `https://wa.me/919958800961?text=${whatsappMessage}`;
+
+    // Get doctors for this hospital
+    const hospitalDoctors = doctorsData.filter(doctor => doctor.hospitalSlug === slug);
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
@@ -415,6 +441,131 @@ export default function HospitalDetailPage({ params }) {
                                                 </div>
                                             </div>
                                         ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Doctors Section */}
+                            {hospitalDoctors && hospitalDoctors.length > 0 && (
+                                <div>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("doctors") || "Doctors"}
+                                    </h2>
+
+                                    {/* Carousel Container */}
+                                    <div className="relative">
+                                        <div className="overflow-hidden rounded-lg">
+                                            <div
+                                                className="flex transition-transform duration-500 ease-in-out"
+                                                style={{ transform: `translateX(-${doctorCarouselIndex * 100}%)` }}
+                                            >
+                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / 3) }).map((_, slideIdx) => (
+                                                    <div key={slideIdx} className="min-w-full grid md:grid-cols-3 gap-6 px-2">
+                                                        {hospitalDoctors.slice(slideIdx * 3, slideIdx * 3 + 3).map((doctor) => (
+                                                            <article
+                                                                key={doctor.id}
+                                                                className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+                                                            >
+                                                                <Link
+                                                                    href={`/${locale}/doctors/${doctor.id}`}
+                                                                    className="flex-1 flex flex-col"
+                                                                >
+                                                                    <span className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-gray-100 block">
+                                                                        {doctor.image ? (
+                                                                            <Image
+                                                                                src={doctor.image}
+                                                                                alt={doctor.name}
+                                                                                fill
+                                                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                                loading="lazy"
+                                                                                unoptimized
+                                                                            />
+                                                                        ) : (
+                                                                            <span className="w-full h-full bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center absolute inset-0">
+                                                                                <FaUserMd className="w-16 h-16 text-panacea-primary/50" />
+                                                                            </span>
+                                                                        )}
+                                                                    </span>
+                                                                    <span className={`flex-1 block ${isRTL ? "text-right" : "text-left"}`}>
+                                                                        <span className="font-bold text-lg text-gray-900 group-hover:text-panacea-primary transition-colors block">
+                                                                            {doctor.name}
+                                                                        </span>
+                                                                        <span className="text-panacea-primary font-semibold text-sm mt-1 block">
+                                                                            {doctor.specialty}
+                                                                        </span>
+                                                                        {doctor.designation && (
+                                                                            <span className="text-gray-600 text-sm mt-2 block">
+                                                                                {doctor.designation}
+                                                                            </span>
+                                                                        )}
+                                                                        {doctor.experience && (
+                                                                            <span className="text-gray-500 text-xs mt-2 block">
+                                                                                {doctor.experience}
+                                                                            </span>
+                                                                        )}
+                                                                    </span>
+                                                                </Link>
+                                                                <div className="mt-4 pt-4 border-t border-gray-200 flex gap-2">
+                                                                    <button
+                                                                        onClick={() => handleWhatsApp(doctor)}
+                                                                        className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-1"
+                                                                    >
+                                                                        <FaWhatsapp className="w-4 h-4" />
+                                                                        <span className="text-sm">WhatsApp</span>
+                                                                    </button>
+                                                                    <button
+                                                                        onClick={() => openBookingModal(doctor)}
+                                                                        className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1"
+                                                                    >
+                                                                        <FaCalendarCheck className="w-4 h-4" />
+                                                                        <span className="text-sm">Book Now</span>
+                                                                    </button>
+                                                                </div>
+                                                            </article>
+                                                        ))}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        {/* Navigation Arrows */}
+                                        {Math.ceil(hospitalDoctors.length / 3) > 1 && (
+                                            <>
+                                                <button
+                                                    onClick={() => setDoctorCarouselIndex((prev) => Math.max(0, prev - 1))}
+                                                    disabled={doctorCarouselIndex === 0}
+                                                    className={`absolute -left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    aria-label="Previous"
+                                                >
+                                                    <FaChevronLeft className="w-4 h-4" />
+                                                </button>
+                                                <button
+                                                    onClick={() => setDoctorCarouselIndex((prev) => Math.min(Math.ceil(hospitalDoctors.length / 3) - 1, prev + 1))}
+                                                    disabled={doctorCarouselIndex === Math.ceil(hospitalDoctors.length / 3) - 1}
+                                                    className={`absolute -right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === Math.ceil(hospitalDoctors.length / 3) - 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    aria-label="Next"
+                                                >
+                                                    <FaChevronRight className="w-4 h-4" />
+                                                </button>
+                                            </>
+                                        )}
+
+                                        {/* Dots Indicator */}
+                                        {Math.ceil(hospitalDoctors.length / 3) > 1 && (
+                                            <div className="flex justify-center gap-2 mt-6">
+                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / 3) }).map((_, index) => (
+                                                    <button
+                                                        key={index}
+                                                        onClick={() => setDoctorCarouselIndex(index)}
+                                                        className={`h-2 rounded-full transition-all ${index === doctorCarouselIndex
+                                                            ? "bg-panacea-primary w-6"
+                                                            : "bg-gray-300 hover:bg-gray-400 w-2"
+                                                            }`}
+                                                        aria-label={`Go to slide ${index + 1}`}
+                                                    />
+                                                ))}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             )}
@@ -768,6 +919,15 @@ export default function HospitalDetailPage({ params }) {
                     </div>
                 </div>
             )}
+
+            {/* Booking Modal */}
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                doctor={selectedDoctor}
+                hospital={hospital.name}
+                locale={locale}
+            />
         </main>
     );
 }

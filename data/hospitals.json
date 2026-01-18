@@ -26,7 +26,9 @@
               "establishedYear": 1995,
               "specialtyType": "Multi Specialty",
               "beds": 110,
-              "accreditations": ["NABH"],
+              "accreditations": [
+                "NABH"
+              ],
               "images": [
                 "/hospitals/marengo-asia-hospital-gurgaon.jpg",
                 "/hospitals/all/marengo-asia-hospital-gurgaon-2.png",
@@ -57,18 +59,6 @@
                 {
                   "name": "IVF & Infertility",
                   "doctors": 5
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Hemant Sharma",
-                  "specialization": "Orthopaedic & Joint Replacement Surgeon",
-                  "experience": 29
-                },
-                {
-                  "name": "Dr Praveen Gupta",
-                  "specialization": "Neurologist",
-                  "experience": 27
                 }
               ],
               "address": {
@@ -138,7 +128,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -224,7 +217,10 @@
               "establishedYear": 2013,
               "specialtyType": "Multi Specialty",
               "beds": 350,
-              "accreditations": ["NABH", "NABL"],
+              "accreditations": [
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Fortis Hospital Manesar is an accredited multi-speciality tertiary care hospital and India's first hospital to collaborate with Japanese companies for the betterment of health equipment.",
                 "shortAr": "مستشفى فورتيس مانيسار هو مستشفى رعاية ثالثية متعدد التخصصات معتمد وأول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية.",
@@ -266,13 +262,6 @@
                 {
                   "name": "Oncology",
                   "doctors": 4
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Vinay Samuel Gaikwad",
-                  "specialization": "Surgical Oncologist",
-                  "experience": 24
                 }
               ],
               "address": {
@@ -320,7 +309,10 @@
                   "Insurance accepted",
                   "Payment plans available"
                 ],
-                "food": ["International cuisine", "Vegetarian options"],
+                "food": [
+                  "International cuisine",
+                  "Vegetarian options"
+                ],
                 "treatmentRelated": [
                   "OPD",
                   "24/7 Emergency",
@@ -330,8 +322,14 @@
                   "Curative Secondary Care",
                   "Tertiary Care"
                 ],
-                "language": ["English", "Hindi"],
-                "transportation": ["Airport pickup/drop", "Taxi on call"]
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup/drop",
+                  "Taxi on call"
+                ]
               },
               "infrastructure": {
                 "totalArea": "5 lac sq. ft",
@@ -381,7 +379,11 @@
               "establishedYear": 2009,
               "specialtyType": "Multi Super Specialty",
               "beds": 1250,
-              "accreditations": ["JCI", "NABH", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Medanta Hospital Gurgaon is one of India's largest multi-super specialty hospitals with world-class infrastructure.",
                 "shortAr": "مستشفى ميدانتا جورجاون هو واحد من أكبر المستشفيات متعددة التخصصات الفائقة في الهند مع بنية تحتية عالمية المستوى.",
@@ -407,13 +409,6 @@
                 {
                   "name": "Neurology & Neurosurgery",
                   "doctors": 15
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Naresh Trehan",
-                  "specialization": "Cardiac Surgeon",
-                  "experience": 45
                 }
               ],
               "address": {
@@ -467,7 +462,12 @@
                   "Pharmacy",
                   "Blood Bank"
                 ],
-                "language": ["English", "Hindi", "Arabic", "French"],
+                "language": [
+                  "English",
+                  "Hindi",
+                  "Arabic",
+                  "French"
+                ],
                 "transportation": [
                   "Airport pickup/drop",
                   "Local transport assistance",
@@ -514,7 +514,9 @@
               },
               "specialtyType": "Maternity & IVF",
               "beds": 50,
-              "accreditations": ["NABH"],
+              "accreditations": [
+                "NABH"
+              ],
               "about": {
                 "short": "Neelkanth Maternity & IVF Hospital is a specialized hospital focusing on maternity care, IVF, and reproductive health.",
                 "shortAr": "مستشفى نيلكانث للولادة والتلقيح الاصطناعي هو مستشفى متخصص يركز على رعاية الأمومة، والتلقيح الاصطناعي، والصحة الإنجابية.",
@@ -555,14 +557,22 @@
                   "Insurance accepted",
                   "Payment plans available"
                 ],
-                "food": ["Vegetarian options", "Custom meal plans"],
+                "food": [
+                  "Vegetarian options",
+                  "Custom meal plans"
+                ],
                 "treatmentRelated": [
                   "24/7 Emergency",
                   "ICU",
                   "Operation Theatres"
                 ],
-                "language": ["English", "Hindi"],
-                "transportation": ["Airport pickup/drop"]
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup/drop"
+                ]
               },
               "infrastructure": {
                 "totalArea": "Specialized maternity facility",
@@ -599,7 +609,10 @@
               "establishedYear": 1995,
               "specialtyType": "Multi Specialty",
               "beds": 710,
-              "accreditations": ["JCI", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABL"
+              ],
               "images": [
                 "/hospitals/indraprastha-apollo-hospital-new-delhi.jpg",
                 "/hospitals/all/indraprastha-apollo-hospital-new-delhi-1.png",
@@ -638,20 +651,6 @@
                 {
                   "name": "Bone Marrow Transplant",
                   "doctors": 5
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Rakesh Mahajan",
-                  "specialization": "Vascular Surgeon",
-                  "experience": 40
-                },
-                {
-                  "name": "Dr P. L. Dhingra",
-                  "specialization": "ENT Surgeon",
-                  "experience": 51,
-                  "rating": 5,
-                  "totalRatings": 13
                 }
               ],
               "address": {
@@ -721,7 +720,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -878,7 +880,10 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 380,
-              "accreditations": ["NABH", "NABL"],
+              "accreditations": [
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Manipal Hospital Dwarka is a multi-super speciality tertiary care facility accredited by NABH and NABL, part of the renowned Manipal Education and Medical Group established in 1953.",
                 "shortAr": "مستشفى مانيبال دواركا هو منشأة رعاية ثالثية متعددة التخصصات الفائقة معتمدة من NABH وNABL، جزء من مجموعة مانيبال التعليمية والطبية الشهيرة التي تأسست عام 1953.",
@@ -982,15 +987,6 @@
                   "doctors": 4
                 }
               ],
-              "topDoctors": [
-                {
-                  "name": "Dr Y K Mishraa",
-                  "specialization": "Cardiac Surgeon",
-                  "experience": 44,
-                  "rating": 4.9,
-                  "totalRatings": 271
-                }
-              ],
               "address": {
                 "line1": "Manipal Hospital, Sector 6 Dwarka",
                 "city": "New Delhi",
@@ -1060,7 +1056,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -1174,7 +1173,10 @@
               },
               "specialtyType": "Super Specialty",
               "beds": 425,
-              "accreditations": ["NABH", "NABL"],
+              "accreditations": [
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Asian Institute of Medical Sciences is a super specialty tertiary care hospital providing state-of-the-art healthcare.",
                 "shortAr": "معهد آسيان للعلوم الطبية هو مستشفى رعاية ثالثية فائق التخصص يقدم رعاية صحية حديثة.",
@@ -1208,29 +1210,6 @@
                 {
                   "name": "Urology",
                   "doctors": 3
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr. N.K. Pandey",
-                  "specialization": "Gastroenterologist & Hepatologist",
-                  "experience": 38,
-                  "rating": 4.9,
-                  "totalRatings": 450
-                },
-                {
-                  "name": "Dr. Rishi Gupta",
-                  "specialization": "Cardiologist",
-                  "experience": 22,
-                  "rating": 4.8,
-                  "totalRatings": 320
-                },
-                {
-                  "name": "Dr. Amit Chaudhary",
-                  "specialization": "Spine Surgeon",
-                  "experience": 18,
-                  "rating": 4.7,
-                  "totalRatings": 150
                 }
               ],
               "address": {
@@ -1282,7 +1261,13 @@
                   "Pharmacy",
                   "Blood Bank"
                 ],
-                "language": ["English", "Hindi", "Arabic", "French", "Russian"],
+                "language": [
+                  "English",
+                  "Hindi",
+                  "Arabic",
+                  "French",
+                  "Russian"
+                ],
                 "transportation": [
                   "Airport pickup/drop",
                   "Ambulance services",
@@ -1327,7 +1312,11 @@
               },
               "specialtyType": "Multi Super Specialty",
               "beds": 10000,
-              "accreditations": ["JCI", "NABH", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Apollo Hospitals Group is India's largest healthcare network with hospitals across all major cities.",
                 "shortAr": "مجموعة مستشفيات أبولو هي أكبر شبكة رعاية صحية في الهند مع مستشفيات في جميع المدن الكبرى.",
@@ -1400,7 +1389,13 @@
                   "Pharmacy",
                   "Blood Bank"
                 ],
-                "language": ["English", "Hindi", "Arabic", "French", "Spanish"],
+                "language": [
+                  "English",
+                  "Hindi",
+                  "Arabic",
+                  "French",
+                  "Spanish"
+                ],
                 "transportation": [
                   "Airport pickup/drop",
                   "Local transport assistance",
@@ -1445,7 +1440,11 @@
               "establishedYear": 2005,
               "specialtyType": "Super Specialty",
               "beds": 539,
-              "accreditations": ["JCI", "NABH", "ISO"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "ISO"
+              ],
               "about": {
                 "short": "Max Super Speciality Hospital, Saket, is a top healthcare facility in India, renowned for its cutting-edge medical technology and patient-centred treatment. Accredited by NABH, ISO, and JCI.",
                 "shortAr": "مستشفى ماكس للتخصصات الفائقة، ساكيت، هو منشأة رعاية صحية رائدة في الهند، مشهور بتقنيته الطبية المتطورة والعلاج المرتكز على المريض. معتمد من NABH و ISO و JCI.",
@@ -1487,15 +1486,6 @@
                 {
                   "name": "Organ Transplants",
                   "doctors": 4
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Subhash Gupta",
-                  "specialization": "Liver Transplant Surgeon",
-                  "experience": 38,
-                  "rating": 4.9,
-                  "totalRatings": 32
                 }
               ],
               "address": {
@@ -1564,7 +1554,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -1665,7 +1658,11 @@
               "establishedYear": 1959,
               "specialtyType": "Super Specialty",
               "beds": 650,
-              "accreditations": ["JCI", "NABH", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "BLK-Max Super Speciality Hospital, established in 1959 by Dr. B. L. Kapur and inaugurated by the then-Prime Minister of India, Pt. Jawaharlal Nehru is one of the biggest and most prestigious private tertiary care hospitals in Delhi NCR.",
                 "shortAr": "مستشفى BLK-Max للتخصصات الفائقة، الذي تأسس في عام 1959 على يد الدكتور بي. إل. كابور وافتتحه رئيس الوزراء الهندي آنذاك، السيد جواهر لال نهرو، هو واحد من أكبر وأشرف مستشفيات الرعاية الثلاثية الخاصة في دلهي NCR.",
@@ -1727,13 +1724,6 @@
                 {
                   "name": "Ophthalmology",
                   "doctors": 5
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr. B. L. Kapur",
-                  "specialization": "Founder",
-                  "experience": 65
                 }
               ],
               "address": {
@@ -1800,7 +1790,10 @@
                   "Pharmacy",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local transportation booking",
@@ -1978,7 +1971,10 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 500,
-              "accreditations": ["JCI", "NABH"],
+              "accreditations": [
+                "JCI",
+                "NABH"
+              ],
               "about": {
                 "short": "Apollo Hospitals, Navi Mumbai, is one of the most advanced multi-speciality tertiary care hospitals in Maharashtra. It is the 66th hospital of the Apollo Group, accredited by JCI and NABH.",
                 "shortAr": "مستشفيات أبولو، نافي مومباي، هي واحدة من أكثر المستشفيات المتقدمة متعددة التخصصات للرعاية الثلاثية في ماهاراشترا. إنه المستشفى السادس والستون لمجموعة أبولو، معتمد من JCI وNABH.",
@@ -2224,7 +2220,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -2296,7 +2295,9 @@
               },
               "specialtyType": "Stem Cell & Regenerative Medicine",
               "beds": 100,
-              "accreditations": ["NABH"],
+              "accreditations": [
+                "NABH"
+              ],
               "about": {
                 "short": "Stem Rx Hospital is a specialized facility focusing on stem cell therapy and regenerative medicine.",
                 "shortAr": "مستشفى ستيم آر إكس هو منشأة متخصصة تركز على علاج الخلايا الجذعية والطب التجديدي.",
@@ -2331,15 +2332,24 @@
                   "Family accommodation",
                   "Laundry"
                 ],
-                "moneyMatters": ["Insurance accepted"],
-                "food": ["Vegetarian options"],
+                "moneyMatters": [
+                  "Insurance accepted"
+                ],
+                "food": [
+                  "Vegetarian options"
+                ],
                 "treatmentRelated": [
                   "24/7 Emergency",
                   "ICU",
                   "Operation Theatres"
                 ],
-                "language": ["English", "Hindi"],
-                "transportation": ["Airport pickup/drop"]
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup/drop"
+                ]
               },
               "infrastructure": {
                 "beds": 100,
@@ -2369,7 +2379,10 @@
               "establishedYear": 2002,
               "specialtyType": "Multi Specialty",
               "beds": 400,
-              "accreditations": ["JCI", "NABH"],
+              "accreditations": [
+                "JCI",
+                "NABH"
+              ],
               "about": {
                 "short": "Fortis Hospital Mulund is a multi-speciality quaternary care hospital and the only hospital in Mumbai to have been JCI-accredited seven times in a row.",
                 "shortAr": "مستشفى فورتيس مولوند هو مستشفى رعاية رباعية متعدد التخصصات والمستشفى الوحيد في مومباي الذي حصل على اعتماد JCI سبع مرات متتالية.",
@@ -2505,15 +2518,6 @@
                   "doctors": 8
                 }
               ],
-              "topDoctors": [
-                {
-                  "name": "Dr Rajiv Karnik",
-                  "specialization": "Interventional Cardiologist",
-                  "experience": 44,
-                  "rating": 4.9,
-                  "totalRatings": 12
-                }
-              ],
               "address": {
                 "line1": "Mulund - Goregaon Link Rd, Nahur West, Industrial Area, Bhandup West",
                 "city": "Mumbai",
@@ -2584,7 +2588,9 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Translation services"],
+                "language": [
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -2795,7 +2801,11 @@
               "establishedYear": 1988,
               "specialtyType": "Super Specialty",
               "beds": 550,
-              "accreditations": ["JCI", "NABH", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Apollo Hospitals, Jubilee Hills, established in 1988, is the flagship facility of Asia's pioneering Apollo Health City. Internationally accredited by JCI and nationally by NABH and NABL, it is a leader in clinical excellence, innovation, and patient-centric care.",
                 "shortAr": "مستشفيات أبولو، جوبيلي هيلز، التي تأسست في عام 1988، هي المنشأة الرئيسية لمدينة أبولو الصحية الرائدة في آسيا. معتمدة دوليًا من JCI ومحليًا من NABH وNABL، وهي رائدة في التميز السريري والابتكار والرعاية المرتكزة على المريض.",
@@ -2853,13 +2863,6 @@
                 {
                   "name": "IVF",
                   "doctors": 4
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Vijay Dikshit",
-                  "specialization": "Cardiac Surgeon",
-                  "experience": 53
                 }
               ],
               "address": {
@@ -2930,7 +2933,10 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter", "Translation services"],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Local tourism options",
@@ -3088,7 +3094,9 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 150,
-              "accreditations": ["NABH"],
+              "accreditations": [
+                "NABH"
+              ],
               "about": {
                 "short": "TX Hospital is a modern multi-specialty hospital providing quality healthcare services in Hyderabad.",
                 "shortAr": "مستشفى TX هو مستشفى حديث متعدد التخصصات يقدم خدمات رعاية صحية عالية الجودة في حيدر أباد.",
@@ -3127,21 +3135,32 @@
                   "Family accommodation",
                   "Laundry"
                 ],
-                "moneyMatters": ["Insurance accepted"],
-                "food": ["Vegetarian options"],
+                "moneyMatters": [
+                  "Insurance accepted"
+                ],
+                "food": [
+                  "Vegetarian options"
+                ],
                 "treatmentRelated": [
                   "24/7 Emergency",
                   "ICU",
                   "Operation Theatres"
                 ],
-                "language": ["English", "Hindi"],
-                "transportation": ["Airport pickup/drop"]
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup/drop"
+                ]
               },
               "infrastructure": {
                 "beds": 150,
                 "icuBeds": 15,
                 "operationTheatres": 4,
-                "technologies": ["Modern diagnostic equipment"]
+                "technologies": [
+                  "Modern diagnostic equipment"
+                ]
               },
               "images": [
                 "/hospitals/tx-hospital-hyderabad.jpg",
@@ -3167,7 +3186,11 @@
               "establishedYear": 1983,
               "specialtyType": "Multi Specialty",
               "beds": 560,
-              "accreditations": ["JCI", "NABH", "NABL"],
+              "accreditations": [
+                "JCI",
+                "NABH",
+                "NABL"
+              ],
               "about": {
                 "short": "Apollo Hospitals, Greams Road, Chennai, founded in 1983 by Dr. Prathap C. Reddy, is the Apollo Group's flagship hospital and a pioneer in corporate healthcare in India. JCI, NABH, and NABL-accredited, it is Asia's premier medical destination.",
                 "shortAr": "مستشفيات أبولو، طريق جريمز، تشيناي، التي تأسست في عام 1983 على يد الدكتور براثاب سي ريدي، هي المستشفى الرئيسي لمجموعة أبولو ورائد في الرعاية الصحية المؤسسية في الهند. معتمد من JCI وNABH وNABL، وهو الوجهة الطبية الرائدة في آسيا.",
@@ -3287,7 +3310,9 @@
                   "Document legalisation",
                   "Post operative followup"
                 ],
-                "language": ["Interpreter"],
+                "language": [
+                  "Interpreter"
+                ],
                 "transportation": [
                   "Airport pickup",
                   "Car Hire",
@@ -3448,7 +3473,9 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 1500,
-              "accreditations": ["JCI"],
+              "accreditations": [
+                "JCI"
+              ],
               "about": {
                 "short": "Memorial Hospitals Group is one of Turkey's largest healthcare networks and a pioneer in robotic surgery and IVF.",
                 "shortAr": "مجموعة مستشفيات ميموريال هي واحدة من أكبر شبكات الرعاية الصحية في تركيا ورائدة في الجراحة الروبوتية والتلقيح الاصطناعي.",
@@ -3470,15 +3497,6 @@
                 {
                   "name": "Oncology",
                   "doctors": 10
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Prof. Semra Kahraman",
-                  "specialization": "IVF Specialist",
-                  "experience": 33,
-                  "rating": 4.7,
-                  "totalRatings": 111
                 }
               ],
               "address": {
@@ -3516,7 +3534,9 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 580,
-              "accreditations": ["JCI"],
+              "accreditations": [
+                "JCI"
+              ],
               "about": {
                 "short": "Bumrungrad International Hospital is Southeast Asia's leading private hospital serving patients from 190+ countries.",
                 "shortAr": "مستشفى بومرونغراد الدولي هو المستشفى الخاص الرائد في جنوب شرق آسيا الذي يخدم المرضى من أكثر من 190 دولة.",
@@ -3538,13 +3558,6 @@
                 {
                   "name": "Oncology",
                   "doctors": 13
-                }
-              ],
-              "topDoctors": [
-                {
-                  "name": "Dr Kittichai Luengtaviboon",
-                  "specialization": "Cardiac Surgeon",
-                  "experience": 45
                 }
               ],
               "address": {
@@ -3582,7 +3595,9 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 1700,
-              "accreditations": ["JCI"],
+              "accreditations": [
+                "JCI"
+              ],
               "about": {
                 "short": "Sheeba Hospital is one of Israel's largest and most advanced medical centers.",
                 "shortAr": "مستشفى شيبة هو واحد من أكبر المراكز الطبية وأكثرها تقدمًا في إسرائيل.",
@@ -3607,7 +3622,9 @@
                 "city": "Tel Aviv",
                 "country": "Israel"
               },
-              "images": ["/hospitals/sheeba-hospital-israel.jpg"]
+              "images": [
+                "/hospitals/sheeba-hospital-israel.jpg"
+              ]
             }
           ]
         }
@@ -3632,7 +3649,9 @@
               },
               "specialtyType": "Multi Specialty",
               "beds": 400,
-              "accreditations": ["NABH"],
+              "accreditations": [
+                "NABH"
+              ],
               "about": {
                 "short": "Nepal Mediciti is a leading private hospital in Nepal providing world-class healthcare services.",
                 "shortAr": "نيبال ميديسيتي هو مستشفى خاص رائد في نيبال يقدم خدمات رعاية صحية عالمية المستوى.",

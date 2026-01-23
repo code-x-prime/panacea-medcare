@@ -7806,6 +7806,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sandeep Budhiraja.jpeg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Sandeep Budhiraja is the Group Chairman of Internal Medicine and Group Medical Director at Max Healthcare."
   },
@@ -7844,6 +7845,7 @@
     "experience": "41+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. S.K.S. Marya.png",
     "specialties": ["Orthopaedics", "Joint Replacement", "Robotic Surgery"],
     "bio": "Dr. S.K.S. Marya is the Group Chairman and Chief Advisor to Max Healthcare Institute Limited with 41+ years of experience."
   },
@@ -7855,6 +7857,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ambrish Mithal.jpg",
     "specialties": ["Endocrinology", "Diabetes"],
     "bio": "Dr. Ambrish Mithal is the Group Chairman of Endocrinology & Diabetology with 40+ years of experience."
   },
@@ -7866,6 +7869,7 @@
     "experience": "35+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Balbir Singh.jpg",
     "specialties": [
       "Cardiology",
       "Interventional Cardiology",
@@ -7881,6 +7885,7 @@
     "experience": "47+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anupam Bhargava.jpg",
     "specialties": ["Urology"],
     "bio": "Dr. Anupam Bhargava is the Chairman of Urology with 47+ years of experience."
   },
@@ -7891,6 +7896,7 @@
     "designation": "Chairman - Robotic Joint Replacement",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sujoy Bhattacharjee.png",
     "specialties": ["Orthopaedics", "Joint Replacement", "Robotic Surgery"],
     "bio": "Dr. Sujoy Bhattacharjee is the Chairman of Robotic Joint Replacement at Max Hospital Saket."
   },
@@ -7902,6 +7908,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Harit Chaturvedi.jpg",
     "specialties": [
       "Surgical Oncology",
       "Cancer Care",
@@ -7918,6 +7925,7 @@
     "experience": "31+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sunil Choudhary.jpg",
     "specialties": ["Aesthetic Surgery", "Reconstructive Surgery"],
     "bio": "Dr. Sunil Choudhary is the Chairman and Chief of Plastic Surgery with 31+ years of experience."
   },
@@ -7929,6 +7937,7 @@
     "experience": "37+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Prof (Dr.) Subhash Gupta.jpg",
     "specialties": ["Liver Transplant", "Biliary Sciences", "Robotic Surgery"],
     "bio": "Prof (Dr.) Subhash Gupta is the Chairman of Centre for Liver & Biliary Sciences with 37+ years of experience."
   },
@@ -7940,6 +7949,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anurag Krishna.jpg",
     "specialties": ["Paediatric Surgery", "Paediatric Urology"],
     "bio": "Dr. Anurag Krishna is the Chairman of Paediatrics & Paediatric Surgery with 40+ years of experience."
   },
@@ -7951,6 +7961,7 @@
     "experience": "27+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Viveka Kumar.jpg",
     "specialties": [
       "Cardiology",
       "Interventional Cardiology",
@@ -7966,6 +7977,7 @@
     "experience": "39+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anant Kumar.jpg",
     "specialties": ["Urology", "Kidney Transplant", "Robotic Surgery"],
     "bio": "Dr. Anant Kumar is the Chairman of Urology, Renal Transplant and Robotics with 39+ years of experience."
   },
@@ -7977,6 +7989,7 @@
     "experience": "27+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ramneek Mahajan.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement", "Robotic Surgery"],
     "bio": "Dr. Ramneek Mahajan is the Chairman of Orthopaedics, Joint Replacement & Chief Robotic Joint Replacement with 27+ years of experience."
   },
@@ -7988,6 +8001,7 @@
     "experience": "34+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rajneesh Malhotra.jpg",
     "specialties": ["Cardiac Surgery", "CTVS", "Robotic Surgery"],
     "bio": "Dr. Rajneesh Malhotra is the Chairman & Head of CTVS with 34+ years of experience."
   },
@@ -7999,6 +8013,7 @@
     "experience": "47+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ganesh Kumar Mani.jpg",
     "specialties": ["Cardiac Surgery", "CTVS"],
     "bio": "Dr. Ganesh Kumar Mani is the Chairman of Cardiac Sciences with 47+ years of experience."
   },
@@ -8010,6 +8025,7 @@
     "experience": "31+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. (Col) Joy Dev Mukherji.jpg",
     "specialties": ["Neurology", "Neurosciences"],
     "bio": "Dr. (Col) Joy Dev Mukherji is the Chairman and Head of Neurology with 31+ years of experience."
   },
@@ -8021,6 +8037,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sanjay Sachdeva.jpg",
     "specialties": ["ENT"],
     "bio": "Dr. Sanjay Sachdeva is the Chairman of ENT with 40+ years of experience."
   },
@@ -8032,6 +8049,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Prof. (Dr.) Atul Sharma.jpg",
     "specialties": ["Medical Oncology", "Cancer Care"],
     "bio": "Prof. (Dr.) Atul Sharma is the Chairman of Medical Oncology with 28+ years of experience."
   },
@@ -8043,6 +8061,7 @@
     "experience": "31+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sameer Shrivastava.png",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Sameer Shrivastava is the Chairman of Non Invasive Cardiology with 31+ years of experience."
   },
@@ -8054,6 +8073,7 @@
     "experience": "29+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Prof. (Col.) Dr. Bipin Walia.jpg",
     "specialties": ["Neurosurgery", "Spine Surgery", "Neurosciences"],
     "bio": "Prof. (Col.) Dr. Bipin Walia is the Chairman & Head of Neurosurgery & Neurospine with 29+ years of experience."
   },
@@ -8065,6 +8085,7 @@
     "experience": "26+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Puneet Agarwal.jpg",
     "specialties": ["Neurology", "Neurosciences"],
     "bio": "Dr. Puneet Agarwal is the Vice Chairman of Neurology with 26+ years of experience."
   },
@@ -8076,6 +8097,7 @@
     "experience": "47+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Pramod Kumar Julka.jpg",
     "specialties": ["Medical Oncology", "Cancer Care", "Paediatric Oncology"],
     "bio": "Dr. Pramod Kumar Julka is the Vice Chairman of Medical Oncology with 47+ years of experience."
   },
@@ -8087,6 +8109,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vivek Nangia.jpg",
     "specialties": ["Pulmonology"],
     "bio": "Dr. Vivek Nangia is the Vice Chairman & Head of Pulmonology with 30+ years of experience."
   },
@@ -8098,6 +8121,7 @@
     "experience": "22+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rajashekar Reddi.jpg",
     "specialties": ["Neurology", "Neurosciences"],
     "bio": "Dr. Rajashekar Reddi is the Vice Chairman of Neurology with 22+ years of experience."
   },
@@ -8109,6 +8133,7 @@
     "experience": "29+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sanjiv Saigal.jpg",
     "specialties": ["Hepatology", "Gastroenterology", "Liver Transplant"],
     "bio": "Dr. Sanjiv Saigal is the Vice Chairman & Head of Hepatology & Liver Transplant Medicine with 29+ years of experience."
   },
@@ -8120,6 +8145,7 @@
     "experience": "32+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. (Prof) Daljit Singh.jpg",
     "specialties": ["Neurosurgery", "Neurosciences"],
     "bio": "Dr. (Prof) Daljit Singh is the Vice Chairman & HOD of Neurosurgery with 32+ years of experience."
   },
@@ -8131,6 +8157,7 @@
     "experience": "17+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vikas Singla.jpg",
     "specialties": ["Gastroenterology", "Hepatology", "Endoscopy"],
     "bio": "Dr. Vikas Singla is the Principal Director of Gastroenterology with 17+ years of experience."
   },
@@ -8142,6 +8169,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rajiv Agarwal.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Rajiv Agarwal is the Principal Director & Unit Head of Cardiology with 36+ years of experience."
   },
@@ -8153,6 +8181,7 @@
     "experience": "27+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Bharat Aggarwal.jpg",
     "specialties": ["Radiology"],
     "bio": "Dr. Bharat Aggarwal is the Principal Director of Radiology Services with 27+ years of experience."
   },
@@ -8164,6 +8193,7 @@
     "experience": "15+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rayaz Ahmed.jpg",
     "specialties": ["Haematology", "Bone Marrow Transplant", "Oncology"],
     "bio": "Dr. Rayaz Ahmed is the Principal Director of Haematology and Bone Marrow Transplant with 15+ years of experience."
   },
@@ -8175,6 +8205,7 @@
     "experience": "21+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Devavrat Arya.jpg",
     "specialties": ["Medical Oncology", "Cancer Care", "Molecular Oncology"],
     "bio": "Dr. Devavrat Arya is the Principal Director of Medical Oncology with 21+ years of experience."
   },
@@ -8186,6 +8217,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. H.N. Bajaj.png",
     "specialties": ["Orthopaedics", "Spine Surgery"],
     "bio": "Dr. H.N. Bajaj is the Principal Director of Orthopaedics & Head of Spine Surgery with 40+ years of experience."
   },
@@ -8197,6 +8229,7 @@
     "experience": "26+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Alka Bhasin.png",
     "specialties": ["Nephrology"],
     "bio": "Dr. Alka Bhasin is the Principal Director of Nephrology & Renal Transplant Medicine with 26+ years of experience."
   },
@@ -8208,6 +8241,7 @@
     "experience": "32+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Kulbhushan Singh Dagar.jpg",
     "specialties": ["Paediatric Cardiac Surgery", "Cardiac Sciences"],
     "bio": "Dr. Kulbhushan Singh Dagar is the Principal Director & Chief Surgeon of Neonatal & Congenital Heart Surgery with 32+ years of experience."
   },
@@ -8219,6 +8253,7 @@
     "experience": "41+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Arun Dewan.jpg",
     "specialties": ["Critical Care", "Internal Medicine"],
     "bio": "Dr. Arun Dewan is the Principal Director of Critical Care & Internal Medicine with 41+ years of experience."
   },
@@ -8230,6 +8265,7 @@
     "experience": "39+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Pankaj Dougall.jpg",
     "specialties": ["Nuclear Medicine"],
     "bio": "Dr. Pankaj Dougall is the Principal Director & Head of Nuclear Medicine with 39+ years of experience."
   },
@@ -8241,6 +8277,7 @@
     "experience": "24+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Charu Garg.jpg",
     "specialties": ["Radiation Oncology", "Cancer Care"],
     "bio": "Dr. Charu Garg is the Principal Director of Radiation Oncology with 24+ years of experience."
   },
@@ -8252,6 +8289,7 @@
     "experience": "31+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vikas Gupta.png",
     "specialties": ["Orthopaedics", "Sports Injury"],
     "bio": "Dr. Vikas Gupta is the Principal Director of Musculoskeletal Sciences & Orthopaedics with 31+ years of experience."
   },
@@ -8263,6 +8301,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ripen Gupta.jpg",
     "specialties": [
       "Cardiology",
       "Interventional Cardiology",
@@ -8278,6 +8317,7 @@
     "experience": "45+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Prof. (Dr.) V.K. Jain.jpg",
     "specialties": ["Neurosurgery", "Spine Surgery", "Neurosciences"],
     "bio": "Prof. (Dr.) V.K. Jain is the Principal Director of Neurosurgery at Max Hospital Delhi & NCR with 45+ years of experience."
   },
@@ -8289,6 +8329,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anuradha Kapur.jpg",
     "specialties": ["Obstetrics", "Gynaecology", "Robotic Surgery"],
     "bio": "Dr. Anuradha Kapur is the Principal Director of Obstetrics & Gynaecology with 36+ years of experience."
   },
@@ -8300,6 +8341,7 @@
     "experience": "45+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Manju Khemani.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Manju Khemani is the Principal Director of Obstetrics & Gynaecology with 45+ years of experience."
   },
@@ -8310,6 +8352,7 @@
     "designation": "Principal Director - Obstetrics & Gynaecology",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Neena Singh Kumar.png",
     "specialties": ["Obstetrics", "Gynaecology", "Robotic Surgery"],
     "bio": "Dr. Neena Singh Kumar is the Principal Director of Obstetrics & Gynaecology at Max Hospital Saket."
   },
@@ -8321,6 +8364,7 @@
     "experience": "41+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ajay Lall.jpg",
     "specialties": ["Pulmonology"],
     "bio": "Dr. Ajay Lall is the Principal Director of Pulmonology with 41+ years of experience."
   },
@@ -8332,6 +8376,7 @@
     "experience": "24+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Kaushal Madan.jpg",
     "specialties": ["Hepatology", "Gastroenterology", "Liver Transplant"],
     "bio": "Dr. Kaushal Madan is the Principal Director & Head of Clinical Hepatology with 24+ years of experience."
   },
@@ -8343,6 +8388,7 @@
     "experience": "43+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Bela Makhija.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Bela Makhija is the Principal Director of Obstetrics & Gynaecology with 43+ years of experience."
   },
@@ -8354,6 +8400,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sameer Malhotra.jpg",
     "specialties": ["Mental Health", "Behavioural Sciences"],
     "bio": "Dr. Sameer Malhotra is the Principal Director of Mental Health and Behavioural Sciences with 28+ years of experience."
   },
@@ -8364,6 +8411,7 @@
     "designation": "Principal Director - Obstetrics & Gynaecology",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sonia Naik.jpg",
     "specialties": ["Obstetrics", "Gynaecology", "Robotic Surgery"],
     "bio": "Dr. Sonia Naik is the Principal Director of Obstetrics & Gynaecology at Max Hospital Saket."
   },
@@ -8375,6 +8423,7 @@
     "experience": "25+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rohit Nayyar.jpg",
     "specialties": ["Surgical Oncology", "Cancer Care", "Breast Cancer"],
     "bio": "Dr. Rohit Nayyar is the Principal Director of Surgical Oncology with 25+ years of experience."
   },
@@ -8386,6 +8435,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Atul N.C. Peters.png",
     "specialties": ["Bariatric Surgery", "General Surgery", "Robotic Surgery"],
     "bio": "Dr. Atul N.C. Peters is the Principal Director of Bariatric, Minimal Access & General Surgery with 28+ years of experience."
   },
@@ -8397,6 +8447,7 @@
     "experience": "42+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Kumud Rai.jpg",
     "specialties": ["Vascular Surgery"],
     "bio": "Dr. Kumud Rai is the Principal Director of Vascular Surgery with 42+ years of experience."
   },
@@ -8408,6 +8459,7 @@
     "experience": "38+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vivek Raj.jpg",
     "specialties": ["Gastroenterology", "Hepatology"],
     "bio": "Dr. Vivek Raj is the Principal Director & HOD of Gastroenterology & Hepatology with 38+ years of experience."
   },
@@ -8419,6 +8471,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rajeev Rathi.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Rajeev Rathi is the Principal Director & Head of Transradial Interventional Programme with 28+ years of experience."
   },
@@ -8430,6 +8483,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anita Sethi.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Anita Sethi is the Principal Director & HOD of Cataract, Lasik and Oculoplasty with 36+ years of experience."
   },
@@ -8441,6 +8495,7 @@
     "experience": "43+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anita K. Sharma.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Anita K. Sharma is the Principal Director of Obstetrics And Gynaecology with 43+ years of experience."
   },
@@ -8452,6 +8507,7 @@
     "experience": "33+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. (Prof) P. P. Singh.jpg",
     "specialties": ["Urology", "Kidney Transplant", "Robotic Surgery"],
     "bio": "Dr. (Prof) P. P. Singh is the Principal Director & HOD of Urology, Kidney Transplant & Robotic Urology with 33+ years of experience."
   },
@@ -8463,6 +8519,7 @@
     "experience": "29+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ashish Vashistha.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8478,6 +8535,7 @@
     "experience": "38+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anil Sharma.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8493,6 +8551,7 @@
     "experience": "42+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rajesh Khullar.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8508,6 +8567,7 @@
     "experience": "31+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vandana Soni.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8523,6 +8583,7 @@
     "experience": "17+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Nikhil Agrawal.jpg",
     "specialties": ["Surgical Oncology", "Cancer Care", "Robotic Surgery"],
     "bio": "Dr. Nikhil Agrawal is the Senior Director of Surgical Oncology with 17+ years of experience."
   },
@@ -8534,6 +8595,7 @@
     "experience": "34+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anjani Kumar Agrawal.jpg",
     "specialties": ["Urology", "Andrology"],
     "bio": "Dr. Anjani Kumar Agrawal is the Senior Director of Andrology with 34+ years of experience."
   },
@@ -8545,6 +8607,7 @@
     "experience": "14+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Asit Arora.jpg",
     "specialties": ["Surgical Oncology", "Cancer Care", "Robotic Surgery"],
     "bio": "Dr. Asit Arora is the Senior Director of Surgical Oncology with 14+ years of experience."
   },
@@ -8556,6 +8619,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Manish Baijal.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8571,6 +8635,7 @@
     "experience": "17+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sandeep Batra.jpg",
     "specialties": ["Medical Oncology", "Cancer Care"],
     "bio": "Dr. Sandeep Batra is the Senior Director of Medical Oncology with 17+ years of experience."
   },
@@ -8582,6 +8647,7 @@
     "experience": "47+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vijay Kumar Chopra.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Vijay Kumar Chopra is the Senior Director of Cardiology with 47+ years of experience."
   },
@@ -8593,6 +8659,7 @@
     "experience": "35+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Arvind M Das.png",
     "specialties": [
       "Cardiology",
       "Interventional Cardiology",
@@ -8608,6 +8675,7 @@
     "experience": "45+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Alka Gujral.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Alka Gujral is the Senior Director of Obstetrics & Gynaecology with 45+ years of experience."
   },
@@ -8619,6 +8687,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Harshavardhan Hegde.jpg",
     "specialties": ["Orthopaedics", "Spine Surgery"],
     "bio": "Dr. Harshavardhan Hegde is the Senior Director of Orthopaedics & Joint Replacement with 40+ years of experience."
   },
@@ -8630,6 +8699,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Tarun Kapur.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Tarun Kapur is the Senior Director & Head of Ophthalmology with 36+ years of experience."
   },
@@ -8641,6 +8711,7 @@
     "experience": "16+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Mukesh Kumar.png",
     "specialties": ["Neurology", "Neurosciences"],
     "bio": "Dr. Mukesh Kumar is the Senior Director of Neurology with 16+ years of experience."
   },
@@ -8652,6 +8723,7 @@
     "experience": "29+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vijay Kumar.jpg",
     "specialties": ["Urology"],
     "bio": "Dr. Vijay Kumar is the Senior Director of Reconstructive & Laparoscopic Urology with 29+ years of experience."
   },
@@ -8663,6 +8735,7 @@
     "experience": "28+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Monica Mahajan.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Monica Mahajan is the Senior Director of Internal Medicine with 28+ years of experience."
   },
@@ -8674,6 +8747,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vivek Marwah.jpeg",
     "specialties": ["Gynaecology", "Laparoscopic Surgery"],
     "bio": "Dr. Vivek Marwah is the Senior Director of Minimally Invasive Gynaecology with 36+ years of experience."
   },
@@ -8685,6 +8759,7 @@
     "experience": "16+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Dodul Mondal.jpg",
     "specialties": ["Radiation Oncology", "Cancer Care"],
     "bio": "Dr. Dodul Mondal is the Senior Director of Radiation Oncology with 16+ years of experience."
   },
@@ -8696,6 +8771,7 @@
     "experience": "23+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Prasan Deep Rath.jpg",
     "specialties": ["Rheumatology"],
     "bio": "Dr. Prasan Deep Rath is the Senior Director & Head of Rheumatology with 23+ years of experience."
   },
@@ -8707,6 +8783,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Roopa Salwan.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Roopa Salwan is the Senior Director of Myocardial Infarction Program with 30+ years of experience."
   },
@@ -8718,6 +8795,7 @@
     "experience": "35+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Surveen Ghumman Sindhu.jpg",
     "specialties": ["IVF", "Infertility"],
     "bio": "Dr. Surveen Ghumman Sindhu is the Senior Director & HOD of IVF with 35+ years of experience."
   },
@@ -8729,6 +8807,7 @@
     "experience": "23+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Chandeep Singh.jpg",
     "specialties": ["Orthopaedics", "Sports Injury"],
     "bio": "Dr. Chandeep Singh is the Senior Director of Musculoskeletal Sciences and Orthopaedics with 23+ years of experience."
   },
@@ -8740,6 +8819,7 @@
     "experience": "22+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Akshay Tiwari.jpg",
     "specialties": ["Surgical Oncology", "Musculoskeletal Oncology"],
     "bio": "Dr. Akshay Tiwari is the Senior Director of Musculoskeletal Oncology with 22+ years of experience."
   },
@@ -8751,6 +8831,7 @@
     "experience": "29+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Supriya Bali.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Supriya Bali is the Director of Internal Medicine with 29+ years of experience."
   },
@@ -8762,6 +8843,7 @@
     "experience": "52+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Arvind Taneja.jpg",
     "specialties": ["Paediatrics", "Paediatric Infectious Diseases"],
     "bio": "Dr. Arvind Taneja is the Chief Advisor for Paediatrics with 52+ years of experience."
   },
@@ -8773,6 +8855,7 @@
     "experience": "33+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Mohan Bhargava.png",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Mohan Bhargava is the Director of Interventional Cardiology with 33+ years of experience."
   },
@@ -8784,6 +8867,7 @@
     "experience": "13+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Khalid J Farooqui.jpg",
     "specialties": ["Endocrinology", "Diabetes"],
     "bio": "Dr. Khalid J Farooqui is the Director of Endocrinology & Diabetes with 13+ years of experience."
   },
@@ -8795,6 +8879,7 @@
     "experience": "35+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Neeru Gera.jpg",
     "specialties": ["Endocrinology", "Diabetes"],
     "bio": "Dr. Neeru Gera is the Director of Endocrinology with 35+ years of experience."
   },
@@ -8806,6 +8891,7 @@
     "experience": "23+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anupam Goel.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Anupam Goel is the Director of Interventional Cardiology with 23+ years of experience."
   },
@@ -8817,6 +8903,7 @@
     "experience": "32+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Mohit Goel.png",
     "specialties": ["Neurology", "Neurosciences"],
     "bio": "Dr. Mohit Goel is the Director of Neuro Sciences - Neurology with 32+ years of experience."
   },
@@ -8828,6 +8915,7 @@
     "experience": "32+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sweta Gupta.jpg",
     "specialties": ["IVF", "Infertility"],
     "bio": "Dr. Sweta Gupta is the Director of Infertility & IVF with 32+ years of experience."
   },
@@ -8839,6 +8927,7 @@
     "experience": "20+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Ganesh Jevalikar.jpg",
     "specialties": ["Paediatric Endocrinology", "Endocrinology"],
     "bio": "Dr. Ganesh Jevalikar is the Director of Paediatric Endocrinology with 20+ years of experience."
   },
@@ -8850,6 +8939,7 @@
     "experience": "34+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Usha M Kumar.jpg",
     "specialties": ["Obstetrics", "Gynaecology", "Robotic Surgery"],
     "bio": "Dr. Usha M Kumar is the Director of Obstetrics & Gynaecology with 34+ years of experience."
   },
@@ -8861,6 +8951,7 @@
     "experience": "26+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Vikas Panwar.jpg",
     "specialties": [
       "General Surgery",
       "Laparoscopic Surgery",
@@ -8876,6 +8967,7 @@
     "experience": "24+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Tanya Buckshee Rohatgi.jpg",
     "specialties": ["IVF", "Infertility"],
     "bio": "Dr. Tanya Buckshee Rohatgi is the Director of Reproductive Medicine, Onco-Fertility and IVF with 24+ years of experience."
   },
@@ -8887,6 +8979,7 @@
     "experience": "21+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Sumeet Sethi.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Sumeet Sethi is the Director of Interventional Cardiology with 21+ years of experience."
   },
@@ -8898,6 +8991,7 @@
     "experience": "36+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Prakash Singh.jpg",
     "specialties": ["Neurosurgery", "Spine Surgery", "Neurosciences"],
     "bio": "Dr. Prakash Singh is the Director & Unit Head of Neurosurgery with 36+ years of experience."
   },
@@ -8909,6 +9003,7 @@
     "experience": "24+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Rommel Tickoo.png",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Rommel Tickoo is the Director of Internal Medicine with 24+ years of experience."
   },
@@ -8920,6 +9015,7 @@
     "experience": "43+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anil Kumar Gulati.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Anil Kumar Gulati is the Director & HOD of Pediatrics with 43+ years of experience."
   },
@@ -8931,6 +9027,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Manish Malik.jpg",
     "specialties": ["Neonatology", "Paediatrics"],
     "bio": "Dr. Manish Malik is the Director and Head of NICU with 30+ years of experience."
   },
@@ -8942,6 +9039,7 @@
     "experience": "35+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Paramjeet Singh Kumar.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Paramjeet Singh Kumar is the Director of Paediatrics with 35+ years of experience."
   },
@@ -8953,6 +9051,7 @@
     "experience": "40+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Anju Virmani.jpg",
     "specialties": ["Paediatric Endocrinology"],
     "bio": "Dr. Anju Virmani is the Director of Paediatric Endocrinology with 40+ years of experience."
   },
@@ -8964,6 +9063,7 @@
     "experience": "14+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Dr. Kashish Kalra.png",
     "specialties": ["Dermatology"],
     "bio": "Dr. Kashish Kalra is the Head of Dermatology with 14+ years of experience."
   },
@@ -8975,6 +9075,7 @@
     "experience": "30+ Years",
     "hospital": "Max Hospital Saket",
     "hospitalSlug": "max-hospital-saket",
+    "image": "/Max Hospital Saket/Ritika Samaddar.jpg",
     "specialties": ["Dietetics", "Nutrition"],
     "bio": "Ritika Samaddar is the Regional Head for Dietetics with 30+ years of experience."
   },
@@ -11695,6 +11796,7 @@
     "experience": "17+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-anita-mathew.jpg",
     "specialties": ["Internal Medicine", "General Medicine"],
     "bio": "Dr. Anita Mathew is the Director of Internal Medicine at Fortis Mulund with 17+ years of experience."
   },
@@ -11707,6 +11809,7 @@
     "experience": "22+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-atul-limaye.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology", "TAVI"],
     "bio": "Dr. Atul Limaye is the Director of Cardiology & TAVI Services at Fortis Mulund with 22+ years of experience."
   },
@@ -11719,6 +11822,7 @@
     "experience": "25+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-avanish-saklani.jpg",
     "specialties": ["Surgical Oncology", "Oncology"],
     "bio": "Dr. Avanish Saklani is the Director of Surgical Oncology at Fortis Mulund with 25+ years of experience."
   },
@@ -11731,6 +11835,7 @@
     "experience": "22+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-boman-nariman-dhabhar.jpg",
     "specialties": ["Medical Oncology", "Oncology"],
     "bio": "Dr. Boman Nariman Dhabhar is the Director of Oncology at Fortis Mulund with 22+ years of experience."
   },
@@ -11743,6 +11848,7 @@
     "experience": "20+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-charudatt-vaity.png",
     "specialties": ["Critical Care", "Internal Medicine"],
     "bio": "Dr. Charudatt Vaity is the Director of Critical Care at Fortis Mulund with 20+ years of experience."
   },
@@ -11755,6 +11861,7 @@
     "experience": "24+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-haresh-dodeja.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Haresh Dodeja is the Director of Nephrology at Fortis Mulund with 24+ years of experience."
   },
@@ -11767,6 +11874,7 @@
     "experience": "26+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-hasmukh-ravat.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Hasmukh Ravat is the Director of Cardiology at Fortis Mulund with 26+ years of experience."
   },
@@ -11779,6 +11887,7 @@
     "experience": "15+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-jayesh-sardhara.jpg",
     "specialties": ["Neurosurgery"],
     "bio": "Dr. Jayesh Sardhara is the Director of Neurosurgery at Fortis Mulund with 15+ years of experience."
   },
@@ -11791,6 +11900,7 @@
     "experience": "25+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-kaushal-malhan.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement"],
     "bio": "Dr. Kaushal Malhan is the Director of Orthopaedics at Fortis Mulund with 25+ years of experience."
   },
@@ -11803,6 +11913,7 @@
     "experience": "20+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-kaushik-bhojani.jpg",
     "specialties": ["Rheumatology"],
     "bio": "Dr. Kaushik Bhojani is the Director of Rheumatology at Fortis Mulund with 20+ years of experience."
   },
@@ -11815,6 +11926,7 @@
     "experience": "29+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-rajeev-ram-sivasankar.jpg",
     "specialties": ["Neurointerventional Radiology", "Interventional Radiology"],
     "bio": "Dr. Rajeev Ram Sivasankar is the Director of Interventional Neuroradiology with 29+ years of experience."
   },
@@ -11827,6 +11939,7 @@
     "experience": "20+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-snehal-m-kulkarni.jpg",
     "specialties": ["Paediatric Cardiology", "Paediatric Cardiac Sciences"],
     "bio": "Dr. Snehal M Kulkarni is the Director of Paediatric Cardiology at Fortis Mulund with 20+ years of experience."
   },
@@ -11839,6 +11952,7 @@
     "experience": "17+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-sandeep-balanrao-gore.jpg",
     "specialties": ["Emergency Medicine", "Trauma"],
     "bio": "Dr. Sandeep Balanrao Gore is the Director & HOD of Emergency at Fortis Mulund with 17+ years of experience."
   },
@@ -11851,6 +11965,7 @@
     "experience": "14+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-subhaprakash-sanyal.jpg",
     "specialties": ["Haematology", "Paediatric Haematology", "BMT"],
     "bio": "Dr. Subhaprakash Sanyal is the Director of Hemato-Oncology & BMT at Fortis Mulund with 14+ years of experience."
   },
@@ -11863,6 +11978,7 @@
     "experience": "31+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-vipulroy-dayanand-rathod.jpg",
     "specialties": ["Gastroenterology", "Hepatobiliary Sciences"],
     "bio": "Dr. Vipulroy Dayanand Rathod is the Director of Gastroenterology at Fortis Mulund with 31+ years of experience."
   },
@@ -11875,6 +11991,7 @@
     "experience": "14+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-dhananjay-malankar.jpg",
     "specialties": ["Cardiothoracic Surgery", "Paediatric Cardiac Sciences"],
     "bio": "Dr. Dhananjay Malankar is a Senior Consultant in CTVS at Fortis Mulund with 14+ years of experience."
   },
@@ -11887,6 +12004,7 @@
     "experience": "15+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-harin-kamleshbhai-vyas.jpg",
     "specialties": ["Cardiology", "Non-Invasive Cardiology"],
     "bio": "Dr. Harin Kamleshbhai Vyas is a Senior Consultant in Non-Invasive Cardiology with 15+ years of experience."
   },
@@ -11899,6 +12017,7 @@
     "experience": "23+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-pankaj-maheshwari.jpg",
     "specialties": ["Urology", "Uro-Oncology", "Robotic Surgery"],
     "bio": "Dr. Pankaj Maheshwari is a Senior Consultant Urologist with 23+ years of experience."
   },
@@ -11911,6 +12030,7 @@
     "experience": "9+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-saurabh-ramesh-patil.jpg",
     "specialties": ["Urology", "Uro-Oncology", "Robotic Surgery"],
     "bio": "Dr. Saurabh Ramesh Patil is a Senior Consultant Urologist with 9+ years of experience."
   },
@@ -11923,6 +12043,7 @@
     "experience": "17+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-sonal-kumta.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Sonal Kumta is a Senior Consultant in Obstetrics & Gynaecology with 17+ years of experience."
   },
@@ -11935,6 +12056,7 @@
     "experience": "12+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-vikram-namdev-raut-.png",
     "specialties": ["Liver Transplant", "Hepatobiliary Sciences", "Robotic Surgery"],
     "bio": "Dr. Vikram Namdev Raut is a Senior Consultant in Liver Transplant at Fortis Mulund with 12+ years of experience."
   },
@@ -11947,6 +12069,7 @@
     "experience": "11+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-vaibhav-keskar.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Vaibhav Keskar is a Senior Consultant Nephrologist at Fortis Mulund with 11+ years of experience."
   },
@@ -11959,6 +12082,7 @@
     "experience": "14+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-amish-mhatre.png",
     "specialties": ["Vascular Surgery"],
     "bio": "Dr. Amish Mhatre is a Consultant Vascular Surgeon at Fortis Mulund with 14+ years of experience."
   },
@@ -11971,6 +12095,7 @@
     "experience": "16+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-anand-subramanyam.png",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Anand Subramanyam is a Consultant Ophthalmologist at Fortis Mulund with 16+ years of experience."
   },
@@ -11983,6 +12108,7 @@
     "experience": "33+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-anil-karadkar.png",
     "specialties": ["ENT"],
     "bio": "Dr. Anil Karadkar is a Senior Consultant ENT Specialist at Fortis Mulund with 33+ years of experience."
   },
@@ -11995,6 +12121,7 @@
     "experience": "23+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-anjali-bhosle.png",
     "specialties": ["Urology"],
     "bio": "Dr. Anjali Bhosle is a Consultant Urologist at Fortis Mulund with 23+ years of experience."
   },
@@ -12007,6 +12134,7 @@
     "experience": "25+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-arun-behl.jpg",
     "specialties": ["Surgical Oncology", "Oncology"],
     "bio": "Dr. Arun Behl is a Consultant Surgical Oncologist at Fortis Mulund with 25+ years of experience."
   },
@@ -12019,6 +12147,7 @@
     "experience": "36+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-aruna-bhave.jpg",
     "specialties": ["Gastroenterology"],
     "bio": "Dr. Aruna Bhave is a Senior Consultant Gastroenterologist at Fortis Mulund with 36+ years of experience."
   },
@@ -12031,6 +12160,7 @@
     "experience": "25+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-atul-ganatra.jpg",
     "specialties": ["Obstetrics", "Gynaecology", "Gynaecologic Oncology", "Robotic Surgery"],
     "bio": "Dr. Atul Ganatra is a Consultant in Obstetrics & Gynaecology with 25+ years of experience."
   },
@@ -12043,6 +12173,7 @@
     "experience": "8+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-abhay-suresh-jain.png",
     "specialties": ["Cardiothoracic Surgery", "Vascular Surgery"],
     "bio": "Dr. Abhay Suresh Jain is a Consultant CTVS Surgeon at Fortis Mulund with 8+ years of experience."
   },
@@ -12055,6 +12186,7 @@
     "experience": "11+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-amit-jain.png",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Amit Jain is a Consultant Ophthalmologist at Fortis Mulund with 11+ years of experience."
   },
@@ -12067,6 +12199,7 @@
     "experience": "10+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-amogh-r-vaishampayan.png",
     "specialties": ["General Surgery", "Laparoscopic Surgery", "Minimal Access Surgery"],
     "bio": "Dr. Amogh R Vaishampayan is a Consultant General Surgeon at Fortis Mulund with 10+ years of experience."
   },
@@ -12079,6 +12212,7 @@
     "experience": "18+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-amol-balvant-akhade.png",
     "specialties": ["Medical Oncology", "Oncology"],
     "bio": "Dr. Amol Balvant Akhade is a Consultant Medical Oncologist at Fortis Mulund with 18+ years of experience."
   },
@@ -12091,6 +12225,7 @@
     "experience": "15+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-anil-venkitachalam.png",
     "specialties": ["Neurology"],
     "bio": "Dr. Anil Venkitachalam is a Consultant Neurologist at Fortis Mulund with 15+ years of experience."
   },
@@ -12115,6 +12250,7 @@
     "experience": "8+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-asif-yusuf-virani.png",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Asif Yusuf Virani is a Consultant Ophthalmologist at Fortis Mulund with 8+ years of experience."
   },
@@ -12127,6 +12263,7 @@
     "experience": "30+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-atul-vinayak-ingle.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Atul Vinayak Ingle is a Senior Consultant Nephrologist with 30+ years of experience."
   },
@@ -12139,6 +12276,7 @@
     "experience": "28+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-bela-kedia.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Bela Kedia is a Consultant in Obstetrics & Gynaecology with 28+ years of experience."
   },
@@ -12151,6 +12289,7 @@
     "experience": "40+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-bhagwat-choudhary.jpg",
     "specialties": ["ENT"],
     "bio": "Dr. Bhagwat Choudhary is a highly experienced ENT Specialist with 40+ years of experience."
   },
@@ -12163,6 +12302,7 @@
     "experience": "6+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-deekshaa-athwani.jpg",
     "specialties": ["Clinical Psychology", "Mental Health"],
     "bio": "Dr. Deekshaa Athwani is a Consultant Clinical Psychologist at Fortis Mulund with 6+ years of experience."
   },
@@ -12175,6 +12315,7 @@
     "experience": "12+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-deepanjali-adulkar.png",
     "specialties": ["Radiation Oncology", "Oncology"],
     "bio": "Dr. Deepanjali Adulkar is a Consultant Radiation Oncologist at Fortis Mulund with 12+ years of experience."
   },
@@ -12187,6 +12328,7 @@
     "experience": "9+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-dhara-nimish-shah.png",
     "specialties": ["Neurology"],
     "bio": "Dr. Dhara Nimish Shah is a Consultant Neurologist at Fortis Mulund with 9+ years of experience."
   },
@@ -12199,6 +12341,7 @@
     "experience": "9+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-divya-bajpai.png",
     "specialties": ["Nephrology"],
     "bio": "Dr. Divya Bajpai is a Consultant Nephrologist at Fortis Mulund with 9+ years of experience."
   },
@@ -12211,6 +12354,7 @@
     "experience": "9+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-dolly-doshi.jpg",
     "specialties": ["Interventional Radiology", "Radiology"],
     "bio": "Dr. Dolly Doshi is a Consultant Interventional Radiologist at Fortis Mulund with 9+ years of experience."
   },
@@ -12223,6 +12367,7 @@
     "experience": "35+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-girish-sabnis.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Girish Sabnis is a Senior Consultant in Obstetrics & Gynaecology with 35+ years of experience."
   },
@@ -12247,6 +12392,7 @@
     "experience": "28+ Years",
     "hospital": "Fortis Hospital Mumbai",
     "hospitalSlug": "fortis-hospital-mumbai",
+    "image": "/Fortis Hospital, Mulund, Mumbai/dr-girija-suresh.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Girija Suresh is a Senior Consultant Ophthalmologist at Fortis Mulund with 28+ years of experience."
   },
@@ -12259,6 +12405,7 @@
     "experience": "30+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/drpvmahajan.jpg",
     "specialties": ["Regenerative Medicine", "General Surgery", "Urology"],
     "bio": "Dr. Pradeep Mahajan, Maharashtra Bhushan awardee, is a pioneer in regenerative medicine with 10000+ successfully treated cases and training from Ohio State University & Indiana University."
   },
@@ -12271,6 +12418,7 @@
     "experience": "10+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/dr.pallavi.jpg",
     "specialties": ["Gynaecology", "Infertility", "Laparoscopic Surgery", "Cosmetic Gynaecology"],
     "bio": "Dr. Pallavi Lale is a passionate infertility consultant, obstetrician, and gynecologist offering hope to couples pursuing parenthood."
   },
@@ -12283,6 +12431,7 @@
     "experience": "15+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/dr.harry.jpg",
     "specialties": ["Internal Medicine", "Emergency Medicine", "Regenerative Medicine"],
     "bio": "Dr. Harry Mascarenhas is highly experienced in clinical diagnosis and treatment, especially emergencies and regenerative medicine applications."
   },
@@ -12295,6 +12444,7 @@
     "experience": "20+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/dr.anil.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Anil Daxini is a Senior Consultant Associate in clinical management and Academic Research with American Board certification."
   },
@@ -12307,6 +12457,7 @@
     "experience": "15+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Meghnad Joshi.jpeg",
     "specialties": ["Cell Biology", "Transplantation Biology"],
     "bio": "Dr. Meghnad Joshi is an expert in cell biology and transplantation biology with extensive research background."
   },
@@ -12319,6 +12470,7 @@
     "experience": "15+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. S. H. Thorat.avif",
     "specialties": ["Orthopaedics"],
     "bio": "Dr. S. H. Thorat is an experienced Orthopaedic Surgeon at StemRx Hospital Mumbai."
   },
@@ -12331,6 +12483,7 @@
     "experience": "12+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Manoj Jondhale.jpg",
     "specialties": ["ENT", "Head Neck Oncology"],
     "bio": "Dr. Manoj Jondhale is an ENT specialist with fellowship in Head Neck Oncology."
   },
@@ -12343,6 +12496,7 @@
     "experience": "10+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Saurabh Dhariyat.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Saurabh Dhariyat is an Interventional Cardiologist at StemRx Hospital Mumbai."
   },
@@ -12355,6 +12509,7 @@
     "experience": "12+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Prerana Chaudhary.jpg",
     "specialties": ["Regenerative Medicine", "Molecular Oncology", "Research"],
     "bio": "Dr. Prerana Chaudhary heads the Research Department with expertise in regenerative medicines and molecular oncology."
   },
@@ -12367,6 +12522,7 @@
     "experience": "15+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Anil Kulkarni.jpg",
     "specialties": ["Anaesthesiology"],
     "bio": "Dr. Anil Kulkarni is a Consultant Anaesthetist at StemRx Hospital Mumbai."
   },
@@ -12379,6 +12535,7 @@
     "experience": "12+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Prasanna Deshmukh.jpeg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Prasanna Deshmukh is a Consultant Ophthalmologist at StemRx Hospital Mumbai."
   },
@@ -12391,6 +12548,7 @@
     "experience": "10+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Sanket Ekhande.jpg",
     "specialties": ["Plastic Surgery", "Reconstructive Surgery"],
     "bio": "Dr. Sanket Ekhande is a Consultant Plastic & Reconstructive Surgeon at StemRx Hospital Mumbai."
   },
@@ -12415,6 +12573,7 @@
     "experience": "12+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Donald Babu.jpeg",
     "specialties": ["Surgical Oncology", "General Surgery"],
     "bio": "Dr. Donald Babu is a Consultant Oncologist & General Surgeon at StemRx Hospital Mumbai."
   },
@@ -12427,6 +12586,7 @@
     "experience": "10+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Faiz Ansari.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Faiz Ansari is a Consultant Nephrologist at StemRx Hospital Mumbai."
   },
@@ -12451,6 +12611,7 @@
     "experience": "10+ Years",
     "hospital": "StemRx Hospital Mumbai",
     "hospitalSlug": "stem-rx-hospital-mumbai",
+    "image": "/Stem Rx Hospital/Dr. Nikhil Shinde.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Nikhil Shinde is a Consultant Nephrologist at StemRx Hospital Mumbai."
   },
@@ -15799,6 +15960,7 @@
     "experience": "15+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Babu Ram Pokharel.jpg",
     "specialties": ["Neurology", "Parkinson & Movement Disorder", "Stroke"],
     "bio": "Dr. Babu Ram Pokharel is the Principal Consultant and Head of the Department of Neurology at Nepal Mediciti with over 15 years of specialized experience."
   },
@@ -15811,6 +15973,7 @@
     "experience": "12+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Prakash Paudel.jpg",
     "specialties": ["Neurosurgery", "Spine Surgery"],
     "bio": "Dr. Prakash Paudel is a Gold Medalist Consultant Neurosurgeon and Spine Specialist at Nepal Mediciti, recognized for treating complex spine and brain disorders."
   },
@@ -15823,6 +15986,7 @@
     "experience": "15+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Prasanna Karki.jpg",
     "specialties": ["Neurosurgery", "Neurointervention"],
     "bio": "Dr. Prasanna Karki is a Consultant Neurointerventional Neurosurgeon specializing in advanced, minimally invasive treatments for complex neurovascular diseases."
   },
@@ -15835,6 +15999,7 @@
     "experience": "25+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Prof. Dr. Shishir Lakhey.jpg",
     "specialties": ["Orthopaedics", "Arthroscopy", "Joint Replacement", "Trauma Surgery"],
     "bio": "Prof. Dr. Shishir Lakhey is the Principal Consultant and HOD of Orthopaedic Surgery, specializing in complex fracture management, trauma surgery, and arthroscopic surgery."
   },
@@ -15847,6 +16012,7 @@
     "experience": "20+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Raj Rana.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement Surgery"],
     "bio": "Dr. Raj Rana is the Principal Consultant Orthopaedic Surgeon and Medical Superintendent at Nepal Mediciti, known for exceptional expertise in orthopaedic surgery."
   },
@@ -15859,6 +16025,7 @@
     "experience": "33+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Prof. Dr. Rabindra L Pradhan.jpg",
     "specialties": ["Spine Surgery", "Endoscopic Spine Surgery", "MIS Spine Surgery"],
     "bio": "Prof. Dr. Rabindra L. Pradhan is a Consultant Orthopaedic Spine Surgeon with PhD in Orthopaedics and over 33 years of experience in advanced spine surgery."
   },
@@ -15871,6 +16038,7 @@
     "experience": "10+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Jitendra Thakur.jpg",
     "specialties": ["Spine Surgery", "Orthopaedics", "Endoscopic Spine Surgery"],
     "bio": "Dr. Jitendra Thakur is an Associate Consultant in Orthopaedic and Spine Surgery specializing in advanced spinal care and minimally invasive techniques."
   },
@@ -15883,6 +16051,7 @@
     "experience": "12+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Niva Chitrakar.jpg",
     "specialties": ["Orthopaedics", "Hand Surgery", "Upper Extremity Surgery", "Trauma Surgery"],
     "bio": "Dr. Niva Chitrakar is an Orthopaedic and Trauma Surgeon specializing in musculoskeletal injuries, bone fractures, joint disorders, and complex trauma."
   },
@@ -15895,6 +16064,7 @@
     "experience": "14+ Years",
     "hospital": "Nepal Mediciti",
     "hospitalSlug": "nepal-mediciti",
+    "image": "/Nepal Mediciti/Dr. Manju Gyawali.jpg",
     "specialties": ["Physiotherapy", "Pain Management", "Neurological Rehabilitation", "Ergonomics"],
     "bio": "Dr. Manju Gyawali leads the Department of Physiotherapy and Rehabilitation at Nepal Mediciti with over 14 years of experience in neurological rehabilitation and pain management."
   }

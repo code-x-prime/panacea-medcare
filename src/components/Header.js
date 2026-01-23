@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Navbar from "./Navbar/Navbar";
+import GlobalSearch from "./GlobalSearch";
 import { FaWhatsapp } from "react-icons/fa";
 import { Mail } from "lucide-react";
 
@@ -89,6 +90,10 @@ export default function Header({ locale }) {
                   (isRTL ? "order-1 flex-row-reverse" : "order-3")
                 }
               >
+                {/* Global Search */}
+                <div className="hidden sm:block">
+                  <GlobalSearch locale={locale} />
+                </div>
                 {/* Contact Us WhatsApp Button */}
                 <a
                   href="https://wa.me/919958800961"

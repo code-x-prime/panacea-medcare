@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import doctors from "@/data/doctors.json";
-import { FaUserMd, FaCheckCircle } from "react-icons/fa";
+import { FaUserMd, FaCheckCircle, FaWhatsapp, FaEnvelope, FaCalendarAlt } from "react-icons/fa";
 
 export default function DoctorDetailPage({ params }) {
     const { locale, id } = params;
@@ -118,6 +118,38 @@ export default function DoctorDetailPage({ params }) {
                                             )}
                                         </div>
                                     )}
+                                </div>
+
+                                {/* Action Buttons */}
+                                <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
+                                    {/* Book Now Button */}
+                                    <a
+                                        href={`/${locale}/quote`}
+                                        className="w-full flex items-center justify-center gap-2 bg-panacea-primary hover:bg-panacea-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                                    >
+                                        <FaCalendarAlt className="w-5 h-5" />
+                                        <span>Book Appointment</span>
+                                    </a>
+
+                                    {/* WhatsApp Button */}
+                                    <a
+                                        href={`https://wa.me/919310488850?text=Hi, I want to book an appointment with ${encodeURIComponent(name)} at ${encodeURIComponent(hospital)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                                    >
+                                        <FaWhatsapp className="w-5 h-5" />
+                                        <span>WhatsApp</span>
+                                    </a>
+
+                                    {/* Email Button */}
+                                    <a
+                                        href={`mailto:info@panaceamedcare.com?subject=Appointment Request for ${encodeURIComponent(name)}&body=Hi, I would like to book an appointment with ${encodeURIComponent(name)} at ${encodeURIComponent(hospital)}.`}
+                                        className="w-full flex items-center justify-center gap-2 bg-panacea-accent hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                                    >
+                                        <FaEnvelope className="w-5 h-5" />
+                                        <span>Email Us</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

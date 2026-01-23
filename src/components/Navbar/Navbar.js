@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Search } from "lucide-react";
 import { useTranslations } from "next-intl";
+import GlobalSearch from "@/components/GlobalSearch";
 
 export default function Navbar({ locale = "en" }) {
   var t = useTranslations("navbar");
@@ -194,8 +195,12 @@ export default function Navbar({ locale = "en" }) {
               />
             </Link>
           )}
+          {/* Mobile Search - Expands in remaining space */}
+          <div className="flex-1 min-w-0 mx-2">
+            <GlobalSearch locale={locale} />
+          </div>
           <button
-            className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0 ml-auto"
+            className="p-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex-shrink-0"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
           >

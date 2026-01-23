@@ -1041,7 +1041,7 @@
     "hospitalDesignation": "Chairman & HOD - HPB Surgery & Liver Transplant",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-abhideep-chaudhary.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1643794306_Dr_Abhideep_8a4a210405.jpg",
     "bio": "Dr. Abhideep Chaudhary is the Chairman & HOD of HPB Surgery & Liver Transplant at BLK Max Hospital."
   },
   {
@@ -1063,7 +1063,7 @@
     "hospitalDesignation": "Chairman - Gastroenterology & Hepatology",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-ajay-kumar-blk.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1644234740_Dr_Ajay_Kumar_91d4421175.jpg",
     "bio": "Dr. Ajay Kumar is the Chairman of Gastroenterology & Hepatology and HOD of BLK-Max Institute for Digestive & Liver Diseases at BLK Max Hospital."
   },
   {
@@ -1074,7 +1074,7 @@
     "hospitalDesignation": "Chairman & Chief - Cardiothoracic & Vascular Surgery",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-ramji-mehrotra.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1636713588_Dr_Ramji_20342ec78e.jpg",
     "bio": "Dr. Ramji Mehrotra is the Chairman & Chief of Cardiothoracic & Vascular Surgery at BLK Max Hospital."
   },
   {
@@ -1272,7 +1272,7 @@
     "hospitalDesignation": "Principal Director & HOD - Critical Care",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-rajesh-kumar-pande.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1632908874_Dr_Rajesh_Pande_36623a49fd.jpg",
     "bio": "Dr. Rajesh Kumar Pande is the Principal Director & HOD of Critical Care at BLK Max Hospital."
   },
   {
@@ -1283,7 +1283,7 @@
     "hospitalDesignation": "Principal Director & HOD - Internal Medicine",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-rajinder-kumar-singal.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1566194111_Dr_Rajinder_Kumar_Singal_BLK_Hospital_a67be27f92.jpg",
     "bio": "Dr. Rajinder Kumar Singal is the Principal Director & HOD of Internal Medicine at BLK Max Hospital."
   },
   {
@@ -1294,7 +1294,7 @@
     "hospitalDesignation": "Principal Director & HOD - Anaesthesiology",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-uk-valecha.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1565430444_Dr_Umesh_k_Valecha_5b1912f2d6.jpg",
     "bio": "Dr. U. K. Valecha is the Principal Director & HOD of Anaesthesiology at BLK Max Hospital."
   },
   {
@@ -1360,7 +1360,7 @@
     "hospitalDesignation": "Senior Director - Internal Medicine",
     "hospital": "BLK Max Hospital",
     "hospitalSlug": "blk-max-hospital-pusa-road",
-    "image": "/images/doctors/dr-atul-bhasin.jpg",
+    "image": "/doctor/BLK-Max Super Speciality Hospital/1566197916_Dr_Atul_Bhasin_BLK_Hospital_5744342161.jpg",
     "bio": "Dr. Atul Bhasin is the Senior Director of Internal Medicine at BLK Max Hospital."
   },
   {
@@ -10489,6 +10489,7 @@
     "experience": "24+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-amolkumar-patil-urological-surgeon-pune-e54eff41-9e00-46ba-a457-7efa348ad56b.jpg",
     "specialties": ["Urology", "General Surgery"],
     "bio": "Dr. Amolkumar Patil is a renowned Urological Surgeon with 24+ years of experience."
   },
@@ -10501,6 +10502,7 @@
     "experience": "25+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sanish-shringarpure-urologist-navi-mumbai-61829aae-989f-40ce-b7a1-ffe42d03c637.jpg",
     "specialties": ["Urology", "Andrology"],
     "bio": "Dr. Sanish Shringarpure is a Urologist and Andrologist with 25+ years of experience."
   },
@@ -10513,6 +10515,7 @@
     "experience": "27+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-akshay-chhallani-internal-medicine-navi-mumbai-b6cca9e0-351d-4da1-881c-efc8873486b8.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Akshay Chhallani is a Senior Internal Medicine Specialist with 27+ years of experience."
   },
@@ -10525,6 +10528,7 @@
     "experience": "29+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sangram-karandikar-bariatric-surgeon-navi-mumbai-1dcd6b33-48eb-4725-962c-e04403fa014a.jpg",
     "specialties": ["Bariatric Surgery", "General Surgery"],
     "bio": "Dr. Sangram Karandikar is a Bariatric Surgeon with 29+ years of experience and 98% patient satisfaction."
   },
@@ -10537,6 +10541,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-amit-langote-nephrologist-renal-specialist-navi-mumbai-4d282f84-b98c-493d-b893-8488537cf17b.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Amit Langote is a Nephrologist with 26+ years of experience."
   },
@@ -10549,6 +10554,7 @@
     "experience": "20+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-aparna-govil-bhasker-bariatric-surgeon-mumbai-1f2dc44a-571b-42ad-bd97-c2f3098a5d8d.jpg",
     "specialties": ["Bariatric Surgery", "Laparoscopic Surgery", "General Surgery"],
     "bio": "Dr. Aparna Govil Bhasker is a Bariatric and Laparoscopic Surgeon with 20+ years of experience."
   },
@@ -10561,6 +10567,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-vikram-raut-general-surgeon-mumbai-948166ae-e986-4b5e-9ca9-a7b9ea1fbb8d.jpg",
     "specialties": ["General Surgery"],
     "bio": "Dr. Vikram Raut is a General Surgeon with 23+ years of experience."
   },
@@ -10573,6 +10580,7 @@
     "experience": "36+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-subash-rao-general-physician-mumbai-1fc06a94-3570-4f3f-8543-3b0ce757d87e.jpg",
     "specialties": ["General Medicine"],
     "bio": "Dr. Subash Rao is a Senior General Physician with 36+ years of experience."
   },
@@ -10585,6 +10593,7 @@
     "experience": "38+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-vijay-yewale-pediatrician-navi-mumbai-16f65aa8-273b-494a-829d-39961173716b.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Vijay Yewale is a Senior Pediatrician with 38+ years of experience."
   },
@@ -10597,6 +10606,7 @@
     "experience": "16+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-rohan-aurangabadwalla-pulmonologist-navi-mumbai-23d07ee4-87ad-4521-954d-a90348c6a492.jpg",
     "specialties": ["Pulmonology"],
     "bio": "Dr. Rohan Aurangabadwalla is a Pulmonologist with 16+ years of experience."
   },
@@ -10609,6 +10619,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-pramod-bhor-orthopedic-surgeon-mumbai-be21f216-12af-4400-a637-8ddefa294617.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement"],
     "bio": "Dr. Pramod Bhor is an Orthopedic Surgeon with 23+ years of experience."
   },
@@ -10621,6 +10632,7 @@
     "experience": "34+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-shantesh-kaushik-general-surgeon-navi-mumbai-9dd7834c-ddde-4a19-a36a-47af642fca58.jpg",
     "specialties": ["Thoracic Surgery", "General Surgery"],
     "bio": "Dr. Shantesh Kaushik is a Senior Thoracic Surgeon with 34+ years of experience."
   },
@@ -10633,6 +10645,7 @@
     "experience": "22+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-mayur-mhatre-neurosurgeon-navi-mumbai-c6d53b48-9c5a-467c-bd76-4acd5c6415d3.jpg",
     "specialties": ["Neurosurgery"],
     "bio": "Dr. Mayur Mhatre is a Neurosurgeon with 22+ years of experience."
   },
@@ -10645,6 +10658,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-niraj-ravani-psychiatrist-navi-mumbai-8d6282e8-23b2-4fe4-a92f-0108f6659822.jpg",
     "specialties": ["Psychiatry", "Neuropsychiatry", "Sexology"],
     "bio": "Dr. Niraj Ravani is a Senior Psychiatrist with 26+ years of experience."
   },
@@ -10657,6 +10671,7 @@
     "experience": "38+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-prof-darius-f-mirza-hepato-biliary-pancreatic-mumbai-0c7f1310-b962-405f-9ed1-6dca5eb006ec.jpg",
     "specialties": ["Hepato-Biliary-Pancreatic Surgery"],
     "bio": "Dr. Prof Darius F Mirza is a Senior HPB Surgeon with 38+ years of experience."
   },
@@ -10669,6 +10684,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-charita-pradhan-general-surgeon-mumbai-fa666576-6674-40e9-9e2c-c403ab2dedff.jpg",
     "specialties": ["General Surgery"],
     "bio": "Dr. Charita Pradhan is a Senior General Surgeon with 26+ years of experience."
   },
@@ -10681,6 +10697,7 @@
     "experience": "16+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-harshad-nikte-ent-otorhinolaryngologist-mumbai-7e4b57e0-c3a4-4167-bde6-2c8048ba644a.jpg",
     "specialties": ["ENT"],
     "bio": "Dr. Harshad Nikte is an ENT Specialist with 16+ years of experience."
   },
@@ -10693,6 +10710,7 @@
     "experience": "19+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-girish-nair-neurologist-mumbai-1043cac6-20d4-432b-8cce-7d14179f582a.jpg",
     "specialties": ["Neurology"],
     "bio": "Dr. Girish Nair is a Neurologist with 19+ years of experience."
   },
@@ -10705,6 +10723,7 @@
     "experience": "25+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-rahul-gupta-cardiologist-navi-mumbai-c1078c82-a5de-41b6-81d3-d2147d3dd2cb.jpg",
     "specialties": ["Cardiology"],
     "bio": "Dr. Rahul Gupta is a Senior Cardiologist with 25+ years of experience and 98% patient satisfaction."
   },
@@ -10717,6 +10736,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sanjeevkumar-r-kalkekar-cardiologist-navi-mumbai-3cd5e398-6d87-45fd-abeb-eff972bd586c.jpg",
     "specialties": ["Cardiology", "Interventional Cardiology"],
     "bio": "Dr. Sanjeevkumar Kalkekar is a Senior Interventional Cardiologist with 26+ years of experience."
   },
@@ -10729,6 +10749,7 @@
     "experience": "30+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-mrs-jayalaxmi-t-k-pulmonologist-mumbai-a26d29c8-0f82-42b7-90f0-116674eecf3c.jpg",
     "specialties": ["Pulmonology"],
     "bio": "Dr. Jayalaxmi T.K is a Senior Pulmonologist with 30+ years of experience."
   },
@@ -10741,6 +10762,7 @@
     "experience": "27+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-mahesh-chavan-endocrinologist-navi-mumbai-5d2f14a7-4988-4b56-b1f0-59f10dc2bdd6.jpg",
     "specialties": ["Endocrinology", "Diabetes"],
     "bio": "Dr. Mahesh Chavan is a Senior Endocrinologist with 27+ years of experience."
   },
@@ -10753,6 +10775,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-shalin-dubey-general-surgeon-navi-mumbai-46995f27-0ef9-44a6-9937-7df594441eb8.jpg",
     "specialties": ["General Surgery", "Laparoscopic Surgery"],
     "bio": "Dr. Shalin Dubey is a General and Laparoscopic Surgeon with 23+ years of experience and 99% patient satisfaction."
   },
@@ -10765,6 +10788,7 @@
     "experience": "27+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-vaishali-lokhande-internal-medicine-navi-mumbai-1f724d3b-cdff-4689-b705-3acd454a4af6.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Vaishali Lokhande is a Senior Internal Medicine Specialist with 27+ years of experience."
   },
@@ -10777,6 +10801,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-bharat-agarwal-internal-medicine-navi-mumbai-6c46d8c3-2a90-4421-9607-e7226fab2575.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Bharat Agarwal is an Internal Medicine Specialist with 23+ years of experience."
   },
@@ -10789,6 +10814,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sunil-kutty-neurosurgeon-navi-mumbai-56e4a16f-bae1-43b5-8aea-61720e9d3920.jpg",
     "specialties": ["Neurosurgery", "Spine Surgery"],
     "bio": "Dr. Sunil Kutty is a Senior Neurosurgeon and Spine Surgeon with 26+ years of experience."
   },
@@ -10801,6 +10827,7 @@
     "experience": "27+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-ravindra-nikalji-nephrologist-renal-specialist-navi-mumbai-0002e9e0-37d1-46b6-b07b-b192d0a4f4c5.jpg",
     "specialties": ["Nephrology"],
     "bio": "Dr. Ravindra Nikalji is a Senior Nephrologist with 27+ years of experience and 100% patient satisfaction."
   },
@@ -10813,6 +10840,7 @@
     "experience": "38+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-prashant-agarwal-joint-replacement-surgeon-mumbai-d2bc5596-8dc7-49f4-afe2-434df06788b6.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement"],
     "bio": "Dr. Prashant Agarwal is a Senior Joint Replacement Surgeon with 38+ years of experience."
   },
@@ -10825,6 +10853,7 @@
     "experience": "30+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-siddharth-yadav-orthopedic-surgeon-navi-mumbai-b91c4001-e5a8-47df-89cf-431195236389.jpg",
     "specialties": ["Orthopaedics", "Joint Replacement"],
     "bio": "Dr. Siddharth Yadav is a Senior Orthopedic and Joint Replacement Surgeon with 30+ years of experience."
   },
@@ -10837,6 +10866,7 @@
     "experience": "34+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-mini-nampoothiri-gynecologist-navi-mumbai-85ff7897-29a4-4d87-b56a-600ac58f173d.jpg",
     "specialties": ["Gynaecology"],
     "bio": "Dr. Mini Nampoothiri is a Senior Gynaecologist with 34+ years of experience."
   },
@@ -10849,6 +10879,7 @@
     "experience": "25+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-bindhu-k-s-gynecologist-navi-mumbai-2512fcef-43d0-46e0-8395-ad679b0e3e31.jpg",
     "specialties": ["Gynaecology"],
     "bio": "Dr. Bindhu K S is a Gynaecologist with 25+ years of experience."
   },
@@ -10861,6 +10892,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-dhanya-dharmapalan-pediatrician-navi-mumbai-fb0ad035-63eb-4715-a529-a7a4c9989919.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Dhanya Dharmapalan is a Pediatrician with 23+ years of experience."
   },
@@ -10873,6 +10905,7 @@
     "experience": "36+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-kiran-godse-dermatologist-navi-mumbai-a199b315-ee62-466e-89b3-64b92b1ef865.jpg",
     "specialties": ["Dermatology"],
     "bio": "Dr. Kiran Godse is a Senior Dermatologist with 36+ years of experience."
   },
@@ -10885,6 +10918,7 @@
     "experience": "48+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-shyam-shrivastava-radiation-oncologist-navi-mumbai-a48a36a4-1039-4d26-8d4f-82694adad313.jpg",
     "specialties": ["Radiation Oncology"],
     "bio": "Dr. Shyam Shrivastava is a Senior Radiation Oncologist with 48+ years of experience."
   },
@@ -10897,6 +10931,7 @@
     "experience": "25+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sandeep-de-radiation-oncologist-navi-mumbai-3a0dae23-7e90-4c2d-bce0-de0395abe179.jpg",
     "specialties": ["Radiation Oncology"],
     "bio": "Dr. Sandeep De is a Radiation Oncologist with 25+ years of experience."
   },
@@ -10909,6 +10944,7 @@
     "experience": "34+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-charudatta-chaudhari-plastic-surgeon-navi-mumbai-bbd6682f-0dfe-4d19-96d3-e52d8eb6c05d.jpg",
     "specialties": ["Plastic Surgery"],
     "bio": "Dr. Charudatta Chaudhari is a Senior Plastic Surgeon with 34+ years of experience."
   },
@@ -10921,6 +10957,7 @@
     "experience": "30+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-hemant-lahoti-pediatric-surgeon-navi-mumbai-9a0c0388-b58a-4e9f-bf2c-03bc1924b9c4.jpg",
     "specialties": ["Paediatric Surgery"],
     "bio": "Dr. Hemant Lahoti is a Senior Paediatric Surgeon with 30+ years of experience."
   },
@@ -10933,6 +10970,7 @@
     "experience": "31+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-leena-deshpande-pediatrician-navi-mumbai-8be7a24f-cfe9-4b49-b226-d21d8a9b6fcf.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Leena Deshpande is a Senior Pediatrician with 31+ years of experience."
   },
@@ -10945,6 +10983,7 @@
     "experience": "14+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-bhushan-chavan-pediatric-cardiologist-navi-mumbai-fff1a08f-8ed6-482f-a178-40eef0208522.jpg",
     "specialties": ["Paediatric Cardiology", "Paediatrics"],
     "bio": "Dr. Bhushan Chavan is a Pediatric Cardiologist with 14+ years of experience."
   },
@@ -10957,6 +10996,7 @@
     "experience": "31+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-manish-dubey-urologist-navi-mumbai-af2547a1-2081-49f4-b4bf-530e6083c1c5.jpg",
     "specialties": ["Urology"],
     "bio": "Dr. Manish Dubey is a Senior Urologist with 31+ years of experience and 96% patient satisfaction."
   },
@@ -10969,6 +11009,7 @@
     "experience": "31+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-shishir-shetty-surgical-oncologist-navi-mumbai-cb50ac7b-b077-4484-b4a3-8bb7ee7162d7.jpg",
     "specialties": ["Surgical Oncology"],
     "bio": "Dr. Shishir Shetty is a Senior Surgical Oncologist with 31+ years of experience."
   },
@@ -10981,6 +11022,7 @@
     "experience": "27+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-tejinder-singh-medical-oncologist-thane-54e80632-3bc0-4821-82af-59ef502c9430.jpg",
     "specialties": ["Medical Oncology"],
     "bio": "Dr. Tejinder Singh is a Senior Medical Oncologist with 27+ years of experience."
   },
@@ -10993,6 +11035,7 @@
     "experience": "38+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-vinod-vij-plastic-surgeon-navi-mumbai-26051e81-0af6-4b27-99d9-990e4eca0e00.jpg",
     "specialties": ["Plastic Surgery", "Hair Transplant"],
     "bio": "Dr. Vinod Vij is a Senior Plastic Surgeon with 38+ years of experience."
   },
@@ -11005,6 +11048,7 @@
     "experience": "34+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sameer-gore-psychiatrist-navi-mumbai-5fc3e74b-099b-42f3-8449-55a693a812e9.jpg",
     "specialties": ["Psychiatry"],
     "bio": "Dr. Sameer Gore is a Senior Psychiatrist with 34+ years of experience."
   },
@@ -11017,6 +11061,7 @@
     "experience": "28+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-keshav-kale-cardiologist-navi-mumbai-53cd469b-53d3-427b-9776-a34c5a561990.jpg",
     "specialties": ["Cardiology"],
     "bio": "Dr. Keshav Kale is a Senior Cardiologist with 28+ years of experience."
   },
@@ -11029,6 +11074,7 @@
     "experience": "51+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-madhavan-g-pillai-cardiologist-mumbai-c24b667e-46a9-4d0c-9489-4c135e1d0dc1.jpg",
     "specialties": ["Cardiology"],
     "bio": "Dr. Madhavan G Pillai is a highly experienced Cardiologist with 51+ years of experience."
   },
@@ -11041,6 +11087,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-tejal-lathia-diabetologist-navi-mumbai-a9dc662c-47f9-46cb-b4c8-04101ddb8a07.jpg",
     "specialties": ["Endocrinology", "Diabetes"],
     "bio": "Dr. Tejal Lathia is a Senior Endocrinologist with 26+ years of experience and 96% patient satisfaction."
   },
@@ -11053,6 +11100,7 @@
     "experience": "30+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sharad-bhalekar-ent-otorhinolaryngologist-navi-mumbai-ce8eaff1-e6d5-4d6e-9bf5-ec20b970e2ab.jpg",
     "specialties": ["ENT"],
     "bio": "Dr. Sharad Bhalekar is a Senior ENT Specialist with 30+ years of experience."
   },
@@ -11065,6 +11113,7 @@
     "experience": "42+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sanjay-nagral-general-surgeon-mumbai-741e7dc5-9a9e-4479-b3c3-cfcccbf251ff.jpg",
     "specialties": ["General Surgery"],
     "bio": "Dr. Sanjay Nagral is a Senior General Surgeon with 42+ years of experience and 100% patient satisfaction."
   },
@@ -11077,6 +11126,7 @@
     "experience": "28+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-krantikumar-rathod-radiologist-mumbai-85ff4d76-78b7-4d11-93bb-74f4de895b5d.jpg",
     "specialties": ["Radiology", "Interventional Radiology"],
     "bio": "Dr. Krantikumar Rathod is a Senior Interventional Radiologist with 28+ years of experience."
   },
@@ -11089,6 +11139,7 @@
     "experience": "23+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-suresh-ade-internal-medicine-mumbai-11320116-c663-48d9-8b1d-528ecee2f4f0.jpg",
     "specialties": ["Internal Medicine"],
     "bio": "Dr. Suresh Ade is an Internal Medicine Specialist with 23+ years of experience and 99% patient satisfaction."
   },
@@ -11101,6 +11152,7 @@
     "experience": "50+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-saifuddin-bandukwala-general-practitioner-navi-mumbai-642005f9-9226-404a-87ee-4bdf6ce494fc.jpg",
     "specialties": ["General Medicine"],
     "bio": "Dr. Saifuddin Bandukwala is a highly experienced General Practitioner with 50+ years of experience."
   },
@@ -11113,6 +11165,7 @@
     "experience": "26+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-mahesh-uparkar-ophthalmologist-eye-surgeon-navi-mumbai-f7ae2926-6e47-418e-892a-d84bab403642.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Mahesh Uparkar is a Senior Ophthalmologist with 26+ years of experience."
   },
@@ -11125,6 +11178,7 @@
     "experience": "28+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-atul-seth-ophthalmologist-eye-surgeon-navi-mumbai-459b890f-48da-43fa-b57d-30475ee29271.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Atul Seth is a Senior Ophthalmologist with 28+ years of experience."
   },
@@ -11137,6 +11191,7 @@
     "experience": "42+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sanjay-dhar-orthopedic-surgeon-navi-mumbai-2ba16ede-061a-4813-9a08-780028854e0f.jpg",
     "specialties": ["Orthopaedics"],
     "bio": "Dr. Sanjay Dhar is a Senior Orthopedic Surgeon with 42+ years of experience."
   },
@@ -11149,6 +11204,7 @@
     "experience": "35+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-anu-vij-obstetrician-navi-mumbai-01d39b3e-9ba6-407d-98ad-894e18f9c3ab.jpg",
     "specialties": ["Obstetrics", "Gynaecology", "Laparoscopic Surgery"],
     "bio": "Dr. Anu Vij is a Senior Obstetrician and Gynaecologist with 35+ years of experience."
   },
@@ -11161,6 +11217,7 @@
     "experience": "30+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-richa-singh-obstetrician-navi-mumbai-9763c91d-563b-43eb-a427-e7dd3e520eff.jpg",
     "specialties": ["Obstetrics", "Gynaecology"],
     "bio": "Dr. Richa Singh is a Senior Obstetrician and Gynaecologist with 30+ years of experience."
   },
@@ -11173,6 +11230,7 @@
     "experience": "36+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-upendra-kinjawadekar-pediatrician-navi-mumbai-9b901e38-a989-484f-a4a2-37f45acb0243.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Upendra Kinjawadekar is a Senior Pediatrician with 36+ years of experience."
   },
@@ -11185,6 +11243,7 @@
     "experience": "25+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sandeep-sawant-pediatrician-navi-mumbai-7b4d3948-acf5-4c09-bf4a-825929989c4a.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Sandeep Sawant is a Pediatrician with 25+ years of experience."
   },
@@ -11197,6 +11256,7 @@
     "experience": "36+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-anjali-bhise-pediatrician-navi-mumbai-1b1b8a73-0e8c-42f6-b0a5-34988d37d2fe.jpg",
     "specialties": ["Paediatrics"],
     "bio": "Dr. Anjali Bhise is a Senior Pediatrician with 36+ years of experience."
   },
@@ -11209,6 +11269,7 @@
     "experience": "28+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-sunil-morekar-ophthalmologist-eye-surgeon-navi-mumbai-e9c15cfa-6294-42c1-a33a-3cfd98d1a16b.jpg",
     "specialties": ["Ophthalmology"],
     "bio": "Dr. Sunil Morekar is a Senior Ophthalmologist with 28+ years of experience."
   },
@@ -11221,6 +11282,7 @@
     "experience": "43+ Years",
     "hospital": "Apollo Hospital Mumbai",
     "hospitalSlug": "apollo-hospital-mumbai",
+    "image": "/doctor/Apollo Hospitals Navi Mumbai/dr-rajesh-nathani-pediatric-surgeon-mumbai-b8062a45-1e13-4271-bc59-775cd643bcb3.jpg",
     "specialties": ["Paediatric Surgery", "General Surgery"],
     "bio": "Dr. Rajesh Nathani is a Senior Paediatric Surgeon with 43+ years of experience and 96% patient satisfaction."
   },
@@ -13853,328 +13915,1084 @@
     "bio": "Dr. Somnath is a Senior Consultant Physician & Diabetologist with 33+ years of experience."
   },
   {
-    "id": "babek-tabandeh-memorial-turkey",
-    "name": "Dr. Babek Tabandeh",
-    "specialty": "Laparoscopic Surgery",
-    "designation": "Senior Laparoscopic Surgeon",
-    "qualification": "MD",
-    "experience": "32+ Years",
+    "id": "a-emre-yildirim-memorial-turkey",
+    "name": "Prof. Dr. A. Emre YILDIRIM",
+    "specialty": "Gastroenterology",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Laparoscopic Surgery", "General Surgery"],
-    "bio": "Dr. Babek Tabandeh is a Senior Laparoscopic Surgeon with 32+ years of experience at Memorial Hospital Istanbul."
+    "specialties": ["Gastroenterology"],
+    "bio": "Prof. Dr. A. Emre YILDIRIM is a Gastroenterologist at Memorial Bahçelievler Hospital."
   },
   {
-    "id": "azmi-ozler-memorial-turkey",
-    "name": "Dr. Azmi Ozler",
-    "specialty": "Cardiac Surgery",
-    "designation": "Senior Cardiac Surgeon",
-    "qualification": "MD",
-    "experience": "38+ Years",
+    "id": "a-fusun-ulger-memorial-turkey",
+    "name": "Prof. Dr. A. Füsun ÜLGER",
+    "specialty": "Chest Diseases (Lung Diseases)",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Cardiac Surgery", "Cardiology"],
-    "bio": "Dr. Azmi Ozler is a Senior Cardiac Surgeon with 38+ years of experience at Memorial Hospital Istanbul."
+    "specialties": ["Chest Diseases", "Lung Diseases", "Pulmonology"],
+    "bio": "Prof. Dr. A. Füsun ÜLGER is a Chest Diseases Specialist at Memorial Ankara Hospital."
   },
   {
-    "id": "mehmet-fikri-yapici-memorial-turkey",
-    "name": "Dr. Mehmet Fikri Yapici",
-    "specialty": "Cardiac Surgery",
-    "designation": "Senior Cardiac Surgeon",
-    "qualification": "MD",
-    "experience": "26+ Years",
+    "id": "abdullah-avni-atay-memorial-turkey",
+    "name": "Prof. Dr. Abdullah Avni ATAY",
+    "specialty": "Pediatric (Child) Hematology",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Cardiac Surgery", "Cardiology"],
-    "bio": "Dr. Mehmet Fikri Yapici is a Senior Cardiac Surgeon with 26+ years of experience."
+    "specialties": ["Pediatric Hematology", "Hematology"],
+    "bio": "Prof. Dr. Abdullah Avni ATAY is a Pediatric Hematologist at Memorial Bahçelievler Hospital."
   },
   {
-    "id": "alp-ercan-memorial-turkey",
-    "name": "Dr. Alp Ercan",
-    "specialty": "Cosmetic Surgery",
-    "designation": "Consultant - Plastic & Cosmetic Surgery",
-    "qualification": "MD",
-    "experience": "10+ Years",
+    "id": "abdullah-erdogan-memorial-turkey",
+    "name": "Prof. Dr. Abdullah ERDOĞAN",
+    "specialty": "Thoracic Surgery",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Cosmetic Surgery", "Plastic Surgery"],
-    "bio": "Dr. Alp Ercan is a Plastic & Cosmetic Surgeon with 10+ years of experience."
+    "specialties": ["Thoracic Surgery"],
+    "bio": "Prof. Dr. Abdullah ERDOĞAN is a Thoracic Surgeon at Memorial Antalya Hospital."
   },
   {
-    "id": "ercan-karacaoglu-memorial-turkey",
-    "name": "Dr. Ercan Karacaoglu",
-    "specialty": "Cosmetic Surgery",
-    "designation": "Consultant - Plastic & Cosmetic Surgery",
-    "qualification": "MD",
-    "experience": "9+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Cosmetic Surgery", "Plastic Surgery"],
-    "bio": "Dr. Ercan Karacaoglu is a Plastic & Cosmetic Surgeon with 9+ years of experience."
-  },
-  {
-    "id": "fatih-taskesen-memorial-turkey",
-    "name": "Dr. Fatih Taskesen",
-    "specialty": "Laparoscopic Surgery",
-    "designation": "Consultant - Laparoscopic Surgery",
-    "qualification": "MD",
-    "experience": "23+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Laparoscopic Surgery", "General Surgery"],
-    "bio": "Dr. Fatih Taskesen is a Laparoscopic Surgeon with 23+ years of experience."
-  },
-  {
-    "id": "banu-mat-memorial-turkey",
-    "name": "Dr. Banu Mat",
-    "specialty": "Obstetrics & Gynaecology",
-    "designation": "Consultant - Obstetrics & Gynaecology",
-    "qualification": "MD",
-    "experience": "12+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Obstetrics", "Gynaecology"],
-    "bio": "Dr. Banu Mat is an Obstetrician & Gynaecologist with 12+ years of experience."
-  },
-  {
-    "id": "mehmet-karaca-memorial-turkey",
-    "name": "Dr. Mehmet Karaca",
-    "specialty": "Cardiology",
-    "designation": "Consultant - Interventional Cardiology",
-    "qualification": "MD",
-    "experience": "8+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Cardiology", "Interventional Cardiology"],
-    "bio": "Dr. Mehmet Karaca is an Interventional Cardiologist with 8+ years of experience."
-  },
-  {
-    "id": "ali-egemen-avci-memorial-turkey",
-    "name": "Dr. Ali Egemen Avci",
-    "specialty": "Nephrology",
-    "designation": "Consultant - Nephrology & Kidney Transplant",
-    "qualification": "MD",
-    "experience": "13+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Nephrology", "Kidney Transplant"],
-    "bio": "Dr. Ali Egemen Avci is a Nephrologist with 13+ years of experience in Kidney Transplant."
-  },
-  {
-    "id": "gokhan-memorial-turkey",
-    "name": "Dr. Gokhan",
-    "specialty": "Nephrology",
-    "designation": "Consultant - Nephrology & Kidney Transplant",
-    "qualification": "MD",
-    "experience": "20+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Nephrology", "Kidney Transplant"],
-    "bio": "Dr. Gokhan is a Nephrologist with 20+ years of experience in Kidney Transplant."
-  },
-  {
-    "id": "emin-gokhan-kandemir-memorial-turkey",
-    "name": "Dr. Emin Gokhan Kandemir",
-    "specialty": "Radiation Oncology",
-    "designation": "Senior Radiation Oncologist",
-    "qualification": "MD",
-    "experience": "36+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Radiation Oncology", "Medical Oncology"],
-    "bio": "Dr. Emin Gokhan Kandemir is a Senior Radiation Oncologist with 36+ years of experience."
-  },
-  {
-    "id": "gokhan-temiz-memorial-turkey",
-    "name": "Dr. Gokhan Temiz",
-    "specialty": "Nephrology",
-    "designation": "Senior Nephrologist",
-    "qualification": "MD",
-    "experience": "23+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Nephrology"],
-    "bio": "Dr. Gokhan Temiz is a Senior Nephrologist with 23+ years of experience."
-  },
-  {
-    "id": "gokalp-silav-memorial-turkey",
-    "name": "Dr. Gokalp Silav",
-    "specialty": "Neurosurgery",
-    "designation": "Senior Neurosurgeon",
-    "qualification": "MD",
-    "experience": "30+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Neurosurgery"],
-    "bio": "Dr. Gokalp Silav is a Senior Neurosurgeon with 30+ years of experience."
-  },
-  {
-    "id": "mustafa-onoz-memorial-turkey",
-    "name": "Dr. Mustafa Onoz",
-    "specialty": "Neurosurgery",
-    "designation": "Senior Neurosurgeon",
-    "qualification": "MD",
-    "experience": "30+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Neurosurgery"],
-    "bio": "Dr. Mustafa Onoz is a Senior Neurosurgeon with 30+ years of experience."
-  },
-  {
-    "id": "asli-umut-dinc-memorial-turkey",
-    "name": "Dr. Asli Umut Dinc",
+    "id": "abdullah-ozkaya-memorial-turkey",
+    "name": "Prof. Dr. Abdullah ÖZKAYA",
     "specialty": "Ophthalmology",
-    "designation": "Senior Ophthalmologist",
-    "qualification": "MD",
-    "experience": "29+ Years",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
     "specialties": ["Ophthalmology"],
-    "bio": "Dr. Asli Umut Dinc is a Senior Ophthalmologist with 29+ years of experience."
+    "bio": "Prof. Dr. Abdullah ÖZKAYA is an Ophthalmologist at Memorial Şişli Hospital."
   },
   {
-    "id": "ahmet-guray-batmaz-memorial-turkey",
-    "name": "Dr. Ahmet Guray Batmaz",
-    "specialty": "Orthopaedics",
-    "designation": "Consultant - Bone & Joint Specialist",
-    "qualification": "MD",
-    "experience": "14+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Orthopaedics", "Joint Surgery"],
-    "bio": "Dr. Ahmet Guray Batmaz is a Bone & Joint Specialist with 14+ years of experience."
-  },
-  {
-    "id": "mahir-mahirogullari-memorial-turkey",
-    "name": "Dr. Mahir Mahirogullari",
-    "specialty": "Orthopaedics",
-    "designation": "Senior Bone & Joint Specialist",
-    "qualification": "MD",
-    "experience": "25+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Orthopaedics", "Joint Surgery"],
-    "bio": "Dr. Mahir Mahirogullari is a Senior Bone & Joint Specialist with 25+ years of experience."
-  },
-  {
-    "id": "cem-devge-memorial-turkey",
-    "name": "Dr. Cem Devge",
-    "specialty": "ENT",
-    "designation": "Senior ENT Surgeon",
-    "qualification": "MD",
-    "experience": "28+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["ENT", "Otolaryngology"],
-    "bio": "Dr. Cem Devge is a Senior ENT Surgeon with 28+ years of experience."
-  },
-  {
-    "id": "ramazan-gun-memorial-turkey",
-    "name": "Dr. Ramazan Gun",
-    "specialty": "ENT",
-    "designation": "Consultant - ENT Surgery",
-    "qualification": "MD",
-    "experience": "14+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["ENT", "Otolaryngology"],
-    "bio": "Dr. Ramazan Gun is an ENT Surgeon with 14+ years of experience."
-  },
-  {
-    "id": "cevat-naci-oner-memorial-turkey",
-    "name": "Dr. Cevat Naci Oner",
-    "specialty": "Paediatric Cardiology",
-    "designation": "Senior Paediatric Cardiologist",
-    "qualification": "MD",
-    "experience": "28+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Paediatric Cardiology"],
-    "bio": "Dr. Cevat Naci Oner is a Senior Paediatric Cardiologist with 28+ years of experience."
-  },
-  {
-    "id": "cem-demirel-memorial-turkey",
-    "name": "Dr. Cem Demirel",
-    "specialty": "Endocrinology",
-    "designation": "Consultant - Reproductive Endocrinology",
-    "qualification": "MD",
-    "experience": "16+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Endocrinology", "Reproductive Endocrinology"],
-    "bio": "Dr. Cem Demirel is a Reproductive Endocrinologist with 16+ years of experience."
-  },
-  {
-    "id": "murat-memorial-turkey",
-    "name": "Dr. Murat",
-    "specialty": "Endocrinology",
-    "designation": "Senior Endocrinologist",
-    "qualification": "MD",
-    "experience": "25+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Endocrinology"],
-    "bio": "Dr. Murat is a Senior Endocrinologist with 25+ years of experience."
-  },
-  {
-    "id": "haldun-orhun-memorial-turkey",
-    "name": "Dr. Haldun Orhun",
-    "specialty": "Sports Medicine",
-    "designation": "Senior Orthopaedic & Sports Medicine Specialist",
-    "qualification": "MD",
-    "experience": "39+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Sports Medicine", "Orthopaedics", "Joint Replacement"],
-    "bio": "Dr. Haldun Orhun is a Senior Orthopaedic & Sports Medicine Specialist with 39+ years of experience."
-  },
-  {
-    "id": "attila-saygi-memorial-turkey",
-    "name": "Dr. Attila Saygi",
-    "specialty": "Surgical Oncology",
-    "designation": "Senior Surgical Oncologist",
-    "qualification": "MD",
-    "experience": "44+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Surgical Oncology", "Oncology"],
-    "bio": "Dr. Attila Saygi is a highly experienced Senior Surgical Oncologist with 44+ years of experience."
-  },
-  {
-    "id": "mesut-polat-memorial-turkey",
-    "name": "Dr. Mesut Polat",
-    "specialty": "Surgical Oncology",
-    "designation": "Senior Surgical Oncologist",
-    "qualification": "MD",
-    "experience": "30+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Surgical Oncology", "Oncology"],
-    "bio": "Dr. Mesut Polat is a Senior Surgical Oncologist with 30+ years of experience."
-  },
-  {
-    "id": "turhan-caskurlu-memorial-turkey",
-    "name": "Dr. Turhan Caskurlu",
+    "id": "abdulmuttalip-simsek-memorial-turkey",
+    "name": "Prof. Dr. Abdulmuttalip ŞİMŞEK",
     "specialty": "Urology",
-    "designation": "Senior Urologist & Male Fertility Specialist",
-    "qualification": "MD",
-    "experience": "32+ Years",
-    "hospital": "Memorial Hospital Turkey",
-    "hospitalSlug": "memorial-hospital-turkey",
-    "specialties": ["Urology", "Male Fertility"],
-    "bio": "Dr. Turhan Caskurlu is a Senior Urologist & Male Fertility Specialist with 32+ years of experience."
-  },
-  {
-    "id": "murat-binbay-memorial-turkey",
-    "name": "Dr. Murat Binbay",
-    "specialty": "Urology",
-    "designation": "Consultant - Urology",
-    "qualification": "MD",
-    "experience": "19+ Years",
+    "designation": "Prof. Dr.",
     "hospital": "Memorial Hospital Turkey",
     "hospitalSlug": "memorial-hospital-turkey",
     "specialties": ["Urology"],
-    "bio": "Dr. Murat Binbay is a Urologist with 19+ years of experience."
+    "bio": "Prof. Dr. Abdulmuttalip ŞİMŞEK is a Urologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "abdussamet-batur-memorial-turkey",
+    "name": "Prof. Dr. Abdussamet BATUR",
+    "specialty": "Radiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Radiology"],
+    "bio": "Prof. Dr. Abdussamet BATUR is a Radiologist at Memorial Diyarbakır Hospital."
+  },
+  {
+    "id": "acar-tuzuner-memorial-turkey",
+    "name": "Prof. Dr. Acar TÜZÜNER",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Acar TÜZÜNER is a General Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "adnan-isgor-memorial-turkey",
+    "name": "Prof. Dr. Adnan İŞGÖR",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Adnan İŞGÖR is a General Surgeon at Bodrum Hospital."
+  },
+  {
+    "id": "ahmet-ekmekci-memorial-turkey",
+    "name": "Prof. Dr. Ahmet EKMEKCİ",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Ahmet EKMEKCİ is a Cardiologist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "ahmet-menku-memorial-turkey",
+    "name": "Prof. Dr. Ahmet MENKÜ",
+    "specialty": "Neurosurgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Neurosurgery"],
+    "bio": "Prof. Dr. Ahmet MENKÜ is a Neurosurgeon at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "ahmet-nevzat-nayir-memorial-turkey",
+    "name": "Prof. Dr. Ahmet Nevzat NAYIR",
+    "specialty": "Pediatric Nephrology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Nephrology", "Nephrology"],
+    "bio": "Prof. Dr. Ahmet Nevzat NAYIR is a Pediatric Nephrologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "ahmet-soysal-memorial-turkey",
+    "name": "Prof. Dr. Ahmet SOYSAL",
+    "specialty": "Pediatrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatrics"],
+    "bio": "Prof. Dr. Ahmet SOYSAL is a Pediatrician at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "ahmet-siyar-ekinci-memorial-turkey",
+    "name": "Prof. Dr. Ahmet Şiyar EKİNCİ",
+    "specialty": "Chemotherapy (Medical Oncology)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Medical Oncology", "Oncology"],
+    "bio": "Prof. Dr. Ahmet Şiyar EKİNCİ is a Medical Oncologist at Memorial Diyarbakır Hospital."
+  },
+  {
+    "id": "ahmet-turan-aydin-memorial-turkey",
+    "name": "Prof. Dr. Ahmet Turan AYDIN",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Ahmet Turan AYDIN is an Orthopedic and Traumatology Specialist at Memorial Antalya Hospital."
+  },
+  {
+    "id": "ahmet-yildiz-memorial-turkey",
+    "name": "Prof. Dr. Ahmet YILDIZ",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Ahmet YILDIZ is a Cardiologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "akin-yildiz-k-memorial-turkey",
+    "name": "Prof. Dr. Akın YILDIZ (K)",
+    "specialty": "Nuclear Medicine",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Nuclear Medicine"],
+    "bio": "Prof. Dr. Akın YILDIZ is a Nuclear Medicine Specialist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "ali-anarat-memorial-turkey",
+    "name": "Prof. Dr. Ali ANARAT",
+    "specialty": "Pediatric Nephrology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Nephrology", "Nephrology"],
+    "bio": "Prof. Dr. Ali ANARAT is a Pediatric Nephrologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "ali-aycan-kavala-memorial-turkey",
+    "name": "Prof. Dr. Ali Aycan KAVALA",
+    "specialty": "Cardiovascular Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiovascular Surgery"],
+    "bio": "Prof. Dr. Ali Aycan KAVALA is a Cardiovascular Surgeon at Memorial Şişli Hospital."
+  },
+  {
+    "id": "ali-cemal-yumusakhuylu-memorial-turkey",
+    "name": "Prof. Dr. Ali Cemal YUMUŞAKHUYLU",
+    "specialty": "Ear, Nose and Throat Disorders",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["ENT", "Ear, Nose and Throat Disorders"],
+    "bio": "Prof. Dr. Ali Cemal YUMUŞAKHUYLU is an ENT Specialist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "ali-ersen-memorial-turkey",
+    "name": "Prof. Dr. Ali ERŞEN",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Ali ERŞEN is an Orthopedic and Traumatology Specialist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "ali-fuat-atmaca-memorial-turkey",
+    "name": "Prof. Dr. Ali Fuat ATMACA",
+    "specialty": "Urology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Urology"],
+    "bio": "Prof. Dr. Ali Fuat ATMACA is a Urologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "ali-irfan-emre-tekgunduz-memorial-turkey",
+    "name": "Prof. Dr. Ali İrfan Emre TEKGÜNDÜZ",
+    "specialty": "Hematology / Blood Diseases",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Hematology", "Blood Diseases"],
+    "bio": "Prof. Dr. Ali İrfan Emre TEKGÜNDÜZ is a Hematologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "ali-kemal-kadiroglu-memorial-turkey",
+    "name": "Prof. Dr. Ali Kemal KADİROĞLU",
+    "specialty": "Internal Medicine",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Internal Medicine"],
+    "bio": "Prof. Dr. Ali Kemal KADİROĞLU is an Internal Medicine Specialist at Memorial Diyarbakır Hospital."
+  },
+  {
+    "id": "ali-murat-tatli-memorial-turkey",
+    "name": "Prof. Dr. Ali Murat TATLI",
+    "specialty": "Chemotherapy (Medical Oncology)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Medical Oncology", "Oncology"],
+    "bio": "Prof. Dr. Ali Murat TATLI is a Medical Oncologist at Memorial Antalya Hospital."
+  },
+  {
+    "id": "ali-oto-memorial-turkey",
+    "name": "Prof. Dr. Ali OTO",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Ali OTO is a Cardiologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "ali-ocguder-memorial-turkey",
+    "name": "Prof. Dr. Ali ÖÇGÜDER",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Ali ÖÇGÜDER is an Orthopedic and Traumatology Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "ali-turgay-cavusoglu-memorial-turkey",
+    "name": "Prof. Dr. Ali Turgay ÇAVUŞOĞLU",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Ali Turgay ÇAVUŞOĞLU is an Orthopedic and Traumatology Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "alihan-gurkan-memorial-turkey",
+    "name": "Prof. Dr. Alihan GÜRKAN",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Alihan GÜRKAN is a General Surgeon at Memorial Antalya Hospital."
+  },
+  {
+    "id": "alper-akcan-memorial-turkey",
+    "name": "Prof. Dr. Alper AKCAN",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Alper AKCAN is a General Surgeon at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "alper-karaoglan-memorial-turkey",
+    "name": "Prof. Dr. Alper KARAOĞLAN",
+    "specialty": "Neurosurgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Neurosurgery"],
+    "bio": "Prof. Dr. Alper KARAOĞLAN is a Neurosurgeon at Bodrum Hospital."
+  },
+  {
+    "id": "asli-cifcibasi-ormeci-memorial-turkey",
+    "name": "Prof. Dr. Aslı ÇİFCİBAŞI ÖRMECİ",
+    "specialty": "Gastroenterology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gastroenterology"],
+    "bio": "Prof. Dr. Aslı ÇİFCİBAŞI ÖRMECİ is a Gastroenterologist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "asli-tatliparmak-memorial-turkey",
+    "name": "Prof. Dr. Aslı TATLIPARMAK",
+    "specialty": "Dermatology (Skin and Venereal Diseases)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Dermatology"],
+    "bio": "Prof. Dr. Aslı TATLIPARMAK is a Dermatologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "atila-tanyeli-memorial-turkey",
+    "name": "Prof. Dr. Atila TANYELİ",
+    "specialty": "Pediatric (Child) Hematology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Hematology", "Hematology"],
+    "bio": "Prof. Dr. Atila TANYELİ is a Pediatric Hematologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "attila-saygi-memorial-turkey",
+    "name": "Prof. Dr. Attila SAYGI",
+    "specialty": "Chest Diseases (Lung Diseases)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Chest Diseases", "Lung Diseases", "Pulmonology"],
+    "bio": "Prof. Dr. Attila SAYGI is a Chest Diseases Specialist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "aygul-demirol-memorial-turkey",
+    "name": "Prof. Dr. Aygül DEMİROL",
+    "specialty": "Gynecology and Obstetrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gynecology", "Obstetrics"],
+    "bio": "Prof. Dr. Aygül DEMİROL is a Gynecologist and Obstetrician at Memorial Ankara Hospital."
+  },
+  {
+    "id": "aylin-akbay-oba-memorial-turkey",
+    "name": "Prof. Dr. Aylin AKBAY OBA",
+    "specialty": "Oral and Dental Diseases",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Oral and Dental Diseases", "Dentistry"],
+    "bio": "Prof. Dr. Aylin AKBAY OBA is an Oral and Dental Diseases Specialist at Bodrum Hospital."
+  },
+  {
+    "id": "aynur-karayol-akin-memorial-turkey",
+    "name": "Prof. Dr. Aynur KARAYOL AKIN",
+    "specialty": "Anesthesiology and Reanimation",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Anesthesiology", "Reanimation"],
+    "bio": "Prof. Dr. Aynur KARAYOL AKIN is an Anesthesiologist at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "ayse-selimoglu-memorial-turkey",
+    "name": "Prof. Dr. Ayşe SELİMOĞLU",
+    "specialty": "Pediatric Gastroenterology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Gastroenterology", "Gastroenterology"],
+    "bio": "Prof. Dr. Ayşe SELİMOĞLU is a Pediatric Gastroenterologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "ayse-yesim-oral-memorial-turkey",
+    "name": "Prof. Dr. Ayşe Yeşim ORAL",
+    "specialty": "Ophthalmology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Ophthalmology"],
+    "bio": "Prof. Dr. Ayşe Yeşim ORAL is an Ophthalmologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "aysegul-kargi-memorial-turkey",
+    "name": "Prof. Dr. Ayşegül KARGI",
+    "specialty": "Chemotherapy (Medical Oncology)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Medical Oncology", "Oncology"],
+    "bio": "Prof. Dr. Ayşegül KARGI is a Medical Oncologist at Medstar Antalya Hospital."
+  },
+  {
+    "id": "aysen-terzi-memorial-turkey",
+    "name": "Prof. Dr. Ayşen TERZİ",
+    "specialty": "Pathology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pathology"],
+    "bio": "Prof. Dr. Ayşen TERZİ is a Pathologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "bahadir-dagdeviren-memorial-turkey",
+    "name": "Prof. Dr. Bahadır DAĞDEVİREN",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Bahadır DAĞDEVİREN is a Cardiologist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "bahadir-gulluoglu-memorial-turkey",
+    "name": "Prof. Dr. Bahadır GÜLLÜOĞLU",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Bahadır GÜLLÜOĞLU is a General Surgeon at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "baris-malbora-memorial-turkey",
+    "name": "Prof. Dr. Barış MALBORA",
+    "specialty": "Pediatric (Child) Hematology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Hematology", "Hematology"],
+    "bio": "Prof. Dr. Barış MALBORA is a Pediatric Hematologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "basak-karbek-bayraktar-memorial-turkey",
+    "name": "Prof. Dr. Başak KARBEK BAYRAKTAR",
+    "specialty": "Endocrinology, Diabetes and Metabolic Diseases",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Endocrinology", "Diabetes", "Metabolic Diseases"],
+    "bio": "Prof. Dr. Başak KARBEK BAYRAKTAR is an Endocrinologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "bedrettin-yildizeli-memorial-turkey",
+    "name": "Prof. Dr. Bedrettin YILDIZELİ",
+    "specialty": "Thoracic Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Thoracic Surgery"],
+    "bio": "Prof. Dr. Bedrettin YILDIZELİ is a Thoracic Surgeon at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "benan-kasapoglu-memorial-turkey",
+    "name": "Prof. Dr. Benan KASAPOĞLU",
+    "specialty": "Gastroenterology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gastroenterology"],
+    "bio": "Prof. Dr. Benan KASAPOĞLU is a Gastroenterologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "betul-tavil-memorial-turkey",
+    "name": "Prof. Dr. Betül TAVİL",
+    "specialty": "Pediatric (Child) Hematology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Hematology", "Hematology"],
+    "bio": "Prof. Dr. Betül TAVİL is a Pediatric Hematologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "birol-baysal-memorial-turkey",
+    "name": "Prof. Dr. Birol BAYSAL",
+    "specialty": "Gastroenterology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gastroenterology"],
+    "bio": "Prof. Dr. Birol BAYSAL is a Gastroenterologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "bora-bostan-memorial-turkey",
+    "name": "Prof. Dr. Bora BOSTAN",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Bora BOSTAN is an Orthopedic and Traumatology Specialist at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "burak-kaymaz-memorial-turkey",
+    "name": "Prof. Dr. Burak KAYMAZ",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Burak KAYMAZ is an Orthopedic and Traumatology Specialist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "burak-onan-memorial-turkey",
+    "name": "Prof. Dr. Burak ONAN",
+    "specialty": "Cardiovascular Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiovascular Surgery"],
+    "bio": "Prof. Dr. Burak ONAN is a Cardiovascular Surgeon at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "bulent-citgez-memorial-turkey",
+    "name": "Prof. Dr. Bülent ÇİTGEZ",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Bülent ÇİTGEZ is a General Surgeon at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "bulent-karadag-memorial-turkey",
+    "name": "Prof. Dr. Bülent KARADAĞ",
+    "specialty": "Pediatric Pulmonology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Pulmonology", "Pulmonology"],
+    "bio": "Prof. Dr. Bülent KARADAĞ is a Pediatric Pulmonologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "bulent-mentes-memorial-turkey",
+    "name": "Prof. Dr. Bülent MENTEŞ",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Bülent MENTEŞ is a General Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "cem-yorgancioglu-memorial-turkey",
+    "name": "Prof. Dr. Cem YORGANCIOĞLU",
+    "specialty": "Cardiovascular Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiovascular Surgery"],
+    "bio": "Prof. Dr. Cem YORGANCIOĞLU is a Cardiovascular Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "cemal-alper-kemaloglu-memorial-turkey",
+    "name": "Prof. Dr. Cemal Alper KEMALOĞLU",
+    "specialty": "Aesthetic, Plastic and Reconstructive Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Plastic Surgery", "Aesthetic Surgery", "Reconstructive Surgery"],
+    "bio": "Prof. Dr. Cemal Alper KEMALOĞLU is a Plastic and Reconstructive Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "cengiz-bolcal-memorial-turkey",
+    "name": "Prof. Dr. Cengiz BOLCAL",
+    "specialty": "Cardiovascular Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiovascular Surgery"],
+    "bio": "Prof. Dr. Cengiz BOLCAL is a Cardiovascular Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "cengiz-celiker-k-memorial-turkey",
+    "name": "Prof. Dr. Cengiz ÇELİKER (K)",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Cengiz ÇELİKER is a Cardiologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "cevat-naci-oner-memorial-turkey",
+    "name": "Prof. Dr. Cevat Naci ÖNER",
+    "specialty": "Pediatric Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Cardiology", "Cardiology"],
+    "bio": "Prof. Dr. Cevat Naci ÖNER is a Pediatric Cardiologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "cuneyt-turkmen-memorial-turkey",
+    "name": "Prof. Dr. Cüneyt TÜRKMEN",
+    "specialty": "Nuclear Medicine",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Nuclear Medicine"],
+    "bio": "Prof. Dr. Cüneyt TÜRKMEN is a Nuclear Medicine Specialist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "cagatay-saim-tezel-memorial-turkey",
+    "name": "Prof. Dr. Çağatay Saim TEZEL",
+    "specialty": "Thoracic Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Thoracic Surgery"],
+    "bio": "Prof. Dr. Çağatay Saim TEZEL is a Thoracic Surgeon at Memorial Şişli Hospital."
+  },
+  {
+    "id": "cigdem-usul-afsar-memorial-turkey",
+    "name": "Prof. Dr. Çiğdem USUL AFŞAR",
+    "specialty": "Chemotherapy (Medical Oncology)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Medical Oncology", "Oncology"],
+    "bio": "Prof. Dr. Çiğdem USUL AFŞAR is a Medical Oncologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "dicle-hazirolan-memorial-turkey",
+    "name": "Prof. Dr. Dicle HAZIROLAN",
+    "specialty": "Ophthalmology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Ophthalmology"],
+    "bio": "Prof. Dr. Dicle HAZIROLAN is an Ophthalmologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "dildar-duman-memorial-turkey",
+    "name": "Prof. Dr. Dildar DUMAN",
+    "specialty": "Chest Diseases (Lung Diseases)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Chest Diseases", "Lung Diseases", "Pulmonology"],
+    "bio": "Prof. Dr. Dildar DUMAN is a Chest Diseases Specialist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "dilek-demirez-memorial-turkey",
+    "name": "Prof. Dr. Dilek DEMİREZ",
+    "specialty": "Aesthetic, Plastic and Reconstructive Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Plastic Surgery", "Aesthetic Surgery", "Reconstructive Surgery"],
+    "bio": "Prof. Dr. Dilek DEMİREZ is a Plastic and Reconstructive Surgeon at Medstar Antalya Hospital."
+  },
+  {
+    "id": "dilek-erkan-memorial-turkey",
+    "name": "Prof. Dr. Dilek ERKAN",
+    "specialty": "Ophthalmology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Ophthalmology"],
+    "bio": "Prof. Dr. Dilek ERKAN is an Ophthalmologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "dilek-necioglu-orken-memorial-turkey",
+    "name": "Prof. Dr. Dilek NECİOĞLU ÖRKEN",
+    "specialty": "Neurology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Neurology"],
+    "bio": "Prof. Dr. Dilek NECİOĞLU ÖRKEN is a Neurologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "dilek-oguz-kosehan-memorial-turkey",
+    "name": "Prof. Dr. Dilek Oğuz KÖSEHAN",
+    "specialty": "Radiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Radiology"],
+    "bio": "Prof. Dr. Dilek Oğuz KÖSEHAN is a Radiologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "e-esra-okuyucu-memorial-turkey",
+    "name": "Prof. Dr. E. Esra OKUYUCU",
+    "specialty": "Neurology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Neurology"],
+    "bio": "Prof. Dr. E. Esra OKUYUCU is a Neurologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "ebru-akgul-ercan-memorial-turkey",
+    "name": "Prof. Dr. Ebru AKGÜL ERCAN",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Ebru AKGÜL ERCAN is a Cardiologist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "ebru-cogendez-memorial-turkey",
+    "name": "Prof. Dr. Ebru ÇÖĞENDEZ",
+    "specialty": "Gynecology and Obstetrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gynecology", "Obstetrics"],
+    "bio": "Prof. Dr. Ebru ÇÖĞENDEZ is a Gynecologist and Obstetrician at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "ediz-altinli-memorial-turkey",
+    "name": "Prof. Dr. Ediz ALTINLI",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Ediz ALTINLI is a General Surgeon at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "ela-araz-server-memorial-turkey",
+    "name": "Prof. Dr. Ela ARAZ SERVER",
+    "specialty": "Ear, Nose and Throat Disorders",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["ENT", "Ear, Nose and Throat Disorders"],
+    "bio": "Prof. Dr. Ela ARAZ SERVER is an ENT Specialist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "emel-ozturk-memorial-turkey",
+    "name": "Prof. Dr. Emel ÖZTÜRK",
+    "specialty": "Nuclear Medicine",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Nuclear Medicine"],
+    "bio": "Prof. Dr. Emel ÖZTÜRK is a Nuclear Medicine Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "emine-cagnur-ulukus-memorial-turkey",
+    "name": "Prof. Dr. Emine Çağnur ULUKUŞ",
+    "specialty": "Pathology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pathology"],
+    "bio": "Prof. Dr. Emine Çağnur ULUKUŞ is a Pathologist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "emre-acaroglu-memorial-turkey",
+    "name": "Prof. Dr. Emre ACAROĞLU",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Emre ACAROĞLU is an Orthopedic and Traumatology Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "engin-acioglu-memorial-turkey",
+    "name": "Prof. Dr. Engin ACIOĞLU",
+    "specialty": "Ear, Nose and Throat Disorders",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["ENT", "Ear, Nose and Throat Disorders"],
+    "bio": "Prof. Dr. Engin ACIOĞLU is an ENT Specialist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "engin-cakar-memorial-turkey",
+    "name": "Prof. Dr. Engin ÇAKAR",
+    "specialty": "Stroke Rehabilitation and Research Unit",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Stroke Rehabilitation", "Neurology"],
+    "bio": "Prof. Dr. Engin ÇAKAR is a Stroke Rehabilitation Specialist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "ercan-abay-memorial-turkey",
+    "name": "Prof. Dr. Ercan ABAY",
+    "specialty": "Psychiatry",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Psychiatry"],
+    "bio": "Prof. Dr. Ercan ABAY is a Psychiatrist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "ercan-gedik-memorial-turkey",
+    "name": "Prof. Dr. Ercan GEDİK",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Ercan GEDİK is a General Surgeon at Memorial Diyarbakır Hospital."
+  },
+  {
+    "id": "ercan-karacaoglu-memorial-turkey",
+    "name": "Prof. Dr. Ercan KARACAOĞLU",
+    "specialty": "Aesthetic, Plastic and Reconstructive Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Plastic Surgery", "Aesthetic Surgery", "Reconstructive Surgery"],
+    "bio": "Prof. Dr. Ercan KARACAOĞLU is a Plastic and Reconstructive Surgeon at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "erdal-ince-memorial-turkey",
+    "name": "Prof. Dr. Erdal İNCE",
+    "specialty": "Pediatrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatrics"],
+    "bio": "Prof. Dr. Erdal İNCE is a Pediatrician at Memorial Ankara Hospital."
+  },
+  {
+    "id": "erdal-kukul-memorial-turkey",
+    "name": "Prof. Dr. Erdal KUKUL",
+    "specialty": "Urology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Urology"],
+    "bio": "Prof. Dr. Erdal KUKUL is a Urologist at Memorial Antalya Hospital."
+  },
+  {
+    "id": "erdal-seren-memorial-turkey",
+    "name": "Prof. Dr. Erdal SEREN",
+    "specialty": "Ear, Nose and Throat Disorders",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["ENT", "Ear, Nose and Throat Disorders"],
+    "bio": "Prof. Dr. Erdal SEREN is an ENT Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "erdem-akbal-memorial-turkey",
+    "name": "Prof. Dr. Erdem AKBAL",
+    "specialty": "Gastroenterology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gastroenterology"],
+    "bio": "Prof. Dr. Erdem AKBAL is a Gastroenterologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "erhan-reis-memorial-turkey",
+    "name": "Prof. Dr. Erhan REİS",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Erhan REİS is a General Surgeon at Memorial Ankara Hospital."
+  },
+  {
+    "id": "erkan-dogan-memorial-turkey",
+    "name": "Prof. Dr. Erkan DOĞAN",
+    "specialty": "Chemotherapy (Medical Oncology)",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Medical Oncology", "Oncology"],
+    "bio": "Prof. Dr. Erkan DOĞAN is a Medical Oncologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "erman-aytac-memorial-turkey",
+    "name": "Prof. Dr. Erman AYTAÇ",
+    "specialty": "General Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["General Surgery"],
+    "bio": "Prof. Dr. Erman AYTAÇ is a General Surgeon at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "erol-selimoglu-memorial-turkey",
+    "name": "Prof. Dr. Erol SELİMOĞLU",
+    "specialty": "Ear, Nose and Throat Disorders",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["ENT", "Ear, Nose and Throat Disorders"],
+    "bio": "Prof. Dr. Erol SELİMOĞLU is an ENT Specialist at Memorial Atasehir Hospital."
+  },
+  {
+    "id": "ersoy-civelek-memorial-turkey",
+    "name": "Prof. Dr. Ersoy CİVELEK",
+    "specialty": "Pediatric Allergic Rhinitis",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Allergic Rhinitis", "Allergy"],
+    "bio": "Prof. Dr. Ersoy CİVELEK is a Pediatric Allergic Rhinitis Specialist at Memorial Ankara Hospital."
+  },
+  {
+    "id": "esra-esim-buyukbayrak-memorial-turkey",
+    "name": "Prof. Dr. Esra ESİM BÜYÜKBAYRAK",
+    "specialty": "Gynecology and Obstetrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Gynecology", "Obstetrics"],
+    "bio": "Prof. Dr. Esra ESİM BÜYÜKBAYRAK is a Gynecologist and Obstetrician at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "esra-kaytan-saglam-memorial-turkey",
+    "name": "Prof. Dr. Esra KAYTAN SAĞLAM",
+    "specialty": "Radiation Oncology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Radiation Oncology"],
+    "bio": "Prof. Dr. Esra KAYTAN SAĞLAM is a Radiation Oncologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "eyup-veli-kucuk-memorial-turkey",
+    "name": "Prof. Dr. Eyüp Veli KÜÇÜK",
+    "specialty": "Urology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Urology"],
+    "bio": "Prof. Dr. Eyüp Veli KÜÇÜK is a Urologist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "faruk-cingoz-memorial-turkey",
+    "name": "Prof. Dr. Faruk CİNGÖZ",
+    "specialty": "Cardiovascular Surgery",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiovascular Surgery"],
+    "bio": "Prof. Dr. Faruk CİNGÖZ is a Cardiovascular Surgeon at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "fatih-demirkan-memorial-turkey",
+    "name": "Prof. Dr. Fatih DEMİRKAN",
+    "specialty": "Hematology / Blood Diseases",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Hematology", "Blood Diseases"],
+    "bio": "Prof. Dr. Fatih DEMİRKAN is a Hematologist at Memorial Antalya Hospital."
+  },
+  {
+    "id": "fatih-karaaslan-memorial-turkey",
+    "name": "Prof. Dr. Fatih KARAASLAN",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Fatih KARAASLAN is an Orthopedic and Traumatology Specialist at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "fatih-tanriverdi-memorial-turkey",
+    "name": "Prof. Dr. Fatih TANRIVERDİ",
+    "specialty": "Endocrinology, Diabetes and Metabolic Diseases",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Endocrinology", "Diabetes", "Metabolic Diseases"],
+    "bio": "Prof. Dr. Fatih TANRIVERDİ is an Endocrinologist at Memorial Kayseri Hospital."
+  },
+  {
+    "id": "fatih-yanaral-memorial-turkey",
+    "name": "Prof. Dr. Fatih YANARAL",
+    "specialty": "Urology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Urology"],
+    "bio": "Prof. Dr. Fatih YANARAL is a Urologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "fatih-yildiz-memorial-turkey",
+    "name": "Prof. Dr. Fatih YILDIZ",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Fatih YILDIZ is an Orthopedic and Traumatology Specialist at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "fatma-aktepe-memorial-turkey",
+    "name": "Prof. Dr. Fatma AKTEPE",
+    "specialty": "Pathology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pathology"],
+    "bio": "Prof. Dr. Fatma AKTEPE is a Pathologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "fazilet-karakoc-memorial-turkey",
+    "name": "Prof. Dr. Fazilet KARAKOÇ",
+    "specialty": "Pediatric Pulmonology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatric Pulmonology", "Pulmonology"],
+    "bio": "Prof. Dr. Fazilet KARAKOÇ is a Pediatric Pulmonologist at Memorial Şişli Hospital."
+  },
+  {
+    "id": "fazilet-oner-dincbas-k-memorial-turkey",
+    "name": "Prof. Dr. Fazilet ÖNER DİNÇBAŞ (K)",
+    "specialty": "Radiation Oncology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Radiation Oncology"],
+    "bio": "Prof. Dr. Fazilet ÖNER DİNÇBAŞ is a Radiation Oncologist at Memorial Bahçelievler Hospital."
+  },
+  {
+    "id": "ferhat-cekmez-memorial-turkey",
+    "name": "Prof. Dr. Ferhat ÇEKMEZ",
+    "specialty": "Pediatrics",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Pediatrics"],
+    "bio": "Prof. Dr. Ferhat ÇEKMEZ is a Pediatrician at Memorial Goztepe Hospital."
+  },
+  {
+    "id": "mustafa-aydin-memorial-turkey",
+    "name": "Prof. Dr. Mustafa AYDIN",
+    "specialty": "Cardiology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Cardiology"],
+    "bio": "Prof. Dr. Mustafa AYDIN is a Cardiologist at Memorial Hospital Turkey."
+  },
+  {
+    "id": "mustafa-demir-memorial-turkey",
+    "name": "Prof. Dr. Mustafa DEMİR",
+    "specialty": "Orthopedics and Traumatology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Orthopedics", "Traumatology"],
+    "bio": "Prof. Dr. Mustafa DEMİR is an Orthopedic and Traumatology Specialist at Memorial Hospital Turkey."
+  },
+  {
+    "id": "mustafa-ozkan-memorial-turkey",
+    "name": "Prof. Dr. Mustafa ÖZKAN",
+    "specialty": "Urology",
+    "designation": "Prof. Dr.",
+    "hospital": "Memorial Hospital Turkey",
+    "hospitalSlug": "memorial-hospital-turkey",
+    "specialties": ["Urology"],
+    "bio": "Prof. Dr. Mustafa ÖZKAN is a Urologist at Memorial Hospital Turkey."
   },
   {
     "id": "babu-ram-pokharel-nepal-mediciti",

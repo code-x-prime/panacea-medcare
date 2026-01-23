@@ -49,10 +49,10 @@ export default function DoctorDetailPage({ params }) {
 
             <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 <div className="max-w-5xl mx-auto">
-                    <div className="grid lg:grid-cols-3 gap-8">
+                    <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
                         {/* Left Sidebar - Doctor Image and Basic Info */}
                         <div className="lg:col-span-1">
-                            <div className="bg-white p-6 rounded-lg shadow-lg sticky top-4">
+                            <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg sticky top-4">
                                 <div className="relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-gray-100">
                                     {doctor.image ? (
                                         <Image
@@ -69,7 +69,7 @@ export default function DoctorDetailPage({ params }) {
                                         </div>
                                     )}
                                 </div>
-                                
+
                                 <div className={`${isRTL ? "text-right" : "text-left"}`}>
                                     <h2 className="text-2xl font-bold text-gray-900 mb-2">{name}</h2>
                                     {designation && (
@@ -78,12 +78,12 @@ export default function DoctorDetailPage({ params }) {
                                     {specialty && (
                                         <p className="text-panacea-accent font-medium mb-4">{specialty}</p>
                                     )}
-                                    
+
                                     {hospital && (
                                         <div className="mb-4 pb-4 border-b border-gray-200">
                                             <p className="text-sm text-gray-600 mb-1">Hospital</p>
                                             {hospitalSlug ? (
-                                                <Link 
+                                                <Link
                                                     href={`/${locale}/hospitals/${hospitalSlug}`}
                                                     className="text-panacea-primary hover:underline font-semibold"
                                                 >
@@ -179,9 +179,9 @@ export default function DoctorDetailPage({ params }) {
                                     </h3>
                                     <ul className={`space-y-2 ${isRTL ? "text-right" : "text-left"}`}>
                                         {expertise.map((item, index) => (
-                                            <li key={index} className="flex items-start gap-2">
+                                            <li key={index} className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}>
                                                 <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                <span className="text-gray-700">{item}</span>
+                                                <span className="text-gray-700 break-words">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -196,9 +196,9 @@ export default function DoctorDetailPage({ params }) {
                                     </h3>
                                     <ul className={`space-y-2 ${isRTL ? "text-right" : "text-left"}`}>
                                         {specialityInterest.map((item, index) => (
-                                            <li key={index} className="flex items-start gap-2">
+                                            <li key={index} className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}>
                                                 <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                <span className="text-gray-700">{item}</span>
+                                                <span className="text-gray-700 break-words">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -213,9 +213,9 @@ export default function DoctorDetailPage({ params }) {
                                     </h3>
                                     <ul className={`space-y-2 ${isRTL ? "text-right" : "text-left"}`}>
                                         {achievements.map((item, index) => (
-                                            <li key={index} className="flex items-start gap-2">
+                                            <li key={index} className={`flex items-start gap-2 ${isRTL ? "flex-row-reverse" : ""}`}>
                                                 <FaCheckCircle className="w-5 h-5 text-panacea-primary flex-shrink-0 mt-1" />
-                                                <span className="text-gray-700">{item}</span>
+                                                <span className="text-gray-700 break-words">{item}</span>
                                             </li>
                                         ))}
                                     </ul>

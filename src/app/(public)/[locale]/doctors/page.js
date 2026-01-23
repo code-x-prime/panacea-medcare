@@ -106,7 +106,7 @@ export default function DoctorsPage({ params }) {
                 {/* Doctors Grid */}
                 {filteredDoctors.length > 0 ? (
                     <>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
                             {currentDoctors.map((doctor) => {
                                 const name = doctor.name || "";
                                 const specialty = doctor.specialty || "";
@@ -119,10 +119,10 @@ export default function DoctorsPage({ params }) {
                                 return (
                                     <article
                                         key={doctor.id}
-                                        className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-panacea-primary flex flex-col"
+                                        className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-panacea-primary flex flex-col w-full max-w-full"
                                     >
                                         <Link href={`/${locale}/doctors/${doctor.id}`} className="flex-1 flex flex-col">
-                                            <span className="aspect-square bg-gray-200 relative overflow-hidden block">
+                                            <span className="aspect-square bg-gray-200 relative overflow-hidden block w-full">
                                                 {doctor.image ? (
                                                     <Image
                                                         src={doctor.image}
@@ -134,38 +134,38 @@ export default function DoctorsPage({ params }) {
                                                     />
                                                 ) : (
                                                     <span className="absolute inset-0 bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center">
-                                                        <FaUserMd className="w-20 h-20 text-panacea-primary/50" />
+                                                        <FaUserMd className="w-16 h-16 md:w-20 md:h-20 text-panacea-primary/50" />
                                                     </span>
                                                 )}
-                                                <span className="absolute inset-0 bg-gradient-to-t from-panacea-primary/80 via-panacea-primary/40 to-transparent flex items-end p-6">
+                                                <span className="absolute inset-0 bg-gradient-to-t from-panacea-primary/80 via-panacea-primary/40 to-transparent flex items-end p-4 md:p-6">
                                                     <span className={isRTL ? "text-right w-full block" : "text-left w-full block"}>
-                                                        <span className="text-2xl font-bold text-white block">{name}</span>
-                                                        <span className="text-white/90 block">{specialty}</span>
+                                                        <span className="text-lg md:text-2xl font-bold text-white block break-words">{name}</span>
+                                                        <span className="text-sm md:text-base text-white/90 block break-words">{specialty}</span>
                                                     </span>
                                                 </span>
                                             </span>
-                                            <span className={`p-6 flex-1 flex flex-col ${isRTL ? "text-right" : "text-left"}`} style={{ display: 'flex' }}>
+                                            <span className={`p-4 md:p-6 flex-1 flex flex-col ${isRTL ? "text-right" : "text-left"}`} style={{ display: 'flex' }}>
                                                 {designation && (
-                                                    <span className="text-sm text-panacea-primary font-semibold mb-2 block">{designation}</span>
+                                                    <span className="text-xs md:text-sm text-panacea-primary font-semibold mb-2 block break-words">{designation}</span>
                                                 )}
                                                 {qualification && (
-                                                    <span className="text-sm text-gray-600 mb-2 block">{qualification}</span>
+                                                    <span className="text-xs md:text-sm text-gray-600 mb-2 block break-words">{qualification}</span>
                                                 )}
                                                 {experience && (
-                                                    <span className="text-sm font-semibold text-panacea-accent mb-2 block">{experience}</span>
+                                                    <span className="text-xs md:text-sm font-semibold text-panacea-accent mb-2 block">{experience}</span>
                                                 )}
                                                 {hospital && (
                                                     <span className="flex items-center gap-2 mt-auto">
-                                                        <span className="text-sm text-gray-700">{hospital}</span>
+                                                        <span className="text-xs md:text-sm text-gray-700 break-words">{hospital}</span>
                                                     </span>
                                                 )}
                                             </span>
                                         </Link>
-                                        <div className="p-6 pt-0 space-y-3">
+                                        <div className="p-4 md:p-6 pt-0 space-y-3">
                                             {hospitalSlug && (
                                                 <Link
                                                     href={`/${locale}/hospitals/${hospitalSlug}`}
-                                                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center text-sm"
+                                                    className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center text-xs md:text-sm"
                                                 >
                                                     View Hospital
                                                 </Link>
@@ -173,17 +173,19 @@ export default function DoctorsPage({ params }) {
                                             <div className="flex gap-2">
                                                 <button
                                                     onClick={() => handleWhatsApp(doctor)}
-                                                    className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
+                                                    className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 md:py-3 px-2 md:px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-1 md:gap-2 text-xs md:text-sm"
                                                 >
-                                                    <FaWhatsapp className="w-5 h-5" />
-                                                    WhatsApp
+                                                    <FaWhatsapp className="w-4 h-4 md:w-5 md:h-5" />
+                                                    <span className="hidden sm:inline">WhatsApp</span>
+                                                    <span className="sm:hidden">WA</span>
                                                 </button>
                                                 <button
                                                     onClick={() => openBookingModal(doctor)}
-                                                    className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                                                    className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 md:py-3 px-2 md:px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 md:gap-2 text-xs md:text-sm"
                                                 >
-                                                    <FaCalendarCheck className="w-4 h-4" />
-                                                    Book Now
+                                                    <FaCalendarCheck className="w-3 h-3 md:w-4 md:h-4" />
+                                                    <span className="hidden sm:inline">Book Now</span>
+                                                    <span className="sm:hidden">Book</span>
                                                 </button>
                                             </div>
                                         </div>

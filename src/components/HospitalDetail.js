@@ -303,14 +303,14 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-5xl mx-auto">
                         {hospital.doctors.map((doctor, index) => (
                             <div
                                 key={index}
-                                className="group bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                                className="group bg-gradient-to-br from-gray-50 to-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 w-full max-w-full"
                             >
                                 {/* Doctor Image */}
-                                <div className="relative h-64 overflow-hidden">
+                                <div className="relative h-48 md:h-64 overflow-hidden">
                                     <Image
                                         src={doctor.image}
                                         alt={doctor.name}
@@ -320,27 +320,28 @@ export default function HospitalDetailPage({ locale, hospitalData }) {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 
                                     {/* Experience Badge */}
-                                    <div className="absolute top-4 right-4 bg-panacea-accent text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                                        <Star className="w-4 h-4 fill-current" />
-                                        <span>{doctor.experience}+ {t("doctors.experience")}</span>
+                                    <div className="absolute top-2 md:top-4 right-2 md:right-4 bg-panacea-accent text-white px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1">
+                                        <Star className="w-3 h-3 md:w-4 md:h-4 fill-current" />
+                                        <span className="hidden sm:inline">{doctor.experience}+ {t("doctors.experience")}</span>
+                                        <span className="sm:hidden">{doctor.experience}+</span>
                                     </div>
                                 </div>
 
                                 {/* Doctor Info */}
-                                <div className={`p-6 ${isRTL ? "text-right" : "text-left"}`}>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                                <div className={`p-4 md:p-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 break-words">
                                         {doctor.name}
                                     </h3>
-                                    <p className="text-panacea-primary font-semibold mb-4">
+                                    <p className="text-sm md:text-base text-panacea-primary font-semibold mb-4 break-words">
                                         {doctor.specialty}
                                     </p>
                                     <button
-                                        className={`w-full py-2 px-4 bg-panacea-primary hover:bg-panacea-dark text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 ${isRTL ? "flex-row-reverse" : ""
+                                        className={`w-full py-2 px-3 md:px-4 bg-panacea-primary hover:bg-panacea-dark text-white rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 text-xs md:text-sm ${isRTL ? "flex-row-reverse" : ""
                                             }`}
                                     >
                                         <span>{t("doctors.viewProfile")}</span>
                                         <ArrowRight
-                                            className={`w-4 h-4 ${isRTL ? "rotate-180" : ""}`}
+                                            className={`w-3 h-3 md:w-4 md:h-4 ${isRTL ? "rotate-180" : ""}`}
                                         />
                                     </button>
                                 </div>

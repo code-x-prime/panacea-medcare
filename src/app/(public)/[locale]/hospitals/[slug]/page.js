@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight, FaCalendarCheck } from "react-icons/fa";
 import hospitalsData from "@/data/hospitals.json";
@@ -39,6 +39,26 @@ export default function HospitalDetailPage({ params }) {
     const [doctorCarouselIndex, setDoctorCarouselIndex] = useState(0);
     const [selectedDoctor, setSelectedDoctor] = useState(null);
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+    const [doctorsPerSlide, setDoctorsPerSlide] = useState(3);
+
+    // Handle responsive doctors per slide
+    useEffect(() => {
+        const updateDoctorsPerSlide = () => {
+            if (window.innerWidth < 768) {
+                setDoctorsPerSlide(1);
+            } else if (window.innerWidth < 1024) {
+                setDoctorsPerSlide(2);
+            } else {
+                setDoctorsPerSlide(3);
+            }
+            // Reset carousel index when screen size changes
+            setDoctorCarouselIndex(0);
+        };
+
+        updateDoctorsPerSlide();
+        window.addEventListener('resize', updateDoctorsPerSlide);
+        return () => window.removeEventListener('resize', updateDoctorsPerSlide);
+    }, []);
 
     const openBookingModal = (doctor) => {
         setSelectedDoctor(doctor);
@@ -137,7 +157,7 @@ export default function HospitalDetailPage({ params }) {
     const hospitalDoctors = doctorsData.filter(doctor => doctor.hospitalSlug === slug);
 
     return (
-        <main dir={isRTL ? "rtl" : "ltr"}>
+        <main dir={isRTL ? "rtl" : "ltr"} className="w-full overflow-x-hidden">
             {/* Single Image Header */}
             <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
                 {hospitalImages.length > 0 && (
@@ -161,8 +181,8 @@ export default function HospitalDetailPage({ params }) {
                 </div>
             </div>
 
-            <section className="container mx-auto px-4  sm:px-6 lg:px-8 py-12 md:py-16">
-                <div className=" mx-auto">
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 overflow-x-hidden">
+                <div className="mx-auto max-w-full">
                     {/* Hospital Overview Card */}
                     <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -364,9 +384,9 @@ export default function HospitalDetailPage({ params }) {
                         </div>
                     )}
 
-                    <div className="grid lg:grid-cols-3 gap-8">
+                    <div className="grid lg:grid-cols-3 gap-6 md:gap-8 w-full overflow-hidden">
                         {/* Main Content */}
-                        <div className="lg:col-span-2 space-y-12">
+                        <div className="lg:col-span-2 space-y-8 md:space-y-12 w-full overflow-hidden">
                             {/* About Hospital */}
                             {hospitalFullDesc && (
                                 <div>
@@ -447,113 +467,117 @@ export default function HospitalDetailPage({ params }) {
 
                             {/* Doctors Section */}
                             {hospitalDoctors && hospitalDoctors.length > 0 && (
-                                <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                <div className="w-full overflow-hidden">
+                                    <h2 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("doctors") || "Doctors"}
                                     </h2>
 
                                     {/* Carousel Container */}
-                                    <div className="relative">
+                                    <div className="relative w-full max-w-full">
                                         <div className="overflow-hidden rounded-lg">
                                             <div
                                                 className="flex transition-transform duration-500 ease-in-out"
                                                 style={{ transform: `translateX(-${doctorCarouselIndex * 100}%)` }}
                                             >
-                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / 3) }).map((_, slideIdx) => (
-                                                    <div key={slideIdx} className="min-w-full grid md:grid-cols-3 gap-6 px-2">
-                                                        {hospitalDoctors.slice(slideIdx * 3, slideIdx * 3 + 3).map((doctor) => (
-                                                            <article
-                                                                key={doctor.id}
-                                                                className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
-                                                            >
-                                                                <Link
-                                                                    href={`/${locale}/doctors/${doctor.id}`}
-                                                                    className="flex-1 flex flex-col"
+                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / doctorsPerSlide) }).map((_, slideIdx) => (
+                                                    <div key={slideIdx} className="min-w-full flex-shrink-0 w-full px-1 sm:px-2">
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 w-full">
+                                                            {hospitalDoctors.slice(slideIdx * doctorsPerSlide, slideIdx * doctorsPerSlide + doctorsPerSlide).map((doctor) => (
+                                                                <article
+                                                                    key={doctor.id}
+                                                                    className="group bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full max-w-full"
                                                                 >
-                                                                    <span className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-gray-100 block">
-                                                                        {doctor.image ? (
-                                                                            <Image
-                                                                                src={doctor.image}
-                                                                                alt={doctor.name}
-                                                                                fill
-                                                                                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                                                                loading="lazy"
-                                                                                unoptimized
-                                                                            />
-                                                                        ) : (
-                                                                            <span className="w-full h-full bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center absolute inset-0">
-                                                                                <FaUserMd className="w-16 h-16 text-panacea-primary/50" />
-                                                                            </span>
-                                                                        )}
-                                                                    </span>
-                                                                    <span className={`flex-1 block ${isRTL ? "text-right" : "text-left"}`}>
-                                                                        <span className="font-bold text-lg text-gray-900 group-hover:text-panacea-primary transition-colors block">
-                                                                            {doctor.name}
-                                                                        </span>
-                                                                        <span className="text-panacea-primary font-semibold text-sm mt-1 block">
-                                                                            {doctor.specialty}
-                                                                        </span>
-                                                                        {doctor.designation && (
-                                                                            <span className="text-gray-600 text-sm mt-2 block">
-                                                                                {doctor.designation}
-                                                                            </span>
-                                                                        )}
-                                                                        {doctor.experience && (
-                                                                            <span className="text-gray-500 text-xs mt-2 block">
-                                                                                {doctor.experience}
-                                                                            </span>
-                                                                        )}
-                                                                    </span>
-                                                                </Link>
-                                                                <div className="mt-4 pt-4 border-t border-gray-200 flex gap-2">
-                                                                    <button
-                                                                        onClick={() => handleWhatsApp(doctor)}
-                                                                        className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-1"
+                                                                    <Link
+                                                                        href={`/${locale}/doctors/${doctor.id}`}
+                                                                        className="flex-1 flex flex-col"
                                                                     >
-                                                                        <FaWhatsapp className="w-4 h-4" />
-                                                                        <span className="text-sm">WhatsApp</span>
-                                                                    </button>
-                                                                    <button
-                                                                        onClick={() => openBookingModal(doctor)}
-                                                                        className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1"
-                                                                    >
-                                                                        <FaCalendarCheck className="w-4 h-4" />
-                                                                        <span className="text-sm">Book Now</span>
-                                                                    </button>
-                                                                </div>
-                                                            </article>
-                                                        ))}
+                                                                        <span className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-gray-100 block">
+                                                                            {doctor.image ? (
+                                                                                <Image
+                                                                                    src={doctor.image}
+                                                                                    alt={doctor.name}
+                                                                                    fill
+                                                                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                                                                    loading="lazy"
+                                                                                    unoptimized
+                                                                                />
+                                                                            ) : (
+                                                                                <span className="w-full h-full bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center absolute inset-0">
+                                                                                    <FaUserMd className="w-12 h-12 md:w-16 md:h-16 text-panacea-primary/50" />
+                                                                                </span>
+                                                                            )}
+                                                                        </span>
+                                                                        <span className={`flex-1 block ${isRTL ? "text-right" : "text-left"}`}>
+                                                                            <span className="font-bold text-base md:text-lg text-gray-900 group-hover:text-panacea-primary transition-colors block break-words">
+                                                                                {doctor.name}
+                                                                            </span>
+                                                                            <span className="text-panacea-primary font-semibold text-xs md:text-sm mt-1 block break-words">
+                                                                                {doctor.specialty}
+                                                                            </span>
+                                                                            {doctor.designation && (
+                                                                                <span className="text-gray-600 text-xs md:text-sm mt-2 block break-words">
+                                                                                    {doctor.designation}
+                                                                                </span>
+                                                                            )}
+                                                                            {doctor.experience && (
+                                                                                <span className="text-gray-500 text-xs mt-2 block">
+                                                                                    {doctor.experience}
+                                                                                </span>
+                                                                            )}
+                                                                        </span>
+                                                                    </Link>
+                                                                    <div className="mt-4 pt-4 border-t border-gray-200 flex gap-2">
+                                                                        <button
+                                                                            onClick={() => handleWhatsApp(doctor)}
+                                                                            className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-2 md:px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-1 text-xs md:text-sm"
+                                                                        >
+                                                                            <FaWhatsapp className="w-3 h-3 md:w-4 md:h-4" />
+                                                                            <span className="hidden sm:inline">WhatsApp</span>
+                                                                            <span className="sm:hidden">WA</span>
+                                                                        </button>
+                                                                        <button
+                                                                            onClick={() => openBookingModal(doctor)}
+                                                                            className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 px-2 md:px-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 text-xs md:text-sm"
+                                                                        >
+                                                                            <FaCalendarCheck className="w-3 h-3 md:w-4 md:h-4" />
+                                                                            <span className="hidden sm:inline">Book Now</span>
+                                                                            <span className="sm:hidden">Book</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </article>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 ))}
                                             </div>
                                         </div>
 
                                         {/* Navigation Arrows */}
-                                        {Math.ceil(hospitalDoctors.length / 3) > 1 && (
+                                        {Math.ceil(hospitalDoctors.length / doctorsPerSlide) > 1 && (
                                             <>
                                                 <button
                                                     onClick={() => setDoctorCarouselIndex((prev) => Math.max(0, prev - 1))}
                                                     disabled={doctorCarouselIndex === 0}
-                                                    className={`absolute -left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    className={`absolute left-1 sm:left-2 md:-left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-1.5 sm:p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
                                                     aria-label="Previous"
                                                 >
-                                                    <FaChevronLeft className="w-4 h-4" />
+                                                    <FaChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
                                                 </button>
                                                 <button
-                                                    onClick={() => setDoctorCarouselIndex((prev) => Math.min(Math.ceil(hospitalDoctors.length / 3) - 1, prev + 1))}
-                                                    disabled={doctorCarouselIndex === Math.ceil(hospitalDoctors.length / 3) - 1}
-                                                    className={`absolute -right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === Math.ceil(hospitalDoctors.length / 3) - 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    onClick={() => setDoctorCarouselIndex((prev) => Math.min(Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1, prev + 1))}
+                                                    disabled={doctorCarouselIndex === Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1}
+                                                    className={`absolute right-1 sm:right-2 md:-right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-1.5 sm:p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1 ? "opacity-50 cursor-not-allowed" : ""}`}
                                                     aria-label="Next"
                                                 >
-                                                    <FaChevronRight className="w-4 h-4" />
+                                                    <FaChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
                                                 </button>
                                             </>
                                         )}
 
                                         {/* Dots Indicator */}
-                                        {Math.ceil(hospitalDoctors.length / 3) > 1 && (
+                                        {Math.ceil(hospitalDoctors.length / doctorsPerSlide) > 1 && (
                                             <div className="flex justify-center gap-2 mt-6">
-                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / 3) }).map((_, index) => (
+                                                {Array.from({ length: Math.ceil(hospitalDoctors.length / doctorsPerSlide) }).map((_, index) => (
                                                     <button
                                                         key={index}
                                                         onClick={() => setDoctorCarouselIndex(index)}

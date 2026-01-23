@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import doctors from "@/data/doctors.json";
 import { FaUserMd, FaCheckCircle, FaWhatsapp, FaEnvelope, FaCalendarAlt } from "react-icons/fa";
+import { useState } from "react";
+import BookingModal from "@/components/BookingModal";
 
 export default function DoctorDetailPage({ params }) {
     const { locale, id } = params;
@@ -35,6 +37,22 @@ export default function DoctorDetailPage({ params }) {
     const membership = doctor.membership || [];
     const opdTiming = doctor.opdTiming || "";
     const roomNo = doctor.roomNo || "";
+
+    // Booking modal state
+    const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+
+    // WhatsApp message with doctor details
+    const whatsappMessage = encodeURIComponent(
+        `Hi! I would like to book an appointment with ${name}.\n\nDoctor: ${name}\nSpecialty: ${specialty}\nHospital: ${hospital}\n\nPlease contact me for scheduling.`
+    );
+    const whatsappLink = `https://wa.me/919958800961?text=${whatsappMessage}`;
+
+    // Email subject and body with doctor details
+    const emailSubject = encodeURIComponent(`Appointment Request - ${name}`);
+    const emailBody = encodeURIComponent(
+        `Hi,\n\nI would like to book an appointment with ${name}.\n\nDoctor: ${name}\nSpecialty: ${specialty}\nHospital: ${hospital}\n\nPlease contact me for scheduling.\n\nThank you.`
+    );
+    const emailLink = `mailto:care@panaceamedcare.com?subject=${emailSubject}&body=${emailBody}`;
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"}>
@@ -122,18 +140,18 @@ export default function DoctorDetailPage({ params }) {
 
                                 {/* Action Buttons */}
                                 <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
-                                    {/* Book Now Button */}
-                                    <a
-                                        href={`/${locale}/quote`}
+                                    {/* Book Appointment Button */}
+                                    <button
+                                        onClick={() => setIsBookingModalOpen(true)}
                                         className="w-full flex items-center justify-center gap-2 bg-panacea-primary hover:bg-panacea-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
                                     >
                                         <FaCalendarAlt className="w-5 h-5" />
                                         <span>Book Appointment</span>
-                                    </a>
+                                    </button>
 
                                     {/* WhatsApp Button */}
                                     <a
-                                        href={`https://wa.me/919310488850?text=Hi, I want to book an appointment with ${encodeURIComponent(name)} at ${encodeURIComponent(hospital)}`}
+                                        href={whatsappLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
@@ -144,8 +162,8 @@ export default function DoctorDetailPage({ params }) {
 
                                     {/* Email Button */}
                                     <a
-                                        href={`mailto:info@panaceamedcare.com?subject=Appointment Request for ${encodeURIComponent(name)}&body=Hi, I would like to book an appointment with ${encodeURIComponent(name)} at ${encodeURIComponent(hospital)}.`}
-                                        className="w-full flex items-center justify-center gap-2 bg-panacea-accent hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                                        href={emailLink}
+                                        className="w-full flex items-center justify-center gap-2 bg-panacea-accent hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
                                     >
                                         <FaEnvelope className="w-5 h-5" />
                                         <span>Email Us</span>
@@ -273,6 +291,14 @@ export default function DoctorDetailPage({ params }) {
                     </div>
                 </div>
             </section>
+
+            {/* Booking Modal */}
+            <BookingModal
+                isOpen={isBookingModalOpen}
+                onClose={() => setIsBookingModalOpen(false)}
+                doctor={doctor}
+                locale={locale}
+            />
         </main>
     );
 }

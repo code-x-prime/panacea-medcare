@@ -5,14 +5,6 @@ import env from "@/config/env";
 const port = parseInt(process.env.SMTP_PORT) || 587;
 const secure = port === 465;
 
-console.log("Mail config:", {
-  host: env.SMTP_HOST,
-  port: port,
-  secure: secure,
-  user: env.SMTP_USER,
-  from: env.FROM_EMAIL,
-});
-
 const transporter = nodemailer.createTransport({
   host: env.SMTP_HOST,
   port: port,

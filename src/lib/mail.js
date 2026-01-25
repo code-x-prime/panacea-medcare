@@ -5,6 +5,14 @@ import env from "@/config/env";
 const port = parseInt(process.env.SMTP_PORT) || 587;
 const secure = port === 465;
 
+console.log("Mail config:", {
+  host: env.SMTP_HOST,
+  port: port,
+  secure: secure,
+  user: env.SMTP_USER,
+  from: env.FROM_EMAIL,
+});
+
 const transporter = nodemailer.createTransport({
   host: env.SMTP_HOST,
   port: port,
@@ -16,6 +24,9 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async function sendMail({ to, subject, html }) {
+  console.log("Attempting to send email to:", to);
+  console.log("Email subject:", subject);
+
   try {
     const info = await transporter.sendMail({
       from: `"${env.NEXT_PUBLIC_SITE_NAME}" <${env.FROM_EMAIL}>`,
@@ -24,10 +35,11 @@ export default async function sendMail({ to, subject, html }) {
       html,
     });
 
-    console.log("Email sent successfully:", info.messageId);
+    console.log("✅ Email sent successfully:", info.messageId);
     return info || true;
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("❌ Error sending email:", error.message);
+    console.error("Full error:", error);
     return false;
   }
 }

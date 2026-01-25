@@ -19,13 +19,16 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { FaCalendarCheck } from "react-icons/fa";
+import { FaCalendarCheck, FaSpinner, FaCheckCircle } from "react-icons/fa";
 
 export default function QuoteForm({ trigger, className, embedded = false }) {
   const t = useTranslations("quoteForm");
   const locale = useLocale();
   const isRTL = locale === "ar";
   const [open, setOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     patientName: "",
     country: "",
@@ -104,21 +107,65 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert(t("submitSuccess"));
-    if (!embedded) {
-      setOpen(false);
+    setIsSubmitting(true);
+    setError("");
+
+    // Validate required fields
+    if (!formData.patientName || !formData.phoneNumber || !formData.medicalProblem) {
+      setError(t("fillRequiredFields") || "Please fill all required fields");
+      setIsSubmitting(false);
+      return;
     }
-    setFormData({
-      patientName: "",
-      country: "",
-      city: "",
-      phoneCode: "+91",
-      phoneNumber: "",
-      whatsappCode: "+91",
-      whatsappNumber: "",
-      medicalProblem: "",
-    });
+
+    try {
+      const fullPhone = `${formData.phoneCode}${formData.phoneNumber}`;
+      const fullWhatsapp = formData.whatsappNumber ? `${formData.whatsappCode}${formData.whatsappNumber}` : "";
+
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.patientName,
+          phone: fullPhone,
+          country: formData.country,
+          message: `City: ${formData.city}\nWhatsApp: ${fullWhatsapp}\nMedical Problem: ${formData.medicalProblem}`,
+          source: "quote form",
+          locale: locale,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSuccess(true);
+        setFormData({
+          patientName: "",
+          country: "",
+          city: "",
+          phoneCode: "+91",
+          phoneNumber: "",
+          whatsappCode: "+91",
+          whatsappNumber: "",
+          medicalProblem: "",
+        });
+
+        // Auto close dialog after 3 seconds
+        setTimeout(() => {
+          setIsSuccess(false);
+          if (!embedded) {
+            setOpen(false);
+          }
+        }, 3000);
+      } else {
+        const data = await response.json();
+        setError(data.error || t("submitError") || "Failed to submit. Please try again.");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError(t("submitError") || "Failed to submit. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const defaultTrigger = (
@@ -128,7 +175,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
     </Button>
   );
 
-  const FormFields = () => (
+  const formFieldsContent = (
     <>
       {/* Patient Name */}
       <div className="grid md:grid-cols-2 gap-4">
@@ -142,7 +189,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             value={formData.patientName}
             onChange={(e) => setFormData({ ...formData, patientName: e.target.value })}
             required
-            className={`w-full bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`w-full bg-white border border-gray-300 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
 
@@ -156,7 +203,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             onValueChange={(value) => setFormData({ ...formData, country: value })}
             required
           >
-            <SelectTrigger className={`w-full bg-panacea-light/30 border-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}>
+            <SelectTrigger className={`w-full bg-white border border-gray-300 ${isRTL ? 'text-right' : 'text-left'}`}>
               <SelectValue placeholder={t("selectCountry")} />
             </SelectTrigger>
             <SelectContent className="bg-white max-h-[150px]">
@@ -182,7 +229,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             value={formData.city}
             onChange={(e) => setFormData({ ...formData, city: e.target.value })}
             required
-            className={`w-full bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`w-full bg-white border border-gray-300 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
 
@@ -196,7 +243,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
               value={formData.phoneCode}
               onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
             >
-              <SelectTrigger className="w-24 bg-panacea-light/30 border-panacea-secondary/20">
+              <SelectTrigger className="w-24 bg-white border border-gray-300">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="bg-white max-h-[200px]">
@@ -213,7 +260,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
               value={formData.phoneNumber}
               onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
               required
-              className={`flex-1 bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
+              className={`flex-1 bg-white border border-gray-300 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
             />
           </div>
         </div>
@@ -229,7 +276,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             value={formData.whatsappCode}
             onValueChange={(value) => setFormData({ ...formData, whatsappCode: value })}
           >
-            <SelectTrigger className="w-24 bg-panacea-light/30 border-panacea-secondary/20">
+            <SelectTrigger className="w-24 bg-white border border-gray-300">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white max-h-[200px]">
@@ -245,7 +292,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
             placeholder={t("whatsappPlaceholder")}
             value={formData.whatsappNumber}
             onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
-            className={`flex-1 bg-panacea-light/30 border-panacea-secondary/20 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
+            className={`flex-1 bg-white border border-gray-300 focus:border-panacea-secondary focus:ring-panacea-secondary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
       </div>
@@ -260,18 +307,45 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           value={formData.medicalProblem}
           onChange={(e) => setFormData({ ...formData, medicalProblem: e.target.value })}
           required
+          disabled={isSubmitting || isSuccess}
           rows={embedded ? 3 : 4}
-          className={`flex min-h-[60px] w-full rounded-md border border-panacea-secondary/20 bg-panacea-light/30 px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-panacea-secondary/30 focus-visible:border-panacea-secondary disabled:cursor-not-allowed disabled:opacity-50 ${isRTL ? 'text-right' : 'text-left'}`}
+          className={`flex min-h-[60px] w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm shadow-sm placeholder:text-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-panacea-secondary/30 focus-visible:border-panacea-secondary disabled:cursor-not-allowed disabled:opacity-50 ${isRTL ? 'text-right' : 'text-left'}`}
         />
       </div>
 
+      {/* Error Message */}
+      {error && (
+        <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm border border-red-200">
+          {error}
+        </div>
+      )}
+
+      {/* Success Message */}
+      {isSuccess && (
+        <div className="bg-green-50 text-green-600 p-4 rounded-lg text-center border border-green-200">
+          <FaCheckCircle className="w-8 h-8 mx-auto mb-2 text-green-500" />
+          <p className="font-semibold">{t("submitSuccess") || "Request submitted successfully!"}</p>
+          <p className="text-sm mt-1">{t("successMessage") || "We will contact you shortly."}</p>
+        </div>
+      )}
+
       {/* Submit Button */}
-      <Button
-        type="submit"
-        className={`w-full bg-panacea-secondary hover:bg-panacea-secondary/90 text-white shadow-md hover:shadow-lg transition-all ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold`}
-      >
-        {t("submitButton")}
-      </Button>
+      {!isSuccess && (
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className={`w-full bg-panacea-secondary hover:bg-panacea-secondary/90 text-white shadow-md hover:shadow-lg transition-all ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
+        >
+          {isSubmitting ? (
+            <>
+              <FaSpinner className="w-5 h-5 animate-spin" />
+              {t("submitting") || "Submitting..."}
+            </>
+          ) : (
+            t("submitButton")
+          )}
+        </Button>
+      )}
 
       {/* Terms */}
       <p className="text-xs text-gray-500 text-center">
@@ -291,7 +365,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
   // Embedded form (no dialog)
   if (embedded) {
     return (
-      <div dir={isRTL ? "rtl" : "ltr"} className="bg-gradient-to-br from-panacea-cream/30 to-panacea-light/30 p-6 rounded-xl border border-panacea-secondary/10">
+      <div dir={isRTL ? "rtl" : "ltr"} className="bg-white p-6 rounded-xl border border-gray-200 shadow-lg">
         <div className="mb-4">
           <h3 className={`text-xl font-bold text-panacea-primary ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("title")}
@@ -299,7 +373,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           <p className={`text-sm text-gray-600 mt-1 ${isRTL ? 'text-right' : 'text-left'}`}>{t("description")}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-3">
-          <FormFields />
+          {formFieldsContent}
         </form>
       </div>
     );
@@ -312,7 +386,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
         {trigger || defaultTrigger}
       </DialogTrigger>
       <DialogContent
-        className={`sm:mix-w-[500px] max-h-[95vh] overflow-y-auto bg-gradient-to-br from-panacea-cream/50 to-panacea-light/50 ${isRTL ? "rtl" : "ltr"}`}
+        className={`sm:max-w-[500px] max-h-[95vh] overflow-y-auto bg-white ${isRTL ? "rtl" : "ltr"}`}
         dir={isRTL ? "rtl" : "ltr"}
       >
         <DialogHeader>
@@ -322,7 +396,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           <DialogDescription className="text-sm text-gray-600">{t("description")}</DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-3 mt-2">
-          <FormFields />
+          {formFieldsContent}
         </form>
       </DialogContent>
     </Dialog>

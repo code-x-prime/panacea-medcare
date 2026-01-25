@@ -16,9 +16,6 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async function sendMail({ to, subject, html }) {
-  console.log("Attempting to send email to:", to);
-  console.log("Email subject:", subject);
-
   try {
     const info = await transporter.sendMail({
       from: `"${env.NEXT_PUBLIC_SITE_NAME}" <${env.FROM_EMAIL}>`,
@@ -27,7 +24,6 @@ export default async function sendMail({ to, subject, html }) {
       html,
     });
 
-    console.log("✅ Email sent successfully:", info.messageId);
     return info || true;
   } catch (error) {
     console.error("❌ Error sending email:", error.message);

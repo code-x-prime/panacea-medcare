@@ -9,29 +9,57 @@
     "country": "Nigeria",
     "abuja": {
       "city": "Abuja",
-      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT"
+      "contactPerson": "Sam Adejoh Okedi",
+      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT, Nigeria"
     },
     "lagos": {
       "city": "Lagos",
+      "contactPerson": "Mr Abiodun Adesanwo",
       "address": "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigeria"
     },
     "kano": {
       "city": "Kano",
-      "address": "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano"
+      "contactPerson": "Ms Amina Mustafa",
+      "address": "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano, Nigeria"
+    },
+    "uyo": {
+      "city": "Uyo",
+      "contactPerson": "Lord Marmon Knight PHD",
+      "address": "NO 1. JACKSON ROYAL PALACE. IKOT ISIGHE. MKPAT ENIN LGA. AKWA IBOM STATE. NIGERIA"
     }
   },
   "kenya": {
     "country": "Kenya",
-    "nairobi": {
+    "nairobiMayfair": {
       "city": "Nairobi",
+      "contactPerson": "Ms. Njeri Ndegwa",
       "address": "Mayfair Office Suites, Parklands Road, Nairobi, Kenya"
+    },
+    "nairobiUtawala": {
+      "city": "Nairobi",
+      "contactPerson": "Mr James Obingo",
+      "address": "Utawala, Goodhope Court, Nairobi, Kenya"
     }
   },
   "ethiopia": {
     "country": "Ethiopia",
-    "debreMarkos": {
-      "city": "Debre Markos",
-      "address": "Debre Markos, East Gojjam District, Addis Ababa, Ethiopia"
+    "adisAbaba": {
+      "city": "Adis Ababa",
+      "contactPerson": "Lakshmi Srinivas",
+      "address": "Debre Markos, East Gojjam District, Adis Ababa, Ethiopia"
+    },
+    "gondar": {
+      "city": "Gondar",
+      "contactPerson": "Mr. Asfachew",
+      "address": "Room No. 9, Radiology Department, Gondar Teaching Hospital, Gondar, Ethiopia"
+    }
+  },
+  "rwanda": {
+    "country": "Rwanda",
+    "kigali": {
+      "city": "Kigali",
+      "contactPerson": "Mr Charles Nshimiyimana",
+      "address": "No. 49, KK 15 Road, Kicukiro, Kigali City, Rwanda"
     }
   }
 }

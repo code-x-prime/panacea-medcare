@@ -47,7 +47,7 @@ export default function PartnerWithUsPage({ params }) {
 
                 {/* The Proposition Section */}
                 <div className="max-w-6xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
                             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
                                 <Image
@@ -82,7 +82,7 @@ export default function PartnerWithUsPage({ params }) {
 
                 {/* What You Can Expect Section */}
                 <div className="max-w-6xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
                             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
                                 <Image
@@ -116,7 +116,7 @@ export default function PartnerWithUsPage({ params }) {
 
                 {/* What We Expect Section */}
                 <div className="max-w-6xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
                             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
                                 <Image
@@ -150,7 +150,7 @@ export default function PartnerWithUsPage({ params }) {
 
                 {/* The Proposition Details - 3 Columns */}
                 <div className="max-w-7xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
                             {t("propositionDetails.title")}
                         </h2>
@@ -244,7 +244,7 @@ export default function PartnerWithUsPage({ params }) {
 
                 {/* CTA Section */}
                 <div className="max-w-4xl mx-auto">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg text-center">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg text-center">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">
                             {locale === "ar" ? "ابدأ شراكتك معنا اليوم" : locale === "fr" ? "Commencez votre partenariat avec nous aujourd'hui" : "Start Your Partnership With Us Today"}
                         </h2>

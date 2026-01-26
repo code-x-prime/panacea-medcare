@@ -4,6 +4,7 @@ import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
 export default function TourismLeisurePage({ params }) {
@@ -162,24 +163,64 @@ export default function TourismLeisurePage({ params }) {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            { key: "agra", name: t("destinations.agra") },
-                            { key: "kerala", name: t("destinations.kerala") },
-                            { key: "goa", name: t("destinations.goa") },
-                            { key: "rajasthan", name: t("destinations.rajasthan") }
+                            { 
+                                key: "agra", 
+                                name: t("destinations.agra"),
+                                image: "/agra.jpg",
+                                slug: "/tourism-leisure/agra"
+                            },
+                            { 
+                                key: "kerala", 
+                                name: t("destinations.kerala"),
+                                image: "/kerala.jpg",
+                                slug: "/tourism-leisure/kerala"
+                            },
+                            { 
+                                key: "goa", 
+                                name: t("destinations.goa"),
+                                image: "/goa.jpg",
+                                slug: "/tourism-leisure/goa"
+                            },
+                            { 
+                                key: "rajasthan", 
+                                name: t("destinations.rajasthan"),
+                                image: "/rajasthan.jpg",
+                                slug: "/tourism-leisure/rajasthan"
+                            }
                         ].map((destination, idx) => (
-                            <div
+                            <Link
                                 key={idx}
-                                className="bg-white rounded-2xl shadow-panacea p-6 hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-primary/30 group"
+                                href={`/${locale}${destination.slug}`}
+                                className="bg-white rounded-2xl shadow-panacea overflow-hidden hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-primary/30 group cursor-pointer"
                             >
-                                <div className="flex items-center gap-3 mb-3">
-                                    <div className="w-10 h-10 bg-panacea-primary/10 rounded-full flex items-center justify-center group-hover:bg-panacea-primary transition-colors">
-                                        <CheckCircle2 className="w-6 h-6 text-panacea-primary" />
-                                    </div>
-                                    <h3 className={`text-lg font-bold text-panacea-primary ${isRTL ? "text-right" : "text-left"}`}>
-                                        {destination.name}
-                                    </h3>
+                                {/* Image */}
+                                <div className="relative h-48 overflow-hidden">
+                                    <Image
+                                        src={destination.image}
+                                        alt={destination.name}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                        onError={(e) => {
+                                            e.target.style.display = 'none';
+                                            e.target.parentElement.style.background = 'linear-gradient(135deg, #066F89 0%, #066F89 100%)';
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 </div>
-                            </div>
+                                
+                                {/* Content */}
+                                <div className="p-6">
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-10 h-10 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                            <CheckCircle2 className="w-6 h-6 text-white" />
+                                        </div>
+                                        <h3 className={`text-lg font-bold text-panacea-primary group-hover:text-panacea-secondary transition-colors ${isRTL ? "text-right" : "text-left"}`}>
+                                            {destination.name}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>

@@ -15,7 +15,6 @@ export default function sitemap() {
         '/consult-online',
         '/contact',
         '/doctors',
-        '/equipment',
         '/faq',
         '/hospitals',
         '/international-patients',

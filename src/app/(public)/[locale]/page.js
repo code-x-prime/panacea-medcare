@@ -1,6 +1,6 @@
 // src/app/(public)/[locale]/page.js
 import HeroSection from '@/components/HeroSection';
-import PatientStories from '@/components/PatientStories';
+// import PatientStories from '@/components/PatientStories';
 import TopMedicalDestinations from '@/components/TopMedicalDestinations';
 import NetworkOfTopHospitals from '@/components/NetworkOfTopHospitals';
 import LowestQuotesAssured from '@/components/LowestQuotesAssured';
@@ -19,7 +19,8 @@ export default function HomePage({ params }) {
   return (
     <div>
       <HeroSection locale={locale} />
-      <PatientStories locale={locale} />
+      <TestimonialsCarousel />
+      {/* <PatientStories locale={locale} /> */}
       <TopMedicalDestinations locale={locale} />
       <NetworkOfTopHospitals locale={locale} />
       <LowestQuotesAssured locale={locale} />
@@ -30,7 +31,6 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
-      <TestimonialsCarousel />
       <FAQ locale={locale} />
     </div>
   );

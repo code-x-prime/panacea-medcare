@@ -44,7 +44,7 @@ export default function InternationalPatientsPage({ params }) {
 
                 {/* Top Concerns Section */}
                 <div className="max-w-6xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <div className="flex items-center justify-center gap-4 mb-4">
                             <AlertCircle className="w-8 h-8 md:w-10 md:h-10" />
                             <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-center`}>
@@ -73,7 +73,7 @@ export default function InternationalPatientsPage({ params }) {
 
                 {/* Step by Step Guide Section */}
                 <div className="max-w-6xl mx-auto mb-16">
-                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-secondary to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
                         <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center`}>
                             {t("stepByStepGuide.title")}
                         </h2>

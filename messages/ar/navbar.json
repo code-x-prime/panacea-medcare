@@ -23,7 +23,6 @@
         "name": "حلول الرعاية الصحية بالذكاء الاصطناعي",
         "slug": "/services/ai-solutions"
       },
-      { "name": "المعدات الطبية", "slug": "/equipment" },
       { "name": "كن شريكاً معنا", "slug": "/partner-with-us" },
       { "name": "السياحة والترفيه", "slug": "/tourism-leisure" }
     ],
@@ -88,6 +87,10 @@
       {
         "name": "مستشفى نيلكانث للولادة وأطفال الأنابيب",
         "slug": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon"
+      },
+      {
+        "name": "مستشفى سايت أفينيو جورجاون",
+        "slug": "/hospitals/sight-avenue-hospital-gurgaon"
       },
       {
         "name": "مستشفى مانipal دواركا",

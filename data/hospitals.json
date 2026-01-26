@@ -207,7 +207,7 @@
             {
               "id": "fortis-manesar-gurgaon",
               "slug": "fortis-hospital-gurgaon",
-              "name": "Fortis Hospital Manesar",
+              "name": "Fortis Hospital Gurgaon",
               "nameAr": "مستشفى فورتيس مانيسار",
               "nameFr": "Hôpital Fortis Manesar",
               "rating": {
@@ -222,7 +222,7 @@
                 "NABL"
               ],
               "about": {
-                "short": "Fortis Hospital Manesar is an accredited multi-speciality tertiary care hospital and India's first hospital to collaborate with Japanese companies for the betterment of health equipment.",
+                "short": "Fortis Hospital Gurgaon is an accredited multi-speciality tertiary care hospital and India's first hospital to collaborate with Japanese companies for the betterment of health equipment.",
                 "shortAr": "مستشفى فورتيس مانيسار هو مستشفى رعاية ثالثية متعدد التخصصات معتمد وأول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية.",
                 "shortFr": "L'hôpital Fortis Manesar est un hôpital de soins tertiaires multi-spécialités accrédité et le premier hôpital d'Inde à collaborer avec des entreprises japonaises pour l'amélioration de l'équipement de santé.",
                 "full": "Established in 2013, Fortis Hospital is an accredited multi-speciality tertiary care hospital. It is India's first hospital to collaborate with Japanese companies for the betterment of health equipment. It specializes in cosmetic surgery, bariatric surgery, laparoscopic surgery, gastroenterology, neurosciences, and renal sciences. Equipped with OPD, Emergency, life-saving Therapeutic and Curative Secondary Care and also Tertiary Care facilities.",
@@ -589,6 +589,154 @@
                 "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon.jpg",
                 "/hospitals/all/neelkanth-maternity-ivf-hospital-gurgaon-2.png",
                 "/hospitals/all/neelkanth-maternity-ivf-hospital-gurgaon-1.png"
+              ]
+            },
+            {
+              "id": "sight-avenue-hospital-gurgaon",
+              "slug": "sight-avenue-hospital-gurgaon",
+              "name": "Sight Avenue Hospital Gurgaon",
+              "nameAr": "مستشفى سايت أفينيو جورجاون",
+              "nameFr": "Hôpital Sight Avenue Gurgaon",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 35
+              },
+              "establishedYear": 2018,
+              "specialtyType": "Ophthalmology & Eye Care",
+              "beds": 75,
+              "accreditations": [
+                "NABH"
+              ],
+              "about": {
+                "short": "Sight Avenue Hospital Gurgaon is a specialized eye care hospital providing comprehensive ophthalmology services with state-of-the-art technology and experienced doctors.",
+                "shortAr": "مستشفى سايت أفينيو جورجاون هو مستشفى متخصص لرعاية العيون يقدم خدمات طب العيون الشاملة مع تقنيات حديثة وأطباء ذوي خبرة.",
+                "shortFr": "L'hôpital Sight Avenue Gurgaon est un hôpital spécialisé en soins oculaires offrant des services complets d'ophtalmologie avec une technologie de pointe et des médecins expérimentés.",
+                "full": "Sight Avenue Hospital Gurgaon is a premier eye care facility dedicated to providing world-class ophthalmology services. The hospital specializes in cataract surgery, LASIK, retina treatments, cornea procedures, glaucoma management, and pediatric eye care. With a team of highly qualified ophthalmologists and cutting-edge technology, Sight Avenue Hospital ensures the best possible outcomes for all eye-related conditions.",
+                "fullAr": "مستشفى سايت أفينيو جورجاون هو منشأة رعاية عيون رائدة مخصصة لتقديم خدمات طب العيون من الطراز العالمي. يتخصص المستشفى في جراحة إعتام عدسة العين، وليزك، وعلاجات الشبكية، وإجراءات القرنية، وإدارة الجلوكوما، ورعاية عيون الأطفال. مع فريق من أطباء العيون المؤهلين تأهيلاً عالياً والتكنولوجيا المتطورة، يضمن مستشفى سايت أفينيو أفضل النتائج الممكنة لجميع الحالات المتعلقة بالعيون.",
+                "fullFr": "L'hôpital Sight Avenue Gurgaon est une installation de soins oculaires de premier plan dédiée à la fourniture de services d'ophtalmologie de classe mondiale. L'hôpital se spécialise dans la chirurgie de la cataracte, le LASIK, les traitements de la rétine, les procédures de la cornée, la gestion du glaucome et les soins oculaires pédiatriques. Avec une équipe d'ophtalmologistes hautement qualifiés et une technologie de pointe, l'hôpital Sight Avenue garantit les meilleurs résultats possibles pour toutes les affections oculaires.",
+                "internationalPatients": true
+              },
+              "departments": [
+                {
+                  "name": "Ophthalmology",
+                  "doctors": 13
+                },
+                {
+                  "name": "Retina",
+                  "doctors": 3
+                },
+                {
+                  "name": "Cornea",
+                  "doctors": 2
+                },
+                {
+                  "name": "Pediatric Ophthalmology",
+                  "doctors": 2
+                }
+              ],
+              "address": {
+                "line1": "Sector 56",
+                "city": "Gurgaon",
+                "state": "Haryana",
+                "pincode": "122011",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 20,
+                "airportDuration": "30 mins",
+                "airportName": "Indira Gandhi International Airport (DEL)",
+                "metroKm": 2,
+                "metroDuration": "5 mins",
+                "metroName": "Sector 55-56 Metro Station",
+                "coordinates": {
+                  "lat": 28.4200,
+                  "lng": 77.1000
+                }
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "TV in room",
+                  "Private rooms",
+                  "Free Wifi",
+                  "Phone in Room",
+                  "Mobility accessible rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Welcome",
+                  "Safe in the room",
+                  "Parking available"
+                ],
+                "moneyMatters": [
+                  "Health insurance coordination",
+                  "Medical travel insurance",
+                  "Foreign currency exchange",
+                  "ATM",
+                  "Credit Card",
+                  "Debit Card",
+                  "Netbanking"
+                ],
+                "food": [
+                  "Diet on Request",
+                  "Restaurant",
+                  "International Cuisine",
+                  "Vegetarian options"
+                ],
+                "treatmentRelated": [
+                  "Medical records transfer",
+                  "Online doctor consultation",
+                  "Pharmacy",
+                  "Document legalisation",
+                  "Post operative followup",
+                  "24/7 Emergency"
+                ],
+                "language": [
+                  "Interpreter",
+                  "Translation services",
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup",
+                  "Local transportation booking",
+                  "Car Hire",
+                  "Private driver services"
+                ]
+              },
+              "infrastructure": {
+                "totalArea": "Modern eye care facility",
+                "beds": 75,
+                "icuBeds": 10,
+                "operationTheatres": 5,
+                "technologies": [
+                  "Phacoemulsification systems",
+                  "Femtosecond laser",
+                  "OCT (Optical Coherence Tomography)",
+                  "Fundus photography",
+                  "YAG laser",
+                  "Argon laser",
+                  "Advanced diagnostic equipment"
+                ]
+              },
+              "teamAndSpecialties": {
+                "description": "Sight Avenue Hospital houses a team of highly experienced ophthalmologists specializing in various subspecialties including cataract surgery, refractive surgery, retina, cornea, glaucoma, and pediatric ophthalmology. The hospital is equipped with the latest diagnostic and surgical equipment to provide comprehensive eye care services.",
+                "descriptionAr": "يضم مستشفى سايت أفينيو فريقًا من أطباء العيون ذوي الخبرة العالية المتخصصين في مختلف التخصصات الفرعية بما في ذلك جراحة إعتام عدسة العين، وجراحة الانكسار، والشبكية، والقرنية، والجلوكوما، وطب عيون الأطفال. المستشفى مجهز بأحدث معدات التشخيص والجراحة لتقديم خدمات رعاية العيون الشاملة.",
+                "descriptionFr": "L'hôpital Sight Avenue abrite une équipe d'ophtalmologistes hautement expérimentés spécialisés dans diverses sous-spécialités, notamment la chirurgie de la cataracte, la chirurgie réfractive, la rétine, la cornée, le glaucome et l'ophtalmologie pédiatrique. L'hôpital est équipé des derniers équipements de diagnostic et chirurgicaux pour fournir des services complets de soins oculaires."
+              },
+              "internationalPatientServices": {
+                "description": "Sight Avenue Hospital provides comprehensive services for international patients including pre-arrival consultation, visa assistance, airport transfers, accommodation assistance, and dedicated coordinators for a seamless healthcare journey.",
+                "descriptionAr": "يوفر مستشفى سايت أفينيو خدمات شاملة للمرضى الدوليين بما في ذلك الاستشارة قبل الوصول، والمساعدة في التأشيرة، والتنقلات من وإلى المطار، والمساعدة في الإقامة، ومنسقين مخصصين لرحلة رعاية صحية سلسة.",
+                "descriptionFr": "L'hôpital Sight Avenue offre des services complets aux patients internationaux, notamment une consultation avant l'arrivée, une aide au visa, des transferts aéroport, une aide à l'hébergement et des coordinateurs dédiés pour un parcours de soins fluide.",
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              },
+              "images": [
+                "/hospitals/sight-avenue-hospital-gurgaon.jpg",
+                "/hospitals/all/sight-avenue-hospital-gurgaon-1.jpg",
+                "/hospitals/all/sight-avenue-hospital-gurgaon-2.jpg"
               ]
             }
           ]

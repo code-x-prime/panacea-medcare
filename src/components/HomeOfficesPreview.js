@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import Link from "next/link";
 import { MapPin } from "lucide-react";
 
 export default function HomeOfficesPreview({ locale: localeProp }) {
@@ -15,33 +14,67 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
       id: "nigeria-abuja",
       country: t("nigeria.country") || "Nigeria",
       city: t("nigeria.abuja.city") || "Abuja",
-      address: t("nigeria.abuja.address") || "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT",
+      contactPerson: t("nigeria.abuja.contactPerson") || "Sam Adejoh Okedi",
+      address: t("nigeria.abuja.address") || "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT, Nigeria",
     },
     {
       id: "nigeria-lagos",
       country: t("nigeria.country") || "Nigeria",
       city: t("nigeria.lagos.city") || "Lagos",
+      contactPerson: t("nigeria.lagos.contactPerson") || "Mr Abiodun Adesanwo",
       address: t("nigeria.lagos.address") || "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigeria",
     },
     {
       id: "nigeria-kano",
       country: t("nigeria.country") || "Nigeria",
       city: t("nigeria.kano.city") || "Kano",
-      address: t("nigeria.kano.address") || "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano",
+      contactPerson: t("nigeria.kano.contactPerson") || "Ms Amina Mustafa",
+      address: t("nigeria.kano.address") || "Room No. 15, Block B. Amino Kano Teaching Hospital, Kano, Nigeria",
+    },
+    {
+      id: "nigeria-uyo",
+      country: t("nigeria.country") || "Nigeria",
+      city: t("nigeria.uyo.city") || "Uyo",
+      contactPerson: t("nigeria.uyo.contactPerson") || "Lord Marmon Knight PHD",
+      address: t("nigeria.uyo.address") || "NO 1. JACKSON ROYAL PALACE. IKOT ISIGHE. MKPAT ENIN LGA. AKWA IBOM STATE. NIGERIA",
     },
     // Kenya Offices
     {
-      id: "kenya-nairobi",
+      id: "kenya-nairobi-mayfair",
       country: t("kenya.country") || "Kenya",
-      city: t("kenya.nairobi.city") || "Nairobi",
-      address: t("kenya.nairobi.address") || "Mayfair Office Suites, Parklands Road, Nairobi, Kenya",
+      city: t("kenya.nairobiMayfair.city") || "Nairobi",
+      contactPerson: t("kenya.nairobiMayfair.contactPerson") || "Ms. Njeri Ndegwa",
+      address: t("kenya.nairobiMayfair.address") || "Mayfair Office Suites, Parklands Road, Nairobi, Kenya",
+    },
+    {
+      id: "kenya-nairobi-utawala",
+      country: t("kenya.country") || "Kenya",
+      city: t("kenya.nairobiUtawala.city") || "Nairobi",
+      contactPerson: t("kenya.nairobiUtawala.contactPerson") || "Mr James Obingo",
+      address: t("kenya.nairobiUtawala.address") || "Utawala, Goodhope Court, Nairobi, Kenya",
     },
     // Ethiopia Offices
     {
-      id: "ethiopia-debre-markos",
+      id: "ethiopia-adis-ababa",
       country: t("ethiopia.country") || "Ethiopia",
-      city: t("ethiopia.debreMarkos.city") || "Debre Markos",
-      address: t("ethiopia.debreMarkos.address") || "Debre Markos, East Gojjam District, Addis Ababa, Ethiopia",
+      city: t("ethiopia.adisAbaba.city") || "Adis Ababa",
+      contactPerson: t("ethiopia.adisAbaba.contactPerson") || "Lakshmi Srinivas",
+      address: t("ethiopia.adisAbaba.address") || "Debre Markos, East Gojjam District, Adis Ababa, Ethiopia",
+    },
+    {
+      id: "ethiopia-gondar",
+      country: t("ethiopia.country") || "Ethiopia",
+      city: t("ethiopia.gondar.city") || "Gondar",
+      contactPerson: t("ethiopia.gondar.contactPerson") || "Mr. Asfachew",
+      address: t("ethiopia.gondar.address") || "Room No. 9, Radiology Department, Gondar Teaching Hospital, Gondar, Ethiopia",
+    },
+    // Rwanda Offices
+    {
+      id: "rwanda-kigali",
+      country: t("rwanda.country") || "Rwanda",
+      city: t("rwanda.kigali.city") || "Kigali",
+      contactPerson: t("rwanda.kigali.contactPerson") || "Mr Charles Nshimiyimana",
+      address: t("rwanda.kigali.address") || "No. 49, KK 15 Road, Kicukiro, Kigali City, Rwanda",
     },
   ];
 
@@ -61,12 +94,7 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
               {t("ourOfficesDesc") || "Visit us at our offices or reach out for assistance"}
             </p>
           </div>
-          <Link
-            href={`/${locale}/our-offices`}
-            className="px-6 py-3 rounded-lg bg-panacea-primary text-white font-semibold hover:bg-panacea-blue-600 transition-all shadow-panacea hover:shadow-panacea-lg whitespace-nowrap"
-          >
-            {locale === "ar" ? "عرض جميع المكاتب" : locale === "fr" ? "Voir tous les bureaux" : "View all offices"}
-          </Link>
+
         </div>
 
         {/* Office Cards - Grouped by Country */}
@@ -98,6 +126,11 @@ export default function HomeOfficesPreview({ locale: localeProp }) {
                         <h4 className="text-lg md:text-xl font-bold text-panacea-primary mb-2">
                           {office.city}
                         </h4>
+                        {office.contactPerson && (
+                          <p className="text-panacea-dark font-semibold mb-2 text-sm md:text-base">
+                            {office.contactPerson}
+                          </p>
+                        )}
                         <p className="text-panacea-gray leading-relaxed text-sm">
                           {office.address}
                         </p>

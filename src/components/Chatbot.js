@@ -202,7 +202,7 @@ export default function Chatbot({ locale }) {
       {/* Greeting Bubble - Shows before chat is opened */}
       {showGreeting && !isOpen && (
         <div
-          className={`fixed bottom-24 ${isRTL ? 'left-6' : 'right-6'} z-50 animate-bounce-slow`}
+          className={`fixed bottom-20 md:bottom-24 ${isRTL ? 'left-6' : 'right-6'} z-50 animate-bounce-slow`}
           onClick={openChat}
         >
           <div
@@ -243,7 +243,7 @@ export default function Chatbot({ locale }) {
       {/* Chat Window - Compact Size */}
       {isOpen && (
         <div
-          className={`fixed ${isRTL ? 'left-4' : 'right-4'} ${isMinimized ? 'bottom-24' : 'bottom-20 sm:bottom-6'} z-50 transition-all duration-300`}
+          className={`fixed ${isRTL ? 'left-4' : 'right-4'} ${isMinimized ? 'bottom-20 md:bottom-24' : 'bottom-20 md:bottom-6'} z-50 transition-all duration-300`}
           dir={isRTL ? "rtl" : "ltr"}
         >
           <div className={`bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-300 ${isMinimized
@@ -389,7 +389,7 @@ export default function Chatbot({ locale }) {
       <button
         data-chatbot-toggle
         onClick={isOpen ? () => setIsOpen(false) : openChat}
-        className={`fixed bottom-6 ${isRTL ? 'left-6' : 'right-6'} w-14 h-14 bg-panacea-gradient text-white rounded-full shadow-xl hover:shadow-panacea-lg transition-all flex items-center justify-center z-40 transform hover:scale-105 group`}
+        className={`fixed bottom-16 md:bottom-6 ${isRTL ? 'left-6' : 'right-6'} w-14 h-14 bg-panacea-gradient text-white rounded-full shadow-xl hover:shadow-panacea-lg transition-all flex items-center justify-center z-40 transform hover:scale-105 group`}
       >
         {isOpen ? (
           <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />

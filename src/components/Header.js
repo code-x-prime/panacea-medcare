@@ -6,7 +6,6 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import Navbar from "./Navbar/Navbar";
 import GlobalSearch from "./GlobalSearch";
 import { FaWhatsapp } from "react-icons/fa";
-import { Mail } from "lucide-react";
 
 export default function Header({ locale }) {
   var isRTL = locale === "ar";
@@ -76,7 +75,7 @@ export default function Header({ locale }) {
                     alt="Panacea Medcare Logo"
                     width={160}
                     height={64}
-                    className="h-20 w-auto"
+                    className="h-24 w-auto"
                     priority
                   />
                 </div>
@@ -99,23 +98,17 @@ export default function Header({ locale }) {
                   href="https://wa.me/919958800961"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
-                  <FaWhatsapp className="w-4 h-4" />
+                  <FaWhatsapp className="w-5 h-5" />
                   {t.contactUs} : +91 995 880 0961
                 </a>
-                {/* Email Button */}
-                <a
-                  href="mailto:care@panaceamedcare.com"
-                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#066F89] hover:bg-[#055a70] text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <Mail className="w-4 h-4" />
-                  care@panaceamedcare.com
-                </a>
+
+
                 {/* Book Teleconsultation - Orange CTA Button */}
                 <Link
                   href={`/${locale}/services/teleconsultation`}
-                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#F5841F] hover:bg-[#E07316] text-white text-xs rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#F5841F] hover:bg-[#E07316] text-white text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   {t.requestConsultation}
                 </Link>

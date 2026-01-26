@@ -19,7 +19,6 @@
       },
       { "name": "International Patients", "slug": "/international-patients" },
       { "name": "AI Healthcare Solutions", "slug": "/services/ai-solutions" },
-      { "name": "Medical Equipment", "slug": "/equipment" },
       { "name": "Partner With Us", "slug": "/partner-with-us" },
       { "name": "Tourism & Leisure", "slug": "/tourism-leisure" }
     ],
@@ -102,6 +101,10 @@
       {
         "name": "Neelkanth Maternity & IVF Hospital",
         "slug": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon"
+      },
+      {
+        "name": "Sight Avenue Hospital Gurgaon",
+        "slug": "/hospitals/sight-avenue-hospital-gurgaon"
       },
       {
         "name": "Manipal Hospital Dwarka",

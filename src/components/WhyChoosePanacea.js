@@ -53,7 +53,7 @@ export default function WhyChoosePanacea({ locale }) {
                             {/* Image */}
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/medical-consultation.png"
+                                    src="/medical-consultation.jpg"
                                     alt="Medical Team Consultation"
                                     width={600}
                                     height={700}
@@ -76,7 +76,7 @@ export default function WhyChoosePanacea({ locale }) {
                     <div className="flex-1">
                         {/* Badge */}
                         <div className="inline-block mb-6">
-                            <span className="px-4 py-2 bg-panacea-light text-panacea-primary rounded-full text-sm font-semibold border-2 border-panacea-teal-200">
+                            <span className="px-6 py-3 bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] text-white rounded-full text-base md:text-lg font-bold shadow-lg">
                                 {t("badge")}
                             </span>
                         </div>

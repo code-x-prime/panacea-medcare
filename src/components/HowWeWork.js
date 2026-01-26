@@ -37,14 +37,14 @@ export default function HowWeWork({ locale }) {
                 {/* Header */}
                 <div className={`text-center mb-12 md:mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                     <div className="inline-block mb-4">
-                        <span className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold">
+                        <span className="px-6 py-3 bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] text-white rounded-full text-base md:text-lg font-bold shadow-lg">
                             {t("badge")}
                         </span>
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+                    <h2 className="text-4xl md:text-5xl  font-extrabold bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent mb-6 leading-tight">
                         {t("title")}
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl  text-panacea-gray max-w-3xl mx-auto leading-relaxed">
                         {t("subtitle")}
                     </p>
                 </div>
@@ -56,21 +56,21 @@ export default function HowWeWork({ locale }) {
                             return (
                                 <div
                                     key={idx}
-                                    className="group flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100"
+                                    className="group flex items-start gap-6 bg-gradient-to-br from-white to-panacea-light/30 p-6  rounded-3xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-panacea-primary/30"
                                 >
                                     {/* Step Number & Icon */}
                                     <div className="flex-shrink-0">
-                                        <div className="w-20 h-20 flex items-center justify-center shadow-sm rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                                        <div className="w-24 h-24  bg-gradient-to-br from-panacea-primary to-panacea-secondary flex items-center justify-center shadow-panacea rounded-2xl group-hover:scale-110 transition-transform duration-300">
                                             <Image
                                                 src={step.svg}
                                                 alt={t(`steps.${step.id}.title`)}
-                                                width={80}
-                                                height={80}
-                                                className="w-full h-full object-contain"
+                                                width={96}
+                                                height={96}
+                                                className="w-16 h-16 md:w-20 md:h-20 object-contain filter brightness-0 invert"
                                             />
                                         </div>
-                                        <div className="mt-2 text-center">
-                                            <span className="text-xs font-bold text-gray-400">
+                                        <div className="mt-3 text-center">
+                                            <span className="text-sm md:text-base font-bold bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent">
                                                 {String(idx + 1).padStart(2, '0')}
                                             </span>
                                         </div>
@@ -78,10 +78,10 @@ export default function HowWeWork({ locale }) {
 
                                     {/* Step Content */}
                                     <div className={`flex-1 ${isRTL ? "text-right" : "text-left"}`}>
-                                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                                        <h3 className="text-2xl  font-bold bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent mb-3">
                                             {t(`steps.${step.id}.title`)}
                                         </h3>
-                                        <p className="text-gray-600 leading-relaxed">
+                                        <p className="text-lg  text-panacea-gray leading-relaxed">
                                             {t(`steps.${step.id}.description`)}
                                         </p>
                                     </div>

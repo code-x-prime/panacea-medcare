@@ -73,7 +73,7 @@ export default function TopMedicalDestinations({ locale }) {
                     {/* Heading */}
                     <div className={`text-center mb-16 ${isRTL ? "rtl" : "ltr"}`}>
                         <div className="inline-block mb-4">
-                            <span className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold">
+                            <span className="px-6 py-3 bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] text-white rounded-full text-base md:text-lg font-bold shadow-lg">
                                 {t("badge")}
                             </span>
                         </div>

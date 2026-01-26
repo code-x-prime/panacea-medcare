@@ -28,6 +28,7 @@ export default function HospitalsPage({ params }) {
             { name: "BLK Max Hospital Pusa Road", slug: "blk-max-hospital-pusa-road" },
             { name: "Medanta Hospital, Gurgaon", slug: "medanta-hospital-gurgaon" },
             { name: "Neelkanth Maternity & IVF Hospital Gurgaon", slug: "neelkanth-maternity-ivf-hospital-gurgaon" },
+            { name: "Sight Avenue Hospital Gurgaon", slug: "sight-avenue-hospital-gurgaon" },
             { name: "Manipal Hospital Dwarka", slug: "manipal-hospital-dwarka" },
         ],
         "chennai": [
@@ -68,6 +69,7 @@ export default function HospitalsPage({ params }) {
             "blk-max-hospital-pusa-road": "/hospitals/blk-max-hospital-pusa-road.jpg",
             "medanta-hospital-gurgaon": "/hospitals/medanta-hospital-gurgaon.jpg",
             "neelkanth-maternity-ivf-hospital-gurgaon": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon.jpg",
+            "sight-avenue-hospital-gurgaon": "/hospitals/sight-avenue-hospital-gurgaon.jpg",
             "manipal-hospital-dwarka": "/hospitals/manipal-hospital-dwarka.jpg",
             // Chennai
             "apollo-hospital-greams-road-chennai": "/hospitals/apollo-hospital-greams-road-chennai.jpg",
@@ -112,7 +114,7 @@ export default function HospitalsPage({ params }) {
                 <div className="max-w-6xl mx-auto mb-16">
                     <div className="text-center mb-8">
                         <div className="inline-block mb-4">
-                            <span className="px-4 py-2 bg-panacea-primary/10 text-panacea-primary rounded-full text-sm font-semibold">
+                            <span className="px-6 py-3 bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] text-white rounded-full text-base md:text-lg font-bold shadow-lg">
                                 {t("badge") || "Trusted Medical Partners"}
                             </span>
                         </div>

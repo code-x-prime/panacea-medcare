@@ -184,7 +184,7 @@ export default function HospitalDetailPage({ params }) {
             <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 overflow-x-hidden">
                 <div className="mx-auto max-w-full">
                     {/* Hospital Overview Card */}
-                    <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12 border border-gray-100">
+                    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8 mb-12 border border-gray-100">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {/* Rating */}
                             <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
@@ -435,7 +435,7 @@ export default function HospitalDetailPage({ params }) {
                                         {hospital.topDoctors.map((doctor, idx) => (
                                             <div
                                                 key={idx}
-                                                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
+                                                className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-shadow"
                                             >
                                                 <div className={`flex items-start gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
                                                     <div className="w-20 h-20 bg-panacea-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
@@ -481,17 +481,17 @@ export default function HospitalDetailPage({ params }) {
                                             >
                                                 {Array.from({ length: Math.ceil(hospitalDoctors.length / doctorsPerSlide) }).map((_, slideIdx) => (
                                                     <div key={slideIdx} className="min-w-full flex-shrink-0 w-full px-1 sm:px-2">
-                                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 w-full">
+                                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 w-full">
                                                             {hospitalDoctors.slice(slideIdx * doctorsPerSlide, slideIdx * doctorsPerSlide + doctorsPerSlide).map((doctor) => (
                                                                 <article
                                                                     key={doctor.id}
-                                                                    className="group bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full max-w-full"
+                                                                    className="group bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full max-w-full min-w-0"
                                                                 >
                                                                     <Link
                                                                         href={`/${locale}/doctors/${doctor.id}`}
-                                                                        className="flex-1 flex flex-col"
+                                                                        className="flex-1 flex flex-col min-w-0"
                                                                     >
-                                                                        <span className="relative w-full aspect-square mb-4 rounded-lg overflow-hidden bg-gray-100 block">
+                                                                        <span className="relative w-full aspect-square mb-3 sm:mb-4 rounded-lg overflow-hidden bg-gray-100 block flex-shrink-0">
                                                                             {doctor.image ? (
                                                                                 <Image
                                                                                     src={doctor.image}
@@ -507,40 +507,48 @@ export default function HospitalDetailPage({ params }) {
                                                                                 </span>
                                                                             )}
                                                                         </span>
-                                                                        <span className={`flex-1 block ${isRTL ? "text-right" : "text-left"}`}>
-                                                                            <span className="font-bold text-base md:text-lg text-gray-900 group-hover:text-panacea-primary transition-colors block break-words">
+                                                                        <span className={`flex-1 block min-w-0 ${isRTL ? "text-right" : "text-left"}`}>
+                                                                            <span className="font-bold text-sm sm:text-base md:text-lg text-gray-900 group-hover:text-panacea-primary transition-colors block break-words line-clamp-2">
                                                                                 {doctor.name}
                                                                             </span>
-                                                                            <span className="text-panacea-primary font-semibold text-xs md:text-sm mt-1 block break-words">
+                                                                            <span className="text-panacea-primary font-semibold text-xs sm:text-sm mt-1 block break-words line-clamp-2">
                                                                                 {doctor.specialty}
                                                                             </span>
                                                                             {doctor.designation && (
-                                                                                <span className="text-gray-600 text-xs md:text-sm mt-2 block break-words">
+                                                                                <span className="text-gray-600 text-xs sm:text-sm mt-1 sm:mt-2 block break-words line-clamp-2">
                                                                                     {doctor.designation}
                                                                                 </span>
                                                                             )}
                                                                             {doctor.experience && (
-                                                                                <span className="text-gray-500 text-xs mt-2 block">
+                                                                                <span className="text-gray-500 text-xs mt-1 sm:mt-2 block line-clamp-1">
                                                                                     {doctor.experience}
                                                                                 </span>
                                                                             )}
                                                                         </span>
                                                                     </Link>
-                                                                    <div className="mt-4 pt-4 border-t border-gray-200 flex gap-2">
+                                                                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 flex gap-2 flex-shrink-0">
                                                                         <button
-                                                                            onClick={() => handleWhatsApp(doctor)}
-                                                                            className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-2 md:px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-1 text-xs md:text-sm"
+                                                                            onClick={(e) => {
+                                                                                e.preventDefault();
+                                                                                e.stopPropagation();
+                                                                                handleWhatsApp(doctor);
+                                                                            }}
+                                                                            className="flex-1 min-w-0 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 sm:py-2.5 px-2 sm:px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-1 text-xs sm:text-sm whitespace-nowrap"
                                                                         >
-                                                                            <FaWhatsapp className="w-3 h-3 md:w-4 md:h-4" />
-                                                                            <span className="hidden sm:inline">WhatsApp</span>
+                                                                            <FaWhatsapp className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                                                                            <span className="hidden sm:inline truncate">WhatsApp</span>
                                                                             <span className="sm:hidden">WA</span>
                                                                         </button>
                                                                         <button
-                                                                            onClick={() => openBookingModal(doctor)}
-                                                                            className="flex-1 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 px-2 md:px-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 text-xs md:text-sm"
+                                                                            onClick={(e) => {
+                                                                                e.preventDefault();
+                                                                                e.stopPropagation();
+                                                                                openBookingModal(doctor);
+                                                                            }}
+                                                                            className="flex-1 min-w-0 bg-panacea-primary hover:bg-panacea-primary/90 text-white font-semibold py-2 sm:py-2.5 px-2 sm:px-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-1 text-xs sm:text-sm whitespace-nowrap"
                                                                         >
-                                                                            <FaCalendarCheck className="w-3 h-3 md:w-4 md:h-4" />
-                                                                            <span className="hidden sm:inline">Book Now</span>
+                                                                            <FaCalendarCheck className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                                                                            <span className="hidden sm:inline truncate">Book Now</span>
                                                                             <span className="sm:hidden">Book</span>
                                                                         </button>
                                                                     </div>
@@ -600,7 +608,7 @@ export default function HospitalDetailPage({ params }) {
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("internationalPatientServices") || "International Patient Services"}
                                     </h2>
-                                    <div className="bg-panacea-light/30 rounded-xl p-6">
+                                    <div className="bg-panacea-light/30 rounded-xl p-4">
                                         {hospital.internationalPatientServices.description ? (
                                             <div className={`text-gray-700 leading-relaxed whitespace-pre-line ${isRTL ? "text-right" : "text-left"}`}>
                                                 {locale === "ar" ? (hospital.internationalPatientServices.descriptionAr || hospital.internationalPatientServices.description) : locale === "fr" ? (hospital.internationalPatientServices.descriptionFr || hospital.internationalPatientServices.description) : hospital.internationalPatientServices.description}
@@ -672,7 +680,7 @@ export default function HospitalDetailPage({ params }) {
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("teamAndSpecialties") || "Team and Specialties"}
                                     </h2>
-                                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                                    <div className="bg-white border border-gray-200 rounded-xl p-4">
                                         <p className={`text-gray-700 leading-relaxed mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                             {locale === "ar" ? (hospital.teamAndSpecialties.descriptionAr || hospital.teamAndSpecialties.description) : locale === "fr" ? (hospital.teamAndSpecialties.descriptionFr || hospital.teamAndSpecialties.description) : hospital.teamAndSpecialties.description}
                                         </p>
@@ -726,7 +734,7 @@ export default function HospitalDetailPage({ params }) {
                                     </h2>
                                     <div className="space-y-4">
                                         {hospital.milestones.map((milestone, idx) => (
-                                            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-6">
+                                            <div key={idx} className="bg-white border border-gray-200 rounded-lg p-4">
                                                 <h3 className="font-semibold text-gray-900 mb-2">
                                                     {locale === "ar" ? (milestone.nameAr || milestone.name) : locale === "fr" ? (milestone.nameFr || milestone.name) : milestone.name}
                                                 </h3>
@@ -747,7 +755,7 @@ export default function HospitalDetailPage({ params }) {
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("infrastructure") || "Infrastructure"}
                                     </h2>
-                                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                                    <div className="bg-white border border-gray-200 rounded-xl p-4">
                                         <p className={`text-gray-700 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                             {hospital.name} {t("infrastructureDesc") || "is equipped with state-of-the-art infrastructure and technology, delivering world-class healthcare."}
                                         </p>
@@ -796,7 +804,7 @@ export default function HospitalDetailPage({ params }) {
                                     <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("location") || "Location"}
                                     </h2>
-                                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                                    <div className="bg-white border border-gray-200 rounded-xl p-4">
                                         {hospital.address && (
                                             <div className={`mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                                 <h3 className="font-semibold text-gray-900 mb-2">{t("address") || "Address"}</h3>

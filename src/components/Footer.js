@@ -28,17 +28,6 @@ export default function Footer({ locale }) {
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const quickLinks = [
-    { key: "aboutUs", href: "/about" },
-    { key: "ourServices", href: "/services" },
-    { key: "hospitals", href: "/hospitals" },
-    { key: "destinations", href: "/destinations" },
-    { key: "specialties", href: "/specialties" },
-    { key: "howItWorks", href: "/how-it-works" },
-    { key: "faq", href: "/faq" },
-    { key: "contactUs", href: "/contact" },
-  ];
-
   const services = [
     "medicalOpinion",
     "travelAssistance",
@@ -46,13 +35,6 @@ export default function Footer({ locale }) {
     "accommodation",
     "interpreters",
     "followUpCare",
-  ];
-
-  const destinations = [
-    "india",
-    "nepal",
-    "turkey",
-    "thailand",
   ];
 
   const legalLinks = [
@@ -72,7 +54,7 @@ export default function Footer({ locale }) {
 
   return (
     <footer
-      className="bg-gradient-to-br from-panacea-dark via-panacea-primary to-panacea-dark text-white"
+      className="bg-gradient-to-br from-panacea-dark via-panacea-primary/90 to-panacea-dark text-white"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Main Footer Content */}
@@ -104,7 +86,7 @@ export default function Footer({ locale }) {
                 href={`tel:${phoneNumber.replace(/-/g, "")}`}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 bg-panacea-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-gradient-to-br from-panacea-accent to-panacea-orange-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
@@ -115,10 +97,10 @@ export default function Footer({ locale }) {
               </a>
 
               <a
-                href={`mailto:${email}`}
+                href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 bg-panacea-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-gradient-to-br from-panacea-accent to-panacea-orange-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
@@ -134,7 +116,7 @@ export default function Footer({ locale }) {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <FaWhatsapp className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
@@ -148,7 +130,7 @@ export default function Footer({ locale }) {
                 href={`/${locale}/services/teleconsultation`}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group mt-4 pt-4 border-t border-white/10"
               >
-                <div className="w-10 h-10 bg-panacea-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="w-10 h-10 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <Send className="w-5 h-5" />
                 </div>
                 <div className="flex flex-col">
@@ -159,63 +141,75 @@ export default function Footer({ locale }) {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <div>
-            <h4 className="font-bold text-xl mb-6">{t("quickLinks.title")}</h4>
+            <h4 className="font-bold text-xl mb-6 text-white">{t("services.title")}</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={`/${locale}${link.href}`}
-                    className="text-panacea-light/90 hover:text-white hover:translate-x-2 transition-all inline-block"
-                  >
-                    {t(`quickLinks.${link.key}`)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services & Destinations */}
-          <div>
-            {/* Services */}
-            <h4 className="font-bold text-xl mb-6">{t("services.title")}</h4>
-            <ul className="space-y-3 mb-8">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-panacea-light/90 hover:text-white transition-colors">
+                  <span className="text-panacea-light/90 hover:text-panacea-secondary transition-colors cursor-default">
                     {t(`services.${service}`)}
                   </span>
                 </li>
               ))}
             </ul>
-
-            {/* Destinations - Text Only, No Links */}
-            <h4 className="font-bold text-xl mb-6">{t("destinations.title")}</h4>
-            <ul className="space-y-3">
-              {destinations.map((dest) => (
-                <li key={dest}>
-                  <span className="text-panacea-light/90">
-                    {t(`destinations.${dest}`)}
-                  </span>
-                </li>
-              ))}
-            </ul>
           </div>
 
-          {/* Our Offices - Fixed */}
+          {/* Social Links */}
           <div>
-            <h4 className="font-bold text-xl mb-6">{t("ourOffices.title") || "Our Offices"}</h4>
+            <h4 className="font-bold text-xl mb-6 text-white">{t("social.title")}</h4>
+            <div className="flex flex-wrap gap-4">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 hover:from-panacea-secondary/30 hover:to-panacea-primary/30 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10 hover:border-panacea-secondary/50"
+                    aria-label={t(`social.${social.label}`)}
+                  >
+                    <Icon className="w-6 h-6 text-white" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Our Offices */}
+          <div>
+            <h4 className="font-bold text-xl mb-6 text-white">{t("ourOffices.title") || "Our Offices"}</h4>
             <div className="space-y-4">
               {/* Head Office */}
-              <div className="text-panacea-light/90">
-                <p className="font-semibold text-white mb-2">{locale === "ar" ? "المكتب الرئيسي" : locale === "fr" ? "Bureau Principal" : "Head Office"}</p>
-                <p className="text-sm leading-relaxed mb-1">Suite No. 402, Plot No. 996,</p>
-                <p className="text-sm leading-relaxed mb-1">Sector 38, Gurgaon – 122001</p>
-                <p className="text-sm leading-relaxed mb-2">Delhi NCR, India</p>
-
-                <p className="text-sm">+91-9958800961</p>
-                <p className="text-sm break-all mt-2">care@panaceamedcare.com</p>
+              <div className="text-panacea-light/90 bg-white/5 p-4 rounded-lg border border-white/10">
+                <p className="font-semibold text-white mb-3">{locale === "ar" ? "المكتب الرئيسي" : locale === "fr" ? "Bureau Principal" : "Head Office"}</p>
+                <div className="space-y-1 mb-4">
+                  <p className="text-sm leading-relaxed">Suite No. 402, Plot No. 996,</p>
+                  <p className="text-sm leading-relaxed">Sector 38, Gurgaon – 122001</p>
+                  <p className="text-sm leading-relaxed">Delhi NCR, India</p>
+                </div>
+                
+                <div className="space-y-2 pt-3 border-t border-white/10">
+                  <a 
+                    href={`tel:${phoneNumber.replace(/-/g, "")}`}
+                    className="flex items-center gap-2 text-panacea-light/90 hover:text-panacea-secondary transition-colors group"
+                  >
+                    <div className="w-8 h-8 bg-panacea-accent/20 rounded-lg flex items-center justify-center group-hover:bg-panacea-accent/30 transition-colors">
+                      <Phone className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm">{phoneNumber}</span>
+                  </a>
+                  <a 
+                    href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                    className="flex items-center gap-2 text-panacea-light/90 hover:text-panacea-secondary transition-colors break-all group"
+                  >
+                    <div className="w-8 h-8 bg-panacea-accent/20 rounded-lg flex items-center justify-center group-hover:bg-panacea-accent/30 transition-colors flex-shrink-0">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm break-all">{email}</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -20,7 +20,6 @@
       },
       { "name": "Patients internationaux", "slug": "/international-patients" },
       { "name": "Solutions de santé IA", "slug": "/services/ai-solutions" },
-      { "name": "Équipement médical", "slug": "/equipment" },
       { "name": "Devenez partenaire", "slug": "/partner-with-us" },
       { "name": "Tourisme et loisirs", "slug": "/tourism-leisure" }
     ],
@@ -92,6 +91,7 @@
       { "name": "BLK Max Hospital Pusa Road", "slug": "/hospitals/blk-max-hospital-pusa-road" },
       { "name": "Medanta Hospital, Gurgaon", "slug": "/hospitals/medanta-hospital-gurgaon" },
       { "name": "Neelkanth Maternity & IVF Hospital", "slug": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon" },
+      { "name": "Hôpital Sight Avenue Gurgaon", "slug": "/hospitals/sight-avenue-hospital-gurgaon" },
       { "name": "Manipal Hospital Dwarka", "slug": "/hospitals/manipal-hospital-dwarka" },
       { "name": "Apollo Hospital Greams Road", "slug": "/hospitals/apollo-hospital-greams-road-chennai" },
       { "name": "Stem Rx Hospital", "slug": "/hospitals/stem-rx-hospital-mumbai" },

@@ -28,6 +28,29 @@ export default function DiagnosticsPage({ params }) {
         { title: t("treatments.pathology.title"), description: t("treatments.pathology.description") }
     ];
 
+    const faqs = [
+        {
+            question: t("faqs.q1.question"),
+            answer: t("faqs.q1.answer")
+        },
+        {
+            question: t("faqs.q2.question"),
+            answer: t("faqs.q2.answer")
+        },
+        {
+            question: t("faqs.q3.question"),
+            answer: t("faqs.q3.answer")
+        },
+        {
+            question: t("faqs.q4.question"),
+            answer: t("faqs.q4.answer")
+        },
+        {
+            question: t("faqs.q5.question"),
+            answer: t("faqs.q5.answer")
+        }
+    ];
+
     return (
         <main dir={isRTL ? "rtl" : "ltr"} className="bg-white">
             <TopBanner locale={locale} namespace="treatments" variant="gradient" size="md" />
@@ -68,6 +91,33 @@ export default function DiagnosticsPage({ params }) {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <section className="bg-panacea-light py-16 md:py-20">
+                <div className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-panacea-dark mb-12 text-center break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.3' }}>
+                            {t("faqs.title")}
+                        </h2>
+                        <div className="space-y-6">
+                            {faqs.map((faq, index) => (
+                                <div
+                                    key={index}
+                                    className="bg-white p-6 md:p-8 rounded-xl shadow-panacea"
+                                >
+                                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-panacea-dark mb-3 break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.4' }}>
+                                        {faq.question}
+                                    </h3>
+                                    <p className="text-sm sm:text-base text-panacea-gray leading-relaxed break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.6' }}>
+                                        {faq.answer}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="quote-form" className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-16 md:py-20">
                 <div className="max-w-3xl mx-auto"><QuoteForm locale={locale} /></div>
             </section>

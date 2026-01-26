@@ -23,6 +23,7 @@ export default function Navbar({ locale = "en" }) {
   var [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   var [mobileExpandedItem, setMobileExpandedItem] = useState(null);
   var [isSticky, setIsSticky] = useState(false);
+  var [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   // Close menus on locale change
   useEffect(() => {
@@ -64,6 +65,15 @@ export default function Navbar({ locale = "en" }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Clear timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeout) {
+        clearTimeout(dropdownTimeout);
+      }
+    };
+  }, [dropdownTimeout]);
+
   // Early return if no menu data
   if (!navbarMenu || !navbarMenu.main || !Array.isArray(navbarMenu.main)) {
     return null;
@@ -96,11 +106,13 @@ export default function Navbar({ locale = "en" }) {
 
   return (
     <nav
-      className="navbar-container bg-white shadow-sm"
+      className={`navbar-container bg-white shadow-sm transition-all duration-300 ${
+        isSticky ? 'sticky top-0 z-50 shadow-lg' : 'relative'
+      }`}
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Desktop Menu */}
-      <div className="relative hidden lg:block" style={{ backgroundColor: 'rgba(6, 111, 137, 0.1)' }}>
+      <div className="relative hidden lg:block bg-gradient-to-r from-panacea-primary/10 via-panacea-secondary/10 to-panacea-primary/10">
         <div className="container mx-auto xl:max-w-7xl">
           {/* All menu items in one row */}
           <ul
@@ -121,9 +133,18 @@ export default function Navbar({ locale = "en" }) {
                   key={idx}
                   className="relative"
                   onMouseEnter={() => {
+                    if (dropdownTimeout) {
+                      clearTimeout(dropdownTimeout);
+                      setDropdownTimeout(null);
+                    }
                     if (hasSubMenu) setActiveMenu(item.key);
                   }}
-                  onMouseLeave={() => setActiveMenu(null)}
+                  onMouseLeave={() => {
+                    const timeout = setTimeout(() => {
+                      setActiveMenu(null);
+                    }, 200);
+                    setDropdownTimeout(timeout);
+                  }}
                 >
                   <Link
                     href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
@@ -132,8 +153,8 @@ export default function Navbar({ locale = "en" }) {
                       "flex items-center text-sm font-semibold px-2 py-1 rounded-md transition-all duration-200 " +
                       (shouldWrap ? "max-w-[150px] " : "") +
                       (isActive
-                        ? "text-[#066F89] bg-white"
-                        : "text-gray-700 hover:text-[#066F89] hover:bg-white/50")
+                        ? "text-panacea-primary bg-gradient-to-r from-panacea-primary/20 to-panacea-secondary/20"
+                        : "text-gray-700 hover:text-panacea-primary hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10")
                     }
                   >
                     <span className={shouldWrap ? "text-center leading-tight" : "whitespace-nowrap"}>{item.name}</span>
@@ -156,8 +177,19 @@ export default function Navbar({ locale = "en" }) {
                         maxHeight: "70vh",
                         overflowY: "auto"
                       }}
-                      onMouseEnter={() => setActiveMenu(item.key)}
-                      onMouseLeave={() => setActiveMenu(null)}
+                      onMouseEnter={() => {
+                        if (dropdownTimeout) {
+                          clearTimeout(dropdownTimeout);
+                          setDropdownTimeout(null);
+                        }
+                        setActiveMenu(item.key);
+                      }}
+                      onMouseLeave={() => {
+                        const timeout = setTimeout(() => {
+                          setActiveMenu(null);
+                        }, 200);
+                        setDropdownTimeout(timeout);
+                      }}
                     >
                       <div className="grid grid-cols-3 gap-2">
                         {subMenuItems.map((subItem, sIdx) => (
@@ -165,7 +197,7 @@ export default function Navbar({ locale = "en" }) {
                             key={sIdx}
                             href={"/" + locale + (subItem.slug || "")}
                             onClick={closeMenu}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-[#066F89]/10 hover:text-[#066F89] rounded-lg transition-all duration-200 font-medium"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
                           >
                             {subItem.name || subItem.country}
                           </Link>
@@ -181,7 +213,9 @@ export default function Navbar({ locale = "en" }) {
       </div>
 
       {/* Mobile Menu Button */}
-      <div className="lg:hidden bg-white border-b border-gray-100">
+      <div className={`lg:hidden bg-white border-b border-gray-100 transition-all duration-300 ${
+        isSticky ? 'sticky top-0 z-50 shadow-md' : ''
+      }`}>
         <div className="container mx-auto px-4 xl:max-w-7xl flex items-end gap-3 py-2">
           {isSticky && (
             <Link href={"/" + locale} className="flex-shrink-0">

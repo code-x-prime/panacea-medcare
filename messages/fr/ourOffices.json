@@ -9,29 +9,57 @@
     "country": "Nigéria",
     "abuja": {
       "city": "Abuja",
-      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT"
+      "contactPerson": "Sam Adejoh Okedi",
+      "address": "No. 17, Benghazi Street, Wuse Zone 4, Abuja, FCT, Nigéria"
     },
     "lagos": {
       "city": "Lagos",
+      "contactPerson": "M. Abiodun Adesanwo",
       "address": "311A, Kola Opere Street, Buknor Estate, Isolo, Lagos, Nigéria"
     },
     "kano": {
       "city": "Kano",
-      "address": "Chambre No. 15, Bloc B. Hôpital d'enseignement Amino Kano, Kano"
+      "contactPerson": "Mme Amina Mustafa",
+      "address": "Chambre No. 15, Bloc B. Hôpital d'enseignement Amino Kano, Kano, Nigéria"
+    },
+    "uyo": {
+      "city": "Uyo",
+      "contactPerson": "Lord Marmon Knight PHD",
+      "address": "NO 1. JACKSON ROYAL PALACE. IKOT ISIGHE. MKPAT ENIN LGA. AKWA IBOM STATE. NIGERIA"
     }
   },
   "kenya": {
     "country": "Kenya",
-    "nairobi": {
+    "nairobiMayfair": {
       "city": "Nairobi",
+      "contactPerson": "Mme Njeri Ndegwa",
       "address": "Mayfair Office Suites, Parklands Road, Nairobi, Kenya"
+    },
+    "nairobiUtawala": {
+      "city": "Nairobi",
+      "contactPerson": "M. James Obingo",
+      "address": "Utawala, Goodhope Court, Nairobi, Kenya"
     }
   },
   "ethiopia": {
     "country": "Éthiopie",
-    "debreMarkos": {
-      "city": "Debre Markos",
+    "adisAbaba": {
+      "city": "Addis-Abeba",
+      "contactPerson": "Lakshmi Srinivas",
       "address": "Debre Markos, District d'East Gojjam, Addis-Abeba, Éthiopie"
+    },
+    "gondar": {
+      "city": "Gondar",
+      "contactPerson": "M. Asfachew",
+      "address": "Chambre No. 9, Département de radiologie, Hôpital d'enseignement de Gondar, Gondar, Éthiopie"
+    }
+  },
+  "rwanda": {
+    "country": "Rwanda",
+    "kigali": {
+      "city": "Kigali",
+      "contactPerson": "M. Charles Nshimiyimana",
+      "address": "No. 49, Route KK 15, Kicukiro, Ville de Kigali, Rwanda"
     }
   }
 }

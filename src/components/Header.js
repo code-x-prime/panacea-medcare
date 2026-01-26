@@ -61,7 +61,7 @@ export default function Header({ locale }) {
       >
         {/* Main Header */}
         <div className="border-b border-[#066F89]/10">
-          <div className="container mx-auto px-4  py-[0.5px]">
+          <div className="mx-auto px-4  py-[0.5px]">
             <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
               {/* Logo - RTL: right side, LTR: left side - Reduced height */}
               <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
@@ -98,7 +98,7 @@ export default function Header({ locale }) {
                   href="https://wa.me/919958800961"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 whitespace-nowrap"
                 >
                   <FaWhatsapp className="w-5 h-5" />
                   {t.contactUs} : +91 995 880 0961

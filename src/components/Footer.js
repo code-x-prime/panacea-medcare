@@ -58,8 +58,8 @@ export default function Footer({ locale }) {
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             {/* Logo */}
@@ -74,13 +74,51 @@ export default function Footer({ locale }) {
               />
             </Link>
 
-            <p className="text-panacea-light/90 mb-6 leading-relaxed">
+            <p className="text-panacea-light/90 mb-4 leading-relaxed text-sm">
               {t("tagline")}
             </p>
 
-            {/* Contact Info */}
+            {/* Social Links - Moved to Col 1 */}
+            <div className="mt-6">
+              <h4 className="font-bold text-lg mb-3 text-white">{t("social.title")}</h4>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-gradient-to-br from-white/10 to-white/5 hover:from-panacea-secondary/30 hover:to-panacea-primary/30 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10 hover:border-panacea-secondary/50"
+                      aria-label={t(`social.${social.label}`)}
+                    >
+                      <Icon className="w-5 h-5 text-white" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-bold text-xl mb-3 text-white">{t("services.title")}</h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service}>
+                  <span className="text-panacea-light/90 hover:text-panacea-secondary transition-colors cursor-default">
+                    {t(`services.${service}`)}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info - Moved to Col 3 */}
+          <div>
             <div className="space-y-3">
-              <h4 className="font-bold text-lg mb-3">{t("contactTitle")}</h4>
+              <h4 className="font-bold text-xl mb-3 text-white">{t("contactTitle")}</h4>
 
               <a
                 href={`tel:${phoneNumber.replace(/-/g, "")}`}
@@ -128,7 +166,7 @@ export default function Footer({ locale }) {
 
               <a
                 href={`/${locale}/services/teleconsultation`}
-                className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group mt-4 pt-4 border-t border-white/10"
+                className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group mt-2 pt-2 border-t border-white/10"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <Send className="w-5 h-5" />
@@ -141,45 +179,9 @@ export default function Footer({ locale }) {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-bold text-xl mb-6 text-white">{t("services.title")}</h4>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-panacea-light/90 hover:text-panacea-secondary transition-colors cursor-default">
-                    {t(`services.${service}`)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h4 className="font-bold text-xl mb-6 text-white">{t("social.title")}</h4>
-            <div className="flex flex-wrap gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-to-br from-white/10 to-white/5 hover:from-panacea-secondary/30 hover:to-panacea-primary/30 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 border border-white/10 hover:border-panacea-secondary/50"
-                    aria-label={t(`social.${social.label}`)}
-                  >
-                    <Icon className="w-6 h-6 text-white" />
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Our Offices */}
           <div>
-            <h4 className="font-bold text-xl mb-6 text-white">{t("ourOffices.title") || "Our Offices"}</h4>
+            <h4 className="font-bold text-xl mb-3 text-white">{t("ourOffices.title") || "Our Offices"}</h4>
             <div className="space-y-4">
               {/* Head Office */}
               <div className="text-panacea-light/90 bg-white/5 p-4 rounded-lg border border-white/10">
@@ -189,9 +191,9 @@ export default function Footer({ locale }) {
                   <p className="text-sm leading-relaxed">Sector 38, Gurgaon – 122001</p>
                   <p className="text-sm leading-relaxed">Delhi NCR, India</p>
                 </div>
-                
+
                 <div className="space-y-2 pt-3 border-t border-white/10">
-                  <a 
+                  <a
                     href={`tel:${phoneNumber.replace(/-/g, "")}`}
                     className="flex items-center gap-2 text-panacea-light/90 hover:text-panacea-secondary transition-colors group"
                   >
@@ -200,7 +202,7 @@ export default function Footer({ locale }) {
                     </div>
                     <span className="text-sm">{phoneNumber}</span>
                   </a>
-                  <a 
+                  <a
                     href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
                     className="flex items-center gap-2 text-panacea-light/90 hover:text-panacea-secondary transition-colors break-all group"
                   >

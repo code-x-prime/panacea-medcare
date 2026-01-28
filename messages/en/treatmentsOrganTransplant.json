@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What is the success rate of organ transplants in India?",
+      "answer": "Success rates are comparable to global standards, with liver and kidney transplants showing high success rates of over 90–95%."
+    },
+    "q2": {
+      "question": "What are the legal regulations for organ transplant in India?",
+      "answer": "Organ transplantation is strictly regulated by the Transplantation of Human Organs Act (THOA), ensuring ethical donation and preventing commercialization."
+    },
+    "q3": {
+      "question": "Can international patients get an organ transplant in India?",
+      "answer": "Yes, international patients can receive transplants, typically from a related living donor, subject to approval by the hospital's authorization committee."
+    },
+    "q4": {
+      "question": "What is the waiting time for a transplant?",
+      "answer": "Waiting times vary by organ and donor availability. Living donor transplants can be scheduled faster, while deceased donor lists have variable wait times."
+    },
+    "q5": {
+      "question": "What is the cost of organ transplant in India compared to other countries?",
+      "answer": "The cost is significantly lower, often 1/10th of Western countries, without compromising on quality or medical expertise."
+    }
   }
 }

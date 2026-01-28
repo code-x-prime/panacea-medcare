@@ -1,0 +1,45 @@
+{
+  "title": "AI Pre-Screening for International Patients",
+  "subtitle": "Fast. Accurate. Personalized.",
+  "subtitleHighlight": "Get Medical Clarity Before You Travel.",
+  "badges": {
+    "report": "⏱️ Report in 2 Hours",
+    "secure": "🛡️ 100% Secure Data",
+    "analysis": "🤖 Advanced AI Analysis"
+  },
+  "howItWorks": {
+    "title": "How AI Pre-Screening Works",
+    "description": "Panacea Medcare’s AI-powered process reviews your medical information to guide you toward the right treatment, hospital, and specialist in India — saving time, money, and uncertainty.",
+    "steps": {
+      "step1": {
+        "title": "Step 1: Share Details",
+        "desc": "Fill a simple form with your condition & symptoms."
+      },
+      "step2": {
+        "title": "Step 2: Upload Reports",
+        "desc": "Attach prescriptions, scans, or lab reports."
+      },
+      "step3": {
+        "title": "Step 3: AI Analysis",
+        "desc": "Our engine structures data & matches with treatment paths."
+      },
+      "step4": {
+        "title": "Step 4: Receive Report",
+        "desc": "Get a clear guide via Email/WhatsApp in 2 hours."
+      }
+    }
+  },
+  "reportIncludes": {
+    "title": "What the Report Includes:",
+    "items": [
+      "Initial medical assessment",
+      "Suggested treatment options & cost range",
+      "Recommended medical specialty",
+      "Urgency level (Routine vs. Urgent)"
+    ]
+  },
+  "disclaimer": {
+    "title": "Important Disclaimer",
+    "text": "AI Pre-Screening provides preliminary medical guidance and does not replace a doctor’s diagnosis. Final treatment decisions are made only after evaluation by qualified medical professionals. Your data is protected with encrypted uploads and strict confidentiality protocols."
+  }
+}

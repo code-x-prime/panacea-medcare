@@ -343,7 +343,7 @@ export default function AIPreScreeningForm({ locale }) {
                                         className="mt-1 w-5 h-5 text-panacea-primary rounded border-gray-300 focus:ring-panacea-primary"
                                     />
                                     <span className="text-sm text-gray-600">
-                                        I consent to the processing of my medical data for AI Pre-Screening. I understand that this report provides <strong>preliminary insights only</strong> and does not replace a doctor's diagnosis.
+                                        I consent to the processing of my medical data for AI Pre-Screening. I understand that this report provides <strong>preliminary insights only</strong> and does not replace a doctor&apos;s diagnosis.
                                     </span>
                                 </label>
                             </div>

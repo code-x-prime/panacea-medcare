@@ -58,6 +58,7 @@ export default getRequestConfig(async ({ locale }) => {
     tourismLeisure: (await import(`../../messages/${validLocale}/tourismLeisure.json`)).default,
     partnerWithUs: (await import(`../../messages/${validLocale}/partnerWithUs.json`)).default,
     aiSolutions: (await import(`../../messages/${validLocale}/aiSolutions.json`)).default,
+    preScreening: (await import(`../../messages/${validLocale}/preScreening.json`)).default,
   };
 
   return {

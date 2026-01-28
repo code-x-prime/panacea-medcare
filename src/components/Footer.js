@@ -255,6 +255,20 @@ export default function Footer({ locale }) {
               {t("certifications")}
             </p>
           </div>
+          <div className="text-center mt-4">
+            <p className="text-sm text-panacea-light/60">
+              Designed & Developed by{" "}
+              <a
+                href="http://groxmedia.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-panacea-accent hover:text-white transition-colors"
+                title="Grox Media - Best Web Development Agency in India"
+              >
+                Grox Media
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

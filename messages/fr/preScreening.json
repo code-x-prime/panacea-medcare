@@ -1,0 +1,45 @@
+{
+  "title": "Pré-dépistage Médical par IA pour les Patients Internationaux",
+  "subtitle": "Rapide. Précis. Personnalisé.",
+  "subtitleHighlight": "Obtenez une Clarté Médicale Avant de Voyager.",
+  "badges": {
+    "report": "⏱️ Rapport en 2 Heures",
+    "secure": "🛡️ Données 100% Sécurisées",
+    "analysis": "🤖 Analyse IA Avancée"
+  },
+  "howItWorks": {
+    "title": "Comment Fonctionne le Pré-dépistage IA",
+    "description": "Le processus alimenté par l'IA de Panacea Medcare examine vos informations médicales pour vous guider vers le bon traitement, le bon hôpital et le bon spécialiste en Inde — économisant du temps, de l'argent et de l'incertitude.",
+    "steps": {
+      "step1": {
+        "title": "Étape 1 : Partager les Détails",
+        "desc": "Remplissez un formulaire simple avec votre état et vos symptômes."
+      },
+      "step2": {
+        "title": "Étape 2 : Télécharger les Rapports",
+        "desc": "Joignez des ordonnances, des scans ou des rapports de laboratoire."
+      },
+      "step3": {
+        "title": "Étape 3 : Analyse IA",
+        "desc": "Notre moteur structure les données et les fait correspondre aux parcours de soins."
+      },
+      "step4": {
+        "title": "Étape 4 : Recevoir le Rapport",
+        "desc": "Obtenez un guide clair par Email/WhatsApp en 2 heures."
+      }
+    }
+  },
+  "reportIncludes": {
+    "title": "Ce que le Rapport Inclut :",
+    "items": [
+      "Évaluation médicale initiale",
+      "Options de traitement suggérées et fourchette de coûts",
+      "Spécialité médicale recommandée",
+      "Niveau d'urgence (Routine vs Urgent)"
+    ]
+  },
+  "disclaimer": {
+    "title": "Avertissement Important",
+    "text": "Le pré-dépistage par IA fournit des conseils médicaux préliminaires et ne remplace pas le diagnostic d'un médecin. Les décisions finales de traitement ne sont prises qu'après évaluation par des professionnels de santé qualifiés. Vos données sont protégées par des téléchargements cryptés et des protocoles de confidentialité stricts."
+  }
+}

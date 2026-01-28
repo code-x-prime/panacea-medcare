@@ -44,5 +44,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What are the most popular aesthetic procedures in India?",
+      "answer": "Common procedures include liposuction, rhinoplasty, hair transplants, and breast augmentation, all performed by expert surgeons."
+    },
+    "q2": {
+      "question": "Is cosmetic surgery in India safe?",
+      "answer": "Yes, Indian hospitals use FDA-approved technology and follow strict international safety protocols for all cosmetic procedures."
+    },
+    "q3": {
+      "question": "How much does plastic surgery cost in India?",
+      "answer": "Costs are generally 50-70% lower than in the US or UK, varying by procedure type and complexity."
+    },
+    "q4": {
+      "question": "What is the recovery time for cosmetic surgeries?",
+      "answer": "Recovery varies; minor procedures may take a few days, while major surgeries like tummy tucks may require 2-3 weeks."
+    },
+    "q5": {
+      "question": "Do Indian plastic surgeons have international certifications?",
+      "answer": "Many top plastic surgeons in India are members of international bodies like ISAPS and ASPS."
+    }
   }
 }

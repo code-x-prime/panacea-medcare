@@ -40,5 +40,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What gynecological treatments are available for international patients?",
+      "answer": "We offer a full range of services including IVF, fibroid removal, endometriosis treatment, and gynecologic oncology."
+    },
+    "q2": {
+      "question": "Are fertility treatments in India successful?",
+      "answer": "Yes, Indian fertility centers have success rates comparable to best global clinics, often exceeding 50-60% per cycle for IVF."
+    },
+    "q3": {
+      "question": "Is robotic surgery available for gynecological conditions?",
+      "answer": "Yes, many top Indian hospitals offer robotic-assisted surgery for precise treatment of complex gynecological issues."
+    },
+    "q4": {
+      "question": "How long do I need to stay in India for IVF treatment?",
+      "answer": "Typically, an IVF cycle requires a stay of about 3-4 weeks, though this can vary based on individual treatment plans."
+    },
+    "q5": {
+      "question": "Do you have female gynecologists available?",
+      "answer": "Yes, we have many highly experienced and renowned female gynecologists and obstetricians."
+    }
   }
 }

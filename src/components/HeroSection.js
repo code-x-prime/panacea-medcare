@@ -134,7 +134,7 @@ export default function HeroSection({ locale }) {
           >
             {/* Primary CTA - Start Your AI Pre-Screening */}
             <Link
-              href={`/${locale}/services/teleconsultation`}
+              href={`/${locale}/pre-screening`}
               className={`group inline-flex items-center justify-center gap-3 px-6 py-4 bg-[#F5841F] hover:bg-[#E07316] text-white rounded-lg font-semibold text-base transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto ${isRTL ? "flex-row-reverse" : ""}`}
             >
               <span>{ctaPreScreening[locale] || ctaPreScreening.en}</span>

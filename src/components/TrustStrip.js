@@ -38,7 +38,7 @@ export default function TrustStrip({ locale }) {
     return (
         <section className="bg-white border-b border-gray-100 py-8" dir={isRTL ? "rtl" : "ltr"}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div className="flex flex-col-reverse  items-center gap-8 ">
 
                     {/* Stats Column */}
                     <div className={`flex flex-wrap justify-center gap-6 md:gap-10 md:w-auto flex-shrink-0 ${isRTL ? "md:order-2" : "md:order-1"}`}>
@@ -52,8 +52,7 @@ export default function TrustStrip({ locale }) {
                         ))}
                     </div>
 
-                    {/* Divider (Hidden on mobile) */}
-                    <div className="hidden md:block w-px h-16 bg-gray-200" />
+
 
                     {/* Logos Scroll - Infinite Animation */}
                     <div className={`flex-1 w-full overflow-hidden ${isRTL ? "md:order-1" : "md:order-2"} mt-6 md:mt-0`}>

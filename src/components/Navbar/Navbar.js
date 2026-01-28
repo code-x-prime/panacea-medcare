@@ -3,12 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, Menu, X, Search } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import GlobalSearch from "@/components/GlobalSearch";
 
 export default function Navbar({ locale = "en" }) {
   var t = useTranslations("navbar");
+  var router = useRouter();
   var isRTL = locale === "ar";
 
   // Get menu data from translations
@@ -86,6 +88,16 @@ export default function Navbar({ locale = "en" }) {
     }
   }
 
+  function handleSubMenuClick(e, href) {
+    e.preventDefault();
+    router.push(href);
+    // Delay closing to allow navigation to start
+    setTimeout(() => {
+      closeMenu();
+      closeMobileMenu();
+    }, 300);
+  }
+
   function closeMenu() {
     setActiveMenu(null);
   }
@@ -106,7 +118,7 @@ export default function Navbar({ locale = "en" }) {
 
   return (
     <nav
-      className={` bg-white shadow-sm transition-all duration-300 ${isSticky ? 'sticky top-0 z-50 shadow-lg' : 'relative'
+      className={`navbar-container bg-white shadow-sm transition-all duration-300 ${isSticky ? 'sticky top-0 z-50 shadow-lg' : 'relative'
         }`}
       dir={isRTL ? "rtl" : "ltr"}
     >
@@ -147,7 +159,6 @@ export default function Navbar({ locale = "en" }) {
                 >
                   <Link
                     href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
-                    onClick={(e) => handleMenuClick(e, item)}
                     className={
                       "flex items-center text-sm font-semibold px-2 py-1 rounded-md transition-all duration-200 " +
                       (shouldWrap ? "max-w-[150px] " : "") +
@@ -192,14 +203,14 @@ export default function Navbar({ locale = "en" }) {
                     >
                       <div className="grid grid-cols-3 gap-2">
                         {subMenuItems.map((subItem, sIdx) => (
-                          <Link
+                          <a
                             key={sIdx}
                             href={"/" + locale + (subItem.slug || "")}
-                            onClick={closeMenu}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium"
+                            onClick={(e) => handleSubMenuClick(e, "/" + locale + (subItem.slug || ""))}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium cursor-pointer"
                           >
                             {subItem.name || subItem.country}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -286,31 +297,22 @@ export default function Navbar({ locale = "en" }) {
                       }
                     >
                       <div className="flex items-center gap-2 flex-1">
-                        {hasSubMenu ? (
-                          <button
-                            onClick={() => toggleMobileItem(item.key)}
-                            className="text-lg font-semibold text-gray-800 hover:text-panacea-primary transition-colors text-left"
-                          >
-                            {item.name}
-                          </button>
-                        ) : (
-                          <Link
-                            href={
-                              item.slug === "/"
-                                ? "/" + locale
-                                : "/" + locale + item.slug
-                            }
-                            className={
-                              "text-lg font-semibold transition-colors " +
-                              (item.color === "teal"
-                                ? "text-panacea-primary hover:text-panacea-dark"
-                                : "text-gray-800 hover:text-panacea-primary")
-                            }
-                            onClick={closeMobileMenu}
-                          >
-                            {item.name}
-                          </Link>
-                        )}
+                        <Link
+                          href={
+                            item.slug === "/"
+                              ? "/" + locale
+                              : "/" + locale + item.slug
+                          }
+                          className={
+                            "text-lg font-semibold transition-colors " +
+                            (item.color === "teal"
+                              ? "text-panacea-primary hover:text-panacea-dark"
+                              : "text-gray-800 hover:text-panacea-primary")
+                          }
+                          onClick={closeMobileMenu}
+                        >
+                          {item.name}
+                        </Link>
 
                         {/* JCI Badge in Mobile Menu - Attached to Hospitals */}
                         {isHospitals && (
@@ -353,19 +355,19 @@ export default function Navbar({ locale = "en" }) {
                       >
                         {/* Simple list for all dropdown items */}
                         {subMenuItems.map((sub, sIdx) => (
-                          <Link
+                          <a
                             key={sIdx}
                             href={"/" + locale + sub.slug}
-                            className="block py-2 sm:py-2.5 text-xs sm:text-sm md:text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-2 sm:px-3 transition-colors break-words"
+                            className="block py-2 sm:py-2.5 text-xs sm:text-sm md:text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-2 sm:px-3 transition-colors break-words cursor-pointer"
                             style={{
                               wordBreak: 'break-word',
                               hyphens: 'auto',
                               lineHeight: '1.4'
                             }}
-                            onClick={closeMobileMenu}
+                            onClick={(e) => handleSubMenuClick(e, "/" + locale + sub.slug)}
                           >
                             {sub.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     )}

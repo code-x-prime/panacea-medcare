@@ -44,5 +44,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What are the benefits of laparoscopic surgery?",
+      "answer": "Benefits include smaller incisions, less pain, reduced scarring, and faster recovery compared to open surgery."
+    },
+    "q2": {
+      "question": "Is laparoscopic surgery safe?",
+      "answer": "Yes, it is a safe and standard technique for many procedures, performed by highly trained specialists."
+    },
+    "q3": {
+      "question": "How long is the hospital stay after laparoscopic surgery?",
+      "answer": "Most patients are discharged within 24 to 48 hours, depending on the specific procedure and individual recovery."
+    },
+    "q4": {
+      "question": "Can all surgeries be done laparoscopically?",
+      "answer": "Not all, but many abdominal and pelvic surgeries like gallbladder removal, hernia repair, and hysterectomy are commonly done this way."
+    },
+    "q5": {
+      "question": "Is laparoscopic surgery more expensive than open surgery?",
+      "answer": "The procedure cost might be slightly higher due to equipment, but total costs are often lower due to shorter hospital stays."
+    }
   }
 }

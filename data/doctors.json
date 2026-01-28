@@ -8,7 +8,21 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. N. K. Pandey.png",
-    "bio": "Dr. N. K. Pandey is the Chief of Robotic, Laparoscopic and Advanced Surgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. N. K. Pandey is the Chief of Robotic, Laparoscopic and Advanced Surgery at Asian Institute of Medical Sciences.",
+    "experienceSummary": "• Executive Director and Director of Department of Surgery, Escorts Hospital & Research Centre, Faridabad.\n• President, Association of Surgeons of India in 2010.\n• Joint Editor: Indian Journal of Surgery.\n• Examiner and Surgical Tutor at Royal College of Surgeons, Edinburgh and Royal College of Physicians & Surgeons, Glasgow\n• Trustee and Member of International Executive Council- International College of Surgeon, Chicago\n• Past President- International College of Surgeon, Indian Section.\n• Governor- American College of Surgeons\n• Consultant at National Board of Examinations\n• Secretary- Raj Nanda Pulmonary Disease Trust",
+    "qualification": "M.B.B.S, FRCS(Edinburg), FRCS(Glasglow), FICS, FACS(Edinburg)",
+    "expertise": [
+      "Abdominal and thoracic surgeries",
+      "Robotic surgeries",
+      "Laparoscopic surgeries",
+      "Video Assisted Thoracoscopic surgery"
+    ],
+    "membership": [
+      "Association of Surgeons of India",
+      "International College of Surgeons",
+      "American College of Surgeons",
+      "Member Senate-Thirthankar Mahaveer University"
+    ]
   },
   {
     "id": "anita-kant",
@@ -63,7 +77,22 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Anshumali Misra.png",
-    "bio": "Dr. Anshumali Misra is the Associate Director & Head of Plastic Surgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. Anshumali Misra is the Associate Director & Head of Plastic Surgery at Asian Institute of Medical Sciences.",
+    "experience": "21 Years Experience",
+    "briefProfile": "An alumnus of the prestigious department of burns plastic & Maxillofacial surgery Dr Anshumali has a vast experience in the field of plastic reconstructive & cosmetic Surgery He was attached to Sarvodaya Hospital Faridabad for past 9 years. He has many presentations in National and International conference has won awards for the same",
+    "qualification": "MBBS, DNB (General Surgery), Mch (Plastic Surgery)",
+    "achievements": [
+      "Best paper award NABICON 2012-2014",
+      "Best case award Urgo case contest 2021"
+    ],
+    "specialityInterest": [
+      "Diabetic Foot & wound management Rhinoplasty"
+    ],
+    "membership": [
+      "National Academy of Burns India-NABI",
+      "Indian Association of Plastic Surgeon IAPS",
+      "Indian Society for peripheral Merve Surgery ISPNS"
+    ]
   },
   {
     "id": "banwari-lal",
@@ -789,7 +818,38 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Puneet Gupta.png",
-    "bio": "Dr. Puneet Gupta is the Chairman of Oncology Services at Asian Institute of Medical Sciences."
+    "bio": "Dr. Puneet Gupta is the Chairman of Oncology Services at Asian Institute of Medical Sciences.",
+    "experience": "28 years of experience",
+    "qualification": "MBBS, MD (Radiation Therapy), DNB (Radiation Therapy), DM (Medical Oncology), MBA (Hospital Administration)",
+    "achievements": [
+      "First Senior Faculty to start DNB medical oncology in India.",
+      "First to start diploma in phychology oncology in India through Amity University",
+      "Instrumental to start first diploma in nursing oncology in India.",
+      "Working to start first diploma in pharmacology oncology in India.",
+      "First to give EGFR monoclonal antibody for HDN cancer in India ceoperate sector.",
+      "First to give CD33 monoclonal antibody for AML blood cancer in India.",
+      "First to deliver arterial chemo therapy using arterial chemo rump in India.",
+      "Maximum experience use hyperbaric oxygen therapy in cancer case.",
+      "Reconstitution of cardiac tissues using hematopoietic stem cells",
+      "Published & presented original research in cancer therapy, cancer nutritian, cancer psychology, cancer pharmacology on international scientific platforms(Dubai, London, Hongkong, San-Anterio, Beijing, Ontario, Singapore, Madagascar etc)",
+      "First in world to present gupta celittering whole body imagery cognitive intervention to overcome existential crisis & format self suitability in challenging mental scenario"
+    ],
+    "specialityInterest": [
+      "Synchronous chemo- RT",
+      "Chronomodulated therapy",
+      "Recenstitutian of tissues using hematopietic stem cells.",
+      "Dendritic cell therapy",
+      "Chemo-target-immuno therapy"
+    ],
+    "membership": [
+      "Indian Society for Radition Biology",
+      "Indo Global Health Care Research Foundation",
+      "European Society of Medical Oncology",
+      "American Society of Clinical Oncology",
+      "Member European Society of Gene Therapy",
+      "Fellow International Academy of Medical Sciences",
+      "Life Member Association of Radiation Oncologists of India"
+    ]
   },
   {
     "id": "durgatosh-pandey",
@@ -833,7 +893,22 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Subrat Akhoury.png",
-    "bio": "Dr. Subrat Akhoury is the Chairman of Cath Lab & Interventional Cardiologist and Head at Asian Institute of Medical Sciences."
+    "bio": "Dr. Subrat Akhoury is the Chairman of Cath Lab & Interventional Cardiologist and Head at Asian Institute of Medical Sciences.",
+    "experience": "20 years of experience in Cardiology",
+    "experienceSummary": "• 20 years of experience in Cardiology\n• Earlier worked at Safdarjung Hospital and Apollo Hospital, New Delhi",
+    "qualification": "MBBS, MD (Medicine), DM (Cardiology), FSCAI (USA)",
+    "achievements": [
+      "As Faculty in various National and International conferences",
+      "Also handles difficult cases and presented cases"
+    ],
+    "specialityInterest": [
+      "Adult Cardiac Interventions",
+      "All Angioplasty, Pacemaker Implantation (Coronary, Carotid, Peripheral)"
+    ],
+    "membership": [
+      "Fellow of Society for Cardiovascular Angiography and Interventions (FSCAI)",
+      "Life Member of Cardiological Society of India"
+    ]
   },
   {
     "id": "ved-prakash",
@@ -844,7 +919,42 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Ved Prakash.png",
-    "bio": "Dr. Ved Prakash is the Chairman of General Surgery, Minimal Invasive, Bariatric & Robotic Surgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. Ved Prakash is the Chairman of General Surgery, Minimal Invasive, Bariatric & Robotic Surgery at Asian Institute of Medical Sciences.",
+    "experience": "More than 25 years of experience",
+    "experienceSummary": "• More than 25 years of experience after Post Graduation in handling all types of trauma and emergency surgery, basics and advanced laparoscopic surgery, bariatric and colorectal surgery, endocrine and breast surgery, varicose vein and thoracic surgery etc.\n• 23 years of experience in academic training and teaching of undergraduate, postgraduate and DNB students in government and private institutions. Also keen learner and active participant and presenter at many Surgical Conferences.\n• Special training in Advanced Laparoscopic, Metabolic and Bariatric Surgery from international institutes.\n• Mar 2001 to Mar 2004 – Senior Resident (Department of Surgery), Safdarjung Hospital, New Delhi.\n• Mar 1996 to Feb 1997 – Junior Resident (Medicine), S. K. Medical College, Muzaffarpur, Bihar\n• Advanced laparoscopic training at Gem Hospital, under guidance of Dr Palinivelu\n• Laparoscopic colorectal training at Meenakshi Hospital Madurai\n• Aug 2003 to Feb 2004 – Senior Resident Department of Surgery), Maharaja Agrasen Hospital, New Delhi.\n• Hepatic and trauma training at Sion Hospital Mumbai\n• Advance laparoscopic training Oncosurgery by Dr. Shailesh P. Puntambekar (Chief Director, Galaxy Care Laparoscopy Institute, Pune)",
+    "briefProfile": "Dr. Ved Prakash is a highly skilled laparoscopic, bariatric, and weight loss surgeon in Faridabad, renowned for his expertise and exceptional patient care. With years of experience, he specializes in advanced minimally invasive procedures, ensuring faster recovery and better outcomes. His commitment to patient well-being, cutting-edge techniques, and compassionate approach make him one of the most trusted surgeons in the region.\nDr. Ved Prakash has more than 16 years of experience after post-graduation in handling all types of Trauma and Emergency Surgery, Basics and Advanced Laparoscopic Surgery, Bariatric and Colorectal Surgery, Endocrine and Breast Surgery, Varicose Vein and Thoracic Surgery Etc.\nLaparoscopy is a surgical procedure that allows for the inspection of many reproductive organs, including the appendix, gallbladder, pelvis, stomach, intestines, liver, pancreas, and spleen. Most people are comfortable with routine and straight forward surgery. The procedure is very common and simple, and most patients are discharged on the same day. If you are looking for the Best Laparoscopic Surgeon in Faridabad, book an appointment to consult now.",
+    "qualification": "MBBS–SKM Govt College, Muzaffarpur, MS (Surgery)-SS Medical College, Rewa, MP",
+    "achievements": [
+      "Fellowship in Laparoscopic onco and colorectal surgery from Academic Medical Centre, Amsterdam, Netherlands.",
+      "Fellowship in advanced laparoscopic surgery",
+      "Fellowship in laparoscopic hernia surgery",
+      "Fellowship in advanced trauma and emergency surgery",
+      "Awarded certificate of diploma in advanced laparoscopic surgery by Gem endo surgery,Coimbatore",
+      "Awarded membership of International Association of Surgeons Gastroenterologists and Oncologists (IASGO)",
+      "Awarded “Young Surgeon Award” for year 2011 by Association Of Surgeons of India",
+      "Awarded Betadine Young Surgeon Award for year 2011 by Association Of Surgeons of India",
+      "Awarded Ethicon travelling fellowship by Association Of Surgeons of India in year 2010",
+      "Honours in Pharmacology",
+      "Awarded certificate of performing MTP sponsored by RCH at GTB Hospital, New Delhi.",
+      "Awarded fundamental critical care support course certificate of successful completion by California University USA.",
+      "Selected in short service commission of army medical corp. at specialist position.",
+      "Selected as a specialist (General Surgery) by Uttranchal Public Service Commission.",
+      "Selected as a specialist in Bihar Public Service Commission",
+      "Surgical Publication in Indexed Journal",
+      "Performer in many National and State Level Live Operative Workshop including ASICON 2015"
+    ],
+    "specialityInterest": [
+      "Benign and Malignant Colorectal and Anus Disorder",
+      "Endocrine and Varicose Vein Surgery",
+      "Hernia and Stone Related Problem"
+    ],
+    "membership": [
+      "Life Membership of Association of Surgeons of India.",
+      "Life membership of Indian Medical Association",
+      "Fellowship of International College of Surgeons",
+      "Fellowship of Association of Indian Surgeons",
+      "Registered at Delhi medical council, Haryana medical council, Bihar medical council"
+    ]
   },
   {
     "id": "amit-chaudhary",
@@ -855,7 +965,20 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Amit Chaudhary.png",
-    "bio": "Dr. Amit Chaudhary is the Director of CTVS at Asian Institute of Medical Sciences."
+    "bio": "Dr. Amit Chaudhary is the Director of CTVS at Asian Institute of Medical Sciences.",
+    "experience": "More than 18 Years",
+    "briefProfile": "• MS (Surgery) – King George Medical College\n• Fellow (Paediatric Surgery) – Royal Liverpool Children Hospital, Liverpool , U.K.\n• MRCS – Intercollegiate (U.K)\n• M.Ch – Cardiothoracic & Vascular Surgery (SGPGI , Lucknow)",
+    "qualification": "M.S., M.R.C.S. (U.K.), M.Ch",
+    "specialityInterest": [
+      "Minimal Invasive Cardiac Surgery",
+      "Endovascular Repairs",
+      "TAVI, LVAD, ECMO",
+      "Heart Transplant"
+    ],
+    "membership": [
+      "European Society of Thoracic Surgeons",
+      "Indian Association of Cardiovascular- Thoracic Surgeons (IACTS)"
+    ]
   },
   {
     "id": "amit-miglani",
@@ -866,7 +989,26 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Amit Miglani.png",
-    "bio": "Dr. Amit Miglani is the Director & HOD of Gastroenterology at Asian Institute of Medical Sciences."
+    "bio": "Dr. Amit Miglani is the Director & HOD of Gastroenterology at Asian Institute of Medical Sciences.",
+    "experienceSummary": "• Dr. Amit Miglani has more than 18 years of experience in field of Gastroenterology and Hepatology and Therapeutic Endoscopy.\n• Has done more than 40000 endoscopic procedures, 7000 interventional procedures, 6000 ERCP and EUS procedures.\n• Dr. Amit Miglani is expert in all kind of complex Gastrointestinal interventional procedures.",
+    "qualification": "MBBS (University College of Medical Sciences, Delhi), MD (Medicine) (Maulana Azad Medical College, Delhi), DM (Gastroenterology) (PGIMER, Chandigarh)",
+    "achievements": [
+      "Presented Papers at Various National and International Gastroenterology Conferences.",
+      "Given Lectures and presentation at Various National and International Gastroenterology Forums.",
+      "Conducted various training workshops to teach the training Gastroenterology Graduates about various interventional procedures."
+    ],
+    "specialityInterest": [
+      "Dr. Amit Miglani has special interest in treating all kind of Liver related problems including treating complex hepatobiliary cases.",
+      "He also has interest in therapeutic endoscopy including ERCP and Interventional EUS (Endoscopic Ultrasound).",
+      "He is also an expert in doing POEM proceedure for achalasia cardia.",
+      "He is also doing various third space endoscopy procedures."
+    ],
+    "membership": [
+      "Member of Indian Society of Gastroenterology (ISG).",
+      "Member of American College of Gastroenterology (ACG).",
+      "Member of Indian National Association for Study of the Liver (INSAL).",
+      "Member of Society of Gastrointestinal endoscopy of India (SGEI)."
+    ]
   },
   {
     "id": "ajit-pratap-singh",
@@ -899,7 +1041,27 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr Deepak Kumar Mishra.png",
-    "bio": "Dr Deepak Kumar Mishra is the Director & Head of Orthopaedic & Robotic Joint Replacement Surgery Unit – I at Asian Institute of Medical Sciences."
+    "bio": "Dr Deepak Kumar Mishra is the Director & Head of Orthopaedic & Robotic Joint Replacement Surgery Unit – I at Asian Institute of Medical Sciences.",
+    "experience": "More than 26 years of experience",
+    "experienceSummary": "Previously Associate with:\n• Yashoda Hospital, Hyderabad – Head Joint Replacement Surgeon & Arthroscopy\n• Medanta – The Medicity, Gurgaon – Head of Hip Replacement Unit\n• Dr LH Hiranandani Hospital, Powai, Mumbai – Head Knee & Hip Replacement Surgeon",
+    "briefProfile": "Dr. Deepak Kumar Mishra is one of the best orthopaedic Surgeon in Faridabad. He has 26 years of long & rich experience in the field of Primary & revision Knee & Hip Replacement Surgeries & Arthroscopy.\nHe completed his MBBS and MS (Orthopaedics) from JIPMER, Pondicherry, one of India’s most prestigious medical colleges. Subsequently, he moved to the UK for higher surgical training in Joint Replacement. He obtained membership in the Royal College of Surgeons of Edinburgh and M Ch. in Trauma and Orthopaedics during his training in the UK.\nHe has also been conferred Fellowship in Trauma and Orthopaedics from the International College of Surgeons. Dr. Mishra is well known for his excellent skills and impeccable patient care. He has presented his work at national and international conferences and has publications in peer-reviewed journals to his credit. His contribution to Orthopaedics and joint replacement is well recognized and has been included in the Marquis’ Who is Who’ field of medicine and healthcare for 2009-2010.\nDr. Deepak Kumar Mishra is the best orthopaedic surgeon & has vast experience in Replacement Surgeries around the knee and hip joints. He uses the latest technology for Primary Total Knee Replacement, Total Hip Replacement, and Revision Replacement Surgeries. In addition, he specializes in limb reconstruction surgeries for complex problems like mal-union/non-union of long bones. He’s a proponent of minimally invasive and tissue-preserving techniques. He’s also actively involved in teaching young doctors and paramedical staff.",
+    "qualification": "MBBS – JIPMER, Pondicherry, MS (Orthopaedics) – JIPMER, Pondicherry, MRCSEd (UK), MCh Ortho (UK), FICS ortho (USA)",
+    "achievements": [
+      "Publications in Medline Indexed International Journals",
+      "Listed in Marquis “who is who” in the field of medicine and healthcare for year 2009-2010."
+    ],
+    "specialityInterest": [
+      "Primary & Revision Knee replacement Surgery",
+      "Uncompartmentalized knee replacement Surgery",
+      "Primary & Revision Hip Replacement surgery",
+      "Minimal Invasive Surgery",
+      "Arthroscopic Surgery"
+    ],
+    "membership": [
+      "Lifetime Member of Indian Orthopaedics Association",
+      "Lifetime Member of Indian Arthroscopy Society",
+      "Membership of AO Switzerland"
+    ]
   },
   {
     "id": "divesh-arora",
@@ -943,7 +1105,28 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Mukesh Pandey.png",
-    "bio": "Dr. Mukesh Pandey is the Director & HOD of Neurosurgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. Mukesh Pandey is the Director & HOD of Neurosurgery at Asian Institute of Medical Sciences.",
+    "experience": "More than 22 years of experience",
+    "experienceSummary": "• Senior Consultant, Sarvodaya Hospital and Research Centre\n• Senior Consultant and Head Of Department, Department of Neuro & Spine Surgery, Fortis Hospital, Shalimar Bagh, New Delhi\n• Senior Consultant and Unit in-Charge, Department of Neurosurgery, Asian Institute of Medical Sciences, Faridabad, Delhi NCR\n• Consultant Neurosurgeon, Asian Institute of Medical Sciences, Faridabad, Delhi NCR\n• Assistant Professor of Neurosurgery, Academy of Medical Sciences, Pariyaram, Kerala\n• He has an experience of 3000 Neurosurgical Procedures including Aneurysm surgery, Brain hemorrhage surgery, Complex brain tumors, Brain tumors of children, Keyhole spine surgery, Surgery for Epilepsy and Parkinsons disease",
+    "briefProfile": "Dr. Mukesh Pandey is one of the best neurosurgeon in Faridabad. He is a renowned spine surgeon with a vast experience of over 22 years in the field of neurosurgery. He has an experience in 3000 Neurosurgical Procedures, including Aneurysm surgery, Brain hemorrhage surgery, Complex brain tumors, Brain tumors of children, Keyhole spine surgery, and Surgery for Epilepsy and Parkinson’s disease with excellent success rates. He has a special interest in minimally invasive spine surgeries and has done many successful surgeries in this discipline. He is currently the Director of Neurosurgery at the Asian Institute of Medical Sciences, Faridabad. He is also a visiting faculty in many medical universities and institutions in India. He has been awarded the “Best Resident Award” and “GOLD MEDAL” awards during MS gen surgery. He has also been awarded the “Best Neurosurgeon in India” by the Indian Medical Association.",
+    "qualification": "MBBS – Aug King George’s Medical College (Now King Georges Medical University), Lucknow (UP), MS (Gen Surgery) – (Sarojini Naidu Medical College, Agra (UP)), MCh (Neurosurgery) – Sree Chithra Thirunal Institute of Medical Sciences and Technology, Trivandrum",
+    "specialityInterest": [
+      "Surgery for Parkinson Disease",
+      "Minimally invasive key hole surgery for spine",
+      "Spinal tumors/ spine injury",
+      "Endoscopic brain surgery",
+      "Brain tumor surgery",
+      "Brain hemorrhage surgery",
+      "Aneurysm surgery",
+      "VP shunt surgery"
+    ],
+    "achievements": [
+      "“Best Resident Award” and “GOLD MEDAL” award during MS gen surgery"
+    ],
+    "membership": [
+      "Member of Neurological Society of India",
+      "Member of Skull Base Society of India"
+    ]
   },
   {
     "id": "pankaj-kumar-hans",
@@ -954,7 +1137,33 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Pankaj Kumar Hans.png",
-    "bio": "Dr. Pankaj Kumar Hans is the Director & Head Unit (II) of General, Laparoscopic, Bariatric, Laser & Robotic Surgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. Pankaj Kumar Hans is the Director & Head Unit (II) of General, Laparoscopic, Bariatric, Laser & Robotic Surgery at Asian Institute of Medical Sciences.",
+    "experience": "More than 20 years of experience",
+    "experienceSummary": "• An experience of more than 20 years in the field of general and laparoscopic surgery\n• Done over 20,000 general and laparoscopic surgeries for: All type of Hernias, Gall stone diseases, Thyroid, Breast, Varicose veins, Piles, Fistula in ano, Sinus, Fissure,appendicitis and various other Gastrointestinal diseases like intestinal perforations, intestinal obstruction, gastrointestinal tumors and other General surgical procedures.\n• Special training in Advanced Laproscopic, Metabolic and Bariatric Surgery from international institutes.\n• Does a complete spectrum of Bariatric and Metabolic surgeries like Gastric Bypass and Sleeve gastrectomy surgery.\n• Faridabad’s only certified Physician for Alluriom swallowable Gastric balloon.\n• Regular participant as a faculty and delegate in various national and international conferences, workshops and CMEs on hernia Surgeries, laparoscopic & Robotic Surgeries & Bariatric Surgeries.",
+    "briefProfile": "M.S. (General Surgery), FMBS, FALS, FEHS, FIASGO\nFellowship in Metabolic and Bariatric Surgery\nFellowship in Advanced Laproscopic Surgery\nFellowship in Endoscopic Hernia Surgery\nFellowship in Hepato-Pancreatico-Biliary & G.I. Oncosurgery\nThe surgeries which he performs include a wide range of Basic and advanced laproscopic surgeries and a complete range of Bariatric and metabolic surgeries.",
+    "qualification": "M.S (General Surgery) (MLN Medical College Allahabad), M.B.B.S (Pt. B. D. S. P. G. I. M. S., Rohtak)",
+    "achievements": [
+      "Fellowship in Metabolic and bariatric Surgery (FMBS) at Jiangsu Province Hospital, China",
+      "Fellowship in Advanced Laproscopic Surgery (FALS) Bariatric Course of IAGES",
+      "Fellowship in Endoscopic Hernia Surgery (FEHS) at Max Institute, New Delhi",
+      "Fellowship in Hepato-Pancretico Biliary & GI Oncosurgery (FIASGO) at Athens Medical Centre, Greece",
+      "Advance Laproscopic training in Oncosurgery and advanced benign surgeries at Galaxy Care Laproscopy Institute, Pune",
+      "Course in Operative Laproscopy- Basic and Advanced at AIIMS, New Delhi",
+      "Senior Residency in General Surgery from Swami Dayanand Hospital, New Delhi",
+      "Senior Residency in Paediatric Surgery from Lady Hardinge Medical College, New Delhi",
+      "Publication: Long term outcomes of Laproscopic sleeve gastrectomy from a single centre in Mainland China [ASJSUR_361]",
+      "Publication: Status of laproscopic sleeve gastrectomy in China: A National Survey (MS#OBSU-D-16-00884R3)"
+    ],
+    "specialityInterest": [
+      "Advanced laproscopic Surgery",
+      "Metabolic and Bariatric Surgery",
+      "Laproscopic surgery for GERD"
+    ],
+    "membership": [
+      "Indian Association of Gastrointestinal EndoSurgeons",
+      "India Hernia Society",
+      "Obesity Surgery Society of India"
+    ]
   },
   {
     "id": "ps-ahuja",
@@ -976,7 +1185,25 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Rajiv Kumar Sethia.png",
-    "bio": "Dr. Rajiv Kumar Sethia is the Director & Head of Urology, Kidney Transplant & Robotic Surgery at Asian Institute of Medical Sciences."
+    "bio": "Dr. Rajiv Kumar Sethia is the Director & Head of Urology, Kidney Transplant & Robotic Surgery at Asian Institute of Medical Sciences.",
+    "experience": "Over 20 years of experience",
+    "experienceSummary": "• Senior Consultant & Unit Head Urology & Renal Transplant at Metro Multispeciality Hospital, Faridabad\n• Consultant Urology & Renal Transplant at Fortis Memorial Research Institute, Gurgaon 2013\n• Senior Fellow in Minimally Acces Urology at Medanta, The Medicity, Gurgaon\n• Fellow in Kidney Transplant at Medanta The Medicity, Gurgaon\n• DNB-Urology Registrar at St Johns Medical College Hospital, Bangalore\n• Senior Registrar Surgery & Urology at ESIC Hospital, NDMC Hospital & Max Hospital, Saket, New Delhi",
+    "briefProfile": "Dr. Rajiv Kumar Sethia is one of the top urologists in Faridabad. He is a highly experienced doctor who has provided quality care to patients in Faridabad for over 20 years. He is an expert in the treatment of kidney stones, urinary tract infections, prostate disorders and bladder problems. He is well known for his excellent patient care and has been recognised as one of the best urologists in the area. In addition, he is highly acclaimed for his expertise in performing robotic surgeries, laparoscopy, and endourology. He has received numerous awards and accolades for his contributions to the field of urology & highly recommended by the patients he has treated.",
+    "qualification": "Fellowship in Kidney Transplant (Medanta), Fellowship in Minimal Invasive Urology, DNB (Urology) (National Board of Examination), MS (Surgery), MBBS",
+    "specialityInterest": [
+      "Laser Surgery of Prostate & Stone with Holmium Laser",
+      "Renal (Kidney) transplant",
+      "Reconstructive Urology & Andrology",
+      "Laparoscopic Urology treatment",
+      "Uro-Oncology"
+    ],
+    "membership": [
+      "Full member of USI (S-433)",
+      "Full member of NZUSI (NZ S 98 A)",
+      "Associate Member of SZUSI (582)",
+      "Life Member of Indian society of organ Transplant ISOT- LM 779",
+      "Life member of Asian Urology Association (15-00469)"
+    ]
   },
   {
     "id": "sangram-keshari-sahoo",
@@ -987,7 +1214,31 @@
     "hospital": "Asian Institute of Medical Sciences",
     "hospitalSlug": "asian-hospital-delhi",
     "image": "/Asian Institute of Medical Sciences/Dr. Sangram Keshari Sahoo.png",
-    "bio": "Dr. Sangram Keshari Sahoo is the Director & Head of Surgical Oncology at Asian Institute of Medical Sciences."
+    "bio": "Dr. Sangram Keshari Sahoo is the Director & Head of Surgical Oncology at Asian Institute of Medical Sciences.",
+    "experience": "18 Years",
+    "briefProfile": "Dr. SK Sahoo is a versatile, superspecialist cancer & advanced minimally access oncosurgeon with a vast experience & expertise. He Possesses all advanced trainings, fellowships & degrees in the field of cancer super superspecialist & oncoplastic reconstruction. His organ conservative & function preservative surgical approach with the evidence based international cancer guidelines & multidisciplinary tumour board concept have kept him ahead in the field of rapidly advancing Onco Surgical field .",
+    "qualification": "MBBS, DNB (Surgical Oncology), DNB (General Surgery), FICS- USA (Surgical Oncology), FIAMS, MNAMS, FAIS, FIAGES, FMAS",
+    "achievements": [
+      "Many academic publications, accolades & award winning scientific presentations & research paper publications in peer-reviewed journals go in his name.",
+      "Many innovative, indigenous oncosurgical & oncoplastic techniques in the field of radical open & minimal access oncosurgeries, VATS, HIPEC, CRS Sentinel node, etc have resulted in excellent & earliest surgical recovery & long duration cancer free & overall survival .",
+      "Life membership of many national & international scientific bodies & association."
+    ],
+    "specialityInterest": [
+      "Head & neck oncology",
+      "Thoracic",
+      "Gastro intestinal",
+      "Hepato-pancreato-biliary",
+      "Breast & Gynaec malignancies",
+      "Genito-urinary",
+      "Bone & soft tissue",
+      "Sentinel nodes",
+      "HIPEC",
+      "PIPEC",
+      "CRS",
+      "MAS",
+      "VATS",
+      "Advanced minimal access surgeries & oncoplastic reconstruction"
+    ]
   },
   {
     "id": "smriti-pandey",

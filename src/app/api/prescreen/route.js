@@ -107,14 +107,15 @@ export async function POST(request) {
     `;
 
         // Admin Email
+        // Admin Email
+        const fileLinksHtml = uploadedFileLinks.length > 0
+            ? `<h3>Attached Medical Reports:</h3><ul>${uploadedFileLinks.map((link, i) => `<li><a href="${link}" target="_blank">View File ${i + 1}</a></li>`).join('')}</ul>`
+            : '<p>No files uploaded.</p>';
+
         await sendMail({
             to: adminEmail,
             subject: `[New Lead] AI Pre-Screening - ${patientName}`,
-            html: adminEmailContent,
-            attachments: uploadedFileLinks.map((link, i) => ({
-                filename: `Report-${i + 1}.pdf`, // Generic name, assuming PDF/Image
-                path: link
-            }))
+            html: adminEmailContent + fileLinksHtml,
         });
 
         // Admin WhatsApp

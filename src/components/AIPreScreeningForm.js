@@ -35,7 +35,15 @@ export default function AIPreScreeningForm({ locale }) {
 
     const handleFileChange = (e) => {
         if (e.target.files) {
-            setFiles((prev) => [...prev, ...Array.from(e.target.files)]);
+            const newFiles = Array.from(e.target.files);
+            const validFiles = newFiles.filter(file => {
+                if (file.size > 25 * 1024 * 1024) { // 25MB limit
+                    alert(`File ${file.name} is too large. Max size is 25MB.`);
+                    return false;
+                }
+                return true;
+            });
+            setFiles((prev) => [...prev, ...validFiles]);
         }
     };
 
@@ -280,7 +288,7 @@ export default function AIPreScreeningForm({ locale }) {
                             >
                                 <FaFileUpload className="w-12 h-12 text-panacea-primary mx-auto mb-3" />
                                 <p className="font-semibold text-gray-700">Click to Upload Reports</p>
-                                <p className="text-sm text-gray-500 mt-1">PDF, JPG, PNG (Max 10MB)</p>
+                                <p className="text-sm text-gray-500 mt-1">PDF, JPG, PNG (Max 25MB)</p>
                                 <input
                                     type="file"
                                     multiple

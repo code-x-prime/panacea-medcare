@@ -15,13 +15,14 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export default async function sendMail({ to, subject, html }) {
+export default async function sendMail({ to, subject, html, attachments = [] }) {
   try {
     const info = await transporter.sendMail({
       from: `"${env.NEXT_PUBLIC_SITE_NAME}" <${env.FROM_EMAIL}>`,
       to,
       subject,
       html,
+      attachments,
     });
 
     return info || true;

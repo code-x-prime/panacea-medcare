@@ -5,6 +5,8 @@ import LocaleProvider from "@/components/LocaleProvider";
 import env from "@/config/env";
 import { Raleway } from "next/font/google";
 
+import Script from "next/script";
+
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -23,6 +25,20 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr">
       <body className={`${raleway.variable} font-sans overflow-x-hidden`}>
+        {/* Google Ads Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17906869077"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17906869077');
+          `}
+        </Script>
+
         <LocaleProvider>{children}</LocaleProvider>
         <Toaster />
       </body>

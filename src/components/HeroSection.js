@@ -25,9 +25,9 @@ export default function HeroSection({ locale }) {
 
   // Supporting text (gold color)
   const supportingText = {
-    en: "Where Global Care meets Indian Compassion",
-    ar: "حيث تلتقي الرعاية العالمية بالرحمة الهندية",
-    fr: "Où les Soins Mondiaux rencontrent la Compassion Indienne"
+    en: "Fast, Personalized Global Treatment Plans from Accredited Hospitals",
+    ar: "خطط علاج عالمية سريعة وشخصية من مستشفيات معتمدة",
+    fr: "Plans de traitement mondiaux rapides et personnalisés auprès d'hôpitaux accrédités"
   };
 
   // CTA Button 1 - AI Pre-Screening
@@ -118,7 +118,7 @@ export default function HeroSection({ locale }) {
 
           {/* Supporting Text - Gold Color */}
           <p
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-10 max-w-3xl leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-10 w-full leading-relaxed"
             style={{
               fontFamily: "var(--font-raleway), Raleway, sans-serif",
               color: "#FFD700"

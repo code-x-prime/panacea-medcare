@@ -13,12 +13,15 @@ import WhyChoosePanacea from '@/components/WhyChoosePanacea';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 // import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
+import TrustStrip from '@/components/TrustStrip';
+
 export default function HomePage({ params }) {
   const { locale } = params;
 
   return (
     <div>
       <HeroSection locale={locale} />
+      <TrustStrip locale={locale} />
       <TestimonialsCarousel />
       {/* <PatientStories locale={locale} /> */}
       <TopMedicalDestinations locale={locale} />

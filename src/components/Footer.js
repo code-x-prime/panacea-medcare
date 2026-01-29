@@ -255,7 +255,7 @@ export default function Footer({ locale }) {
               {t("certifications")}
             </p>
           </div>
-          <div className="text-center mt-4">
+          <div className="text-center mt-4 pb-12 md:pb-0">
             <p className="text-sm text-panacea-light/60">
               Designed & Developed by{" "}
               <a

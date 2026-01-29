@@ -38,6 +38,22 @@ export default async function RootLayout({ children }) {
             gtag('config', 'AW-17906869077');
           `}
         </Script>
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-17906869077/h12ZCJivl-8bENXG1NpC',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
 
         <LocaleProvider>{children}</LocaleProvider>
         <Toaster />

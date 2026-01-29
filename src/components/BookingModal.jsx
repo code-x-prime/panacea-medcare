@@ -127,6 +127,10 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
 
             if (response.ok) {
                 setIsSuccess(true);
+                // Track conversion
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion();
+                }
                 setFormData({ name: "", phoneCode: "+91", phone: "", email: "", message: "" });
                 setTimeout(() => {
                     setIsSuccess(false);

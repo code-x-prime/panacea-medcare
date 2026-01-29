@@ -136,6 +136,10 @@ export default function AIPreScreeningForm({ locale }) {
 
             if (result.success) {
                 setIsSuccess(true);
+                // Track conversion
+                if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+                    window.gtag_report_conversion();
+                }
                 setStep(5); // Success Step
             } else {
                 setError(result.error || t("errorSubmit"));

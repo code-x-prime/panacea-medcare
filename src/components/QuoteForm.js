@@ -141,6 +141,11 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
 
       if (response.ok) {
         setIsSuccess(true);
+        // Track conversion
+        if (typeof window !== 'undefined' && window.gtag_report_conversion) {
+          window.gtag_report_conversion();
+        }
+
         setFormData({
           patientName: "",
           country: "",
@@ -246,9 +251,9 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
               value={formData.phoneCode}
               onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
             >
-            <SelectTrigger className="w-24 bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] shadow-sm">
-              <SelectValue />
-            </SelectTrigger>
+              <SelectTrigger className="w-24 bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] shadow-sm">
+                <SelectValue />
+              </SelectTrigger>
               <SelectContent className="bg-white max-h-[200px]">
                 {phoneCodes.map((code, index) => (
                   <SelectItem key={`phone-${index}`} value={code.value}>

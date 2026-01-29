@@ -57,6 +57,7 @@ export default function ContactCTA({ locale }) {
           {/* Phone Card */}
           <a
             href={`tel:${phoneNumber.replace(/-/g, "")}`}
+            onClick={() => typeof window !== 'undefined' && window.gtag_report_conversion && window.gtag_report_conversion()}
             className="group bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-panacea-primary/50 transition-all duration-300 transform hover:scale-105 border-2 border-white/50"
           >
             <div className="flex flex-col items-center text-center">
@@ -80,6 +81,7 @@ export default function ContactCTA({ locale }) {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => typeof window !== 'undefined' && window.gtag_report_conversion && window.gtag_report_conversion()}
             className="group bg-green-500 rounded-xl p-6 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 transform hover:scale-105 border-2 border-green-400/50 relative overflow-hidden"
           >
             {/* Pulse Animation */}
@@ -124,6 +126,7 @@ export default function ContactCTA({ locale }) {
           {/* Email Card */}
           <a
             href={`mailto:${email}`}
+            onClick={() => typeof window !== 'undefined' && window.gtag_report_conversion && window.gtag_report_conversion()}
             className="group bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-panacea-primary/50 transition-all duration-300 transform hover:scale-105 border-2 border-white/50"
           >
             <div className="flex flex-col items-center text-center">
@@ -161,6 +164,7 @@ export default function ContactCTA({ locale }) {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => typeof window !== 'undefined' && window.gtag_report_conversion && window.gtag_report_conversion()}
                 className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
               >
                 <FaWhatsapp className="w-5 h-5" />
@@ -168,6 +172,7 @@ export default function ContactCTA({ locale }) {
               </a>
               <a
                 href={`tel:${phoneNumber.replace(/-/g, "")}`}
+                onClick={() => typeof window !== 'undefined' && window.gtag_report_conversion && window.gtag_report_conversion()}
                 className="px-6 py-3 bg-white hover:bg-gray-100 text-panacea-primary rounded-full font-bold text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
               >
                 <FaPhone className="w-5 h-5" />

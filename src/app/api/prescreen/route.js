@@ -1,46 +1,52 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import sendMail from "@/lib/mail";
-import { uploadToR2 } from "@/lib/r2";
+import { uploadToR2, validatePrescreenFile } from "@/lib/r2";
 import { sendWhatsApp } from "@/lib/whatsapp";
 import env from "@/config/env";
+
+function toE164(phone) {
+    if (!phone || typeof phone !== "string") return "";
+    const digits = phone.replace(/\D/g, "");
+    return phone.trim().startsWith("+") ? `+${digits}` : digits ? `+${digits}` : phone.trim();
+}
 
 export async function POST(request) {
     try {
         const formData = await request.formData();
 
-        // Extract Patient Details
         const patientName = formData.get("patientName");
         const email = formData.get("email");
-        const phone = formData.get("phone");
+        const phoneRaw = formData.get("phone");
+        const phone = toE164(phoneRaw);
         const country = formData.get("country");
         const preferredCountry = formData.get("preferredCountry");
-
-        // Extract Medical Details
         const medicalConcern = formData.get("medicalConcern");
         const symptoms = formData.get("symptoms");
         const duration = formData.get("duration");
         const history = formData.get("history");
+        const timestamp = formData.get("timestamp") || new Date().toISOString();
 
-        // Extract Files
+        if (!patientName || !email || !phone || !country) {
+            return NextResponse.json(
+                { success: false, error: "Missing required fields: name, email, WhatsApp, country." },
+                { status: 400 }
+            );
+        }
+
         const files = formData.getAll("files");
 
-        // 1. Upload Files to R2
         const uploadedFileLinks = [];
         if (files && files.length > 0) {
             for (const file of files) {
-                if (file.size > 0) {
-                    try {
-                        const url = await uploadToR2(file, "prescreen");
-                        if (url) uploadedFileLinks.push(url);
-                    } catch (err) {
-                        console.error("File upload failed:", err);
-                    }
-                }
+                if (!file || !file.size) continue;
+                const v = validatePrescreenFile(file);
+                if (!v.ok) continue;
+                const url = await uploadToR2(file, "prescreen");
+                if (url) uploadedFileLinks.push(url);
             }
         }
 
-        // 2. Prepare Data for Database (Serialize complex data into 'message')
         const detailedMessage = JSON.stringify({
             country,
             preferredCountry,
@@ -48,7 +54,9 @@ export async function POST(request) {
             symptoms,
             duration,
             history,
-            files: uploadedFileLinks
+            files: uploadedFileLinks,
+            submittedAt: timestamp,
+            consent: true,
         }, null, 2);
 
         // 3. Save to Database (Reuse Lead model)
@@ -98,15 +106,12 @@ export async function POST(request) {
             });
         }
 
-        // WhatsApp
         if (phone) {
-            // Fallback or Both logic: We try to send. If failed, it logs.
-            await sendWhatsApp(phone, `Hello ${patientName}, Panacea Medcare has received your AI Pre-Screening request (Ref: #${newLead.id}). Our team is analyzing your case and will send a report shortly.`);
+            await sendWhatsApp(phone, `Hello ${patientName}, Panacea Medcare has received your AI Pre-Screening request (Ref: #${newLead.id}). Our team is analyzing your case. You will receive your AI Pre-Screening Report within 2 hours via email/WhatsApp.`);
         }
 
-        // 5. Notify Admin (Email + WhatsApp)
-        const adminEmail = process.env.FROM_EMAIL || "care@panaceamedcare.com"; // Fallback
-        const adminPhone = process.env.ADMIN_PHONE_NUMBER || "919958800961"; // Fallback
+        const adminEmail = process.env.FROM_EMAIL || "care@panaceamedcare.com";
+        const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
 
         // Admin Email Template
         const uploadedFilesHtml = uploadedFileLinks.length > 0
@@ -186,8 +191,9 @@ export async function POST(request) {
             html: adminEmailContent,
         });
 
-        // Admin WhatsApp
-        await sendWhatsApp(adminPhone, `New AI Lead: ${patientName} (${phone}). Check Email for details.`);
+        if (adminPhone) {
+            await sendWhatsApp(adminPhone, `New AI Pre-Screening Lead: ${patientName} (${phone}). Check admin email for details & report links.`);
+        }
 
 
         return NextResponse.json({

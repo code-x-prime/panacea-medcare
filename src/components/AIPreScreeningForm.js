@@ -2,15 +2,28 @@
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { FaFileUpload, FaCheckCircle, FaSpinner } from "react-icons/fa";
+import { COUNTRIES, getPhoneCodes } from "@/lib/countries";
+
+const ACCEPTED_TYPES = [
+    "application/pdf",
+    "image/jpeg",
+    "image/png",
+    "image/jpg",
+    "application/msword", // .doc
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // .docx
+];
+const MAX_FILE_BYTES = 10 * 1024 * 1024; // 10 MB
 
 export default function AIPreScreeningForm({ locale }) {
     const t = useTranslations("aiPrescreening");
     const isRTL = locale === "ar";
+    const phoneCodes = getPhoneCodes();
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         patientName: "",
         country: "",
-        phone: "",
+        phoneCode: "+91",
+        phoneNumber: "",
         email: "",
         medicalConcern: "",
         symptoms: "",
@@ -35,17 +48,23 @@ export default function AIPreScreeningForm({ locale }) {
     };
 
     const handleFileChange = (e) => {
-        if (e.target.files) {
-            const newFiles = Array.from(e.target.files);
-            const validFiles = newFiles.filter(file => {
-                if (file.size > 25 * 1024 * 1024) { // 25MB limit
-                    alert(`File ${file.name} is too large. Max size is 25MB.`);
-                    return false;
-                }
-                return true;
-            });
-            setFiles((prev) => [...prev, ...validFiles]);
+        if (!e.target.files) return;
+        const newFiles = Array.from(e.target.files);
+        const valid = [];
+        for (const file of newFiles) {
+            const ok = ACCEPTED_TYPES.includes(file.type);
+            if (!ok) {
+                setError(t("errorFileType"));
+                return;
+            }
+            if (file.size > MAX_FILE_BYTES) {
+                setError(t("errorFileSize"));
+                return;
+            }
+            valid.push(file);
         }
+        setError("");
+        setFiles((prev) => [...prev, ...valid]);
     };
 
     const removeFile = (index) => {
@@ -54,10 +73,11 @@ export default function AIPreScreeningForm({ locale }) {
 
     const validateStep = (currentStep) => {
         if (currentStep === 1) {
-            if (!formData.patientName || !formData.phone || !formData.email || !formData.country) return false;
+            if (!formData.patientName || !formData.country || !formData.phoneNumber || !formData.email) return false;
         }
         if (currentStep === 2) {
             if (!formData.medicalConcern || !formData.symptoms) return false;
+            if (String(formData.symptoms).trim().length < 30) return false;
         }
         if (currentStep === 4) {
             if (!formData.consent) return false;
@@ -66,9 +86,13 @@ export default function AIPreScreeningForm({ locale }) {
     };
 
     const nextStep = () => {
+        setError("");
+        if (step === 2 && (!formData.symptoms || String(formData.symptoms).trim().length < 30)) {
+            setError(t("errorSymptoms"));
+            return;
+        }
         if (validateStep(step)) {
             setStep((prev) => prev + 1);
-            setError("");
         } else {
             setError(t("errorRequired"));
         }
@@ -88,13 +112,20 @@ export default function AIPreScreeningForm({ locale }) {
 
         try {
             const data = new FormData();
-            Object.entries(formData).forEach(([key, value]) => {
-                data.append(key, value);
-            });
-            files.forEach((file) => {
-                data.append("files", file);
-            });
+            const phone = `${formData.phoneCode}${String(formData.phoneNumber).replace(/\D/g, "")}`;
+            data.append("patientName", formData.patientName);
+            data.append("country", formData.country);
+            data.append("phone", phone);
+            data.append("email", formData.email);
+            data.append("medicalConcern", formData.medicalConcern);
+            data.append("symptoms", formData.symptoms);
+            data.append("duration", formData.duration);
+            data.append("history", formData.history || "");
+            data.append("preferredCountry", formData.preferredCountry);
+            data.append("consent", formData.consent ? "1" : "0");
             data.append("locale", locale);
+            data.append("timestamp", new Date().toISOString());
+            files.forEach((file) => data.append("files", file));
 
             const response = await fetch("/api/prescreen", {
                 method: "POST",
@@ -121,9 +152,7 @@ export default function AIPreScreeningForm({ locale }) {
             <div className="bg-white rounded-xl shadow-lg p-8 text-center max-w-2xl mx-auto border-t-4 border-[#0BA35A]" dir={isRTL ? "rtl" : "ltr"}>
                 <FaCheckCircle className="w-16 h-16 text-[#0BA35A] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-[#003459] mb-2">{t("success.title")}</h3>
-                <p className="text-[#6D7A8A] mb-6 whitespace-pre-line">
-                    {t("success.message", { name: formData.patientName })}
-                </p>
+                <p className="text-[#6D7A8A] mb-6">{t("success.message")}</p>
                 <button
                     onClick={() => window.location.reload()}
                     className="px-6 py-2.5 bg-[#F5F7FA] hover:bg-gray-200 text-[#066F89] rounded-lg font-medium transition-colors border border-[#066F89]/30"
@@ -175,25 +204,40 @@ export default function AIPreScreeningForm({ locale }) {
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.country")}</label>
-                                    <input
-                                        type="text"
+                                    <select
                                         name="country"
                                         value={formData.country}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
-                                        placeholder={t("step1.countryPlaceholder")}
-                                    />
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all bg-white"
+                                    >
+                                        <option value="">{t("step1.countryPlaceholder")}</option>
+                                        {COUNTRIES.map((c) => (
+                                            <option key={c.value} value={c.label}>{c.label}</option>
+                                        ))}
+                                    </select>
                                 </div>
-                                <div>
+                                <div className="md:col-span-2">
                                     <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.whatsapp")}</label>
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
-                                        placeholder={t("step1.whatsappPlaceholder")}
-                                    />
+                                    <div className="flex gap-2">
+                                        <select
+                                            name="phoneCode"
+                                            value={formData.phoneCode}
+                                            onChange={handleInputChange}
+                                            className="w-32 px-3 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none bg-white"
+                                        >
+                                            {phoneCodes.map((pc) => (
+                                                <option key={pc.value} value={pc.value}>{pc.value}</option>
+                                            ))}
+                                        </select>
+                                        <input
+                                            type="tel"
+                                            name="phoneNumber"
+                                            value={formData.phoneNumber}
+                                            onChange={handleInputChange}
+                                            className="flex-1 px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none"
+                                            placeholder={t("step1.whatsappPlaceholder")}
+                                        />
+                                    </div>
                                     <p className="text-xs text-[#6D7A8A] mt-1">{t("step1.whatsappHint")}</p>
                                 </div>
                                 <div>
@@ -239,9 +283,11 @@ export default function AIPreScreeningForm({ locale }) {
                                     value={formData.symptoms}
                                     onChange={handleInputChange}
                                     rows="3"
+                                    minLength={30}
                                     className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
                                     placeholder={t("step2.symptomsPlaceholder")}
                                 />
+                                <p className="text-xs text-[#6D7A8A] mt-1">{t("step2.symptomsHint")}</p>
                             </div>
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div>
@@ -287,13 +333,14 @@ export default function AIPreScreeningForm({ locale }) {
                                 <FaFileUpload className="w-12 h-12 text-[#066F89] mx-auto mb-3" />
                                 <p className="font-semibold text-[#003459]">{t("step3.clickToUpload")}</p>
                                 <p className="text-sm text-[#6D7A8A] mt-1">{t("step3.formats")}</p>
+                                <p className="text-xs text-[#066F89] mt-0.5 font-medium">{t("step3.formatsHint")}</p>
                                 <input
                                     type="file"
                                     multiple
                                     ref={fileInputRef}
                                     className="hidden"
                                     onChange={handleFileChange}
-                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,image/jpeg,image/png"
                                 />
                             </div>
                             {files.length > 0 && (
@@ -322,6 +369,7 @@ export default function AIPreScreeningForm({ locale }) {
                                 <p><strong className="text-[#003459]">{t("step4.name")}</strong> {formData.patientName}</p>
                                 <p><strong className="text-[#003459]">{t("step4.concern")}</strong> {formData.medicalConcern}</p>
                                 <p><strong className="text-[#003459]">{t("step4.files")}</strong> {t("step4.filesCount", { count: files.length })}</p>
+                                <p><strong className="text-[#003459]">WhatsApp:</strong> {formData.phoneCode} {formData.phoneNumber}</p>
                             </div>
                             <div className="space-y-3">
                                 <label

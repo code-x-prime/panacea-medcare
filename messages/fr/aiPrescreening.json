@@ -3,6 +3,9 @@
   "takesAbout": "environ 5 minutes",
   "errorRequired": "Veuillez remplir tous les champs obligatoires.",
   "errorConsent": "Veuillez accepter les conditions de consentement.",
+  "errorSymptoms": "Veuillez décrire les symptômes en au moins 30 caractères.",
+  "errorFileSize": "Chaque fichier doit faire 10 Mo ou moins. PDF, DOC, DOCX, JPG, PNG uniquement.",
+  "errorFileType": "Seuls les fichiers PDF, DOC, DOCX, JPG et PNG sont acceptés.",
   "errorSubmit": "Échec de l'envoi. Veuillez réessayer.",
   "errorNetwork": "Erreur réseau. Veuillez réessayer.",
   "step1": {
@@ -32,6 +35,7 @@
     },
     "symptoms": "Description des symptômes *",
     "symptomsPlaceholder": "Décrivez les symptômes actuels...",
+    "symptomsHint": "Min. 30 caractères.",
     "duration": "Durée des symptômes",
     "durationPlaceholder": "Sélectionner...",
     "durations": {
@@ -51,10 +55,11 @@
   "step3": {
     "title": "Télécharger les rapports médicaux",
     "clickToUpload": "Cliquez pour télécharger",
-    "formats": "PDF, JPG, PNG (max. 25 Mo)",
+    "formats": "PDF, DOC, DOCX, JPG, PNG (max. 10 Mo par fichier)",
+    "formatsHint": "Les rapports en PDF ou Word (DOC/DOCX) sont acceptés.",
     "selectedFiles": "Fichiers sélectionnés :",
     "remove": "Supprimer",
-    "tip": "Télécharger des rapports récents (ordonnances, IRM, bilans) améliore nettement la précision de l'analyse IA."
+    "tip": "Télécharger des rapports récents (ordonnances, IRM, bilans, comptes-rendus) en PDF ou DOC améliore la précision de l'analyse IA."
   },
   "step4": {
     "title": "Vérification et consentement",
@@ -71,8 +76,8 @@
     "processing": "Envoi en cours..."
   },
   "success": {
-    "title": "Demande envoyée avec succès !",
-    "message": "Merci, {name}. Notre IA analyse vos informations. Vous recevrez votre rapport de pré-dépistage par e-mail/WhatsApp sous 2 heures.",
+    "title": "Merci. Vos informations ont bien été reçues.",
+    "message": "Notre IA analyse votre dossier. Vous recevrez votre rapport de pré-dépistage sous 2 heures par e-mail et WhatsApp.",
     "submitAnother": "Envoyer une autre demande"
   }
 }

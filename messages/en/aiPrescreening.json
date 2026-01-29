@@ -3,6 +3,9 @@
   "takesAbout": "takes ~5 minutes",
   "errorRequired": "Please fill in all required fields.",
   "errorConsent": "Please agree to the consent terms.",
+  "errorSymptoms": "Please describe symptoms in at least 30 characters.",
+  "errorFileSize": "Each file must be 10 MB or less. PDF, DOC, DOCX, JPG, PNG only.",
+  "errorFileType": "Only PDF, DOC, DOCX, JPG, and PNG files are allowed.",
   "errorSubmit": "Submission failed. Please try again.",
   "errorNetwork": "Network error. Please try again.",
   "step1": {
@@ -32,6 +35,7 @@
     },
     "symptoms": "Symptoms Description *",
     "symptomsPlaceholder": "Describe current symptoms...",
+    "symptomsHint": "Min. 30 characters.",
     "duration": "Duration of Symptoms",
     "durationPlaceholder": "Select Duration...",
     "durations": {
@@ -51,10 +55,11 @@
   "step3": {
     "title": "Upload Medical Reports",
     "clickToUpload": "Click to Upload Reports",
-    "formats": "PDF, JPG, PNG (Max 25MB)",
+    "formats": "PDF, DOC, DOCX, JPG, PNG (Max 10 MB per file)",
+    "formatsHint": "Reports in PDF or Word (DOC/DOCX) are accepted.",
     "selectedFiles": "Selected Files:",
     "remove": "Remove",
-    "tip": "Uploading recent reports (Prescriptions, MRI, Blood Tests) significantly improves the accuracy of the AI analysis."
+    "tip": "Uploading recent reports (prescriptions, MRI, blood tests, discharge summaries) in PDF or DOC improves AI analysis accuracy."
   },
   "step4": {
     "title": "Review & Consent",
@@ -71,8 +76,8 @@
     "processing": "Processing..."
   },
   "success": {
-    "title": "Request Submitted Successfully!",
-    "message": "Thank you, {name}. Our AI system is analyzing your details. You will receive your AI Pre-Screening Report via Email/WhatsApp within 2 hours.",
+    "title": "Thank you. Your details have been received.",
+    "message": "Our AI system is analyzing your case. You will receive your AI Pre-Screening Report within 2 hours via email and WhatsApp.",
     "submitAnother": "Submit Another Request"
   }
 }

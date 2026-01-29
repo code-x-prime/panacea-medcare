@@ -467,13 +467,13 @@ export default function HospitalDetailPage({ params }) {
 
                             {/* Doctors Section */}
                             {hospitalDoctors && hospitalDoctors.length > 0 && (
-                                <div className="w-full overflow-hidden">
+                                <div className="w-full">
                                     <h2 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("doctors") || "Doctors"}
                                     </h2>
 
-                                    {/* Carousel Container */}
-                                    <div className="relative w-full max-w-full">
+                                    {/* Carousel Container - padding for nav buttons so they are not clipped */}
+                                    <div className="relative w-full max-w-full pl-10 pr-10 md:pl-12 md:pr-12">
                                         <div className="overflow-hidden rounded-lg">
                                             <div
                                                 className="flex transition-transform duration-500 ease-in-out"
@@ -526,7 +526,7 @@ export default function HospitalDetailPage({ params }) {
                                                                             )}
                                                                         </span>
                                                                     </Link>
-                                                                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 flex gap-2 flex-shrink-0">
+                                                                    <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200 flex gap-2 flex-shrink-0 flex-col">
                                                                         <button
                                                                             onClick={(e) => {
                                                                                 e.preventDefault();
@@ -566,18 +566,18 @@ export default function HospitalDetailPage({ params }) {
                                                 <button
                                                     onClick={() => setDoctorCarouselIndex((prev) => Math.max(0, prev - 1))}
                                                     disabled={doctorCarouselIndex === 0}
-                                                    className={`absolute left-1 sm:left-2 md:-left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-1.5 sm:p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    className={`absolute left-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 sm:p-2.5 shadow-md border border-gray-200 transition-all z-10 ${doctorCarouselIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
                                                     aria-label="Previous"
                                                 >
-                                                    <FaChevronLeft className="w-3 h-3 sm:w-4 sm:h-4" />
+                                                    <FaChevronLeft className="w-4 h-4" />
                                                 </button>
                                                 <button
                                                     onClick={() => setDoctorCarouselIndex((prev) => Math.min(Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1, prev + 1))}
                                                     disabled={doctorCarouselIndex === Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1}
-                                                    className={`absolute right-1 sm:right-2 md:-right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-1.5 sm:p-2 shadow-md transition-all z-10 ${doctorCarouselIndex === Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1 ? "opacity-50 cursor-not-allowed" : ""}`}
+                                                    className={`absolute right-0 top-1/2 -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 sm:p-2.5 shadow-md border border-gray-200 transition-all z-10 ${doctorCarouselIndex === Math.ceil(hospitalDoctors.length / doctorsPerSlide) - 1 ? "opacity-50 cursor-not-allowed" : ""}`}
                                                     aria-label="Next"
                                                 >
-                                                    <FaChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
+                                                    <FaChevronRight className="w-4 h-4" />
                                                 </button>
                                             </>
                                         )}

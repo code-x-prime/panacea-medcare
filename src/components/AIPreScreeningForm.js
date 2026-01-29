@@ -4,7 +4,8 @@ import { useTranslations } from "next-intl";
 import { FaFileUpload, FaCheckCircle, FaSpinner } from "react-icons/fa";
 
 export default function AIPreScreeningForm({ locale }) {
-    const t = useTranslations("aiPrescreening"); // Ensure you add this later
+    const t = useTranslations("aiPrescreening");
+    const isRTL = locale === "ar";
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         patientName: "",
@@ -69,7 +70,7 @@ export default function AIPreScreeningForm({ locale }) {
             setStep((prev) => prev + 1);
             setError("");
         } else {
-            setError("Please fill in all required fields.");
+            setError(t("errorRequired"));
         }
     };
 
@@ -78,7 +79,7 @@ export default function AIPreScreeningForm({ locale }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validateStep(4)) {
-            setError("Please agree to the consent terms.");
+            setError(t("errorConsent"));
             return;
         }
 
@@ -106,10 +107,10 @@ export default function AIPreScreeningForm({ locale }) {
                 setIsSuccess(true);
                 setStep(5); // Success Step
             } else {
-                setError(result.error || "Submission failed. Please try again.");
+                setError(result.error || t("errorSubmit"));
             }
         } catch (err) {
-            setError("Network error. Please try again.");
+            setError(t("errorNetwork"));
         } finally {
             setIsSubmitting(false);
         }
@@ -117,33 +118,33 @@ export default function AIPreScreeningForm({ locale }) {
 
     if (isSuccess) {
         return (
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center max-w-2xl mx-auto border-t-4 border-green-500">
-                <FaCheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Request Submitted Successfully!</h3>
-                <p className="text-gray-600 mb-6">
-                    Thank you, <strong>{formData.patientName}</strong>. Our AI system is analyzing your details.
-                    <br />You will receive your <strong>AI Pre-Screening Report</strong> via Email/WhatsApp within <strong>2 hours</strong>.
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center max-w-2xl mx-auto border-t-4 border-[#0BA35A]" dir={isRTL ? "rtl" : "ltr"}>
+                <FaCheckCircle className="w-16 h-16 text-[#0BA35A] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-[#003459] mb-2">{t("success.title")}</h3>
+                <p className="text-[#6D7A8A] mb-6 whitespace-pre-line">
+                    {t("success.message", { name: formData.patientName })}
                 </p>
                 <button
                     onClick={() => window.location.reload()}
-                    className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors"
+                    className="px-6 py-2.5 bg-[#F5F7FA] hover:bg-gray-200 text-[#066F89] rounded-lg font-medium transition-colors border border-[#066F89]/30"
                 >
-                    Submit Another Request
+                    {t("success.submitAnother")}
                 </button>
             </div>
         );
     }
 
     return (
-        <div className="bg-white rounded-xl shadow-xl overflow-hidden max-w-3xl mx-auto border border-gray-100">
+        <div className="bg-white rounded-xl shadow-xl overflow-hidden max-w-3xl mx-auto border border-gray-100" dir={isRTL ? "rtl" : "ltr"}>
             {/* Progress Bar */}
-            <div className="bg-gray-50 px-6 py-4 border-b border-gray-200 flex justify-between items-center">
-                <span className="text-sm font-semibold text-panacea-primary uppercase tracking-wider">
-                    Step {step} of 4
+            <div className="bg-[#F5F7FA] px-6 py-4 border-b border-gray-200 flex flex-wrap justify-between items-center gap-2">
+                <span className="text-sm font-semibold text-[#066F89] uppercase tracking-wider">
+                    {t("stepOf", { current: step })}
                 </span>
-                <div className="h-2 w-32 bg-gray-200 rounded-full overflow-hidden">
+                <span className="text-xs text-[#6D7A8A]">{t("takesAbout")}</span>
+                <div className="h-2 flex-1 min-w-[120px] max-w-[200px] bg-gray-200 rounded-full overflow-hidden">
                     <div
-                        className="h-full bg-panacea-primary transition-all duration-300"
+                        className="h-full bg-gradient-to-r from-[#066F89] to-[#FF6B35] transition-all duration-300"
                         style={{ width: `${(step / 4) * 100}%` }}
                     />
                 </div>
@@ -157,138 +158,135 @@ export default function AIPreScreeningForm({ locale }) {
                 )}
 
                 <form onSubmit={handleSubmit}>
-                    {/* Step 1: Patient Details */}
                     {step === 1 && (
-                        <div className="space-y-5 animate-fadeIn">
-                            <h3 className="text-xl font-bold text-gray-800 mb-4">Patient Information</h3>
+                        <div className="space-y-5">
+                            <h3 className="text-xl font-bold text-[#003459] mb-4">{t("step1.title")}</h3>
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.fullName")}</label>
                                     <input
                                         type="text"
                                         name="patientName"
                                         value={formData.patientName}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all"
-                                        placeholder="As per passport"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
+                                        placeholder={t("step1.fullNamePlaceholder")}
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Country of Residence *</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.country")}</label>
                                     <input
                                         type="text"
                                         name="country"
                                         value={formData.country}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all"
-                                        placeholder="e.g. Nigeria, UAE"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
+                                        placeholder={t("step1.countryPlaceholder")}
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">WhatsApp Number *</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.whatsapp")}</label>
                                     <input
                                         type="tel"
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all"
-                                        placeholder="+91 9999999999"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
+                                        placeholder={t("step1.whatsappPlaceholder")}
                                     />
-                                    <p className="text-xs text-gray-500 mt-1">Include country code</p>
+                                    <p className="text-xs text-[#6D7A8A] mt-1">{t("step1.whatsappHint")}</p>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step1.email")}</label>
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all"
-                                        placeholder="primary@email.com"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
+                                        placeholder={t("step1.emailPlaceholder")}
                                     />
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    {/* Step 2: Medical Details */}
                     {step === 2 && (
-                        <div className="space-y-5 animate-fadeIn">
-                            <h3 className="text-xl font-bold text-gray-800 mb-4">Medical Condition</h3>
+                        <div className="space-y-5">
+                            <h3 className="text-xl font-bold text-[#003459] mb-4">{t("step2.title")}</h3>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Primary Medical Concern *</label>
+                                <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step2.concern")}</label>
                                 <select
                                     name="medicalConcern"
                                     value={formData.medicalConcern}
                                     onChange={handleInputChange}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all bg-white"
+                                    className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all bg-white"
                                 >
-                                    <option value="">Select Concern...</option>
-                                    <option value="Oncology (Cancer)">Oncology (Cancer)</option>
-                                    <option value="Cardiology (Heart)">Cardiology (Heart)</option>
-                                    <option value="Neurology">Neurology & Neurosurgery</option>
-                                    <option value="Orthopedics">Orthopedics (Bone/Joint)</option>
-                                    <option value="Transplant">Organ Transplant</option>
-                                    <option value="IVF & Fertility">IVF & Fertility</option>
-                                    <option value="Other">Other</option>
+                                    <option value="">{t("step2.concernPlaceholder")}</option>
+                                    <option value="Oncology (Cancer)">{t("step2.concerns.oncology")}</option>
+                                    <option value="Cardiology (Heart)">{t("step2.concerns.cardiology")}</option>
+                                    <option value="Neurology">{t("step2.concerns.neuro")}</option>
+                                    <option value="Orthopedics">{t("step2.concerns.ortho")}</option>
+                                    <option value="Transplant">{t("step2.concerns.transplant")}</option>
+                                    <option value="IVF & Fertility">{t("step2.concerns.ivf")}</option>
+                                    <option value="Other">{t("step2.concerns.other")}</option>
                                 </select>
                             </div>
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Symptoms Description *</label>
+                                <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step2.symptoms")}</label>
                                 <textarea
                                     name="symptoms"
                                     value={formData.symptoms}
                                     onChange={handleInputChange}
                                     rows="3"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all"
-                                    placeholder="Describe current symptoms..."
-                                ></textarea>
+                                    className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all"
+                                    placeholder={t("step2.symptomsPlaceholder")}
+                                />
                             </div>
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Duration of Symptoms</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step2.duration")}</label>
                                     <select
                                         name="duration"
                                         value={formData.duration}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all bg-white"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all bg-white"
                                     >
-                                        <option value="">Select Duration...</option>
-                                        <option value="Less than 1 month">Less than 1 month</option>
-                                        <option value="1-3 months">1-3 months</option>
-                                        <option value="3-6 months">3-6 months</option>
-                                        <option value="More than 6 months">More than 6 months</option>
+                                        <option value="">{t("step2.durationPlaceholder")}</option>
+                                        <option value="Less than 1 month">{t("step2.durations.lt1")}</option>
+                                        <option value="1-3 months">{t("step2.durations.1to3")}</option>
+                                        <option value="3-6 months">{t("step2.durations.3to6")}</option>
+                                        <option value="More than 6 months">{t("step2.durations.gt6")}</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Country for Treatment</label>
+                                    <label className="block text-sm font-medium text-[#6D7A8A] mb-1">{t("step2.preferredCountry")}</label>
                                     <select
                                         name="preferredCountry"
                                         value={formData.preferredCountry}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary outline-none transition-all bg-white"
+                                        className="w-full px-4 py-2.5 border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all bg-white"
                                     >
-                                        <option value="India">India (Default)</option>
-                                        <option value="Turkey">Turkey</option>
-                                        <option value="Thailand">Thailand</option>
-                                        <option value="UAE">UAE</option>
+                                        <option value="India">{t("step2.countries.india")}</option>
+                                        <option value="Turkey">{t("step2.countries.turkey")}</option>
+                                        <option value="Thailand">{t("step2.countries.thailand")}</option>
+                                        <option value="UAE">{t("step2.countries.uae")}</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     )}
 
-                    {/* Step 3: File Upload */}
                     {step === 3 && (
-                        <div className="space-y-5 animate-fadeIn">
-                            <h3 className="text-xl font-bold text-gray-800 mb-4">Upload Medical Reports</h3>
+                        <div className="space-y-5">
+                            <h3 className="text-xl font-bold text-[#003459] mb-4">{t("step3.title")}</h3>
                             <div
-                                className="border-2 border-dashed border-panacea-primary/30 rounded-xl p-8 text-center bg-blue-50/30 hover:bg-blue-50/60 transition-colors cursor-pointer"
-                                onClick={() => fileInputRef.current.click()}
+                                className="border-2 border-dashed border-[#066F89]/40 rounded-xl p-8 text-center bg-[#066F89]/5 hover:bg-[#066F89]/10 transition-colors cursor-pointer"
+                                onClick={() => fileInputRef.current?.click()}
                             >
-                                <FaFileUpload className="w-12 h-12 text-panacea-primary mx-auto mb-3" />
-                                <p className="font-semibold text-gray-700">Click to Upload Reports</p>
-                                <p className="text-sm text-gray-500 mt-1">PDF, JPG, PNG (Max 25MB)</p>
+                                <FaFileUpload className="w-12 h-12 text-[#066F89] mx-auto mb-3" />
+                                <p className="font-semibold text-[#003459]">{t("step3.clickToUpload")}</p>
+                                <p className="text-sm text-[#6D7A8A] mt-1">{t("step3.formats")}</p>
                                 <input
                                     type="file"
                                     multiple
@@ -298,92 +296,88 @@ export default function AIPreScreeningForm({ locale }) {
                                     accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
                                 />
                             </div>
-
                             {files.length > 0 && (
                                 <div className="space-y-2">
-                                    <p className="text-sm font-medium text-gray-700">Selected Files:</p>
+                                    <p className="text-sm font-medium text-[#6D7A8A]">{t("step3.selectedFiles")}</p>
                                     {files.map((file, idx) => (
-                                        <div key={idx} className="flex justify-between items-center bg-gray-50 px-3 py-2 rounded-lg border border-gray-200">
-                                            <span className="text-sm text-gray-600 truncate max-w-xs">{file.name}</span>
-                                            <button
-                                                type="button"
-                                                onClick={() => removeFile(idx)}
-                                                className="text-red-500 hover:text-red-700 text-sm font-medium"
-                                            >
-                                                Remove
+                                        <div key={idx} className="flex justify-between items-center bg-[#F5F7FA] px-3 py-2 rounded-lg border border-gray-200">
+                                            <span className="text-sm text-[#003459] truncate max-w-xs">{file.name}</span>
+                                            <button type="button" onClick={() => removeFile(idx)} className="text-red-500 hover:text-red-700 text-sm font-medium">
+                                                {t("step3.remove")}
                                             </button>
                                         </div>
                                     ))}
                                 </div>
                             )}
-                            <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-100 text-sm text-yellow-800">
-                                💡 <strong>Tip:</strong> Uploading recent reports (Prescriptions, MRI, Blood Tests) significantly improves the accuracy of the AI analysis.
+                            <div className="bg-[#FFD166]/20 p-4 rounded-lg border border-[#FFD166]/50 text-sm text-[#003459]">
+                                💡 {t("step3.tip")}
                             </div>
                         </div>
                     )}
 
-                    {/* Step 4: Consent & Review */}
                     {step === 4 && (
-                        <div className="space-y-5 animate-fadeIn">
-                            <h3 className="text-xl font-bold text-gray-800 mb-4">Review & Consent</h3>
-
-                            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 space-y-2 text-sm text-gray-600">
-                                <p><strong>Name:</strong> {formData.patientName}</p>
-                                <p><strong>Concern:</strong> {formData.medicalConcern}</p>
-                                <p><strong>Files:</strong> {files.length} attached</p>
+                        <div className="space-y-5">
+                            <h3 className="text-xl font-bold text-[#003459] mb-4">{t("step4.title")}</h3>
+                            <div className="bg-[#F5F7FA] p-4 rounded-lg border border-gray-200 space-y-2 text-sm text-[#6D7A8A]">
+                                <p><strong className="text-[#003459]">{t("step4.name")}</strong> {formData.patientName}</p>
+                                <p><strong className="text-[#003459]">{t("step4.concern")}</strong> {formData.medicalConcern}</p>
+                                <p><strong className="text-[#003459]">{t("step4.files")}</strong> {t("step4.filesCount", { count: files.length })}</p>
                             </div>
-
                             <div className="space-y-3">
-                                <label className="flex items-start gap-3 cursor-pointer">
+                                <label
+                                    htmlFor="ai-prescreen-consent"
+                                    className="flex items-start gap-3 cursor-pointer p-4 rounded-xl border-2 border-gray-200 hover:border-[#066F89]/40 transition-colors has-[:checked]:border-[#066F89] has-[:checked]:bg-[#066F89]/5"
+                                >
                                     <input
+                                        id="ai-prescreen-consent"
                                         type="checkbox"
                                         name="consent"
                                         checked={formData.consent}
                                         onChange={handleInputChange}
-                                        className="mt-1 w-5 h-5 text-panacea-primary rounded border-gray-300 focus:ring-panacea-primary"
+                                        className="mt-1 w-5 h-5 rounded border-2 border-gray-300 text-[#066F89] focus:ring-2 focus:ring-[#066F89]/30 focus:ring-offset-0 accent-[#066F89] cursor-pointer"
                                     />
-                                    <span className="text-sm text-gray-600">
-                                        I consent to the processing of my medical data for AI Pre-Screening. I understand that this report provides <strong>preliminary insights only</strong> and does not replace a doctor&apos;s diagnosis.
+                                    <span className="text-sm text-[#6D7A8A]">
+                                        {t("step4.consentLabel")}
                                     </span>
                                 </label>
                             </div>
                         </div>
                     )}
 
-                    {/* Navigation Buttons */}
-                    <div className="flex justify-between pt-6 mt-6 border-t border-gray-100">
+                    <div className={`flex pt-6 mt-6 border-t border-gray-100 gap-4 ${isRTL ? "flex-row-reverse" : "justify-between"}`}>
                         {step > 1 ? (
                             <button
                                 type="button"
                                 onClick={prevStep}
-                                className="px-6 py-2.5 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors"
+                                className="px-6 py-2.5 bg-white border-2 border-gray-200 text-[#003459] font-medium rounded-lg hover:bg-[#F5F7FA] hover:border-[#066F89]/30 transition-colors"
                                 disabled={isSubmitting}
                             >
-                                Back
+                                {t("nav.back")}
                             </button>
                         ) : (
-                            <div></div> // Spacer
+                            <div />
                         )}
-
                         {step < 4 ? (
                             <button
                                 type="button"
                                 onClick={nextStep}
-                                className="px-8 py-2.5 bg-panacea-primary hover:bg-panacea-secondary text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
+                                className="px-8 py-2.5 bg-[#066F89] hover:bg-[#05596D] text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all"
                             >
-                                Next Step
+                                {t("nav.next")}
                             </button>
                         ) : (
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="px-8 py-2.5 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-xl hover:shadow-2xl transition-all flex items-center gap-2"
+                                className="px-8 py-2.5 bg-[#0BA35A] hover:bg-[#088248] text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2"
                             >
                                 {isSubmitting ? (
                                     <>
-                                        <FaSpinner className="animate-spin" /> Processing...
+                                        <FaSpinner className="animate-spin" /> {t("nav.processing")}
                                     </>
-                                ) : "Submit for AI Analysis"}
+                                ) : (
+                                    t("nav.submit")
+                                )}
                             </button>
                         )}
                     </div>

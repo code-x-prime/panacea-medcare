@@ -1,45 +1,132 @@
 {
-  "title": "Pré-dépistage Médical par IA pour les Patients Internationaux",
-  "subtitle": "Rapide. Précis. Personnalisé.",
-  "subtitleHighlight": "Obtenez une Clarté Médicale Avant de Voyager.",
-  "badges": {
-    "report": "⏱️ Rapport en 2 Heures",
-    "secure": "🛡️ Données 100% Sécurisées",
-    "analysis": "🤖 Analyse IA Avancée"
+  "hero": {
+    "badge": "Soins de santé par IA",
+    "title": "Pré-dépistage IA pour les Patients Internationaux",
+    "tagline": "Rapide. Précis. Personnalisé. Fiable.",
+    "subtitle": "Obtenez une clarté médicale avant de voyager",
+    "intro": "Le système de pré-dépistage IA de Panacea Medcare aide les patients internationaux à recevoir une",
+    "introHighlight": "évaluation médicale préliminaire en 2 heures",
+    "introSuffix": ", avant même de quitter leur pays.",
+    "badges": {
+      "report": "Rapport en 2 heures",
+      "secure": "100% sécurisé",
+      "global": "Accès mondial"
+    }
   },
   "howItWorks": {
-    "title": "Comment Fonctionne le Pré-dépistage IA",
-    "description": "Le processus alimenté par l'IA de Panacea Medcare examine vos informations médicales pour vous guider vers le bon traitement, le bon hôpital et le bon spécialiste en Inde — économisant du temps, de l'argent et de l'incertitude.",
-    "steps": {
-      "step1": {
-        "title": "Étape 1 : Partager les Détails",
-        "desc": "Remplissez un formulaire simple avec votre état et vos symptômes."
-      },
-      "step2": {
-        "title": "Étape 2 : Télécharger les Rapports",
-        "desc": "Joignez des ordonnances, des scans ou des rapports de laboratoire."
-      },
-      "step3": {
-        "title": "Étape 3 : Analyse IA",
-        "desc": "Notre moteur structure les données et les fait correspondre aux parcours de soins."
-      },
-      "step4": {
-        "title": "Étape 4 : Recevoir le Rapport",
-        "desc": "Obtenez un guide clair par Email/WhatsApp en 2 heures."
-      }
+    "badge": "Processus étape par étape",
+    "title": "Comment fonctionne le pré-dépistage IA",
+    "description": "Notre processus alimenté par l'IA examine vos informations et rapports médicaux pour vous orienter vers le bon traitement, l'établissement et le spécialiste en Inde — en gagnant du temps, de l'argent et en réduisant l'incertitude."
+  },
+  "steps": {
+    "step1": {
+      "title": "Partagez vos données médicales",
+      "desc": "Remplissez un formulaire simple et sécurisé : informations du patient, état et symptômes, pays de résidence, destination de traitement préférée.",
+      "time": "Moins de 5 minutes",
+      "items": [
+        "Informations patient de base",
+        "État et symptômes",
+        "Pays de résidence",
+        "Destination de traitement préférée"
+      ]
+    },
+    "step2": {
+      "title": "Téléchargez les rapports médicaux",
+      "desc": "Téléchargez ordonnances, bilans sanguins, IRM/CT/PET, rapports de biopsie ou comptes-rendus de sortie.",
+      "time": "Formats acceptés : PDF, JPG, PNG",
+      "items": [
+        "Ordonnances",
+        "Bilans sanguins",
+        "IRM / CT / PET",
+        "Biopsies ou anatomopathologie",
+        "Comptes-rendus de sortie"
+      ]
+    },
+    "step3": {
+      "title": "Analyse médicale par IA",
+      "desc": "Notre moteur IA structure vos données, identifie les indicateurs cliniques et associe votre cas aux parcours de soins.",
+      "time": "IA formée sur données cliniques mondiales",
+      "items": [
+        "Structure les données médicales",
+        "Identifie les indicateurs cliniques",
+        "Associe au parcours de soins",
+        "Signale les niveaux d'urgence",
+        "Évalue la faisabilité du traitement"
+      ]
+    },
+    "step4": {
+      "title": "Rapport de pré-dépistage IA",
+      "desc": "Recevez en 2 heures un rapport clair avec insights préliminaires, options de traitement et prochaines étapes.",
+      "time": "Livré sous 2 heures",
+      "items": [
+        "Insights cliniques préliminaires",
+        "Options de traitement suggérées",
+        "Fourchette de coûts estimée",
+        "Spécialité médicale recommandée",
+        "Prochaines étapes pour consultation"
+      ]
     }
   },
   "reportIncludes": {
-    "title": "Ce que le Rapport Inclut :",
+    "badge": "Ce que vous recevrez",
+    "title": "Contenu du rapport de pré-dépistage IA",
+    "important": "Important : les décisions de traitement finales sont toujours confirmées par un médecin. Le pré-dépistage IA fournit uniquement une orientation préliminaire.",
     "items": [
-      "Évaluation médicale initiale",
-      "Options de traitement suggérées et fourchette de coûts",
-      "Spécialité médicale recommandée",
-      "Niveau d'urgence (Routine vs Urgent)"
+      "Évaluation médicale initiale (non diagnostique)",
+      "Orientation et faisabilité du traitement",
+      "Fourchette de coûts approximative",
+      "Durée du traitement estimée",
+      "Examens complémentaires éventuels",
+      "Adaptation au voyage en Inde",
+      "Niveau de priorité (routine / urgent)"
+    ]
+  },
+  "conversionBooster": "95 % des patients estiment que le pré-dépistage IA les a aidés à prendre une décision de traitement en confiance.",
+  "whyChoose": {
+    "badge": "Pourquoi Panacea ?",
+    "title": "Pourquoi choisir le pré-dépistage IA de Panacea ?",
+    "speed": "Rapidité",
+    "speedDesc": "Résultats en 2 heures, pas en jours.",
+    "accuracy": "Précision",
+    "accuracyDesc": "IA + revue médicale humaine pour la fiabilité.",
+    "transparency": "Transparence",
+    "transparencyDesc": "Coûts et orientation clairs dès le départ.",
+    "globalAccess": "Accès mondial",
+    "globalAccessDesc": "Disponible pour l'Afrique, le Moyen-Orient, la CEI et au-delà.",
+    "zeroObligation": "Sans engagement",
+    "zeroObligationDesc": "Aucune obligation de poursuivre le traitement."
+  },
+  "privacy": {
+    "badge": "Vos données sont protégées",
+    "title": "Confidentialité et sécurité des données",
+    "encrypted": "Téléchargements cryptés",
+    "encryptedDesc": "Fichiers chiffrés de bout en bout",
+    "servers": "Serveurs sécurisés",
+    "serversDesc": "Infrastructure de niveau entreprise",
+    "protocols": "Protocoles stricts",
+    "protocolsDesc": "Confidentialité garantie",
+    "compliance": "Conformité",
+    "complianceDesc": "Normes internationales",
+    "note": "Vos données médicales ne sont jamais partagées sans consentement."
+  },
+  "afterScreening": {
+    "badge": "Prochaines étapes",
+    "title": "Que se passe-t-il après le pré-dépistage IA ?",
+    "subtitle": "Une fois votre rapport reçu, vous pouvez :",
+    "items": [
+      "Échanger avec un expert médical / coordinateur de soins",
+      "Obtenir l'avis d'un médecin d'hôpitaux indiens de premier plan",
+      "Recevoir des plans de traitement confirmés",
+      "Poursuivre visa, voyage, hébergement et coordination des soins"
     ]
   },
   "disclaimer": {
-    "title": "Avertissement Important",
-    "text": "Le pré-dépistage par IA fournit des conseils médicaux préliminaires et ne remplace pas le diagnostic d'un médecin. Les décisions finales de traitement ne sont prises qu'après évaluation par des professionnels de santé qualifiés. Vos données sont protégées par des téléchargements cryptés et des protocoles de confidentialité stricts."
+    "title": "Avertissement important",
+    "text": "Le pré-dépistage IA fournit une orientation médicale préliminaire et ne remplace pas le diagnostic d'un médecin. Les décisions de traitement finales ne sont prises qu'après évaluation par des professionnels qualifiés."
+  },
+  "cta": {
+    "title": "Prêt à commencer votre pré-dépistage IA ?",
+    "subtitle": "Obtenez une clarté médicale avant de voyager. Notre IA analyse votre dossier et délivre un rapport complet sous 2 heures.",
+    "button": "Lancer votre pré-dépistage IA"
   }
 }

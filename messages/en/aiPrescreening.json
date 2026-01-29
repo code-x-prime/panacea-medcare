@@ -1,0 +1,78 @@
+{
+  "stepOf": "Step {current} of 4",
+  "takesAbout": "takes ~5 minutes",
+  "errorRequired": "Please fill in all required fields.",
+  "errorConsent": "Please agree to the consent terms.",
+  "errorSubmit": "Submission failed. Please try again.",
+  "errorNetwork": "Network error. Please try again.",
+  "step1": {
+    "title": "Patient Information",
+    "fullName": "Full Name *",
+    "fullNamePlaceholder": "As per passport",
+    "country": "Country of Residence *",
+    "countryPlaceholder": "e.g. Nigeria, UAE",
+    "whatsapp": "WhatsApp Number *",
+    "whatsappPlaceholder": "+91 9999999999",
+    "whatsappHint": "Include country code",
+    "email": "Email Address *",
+    "emailPlaceholder": "primary@email.com"
+  },
+  "step2": {
+    "title": "Medical Condition",
+    "concern": "Primary Medical Concern *",
+    "concernPlaceholder": "Select Concern...",
+    "concerns": {
+      "oncology": "Oncology (Cancer)",
+      "cardiology": "Cardiology (Heart)",
+      "neuro": "Neurology & Neurosurgery",
+      "ortho": "Orthopedics (Bone/Joint)",
+      "transplant": "Organ Transplant",
+      "ivf": "IVF & Fertility",
+      "other": "Other"
+    },
+    "symptoms": "Symptoms Description *",
+    "symptomsPlaceholder": "Describe current symptoms...",
+    "duration": "Duration of Symptoms",
+    "durationPlaceholder": "Select Duration...",
+    "durations": {
+      "lt1": "Less than 1 month",
+      "1to3": "1-3 months",
+      "3to6": "3-6 months",
+      "gt6": "More than 6 months"
+    },
+    "preferredCountry": "Preferred Country for Treatment",
+    "countries": {
+      "india": "India (Default)",
+      "turkey": "Turkey",
+      "thailand": "Thailand",
+      "uae": "UAE"
+    }
+  },
+  "step3": {
+    "title": "Upload Medical Reports",
+    "clickToUpload": "Click to Upload Reports",
+    "formats": "PDF, JPG, PNG (Max 25MB)",
+    "selectedFiles": "Selected Files:",
+    "remove": "Remove",
+    "tip": "Uploading recent reports (Prescriptions, MRI, Blood Tests) significantly improves the accuracy of the AI analysis."
+  },
+  "step4": {
+    "title": "Review & Consent",
+    "name": "Name:",
+    "concern": "Concern:",
+    "files": "Files:",
+    "filesCount": "{count} attached",
+    "consentLabel": "I consent to the processing of my medical data for AI Pre-Screening. I understand that this report provides preliminary insights only and does not replace a doctor's diagnosis."
+  },
+  "nav": {
+    "back": "Back",
+    "next": "Next Step",
+    "submit": "Submit for AI Pre-Screening",
+    "processing": "Processing..."
+  },
+  "success": {
+    "title": "Request Submitted Successfully!",
+    "message": "Thank you, {name}. Our AI system is analyzing your details. You will receive your AI Pre-Screening Report via Email/WhatsApp within 2 hours.",
+    "submitAnother": "Submit Another Request"
+  }
+}

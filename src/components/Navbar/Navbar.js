@@ -178,13 +178,16 @@ export default function Navbar({ locale = "en" }) {
                     )}
                   </Link>
 
-                  {/* Dropdown - 3 column grid, centered */}
+                  {/* Dropdown - responsive grid, contained within viewport */}
                   {hasSubMenu && isActive && subMenuItems && (
                     <div
-                      className="absolute left-1/2 -translate-x-1/2 top-full z-[100] bg-white shadow-2xl rounded-xl border border-gray-200 p-5 mt-2"
+                      className="fixed z-[100] bg-white shadow-2xl rounded-xl border border-gray-200 p-3 lg:p-4"
                       style={{
-                        width: "min(700px, 95vw)",
-                        maxHeight: "70vh",
+                        top: isSticky ? "55px" : "155px",
+                        left: "50%",
+                        transform: "translateX(-50%)",
+                        width: "min(560px, calc(100vw - 32px))",
+                        maxHeight: "50vh",
                         overflowY: "auto"
                       }}
                       onMouseEnter={() => {
@@ -201,13 +204,13 @@ export default function Navbar({ locale = "en" }) {
                         setDropdownTimeout(timeout);
                       }}
                     >
-                      <div className="grid grid-cols-3 gap-2">
+                      <div className="grid grid-cols-2 lg:grid-cols-3 gap-1">
                         {subMenuItems.map((subItem, sIdx) => (
                           <a
                             key={sIdx}
                             href={"/" + locale + (subItem.slug || "")}
                             onClick={(e) => handleSubMenuClick(e, "/" + locale + (subItem.slug || ""))}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium cursor-pointer"
+                            className="block px-2 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium cursor-pointer"
                           >
                             {subItem.name || subItem.country}
                           </a>

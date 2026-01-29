@@ -1,45 +1,132 @@
 {
-  "title": "AI Pre-Screening for International Patients",
-  "subtitle": "Fast. Accurate. Personalized.",
-  "subtitleHighlight": "Get Medical Clarity Before You Travel.",
-  "badges": {
-    "report": "⏱️ Report in 2 Hours",
-    "secure": "🛡️ 100% Secure Data",
-    "analysis": "🤖 Advanced AI Analysis"
+  "hero": {
+    "badge": "AI-Powered Healthcare",
+    "title": "AI Pre-Screening for International Patients",
+    "tagline": "Fast. Accurate. Personalized. Trusted.",
+    "subtitle": "Get Medical Clarity Before You Travel",
+    "intro": "Panacea Medcare's AI Pre-Screening System helps international patients receive a",
+    "introHighlight": "preliminary medical assessment within 2 hours",
+    "introSuffix": ", even before stepping out of their country.",
+    "badges": {
+      "report": "Report in 2 Hours",
+      "secure": "100% Secure",
+      "global": "Global Access"
+    }
   },
   "howItWorks": {
+    "badge": "Step-by-Step Process",
     "title": "How AI Pre-Screening Works",
-    "description": "Panacea Medcare’s AI-powered process reviews your medical information to guide you toward the right treatment, hospital, and specialist in India — saving time, money, and uncertainty.",
-    "steps": {
-      "step1": {
-        "title": "Step 1: Share Details",
-        "desc": "Fill a simple form with your condition & symptoms."
-      },
-      "step2": {
-        "title": "Step 2: Upload Reports",
-        "desc": "Attach prescriptions, scans, or lab reports."
-      },
-      "step3": {
-        "title": "Step 3: AI Analysis",
-        "desc": "Our engine structures data & matches with treatment paths."
-      },
-      "step4": {
-        "title": "Step 4: Receive Report",
-        "desc": "Get a clear guide via Email/WhatsApp in 2 hours."
-      }
+    "description": "Our AI-powered process reviews your medical information and reports to guide you toward the right treatment, hospital, and specialist in India — saving time, money, and uncertainty."
+  },
+  "steps": {
+    "step1": {
+      "title": "Share Your Medical Details",
+      "desc": "Fill a simple, secure form with basic patient information, medical condition & symptoms, country of residence, and preferred treatment destination.",
+      "time": "Takes less than 5 minutes",
+      "items": [
+        "Basic patient information",
+        "Medical condition & symptoms",
+        "Country of residence",
+        "Preferred treatment destination"
+      ]
+    },
+    "step2": {
+      "title": "Upload Medical Reports",
+      "desc": "Upload any available documents such as prescriptions, blood reports, MRI/CT/PET scans, biopsy reports, or discharge summaries.",
+      "time": "Multiple formats supported (PDF, JPG, PNG)",
+      "items": [
+        "Doctor prescriptions",
+        "Blood reports",
+        "MRI / CT / PET scans",
+        "Biopsy or pathology reports",
+        "Discharge summaries"
+      ]
+    },
+    "step3": {
+      "title": "AI Medical Analysis",
+      "desc": "Our advanced AI engine reads and structures your medical data, identifies key clinical indicators, and matches your case with treatment pathways.",
+      "time": "AI trained on global clinical data",
+      "items": [
+        "Reads and structures medical data",
+        "Identifies key clinical indicators",
+        "Matches case with treatment pathways",
+        "Flags urgency levels",
+        "Assesses treatment suitability"
+      ]
+    },
+    "step4": {
+      "title": "AI Pre-Screening Report",
+      "desc": "Receive a clear, easy-to-understand AI Pre-Screening Report within 2 hours including preliminary insights, treatment options, and next steps.",
+      "time": "Delivered within 2 hours",
+      "items": [
+        "Preliminary clinical insights",
+        "Suggested treatment options",
+        "Estimated treatment range",
+        "Recommended medical specialty",
+        "Next steps for consultation"
+      ]
     }
   },
   "reportIncludes": {
-    "title": "What the Report Includes:",
+    "badge": "What You'll Receive",
+    "title": "What the AI Pre-Screening Report Includes",
+    "important": "Important: Final treatment decisions are always confirmed by doctors. AI Pre-Screening provides preliminary guidance only.",
     "items": [
-      "Initial medical assessment",
-      "Suggested treatment options & cost range",
-      "Recommended medical specialty",
-      "Urgency level (Routine vs. Urgent)"
+      "Initial medical assessment (non-diagnostic)",
+      "Treatment direction & feasibility",
+      "Approximate cost range",
+      "Treatment duration estimate",
+      "Need for further tests (if any)",
+      "Suitability for travel to India",
+      "Priority level (routine / urgent)"
+    ]
+  },
+  "conversionBooster": "95% of patients say AI Pre-Screening helped them make a confident treatment decision.",
+  "whyChoose": {
+    "badge": "Why Choose Us",
+    "title": "Why Choose Us AI Pre-Screening?",
+    "speed": "Speed",
+    "speedDesc": "Get insights in 2 hours, not days.",
+    "accuracy": "Accuracy",
+    "accuracyDesc": "AI + human medical review ensures reliability.",
+    "transparency": "Transparency",
+    "transparencyDesc": "Clear cost and treatment direction upfront.",
+    "globalAccess": "Global Access",
+    "globalAccessDesc": "Available for patients across Africa, Middle East, CIS & beyond.",
+    "zeroObligation": "Zero Obligation",
+    "zeroObligationDesc": "No commitment required to proceed with treatment."
+  },
+  "privacy": {
+    "badge": "Your Data is Safe",
+    "title": "Data Privacy & Security",
+    "encrypted": "Encrypted Uploads",
+    "encryptedDesc": "All files encrypted end-to-end",
+    "servers": "Secure Servers",
+    "serversDesc": "Enterprise-grade infrastructure",
+    "protocols": "Strict Protocols",
+    "protocolsDesc": "Confidentiality guaranteed",
+    "compliance": "Compliance",
+    "complianceDesc": "International data standards",
+    "note": "Your medical data is never shared without consent."
+  },
+  "afterScreening": {
+    "badge": "Next Steps",
+    "title": "What Happens After AI Pre-Screening?",
+    "subtitle": "Once you receive your report, you can choose to:",
+    "items": [
+      "Speak with a medical expert / care coordinator",
+      "Get a doctor's opinion from top Indian hospitals",
+      "Receive confirmed treatment plans",
+      "Proceed with visa, travel, accommodation & care coordination"
     ]
   },
   "disclaimer": {
     "title": "Important Disclaimer",
-    "text": "AI Pre-Screening provides preliminary medical guidance and does not replace a doctor’s diagnosis. Final treatment decisions are made only after evaluation by qualified medical professionals. Your data is protected with encrypted uploads and strict confidentiality protocols."
+    "text": "AI Pre-Screening provides preliminary medical guidance and does not replace a doctor's diagnosis. Final treatment decisions are made only after evaluation by qualified medical professionals."
+  },
+  "cta": {
+    "title": "Ready to Begin Your AI Pre-Screening?",
+    "subtitle": "Get medical clarity before you travel. Our AI system analyzes your case and delivers a comprehensive report within 2 hours.",
+    "button": "Get Your AI Pre-Screening Done"
   }
 }

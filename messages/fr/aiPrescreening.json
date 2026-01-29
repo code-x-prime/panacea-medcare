@@ -1,0 +1,78 @@
+{
+  "stepOf": "Étape {current} sur 4",
+  "takesAbout": "environ 5 minutes",
+  "errorRequired": "Veuillez remplir tous les champs obligatoires.",
+  "errorConsent": "Veuillez accepter les conditions de consentement.",
+  "errorSubmit": "Échec de l'envoi. Veuillez réessayer.",
+  "errorNetwork": "Erreur réseau. Veuillez réessayer.",
+  "step1": {
+    "title": "Informations patient",
+    "fullName": "Nom complet *",
+    "fullNamePlaceholder": "Comme sur le passeport",
+    "country": "Pays de résidence *",
+    "countryPlaceholder": "ex. Nigeria, EAU",
+    "whatsapp": "Numéro WhatsApp *",
+    "whatsappPlaceholder": "+33 6 12 34 56 78",
+    "whatsappHint": "Avec indicatif pays",
+    "email": "Adresse e-mail *",
+    "emailPlaceholder": "email@exemple.com"
+  },
+  "step2": {
+    "title": "État médical",
+    "concern": "Préoccupation médicale principale *",
+    "concernPlaceholder": "Sélectionner...",
+    "concerns": {
+      "oncology": "Oncologie (Cancer)",
+      "cardiology": "Cardiologie (Cœur)",
+      "neuro": "Neurologie & Neurochirurgie",
+      "ortho": "Orthopédie (Os/Articulations)",
+      "transplant": "Greffe d'organe",
+      "ivf": "FIV & Fertilité",
+      "other": "Autre"
+    },
+    "symptoms": "Description des symptômes *",
+    "symptomsPlaceholder": "Décrivez les symptômes actuels...",
+    "duration": "Durée des symptômes",
+    "durationPlaceholder": "Sélectionner...",
+    "durations": {
+      "lt1": "Moins d'un mois",
+      "1to3": "1 à 3 mois",
+      "3to6": "3 à 6 mois",
+      "gt6": "Plus de 6 mois"
+    },
+    "preferredCountry": "Pays de traitement préféré",
+    "countries": {
+      "india": "Inde (par défaut)",
+      "turkey": "Turquie",
+      "thailand": "Thaïlande",
+      "uae": "EAU"
+    }
+  },
+  "step3": {
+    "title": "Télécharger les rapports médicaux",
+    "clickToUpload": "Cliquez pour télécharger",
+    "formats": "PDF, JPG, PNG (max. 25 Mo)",
+    "selectedFiles": "Fichiers sélectionnés :",
+    "remove": "Supprimer",
+    "tip": "Télécharger des rapports récents (ordonnances, IRM, bilans) améliore nettement la précision de l'analyse IA."
+  },
+  "step4": {
+    "title": "Vérification et consentement",
+    "name": "Nom :",
+    "concern": "Préoccupation :",
+    "files": "Fichiers :",
+    "filesCount": "{count} joint(s)",
+    "consentLabel": "Je consens au traitement de mes données médicales pour le pré-dépistage IA. Je comprends que ce rapport fournit des informations préliminaires uniquement et ne remplace pas le diagnostic d'un médecin."
+  },
+  "nav": {
+    "back": "Retour",
+    "next": "Étape suivante",
+    "submit": "Envoyer pour pré-dépistage IA",
+    "processing": "Envoi en cours..."
+  },
+  "success": {
+    "title": "Demande envoyée avec succès !",
+    "message": "Merci, {name}. Notre IA analyse vos informations. Vous recevrez votre rapport de pré-dépistage par e-mail/WhatsApp sous 2 heures.",
+    "submitAnother": "Envoyer une autre demande"
+  }
+}

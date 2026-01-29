@@ -433,7 +433,6 @@ panacea-medcare/
 **🎨 Visual Style & Background (MANDATORY):**
 
 - **Full-width background image** with warm, hopeful, human theme:
-
   - Smiling, happy patients
   - Doctors interacting compassionately with patients
   - Hospital or treatment environment
@@ -1077,6 +1076,7 @@ The Privacy Policy page demonstrates a comprehensive legal document structure wi
 ### Structure
 
 The privacy policy page includes:
+
 - **TopBanner** component with gradient variant
 - **Header section** with company name and effective date
 - **Introduction paragraph** explaining the policy
@@ -1095,163 +1095,185 @@ The privacy policy page includes:
 import TopBanner from "@/components/TopBanner";
 
 export default function PrivacyPage({ params }) {
-    const { locale } = params;
-    const isRTL = locale === "ar";
+  const { locale } = params;
+  const isRTL = locale === "ar";
 
-    const content = {
-        en: {
-            title: "Privacy Policy",
-            subtitle: "How we protect your information",
-            companyName: "Panacea Medcare",
-            effectiveDate: "Effective Date: 01-01-2026",
-            intro: "Panacea Medcare is committed to protecting...",
-            sections: [
-                {
-                    title: "1. Scope of This Privacy Policy",
-                    content: "This Privacy Policy applies to:",
-                    items: [
-                        "Visitors to www.panaceamedcare.com",
-                        "Patients using our services"
-                    ],
-                    note: "This policy applies globally..."
-                },
-                {
-                    title: "2. Information We Collect",
-                    subsections: [
-                        {
-                            subtitle: "2.1 Personal Information",
-                            content: "We may collect:",
-                            items: ["Full name", "Email address"],
-                            note: "Optional note here"
-                        }
-                    ]
-                }
-            ]
+  const content = {
+    en: {
+      title: "Privacy Policy",
+      subtitle: "How we protect your information",
+      companyName: "Panacea Medcare",
+      effectiveDate: "Effective Date: 01-01-2026",
+      intro: "Panacea Medcare is committed to protecting...",
+      sections: [
+        {
+          title: "1. Scope of This Privacy Policy",
+          content: "This Privacy Policy applies to:",
+          items: [
+            "Visitors to www.panaceamedcare.com",
+            "Patients using our services",
+          ],
+          note: "This policy applies globally...",
         },
-        ar: { /* Arabic translations */ },
-        fr: { /* French translations */ }
-    };
+        {
+          title: "2. Information We Collect",
+          subsections: [
+            {
+              subtitle: "2.1 Personal Information",
+              content: "We may collect:",
+              items: ["Full name", "Email address"],
+              note: "Optional note here",
+            },
+          ],
+        },
+      ],
+    },
+    ar: {
+      /* Arabic translations */
+    },
+    fr: {
+      /* French translations */
+    },
+  };
 
-    const t = content[locale] || content.en;
+  const t = content[locale] || content.en;
 
-    return (
-        <main dir={isRTL ? "rtl" : "ltr"} className="bg-panacea-light">
-            <TopBanner
-                locale={locale}
-                namespace="heroSection"
-                title={t.title}
-                subtitle={t.subtitle}
-                variant="gradient"
-                size="md"
-            />
+  return (
+    <main dir={isRTL ? "rtl" : "ltr"} className="bg-panacea-light">
+      <TopBanner
+        locale={locale}
+        namespace="heroSection"
+        title={t.title}
+        subtitle={t.subtitle}
+        variant="gradient"
+        size="md"
+      />
 
-            <section className="container mx-auto px-4 xl:max-w-7xl py-12 md:py-16">
-                <div className="max-w-4xl mx-auto">
-                    {/* Header */}
-                    <div className={`mb-8 ${isRTL ? "text-right" : "text-left"}`}>
-                        <h1 className="text-3xl md:text-4xl font-bold text-panacea-primary mb-4">
-                            {t.title}
-                        </h1>
-                        <p className="text-xl font-semibold text-panacea-dark mb-2">
-                            {t.companyName}
-                        </p>
-                        <p className="text-base text-panacea-gray">
-                            {t.effectiveDate}
-                        </p>
-                    </div>
+      <section className="container mx-auto px-4 xl:max-w-7xl py-12 md:py-16">
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className={`mb-8 ${isRTL ? "text-right" : "text-left"}`}>
+            <h1 className="text-3xl md:text-4xl font-bold text-panacea-primary mb-4">
+              {t.title}
+            </h1>
+            <p className="text-xl font-semibold text-panacea-dark mb-2">
+              {t.companyName}
+            </p>
+            <p className="text-base text-panacea-gray">{t.effectiveDate}</p>
+          </div>
 
-                    {/* Introduction */}
-                    <div className={`bg-white p-6 md:p-8 rounded-xl shadow-panacea mb-8`}>
-                        <p className="text-lg text-panacea-gray leading-relaxed">
-                            {t.intro}
-                        </p>
-                    </div>
+          {/* Introduction */}
+          <div className={`bg-white p-6 md:p-8 rounded-xl shadow-panacea mb-8`}>
+            <p className="text-lg text-panacea-gray leading-relaxed">
+              {t.intro}
+            </p>
+          </div>
 
-                    {/* Sections */}
-                    <div className="space-y-6">
-                        {t.sections.map((section, index) => (
-                            <div key={index} className="bg-white p-6 md:p-8 rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all">
-                                <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary mb-4 border-b-2 border-panacea-blue-100 pb-3">
-                                    {section.title}
-                                </h2>
-                                
-                                {section.content && (
-                                    <p className="text-lg text-panacea-gray mb-4">
-                                        {section.content}
-                                    </p>
-                                )}
+          {/* Sections */}
+          <div className="space-y-6">
+            {t.sections.map((section, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 md:p-8 rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all"
+              >
+                <h2 className="text-2xl md:text-3xl font-bold text-panacea-primary mb-4 border-b-2 border-panacea-blue-100 pb-3">
+                  {section.title}
+                </h2>
 
-                                {section.items && (
-                                    <ul className="space-y-2 mb-4 pl-6">
-                                        {section.items.map((item, itemIndex) => (
-                                            <li key={itemIndex} className="text-panacea-gray flex items-start">
-                                                <span className="text-panacea-primary font-bold mr-2">•</span>
-                                                <span className="flex-1">{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                {section.content && (
+                  <p className="text-lg text-panacea-gray mb-4">
+                    {section.content}
+                  </p>
+                )}
 
-                                {section.subsections && (
-                                    <div className="space-y-6 mt-6">
-                                        {section.subsections.map((subsection, subIndex) => (
-                                            <div key={subIndex} className="border-l-4 border-panacea-primary pl-4 md:pl-6">
-                                                <h3 className="text-xl md:text-2xl font-bold text-panacea-dark mb-3">
-                                                    {subsection.subtitle}
-                                                </h3>
-                                                {subsection.content && (
-                                                    <p className="text-panacea-gray mb-3">
-                                                        {subsection.content}
-                                                    </p>
-                                                )}
-                                                {subsection.items && (
-                                                    <ul className="space-y-2 mb-3 pl-6">
-                                                        {subsection.items.map((item, itemIndex) => (
-                                                            <li key={itemIndex} className="text-panacea-gray flex items-start">
-                                                                <span className="text-panacea-primary font-bold mr-2">•</span>
-                                                                <span className="flex-1">{item}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                )}
-                                                {subsection.note && (
-                                                    <p className="text-base text-panacea-gray italic bg-panacea-blue-50 p-4 rounded-lg mt-3">
-                                                        {subsection.note}
-                                                    </p>
-                                                )}
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
+                {section.items && (
+                  <ul className="space-y-2 mb-4 pl-6">
+                    {section.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="text-panacea-gray flex items-start"
+                      >
+                        <span className="text-panacea-primary font-bold mr-2">
+                          •
+                        </span>
+                        <span className="flex-1">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-                                {section.note && (
-                                    <p className="text-base text-panacea-gray italic bg-panacea-blue-50 p-4 rounded-lg mt-4">
-                                        {section.note}
-                                    </p>
-                                )}
+                {section.subsections && (
+                  <div className="space-y-6 mt-6">
+                    {section.subsections.map((subsection, subIndex) => (
+                      <div
+                        key={subIndex}
+                        className="border-l-4 border-panacea-primary pl-4 md:pl-6"
+                      >
+                        <h3 className="text-xl md:text-2xl font-bold text-panacea-dark mb-3">
+                          {subsection.subtitle}
+                        </h3>
+                        {subsection.content && (
+                          <p className="text-panacea-gray mb-3">
+                            {subsection.content}
+                          </p>
+                        )}
+                        {subsection.items && (
+                          <ul className="space-y-2 mb-3 pl-6">
+                            {subsection.items.map((item, itemIndex) => (
+                              <li
+                                key={itemIndex}
+                                className="text-panacea-gray flex items-start"
+                              >
+                                <span className="text-panacea-primary font-bold mr-2">
+                                  •
+                                </span>
+                                <span className="flex-1">{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        {subsection.note && (
+                          <p className="text-base text-panacea-gray italic bg-panacea-blue-50 p-4 rounded-lg mt-3">
+                            {subsection.note}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-                                {section.contact && (
-                                    <div className="mt-4 p-4 bg-panacea-blue-50 rounded-lg">
-                                        <p className="text-lg font-semibold text-panacea-dark mb-2">
-                                            {section.contact.name}
-                                        </p>
-                                        <p className="text-panacea-gray mb-1">
-                                            📍 {section.contact.location}
-                                        </p>
-                                        <p className="text-panacea-gray">
-                                            📧 <a href={`mailto:${section.contact.email}`} className="text-panacea-primary hover:text-panacea-blue-600 underline">
-                                                {section.contact.email}
-                                            </a>
-                                        </p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-        </main>
-    );
+                {section.note && (
+                  <p className="text-base text-panacea-gray italic bg-panacea-blue-50 p-4 rounded-lg mt-4">
+                    {section.note}
+                  </p>
+                )}
+
+                {section.contact && (
+                  <div className="mt-4 p-4 bg-panacea-blue-50 rounded-lg">
+                    <p className="text-lg font-semibold text-panacea-dark mb-2">
+                      {section.contact.name}
+                    </p>
+                    <p className="text-panacea-gray mb-1">
+                      📍 {section.contact.location}
+                    </p>
+                    <p className="text-panacea-gray">
+                      📧{" "}
+                      <a
+                        href={`mailto:${section.contact.email}`}
+                        className="text-panacea-primary hover:text-panacea-blue-600 underline"
+                      >
+                        {section.contact.email}
+                      </a>
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
 }
 ```
 
@@ -1408,15 +1430,15 @@ const quickActions = [
 
 ### Our Process Section (HowWeWork Component)
 
-1. **Increased Size**: 
+1. **Increased Size**:
    - Title: `text-4xl md:text-6xl lg:text-7xl`
    - Cards: `p-8 md:p-10` (increased padding)
    - Icons: `w-24 h-24 md:w-28 md:h-28` (larger icons)
-2. **Colored Text**: 
+2. **Colored Text**:
    - Title uses gradient text: `bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent`
    - Step titles use gradient text
    - Step numbers use gradient text
-3. **Colored Cards**: 
+3. **Colored Cards**:
    - Cards use gradient background: `bg-gradient-to-br from-white to-panacea-light/30`
    - Icons have gradient background: `bg-gradient-to-br from-panacea-primary to-panacea-secondary`
    - Hover effects with colored borders
@@ -1424,6 +1446,7 @@ const quickActions = [
 ### Destination Page Template
 
 Destination pages follow this structure:
+
 - TopBanner with destination title
 - Breadcrumb navigation
 - Hero image with overlay
@@ -1432,6 +1455,23 @@ Destination pages follow this structure:
 - CTA section with contact buttons
 
 All destination pages support EN/AR/FR translations.
+
+### AI Pre-Screening Page (`/[locale]/pre-screening`)
+
+1. **Multi-language**: Full EN, FR, AR support via `preScreening` and `aiPrescreening` message namespaces. RTL layout for Arabic.
+2. **Colors (TEMPLATE_GUIDE compliant)**:
+   - Hero: `from-[#003459] via-[#066F89] to-[#066F89]` (Midnight Navy → Logo Teal)
+   - Badges / CTAs: `#066F89`, `#FF6B35` (primary, accent)
+   - Success / highlights: `#0BA35A` (Fresh Green), `#FFD166` (Warm Yellow) for tips
+   - Text: `#003459` (dark), `#6D7A8A` (slate), `#F5F7FA` (soft gray) backgrounds
+3. **Sections**: Hero, How it works (4 steps), Report includes, Why choose, Data privacy, What happens after, Disclaimer, Final CTA. Form (`AIPreScreeningForm`) is a 4-step flow with progress bar.
+4. **Form**:
+   - Step 1: Patient info (name, country, WhatsApp, email)
+   - Step 2: Medical condition, symptoms, duration, preferred country
+   - Step 3: File upload (PDF, JPG, PNG; max 25MB)
+   - Step 4: Review + consent checkbox
+   - Consent checkbox: `id="ai-prescreen-consent"`, `htmlFor` on label, large clickable area, `accent-[#066F89]`, `has-[:checked]` border/background styling
+5. **i18n**: `messages/{en,fr,ar}/preScreening.json`, `messages/{en,fr,ar}/aiPrescreening.json`. Namespaces wired in `i18n/request.js`.
 
 ---
 

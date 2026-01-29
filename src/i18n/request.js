@@ -59,6 +59,7 @@ export default getRequestConfig(async ({ locale }) => {
     partnerWithUs: (await import(`../../messages/${validLocale}/partnerWithUs.json`)).default,
     aiSolutions: (await import(`../../messages/${validLocale}/aiSolutions.json`)).default,
     preScreening: (await import(`../../messages/${validLocale}/preScreening.json`)).default,
+    aiPrescreening: (await import(`../../messages/${validLocale}/aiPrescreening.json`)).default,
   };
 
   return {

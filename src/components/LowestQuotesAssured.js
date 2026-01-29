@@ -54,7 +54,7 @@ export default function LowestQuotesAssured({ locale }) {
                 </div>
 
                 {/* Treatment Cards Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-14 gap-10 mb-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-8 md:gap-10 mb-12">
                     {treatments.map((treatment, idx) => {
                         return (
                             <div

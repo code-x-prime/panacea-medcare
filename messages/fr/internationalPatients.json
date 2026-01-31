@@ -93,7 +93,12 @@
     "followup": "Soins post-traitement",
     "followupDesc": "Soutien de suivi et consultations de télémédecine"
   },
-  "whyChoose": "Pourquoi nous choisir",
+  "whyChoose": "Pourquoi choisir Panacea",
+  "cta": {
+    "title": "Contactez-nous maintenant",
+    "subtitle": "Contactez notre équipe pour une consultation gratuite ou pour commencer votre parcours médical.",
+    "whatsappButton": "Discuter sur WhatsApp"
+  },
   "benefits": {
     "cost": "Économies de coûts",
     "costDesc": "Économisez jusqu'à 70% par rapport aux pays occidentaux",

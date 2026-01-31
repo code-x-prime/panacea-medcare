@@ -35,6 +35,7 @@ export const COUNTRIES = [
     { value: "malaysia", label: "Malaysia", code: "+60" },
     { value: "mexico", label: "Mexico", code: "+52" },
     { value: "morocco", label: "Morocco", code: "+212" },
+    { value: "mozambique", label: "Mozambique", code: "+258" },
     { value: "netherlands", label: "Netherlands", code: "+31" },
     { value: "newzealand", label: "New Zealand", code: "+64" },
     { value: "nigeria", label: "Nigeria", code: "+234" },

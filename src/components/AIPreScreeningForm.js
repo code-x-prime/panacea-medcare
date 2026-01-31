@@ -114,7 +114,13 @@ export default function AIPreScreeningForm({ locale }) {
                 });
             }
         } else {
-            setFormData((prev) => ({ ...prev, [name]: value }));
+            if (name === "country") {
+                const country = COUNTRIES.find((c) => c.label === value);
+                const phoneCode = country?.code ?? "";
+                setFormData((prev) => ({ ...prev, [name]: value, phoneCode: phoneCode || prev.phoneCode }));
+            } else {
+                setFormData((prev) => ({ ...prev, [name]: value }));
+            }
         }
     };
 
@@ -401,7 +407,7 @@ export default function AIPreScreeningForm({ locale }) {
                                     <div className="flex gap-2">
                                         <select name="phoneCode" value={formData.phoneCode} onChange={handleInputChange} className="w-28 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none bg-white text-sm">
                                             {phoneCodes.map((pc) => (
-                                                <option key={pc.value} value={pc.value}>{pc.value}</option>
+                                                <option key={pc.value} value={pc.value}>{pc.label}</option>
                                             ))}
                                         </select>
                                         <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none" placeholder={t("step1.whatsappPlaceholder")} />

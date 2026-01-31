@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { FaCalendarCheck, FaSpinner, FaCheckCircle } from "react-icons/fa";
+import { COUNTRIES } from "@/lib/countries";
 
 export default function QuoteForm({ trigger, className, embedded = false }) {
   const t = useTranslations("quoteForm");
@@ -40,72 +41,22 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
     medicalProblem: "",
   });
 
-  const countries = [
-    { value: "afghanistan", label: "afghanistan", code: "+93" },
-    { value: "albania", label: "albania", code: "+355" },
-    { value: "algeria", label: "algeria", code: "+213" },
-    { value: "argentina", label: "argentina", code: "+54" },
-    { value: "australia", label: "australia", code: "+61" },
-    { value: "austria", label: "austria", code: "+43" },
-    { value: "bahrain", label: "bahrain", code: "+973" },
-    { value: "bangladesh", label: "bangladesh", code: "+880" },
-    { value: "belgium", label: "belgium", code: "+32" },
-    { value: "brazil", label: "brazil", code: "+55" },
-    { value: "canada", label: "canada", code: "+1" },
-    { value: "china", label: "china", code: "+86" },
-    { value: "denmark", label: "denmark", code: "+45" },
-    { value: "egypt", label: "egypt", code: "+20" },
-    { value: "ethiopia", label: "ethiopia", code: "+251" },
-    { value: "france", label: "france", code: "+33" },
-    { value: "germany", label: "germany", code: "+49" },
-    { value: "greece", label: "greece", code: "+30" },
-    { value: "india", label: "india", code: "+91" },
-    { value: "indonesia", label: "indonesia", code: "+62" },
-    { value: "iran", label: "iran", code: "+98" },
-    { value: "iraq", label: "iraq", code: "+964" },
-    { value: "ireland", label: "ireland", code: "+353" },
-    { value: "israel", label: "israel", code: "+972" },
-    { value: "italy", label: "italy", code: "+39" },
-    { value: "japan", label: "japan", code: "+81" },
-    { value: "jordan", label: "jordan", code: "+962" },
-    { value: "kenya", label: "kenya", code: "+254" },
-    { value: "kuwait", label: "kuwait", code: "+965" },
-    { value: "lebanon", label: "lebanon", code: "+961" },
-    { value: "malaysia", label: "malaysia", code: "+60" },
-    { value: "mexico", label: "mexico", code: "+52" },
-    { value: "morocco", label: "morocco", code: "+212" },
-    { value: "netherlands", label: "netherlands", code: "+31" },
-    { value: "newzealand", label: "newzealand", code: "+64" },
-    { value: "nigeria", label: "nigeria", code: "+234" },
-    { value: "norway", label: "norway", code: "+47" },
-    { value: "oman", label: "oman", code: "+968" },
-    { value: "pakistan", label: "pakistan", code: "+92" },
-    { value: "philippines", label: "philippines", code: "+63" },
-    { value: "poland", label: "poland", code: "+48" },
-    { value: "portugal", label: "portugal", code: "+351" },
-    { value: "qatar", label: "qatar", code: "+974" },
-    { value: "russia", label: "russia", code: "+7" },
-    { value: "rwanda", label: "rwanda", code: "+250" },
-    { value: "saudiarabia", label: "saudiarabia", code: "+966" },
-    { value: "singapore", label: "singapore", code: "+65" },
-    { value: "southafrica", label: "southafrica", code: "+27" },
-    { value: "southkorea", label: "southkorea", code: "+82" },
-    { value: "spain", label: "spain", code: "+34" },
-    { value: "srilanka", label: "srilanka", code: "+94" },
-    { value: "sweden", label: "sweden", code: "+46" },
-    { value: "switzerland", label: "switzerland", code: "+41" },
-    { value: "thailand", label: "thailand", code: "+66" },
-    { value: "turkey", label: "turkey", code: "+90" },
-    { value: "uae", label: "uae", code: "+971" },
-    { value: "uk", label: "uk", code: "+44" },
-    { value: "usa", label: "usa", code: "+1" },
-    { value: "vietnam", label: "vietnam", code: "+84" },
-  ];
-
-  const phoneCodes = countries.map(country => ({
+  const countries = COUNTRIES.map((c) => ({ ...c, label: t(c.value) || c.label }));
+  const phoneCodes = countries.map((country) => ({
     value: country.code,
-    label: `${country.code} (${country.label})`
+    label: `${country.code} (${country.label})`,
   }));
+
+  const onCountryChange = (value) => {
+    const country = COUNTRIES.find((c) => c.value === value);
+    const code = country?.code ?? formData.phoneCode;
+    setFormData((prev) => ({
+      ...prev,
+      country: value,
+      phoneCode: code,
+      whatsappCode: code,
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -201,23 +152,23 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
           />
         </div>
 
-        {/* Country */}
+        {/* Country – selecting a country auto-sets phone code (e.g. Nigeria → +234) */}
         <div>
           <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("country")}
           </label>
           <Select
             value={formData.country}
-            onValueChange={(value) => setFormData({ ...formData, country: value })}
+            onValueChange={onCountryChange}
             required
           >
             <SelectTrigger className={`w-full bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] ${isRTL ? 'text-right' : 'text-left'} shadow-sm`}>
               <SelectValue placeholder={t("selectCountry")} />
             </SelectTrigger>
-            <SelectContent className="bg-white max-h-[150px]">
+            <SelectContent className="bg-white max-h-[280px]">
               {countries.map((country) => (
                 <SelectItem key={country.value} value={country.value}>
-                  {country.label}
+                  {country.label} ({country.code})
                 </SelectItem>
               ))}
             </SelectContent>

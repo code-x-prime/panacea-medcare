@@ -2,7 +2,8 @@
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
-import { AlertCircle, CheckCircle2, ArrowRight } from "lucide-react";
+import { AlertCircle, CheckCircle2 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import Breadcrumb from "@/components/Breadcrumb";
 
 export default function InternationalPatientsPage({ params }) {
@@ -144,8 +145,8 @@ export default function InternationalPatientsPage({ params }) {
                     </div>
                 </div>
 
-                {/* Why Choose Us */}
-                <div className="bg-panacea-light p-8 md:p-12 rounded-lg">
+                {/* Why Choose Panacea */}
+                <div className="bg-panacea-light p-8 md:p-12 rounded-lg mb-16">
                     <h3 className={`text-2xl md:text-3xl font-bold text-panacea-primary mb-8 ${isRTL ? "text-right" : "text-left"}`}>
                         {t("whyChoose")}
                     </h3>
@@ -167,6 +168,25 @@ export default function InternationalPatientsPage({ params }) {
                             <p className="text-gray-700">{t("benefits.supportDesc")}</p>
                         </div>
                     </div>
+                </div>
+
+                {/* CTA – Contact Us Now + WhatsApp */}
+                <div className={`bg-gradient-to-br from-panacea-primary via-panacea-primary to-panacea-dark rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg text-center ${isRTL ? "text-right" : "text-left"}`}>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-3">
+                        {t("cta.title")}
+                    </h3>
+                    <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+                        {t("cta.subtitle")}
+                    </p>
+                    <a
+                        href={`https://wa.me/919958800961?text=${encodeURIComponent("Hello, I'm an international patient and would like to know more about your services.")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                    >
+                        <FaWhatsapp className="w-6 h-6" />
+                        {t("cta.whatsappButton")}
+                    </a>
                 </div>
             </section>
         </main>

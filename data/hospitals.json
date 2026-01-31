@@ -205,11 +205,11 @@
               }
             },
             {
-              "id": "fortis-manesar-gurgaon",
+              "id": "fortis-hospital-gurgaon",
               "slug": "fortis-hospital-gurgaon",
               "name": "Fortis Hospital Gurgaon",
-              "nameAr": "مستشفى فورتيس مانيسار",
-              "nameFr": "Hôpital Fortis Manesar",
+              "nameAr": "مستشفى فورتيس جورجاون",
+              "nameFr": "Hôpital Fortis Gurgaon",
               "rating": {
                 "score": 4.4,
                 "totalReviews": 14
@@ -223,8 +223,8 @@
               ],
               "about": {
                 "short": "Fortis Hospital Gurgaon is an accredited multi-speciality tertiary care hospital and India's first hospital to collaborate with Japanese companies for the betterment of health equipment.",
-                "shortAr": "مستشفى فورتيس مانيسار هو مستشفى رعاية ثالثية متعدد التخصصات معتمد وأول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية.",
-                "shortFr": "L'hôpital Fortis Manesar est un hôpital de soins tertiaires multi-spécialités accrédité et le premier hôpital d'Inde à collaborer avec des entreprises japonaises pour l'amélioration de l'équipement de santé.",
+                "shortAr": "مستشفى فورتيس جورجاون هو مستشفى رعاية ثالثية متعدد التخصصات معتمد وأول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية.",
+                "shortFr": "L'hôpital Fortis Gurgaon est un hôpital de soins tertiaires multi-spécialités accrédité et le premier hôpital d'Inde à collaborer avec des entreprises japonaises pour l'amélioration de l'équipement de santé.",
                 "full": "Established in 2013, Fortis Hospital is an accredited multi-speciality tertiary care hospital. It is India's first hospital to collaborate with Japanese companies for the betterment of health equipment. It specializes in cosmetic surgery, bariatric surgery, laparoscopic surgery, gastroenterology, neurosciences, and renal sciences. Equipped with OPD, Emergency, life-saving Therapeutic and Curative Secondary Care and also Tertiary Care facilities.",
                 "fullAr": "تأسس مستشفى فورتيس في عام 2013 وهو مستشفى رعاية ثالثية متعدد التخصصات معتمد. وهو أول مستشفى في الهند يتعاون مع الشركات اليابانية لتحسين المعدات الصحية. يتخصص في جراحة التجميل، وجراحة السمنة، والجراحة بالمنظار، وأمراض الجهاز الهضمي، وعلوم الأعصاب، وعلوم الكلى. مجهز بعيادات خارجية، وطوارئ، ورعاية علاجية وعلاجية ثانوية منقذة للحياة وأيضًا مرافق رعاية ثالثية.",
                 "fullFr": "Établi en 2013, l'hôpital Fortis est un hôpital de soins tertiaires multi-spécialités accrédité. C'est le premier hôpital d'Inde à collaborer avec des entreprises japonaises pour l'amélioration de l'équipement de santé. Il se spécialise en chirurgie esthétique, chirurgie bariatrique, chirurgie laparoscopique, gastro-entérologie, neurosciences et sciences rénales. Équipé de services externes, d'urgence, de soins thérapeutiques et curatifs secondaires vitaux et également d'installations de soins tertiaires.",
@@ -265,23 +265,23 @@
                 }
               ],
               "address": {
-                "line1": "Plot no 2, Sector 5, IMT Manesar",
+                "line1": "Sector 62, Gurgaon",
                 "city": "Gurgaon",
                 "state": "Haryana",
-                "pincode": "122050",
+                "pincode": "122002",
                 "country": "India"
               },
               "location": {
-                "airportKm": 38,
-                "airportDuration": "52 mins by car",
+                "airportKm": 22,
+                "airportDuration": "35 mins by car",
                 "airportName": "Indira Gandhi International Airport",
                 "coordinates": {
-                  "lat": 28.5957,
-                  "lng": 77.0459
+                  "lat": 28.4184,
+                  "lng": 77.0972
                 },
-                "description": "The hospital is located in the industrial and IT hub near Gurgaon, Manesar. Taxi availability on call. Budget hotels and guest houses starting at USD 20 per day are available near the hospital. Retail Shops, Pharmacies, International Cuisine Restaurants are also available in Manesar.",
-                "descriptionAr": "يقع المستشفى في المركز الصناعي وتكنولوجيا المعلومات بالقرب من جورجاون، مانيسار. سيارات الأجرة متاحة عند الطلب. تتوفر فنادق ودور ضيافة اقتصادية بأسعار تبدأ من 20 دولار أمريكي يوميًا بالقرب من المستشفى. تتوفر أيضًا متاجر البيع بالتجزئة والصيدليات ومطاعم المأكولات العالمية في مانيسار.",
-                "descriptionFr": "L'hôpital est situé dans le centre industriel et informatique près de Gurgaon, Manesar. Taxi disponible sur appel. Des hôtels économiques et des maisons d'hôtes à partir de 20 USD par jour sont disponibles près de l'hôpital. Des magasins de détail, des pharmacies et des restaurants de cuisine internationale sont également disponibles à Manesar."
+                "description": "The hospital is located in Gurgaon with easy access from Delhi NCR. Taxi availability on call. Budget hotels and guest houses are available near the hospital. Retail shops, pharmacies and international cuisine restaurants are also available in the area.",
+                "descriptionAr": "يقع المستشفى في جورجاون مع سهولة الوصول من دلهي NCR. سيارات الأجرة متاحة عند الطلب. تتوفر فنادق ودور ضيافة اقتصادية بالقرب من المستشفى. تتوفر أيضًا متاجر البيع بالتجزئة والصيدليات ومطاعم المأكولات العالمية في المنطقة.",
+                "descriptionFr": "L'hôpital est situé à Gurgaon avec un accès facile depuis Delhi NCR. Taxi disponible sur appel. Des hôtels économiques et des maisons d'hôtes sont disponibles près de l'hôpital. Magasins, pharmacies et restaurants de cuisine internationale sont également disponibles dans la zone."
               },
               "facilities": {
                 "comfortDuringStay": [

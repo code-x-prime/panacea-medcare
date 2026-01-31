@@ -28,5 +28,10 @@
     "step3Desc": "Connectez-vous avec le spécialiste par appel vidéo",
     "step4": "Recevoir le rapport",
     "step4Desc": "Obtenez un rapport médical détaillé et des recommandations"
+  },
+  "cta": {
+    "title": "Obtenez votre consultation gratuite maintenant",
+    "subtitle": "Remplissez un court formulaire et notre équipe planifiera votre téléconsultation avec un spécialiste.",
+    "button": "Obtenez votre consultation gratuite maintenant"
   }
 }

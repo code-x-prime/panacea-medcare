@@ -28,5 +28,10 @@
     "step3Desc": "Connect with the specialist via video call",
     "step4": "Receive Report",
     "step4Desc": "Get detailed medical report and recommendations"
+  },
+  "cta": {
+    "title": "Get your free consultation now",
+    "subtitle": "Fill out a short form and our team will schedule your teleconsultation with a specialist.",
+    "button": "Get your free consultation now"
   }
 }

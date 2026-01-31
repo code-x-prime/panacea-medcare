@@ -3,6 +3,7 @@
     "main": [
       { "name": "Accueil", "slug": "/" },
       { "name": "À propos de nous", "slug": "/about" },
+      { "name": "Patients internationaux", "slug": "/international-patients" },
       { "name": "Pourquoi l'Inde", "slug": "/why-india" },
       {
         "name": "Hôpitaux",
@@ -18,7 +19,6 @@
         "type": "dropdown",
         "key": "treatments"
       },
-      { "name": "Patients internationaux", "slug": "/international-patients" },
       { "name": "Solutions de santé IA", "slug": "/services/ai-solutions" },
       { "name": "Devenez partenaire", "slug": "/partner-with-us" },
       { "name": "Tourisme et loisirs", "slug": "/tourism-leisure" }

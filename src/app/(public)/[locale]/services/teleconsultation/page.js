@@ -2,6 +2,8 @@
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function TeleconsultationPage({ params }) {
     const { locale } = params;
@@ -96,6 +98,23 @@ export default function TeleconsultationPage({ params }) {
                             <p className="text-gray-600">{t("steps.step4Desc")}</p>
                         </div>
                     </div>
+                </div>
+
+                {/* CTA – Get your free consultation now → consult-online form */}
+                <div className={`mt-16 bg-gradient-to-br from-panacea-primary via-panacea-primary to-panacea-dark rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg ${isRTL ? "text-right" : "text-center"}`}>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-3">
+                        {t("cta.title")}
+                    </h3>
+                    <p className="text-lg text-white/90 mb-6 max-w-2xl mx-auto">
+                        {t("cta.subtitle")}
+                    </p>
+                    <Link
+                        href={`/${locale}/consult-online`}
+                        className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-panacea-accent hover:bg-panacea-accent/90 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}
+                    >
+                        {t("cta.button")}
+                        <ArrowRight className={`w-5 h-5 ${isRTL ? "rotate-180" : ""}`} />
+                    </Link>
                 </div>
             </section>
         </main>

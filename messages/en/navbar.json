@@ -3,6 +3,7 @@
     "main": [
       { "name": "Home", "slug": "/" },
       { "name": "About Us", "slug": "/about" },
+      { "name": "International Patients", "slug": "/international-patients" },
       { "name": "Why India", "slug": "/why-india" },
       {
         "name": "Hospitals",
@@ -17,7 +18,6 @@
         "type": "dropdown",
         "key": "treatments"
       },
-      { "name": "International Patients", "slug": "/international-patients" },
       { "name": "AI Healthcare Solutions", "slug": "/services/ai-solutions" },
       { "name": "Partner With Us", "slug": "/partner-with-us" },
       { "name": "Tourism & Leisure", "slug": "/tourism-leisure" }

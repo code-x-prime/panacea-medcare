@@ -3,6 +3,7 @@
     "main": [
       { "name": "الرئيسية", "slug": "/" },
       { "name": "من نحن", "slug": "/about" },
+      { "name": "المرضى الدوليون", "slug": "/international-patients" },
       { "name": "لماذا الهند", "slug": "/why-india" },
       {
         "name": "المستشفيات",
@@ -18,7 +19,6 @@
         "type": "dropdown",
         "key": "treatments"
       },
-      { "name": "المرضى الدوليون", "slug": "/international-patients" },
       {
         "name": "حلول الرعاية الصحية بالذكاء الاصطناعي",
         "slug": "/services/ai-solutions"

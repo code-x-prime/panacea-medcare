@@ -181,10 +181,10 @@ export default function HospitalDetailPage({ params }) {
                 </div>
             </div>
 
-            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 overflow-x-hidden">
+            <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10 overflow-x-hidden">
                 <div className="mx-auto max-w-full">
                     {/* Hospital Overview Card */}
-                    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8 mb-12 border border-gray-100">
+                    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8 mb-8 border border-gray-100">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                             {/* Rating */}
                             <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
@@ -264,7 +264,7 @@ export default function HospitalDetailPage({ params }) {
                     </div>
 
                     {/* CTA Buttons */}
-                    <div className={`flex flex-wrap gap-4 mb-12 ${isRTL ? "flex-row-reverse justify-end" : "justify-start"}`}>
+                    <div className={`flex flex-wrap gap-4 mb-8 ${isRTL ? "flex-row-reverse justify-end" : "justify-start"}`}>
                         <button
                             onClick={() => {
                                 const chatbotButton = document.querySelector('[data-chatbot-toggle]');
@@ -287,8 +287,8 @@ export default function HospitalDetailPage({ params }) {
 
                     {/* Gallery Carousel - Below Banner */}
                     {galleryItems.length > 0 && (
-                        <div className="mb-12 max-w-7xl">
-                            <h2 className={`text-2xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
+                        <div className="mb-8 max-w-7xl">
+                            <h2 className={`text-2xl font-bold text-gray-900 mb-3 ${isRTL ? "text-right" : "text-left"}`}>
                                 {t("gallery") || "Gallery"}
                             </h2>
                             <div className="relative">
@@ -390,7 +390,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* About Hospital */}
                             {hospitalFullDesc && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("aboutHospital") || "About Hospital"}
                                     </h2>
                                     <div className="prose max-w-none">
@@ -404,7 +404,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Departments */}
                             {hospital.departments && hospital.departments.length > 0 && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("departments") || "Departments"}
                                     </h2>
                                     <div className="grid md:grid-cols-2 gap-4">
@@ -428,7 +428,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Top Doctors */}
                             {hospital.topDoctors && hospital.topDoctors.length > 0 && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("topDoctors") || "Top Doctors"}
                                     </h2>
                                     <div className="grid md:grid-cols-2 gap-6">
@@ -468,7 +468,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Doctors Section */}
                             {hospitalDoctors && hospitalDoctors.length > 0 && (
                                 <div className="w-full">
-                                    <h2 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("doctors") || "Doctors"}
                                     </h2>
 
@@ -605,7 +605,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* International Patient Services */}
                             {hospital.internationalPatientServices && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("internationalPatientServices") || "International Patient Services"}
                                     </h2>
                                     <div className="bg-panacea-light/30 rounded-xl p-4">
@@ -677,7 +677,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Team and Specialties */}
                             {hospital.teamAndSpecialties && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("teamAndSpecialties") || "Team and Specialties"}
                                     </h2>
                                     <div className="bg-white border border-gray-200 rounded-xl p-4">
@@ -710,7 +710,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Awards */}
                             {hospital.awards && hospital.awards.length > 0 && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("awards") || "Awards"}
                                     </h2>
                                     <div className="grid md:grid-cols-2 gap-4">
@@ -729,7 +729,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Milestones */}
                             {hospital.milestones && hospital.milestones.length > 0 && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("milestones") || "Milestones"}
                                     </h2>
                                     <div className="space-y-4">
@@ -752,7 +752,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Infrastructure */}
                             {hospital.infrastructure && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("infrastructure") || "Infrastructure"}
                                     </h2>
                                     <div className="bg-white border border-gray-200 rounded-xl p-4">
@@ -801,7 +801,7 @@ export default function HospitalDetailPage({ params }) {
                             {/* Location Details */}
                             {hospital.location && (
                                 <div>
-                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("location") || "Location"}
                                     </h2>
                                     <div className="bg-white border border-gray-200 rounded-xl p-4">

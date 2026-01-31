@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   Search,
   Star,
   Check,
   X,
   Trash2,
-  Quote,
   MessageSquare,
   ChevronLeft,
   ChevronRight,
@@ -20,16 +20,24 @@ import {
 } from "lucide-react";
 import TestimonialForm from "./TestimonialForm";
 import Image from "next/image";
+import { useDebounce } from "@/lib/useDebounce";
 
 export default function TestimonialList({ testimonials: initialTestimonials = [] }) {
+  const searchParams = useSearchParams();
+  const qFromUrl = searchParams.get("q") || "";
   const [testimonials, setTestimonials] = useState(initialTestimonials);
   const [searchTerm, setSearchTerm] = useState("");
+  const debouncedSearch = useDebounce(searchTerm, 350);
   const [statusFilter, setStatusFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const [showForm, setShowForm] = useState(false);
   const [editingTestimonial, setEditingTestimonial] = useState(null);
   const [deleteConfirm, setDeleteConfirm] = useState(null);
-  const itemsPerPage = 9; // 3x3 grid
+  const itemsPerPage = 9;
+
+  useEffect(() => {
+    if (qFromUrl) setSearchTerm(qFromUrl);
+  }, [qFromUrl]);
 
   const refreshTestimonials = async () => {
     try {
@@ -81,12 +89,12 @@ export default function TestimonialList({ testimonials: initialTestimonials = []
     }
   };
 
-  // Filter Logic
+  // Filter Logic (use debounced search)
   const filteredTestimonials = testimonials.filter(t => {
     const matchesSearch =
-      (t.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
-      (t.description?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
-      (t.location?.toLowerCase() || "").includes(searchTerm.toLowerCase());
+      (t.name?.toLowerCase() || "").includes(debouncedSearch.toLowerCase()) ||
+      (t.description?.toLowerCase() || "").includes(debouncedSearch.toLowerCase()) ||
+      (t.location?.toLowerCase() || "").includes(debouncedSearch.toLowerCase());
 
     const isVisible = t.isVisible;
     const matchesStatus =
@@ -104,14 +112,14 @@ export default function TestimonialList({ testimonials: initialTestimonials = []
 
   return (
     <div className="space-y-6">
-      {/* Toolbar */}
-      <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 justify-between items-center">
+      {/* Toolbar - premium with debounced search */}
+      <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-md border border-gray-100 flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
         <div className="relative w-full md:w-96">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
           <input
             type="text"
             placeholder="Search testimonials..."
-            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary transition-all"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary transition-all text-sm"
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
@@ -154,13 +162,12 @@ export default function TestimonialList({ testimonials: initialTestimonials = []
         </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid - premium cards */}
       {paginatedTestimonials.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {paginatedTestimonials.map((testimonial) => (
             <div key={testimonial.id} className="group">
-              {/* Gradient Border Card */}
-              <div className="relative bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-500 rounded-2xl p-[2px] h-full transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
+              <div className="relative bg-gradient-to-br from-cyan-400 via-blue-400 to-purple-500 rounded-2xl p-[2px] h-full transition-all duration-300 hover:shadow-xl hover:shadow-panacea-primary/10 hover:scale-[1.01]">
                 <div className="bg-white rounded-2xl p-6 flex flex-col h-full">
                   {/* Header with Status */}
                   <div className="flex justify-between items-start mb-4">

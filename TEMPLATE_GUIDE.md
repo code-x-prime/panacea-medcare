@@ -1458,20 +1458,133 @@ All destination pages support EN/AR/FR translations.
 
 ### AI Pre-Screening Page (`/[locale]/pre-screening`)
 
-1. **Multi-language**: Full EN, FR, AR support via `preScreening` and `aiPrescreening` message namespaces. RTL layout for Arabic.
-2. **Colors (TEMPLATE_GUIDE compliant)**:
-   - Hero: `from-[#003459] via-[#066F89] to-[#066F89]` (Midnight Navy → Logo Teal)
-   - Badges / CTAs: `#066F89`, `#FF6B35` (primary, accent)
-   - Success / highlights: `#0BA35A` (Fresh Green), `#FFD166` (Warm Yellow) for tips
-   - Text: `#003459` (dark), `#6D7A8A` (slate), `#F5F7FA` (soft gray) backgrounds
-3. **Sections**: Hero, How it works (4 steps), Report includes, Why choose, Data privacy, What happens after, Disclaimer, Final CTA. Form (`AIPreScreeningForm`) is a 4-step flow with progress bar.
-4. **Form**:
-   - Step 1: Patient info (name, country, WhatsApp, email)
-   - Step 2: Medical condition, symptoms, duration, preferred country
-   - Step 3: File upload (PDF, JPG, PNG; max 25MB)
-   - Step 4: Review + consent checkbox
-   - Consent checkbox: `id="ai-prescreen-consent"`, `htmlFor` on label, large clickable area, `accent-[#066F89]`, `has-[:checked]` border/background styling
-5. **i18n**: `messages/{en,fr,ar}/preScreening.json`, `messages/{en,fr,ar}/aiPrescreening.json`. Namespaces wired in `i18n/request.js`.
+**Complete 4-Step AI Pre-Screening System for International Patients**
+
+#### Overview
+- **Purpose**: Collect patient information, medical history, and reports for AI-powered preliminary medical assessment
+- **SLA**: 2-hour report delivery via Email + WhatsApp
+- **Multi-language**: Full EN, FR, AR support with RTL layout for Arabic
+
+#### Design Colors (TEMPLATE_GUIDE compliant)
+- **Hero/Header**: `from-[#003459] via-[#066F89] to-[#066F89]` (Midnight Navy → Logo Teal)
+- **Progress Bar**: `from-[#066F89] to-[#FF6B35]` (gradient)
+- **Primary Actions**: `#066F89` (Logo Teal), `#0BA35A` (Fresh Green for submit)
+- **Accent/CTAs**: `#FF6B35` (Coral Orange)
+- **Success**: `#0BA35A` (Fresh Green)
+- **Tips/Warnings**: `#FFD166` (Warm Yellow)
+- **Text**: `#003459` (dark), `#6D7A8A` (slate)
+- **Backgrounds**: `#F5F7FA` (soft gray), `#fff` (white)
+
+#### Page Sections
+1. **Hero**: Title, tagline, trust badges (Report in 2 hours, Secure Upload, Global Access)
+2. **How It Works**: 4-step visual process with icons and descriptions
+3. **Form + Report Includes**: Side-by-side layout with form and report highlights
+4. **Why Choose**: 5 benefits (Speed, Accuracy, Transparency, Global Access, Zero Obligation)
+5. **Data Privacy**: 4 security features (Encrypted, Secure Servers, Protocols, Compliance)
+6. **What Happens After**: 4 next steps after receiving report
+7. **Disclaimer**: AI ≠ diagnosis warning
+8. **CTA**: Final call-to-action button
+
+#### Form Structure (`AIPreScreeningForm.js`)
+
+**STEP 1: Patient Information** (Mandatory fields marked *)
+| Field | Type | Mandatory | Notes |
+|-------|------|-----------|-------|
+| Full Name | Text | ✅* | As per passport |
+| Gender | Radio | ✅* | Male / Female / Other |
+| Date of Birth | Date | ✅* | Age auto-calculated |
+| Country of Residence | Dropdown | ✅* | ISO country list |
+| City | Text | ❌ | Optional |
+| WhatsApp Number | Tel + Code | ✅* | Country code dropdown + number |
+| Email Address | Email | ✅* | Primary report delivery |
+| Preferred Communication | Checkbox | ❌ | WhatsApp / Email / Call |
+
+**STEP 2: Medical Condition & History**
+| Field | Type | Mandatory | Notes |
+|-------|------|-----------|-------|
+| Primary Medical Concern | Dropdown | ✅* | Oncology, Cardiology, Neuro, Ortho, etc. |
+| Specific Diagnosis | Text | ❌ | If already diagnosed |
+| Symptoms Description | Textarea | ✅* | Min 30 characters, character counter |
+| Duration of Symptoms | Dropdown | ❌ | <1 month, 1-3, 3-6, 6+ months |
+| Previous Treatment | Radio | ✅* | Yes / No |
+| Treatment Details | Textarea | Conditional | Appears if Previous = Yes |
+| Current Medications | Textarea | ❌ | Optional |
+| Known Allergies | Text | ❌ | Optional |
+| Existing Conditions | Multi-Select | ❌ | Diabetes, BP, Asthma, etc. (pill buttons) |
+
+**STEP 3: Upload Medical Reports**
+| Feature | Details |
+|---------|---------|
+| File Types | PDF, DOC, DOCX, JPG, PNG |
+| Max Size | 10 MB per file |
+| Multiple | Yes |
+| Upload Progress | Visual progress bar per file |
+| Upload Complete | ✓ checkmark with "Upload complete" |
+| Storage | Cloudflare R2 |
+| Fallback | If R2 not configured, submission still works |
+
+**STEP 4: Treatment Preferences & Consent**
+| Field | Type | Mandatory | Notes |
+|-------|------|-----------|-------|
+| Preferred Country | Dropdown | ❌ | India (default), Turkey, Thailand, UAE |
+| Preferred City | Dropdown | ❌ | Delhi NCR, Mumbai, Chennai, etc. |
+| Budget Range | Dropdown | ❌ | USD ranges |
+| Travel Readiness | Dropdown | ❌ | Immediately, 1-3 months, Later |
+| Assistance Needed | Multi-Select | ❌ | Visa, Travel, Stay, Interpreter, etc. |
+| Data Consent | Checkbox | ✅* | GDPR-style consent wording |
+| AI Disclaimer | Checkbox | ✅* | AI ≠ diagnosis acknowledgement |
+
+#### Backend Flow (`/api/prescreen`)
+1. **Validation**: Required fields (name, gender, DOB, country, phone, email)
+2. **File Upload**: Validated (type + size), uploaded to Cloudflare R2
+3. **Database**: Stored in `Lead` model with structured JSON
+4. **Patient Notification**:
+   - Email confirmation with Reference ID
+   - WhatsApp confirmation with Reference ID
+   - Fallback: If one fails, the other still sends
+5. **Admin Notification**:
+   - Detailed email with all patient info, medical details, file links
+   - WhatsApp alert with summary
+
+#### Success Screen
+- Reference ID display
+- Confirmation: Email sent ✅, WhatsApp sent ✅
+- Report timeline: "Within 2 hours"
+- "Submit Another Request" button
+
+#### Environment Variables Required
+```
+# Cloudflare R2 (File Storage)
+R2_ACCOUNT_ID=
+R2_ACCESS_KEY_ID=
+R2_SECRET_ACCESS_KEY=
+R2_BUCKET_NAME=
+R2_PUBLIC_URL=
+
+# Twilio (WhatsApp)
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_WHATSAPP_NUMBER=
+
+# SMTP (Email)
+FROM_EMAIL=
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USER=
+SMTP_PASSWORD=
+
+# Admin
+ADMIN_PHONE_NUMBER=
+APP_URL=
+```
+
+#### i18n Files
+- `messages/{en,fr,ar}/preScreening.json` - Page content
+- `messages/{en,fr,ar}/aiPrescreening.json` - Form labels and messages
+- Namespaces wired in `i18n/request.js`
+
+#### Conversion Booster
+- "95% of patients say AI Pre-Screening helped them make a confident treatment decision."
 
 ---
 
@@ -1482,4 +1595,4 @@ For questions or issues, contact the development team or refer to the Next.js an
 ---
 
 **Last Updated:** January 2026  
-**Version:** 2.2.0
+**Version:** 2.3.0

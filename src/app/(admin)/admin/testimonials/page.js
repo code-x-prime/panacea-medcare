@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { prisma } from '@/lib/prisma';
 import TestimonialList from '@/components/admin/TestimonialList';
 
@@ -19,12 +20,16 @@ export default async function TestimonialsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Testimonials</h1>
-        <p className="text-gray-500 mt-1">Manage patient reviews and testimonials.</p>
+      <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Testimonials</h1>
+          <p className="text-gray-500 mt-1 text-sm sm:text-base">Manage patient reviews and testimonials.</p>
+        </div>
       </div>
 
-      <TestimonialList testimonials={serializedTestimonials} />
+      <Suspense fallback={<div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 text-center text-gray-500">Loading testimonials…</div>}>
+        <TestimonialList testimonials={serializedTestimonials} />
+      </Suspense>
     </div>
   );
 }

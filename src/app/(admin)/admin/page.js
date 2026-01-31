@@ -17,12 +17,14 @@ async function getDashboardData() {
   try {
     const [
       leadsCount,
+      aiPrescreenCount,
       testimonialsCount,
       recentLeads,
       recentTestimonials,
       pendingTestimonials
     ] = await Promise.all([
       prisma.lead.count(),
+      prisma.lead.count({ where: { source: 'AI_PRESCREEN' } }),
       prisma.testimonial.count(),
       prisma.lead.findMany({
         take: 5,
@@ -39,6 +41,7 @@ async function getDashboardData() {
 
     return {
       leadsCount,
+      aiPrescreenCount,
       testimonialsCount,
       recentLeads,
       recentTestimonials,
@@ -57,10 +60,10 @@ export default async function AdminDashboard() {
   const activities = [
     ...data.recentLeads.map(l => ({
       id: `lead-${l.id}`,
-      type: 'lead',
-      message: `New lead: ${l.name}`,
+      type: l.source === 'AI_PRESCREEN' ? 'ai' : 'lead',
+      message: l.source === 'AI_PRESCREEN' ? `🤖 AI Pre-Screen: ${l.name}` : `New lead: ${l.name}`,
       time: l.createdAt,
-      details: l.source
+      details: l.source === 'AI_PRESCREEN' ? 'Medical Case' : (l.source || 'Website')
     })),
     ...data.recentTestimonials.map(t => ({
       id: `test-${t.id}`,
@@ -81,20 +84,20 @@ export default async function AdminDashboard() {
       trendUp: true
     },
     {
+      label: "AI Pre-Screening",
+      value: data.aiPrescreenCount,
+      icon: TrendingUp,
+      color: "bg-orange-500",
+      trend: "Medical",
+      trendUp: true
+    },
+    {
       label: "Testimonials",
       value: data.testimonialsCount,
       icon: MessageSquare,
       color: "bg-purple-500",
       trend: "Verified",
       trendUp: true
-    },
-    {
-      label: "Pending Reviews",
-      value: data.pendingTestimonials,
-      icon: Clock,
-      color: "bg-orange-500",
-      trend: "Action Needed",
-      trendUp: false
     },
     {
       label: "System Status",
@@ -107,11 +110,11 @@ export default async function AdminDashboard() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {/* Page Header */}
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard Overview</h1>
-        <p className="text-gray-500 mt-1">Real-time overview of your platform&apos;s performance.</p>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Dashboard Overview</h1>
+        <p className="text-gray-500 mt-1 text-sm sm:text-base">Real-time overview of your platform&apos;s performance.</p>
       </div>
 
       {/* Stats Grid */}
@@ -148,8 +151,10 @@ export default async function AdminDashboard() {
           <div className="space-y-6">
             {activities.map((activity) => (
               <div key={activity.id} className="flex items-start gap-4 pb-4 border-b border-gray-50 last:border-0 last:pb-0">
-                <div className={`mt-1 w-2 h-2 rounded-full flex-shrink-0 ${activity.type === 'lead' ? 'bg-blue-500' : 'bg-purple-500'
-                  }`} />
+                <div className={`mt-1 w-2 h-2 rounded-full flex-shrink-0 ${
+                  activity.type === 'ai' ? 'bg-orange-500' : 
+                  activity.type === 'lead' ? 'bg-blue-500' : 'bg-purple-500'
+                }`} />
                 <div>
                   <p className="text-gray-900 font-medium">{activity.message}</p>
                   <div className="flex items-center gap-2 mt-1">

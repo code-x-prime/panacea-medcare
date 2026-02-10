@@ -14,6 +14,30 @@
   "diagnosisTitle": "Diagnosis & Challenge",
   "journeyTitle": "Finding Treatment Abroad",
   "experienceTitle": "Treatment & Hospital Experience",
-  "outcomeTitle": "Recovery & Outcome"
+  "outcomeTitle": "Recovery & Outcome",
+  "stories": [
+    {
+      "id": "asfachew",
+      "name": "Mr. Asfachew",
+      "location": "Gondar, Ethiopia",
+      "title": "From Darkness to Hope — An Ethiopian’s Journey of Courage and Healing in India",
+      "image": "/case/mr-asfachew-2.jpeg",
+      "summary": "Six years ago, Mr. Asfachew from Gondar, Ethiopia, met with a terrible road accident that left him with a rare and complex orbital floor fracture. His vision was impaired, and with it, he lost not only his sight but also his livelihood and independence.",
+      "challenge": "Mr. Asfachew suffered a rare and complex orbital floor fracture from a road accident, causing impaired vision, loss of livelihood, and independence. Double vision was a significant challenge.",
+      "solution": "He underwent a successful orbital floor fracture reconstructive surgery at Asian Super Speciality Hospital, Faridabad, performed by Dr. Ashumali Mishra and Dr. Karan. A second opinion with Dr. Richa, Squint Specialist at Sight Avenue, helped refine the treatment plan for his double vision.",
+      "outcome": "With special prism glasses and surgery, his double vision has been largely corrected, and his quality of life has improved massively. Though one more surgery is required, he has regained his confidence and hope."
+    },
+    {
+      "id": "peter",
+      "name": "Peter",
+      "location": "Nigeria",
+      "title": "A Second Chance at Life",
+      "image": "/case/rr-asfachew.jpeg",
+      "summary": "Coming soon...",
+      "challenge": "Placeholder for Peter's challenge...",
+      "solution": "Placeholder for Peter's solution...",
+      "outcome": "Placeholder for Peter's outcome..."
+    }
+  ]
 }
 

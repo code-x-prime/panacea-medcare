@@ -11,6 +11,7 @@ import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import CaseStudies from '@/components/CaseStudies';
 // import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
 import TrustStrip from '@/components/TrustStrip';
@@ -34,6 +35,7 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
+      <CaseStudies />
       <FAQ locale={locale} />
     </div>
   );

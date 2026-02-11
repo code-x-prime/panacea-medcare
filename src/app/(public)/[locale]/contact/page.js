@@ -5,14 +5,10 @@ import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import { FaWhatsapp, FaPhone, FaEnvelope, FaClock, FaSpinner } from "react-icons/fa";
 import Link from "next/link";
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from "@/components/ui/select";
+
 import { COUNTRIES } from "@/lib/countries";
+import { CountryCombobox } from "@/components/ui/country-combobox";
+import { PhoneCodeCombobox } from "@/components/ui/phone-code-combobox";
 
 export default function ContactPage({ params }) {
     const { locale } = params;
@@ -175,21 +171,10 @@ export default function ContactPage({ params }) {
                                         {t("form.phone")} <span className="text-[#FF6B35]">*</span>
                                     </label>
                                     <div className={`flex gap-2 ${isRTL ? "flex-row-reverse" : ""}`}>
-                                        <Select
+                                        <PhoneCodeCombobox
                                             value={formData.phoneCode}
                                             onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
-                                        >
-                                            <SelectTrigger className="w-28 bg-white border-2 border-[#066F89]/30 focus:border-[#066F89]">
-                                                <SelectValue />
-                                            </SelectTrigger>
-                                            <SelectContent className="bg-white max-h-[200px]">
-                                                {phoneCodes.map((code) => (
-                                                    <SelectItem key={code.value} value={code.value}>
-                                                        {code.label}
-                                                    </SelectItem>
-                                                ))}
-                                            </SelectContent>
-                                        </Select>
+                                        />
                                         <input
                                             type="tel"
                                             value={formData.phone}
@@ -206,21 +191,12 @@ export default function ContactPage({ params }) {
                                     <label className={`block text-sm font-medium text-panacea-dark mb-2 ${isRTL ? "text-right" : "text-left"}`}>
                                         {t("form.country")}
                                     </label>
-                                    <Select
+                                    <CountryCombobox
                                         value={formData.country}
                                         onValueChange={onCountryChange}
-                                    >
-                                        <SelectTrigger className={`w-full bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] ${isRTL ? 'text-right' : 'text-left'} shadow-sm`}>
-                                            <SelectValue placeholder="Select Country" />
-                                        </SelectTrigger>
-                                        <SelectContent className="bg-white max-h-[280px]">
-                                            {countries.map((country) => (
-                                                <SelectItem key={country.value} value={country.value}>
-                                                    {country.label} ({country.code})
-                                                </SelectItem>
-                                            ))}
-                                        </SelectContent>
-                                    </Select>
+                                        placeholder="Select Country"
+                                        className={isRTL ? 'text-right' : 'text-left'}
+                                    />
                                 </div>
 
                                 <div>
@@ -308,7 +284,9 @@ export default function ContactPage({ params }) {
 
                             {/* Email Card */}
                             <a
-                                href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={`bg-panacea-light p-6 rounded-lg hover:shadow-lg transition-all group ${isRTL ? "text-right" : "text-left"}`}
                             >
                                 <div className="flex items-start gap-4">

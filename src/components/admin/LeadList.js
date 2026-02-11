@@ -210,8 +210,8 @@ export default function LeadList({ leads = [] }) {
         </div>
 
         {/* Table - premium striped feel */}
-        <div className="overflow-x-auto -mx-px">
-          <table className="w-full min-w-[640px]">
+        <div className="overflow-x-auto">
+          <table className="w-full">
             <thead className="bg-gradient-to-r from-gray-50 to-gray-50/80 border-b-2 border-gray-100">
               <tr>
                 <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Lead Details</th>
@@ -383,7 +383,7 @@ export default function LeadList({ leads = [] }) {
                 <X className="w-5 h-5 text-gray-500" />
               </button>
             </div>
-            
+
             <div className="p-6 space-y-6">
               {/* Basic Info */}
               <div className="flex items-center gap-4 pb-4 border-b border-gray-100">
@@ -432,7 +432,7 @@ export default function LeadList({ leads = [] }) {
                 const medical = data.medical || {};
                 const prefs = data.preferences || {};
                 const files = data.files || [];
-                
+
                 return (
                   <div className="space-y-5">
                     {/* Patient Profile */}

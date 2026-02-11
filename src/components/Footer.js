@@ -7,7 +7,6 @@ import {
   Phone,
   Mail,
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
   Youtube,
@@ -45,11 +44,10 @@ export default function Footer({ locale }) {
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "facebook" },
-    { icon: Twitter, href: "#", label: "twitter" },
-    { icon: Instagram, href: "#", label: "instagram" },
-    { icon: Linkedin, href: "#", label: "linkedin" },
-    { icon: Youtube, href: "#", label: "youtube" },
+    { icon: Facebook, href: "https://www.facebook.com/PanaceaMedcare/", label: "facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/panaceamedcare/", label: "instagram" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/panaceamedcare/", label: "linkedin" },
+    { icon: Youtube, href: "https://www.youtube.com/channel/UCrzHi7C2B8cRsr4dxnaG6UA", label: "youtube" },
   ];
 
   return (
@@ -135,7 +133,9 @@ export default function Footer({ locale }) {
               </a>
 
               <a
-                href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-panacea-accent to-panacea-orange-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
@@ -203,7 +203,9 @@ export default function Footer({ locale }) {
                     <span className="text-sm">{phoneNumber}</span>
                   </a>
                   <a
-                    href={`mailto:${email}?subject=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Inquiry from Panacea Medcare Website&body=Hello, I would like to know more about your services.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-panacea-light/90 hover:text-panacea-secondary transition-colors break-all group"
                   >
                     <div className="w-8 h-8 bg-panacea-accent/20 rounded-lg flex items-center justify-center group-hover:bg-panacea-accent/30 transition-colors flex-shrink-0">

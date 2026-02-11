@@ -14,7 +14,13 @@ export async function GET(request) {
       where: isAdmin ? {} : { isVisible: true },
       orderBy: { createdAt: 'desc' },
     });
-    return NextResponse.json(testimonials);
+
+    // Return with cache headers for Next.js
+    return NextResponse.json(testimonials, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=120',
+      },
+    });
   } catch (error) {
     console.error('Error fetching testimonials:', error);
     return NextResponse.json(

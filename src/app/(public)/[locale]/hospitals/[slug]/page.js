@@ -880,8 +880,8 @@ export default function HospitalDetailPage({ params }) {
                         {/* Sidebar - QuoteForm and Facilities */}
                         <div className="lg:col-span-1 space-y-6">
                             {/* Quote Form */}
-                            <div className="bg-white rounded-2xl shadow-lg border border-gray-100">
-                                <QuoteForm embedded={true} />
+                            <div className="sticky top-24">
+                                <QuoteForm embedded={true} variant="hospital" />
                             </div>
 
                             {/* Facilities */}

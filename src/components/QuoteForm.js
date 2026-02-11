@@ -11,18 +11,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { FaCalendarCheck, FaSpinner, FaCheckCircle } from "react-icons/fa";
 import { COUNTRIES } from "@/lib/countries";
+import { CountryCombobox } from "@/components/ui/country-combobox";
+import { PhoneCodeCombobox } from "@/components/ui/phone-code-combobox";
 
-export default function QuoteForm({ trigger, embedded = false }) {
+export default function QuoteForm({ trigger, embedded = false, variant = "default" }) {
+  // variant can be "default" or "hospital"
+  const isHospitalVariant = variant === "hospital";
   const t = useTranslations("quoteForm");
   const locale = useLocale();
   const isRTL = locale === "ar";
@@ -137,9 +134,9 @@ export default function QuoteForm({ trigger, embedded = false }) {
   const formFieldsContent = (
     <>
       {/* Patient Name */}
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className={isHospitalVariant ? "space-y-4" : "grid md:grid-cols-2 gap-4"}>
         <div>
-          <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("patientName")}
           </label>
           <Input
@@ -154,32 +151,22 @@ export default function QuoteForm({ trigger, embedded = false }) {
 
         {/* Country – selecting a country auto-sets phone code (e.g. Nigeria → +234) */}
         <div>
-          <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("country")}
           </label>
-          <Select
+          <CountryCombobox
             value={formData.country}
             onValueChange={onCountryChange}
-            required
-          >
-            <SelectTrigger className={`w-full bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] ${isRTL ? 'text-right' : 'text-left'} shadow-sm`}>
-              <SelectValue placeholder={t("selectCountry")} />
-            </SelectTrigger>
-            <SelectContent className="bg-white max-h-[280px]">
-              {countries.map((country) => (
-                <SelectItem key={country.value} value={country.value}>
-                  {country.label} ({country.code})
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+            placeholder={t("selectCountry")}
+            className={isRTL ? 'text-right' : 'text-left'}
+          />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4">
+      <div className="grid gap-4">
         {/* City */}
         <div>
-          <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("city")}
           </label>
           <Input
@@ -194,25 +181,14 @@ export default function QuoteForm({ trigger, embedded = false }) {
 
         {/* Phone Number */}
         <div>
-          <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("phoneNumber")}
           </label>
-          <div className={`flex gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
-            <Select
+          <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+            <PhoneCodeCombobox
               value={formData.phoneCode}
               onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
-            >
-              <SelectTrigger className="w-24 bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] shadow-sm">
-                <SelectValue />
-              </SelectTrigger>
-              <SelectContent className="bg-white max-h-[200px]">
-                {phoneCodes.map((code, index) => (
-                  <SelectItem key={`phone-${index}`} value={code.value}>
-                    {code.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+            />
             <Input
               type="tel"
               placeholder={t("phonePlaceholder")}
@@ -227,31 +203,19 @@ export default function QuoteForm({ trigger, embedded = false }) {
 
       {/* WhatsApp Number */}
       <div>
-        <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
-          {t("whatsappNumber")} <span className="text-[#FF6B35]">*</span>
+        <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
+          {t("whatsappNumber")}
         </label>
-        <div className={`flex gap-1 ${isRTL ? 'flex-row-reverse' : ''}`}>
-          <Select
+        <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
+          <PhoneCodeCombobox
             value={formData.whatsappCode}
             onValueChange={(value) => setFormData({ ...formData, whatsappCode: value })}
-          >
-            <SelectTrigger className="w-24 bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] shadow-sm">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="bg-white max-h-[200px]">
-              {phoneCodes.map((code, index) => (
-                <SelectItem key={`whatsapp-${index}`} value={code.value}>
-                  {code.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          />
           <Input
             type="tel"
             placeholder={t("whatsappPlaceholder")}
             value={formData.whatsappNumber}
             onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
-            required
             className={`flex-1 bg-white border-2 border-panacea-primary/30 focus:border-panacea-primary focus:ring-2 focus:ring-panacea-primary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
@@ -259,7 +223,7 @@ export default function QuoteForm({ trigger, embedded = false }) {
 
       {/* Medical Problem */}
       <div>
-        <label className={`block text-sm font-medium text-gray-700 mb-1 ${isRTL ? 'text-right' : 'text-left'}`}>
+        <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
           {t("medicalProblem")}
         </label>
         <textarea
@@ -294,7 +258,10 @@ export default function QuoteForm({ trigger, embedded = false }) {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] hover:from-[#05596D] hover:via-[#066F89] hover:to-[#FF6B35] text-white shadow-lg hover:shadow-xl transition-all ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
+          className={`w-full shadow-lg hover:shadow-xl transition-all ${embedded ? 'py-5 text-base' : 'py-6 text-lg'} font-bold disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 ${isHospitalVariant
+            ? "bg-[#FF6B35] hover:bg-[#FF6B35]/90 text-white"
+            : "bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] hover:from-[#05596D] hover:via-[#066F89] hover:to-[#FF6B35] text-white"
+            }`}
         >
           {isSubmitting ? (
             <>
@@ -308,13 +275,13 @@ export default function QuoteForm({ trigger, embedded = false }) {
       )}
 
       {/* Terms */}
-      <p className="text-xs text-gray-500 text-center">
+      <p className={`text-xs text-center ${isHospitalVariant ? 'text-white/90' : 'text-gray-500'}`}>
         {t("termsText")}{" "}
-        <a href="/terms" className="text-[#066F89] hover:text-[#05596D] transition-colors font-semibold">
+        <a href="/terms" className={`transition-colors font-semibold ${isHospitalVariant ? 'text-white hover:text-white/80' : 'text-[#066F89] hover:text-[#05596D]'}`}>
           {t("termsOfUse")}
         </a>{" "}
         {t("and")}{" "}
-        <a href="/privacy" className="text-[#066F89] hover:text-[#05596D] transition-colors font-semibold">
+        <a href="/privacy" className={`transition-colors font-semibold ${isHospitalVariant ? 'text-white hover:text-white/80' : 'text-[#066F89] hover:text-[#05596D]'}`}>
           {t("privacyPolicy")}
         </a>{" "}
         {t("ofPanacea")}
@@ -325,12 +292,22 @@ export default function QuoteForm({ trigger, embedded = false }) {
   // Embedded form (no dialog)
   if (embedded) {
     return (
-      <div dir={isRTL ? "rtl" : "ltr"} className="bg-white p-6 rounded-xl border-2 border-[#066F89]/30 shadow-lg">
+      <div
+        dir={isRTL ? "rtl" : "ltr"}
+        className={`p-6 rounded-xl border-2 shadow-lg ${isHospitalVariant
+          ? "bg-[#066F89] border-[#066F89]/50"
+          : "bg-white border-[#066F89]/30"
+          }`}
+      >
         <div className="mb-4">
-          <h3 className={`text-xl font-bold bg-gradient-to-r from-[#066F89] to-[#FF6B35] bg-clip-text text-transparent ${isRTL ? 'text-right' : 'text-left'}`}>
+          <h3 className={`text-xl font-bold ${isHospitalVariant
+            ? "text-white"
+            : "bg-gradient-to-r from-[#066F89] to-[#FF6B35] bg-clip-text text-transparent"
+            } ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("title")}
           </h3>
-          <p className={`text-sm text-gray-600 mt-1 ${isRTL ? 'text-right' : 'text-left'}`}>{t("description")}</p>
+          <p className={`text-sm mt-1 ${isHospitalVariant ? "text-white/90" : "text-gray-600"
+            } ${isRTL ? 'text-right' : 'text-left'}`}>{t("description")}</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-3">
           {formFieldsContent}

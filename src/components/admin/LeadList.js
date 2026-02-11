@@ -72,7 +72,7 @@ export default function LeadList({ leads = [] }) {
         lead.source || "",
         lead.status || "New",
         `"${(lead.message || '').replace(/"/g, '""').substring(0, 100)}"`,
-        new Date(lead.createdAt).toLocaleDateString()
+        new Date(lead.createdAt).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })
       ].join(","))
     ].join("\n");
 
@@ -392,7 +392,7 @@ export default function LeadList({ leads = [] }) {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900">{selectedLead.name || "Unknown"}</h3>
-                  <p className="text-sm text-gray-500">ID: #{selectedLead.id} • {new Date(selectedLead.createdAt).toLocaleString()}</p>
+                  <p className="text-sm text-gray-500">ID: #{selectedLead.id} • {new Date(selectedLead.createdAt).toLocaleString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</p>
                   <span className={`mt-1 inline-flex px-3 py-1 text-xs font-semibold rounded-full ${getStatusColor(selectedLead.status)}`}>
                     {selectedLead.status || 'New'}
                   </span>

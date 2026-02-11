@@ -120,10 +120,47 @@
     },
     "assistanceNeeded": "Need Assistance With",
     "consentTitle": "Consent & Acknowledgement",
-    "consentDataLabel": "I consent to the collection, storage, and processing of my personal and medical information by Panacea Medcare for the purpose of AI-based medical pre-screening, care coordination, and related communication. I confirm that the information provided by me is accurate to the best of my knowledge.",
-    "consentDisclaimerLabel": "I acknowledge that the AI Pre-Screening service provides preliminary, non-diagnostic medical insights only. I understand that AI-generated insights do not constitute a medical diagnosis or treatment plan, and final medical decisions will be made only by qualified doctors after proper evaluation.",
-    "consentNote": "By submitting, you agree to our",
-    "privacyLink": "Privacy Policy"
+    "patientConsent": {
+      "title": "1️⃣ Patient Consent for Data Collection & Processing",
+      "label": "I consent to the collection, storage, and processing of my personal and medical information by Panacea Medcare for the purpose of AI-based medical pre-screening, care coordination, and related communication.",
+      "text": "I understand that my information may be securely shared with authorized medical professionals, partner hospitals, and technology systems solely to provide preliminary medical insights and healthcare support. I confirm that the information provided by me is accurate to the best of my knowledge."
+    },
+    "aiDisclaimer": {
+      "title": "2️⃣ AI Medical Pre-Screening Disclaimer",
+      "label": "I acknowledge that the AI Pre-Screening service provides preliminary, non-diagnostic medical insights only.",
+      "points": [
+        "The AI Pre-Screening does not constitute a medical diagnosis, prescription, or treatment plan.",
+        "Final medical decisions will be made only by qualified doctors after in-person or teleconsultation and clinical evaluation.",
+        "AI-generated insights are intended to assist decision-making and do not replace professional medical advice."
+      ]
+    },
+    "liability": {
+      "title": "3️⃣ Limitation of Liability",
+      "text": "Panacea Medcare, its technology partners, and affiliated hospitals shall not be held liable for any medical decisions, outcomes, delays, or actions taken solely based on AI Pre-Screening results. Patients are advised to seek professional medical consultation before making any treatment or travel decisions."
+    },
+    "privacy": {
+      "title": "4️⃣ Data Privacy & Security Assurance",
+      "intro": "Panacea Medcare is committed to protecting your privacy and medical confidentiality.",
+      "points": [
+        "All uploaded data is encrypted and stored securely.",
+        "Access is restricted to authorized personnel only.",
+        "Data is processed in accordance with applicable international data protection standards, including GDPR-aligned principles.",
+        "Your information will never be sold or shared for marketing purposes without your explicit consent."
+      ]
+    },
+    "crossBorder": {
+      "title": "5️⃣ Cross-Border Medical Services Disclaimer",
+      "text": "I understand that Panacea Medcare operates as an international patient facilitation and care coordination platform. Medical services, consultations, treatments, and outcomes may vary depending on the country, hospital, and treating physician. Panacea Medcare does not practice medicine and does not guarantee specific medical results."
+    },
+    "finalConfirmation": {
+      "title": "8️⃣ Final Confirmation Statement",
+      "label": "By clicking “Submit for AI Pre-Screening”, I confirm that:",
+      "points": [
+        "I have read and understood the above consent and disclaimers",
+        "I voluntarily agree to proceed with AI Pre-Screening",
+        "I understand that results will be shared within approximately 2 hours, subject to data completeness"
+      ]
+    }
   },
   "nav": {
     "back": "Back",

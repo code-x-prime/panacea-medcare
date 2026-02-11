@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { FaFileUpload, FaCheckCircle, FaSpinner, FaTimesCircle, FaFilePdf, FaFileImage, FaFileWord } from "react-icons/fa";
+import { FaFileUpload, FaCheckCircle, FaSpinner, FaTimesCircle, FaFilePdf, FaFileImage, FaFileWord, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { COUNTRIES, getPhoneCodes } from "@/lib/countries";
 
 const ACCEPTED_TYPES = [
@@ -36,7 +36,7 @@ export default function AIPreScreeningForm({ locale }) {
     const isRTL = locale === "ar";
     const phoneCodes = getPhoneCodes();
     const [step, setStep] = useState(1);
-    
+
     const [formData, setFormData] = useState({
         // Step 1: Patient Details
         patientName: "",
@@ -179,7 +179,10 @@ export default function AIPreScreeningForm({ locale }) {
 
     const validateStep = (currentStep) => {
         if (currentStep === 1) {
-            if (!formData.patientName || !formData.gender || !formData.dob || !formData.country || !formData.phoneNumber || !formData.email) return false;
+            // Require Name, Gender, DOB, Country, City AND (Phone OR Email)
+            if (!formData.patientName || !formData.gender || !formData.dob || !formData.country || !formData.city) return false;
+            // EITHER Phone OR Email is required
+            if (!formData.phoneNumber && !formData.email) return false;
         }
         if (currentStep === 2) {
             if (!formData.medicalConcern || !formData.symptoms || !formData.previousTreatment) return false;
@@ -224,7 +227,7 @@ export default function AIPreScreeningForm({ locale }) {
             const data = new FormData();
             const phone = `${formData.phoneCode}${String(formData.phoneNumber).replace(/\D/g, "")}`;
             const age = calculateAge(formData.dob);
-            
+
             // Step 1
             data.append("patientName", formData.patientName);
             data.append("gender", formData.gender);
@@ -236,7 +239,7 @@ export default function AIPreScreeningForm({ locale }) {
             data.append("phone", phone);
             data.append("email", formData.email);
             data.append("preferredComm", formData.preferredComm.join(", "));
-            
+
             // Step 2
             data.append("medicalConcern", formData.medicalConcern);
             data.append("specificDiagnosis", formData.specificDiagnosis);
@@ -247,7 +250,7 @@ export default function AIPreScreeningForm({ locale }) {
             data.append("currentMedications", formData.currentMedications);
             data.append("allergies", formData.allergies);
             data.append("existingConditions", formData.existingConditions.join(", "));
-            
+
             // Step 4
             data.append("preferredCountry", formData.preferredCountry);
             data.append("preferredCity", formData.preferredCity);
@@ -256,10 +259,10 @@ export default function AIPreScreeningForm({ locale }) {
             data.append("assistanceNeeded", formData.assistanceNeeded.join(", "));
             data.append("consentData", "1");
             data.append("consentDisclaimer", "1");
-            
+
             data.append("locale", locale);
             data.append("timestamp", new Date().toISOString());
-            
+
             files.forEach((file) => data.append("files", file));
 
             const response = await fetch("/api/prescreen", {
@@ -331,9 +334,8 @@ export default function AIPreScreeningForm({ locale }) {
                     {[1, 2, 3, 4].map((s) => (
                         <div
                             key={s}
-                            className={`flex-1 h-2 rounded-full transition-all ${
-                                s <= step ? "bg-[#FF6B35]" : "bg-white/30"
-                            }`}
+                            className={`flex-1 h-2 rounded-full transition-all ${s <= step ? "bg-[#FF6B35]" : "bg-white/30"
+                                }`}
                         />
                     ))}
                 </div>
@@ -360,7 +362,7 @@ export default function AIPreScreeningForm({ locale }) {
                                 👤 {t("step1.title")}
                             </h3>
                             <p className="text-sm text-[#6D7A8A] mb-4">{t("step1.subtitle")}</p>
-                            
+
                             <div className="grid md:grid-cols-2 gap-5">
                                 <div className="md:col-span-2">
                                     <label className={labelClass}>{t("step1.fullName")} *</label>
@@ -398,12 +400,12 @@ export default function AIPreScreeningForm({ locale }) {
                                 </div>
 
                                 <div>
-                                    <label className={labelClass}>{t("step1.city")} <span className={optionalClass}>({t("optional")})</span></label>
+                                    <label className={labelClass}>{t("step1.city")} *</label>
                                     <input type="text" name="city" value={formData.city} onChange={handleInputChange} className={inputClass} placeholder={t("step1.cityPlaceholder")} />
                                 </div>
 
                                 <div className="md:col-span-2">
-                                    <label className={labelClass}>{t("step1.whatsapp")} *</label>
+                                    <label className={labelClass}>{t("step1.whatsapp")} <span className="text-xs text-[#FF6B35] font-normal">({t("optional")})</span></label>
                                     <div className="flex gap-2">
                                         <select name="phoneCode" value={formData.phoneCode} onChange={handleInputChange} className="w-28 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none bg-white text-sm">
                                             {phoneCodes.map((pc) => (
@@ -412,10 +414,13 @@ export default function AIPreScreeningForm({ locale }) {
                                         </select>
                                         <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none" placeholder={t("step1.whatsappPlaceholder")} />
                                     </div>
+                                    {!formData.phoneNumber && !formData.email && (
+                                        <p className="text-xs text-[#FF6B35] mt-1">Please provide either WhatsApp or Email</p>
+                                    )}
                                 </div>
 
                                 <div className="md:col-span-2">
-                                    <label className={labelClass}>{t("step1.email")} *</label>
+                                    <label className={labelClass}>{t("step1.email")} <span className="text-xs text-[#FF6B35] font-normal">({t("optional")})</span></label>
                                     <input type="email" name="email" value={formData.email} onChange={handleInputChange} className={inputClass} placeholder={t("step1.emailPlaceholder")} />
                                 </div>
 
@@ -584,6 +589,13 @@ export default function AIPreScreeningForm({ locale }) {
                                 </div>
                             )}
 
+                            {files.length > 0 && (
+                                <div className="bg-[#0BA35A]/10 border border-[#0BA35A]/30 rounded-xl p-4 flex items-center gap-3 animate-fadeIn">
+                                    <FaCheckCircle className="text-[#0BA35A] w-5 h-5 flex-shrink-0" />
+                                    <span className="text-[#003459] font-semibold">Reports Uploaded Successfully</span>
+                                </div>
+                            )}
+
                             <div className="bg-[#FFD166]/20 p-4 rounded-xl border border-[#FFD166]/50">
                                 <p className="text-sm text-[#003459] font-medium">💡 {t("step3.tip")}</p>
                             </div>
@@ -664,35 +676,96 @@ export default function AIPreScreeningForm({ locale }) {
                                 </div>
                             </div>
 
-                            {/* Consent Checkboxes */}
+                            {/* Detailed Consent & Disclaimer Section */}
                             <div className="space-y-4 pt-4 border-t border-gray-200">
                                 <h4 className="font-semibold text-[#003459]">{t("step4.consentTitle")}</h4>
-                                
-                                <label className={`flex items-start gap-3 cursor-pointer p-4 rounded-xl border-2 transition-all ${formData.consentData ? "border-[#066F89] bg-[#066F89]/5" : "border-gray-200 hover:border-[#066F89]/40"}`}>
-                                    <input
-                                        type="checkbox"
-                                        name="consentData"
-                                        checked={formData.consentData}
-                                        onChange={handleInputChange}
-                                        className="mt-0.5 w-5 h-5 accent-[#066F89]"
-                                    />
-                                    <span className="text-sm text-[#6D7A8A]">{t("step4.consentDataLabel")}</span>
-                                </label>
 
-                                <label className={`flex items-start gap-3 cursor-pointer p-4 rounded-xl border-2 transition-all ${formData.consentDisclaimer ? "border-[#066F89] bg-[#066F89]/5" : "border-gray-200 hover:border-[#066F89]/40"}`}>
-                                    <input
-                                        type="checkbox"
-                                        name="consentDisclaimer"
-                                        checked={formData.consentDisclaimer}
-                                        onChange={handleInputChange}
-                                        className="mt-0.5 w-5 h-5 accent-[#066F89]"
-                                    />
-                                    <span className="text-sm text-[#6D7A8A]">{t("step4.consentDisclaimerLabel")}</span>
-                                </label>
+                                {/* 1. Patient Consent (Mandatory) */}
+                                <div className="p-4 rounded-xl border-2 transition-all hover:border-[#066F89]/40 bg-gray-50/50">
+                                    <h5 className="font-semibold text-[#003459] mb-2 text-sm">{t("step4.patientConsent.title")}</h5>
+                                    <label className="flex items-start gap-3 cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            name="consentData"
+                                            checked={formData.consentData}
+                                            onChange={handleInputChange}
+                                            className="mt-1 w-5 h-5 accent-[#066F89]"
+                                        />
+                                        <div className="text-sm text-[#6D7A8A] space-y-2">
+                                            <p>{t("step4.patientConsent.label")}</p>
+                                            <p className="text-xs opacity-80">{t("step4.patientConsent.text")}</p>
+                                        </div>
+                                    </label>
+                                </div>
 
-                                <p className="text-xs text-[#6D7A8A] mt-2">
-                                    {t("step4.consentNote")} <a href="/privacy" className="text-[#066F89] underline">{t("step4.privacyLink")}</a>
-                                </p>
+                                {/* 2. AI Disclaimer (Mandatory) */}
+                                <div className="p-4 rounded-xl border-2 transition-all hover:border-[#066F89]/40 bg-gray-50/50">
+                                    <h5 className="font-semibold text-[#003459] mb-2 text-sm">{t("step4.aiDisclaimer.title")}</h5>
+                                    <label className="flex items-start gap-3 cursor-pointer">
+                                        <input
+                                            type="checkbox"
+                                            name="consentDisclaimer"
+                                            checked={formData.consentDisclaimer}
+                                            onChange={handleInputChange}
+                                            className="mt-1 w-5 h-5 accent-[#066F89]"
+                                        />
+                                        <div className="text-sm text-[#6D7A8A] space-y-2">
+                                            <p>{t("step4.aiDisclaimer.label")}</p>
+                                            <ul className="list-disc pl-4 text-xs opacity-80 space-y-1">
+                                                <li>{t("step4.aiDisclaimer.points.0")}</li>
+                                                <li>{t("step4.aiDisclaimer.points.1")}</li>
+                                                <li>{t("step4.aiDisclaimer.points.2")}</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                {/* 3. Limitation of Liability */}
+                                <details className="group border border-gray-200 rounded-xl bg-white overflow-hidden">
+                                    <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-[#003459] text-sm hover:bg-gray-50">
+                                        {t("step4.liability.title")}
+                                        <FaChevronDown className="w-3 h-3 transition-transform group-open:rotate-180" />
+                                    </summary>
+                                    <div className="p-4 pt-0 text-xs text-[#6D7A8A] border-t border-transparent group-open:border-gray-100">
+                                        <p>{t("step4.liability.text")}</p>
+                                    </div>
+                                </details>
+
+                                {/* 4. Data Privacy */}
+                                <div className="bg-[#066F89]/5 p-4 rounded-xl border border-[#066F89]/10">
+                                    <h5 className="font-semibold text-[#003459] mb-2 text-sm flex items-center gap-2">
+                                        🛡️ {t("step4.privacy.title")}
+                                    </h5>
+                                    <p className="text-xs text-[#6D7A8A] mb-2">{t("step4.privacy.intro")}</p>
+                                    <ul className="list-disc pl-4 text-xs text-[#6D7A8A] space-y-1">
+                                        <li>{t("step4.privacy.points.0")}</li>
+                                        <li>{t("step4.privacy.points.1")}</li>
+                                        <li>{t("step4.privacy.points.2")}</li>
+                                        <li>{t("step4.privacy.points.3")}</li>
+                                    </ul>
+                                </div>
+
+                                {/* 5. Cross-Border Disclaimer */}
+                                <details className="group border border-gray-200 rounded-xl bg-white overflow-hidden">
+                                    <summary className="flex items-center justify-between p-4 cursor-pointer font-medium text-[#003459] text-sm hover:bg-gray-50">
+                                        {t("step4.crossBorder.title")}
+                                        <FaChevronDown className="w-3 h-3 transition-transform group-open:rotate-180" />
+                                    </summary>
+                                    <div className="p-4 pt-0 text-xs text-[#6D7A8A] border-t border-transparent group-open:border-gray-100">
+                                        <p>{t("step4.crossBorder.text")}</p>
+                                    </div>
+                                </details>
+
+                                {/* 8. Final Confirmation */}
+                                <div className="p-4 bg-[#FF6B35]/5 border border-[#FF6B35]/20 rounded-xl text-center">
+                                    <h5 className="font-bold text-[#003459] mb-2 text-sm">{t("step4.finalConfirmation.title")}</h5>
+                                    <p className="text-xs text-[#6D7A8A] mb-2">{t("step4.finalConfirmation.label")}</p>
+                                    <ul className="text-xs text-[#6D7A8A] space-y-1 inline-block text-left">
+                                        {t("step4.finalConfirmation.points.0") && <li>✅ {t("step4.finalConfirmation.points.0")}</li>}
+                                        {t("step4.finalConfirmation.points.1") && <li>✅ {t("step4.finalConfirmation.points.1")}</li>}
+                                        {t("step4.finalConfirmation.points.2") && <li>✅ {t("step4.finalConfirmation.points.2")}</li>}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     )}

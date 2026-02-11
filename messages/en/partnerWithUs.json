@@ -73,5 +73,41 @@
         "By promoting Panacea Medcare you will help us build our Brand name."
       ]
     }
+  },
+  "form": {
+    "title": "Partner Inquiry Form",
+    "subtitle": "Fill out the form below and we'll get back to you soon",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "whatsapp": "WhatsApp Number",
+    "country": "Country",
+    "areasOfInterest": "Areas of Interest",
+    "areasPlaceholder": "e.g., Cardiology, Orthopedics, Oncology, Medical Tourism",
+    "message": "Additional Details",
+    "submit": "Submit Inquiry",
+    "sending": "Submitting...",
+    "success": "Thank you! We'll contact you soon to discuss partnership opportunities.",
+    "error": "Failed to submit. Please try again."
+  },
+  "destinations": {
+    "title": "Popular Medical Tourism Destinations in India",
+    "subtitle": "World-class healthcare facilities across major cities",
+    "delhi": {
+      "name": "New Delhi",
+      "description": "Capital city with premier hospitals and advanced medical facilities"
+    },
+    "mumbai": {
+      "name": "Mumbai",
+      "description": "Financial hub offering cutting-edge healthcare and specialized treatments"
+    },
+    "bangalore": {
+      "name": "Bangalore",
+      "description": "Technology capital with state-of-the-art medical infrastructure"
+    },
+    "chennai": {
+      "name": "Chennai",
+      "description": "Medical tourism hub known for cardiac care and organ transplants"
+    }
   }
 }

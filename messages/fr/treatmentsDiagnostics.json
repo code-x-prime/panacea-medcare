@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Quelles technologies d'imagerie avancées sont disponibles en Inde ?",
+      "answer": "Les centres de diagnostic indiens offrent imagerie de pointe incluant IRM 3 Tesla, scanners CT 128 coupes et plus, TEP-CT, mammographie numérique, échographie 4D et imagerie cardiaque avancée. De nombreux centres ont des outils de diagnostic activés par IA pour précision améliorée et rapports plus rapides avec radiologues formés internationalement."
+    },
+    "q2": {
+      "question": "Quelle est la précision des services de diagnostic activés par IA en Inde ?",
+      "answer": "Les diagnostics activés par IA en Inde atteignent des taux de précision de 95-98% pour conditions comme nodules pulmonaires, dépistage du cancer du sein et détection d'AVC. Ces systèmes aident les radiologues à une détection plus rapide, réduisent l'erreur humaine et fournissent seconds avis. Tous les rapports assistés par IA sont vérifiés par radiologues expérimentés avant rapport final."
+    },
+    "q3": {
+      "question": "Puis-je obtenir des rapports de diagnostic le jour même en Inde ?",
+      "answer": "Oui, la plupart des centres de diagnostic indiens fournissent rapports le jour même pour tests de routine comme analyses sanguines, radiographies et échographies. L'imagerie avancée comme IRM et scanners CT ont généralement délais de 24-48 heures. Les cas d'urgence reçoivent rapports prioritaires en quelques heures. Les rapports numériques sont accessibles en ligne pour patients internationaux."
+    },
+    "q4": {
+      "question": "Qu'est-ce que la radiologie interventionnelle et comment est-elle réalisée en Inde ?",
+      "answer": "La radiologie interventionnelle utilise procédures mini-invasives guidées par imagerie pour diagnostiquer et traiter conditions. Les hôpitaux indiens offrent procédures RI avancées incluant angiographie, angioplastie, embolisation pour tumeurs et saignements, biopsies, procédures de drainage et traitements du cancer comme ablation par radiofréquence avec radiologues interventionnels expérimentés."
+    },
+    "q5": {
+      "question": "Les diagnostics moléculaires et tests génétiques sont-ils disponibles en Inde ?",
+      "answer": "Oui, les principaux centres de diagnostic indiens offrent diagnostics moléculaires complets incluant profilage génomique du cancer, tests génétiques pour conditions héréditaires, pharmacogénomique, biopsie liquide, NGS (Séquençage de Nouvelle Génération) et diagnostics de médecine de précision à des coûts nettement inférieurs aux pays occidentaux avec normes de qualité internationales."
+    }
   }
 }

@@ -40,5 +40,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Qu'est-ce qui fait de l'Inde une destination privilégiée pour les traitements de gastro-entérologie ?",
+      "answer": "L'Inde offre des soins de gastro-entérologie de classe mondiale avec des hôpitaux accrédités JCI, des gastro-entérologues formés à l'international, des équipements endoscopiques avancés et des services GI complets à des coûts 60-70% inférieurs par rapport aux pays occidentaux. Les hôpitaux indiens ont une expertise dans les procédures complexes comme l'ERCP, l'EUS et l'endoscopie thérapeutique avancée."
+    },
+    "q2": {
+      "question": "Combien de temps dure généralement le traitement de la cirrhose du foie en Inde ?",
+      "answer": "La durée du traitement varie selon la gravité. L'évaluation initiale prend 3-5 jours, la gestion médicale est continue, tandis que l'évaluation et la chirurgie de transplantation hépatique nécessitent 4-6 semaines. L'Inde offre une gestion complète de la cirrhose incluant médicaments, procédures endoscopiques pour les varices et transplantation hépatique avec d'excellents résultats."
+    },
+    "q3": {
+      "question": "Les procédures endoscopiques avancées comme l'ERCP et l'EUS sont-elles disponibles en Inde ?",
+      "answer": "Oui, les principaux hôpitaux indiens disposent de suites d'endoscopie de pointe avec des procédures avancées incluant l'ERCP pour les calculs et sténoses des voies biliaires, l'EUS pour les cancers pancréatiques et GI, la résection muqueuse endoscopique (EMR) et la dissection sous-muqueuse endoscopique (ESD) réalisées par des gastro-entérologues hautement expérimentés."
+    },
+    "q4": {
+      "question": "Quel est le taux de succès de la chirurgie bariatrique en Inde ?",
+      "answer": "Les centres de chirurgie bariatrique indiens rapportent d'excellents résultats avec 70-80% de perte de poids excédentaire, 80-90% de taux de rémission du diabète et des taux de complications inférieurs à 2%. L'évaluation préopératoire complète, les chirurgiens expérimentés et les programmes de suivi structurés garantissent des résultats durables."
+    },
+    "q5": {
+      "question": "Comment la maladie inflammatoire de l'intestin (MII) est-elle gérée en Inde ?",
+      "answer": "L'Inde offre des soins complets pour la MII incluant des diagnostics avancés (coloscopie, entérographie par IRM), des thérapies biologiques (infliximab, adalimumab), des immunomodulateurs et des options chirurgicales si nécessaire. Les équipes multidisciplinaires fournissent des plans de traitement personnalisés avec surveillance régulière et soutien nutritionnel."
+    }
   }
 }

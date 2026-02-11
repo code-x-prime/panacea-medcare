@@ -40,5 +40,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What makes India a preferred destination for gastroenterology treatments?",
+      "answer": "India offers world-class gastroenterology care with JCI-accredited hospitals, internationally trained gastroenterologists, advanced endoscopic equipment, and comprehensive GI services at 60-70% lower costs compared to Western countries. Indian hospitals have expertise in complex procedures like ERCP, EUS, and advanced therapeutic endoscopy."
+    },
+    "q2": {
+      "question": "How long does treatment for liver cirrhosis typically take in India?",
+      "answer": "Treatment duration varies based on severity. Initial evaluation takes 3-5 days, medical management is ongoing, while liver transplant evaluation and surgery require 4-6 weeks. India offers comprehensive cirrhosis management including medications, endoscopic procedures for varices, and liver transplantation with excellent outcomes."
+    },
+    "q3": {
+      "question": "Are advanced endoscopic procedures like ERCP and EUS available in India?",
+      "answer": "Yes, leading Indian hospitals have state-of-the-art endoscopy suites with advanced procedures including ERCP for bile duct stones and strictures, EUS for pancreatic and GI cancers, endoscopic mucosal resection (EMR), and endoscopic submucosal dissection (ESD) performed by highly experienced gastroenterologists."
+    },
+    "q4": {
+      "question": "What is the success rate of bariatric surgery in India?",
+      "answer": "Indian bariatric surgery centers report excellent outcomes with 70-80% excess weight loss, 80-90% diabetes remission rates, and complication rates below 2%. Comprehensive pre-operative evaluation, experienced surgeons, and structured follow-up programs ensure sustainable results."
+    },
+    "q5": {
+      "question": "How is inflammatory bowel disease (IBD) managed in India?",
+      "answer": "India offers comprehensive IBD care including advanced diagnostics (colonoscopy, MR enterography), biologic therapies (infliximab, adalimumab), immunomodulators, and surgical options when needed. Multidisciplinary teams provide personalized treatment plans with regular monitoring and nutritional support."
+    }
   }
 }

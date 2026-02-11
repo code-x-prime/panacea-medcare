@@ -1,6 +1,4 @@
-/**
- * ISO-style country list with phone codes for forms (Quote, Contact, Booking, Prescreen).
- */
+
 export const COUNTRIES = [
     { value: "afghanistan", label: "Afghanistan", code: "+93" },
     { value: "albania", label: "Albania", code: "+355" },

@@ -361,9 +361,7 @@
                 "accommodationAssistance": true
               },
               "images": [
-                "/hospitals/fortis-hospital-gurgaon.jpg",
-                "/hospitals/all/fortis-hospital-gurgaon-1.png",
-                "/hospitals/all/fortis-hospital-gurgaon-2.png"
+                "/hospitals/fortis-hospital-gurgaon.jpg"
               ]
             },
             {

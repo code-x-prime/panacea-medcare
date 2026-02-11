@@ -32,5 +32,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Quels services de santé mentale sont disponibles en Inde pour les patients internationaux ?",
+      "answer": "L'Inde offre des services complets de santé mentale incluant évaluation psychiatrique, psychothérapie individuelle et de groupe, thérapie cognitivo-comportementale (TCC), thérapie comportementale dialectique (TCD), gestion des médicaments, soins psychiatriques hospitaliers et programmes de bien-être holistiques. De nombreux centres ont des thérapeutes anglophones expérimentés avec les patients internationaux."
+    },
+    "q2": {
+      "question": "Quelle est l'efficacité du traitement de la dépression et de l'anxiété en Inde ?",
+      "answer": "Les centres de santé mentale indiens rapportent des taux d'amélioration de 70-80% pour la dépression et l'anxiété utilisant traitements fondés sur preuves incluant médicaments (ISRS, IRSN), psychothérapie (TCC, thérapie basée sur pleine conscience) et approches intégrées. Les plans de traitement sont personnalisés, et la plupart des patients connaissent un soulagement significatif des symptômes dans les 6-12 semaines."
+    },
+    "q3": {
+      "question": "Quels types de programmes de traitement de la toxicomanie sont disponibles en Inde ?",
+      "answer": "L'Inde offre traitement complet de la toxicomanie incluant désintoxication médicale, programmes de réadaptation résidentielle (30-90 jours), counseling ambulatoire, programmes en 12 étapes, thérapie cognitivo-comportementale, thérapie familiale, formation de prévention des rechutes et soutien de suivi. Les centres fournissent soins holistiques combinant traitement médical avec yoga, méditation et modification du mode de vie."
+    },
+    "q4": {
+      "question": "Le traitement de santé mentale est-il confidentiel en Inde ?",
+      "answer": "Oui, les professionnels de santé mentale indiens adhèrent strictement à la confidentialité des patients selon la Loi sur les soins de santé mentale 2017 et les normes éthiques internationales. Toutes les consultations, traitements et dossiers médicaux sont gardés confidentiels. La vie privée et la dignité des patients sont primordiales, et les informations ne sont partagées qu'avec consentement explicite du patient."
+    },
+    "q5": {
+      "question": "Puis-je combiner pratiques de bien-être traditionnelles avec traitement de santé mentale en Inde ?",
+      "answer": "Absolument. De nombreux centres de santé mentale indiens offrent approches intégratives combinant psychiatrie moderne et psychothérapie avec pratiques traditionnelles comme yoga, méditation, Ayurveda et pleine conscience. Cette approche holistique aborde le bien-être mental, physique et spirituel, fournissant guérison complète et gestion du stress."
+    }
   }
 }

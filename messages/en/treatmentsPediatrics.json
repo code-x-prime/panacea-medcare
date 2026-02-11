@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Why choose India for pediatric cardiac surgery?",
+      "answer": "India is a global leader in pediatric cardiac surgery with over 95% success rates for complex congenital heart defect repairs. Hospitals have dedicated pediatric cardiac ICUs, experienced pediatric cardiac surgeons, advanced imaging, and comprehensive pre and post-operative care at significantly lower costs than Western countries."
+    },
+    "q2": {
+      "question": "What facilities are available for premature babies in Indian NICUs?",
+      "answer": "Indian hospitals have Level III NICUs with advanced ventilators, surfactant therapy, total parenteral nutrition, phototherapy, neonatal surgery capabilities, and 24/7 neonatologist coverage. Many hospitals have dedicated transport teams and follow international protocols for premature infant care."
+    },
+    "q3": {
+      "question": "How are congenital defects like cleft lip and palate treated in India?",
+      "answer": "India offers comprehensive cleft care with multidisciplinary teams including plastic surgeons, orthodontists, speech therapists, and pediatricians. Treatment includes staged surgical repairs (typically at 3 months for lip, 9-12 months for palate), speech therapy, dental care, and psychological support with excellent aesthetic and functional outcomes."
+    },
+    "q4": {
+      "question": "What is the success rate of pediatric cancer treatment in India?",
+      "answer": "Leading Indian pediatric oncology centers report survival rates of 70-85% for common childhood cancers like leukemia and lymphoma. Treatment includes chemotherapy, radiation, surgery, and bone marrow transplantation with dedicated pediatric oncology teams, child-friendly facilities, and comprehensive supportive care."
+    },
+    "q5": {
+      "question": "Are international families supported during their child's treatment in India?",
+      "answer": "Yes, Indian hospitals provide comprehensive support including international patient coordinators, visa assistance, airport transfers, family accommodation, language interpreters, child life specialists, and assistance with medical tourism logistics to ensure comfortable treatment experience for international families."
+    }
   }
 }

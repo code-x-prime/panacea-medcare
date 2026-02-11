@@ -44,5 +44,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Quel est le taux de succès des implants dentaires en Inde ?",
+      "answer": "Les cliniques dentaires indiennes rapportent des taux de succès d'implants dentaires de 95-98% utilisant des systèmes d'implants premium de Nobel Biocare, Straumann et autres marques internationales. L'imagerie 3D avancée, la pose d'implants guidée par ordinateur et les implantologistes expérimentés garantissent un positionnement précis et une stabilité à long terme à des coûts 60-70% inférieurs aux pays occidentaux."
+    },
+    "q2": {
+      "question": "Combien de temps prend la réhabilitation buccale complète en Inde ?",
+      "answer": "La réhabilitation buccale complète nécessite généralement 2-4 semaines selon la complexité. Le processus comprend consultation initiale et planification (2-3 jours), procédures préparatoires et empreintes (3-5 jours), pose de restauration temporaire et placement de prothèse finale. Les centres dentaires indiens offrent traitement complet avec design numérique du sourire et options de dentisterie en une journée."
+    },
+    "q3": {
+      "question": "Quels matériaux sont utilisés pour les couronnes et facettes dentaires en Inde ?",
+      "answer": "Les laboratoires dentaires indiens utilisent des matériaux premium incluant zirconia de haute qualité, disilicate de lithium (e.max), porcelaine fusionnée au métal et couronnes tout-céramique. Les facettes sont fabriquées en porcelaine ultra-fine ou matériaux composites. Tous les matériaux sont biocompatibles, approuvés FDA et fabriqués dans des laboratoires dentaires de pointe avec normes de qualité internationales."
+    },
+    "q4": {
+      "question": "Le traitement dentaire en Inde est-il douloureux ?",
+      "answer": "Les cliniques dentaires indiennes modernes utilisent gestion avancée de la douleur incluant anesthésie locale, dentisterie sous sédation et dentisterie au laser pour procédures mini-invasives. Les dentistes suivent protocoles internationaux pour traitements sans douleur. La plupart des procédures sont confortables, et la douleur postopératoire est bien gérée avec médicaments et instructions de soins appropriées."
+    },
+    "q5": {
+      "question": "Puis-je obtenir des couronnes dentaires en une journée en Inde ?",
+      "answer": "Oui, de nombreux centres dentaires avancés en Inde offrent la technologie CEREC (Restauration Esthétique Céramique Économique au Fauteuil) pour couronnes, inlays et onlays en une journée. Utilisant la technologie CAO/FAO, les dentistes peuvent concevoir, fraiser et placer des restaurations céramiques de haute qualité en une seule visite, économisant du temps pour les patients internationaux."
+    }
   }
 }

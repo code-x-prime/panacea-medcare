@@ -32,5 +32,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Quels types de services de réadaptation sont disponibles en Inde ?",
+      "answer": "L'Inde offre réadaptation complète incluant physiothérapie, ergothérapie, orthophonie, réadaptation neurologique pour AVC et lésion cérébrale, réadaptation cardiaque, réadaptation orthopédique, médecine du sport, gestion de la douleur et thérapie aquatique. Les centres ont équipes multidisciplinaires avec équipement avancé et protocoles de traitement personnalisés."
+    },
+    "q2": {
+      "question": "Quelle est l'efficacité de la réadaptation de l'AVC en Inde ?",
+      "answer": "Les centres de réadaptation neurologique indiens rapportent amélioration fonctionnelle de 60-80% chez patients victimes d'AVC utilisant protocoles fondés sur preuves incluant thérapie de mouvement induit par contrainte, thérapie assistée par robot, réadaptation par réalité virtuelle et physiothérapie intensive. Intervention précoce et soins multidisciplinaires complets optimisent résultats de récupération."
+    },
+    "q3": {
+      "question": "Quelle est la durée des programmes de réadaptation post-chirurgicale en Inde ?",
+      "answer": "La durée varie selon type de chirurgie. La réadaptation de remplacement articulaire nécessite généralement 6-12 semaines, chirurgie cardiaque 8-12 semaines et chirurgie de la colonne vertébrale 12-16 semaines. Les programmes incluent thérapie intensive hospitalière suivie de séances ambulatoires. Les centres indiens offrent programmes flexibles adaptés aux besoins de récupération individuels et horaires des patients internationaux."
+    },
+    "q4": {
+      "question": "Les techniques avancées de gestion de la douleur sont-elles disponibles en Inde ?",
+      "answer": "Oui, les centres de gestion de la douleur indiens offrent traitements complets incluant procédures interventionnelles (injections épidurales, blocs nerveux, ablation par radiofréquence), gestion des médicaments, physiothérapie, acupuncture, thérapie TENS et counseling psychologique. L'approche multidisciplinaire garantit soulagement efficace de la douleur chronique."
+    },
+    "q5": {
+      "question": "Les athlètes peuvent-ils obtenir réadaptation sportive spécialisée en Inde ?",
+      "answer": "Absolument. L'Inde a des centres de médecine du sport dédiés offrant réadaptation avancée pour blessures sportives incluant récupération de reconstruction LCA, réparation de coiffe des rotateurs, gestion de commotion cérébrale et optimisation de performance. Les services incluent analyse biomécanique, conditionnement de force, protocoles de retour au sport et programmes de prévention des blessures."
+    }
   }
 }

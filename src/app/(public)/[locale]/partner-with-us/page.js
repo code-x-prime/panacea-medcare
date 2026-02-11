@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import PartnerForm from "@/components/PartnerForm";
 
 export default function PartnerWithUsPage({ params }) {
     const { locale } = params;
@@ -238,6 +239,93 @@ export default function PartnerWithUsPage({ params }) {
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Partnership Inquiry Form Section */}
+                <div className="max-w-4xl mx-auto mb-16">
+                    <div className="bg-gradient-to-br from-panacea-primary via-panacea-accent to-panacea-primary rounded-3xl p-8 md:p-12 text-white shadow-panacea-lg mb-8">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3">
+                            {t("form.title")}
+                        </h2>
+                        <p className="text-center text-white/90 text-lg">
+                            {t("form.subtitle")}
+                        </p>
+                    </div>
+                    <PartnerForm locale={locale} />
+                </div>
+
+                {/* Popular Destinations Section */}
+                <div className="max-w-6xl mx-auto mb-16">
+                    <div className="text-center mb-12">
+                        <h2 className={`text-3xl md:text-4xl font-bold text-panacea-primary mb-4 ${isRTL ? "text-right" : "text-left"} text-center`}>
+                            {t("destinations.title")}
+                        </h2>
+                        <p className={`text-lg text-gray-700 ${isRTL ? "text-right" : "text-left"} text-center`}>
+                            {t("destinations.subtitle")}
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* Delhi Card */}
+                        <div className="bg-white rounded-2xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 overflow-hidden group">
+                            <div className="relative h-48 bg-gradient-to-br from-panacea-primary/20 to-panacea-accent/20 flex items-center justify-center">
+                                <div className="text-6xl">🏥</div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className={`text-xl font-bold text-panacea-primary mb-2 ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.delhi.name")}
+                                </h3>
+                                <p className={`text-gray-600 text-sm ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.delhi.description")}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Mumbai Card */}
+                        <div className="bg-white rounded-2xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 overflow-hidden group">
+                            <div className="relative h-48 bg-gradient-to-br from-panacea-secondary/20 to-panacea-primary/20 flex items-center justify-center">
+                                <div className="text-6xl">🏙️</div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className={`text-xl font-bold text-panacea-primary mb-2 ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.mumbai.name")}
+                                </h3>
+                                <p className={`text-gray-600 text-sm ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.mumbai.description")}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Bangalore Card */}
+                        <div className="bg-white rounded-2xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 overflow-hidden group">
+                            <div className="relative h-48 bg-gradient-to-br from-panacea-accent/20 to-panacea-secondary/20 flex items-center justify-center">
+                                <div className="text-6xl">🏢</div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className={`text-xl font-bold text-panacea-primary mb-2 ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.bangalore.name")}
+                                </h3>
+                                <p className={`text-gray-600 text-sm ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.bangalore.description")}
+                                </p>
+                            </div>
+                        </div>
+
+                        {/* Chennai Card */}
+                        <div className="bg-white rounded-2xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 overflow-hidden group">
+                            <div className="relative h-48 bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20 flex items-center justify-center">
+                                <div className="text-6xl">❤️</div>
+                            </div>
+                            <div className="p-6">
+                                <h3 className={`text-xl font-bold text-panacea-primary mb-2 ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.chennai.name")}
+                                </h3>
+                                <p className={`text-gray-600 text-sm ${isRTL ? "text-right" : "text-left"}`}>
+                                    {t("destinations.chennai.description")}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -44,5 +44,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What is the success rate of dental implants in India?",
+      "answer": "Indian dental clinics report dental implant success rates of 95-98% using premium implant systems from Nobel Biocare, Straumann, and other international brands. Advanced 3D imaging, computer-guided implant placement, and experienced implantologists ensure precise positioning and long-term stability at 60-70% lower costs than Western countries."
+    },
+    "q2": {
+      "question": "How long does full mouth rehabilitation take in India?",
+      "answer": "Full mouth rehabilitation typically requires 2-4 weeks depending on complexity. The process includes initial consultation and planning (2-3 days), preparatory procedures and impressions (3-5 days), temporary restoration fitting, and final prosthesis placement. Indian dental centers offer comprehensive treatment with digital smile design and same-day dentistry options."
+    },
+    "q3": {
+      "question": "What materials are used for dental crowns and veneers in India?",
+      "answer": "Indian dental labs use premium materials including high-quality zirconia, lithium disilicate (e.max), porcelain-fused-to-metal, and all-ceramic crowns. Veneers are crafted from ultra-thin porcelain or composite materials. All materials are biocompatible, FDA-approved, and manufactured in state-of-the-art dental laboratories with international quality standards."
+    },
+    "q4": {
+      "question": "Is dental treatment in India painful?",
+      "answer": "Modern Indian dental clinics use advanced pain management including local anesthesia, sedation dentistry, and laser dentistry for minimally invasive procedures. Dentists follow international protocols for pain-free treatments. Most procedures are comfortable, and post-operative pain is well-managed with medications and proper care instructions."
+    },
+    "q5": {
+      "question": "Can I get same-day dental crowns in India?",
+      "answer": "Yes, many advanced dental centers in India offer CEREC (Chairside Economical Restoration of Esthetic Ceramics) technology for same-day crowns, inlays, and onlays. Using CAD/CAM technology, dentists can design, mill, and place high-quality ceramic restorations in a single visit, saving time for international patients."
+    }
   }
 }

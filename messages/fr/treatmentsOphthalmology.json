@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Quels types de LIO premium sont disponibles pour la chirurgie de la cataracte en Inde ?",
+      "answer": "Les hôpitaux ophtalmiques indiens offrent les dernières LIO premium incluant lentilles multifocales pour vision de près et de loin, lentilles toriques pour correction de l'astigmatisme, lentilles à profondeur de champ étendue (EDOF) et lentilles trifocales. Les chirurgiens utilisent la phacoémulsification avancée avec assistance laser femtoseconde pour des résultats précis."
+    },
+    "q2": {
+      "question": "La chirurgie LASIK est-elle sûre et efficace en Inde ?",
+      "answer": "Oui, les centres ophtalmiques indiens réalisent le LASIK avec des taux de succès dépassant 95% en utilisant des technologies avancées comme les lasers femtosecondes sans lame, les traitements guidés par front d'onde et les ablations guidées par topographie. Le dépistage préopératoire complet, les chirurgiens expérimentés et les protocoles de sécurité stricts garantissent d'excellents résultats visuels avec complications minimales."
+    },
+    "q3": {
+      "question": "Combien de temps dure la récupération d'une greffe de cornée en Inde ?",
+      "answer": "La récupération varie selon le type de procédure. Les patients DSEK/DMEK (épaisseur partielle) récupèrent généralement la vision en 2-4 semaines, tandis que les greffes pleine épaisseur prennent 3-6 mois. Les banques d'yeux indiennes fournissent des tissus donneurs de haute qualité, et les chirurgiens expérimentés atteignent des taux de survie de greffe supérieurs à 90% avec des soins postopératoires appropriés et un suivi."
+    },
+    "q4": {
+      "question": "Quels traitements avancés sont disponibles pour les affections rétiniennes en Inde ?",
+      "answer": "L'Inde offre des soins rétiniens de pointe incluant injections anti-VEGF pour dégénérescence maculaire et rétinopathie diabétique, chirurgie de vitrectomie pour décollement de rétine, photocoagulation au laser et implants intravitréens. L'imagerie avancée comme l'OCT et l'angiographie à la fluorescéine du fond d'œil permettent un diagnostic précis et une planification du traitement."
+    },
+    "q5": {
+      "question": "Le glaucome peut-il être guéri définitivement en Inde ?",
+      "answer": "Bien que le glaucome ne puisse pas être guéri, il peut être efficacement contrôlé pour prévenir la perte de vision. Les ophtalmologistes indiens offrent une gestion complète du glaucome incluant médicaments, trabéculoplastie laser sélective (SLT), chirurgie mini-invasive du glaucome (MIGS) et options chirurgicales traditionnelles avec surveillance régulière pour préserver la vision à long terme."
+    }
   }
 }

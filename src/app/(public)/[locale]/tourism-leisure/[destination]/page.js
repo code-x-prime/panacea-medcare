@@ -102,12 +102,30 @@ export default function DestinationPage({ params }) {
                         {dest.highlights.map((highlight, idx) => (
                             <div
                                 key={idx}
-                                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300"
+                                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                             >
-                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <MapPin className="w-8 h-8 text-white" />
+                                {/* Image */}
+                                <div className="relative h-40 overflow-hidden">
+                                    <Image
+                                        src={`/destinations/${destination}/highlight-${idx + 1}.jpg`}
+                                        alt={highlight}
+                                        fill
+                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                        sizes="(max-width: 768px) 50vw, 25vw"
+                                        onError={(e) => {
+                                            e.target.style.display = 'none';
+                                            e.target.parentElement.style.background = `linear-gradient(135deg, ${['#066F89', '#0BA35A', '#FF6B35', '#8B5CF6'][idx % 4]} 0%, ${['#0BA35A', '#FF6B35', '#8B5CF6', '#066F89'][idx % 4]} 100%)`;
+                                        }}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 </div>
-                                <h3 className="text-xl font-bold">{highlight}</h3>
+                                {/* Content */}
+                                <div className="p-4 bg-white">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <MapPin className="w-5 h-5 text-panacea-primary flex-shrink-0" />
+                                        <h3 className="text-lg font-bold text-panacea-primary">{highlight}</h3>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

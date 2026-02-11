@@ -73,6 +73,42 @@
         "En promouvant Panacea Medcare, vous nous aiderez à construire notre nom de marque."
       ]
     }
+  },
+  "form": {
+    "title": "Formulaire de demande de partenariat",
+    "subtitle": "Remplissez le formulaire ci-dessous et nous vous recontacterons bientôt",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Numéro de téléphone",
+    "whatsapp": "Numéro WhatsApp",
+    "country": "Pays",
+    "areasOfInterest": "Domaines d'intérêt",
+    "areasPlaceholder": "par ex., Cardiologie, Orthopédie, Oncologie, Tourisme médical",
+    "message": "Détails supplémentaires",
+    "submit": "Soumettre la demande",
+    "sending": "Envoi en cours...",
+    "success": "Merci! Nous vous contacterons bientôt pour discuter des opportunités de partenariat.",
+    "error": "Échec de l'envoi. Veuillez réessayer."
+  },
+  "destinations": {
+    "title": "Destinations populaires du tourisme médical en Inde",
+    "subtitle": "Établissements de santé de classe mondiale dans les grandes villes",
+    "delhi": {
+      "name": "New Delhi",
+      "description": "Capitale avec des hôpitaux de premier plan et des installations médicales avancées"
+    },
+    "mumbai": {
+      "name": "Mumbai",
+      "description": "Centre financier offrant des soins de santé de pointe et des traitements spécialisés"
+    },
+    "bangalore": {
+      "name": "Bangalore",
+      "description": "Capitale technologique avec une infrastructure médicale de pointe"
+    },
+    "chennai": {
+      "name": "Chennai",
+      "description": "Pôle du tourisme médical connu pour les soins cardiaques et les greffes d'organes"
+    }
   }
 }
 

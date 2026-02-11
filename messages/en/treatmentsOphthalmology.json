@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What types of premium IOLs are available for cataract surgery in India?",
+      "answer": "Indian eye hospitals offer the latest premium IOLs including multifocal lenses for near and distance vision, toric lenses for astigmatism correction, extended depth of focus (EDOF) lenses, and trifocal lenses. Surgeons use advanced phacoemulsification with femtosecond laser assistance for precise outcomes."
+    },
+    "q2": {
+      "question": "Is LASIK surgery safe and effective in India?",
+      "answer": "Yes, Indian eye centers perform LASIK with success rates exceeding 95% using advanced technologies like bladeless femtosecond lasers, wavefront-guided treatments, and topography-guided ablations. Comprehensive pre-operative screening, experienced surgeons, and strict safety protocols ensure excellent visual outcomes with minimal complications."
+    },
+    "q3": {
+      "question": "How long does cornea transplant recovery take in India?",
+      "answer": "Recovery varies by procedure type. DSEK/DMEK (partial thickness) patients typically recover vision in 2-4 weeks, while full-thickness transplants take 3-6 months. Indian eye banks provide high-quality donor tissue, and experienced surgeons achieve graft survival rates above 90% with proper post-operative care and follow-up."
+    },
+    "q4": {
+      "question": "What advanced treatments are available for retinal conditions in India?",
+      "answer": "India offers cutting-edge retinal care including anti-VEGF injections for macular degeneration and diabetic retinopathy, vitrectomy surgery for retinal detachment, laser photocoagulation, and intravitreal implants. Advanced imaging like OCT and fundus fluorescein angiography enable precise diagnosis and treatment planning."
+    },
+    "q5": {
+      "question": "Can glaucoma be permanently cured in India?",
+      "answer": "While glaucoma cannot be cured, it can be effectively controlled to prevent vision loss. Indian ophthalmologists offer comprehensive glaucoma management including medications, selective laser trabeculoplasty (SLT), minimally invasive glaucoma surgery (MIGS), and traditional surgical options with regular monitoring to preserve vision long-term."
+    }
   }
 }

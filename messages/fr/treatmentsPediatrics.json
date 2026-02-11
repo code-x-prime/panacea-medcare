@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Obtenir une consultation gratuite",
     "quote": "Obtenir un devis de traitement"
+  },
+  "faqs": {
+    "title": "Questions fréquemment posées",
+    "q1": {
+      "question": "Pourquoi choisir l'Inde pour la chirurgie cardiaque pédiatrique ?",
+      "answer": "L'Inde est un leader mondial en chirurgie cardiaque pédiatrique avec plus de 95% de taux de succès pour les réparations complexes de malformations cardiaques congénitales. Les hôpitaux disposent d'unités de soins intensifs cardiaques pédiatriques dédiées, de chirurgiens cardiaques pédiatriques expérimentés, d'imagerie avancée et de soins pré et postopératoires complets à des coûts nettement inférieurs aux pays occidentaux."
+    },
+    "q2": {
+      "question": "Quelles installations sont disponibles pour les bébés prématurés dans les NICU indiennes ?",
+      "answer": "Les hôpitaux indiens disposent de NICU de niveau III avec ventilateurs avancés, thérapie au surfactant, nutrition parentérale totale, photothérapie, capacités de chirurgie néonatale et couverture néonatologiste 24/7. De nombreux hôpitaux ont des équipes de transport dédiées et suivent les protocoles internationaux pour les soins aux nourrissons prématurés."
+    },
+    "q3": {
+      "question": "Comment les malformations congénitales comme la fente labiale et palatine sont-elles traitées en Inde ?",
+      "answer": "L'Inde offre des soins complets pour les fentes avec des équipes multidisciplinaires incluant chirurgiens plasticiens, orthodontistes, orthophonistes et pédiatres. Le traitement comprend des réparations chirurgicales par étapes (généralement à 3 mois pour la lèvre, 9-12 mois pour le palais), orthophonie, soins dentaires et soutien psychologique avec d'excellents résultats esthétiques et fonctionnels."
+    },
+    "q4": {
+      "question": "Quel est le taux de succès du traitement du cancer pédiatrique en Inde ?",
+      "answer": "Les principaux centres d'oncologie pédiatrique indiens rapportent des taux de survie de 70-85% pour les cancers infantiles courants comme la leucémie et le lymphome. Le traitement comprend chimiothérapie, radiothérapie, chirurgie et greffe de moelle osseuse avec des équipes d'oncologie pédiatrique dédiées, des installations adaptées aux enfants et des soins de soutien complets."
+    },
+    "q5": {
+      "question": "Les familles internationales sont-elles soutenues pendant le traitement de leur enfant en Inde ?",
+      "answer": "Oui, les hôpitaux indiens fournissent un soutien complet incluant coordinateurs de patients internationaux, assistance visa, transferts aéroport, hébergement familial, interprètes linguistiques, spécialistes de la vie de l'enfant et assistance avec la logistique du tourisme médical pour assurer une expérience de traitement confortable aux familles internationales."
+    }
   }
 }

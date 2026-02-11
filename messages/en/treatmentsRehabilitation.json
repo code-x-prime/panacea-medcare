@@ -32,5 +32,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What types of rehabilitation services are available in India?",
+      "answer": "India offers comprehensive rehabilitation including physiotherapy, occupational therapy, speech therapy, neuro-rehabilitation for stroke and brain injury, cardiac rehabilitation, orthopedic rehabilitation, sports medicine, pain management, and aquatic therapy. Centers have multidisciplinary teams with advanced equipment and personalized treatment protocols."
+    },
+    "q2": {
+      "question": "How effective is stroke rehabilitation in India?",
+      "answer": "Indian neuro-rehabilitation centers report 60-80% functional improvement in stroke patients using evidence-based protocols including constraint-induced movement therapy, robotic-assisted therapy, virtual reality rehabilitation, and intensive physiotherapy. Early intervention and comprehensive multidisciplinary care optimize recovery outcomes."
+    },
+    "q3": {
+      "question": "What is the duration of post-surgical rehabilitation programs in India?",
+      "answer": "Duration varies by surgery type. Joint replacement rehabilitation typically requires 6-12 weeks, cardiac surgery 8-12 weeks, and spinal surgery 12-16 weeks. Programs include inpatient intensive therapy followed by outpatient sessions. Indian centers offer flexible programs tailored to individual recovery needs and international patient schedules."
+    },
+    "q4": {
+      "question": "Are advanced pain management techniques available in India?",
+      "answer": "Yes, Indian pain management centers offer comprehensive treatments including interventional procedures (epidural injections, nerve blocks, radiofrequency ablation), medication management, physical therapy, acupuncture, TENS therapy, and psychological counseling. Multidisciplinary approach ensures effective chronic pain relief."
+    },
+    "q5": {
+      "question": "Can athletes get specialized sports rehabilitation in India?",
+      "answer": "Absolutely. India has dedicated sports medicine centers offering advanced rehabilitation for sports injuries including ACL reconstruction recovery, rotator cuff repair, concussion management, and performance optimization. Services include biomechanical analysis, strength conditioning, return-to-sport protocols, and injury prevention programs."
+    }
   }
 }

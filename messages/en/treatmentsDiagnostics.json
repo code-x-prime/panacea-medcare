@@ -36,5 +36,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What advanced imaging technologies are available in India?",
+      "answer": "Indian diagnostic centers offer cutting-edge imaging including 3 Tesla MRI, 128-slice and higher CT scanners, PET-CT, digital mammography, 4D ultrasound, and advanced cardiac imaging. Many centers have AI-enabled diagnostic tools for enhanced accuracy and faster reporting with internationally trained radiologists."
+    },
+    "q2": {
+      "question": "How accurate are AI-enabled diagnostic services in India?",
+      "answer": "AI-enabled diagnostics in India achieve 95-98% accuracy rates for conditions like lung nodules, breast cancer screening, and stroke detection. These systems assist radiologists in faster detection, reduce human error, and provide second opinions. All AI-assisted reports are verified by experienced radiologists before final reporting."
+    },
+    "q3": {
+      "question": "Can I get same-day diagnostic reports in India?",
+      "answer": "Yes, most Indian diagnostic centers provide same-day reports for routine tests like blood work, X-rays, and ultrasounds. Advanced imaging like MRI and CT scans typically have 24-48 hour turnaround times. Emergency cases receive priority reporting within hours. Digital reports are accessible online for international patients."
+    },
+    "q4": {
+      "question": "What is interventional radiology and how is it performed in India?",
+      "answer": "Interventional radiology uses image-guided minimally invasive procedures to diagnose and treat conditions. Indian hospitals offer advanced IR procedures including angiography, angioplasty, embolization for tumors and bleeding, biopsies, drainage procedures, and cancer treatments like radiofrequency ablation with experienced interventional radiologists."
+    },
+    "q5": {
+      "question": "Are molecular diagnostics and genetic testing available in India?",
+      "answer": "Yes, leading Indian diagnostic centers offer comprehensive molecular diagnostics including cancer genomic profiling, genetic testing for hereditary conditions, pharmacogenomics, liquid biopsy, NGS (Next Generation Sequencing), and precision medicine diagnostics at significantly lower costs than Western countries with international quality standards."
+    }
   }
 }

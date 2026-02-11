@@ -32,5 +32,28 @@
   "cta": {
     "consultation": "Get a Free Consultation",
     "quote": "Get Treatment Quote"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "What mental health services are available in India for international patients?",
+      "answer": "India offers comprehensive mental health services including psychiatric evaluation, individual and group psychotherapy, cognitive-behavioral therapy (CBT), dialectical behavior therapy (DBT), medication management, inpatient psychiatric care, and holistic wellness programs. Many centers have English-speaking therapists experienced with international patients."
+    },
+    "q2": {
+      "question": "How effective is treatment for depression and anxiety in India?",
+      "answer": "Indian mental health centers report 70-80% improvement rates for depression and anxiety using evidence-based treatments including medications (SSRIs, SNRIs), psychotherapy (CBT, mindfulness-based therapy), and integrated approaches. Treatment plans are personalized, and most patients experience significant symptom relief within 6-12 weeks."
+    },
+    "q3": {
+      "question": "What types of addiction treatment programs are available in India?",
+      "answer": "India offers comprehensive addiction treatment including medical detoxification, residential rehabilitation programs (30-90 days), outpatient counseling, 12-step programs, cognitive-behavioral therapy, family therapy, relapse prevention training, and aftercare support. Centers provide holistic care combining medical treatment with yoga, meditation, and lifestyle modification."
+    },
+    "q4": {
+      "question": "Is mental health treatment confidential in India?",
+      "answer": "Yes, Indian mental health professionals strictly adhere to patient confidentiality as per the Mental Healthcare Act 2017 and international ethical standards. All consultations, treatments, and medical records are kept confidential. Privacy and dignity of patients are paramount, and information is only shared with explicit patient consent."
+    },
+    "q5": {
+      "question": "Can I combine traditional wellness practices with mental health treatment in India?",
+      "answer": "Absolutely. Many Indian mental health centers offer integrative approaches combining modern psychiatry and psychotherapy with traditional practices like yoga, meditation, Ayurveda, and mindfulness. This holistic approach addresses mental, physical, and spiritual well-being, providing comprehensive healing and stress management."
+    }
   }
 }

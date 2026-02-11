@@ -272,7 +272,7 @@ export default function LeadList({ leads = [] }) {
                     <td className="px-4 sm:px-6 py-4 whitespace-nowrap hidden lg:table-cell">
                       <div className="flex items-center text-sm text-gray-600">
                         <Calendar className="w-3 h-3 mr-2 text-gray-400" />
-                        {new Date(lead.createdAt).toLocaleDateString()}
+                        {new Date(lead.createdAt).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}
                       </div>
                     </td>
                     <td className="px-4 sm:px-6 py-4 whitespace-nowrap">

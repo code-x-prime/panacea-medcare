@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button";
 import { FaCalendarCheck, FaSpinner, FaCheckCircle } from "react-icons/fa";
 import { COUNTRIES } from "@/lib/countries";
 
-export default function QuoteForm({ trigger, className, embedded = false }) {
+export default function QuoteForm({ trigger, embedded = false }) {
   const t = useTranslations("quoteForm");
   const locale = useLocale();
   const isRTL = locale === "ar";
@@ -41,7 +41,7 @@ export default function QuoteForm({ trigger, className, embedded = false }) {
     medicalProblem: "",
   });
 
-  const countries = COUNTRIES.map((c) => ({ ...c, label: t(c.value) || c.label }));
+  const countries = COUNTRIES;
   const phoneCodes = countries.map((country) => ({
     value: country.code,
     label: `${country.code} (${country.label})`,

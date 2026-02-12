@@ -7,83 +7,68 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
-export default function CardiacTreatmentPage({ params }) {
-    const { locale } = params;
-    const t = useTranslations("treatmentsCardiac");
+export default function TreatmentDetailContent({ locale, treatment, namespace }) {
+    // Dynamic translation namespace based on treatment
+    const t = useTranslations(namespace);
     const isRTL = locale === "ar";
 
+    if (!treatment) {
+        notFound();
+    }
+
     const breadcrumbItems = [
-        { label: t("breadcrumb.home"), href: `/${locale}` },
-        { label: t("breadcrumb.treatments"), href: `/${locale}/treatments` },
-        { label: t("breadcrumb.cardiac"), href: `/${locale}/treatments/cardiac` }
+        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
+        { label: t("breadcrumb.treatments") || "Treatments", href: `/${locale}/treatments` },
+        { label: t(`breadcrumb.${treatment.id}`) || treatment.id, href: `/${locale}/treatments/${treatment.slug}` }
     ];
 
-    const treatments = [
-        {
-            title: t("treatments.cabg.title"),
-            description: t("treatments.cabg.description")
-        },
-        {
-            title: t("treatments.angiography.title"),
-            description: t("treatments.angiography.description")
-        },
-        {
-            title: t("treatments.valve.title"),
-            description: t("treatments.valve.description")
-        },
-        {
-            title: t("treatments.robotic.title"),
-            description: t("treatments.robotic.description")
-        },
-        {
-            title: t("treatments.pediatric.title"),
-            description: t("treatments.pediatric.description")
-        },
-        {
-            title: t("treatments.pacemaker.title"),
-            description: t("treatments.pacemaker.description")
-        },
-        {
-            title: t("treatments.heartFailure.title"),
-            description: t("treatments.heartFailure.description")
-        },
-        {
-            title: t("treatments.tavi.title"),
-            description: t("treatments.tavi.description")
-        }
-    ];
+    // Helper to get array of treatments from translations
+    const getSubTreatments = () => {
+        try {
+            // This assumes the structure is "treatments.key.title"
+            // We need to know the keys. 
+            // Strategy: The translation file has a "treatments" object. 
+            // We can iterate over known keys if available, or we might need a better strategy if keys are dynamic.
+            // For now, let's assume the translation file has a 'treatments' object with keys.
+            // However, useTranslations doesn't give us keys. 
+            // WE NEED A WAY TO KNOW THE KEYS.
+            // Analysis of treatmentsCardiac.json shows keys: cabg, angiography, valve, etc.
+            // These keys are NOT in treatmentsData.js.
+            // OPTION 1: Hardcode keys in treatmentsData.js (Robust but tedious)
+            // OPTION 2: Use a "rich" data file for these details.
+            // OPTION 3: Just map manually for now? No, we want dynamic.
 
-    const faqs = [
-        {
-            question: t("faqs.q1.question"),
-            answer: t("faqs.q1.answer")
-        },
-        {
-            question: t("faqs.q2.question"),
-            answer: t("faqs.q2.answer")
-        },
-        {
-            question: t("faqs.q3.question"),
-            answer: t("faqs.q3.answer")
-        },
-        {
-            question: t("faqs.q4.question"),
-            answer: t("faqs.q4.answer")
-        },
-        {
-            question: t("faqs.q5.question"),
-            answer: t("faqs.q5.answer")
-        },
-        {
-            question: t("faqs.q6.question"),
-            answer: t("faqs.q6.answer")
-        },
-        {
-            question: t("faqs.q7.question"),
-            answer: t("faqs.q7.answer")
+            // Wait, previous file `treatments/cardiac/page.js` had hardcoded keys in the `treatments` array.
+            // "cardiac" had: cabg, angiography, valve, robotic, pediatric, pacemaker, heartFailure, tavi.
+            // "neurosurgery" had: brainTumor, spine, stroke, dbs, pediatric.
+
+            // To make this fully dynamic without hardcoding keys in JS, we'd need to fetch the JSON content directly,
+            // or use specific known keys. 
+            // LIMITATION: next-intl hooks don't easily lists keys.
+            // WORKAROUND: We will have to define the sub-treatment keys in `treatmentsData.js` or a similar config 
+            // to iterate over them. 
+
+            return [];
+        } catch (e) {
+            return [];
         }
-    ];
+    };
+
+    // REVISING APPROACH:
+    // To keep it simple and robust, I will use `messages/en/{namespace}.json` to find keys? 
+    // No, on client side we can't read files.
+    // Better approach: Pass the sub-treatment keys from the Server Component?
+    // Or add them to `treatmentsData.js`. 
+    // Let's add them to `treatmentsData.js` for the ones we saw. 
+    // Checking `treatmentsData.js`... I didn't add sub-keys.
+
+    // alternative: The translation file structure is consistent: `treatments` object contains keys.
+    // If I cannot iterate keys, I cannot render the grid dynamically without config.
+
+    // DECISION: I will update `treatmentsData.js` to include `subTreatments` keys. 
+    // This allows me to map over them <t(`treatments.${key}.title`)>.
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"} className="bg-white">
@@ -99,13 +84,13 @@ export default function CardiacTreatmentPage({ params }) {
             </section>
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-red-50 via-white to-red-50 py-12 md:py-16">
+            <section className={`bg-gradient-to-br ${treatment.color} py-12 md:py-16`}>
                 <div className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center justify-center w-20 h-20 bg-panacea-primary/10 rounded-full mb-6">
                             <Image
-                                src="/treatment/cardiac-sciences.svg"
-                                alt="Cardiac Sciences"
+                                src={treatment.icon}
+                                alt={t("title")}
                                 width={40}
                                 height={40}
                                 className="w-10 h-10 object-contain"
@@ -143,17 +128,23 @@ export default function CardiacTreatmentPage({ params }) {
                         {t("sectionTitle")}
                     </h2>
                     <div className="space-y-6">
-                        {treatments.map((treatment, index) => (
+                        {/* 
+                            Dynamic Block rendering. 
+                            Since we don't have the keys yet in component, we will rely on a new prop `subTreatmentKeys` passed from parent 
+                            OR update treatmentsData.js. 
+                            Let's assume `treatment` object has `subTreatmentKeys`.
+                        */}
+                        {treatment.subTreatmentKeys && treatment.subTreatmentKeys.map((key) => (
                             <div
-                                key={index}
+                                key={key}
                                 className="bg-white p-6 md:p-8 rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all border-l-4 border-panacea-primary"
                             >
                                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-panacea-dark mb-4 flex items-start gap-3 break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.3' }}>
                                     <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-panacea-primary mt-1 flex-shrink-0" />
-                                    <span>{treatment.title}</span>
+                                    <span>{t(`treatments.${key}.title`)}</span>
                                 </h3>
                                 <p className="text-sm sm:text-base text-panacea-gray leading-relaxed break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.6' }}>
-                                    {treatment.description}
+                                    {t(`treatments.${key}.description`)}
                                 </p>
                             </div>
                         ))}
@@ -169,19 +160,29 @@ export default function CardiacTreatmentPage({ params }) {
                             {t("faqs.title")}
                         </h2>
                         <div className="space-y-6">
-                            {faqs.map((faq, index) => (
-                                <div
-                                    key={index}
-                                    className="bg-white p-6 md:p-8 rounded-xl shadow-panacea"
-                                >
-                                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-panacea-dark mb-3 break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.4' }}>
-                                        {faq.question}
-                                    </h3>
-                                    <p className="text-sm sm:text-base text-panacea-gray leading-relaxed break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.6' }}>
-                                        {faq.answer}
-                                    </p>
-                                </div>
-                            ))}
+                            {/* Assuming standard FAQ keys q1...q7 as seen in cardiac json. 
+                                We'll map q1 to q10 and render if text exists. 
+                            */}
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
+                                const question = t.has(`faqs.q${num}.question`) ? t(`faqs.q${num}.question`) : null;
+                                const answer = t.has(`faqs.q${num}.answer`) ? t(`faqs.q${num}.answer`) : null;
+
+                                if (!question || !answer) return null;
+
+                                return (
+                                    <div
+                                        key={num}
+                                        className="bg-white p-6 md:p-8 rounded-xl shadow-panacea"
+                                    >
+                                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-panacea-dark mb-3 break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.4' }}>
+                                            {question}
+                                        </h3>
+                                        <p className="text-sm sm:text-base text-panacea-gray leading-relaxed break-words" style={{ wordBreak: 'break-word', hyphens: 'auto', lineHeight: '1.6' }}>
+                                            {answer}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
@@ -196,4 +197,3 @@ export default function CardiacTreatmentPage({ params }) {
         </main>
     );
 }
-

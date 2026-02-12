@@ -1,4 +1,29 @@
 import QuoteForm from "@/components/QuoteForm";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({ params: { locale } }) {
+    const t = await getTranslations({ locale, namespace: "consultOnline" });
+
+    return {
+        title: t("title"),
+        description: t("subtitle"),
+        keywords: ["Online Medical Consultation", "Free Doctor Advice", "Virtual Health Assessment", "Remote Diagnosis"],
+        openGraph: {
+            title: t("title"),
+            description: t("subtitle"),
+            url: `https://panaceamedcare.com/${locale}/consult-online`,
+            type: "website",
+            images: [
+                {
+                    url: "/images/og-consult-online.jpg",
+                    width: 1200,
+                    height: 630,
+                    alt: t("title"),
+                },
+            ],
+        },
+    };
+}
 
 export default async function ConsultOnlinePage({ params }) {
     const locale = params.locale || "en";

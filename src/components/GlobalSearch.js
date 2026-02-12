@@ -5,13 +5,12 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Search, X, User, Building2 } from "lucide-react";
 import doctors from "@/data/doctors.json";
-import hospitalsData from "@/data/hospitals.json";
+import { hospitalsData } from "@/data/hospitalsData";
 
-// Get hospitals array from the translations structure
+// Get hospitals array from the map
 const getHospitals = () => {
     try {
-        const hospitals = hospitalsData?.translations?.en?.hospitals || [];
-        return hospitals;
+        return Object.values(hospitalsData);
     } catch (e) {
         return [];
     }
@@ -113,10 +112,16 @@ export default function GlobalSearch({ locale = "en" }) {
         // Search hospitals
         const hospitals = getHospitals();
         const matchedHospitals = hospitals
-            .filter(hosp =>
-                hosp.name?.toLowerCase().includes(lowerQuery) ||
-                hosp.location?.toLowerCase().includes(lowerQuery)
-            )
+            .filter(hosp => {
+                // Search by name (English, Arabic, French) or location
+                const nameMatch = (hosp.name || "").toLowerCase().includes(lowerQuery);
+                const nameArMatch = (hosp.nameAr || "").toLowerCase().includes(lowerQuery);
+                const nameFrMatch = (hosp.nameFr || "").toLowerCase().includes(lowerQuery);
+                const locationMatch = (hosp.address?.city || "").toLowerCase().includes(lowerQuery) ||
+                    (hosp.address?.country || "").toLowerCase().includes(lowerQuery);
+
+                return nameMatch || nameArMatch || nameFrMatch || locationMatch;
+            })
             .slice(0, 5);
 
         setResults({
@@ -258,9 +263,9 @@ export default function GlobalSearch({ locale = "en" }) {
                                             className={`w-full px-4 py-3 hover:bg-[#066F89]/5 transition-colors flex items-center gap-3 ${isRTL ? "flex-row-reverse text-right" : "text-left"}`}
                                         >
                                             <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100 relative">
-                                                {hospital.image ? (
+                                                {hospital.images && hospital.images.length > 0 ? (
                                                     <Image
-                                                        src={hospital.image}
+                                                        src={hospital.images[0]}
                                                         alt={hospital.name}
                                                         fill
                                                         className="object-cover"
@@ -274,7 +279,7 @@ export default function GlobalSearch({ locale = "en" }) {
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <p className="text-sm font-medium text-gray-900 truncate">{hospital.name}</p>
-                                                <p className="text-xs text-gray-500 truncate">{hospital.location}</p>
+                                                <p className="text-xs text-gray-500 truncate">{hospital.address?.city}, {hospital.address?.country}</p>
                                             </div>
                                         </button>
                                     ))}

@@ -10,6 +10,7 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 export default function HomeTestimonials({ locale }) {
     const isRTL = locale === "ar";
@@ -95,9 +96,11 @@ export default function HomeTestimonials({ locale }) {
                                                 {/* Video Thumbnail Container */}
                                                 <div className="relative aspect-video bg-gray-900">
                                                     {/* YouTube Thumbnail */}
-                                                    <img
+                                                    <Image
                                                         src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                                                         alt={`Testimonial ${index + 1}`}
+                                                        width={1280}
+                                                        height={720}
                                                         className="w-full h-full object-cover"
                                                         onError={(e) => {
                                                             e.target.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;

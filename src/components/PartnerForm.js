@@ -65,7 +65,7 @@ export default function PartnerForm({ locale }) {
                     phone: fullPhone,
                     whatsapp: fullWhatsapp,
                     country: formData.country,
-                    message: `Areas of Interest: ${formData.areasOfInterest || "Not specified"}\nMessage: ${formData.message || "No message"}`,
+                    message: `WhatsApp: ${fullWhatsapp}\nAreas of Interest: ${formData.areasOfInterest || "Not specified"}\nMessage: ${formData.message || "No message"}`,
                     source: "partner form",
                     locale: locale,
                     timestamp: new Date().toISOString(),

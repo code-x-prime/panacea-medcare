@@ -45,7 +45,7 @@ export async function POST(request) {
         const budgetRange = formData.get("budgetRange");
         const travelReadiness = formData.get("travelReadiness");
         const assistanceNeeded = formData.get("assistanceNeeded");
-        
+
         const timestamp = formData.get("timestamp") || new Date().toISOString();
 
         // Validation
@@ -59,7 +59,7 @@ export async function POST(request) {
         // File Uploads to Cloudflare R2
         const files = formData.getAll("files");
         const uploadedFileLinks = [];
-        
+
         if (files && files.length > 0) {
             for (const file of files) {
                 if (!file || !file.size) continue;
@@ -195,7 +195,7 @@ export async function POST(request) {
         if (phone) {
             try {
                 const whatsappResult = await sendWhatsApp(
-                    phone, 
+                    phone,
                     `✅ *AI Pre-Screening Request Received*\n\nHello ${patientName},\n\nPanacea Medcare has received your AI Pre-Screening request.\n\n📋 *Reference ID:* #${newLead.id}\n📎 *Documents:* ${uploadedFileLinks.length} uploaded\n\n⏱️ You will receive your AI Pre-Screening Report within *2 hours* via Email and WhatsApp.\n\nThank you for choosing Panacea Medcare!`
                 );
                 whatsappSent = whatsappResult?.success || false;
@@ -291,10 +291,30 @@ export async function POST(request) {
         // Admin WhatsApp
         if (adminPhone) {
             try {
-                await sendWhatsApp(
-                    adminPhone, 
-                    `🔥 *New AI Pre-Screening Lead*\n\n👤 ${patientName}\n📞 ${phone}\n🏥 ${medicalConcern}\n📎 ${uploadedFileLinks.length} files\n\n#${newLead.id}`
-                );
+                const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
+                const adminMsg = `🔥 *New AI Pre-Screening Lead*\n\n` +
+                    `👤 *Patient:* ${patientName}\n` +
+                    `⚧ *Gender/Age:* ${gender} / ${age} (DOB: ${dob})\n` +
+                    `📞 *Phone:* ${phone}\n` +
+                    `📧 *Email:* ${email}\n` +
+                    `🌍 *Location:* ${city ? city + ', ' : ''}${country}\n\n` +
+                    `🏥 *Medical Details:*\n` +
+                    `• *Concern:* ${medicalConcern}\n` +
+                    `• *Diagnosis:* ${specificDiagnosis || 'N/A'}\n` +
+                    `• *Duration:* ${duration || 'N/A'}\n` +
+                    `• *Prev. Tx:* ${previousTreatment || 'N/A'}\n` +
+                    `• *Meds:* ${currentMedications || 'N/A'}\n` +
+                    `• *Allergies:* ${allergies || 'N/A'}\n` +
+                    `• *Conditions:* ${existingConditions || 'N/A'}\n\n` +
+                    `📝 *Symptoms:* ${symptoms ? symptoms.substring(0, 200) + (symptoms.length > 200 ? '...' : '') : 'N/A'}\n\n` +
+                    `✈️ *Preferences:*\n` +
+                    `• *Country:* ${preferredCountry || 'India'}\n` +
+                    `• *City:* ${preferredCity || 'Any'}\n\n` +
+                    `📎 *Files:* ${uploadedFileLinks.length}\n` +
+                    `🔗 *Full Details:* ${adminLink}\n\n` +
+                    `#Ref: ${newLead.id}`;
+
+                await sendWhatsApp(adminPhone, adminMsg);
             } catch (adminWaErr) {
                 console.error("Admin WhatsApp failed:", adminWaErr);
             }

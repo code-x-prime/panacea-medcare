@@ -1,7 +1,14 @@
 import { NextResponse } from "next/server";
 import sendMail from "@/lib/mail";
+import { sendWhatsApp } from "@/lib/whatsapp";
 import env from "@/config/env";
 import { CONTACT_CONFIG } from "@/config/contact";
+
+function toE164(phone) {
+    if (!phone || typeof phone !== "string") return "";
+    const digits = phone.replace(/\D/g, "");
+    return phone.trim().startsWith("+") ? `+${digits}` : digits ? `+${digits}` : phone.trim();
+}
 
 export async function POST(request) {
     try {
@@ -143,20 +150,50 @@ export async function POST(request) {
 </html>
         `;
 
-        // Send email using the same sendMail function as contact form
-        const emailSent = await sendMail({
-            to: env.FROM_EMAIL || CONTACT_CONFIG.adminEmail,
-            subject: `🏥 New Booking: ${doctorName || hospitalName || "General"} - ${name}`,
-            html: emailHTML
-        });
+        // Notification Status
+        let emailSent = false;
+        let whatsappSent = false;
 
-        if (!emailSent) {
-            console.error("Failed to send booking email");
-            // Still return success to user, but log the error
+        // --- 1. Email to Admin ---
+        try {
+            const emailResult = await sendMail({
+                to: env.FROM_EMAIL || CONTACT_CONFIG.adminEmail,
+                subject: `🏥 New Booking: ${doctorName || hospitalName || "General"} - ${name}`,
+                html: emailHTML
+            });
+            emailSent = !!emailResult;
+            if (!emailSent) console.error("Failed to send booking email");
+        } catch (emailErr) {
+            console.error("Booking Email Error:", emailErr);
+        }
+
+        // --- 2. WhatsApp to Admin ---
+        const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
+        if (adminPhone) {
+            try {
+                const adminMsg = `🏥 *New Booking Request*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📧 *Email:* ${email}\n\n🩺 *Doctor:* ${doctorName || "N/A"}\n🔬 *Specialty:* ${doctorSpecialty || "N/A"}\n🏥 *Hospital:* ${hospitalName || "N/A"}\n\n💬 *Message:* ${message || "No message"}`;
+                await sendWhatsApp(adminPhone, adminMsg);
+                whatsappSent = true;
+            } catch (waErr) {
+                console.error("Booking Admin WhatsApp Error:", waErr);
+            }
+        }
+
+        // --- 3. WhatsApp to Patient ---
+        const patientPhone = toE164(phone);
+        if (patientPhone) {
+            try {
+                const patientMsg = `👋 Hello ${name},\n\nWe have received your appointment booking request for *${doctorName || hospitalName || "Panacea Medcare"}*.\n\nOur team will coordinate with the hospital/doctor and confirm your slot shortly.\n\nThank you!`;
+                await sendWhatsApp(patientPhone, patientMsg);
+            } catch (waErr) {
+                console.error("Booking Patient WhatsApp Error:", waErr);
+            }
         }
 
         return NextResponse.json({
             success: true,
+            emailSent,
+            whatsappSent,
             message: "Booking request submitted successfully"
         });
 

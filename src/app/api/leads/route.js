@@ -3,7 +3,14 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getSession } from "@/lib/auth";
 import sendMail from "@/lib/mail";
+import { sendWhatsApp } from "@/lib/whatsapp";
 import env from "@/config/env";
+
+function toE164(phone) {
+  if (!phone || typeof phone !== "string") return "";
+  const digits = phone.replace(/\D/g, "");
+  return phone.trim().startsWith("+") ? `+${digits}` : digits ? `+${digits}` : phone.trim();
+}
 
 // POST create lead (public)
 export async function POST(request) {
@@ -28,7 +35,11 @@ export async function POST(request) {
       },
     });
 
-    // Send email notification to admin with better design
+    // Notification Status Tracking
+    let emailSent = false;
+    let whatsappSent = false;
+
+    // --- 1. Send Email Notification to Admin ---
     try {
       // Get IST time using proper timezone
       const formattedDate = new Date().toLocaleDateString('en-IN', {
@@ -101,6 +112,14 @@ export async function POST(request) {
                   <p style="color: #666; font-size: 12px; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">📍 Source</p>
                   <span style="display: inline-block; background-color: ${source === 'chatbot' ? '#9333ea' : '#066F89'}; color: white; padding: 4px 12px; border-radius: 20px; font-size: 13px; font-weight: 500;">${source || "Website"}</span>
                 </div>
+
+                <!-- Message -->
+                ${message ? `
+                <div style="margin-bottom: 20px;">
+                    <p style="color: #666; font-size: 12px; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">💬 Message</p>
+                    <p style="color: #1a1a1a; font-size: 15px; margin: 0; white-space: pre-wrap;">${message}</p>
+                </div>
+                ` : ''}
                 
                 <!-- Date & Time -->
                 <div>
@@ -131,12 +150,35 @@ export async function POST(request) {
         subject: `🎉 New Lead: ${name || 'Chat User'} - ${source || 'Website'}`,
         html: emailHtml,
       });
+      emailSent = true;
     } catch (emailError) {
       console.error("Error sending lead notification email:", emailError);
-      // Don't fail the request if email fails
     }
 
-    return NextResponse.json(lead, { status: 201 });
+    // --- 2. Send WhatsApp Notification to Admin ---
+    const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
+    if (adminPhone) {
+      try {
+        const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
+        const adminMsg = `🎉 *New Lead Received*\n\n👤 *Name:* ${name || "Guest"}\n📞 *Phone:* ${phone || "N/A"}\n📧 *Email:* ${email || "N/A"}\n🌍 *Country:* ${country || "N/A"}\n📍 *Source:* ${source || "Website"}\n\n💬 *Message:* ${message ? message.substring(0, 500) : "No message"}\n\n🔗 *View Full Details:* ${adminLink}\n\n#LeadID: ${lead.id}`;
+        await sendWhatsApp(adminPhone, adminMsg);
+        whatsappSent = true;
+      } catch (adminWaErr) {
+        console.error("Admin WhatsApp failed:", adminWaErr);
+      }
+    }
+
+    // --- 3. Send WhatsApp Confirmation to User ---
+    if (phone) {
+      try {
+        const userMsg = `👋 Hello ${name || "there"},\n\nThank you for contacting *Panacea Medcare*! \n\n✅ We have received your inquiry. Our medical team will review your details and get back to you shortly.\n\nFor urgent assistance, reply to this message.`;
+        await sendWhatsApp(phone, userMsg);
+      } catch (userWaErr) {
+        console.error("User WhatsApp failed:", userWaErr);
+      }
+    }
+
+    return NextResponse.json({ ...lead, emailSent, whatsappSent }, { status: 201 });
   } catch (error) {
     console.error("Error creating lead:", error);
     return NextResponse.json(

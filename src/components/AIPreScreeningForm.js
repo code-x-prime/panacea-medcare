@@ -1,8 +1,10 @@
 "use client";
 import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { FaFileUpload, FaCheckCircle, FaSpinner, FaTimesCircle, FaFilePdf, FaFileImage, FaFileWord, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { COUNTRIES, getPhoneCodes } from "@/lib/countries";
+import { FaFileUpload, FaCheckCircle, FaSpinner, FaTimesCircle, FaFilePdf, FaFileImage, FaFileWord, FaChevronDown } from "react-icons/fa";
+import { COUNTRIES } from "@/lib/countries";
+import { CountryCombobox } from "@/components/ui/country-combobox";
+import { PhoneCodeCombobox } from "@/components/ui/phone-code-combobox";
 
 const ACCEPTED_TYPES = [
     "application/pdf",
@@ -34,8 +36,14 @@ const INDIAN_CITIES = ["Delhi NCR", "Mumbai", "Chennai", "Bangalore", "Hyderabad
 export default function AIPreScreeningForm({ locale }) {
     const t = useTranslations("aiPrescreening");
     const isRTL = locale === "ar";
-    const phoneCodes = getPhoneCodes();
+    // const phoneCodes = getPhoneCodes(); // Removed as using PhoneCodeCombobox
     const [step, setStep] = useState(1);
+
+    const onCountryChange = (value) => {
+        const country = COUNTRIES.find((c) => c.value === value);
+        const code = country?.code ?? formData.phoneCode;
+        setFormData((prev) => ({ ...prev, country: value, phoneCode: code }));
+    };
 
     const [formData, setFormData] = useState({
         // Step 1: Patient Details
@@ -316,6 +324,8 @@ export default function AIPreScreeningForm({ locale }) {
         );
     }
 
+
+
     const inputClass = "w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none transition-all bg-white";
     const labelClass = "block text-sm font-semibold text-[#003459] mb-1.5";
     const optionalClass = "text-xs text-[#6D7A8A] font-normal";
@@ -389,14 +399,15 @@ export default function AIPreScreeningForm({ locale }) {
                                     )}
                                 </div>
 
+
+
                                 <div>
                                     <label className={labelClass}>{t("step1.country")} *</label>
-                                    <select name="country" value={formData.country} onChange={handleInputChange} className={inputClass}>
-                                        <option value="">{t("step1.countryPlaceholder")}</option>
-                                        {COUNTRIES.map((c) => (
-                                            <option key={c.value} value={c.label}>{c.label}</option>
-                                        ))}
-                                    </select>
+                                    <CountryCombobox
+                                        value={formData.country}
+                                        onValueChange={onCountryChange}
+                                        placeholder={t("step1.countryPlaceholder")}
+                                    />
                                 </div>
 
                                 <div>
@@ -407,11 +418,10 @@ export default function AIPreScreeningForm({ locale }) {
                                 <div className="md:col-span-2">
                                     <label className={labelClass}>{t("step1.whatsapp")} <span className="text-xs text-[#FF6B35] font-normal">({t("optional")})</span></label>
                                     <div className="flex gap-2">
-                                        <select name="phoneCode" value={formData.phoneCode} onChange={handleInputChange} className="w-28 px-3 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none bg-white text-sm">
-                                            {phoneCodes.map((pc) => (
-                                                <option key={pc.value} value={pc.value}>{pc.label}</option>
-                                            ))}
-                                        </select>
+                                        <PhoneCodeCombobox
+                                            value={formData.phoneCode}
+                                            onValueChange={(value) => setFormData({ ...formData, phoneCode: value })}
+                                        />
                                         <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleInputChange} className="flex-1 px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#066F89] outline-none" placeholder={t("step1.whatsappPlaceholder")} />
                                     </div>
                                     {!formData.phoneNumber && !formData.email && (

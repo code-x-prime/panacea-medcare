@@ -293,25 +293,33 @@ export async function POST(request) {
             try {
                 const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
                 const adminMsg = `🔥 *New AI Pre-Screening Lead*\n\n` +
-                    `👤 *Patient:* ${patientName}\n` +
-                    `⚧ *Gender/Age:* ${gender} / ${age} (DOB: ${dob})\n` +
-                    `📞 *Phone:* ${phone}\n` +
-                    `📧 *Email:* ${email}\n` +
-                    `🌍 *Location:* ${city ? city + ', ' : ''}${country}\n\n` +
-                    `🏥 *Medical Details:*\n` +
-                    `• *Concern:* ${medicalConcern}\n` +
-                    `• *Diagnosis:* ${specificDiagnosis || 'N/A'}\n` +
-                    `• *Duration:* ${duration || 'N/A'}\n` +
-                    `• *Prev. Tx:* ${previousTreatment || 'N/A'}\n` +
-                    `• *Meds:* ${currentMedications || 'N/A'}\n` +
-                    `• *Allergies:* ${allergies || 'N/A'}\n` +
-                    `• *Conditions:* ${existingConditions || 'N/A'}\n\n` +
-                    `📝 *Symptoms:* ${symptoms ? symptoms.substring(0, 200) + (symptoms.length > 200 ? '...' : '') : 'N/A'}\n\n` +
-                    `✈️ *Preferences:*\n` +
-                    `• *Country:* ${preferredCountry || 'India'}\n` +
-                    `• *City:* ${preferredCity || 'Any'}\n\n` +
+                    `👤 *Patient Details:*\n` +
+                    `• Name: ${patientName}\n` +
+                    `• Gender/Age: ${gender} / ${age} (DOB: ${dob})\n` +
+                    `• Nationality: ${nationality || 'N/A'}\n` +
+                    `• Location: ${city ? city + ', ' : ''}${country}\n\n` +
+                    `📞 *Contact Info:*\n` +
+                    `• Phone: ${phone}\n` +
+                    `• Email: ${email}\n` +
+                    `• Preferred Comm: ${preferredComm || 'N/A'}\n\n` +
+                    `🏥 *Medical Profile:*\n` +
+                    `• Concern: ${medicalConcern}\n` +
+                    `• Diagnosis: ${specificDiagnosis || 'N/A'}\n` +
+                    `• Duration: ${duration || 'N/A'}\n` +
+                    `• Previous Tx: ${previousTreatment || 'N/A'}\n` +
+                    `• Tx Details: ${treatmentDetails || 'N/A'}\n` +
+                    `• Medications: ${currentMedications || 'N/A'}\n` +
+                    `• Allergies: ${allergies || 'N/A'}\n` +
+                    `• Conditions: ${existingConditions || 'N/A'}\n\n` +
+                    `📝 *Symptoms:* ${symptoms ? symptoms.substring(0, 500) : 'N/A'}\n\n` +
+                    `✈️ *Preferences & Logistics:*\n` +
+                    `• Pref. Country: ${preferredCountry || 'India'}\n` +
+                    `• Pref. City: ${preferredCity || 'Any'}\n` +
+                    `• Budget: ${budgetRange || 'N/A'}\n` +
+                    `• Travel Ready: ${travelReadiness || 'N/A'}\n` +
+                    `• Assistance: ${assistanceNeeded || 'N/A'}\n\n` +
                     `📎 *Files:* ${uploadedFileLinks.length}\n` +
-                    `🔗 *Full Details:* ${adminLink}\n\n` +
+                    `🔗 *Full Report:* ${adminLink}\n\n` +
                     `#Ref: ${newLead.id}`;
 
                 await sendWhatsApp(adminPhone, adminMsg);

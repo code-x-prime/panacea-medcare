@@ -160,7 +160,17 @@ export async function POST(request) {
     if (adminPhone) {
       try {
         const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
-        const adminMsg = `🎉 *New Lead Received*\n\n👤 *Name:* ${name || "Guest"}\n📞 *Phone:* ${phone || "N/A"}\n📧 *Email:* ${email || "N/A"}\n🌍 *Country:* ${country || "N/A"}\n📍 *Source:* ${source || "Website"}\n\n💬 *Message:* ${message ? message.substring(0, 500) : "No message"}\n\n🔗 *View Full Details:* ${adminLink}\n\n#LeadID: ${lead.id}`;
+        const adminMsg = `🎉 *New Lead Received*\n\n` +
+          `👤 *Contact Details:*\n` +
+          `• Name: ${name || "Guest"}\n` +
+          `• Phone: ${phone || "N/A"}\n` +
+          `• Email: ${email || "N/A"}\n` +
+          `• Country: ${country || "N/A"}\n\n` +
+          `📍 *Source:* ${source || "Website"}\n\n` +
+          `💬 *Message:*\n${message ? message.substring(0, 1000) : "No message"}\n\n` +
+          `🔗 *Full Details:* ${adminLink}\n\n` +
+          `#LeadID: ${lead.id}`;
+
         await sendWhatsApp(adminPhone, adminMsg);
         whatsappSent = true;
       } catch (adminWaErr) {

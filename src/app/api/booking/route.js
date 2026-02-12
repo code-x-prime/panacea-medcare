@@ -171,7 +171,17 @@ export async function POST(request) {
         const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
         if (adminPhone) {
             try {
-                const adminMsg = `🏥 *New Booking Request*\n\n👤 *Name:* ${name}\n📞 *Phone:* ${phone}\n📧 *Email:* ${email}\n\n🩺 *Doctor:* ${doctorName || "N/A"}\n🔬 *Specialty:* ${doctorSpecialty || "N/A"}\n🏥 *Hospital:* ${hospitalName || "N/A"}\n\n💬 *Message:* ${message || "No message"}`;
+                const adminMsg = `🏥 *New Booking Request*\n\n` +
+                    `👤 *Patient Details:*\n` +
+                    `• Name: ${name}\n` +
+                    `• Phone: ${phone}\n` +
+                    `• Email: ${email}\n\n` +
+                    `🩺 *Appointment Info:*\n` +
+                    `• Doctor: ${doctorName || "N/A"}\n` +
+                    `• Specialty: ${doctorSpecialty || "N/A"}\n` +
+                    `• Hospital: ${hospitalName || "N/A"}\n\n` +
+                    `💬 *Message:*\n${message || "No message"}`;
+
                 await sendWhatsApp(adminPhone, adminMsg);
                 whatsappSent = true;
             } catch (waErr) {

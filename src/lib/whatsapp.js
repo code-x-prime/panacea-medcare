@@ -2,7 +2,7 @@ import twilio from "twilio";
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const fromWhatsapp = process.env.TWILIO_WHATSAPP_NUMBER || "whatsapp:+14155238886"; // Twilio Sandbox default
+const fromWhatsapp = process.env.TWILIO_WHATSAPP_NUMBER || "whatsapp:+14155238886";
 
 // Initialize only if keys exist
 const client = (accountSid && authToken) ? twilio(accountSid, authToken) : null;
@@ -23,10 +23,15 @@ export async function sendWhatsApp(to, body) {
             to: toWhatsapp,
         });
 
-        console.log("WhatsApp sent:", message.sid);
+
         return { success: true, sid: message.sid };
     } catch (error) {
-        console.error("Twilio Send Error:", error);
-        return { success: false, error: error.message };
+        console.error("Twilio Send Error Details:", JSON.stringify(error, Object.getOwnPropertyNames(error), 2));
+        return {
+            success: false,
+            error: error.message,
+            code: error.code,
+            moreInfo: error.moreInfo
+        };
     }
 }

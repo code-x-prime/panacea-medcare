@@ -11,6 +11,7 @@ import MultiSpecialtyFocus from '@/components/MultiSpecialtyFocus';
 import NeedAssistanceButton from '@/components/NeedAssistanceButton';
 import WhyChoosePanacea from '@/components/WhyChoosePanacea';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import BlogSection from '@/components/BlogSection';
 import CaseStudies from '@/components/CaseStudies';
 // import HomeCaseStudiesPreview from '@/components/HomeCaseStudiesPreview';
 import HomeOfficesPreview from '@/components/HomeOfficesPreview';
@@ -37,6 +38,7 @@ export default function HomePage({ params }) {
       <OurServices locale={locale} />
       <CaseStudies />
       <FAQ locale={locale} />
+      <BlogSection locale={locale} />
     </div>
   );
 }

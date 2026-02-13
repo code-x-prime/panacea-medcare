@@ -24,51 +24,7 @@ export default function TreatmentDetailContent({ locale, treatment, namespace })
         { label: t(`breadcrumb.${treatment.id}`) || treatment.id, href: `/${locale}/treatments/${treatment.slug}` }
     ];
 
-    // Helper to get array of treatments from translations
-    const getSubTreatments = () => {
-        try {
-            // This assumes the structure is "treatments.key.title"
-            // We need to know the keys. 
-            // Strategy: The translation file has a "treatments" object. 
-            // We can iterate over known keys if available, or we might need a better strategy if keys are dynamic.
-            // For now, let's assume the translation file has a 'treatments' object with keys.
-            // However, useTranslations doesn't give us keys. 
-            // WE NEED A WAY TO KNOW THE KEYS.
-            // Analysis of treatmentsCardiac.json shows keys: cabg, angiography, valve, etc.
-            // These keys are NOT in treatmentsData.js.
-            // OPTION 1: Hardcode keys in treatmentsData.js (Robust but tedious)
-            // OPTION 2: Use a "rich" data file for these details.
-            // OPTION 3: Just map manually for now? No, we want dynamic.
 
-            // Wait, previous file `treatments/cardiac/page.js` had hardcoded keys in the `treatments` array.
-            // "cardiac" had: cabg, angiography, valve, robotic, pediatric, pacemaker, heartFailure, tavi.
-            // "neurosurgery" had: brainTumor, spine, stroke, dbs, pediatric.
-
-            // To make this fully dynamic without hardcoding keys in JS, we'd need to fetch the JSON content directly,
-            // or use specific known keys. 
-            // LIMITATION: next-intl hooks don't easily lists keys.
-            // WORKAROUND: We will have to define the sub-treatment keys in `treatmentsData.js` or a similar config 
-            // to iterate over them. 
-
-            return [];
-        } catch (e) {
-            return [];
-        }
-    };
-
-    // REVISING APPROACH:
-    // To keep it simple and robust, I will use `messages/en/{namespace}.json` to find keys? 
-    // No, on client side we can't read files.
-    // Better approach: Pass the sub-treatment keys from the Server Component?
-    // Or add them to `treatmentsData.js`. 
-    // Let's add them to `treatmentsData.js` for the ones we saw. 
-    // Checking `treatmentsData.js`... I didn't add sub-keys.
-
-    // alternative: The translation file structure is consistent: `treatments` object contains keys.
-    // If I cannot iterate keys, I cannot render the grid dynamically without config.
-
-    // DECISION: I will update `treatmentsData.js` to include `subTreatments` keys. 
-    // This allows me to map over them <t(`treatments.${key}.title`)>.
 
     return (
         <main dir={isRTL ? "rtl" : "ltr"} className="bg-white">

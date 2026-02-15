@@ -4,10 +4,12 @@ import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight, FaCalendarCheck } from "react-icons/fa";
+import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight, FaCalendarCheck, FaPlane } from "react-icons/fa";
 import { getHospitalBySlug } from "@/data/hospitalsData";
 import doctorsData from "@/data/doctors.json";
 import BookingModal from "@/components/BookingModal";
+import QuoteForm from "@/components/QuoteForm";
+import FacilitiesInfrastructureTabs from "@/components/FacilitiesInfrastructureTabs";
 import Link from "next/link";
 
 // Contact config embedded directly or should be imported if available. 
@@ -19,7 +21,7 @@ const CONTACT_CONFIG = {
 export default function HospitalDetailContent({ params }) {
     const { locale, slug } = params;
     const isRTL = locale === "ar";
-    const t = useTranslations("hospitals");
+    const t = useTranslations("hospitalDetail");
 
     // Find hospital using helper
     const hospital = getHospitalBySlug(slug);
@@ -34,6 +36,7 @@ export default function HospitalDetailContent({ params }) {
     const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
     const [doctorsPerSlide, setDoctorsPerSlide] = useState(3);
     const [selectedVideo, setSelectedVideo] = useState(null);
+    const [activeTab, setActiveTab] = useState("facilities"); // Tab state for Facilities/Infrastructure
 
     // Handle responsive doctors per slide
     useEffect(() => {
@@ -177,7 +180,7 @@ export default function HospitalDetailContent({ params }) {
                                 </div>
                                 <div className={isRTL ? "text-right" : "text-left"}>
                                     <p className="text-sm text-gray-600">
-                                        {hospital.rating?.totalReviews || 0} {t("ratings") || "Ratings"}
+                                        {hospital.rating?.totalReviews || 0} {t("hero.ratings") || "Ratings"}
                                     </p>
                                 </div>
                             </div>
@@ -186,7 +189,7 @@ export default function HospitalDetailContent({ params }) {
                             <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                                 <FaMapMarkerAlt className="w-5 h-5 text-panacea-primary flex-shrink-0" />
                                 <div className={isRTL ? "text-right" : "text-left"}>
-                                    <p className="text-sm font-semibold text-gray-900">{t("location") || "Location"}</p>
+                                    <p className="text-sm font-semibold text-gray-900">{t("hero.location") || "Location"}</p>
                                     <p className="text-sm text-gray-600">
                                         {hospital.address?.city}, {hospital.address?.country}
                                     </p>
@@ -198,7 +201,7 @@ export default function HospitalDetailContent({ params }) {
                                 <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                                     <FaBed className="w-5 h-5 text-panacea-primary flex-shrink-0" />
                                     <div className={isRTL ? "text-right" : "text-left"}>
-                                        <p className="text-sm font-semibold text-gray-900">{t("beds") || "Number of beds"}</p>
+                                        <p className="text-sm font-semibold text-gray-900">{t("hero.beds") || "Number of beds"}</p>
                                         <p className="text-sm text-gray-600">{hospital.beds}</p>
                                     </div>
                                 </div>
@@ -209,7 +212,7 @@ export default function HospitalDetailContent({ params }) {
                                 <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                                     <FaUserMd className="w-5 h-5 text-panacea-primary flex-shrink-0" />
                                     <div className={isRTL ? "text-right" : "text-left"}>
-                                        <p className="text-sm font-semibold text-gray-900">{t("specialty") || "Specialty"}</p>
+                                        <p className="text-sm font-semibold text-gray-900">{t("hero.specialty") || "Specialty"}</p>
                                         <p className="text-sm text-gray-600">{hospital.specialtyType}</p>
                                     </div>
                                 </div>
@@ -220,7 +223,7 @@ export default function HospitalDetailContent({ params }) {
                                 <div className={`flex items-center gap-3 ${isRTL ? "flex-row-reverse" : ""}`}>
                                     <FaCheckCircle className="w-5 h-5 text-panacea-primary flex-shrink-0" />
                                     <div className={isRTL ? "text-right" : "text-left"}>
-                                        <p className="text-sm font-semibold text-gray-900">{t("established") || "Established in"}</p>
+                                        <p className="text-sm font-semibold text-gray-900">{t("hero.established") || "Established in"}</p>
                                         <p className="text-sm text-gray-600">{hospital.establishedYear}</p>
                                     </div>
                                 </div>
@@ -240,7 +243,7 @@ export default function HospitalDetailContent({ params }) {
                                         ))}
                                     </div>
                                     <div className={isRTL ? "text-right" : "text-left"}>
-                                        <p className="text-sm font-semibold text-gray-900">{t("accreditations") || "Accreditations"}</p>
+                                        <p className="text-sm font-semibold text-gray-900">{t("hero.accreditations") || "Accreditations"}</p>
                                     </div>
                                 </div>
                             )}
@@ -256,7 +259,7 @@ export default function HospitalDetailContent({ params }) {
                             }}
                             className="px-8 py-4 bg-panacea-accent hover:bg-panacea-accent/90 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3"
                         >
-                            <span>{t("bookAppointment") || "Book Appointment"}</span>
+                            <span>{t("hero.bookAppointment") || "Book Appointment"}</span>
                         </button>
                         <a
                             href={whatsappUrl}
@@ -265,7 +268,7 @@ export default function HospitalDetailContent({ params }) {
                             className="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-3"
                         >
                             <FaWhatsapp className="w-6 h-6" />
-                            <span>{t("whatsappUs") || "Whatsapp Us"}</span>
+                            <span>{t("hero.whatsappUs") || "Whatsapp Us"}</span>
                         </a>
                     </div>
 
@@ -400,7 +403,7 @@ export default function HospitalDetailContent({ params }) {
                                                 <div className={`flex items-center justify-between ${isRTL ? "flex-row-reverse" : ""}`}>
                                                     <h3 className="font-semibold text-gray-900">{dept.name}</h3>
                                                     <span className="text-panacea-primary font-bold">
-                                                        {dept.doctors} {t("doctors") || "Doctors"}
+                                                        {dept.doctors} {t("doctors.title") || "Doctors"}
                                                     </span>
                                                 </div>
                                             </div>
@@ -413,7 +416,7 @@ export default function HospitalDetailContent({ params }) {
                             {hospitalDoctors && hospitalDoctors.length > 0 && (
                                 <div className="w-full">
                                     <h2 className={`text-2xl md:text-3xl font-bold text-gray-900 mb-4 ${isRTL ? "text-right" : "text-left"}`}>
-                                        {t("doctors") || "Doctors"}
+                                        {t("doctors.title") || "Doctors"}
                                     </h2>
 
                                     {/* Carousel Container - padding for nav buttons so they are not clipped */}
@@ -536,6 +539,114 @@ export default function HospitalDetailContent({ params }) {
                                 </div>
                             )}
 
+                            {/* Hospital Stats - Using infrastructure data */}
+                            {hospital.infrastructure && (
+                                <div className="bg-gradient-to-br from-panacea-primary/5 to-panacea-accent/5 rounded-2xl p-8 border border-panacea-primary/10">
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("stats.title")}
+                                    </h2>
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                                        {hospital.infrastructure.beds && (
+                                            <div className="text-center">
+                                                <div className="text-3xl md:text-4xl font-extrabold text-panacea-primary mb-2">
+                                                    {hospital.infrastructure.beds}
+                                                </div>
+                                                <div className="text-sm text-gray-600 font-medium">
+                                                    {t("stats.totalBeds")}
+                                                </div>
+                                            </div>
+                                        )}
+                                        {hospital.infrastructure.icuBeds && (
+                                            <div className="text-center">
+                                                <div className="text-3xl md:text-4xl font-extrabold text-panacea-primary mb-2">
+                                                    {hospital.infrastructure.icuBeds}
+                                                </div>
+                                                <div className="text-sm text-gray-600 font-medium">
+                                                    {t("stats.icuBeds")}
+                                                </div>
+                                            </div>
+                                        )}
+                                        {hospital.infrastructure.operationTheatres && (
+                                            <div className="text-center">
+                                                <div className="text-3xl md:text-4xl font-extrabold text-panacea-primary mb-2">
+                                                    {hospital.infrastructure.operationTheatres}
+                                                </div>
+                                                <div className="text-sm text-gray-600 font-medium">
+                                                    {t("stats.operationTheatres")}
+                                                </div>
+                                            </div>
+                                        )}
+                                        {hospital.rating?.totalReviews && (
+                                            <div className="text-center">
+                                                <div className="text-3xl md:text-4xl font-extrabold text-panacea-primary mb-2">
+                                                    {hospital.rating.totalReviews}+
+                                                </div>
+                                                <div className="text-sm text-gray-600 font-medium">
+                                                    {t("stats.patientReviews")}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
+
+
+
+                            {/* Facilities & Infrastructure Tabs */}
+                            <FacilitiesInfrastructureTabs
+                                hospital={hospital}
+                                locale={locale}
+                                t={t}
+                                isRTL={isRTL}
+                            />
+
+
+                            {/* Full Description */}
+                            {hospital.about?.full && (
+                                <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
+                                    <h2 className={`text-3xl font-bold text-gray-900 mb-6 ${isRTL ? "text-right" : "text-left"}`}>
+                                        {t("about.title")}
+                                    </h2>
+                                    <div className="prose max-w-none">
+                                        <p className={`text-gray-700 leading-relaxed text-lg ${isRTL ? "text-right" : "text-left"}`}>
+                                            {locale === "ar" ? (hospital.about.fullAr || hospital.about.full) : locale === "fr" ? (hospital.about.fullFr || hospital.about.full) : hospital.about.full}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Location Info */}
+                            {hospital.location && (
+                                <div className="bg-gradient-to-r from-panacea-primary to-panacea-secondary rounded-2xl p-8 text-white shadow-xl">
+                                    <h2 className="text-2xl font-bold mb-6">Location & Accessibility</h2>
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        {hospital.location.airportKm && (
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <FaPlane className="w-8 h-8" />
+                                                </div>
+                                                <div>
+                                                    <div className="text-3xl font-extrabold">{hospital.location.airportKm} km</div>
+                                                    <div className="text-white/90">From Airport</div>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {hospital.location.metroKm && (
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+                                                    <FaMapMarkerAlt className="w-8 h-8" />
+                                                </div>
+                                                <div>
+                                                    <div className="text-3xl font-extrabold">{hospital.location.metroKm} km</div>
+                                                    <div className="text-white/90">From Metro</div>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+
                             {/* International Patient Services */}
                             {hospital.internationalPatientServices && (
                                 <div>
@@ -571,7 +682,7 @@ export default function HospitalDetailContent({ params }) {
                                             {hospital.infrastructure.totalArea && (
                                                 <li className="flex items-start gap-3">
                                                     <FaCheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
-                                                    <span className="text-gray-700"><strong>{t("totalArea") || "Total Area:"}</strong> {hospital.infrastructure.totalArea}</span>
+                                                    <span className="text-gray-700"><strong>{t("facilitiesInfra.totalArea") || "Total Area:"}</strong> {hospital.infrastructure.totalArea}</span>
                                                 </li>
                                             )}
                                         </ul>
@@ -580,6 +691,53 @@ export default function HospitalDetailContent({ params }) {
                             )}
 
                         </div>
+
+                        {/* Sidebar - Quotation Form */}
+                        <aside className="lg:col-span-1 space-y-6">
+                            {/* Quote Form Card */}
+                            <QuoteForm embedded={true} variant="hospital" />
+
+
+                            {/* Hospital Info Card */}
+                            {hospital.address && (
+                                <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-4">Hospital Information</h3>
+                                    <div className="space-y-3 text-sm">
+                                        <div className="flex items-start gap-3">
+                                            <FaMapMarkerAlt className="w-4 h-4 text-panacea-primary mt-1 flex-shrink-0" />
+                                            <div>
+                                                <p className="font-semibold text-gray-900">Address</p>
+                                                <p className="text-gray-600">
+                                                    {hospital.address.street && `${hospital.address.street}, `}
+                                                    {hospital.address.city}, {hospital.address.state && `${hospital.address.state}, `}
+                                                    {hospital.address.country}
+                                                    {hospital.address.zip && ` - ${hospital.address.zip}`}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {hospital.contact?.phone && (
+                                            <div className="flex items-start gap-3">
+                                                <FaWhatsapp className="w-4 h-4 text-panacea-primary mt-1 flex-shrink-0" />
+                                                <div>
+                                                    <p className="font-semibold text-gray-900">Phone</p>
+                                                    <p className="text-gray-600">{hospital.contact.phone}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                        {hospital.contact?.email && (
+                                            <div className="flex items-start gap-3">
+                                                <FaCheckCircle className="w-4 h-4 text-panacea-primary mt-1 flex-shrink-0" />
+                                                <div>
+                                                    <p className="font-semibold text-gray-900">Email</p>
+                                                    <p className="text-gray-600">{hospital.contact.email}</p>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
+                        </aside>
+
                     </div>
                 </div>
             </section>

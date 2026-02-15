@@ -4,7 +4,21 @@
     "bookConsultation": "Book Consultation",
     "established": "Established",
     "beds": "Beds",
-    "specialists": "Specialists"
+    "specialists": "Specialists",
+    "bookAppointment": "Book Appointment",
+    "whatsappUs": "WhatsApp Us",
+    "ratings": "ratings",
+    "location": "Location",
+    "specialty": "Specialty",
+    "accreditations": "Accreditations"
+  },
+  "gallery": "Gallery",
+  "aboutHospital": "About Hospital",
+  "departments": "Departments",
+  "internationalPatientServices": "International Patient Services",
+  "infrastructure": "Infrastructure",
+  "services": {
+    "airportPickup": "Airport Pickup"
   },
   "overview": {
     "title": "About the Hospital",
@@ -19,7 +33,7 @@
     "subtitle": "State-of-the-art infrastructure for patient care"
   },
   "doctors": {
-    "title": "Our Expert Doctors",
+    "title": "Doctors",
     "subtitle": "Internationally trained specialists with decades of experience",
     "viewProfile": "View Profile",
     "experience": "years experience"
@@ -33,9 +47,40 @@
     "hours": "Operating Hours"
   },
   "stats": {
+    "title": "Hospital Statistics",
     "patientsServed": "Patients Served Annually",
     "successRate": "Success Rate",
     "departments": "Departments",
-    "internationalPatients": "International Patients"
+    "internationalPatients": "International Patients",
+    "totalBeds": "Total Beds",
+    "icuBeds": "ICU Beds",
+    "operationTheatres": "Operation Theatres",
+    "patientReviews": "Patient Reviews"
+  },
+  "technologies": {
+    "title": "Advanced Technologies"
+  },
+  "facilitiesInfra": {
+    "title": "Facilities & Infrastructure",
+    "facilitiesTab": "Facilities",
+    "infrastructureTab": "Infrastructure",
+    "comfortDuringStay": "Comfort During Stay",
+    "treatmentRelated": "Treatment Related",
+    "foodDining": "Food & Dining",
+    "transportation": "Transportation",
+    "languagesSpoken": "Languages Spoken",
+    "paymentOptions": "Payment Options",
+    "hospitalCapacity": "Hospital Capacity",
+    "totalArea": "Total Area:",
+    "parkingCapacity": "Parking Capacity:",
+    "emergencyServices": "Emergency Services:"
+  },
+  "about": {
+    "title": "About This Hospital"
+  },
+  "location": {
+    "title": "Location & Accessibility",
+    "fromAirport": "From Airport",
+    "fromMetro": "From Metro"
   }
 }

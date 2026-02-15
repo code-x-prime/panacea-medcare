@@ -4,7 +4,21 @@
     "bookConsultation": "Réserver une consultation",
     "established": "Établi",
     "beds": "Lits",
-    "specialists": "Spécialistes"
+    "specialists": "Spécialistes",
+    "bookAppointment": "Prendre rendez-vous",
+    "whatsappUs": "Contactez-nous sur WhatsApp",
+    "ratings": "évaluations",
+    "location": "Emplacement",
+    "specialty": "Spécialité",
+    "accreditations": "Accréditations"
+  },
+  "gallery": "Galerie",
+  "aboutHospital": "À propos de l'hôpital",
+  "departments": "Départements",
+  "internationalPatientServices": "Services aux patients internationaux",
+  "infrastructure": "Infrastructure",
+  "services": {
+    "airportPickup": "Transfert aéroport"
   },
   "overview": {
     "title": "À propos de l'hôpital",
@@ -19,7 +33,7 @@
     "subtitle": "Infrastructure de pointe pour les soins aux patients"
   },
   "doctors": {
-    "title": "Nos médecins experts",
+    "title": "Médecins",
     "subtitle": "Spécialistes formés à l'international avec des décennies d'expérience",
     "viewProfile": "Voir le profil",
     "experience": "années d'expérience"
@@ -33,9 +47,40 @@
     "hours": "Heures d'ouverture"
   },
   "stats": {
+    "title": "Statistiques de l'hôpital",
     "patientsServed": "Patients servis annuellement",
     "successRate": "Taux de réussite",
     "departments": "Départements",
-    "internationalPatients": "Patients internationaux"
+    "internationalPatients": "Patients internationaux",
+    "totalBeds": "Total de lits",
+    "icuBeds": "Lits de soins intensifs",
+    "operationTheatres": "Salles d'opération",
+    "patientReviews": "Avis des patients"
+  },
+  "technologies": {
+    "title": "Technologies avancées"
+  },
+  "facilitiesInfra": {
+    "title": "Installations et infrastructure",
+    "facilitiesTab": "Installations",
+    "infrastructureTab": "Infrastructure",
+    "comfortDuringStay": "Confort pendant le séjour",
+    "treatmentRelated": "Lié au traitement",
+    "foodDining": "Nourriture et restauration",
+    "transportation": "Transport",
+    "languagesSpoken": "Langues parlées",
+    "paymentOptions": "Options de paiement",
+    "hospitalCapacity": "Capacité hospitalière",
+    "totalArea": "Superficie totale:",
+    "parkingCapacity": "Capacité de stationnement:",
+    "emergencyServices": "Services d'urgence:"
+  },
+  "about": {
+    "title": "À propos de cet hôpital"
+  },
+  "location": {
+    "title": "Emplacement et accessibilité",
+    "fromAirport": "Depuis l'aéroport",
+    "fromMetro": "Depuis le métro"
   }
 }

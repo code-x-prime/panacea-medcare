@@ -4,7 +4,21 @@
     "bookConsultation": "احجز استشارة",
     "established": "تأسست",
     "beds": "أسرة",
-    "specialists": "متخصصون"
+    "specialists": "متخصصون",
+    "bookAppointment": "احجز موعد",
+    "whatsappUs": "تواصل عبر واتساب",
+    "ratings": "تقييمات",
+    "location": "الموقع",
+    "specialty": "التخصص",
+    "accreditations": "الاعتمادات"
+  },
+  "gallery": "المعرض",
+  "aboutHospital": "عن المستشفى",
+  "departments": "الأقسام",
+  "internationalPatientServices": "خدمات المرضى الدوليين",
+  "infrastructure": "البنية التحتية",
+  "services": {
+    "airportPickup": "خدمة التوصيل من المطار"
   },
   "overview": {
     "title": "عن المستشفى",
@@ -19,7 +33,7 @@
     "subtitle": "بنية تحتية حديثة لرعاية المرضى"
   },
   "doctors": {
-    "title": "أطباؤنا الخبراء",
+    "title": "الأطباء",
     "subtitle": "متخصصون مدربون دوليًا بخبرة عقود",
     "viewProfile": "عرض الملف الشخصي",
     "experience": "سنوات من الخبرة"
@@ -33,9 +47,40 @@
     "hours": "ساعات العمل"
   },
   "stats": {
+    "title": "إحصائيات المستشفى",
     "patientsServed": "المرضى المخدومون سنويًا",
     "successRate": "معدل النجاح",
     "departments": "الأقسام",
-    "internationalPatients": "المرضى الدوليون"
+    "internationalPatients": "المرضى الدوليون",
+    "totalBeds": "إجمالي الأسرة",
+    "icuBeds": "أسرة العناية المركزة",
+    "operationTheatres": "غرف العمليات",
+    "patientReviews": "تقييمات المرضى"
+  },
+  "technologies": {
+    "title": "التقنيات المتقدمة"
+  },
+  "facilitiesInfra": {
+    "title": "المرافق والبنية التحتية",
+    "facilitiesTab": "المرافق",
+    "infrastructureTab": "البنية التحتية",
+    "comfortDuringStay": "الراحة أثناء الإقامة",
+    "treatmentRelated": "متعلق بالعلاج",
+    "foodDining": "الطعام والمطاعم",
+    "transportation": "النقل",
+    "languagesSpoken": "اللغات المتحدثة",
+    "paymentOptions": "خيارات الدفع",
+    "hospitalCapacity": "سعة المستشفى",
+    "totalArea": "المساحة الإجمالية:",
+    "parkingCapacity": "سعة المواقف:",
+    "emergencyServices": "خدمات الطوارئ:"
+  },
+  "about": {
+    "title": "عن هذا المستشفى"
+  },
+  "location": {
+    "title": "الموقع وسهولة الوصول",
+    "fromAirport": "من المطار",
+    "fromMetro": "من المترو"
   }
 }

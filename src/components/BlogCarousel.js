@@ -83,7 +83,8 @@ export default function BlogCarousel({ posts, locale }) {
 
                                             {/* Read More */}
                                             <div className="flex items-center text-panacea-primary font-bold group-hover/card:translate-x-2 transition-transform duration-300 mt-auto">
-                                                Read Article <ArrowRight className="w-4 h-4 ml-2" />
+                                                {post.categories && post.categories.includes(3) ? "Read Blog" : "Read Article"}
+                                                <ArrowRight className="w-4 h-4 ml-2" />
                                             </div>
                                         </div>
                                     </article>

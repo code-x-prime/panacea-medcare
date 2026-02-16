@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import sendMail from "@/lib/mail";
-import { sendWhatsApp } from "@/lib/whatsapp";
 import env from "@/config/env";
 import { CONTACT_CONFIG } from "@/config/contact";
 
@@ -15,21 +14,23 @@ export async function POST(request) {
         const body = await request.json();
         const { name, phone, email, message, doctorName, doctorSpecialty, hospitalName, timestamp } = body;
 
-        // Validate required fields
-        if (!name || !phone || !email) {
+        // Validate required fields (email optional)
+        if (!name || !phone) {
             return NextResponse.json(
-                { success: false, message: "Name, phone, and email are required" },
+                { success: false, message: "Name and phone are required" },
                 { status: 400 }
             );
         }
 
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return NextResponse.json(
-                { success: false, message: "Please enter a valid email address" },
-                { status: 400 }
-            );
+        // Validate email format only if provided
+        if (email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                return NextResponse.json(
+                    { success: false, message: "Please enter a valid email address" },
+                    { status: 400 }
+                );
+            }
         }
 
         // Format date nicely in IST
@@ -92,7 +93,7 @@ export async function POST(request) {
                 <!-- Email -->
                 <div style="margin-bottom: 0;">
                     <p style="color: #666; font-size: 12px; margin: 0 0 5px 0; text-transform: uppercase; letter-spacing: 1px;">✉️ Email Address</p>
-                    <a href="mailto:${email}" style="color: #066F89; font-size: 16px; font-weight: 600; text-decoration: none;">${email}</a>
+                    <a href="mailto:${email || 'N/A'}" style="color: #066F89; font-size: 16px; font-weight: 600; text-decoration: none;">${email || 'N/A'}</a>
                 </div>
             </div>
 
@@ -167,43 +168,11 @@ export async function POST(request) {
             console.error("Booking Email Error:", emailErr);
         }
 
-        // --- 2. WhatsApp to Admin ---
-        const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
-        if (adminPhone) {
-            try {
-                const adminMsg = `🏥 *New Booking Request*\n\n` +
-                    `👤 *Patient Details:*\n` +
-                    `• Name: ${name}\n` +
-                    `• Phone: ${phone}\n` +
-                    `• Email: ${email}\n\n` +
-                    `🩺 *Appointment Info:*\n` +
-                    `• Doctor: ${doctorName || "N/A"}\n` +
-                    `• Specialty: ${doctorSpecialty || "N/A"}\n` +
-                    `• Hospital: ${hospitalName || "N/A"}\n\n` +
-                    `💬 *Message:*\n${message || "No message"}`;
-
-                await sendWhatsApp(adminPhone, adminMsg);
-                whatsappSent = true;
-            } catch (waErr) {
-                console.error("Booking Admin WhatsApp Error:", waErr);
-            }
-        }
-
-        // --- 3. WhatsApp to Patient ---
-        const patientPhone = toE164(phone);
-        if (patientPhone) {
-            try {
-                const patientMsg = `👋 Hello ${name},\n\nWe have received your appointment booking request for *${doctorName || hospitalName || "Panacea Medcare"}*.\n\nOur team will coordinate with the hospital/doctor and confirm your slot shortly.\n\nThank you!`;
-                await sendWhatsApp(patientPhone, patientMsg);
-            } catch (waErr) {
-                console.error("Booking Patient WhatsApp Error:", waErr);
-            }
-        }
+        // WhatsApp notifications removed - Email only
 
         return NextResponse.json({
             success: true,
             emailSent,
-            whatsappSent,
             message: "Booking request submitted successfully"
         });
 

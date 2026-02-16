@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import sendMail from "@/lib/mail";
-import { sendWhatsApp } from "@/lib/whatsapp";
 
 export async function POST(request) {
     try {
@@ -9,19 +8,19 @@ export async function POST(request) {
 
         const { name, email, phone, treatment, message, hospital, source } = data;
 
-        // Validation
-        if (!name || !email || !phone) {
+        // Validation (only name and phone required, email optional)
+        if (!name || !phone) {
             return NextResponse.json(
-                { success: false, error: "Missing required fields: name, email, phone." },
+                { success: false, error: "Missing required fields: name, phone." },
                 { status: 400 }
             );
         }
 
-        // Save to Database
+        // Save to Database (email as 'N/A' if not provided)
         const newLead = await prisma.lead.create({
             data: {
                 name,
-                email: email || null,
+                email: email || "N/A",
                 phone: phone || null,
                 source: source || "QUOTE_FORM",
                 message: JSON.stringify({
@@ -67,17 +66,7 @@ export async function POST(request) {
             }
         }
 
-        // Send WhatsApp confirmation to patient
-        if (phone) {
-            try {
-                await sendWhatsApp(
-                    phone,
-                    `✅ *Quote Request Received*\n\nHello ${name},\n\nPanacea Medcare has received your quote request for ${hospital || 'treatment'}.\n\n📋 *Reference ID:* #${newLead.id}\n\n⏱️ Our team will contact you within *24 hours* with a personalized treatment plan and cost estimate.\n\nThank you for choosing Panacea Medcare!`
-                );
-            } catch (waErr) {
-                console.error("Patient WhatsApp failed:", waErr);
-            }
-        }
+        // WhatsApp notifications removed - Email only
 
         // Admin Email Notification
         const adminEmail = process.env.FROM_EMAIL || "care@panaceamedcare.com";
@@ -96,7 +85,7 @@ export async function POST(request) {
                         <table style="width: 100%; margin-bottom: 20px;">
                             <tr><td style="padding: 8px 0; color: #666;"><strong>Name:</strong></td><td>${name}</td></tr>
                             <tr><td style="padding: 8px 0; color: #666;"><strong>Phone:</strong></td><td><a href="https://wa.me/${phone.replace(/\D/g, '')}" style="color: #25D366; font-weight: bold;">${phone}</a></td></tr>
-                            <tr><td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td><td><a href="mailto:${email}" style="color: #066F89;">${email}</a></td></tr>
+                            <tr><td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td><td><a href="mailto:${email}" style="color: #066F89;">${email || 'N/A'}</a></td></tr>
                             <tr><td style="padding: 8px 0; color: #666;"><strong>Hospital:</strong></td><td>${hospital || 'Not specified'}</td></tr>
                             <tr><td style="padding: 8px 0; color: #666;"><strong>Treatment:</strong></td><td>${treatment || 'Not specified'}</td></tr>
                             <tr><td style="padding: 8px 0; color: #666;"><strong>Source:</strong></td><td>${source || 'Quote Form'}</td></tr>
@@ -114,24 +103,7 @@ export async function POST(request) {
             console.error("Admin email failed:", adminEmailErr);
         }
 
-        // Admin WhatsApp Notification
-        const adminPhone = process.env.ADMIN_PHONE_NUMBER || "919958800961";
-        if (adminPhone) {
-            try {
-                const adminMsg = `🔥 *New Quote Request*\n\n` +
-                    `👤 *Patient:* ${name}\n` +
-                    `📞 *Phone:* ${phone}\n` +
-                    `📧 *Email:* ${email}\n` +
-                    `🏥 *Hospital:* ${hospital || 'Not specified'}\n` +
-                    `💊 *Treatment:* ${treatment || 'Not specified'}\n` +
-                    `📝 *Message:* ${message || 'None'}\n\n` +
-                    `#Ref: ${newLead.id}`;
-
-                await sendWhatsApp(adminPhone, adminMsg);
-            } catch (adminWaErr) {
-                console.error("Admin WhatsApp failed:", adminWaErr);
-            }
-        }
+        // Admin WhatsApp removed - Email only
 
         return NextResponse.json({
             success: true,

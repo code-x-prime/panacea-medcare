@@ -46,20 +46,20 @@ export default function AdminLayout({ children }) {
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar - Desktop: premium dark with gradient accent */}
-      <aside className="hidden md:flex flex-col w-64 bg-[#0a1628] text-white fixed h-full z-20 shadow-xl shadow-black/20 border-r border-white/5">
+      <aside className="hidden md:flex flex-col w-56 bg-[#0a1628] text-white fixed h-full z-20 shadow-xl shadow-black/20 border-r border-white/5">
         <div className="p-6 border-b border-white/10 bg-gradient-to-b from-white/5 to-transparent">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-panacea-primary to-panacea-dark flex items-center justify-center shadow-lg shadow-panacea-primary/30">
-              <Shield className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-panacea-primary to-panacea-dark flex items-center justify-center shadow-lg shadow-panacea-primary/30">
+              <Shield className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold tracking-tight text-white">Panacea</h1>
-              <p className="text-xs text-white/60">Admin Portal</p>
+              <h1 className="text-lg font-bold tracking-tight text-white">Panacea</h1>
+              <p className="text-[10px] text-white/60">Admin Portal</p>
             </div>
           </div>
         </div>
 
-        <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
+        <nav className="flex-1 p-3 space-y-1 overflow-y-auto">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
             const Icon = item.icon;
@@ -67,19 +67,19 @@ export default function AdminLayout({ children }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 ${isActive
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${isActive
                   ? "bg-gradient-to-r from-panacea-primary to-panacea-primary/90 text-white shadow-lg shadow-panacea-primary/25"
                   : "text-white/70 hover:bg-white/10 hover:text-white"
                   }`}
               >
-                <Icon className="w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">{item.name}</span>
+                <Icon className="w-4 h-4 flex-shrink-0" />
+                <span className="font-medium text-sm">{item.name}</span>
               </Link>
             );
           })}
         </nav>
 
-        <div className="p-4 border-t border-white/10 bg-black/20">
+        <div className="p-3 border-t border-white/10 bg-black/20">
           <LogoutButton />
         </div>
       </aside>
@@ -132,7 +132,7 @@ export default function AdminLayout({ children }) {
       </aside>
 
       {/* Main Content */}
-      <div className="flex-1 md:ml-64 flex flex-col min-h-screen">
+      <div className="flex-1 md:ml-56 flex flex-col min-h-screen">
         {/* Top Header: premium with debounced search */}
         <header className="bg-white border-b border-gray-200/80 sticky top-0 z-10 shadow-sm">
           <div className="px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">

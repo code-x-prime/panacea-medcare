@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import sendMail from "@/lib/mail";
 import { uploadToR2, validatePrescreenFile } from "@/lib/r2";
-import { sendWhatsApp } from "@/lib/whatsapp";
 import env from "@/config/env";
 
 function toE164(phone) {
@@ -48,10 +47,10 @@ export async function POST(request) {
 
         const timestamp = formData.get("timestamp") || new Date().toISOString();
 
-        // Validation
-        if (!patientName || !email || !phone || !country || !gender || !dob) {
+        // Validation (email optional)
+        if (!patientName || !phone || !country || !gender || !dob) {
             return NextResponse.json(
-                { success: false, error: "Missing required fields: name, gender, DOB, email, WhatsApp, country." },
+                { success: false, error: "Missing required fields: name, gender, DOB, phone, country." },
                 { status: 400 }
             );
         }
@@ -121,11 +120,11 @@ export async function POST(request) {
             consentDisclaimer: true,
         };
 
-        // Save to Database
+        // Save to Database (email as 'N/A' if not provided)
         const newLead = await prisma.lead.create({
             data: {
                 name: patientName,
-                email: email || null,
+                email: email || "N/A",
                 phone: phone || null,
                 source: "AI_PRESCREEN",
                 message: JSON.stringify(fullData, null, 2)
@@ -191,18 +190,7 @@ export async function POST(request) {
             }
         }
 
-        // Patient WhatsApp Confirmation
-        if (phone) {
-            try {
-                const whatsappResult = await sendWhatsApp(
-                    phone,
-                    `✅ *AI Pre-Screening Request Received*\n\nHello ${patientName},\n\nPanacea Medcare has received your AI Pre-Screening request.\n\n📋 *Reference ID:* #${newLead.id}\n📎 *Documents:* ${uploadedFileLinks.length} uploaded\n\n⏱️ You will receive your AI Pre-Screening Report within *2 hours* via Email and WhatsApp.\n\nThank you for choosing Panacea Medcare!`
-                );
-                whatsappSent = whatsappResult?.success || false;
-            } catch (waErr) {
-                console.error("Patient WhatsApp failed:", waErr);
-            }
-        }
+        // WhatsApp notifications removed - Email only
 
         // Admin Notifications
         const adminEmail = process.env.FROM_EMAIL || "care@panaceamedcare.com";
@@ -233,7 +221,7 @@ export async function POST(request) {
                     <tr><td style="padding: 8px 0; color: #666; width: 35%;"><strong>Name:</strong></td><td>${patientName}</td></tr>
                     <tr><td style="padding: 8px 0; color: #666;"><strong>Gender / Age:</strong></td><td>${gender} / ${age} years (DOB: ${dob})</td></tr>
                     <tr><td style="padding: 8px 0; color: #666;"><strong>Phone:</strong></td><td><a href="https://wa.me/${phone.replace('+', '')}" style="color: #25D366; font-weight: bold;">${phone}</a></td></tr>
-                    <tr><td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td><td><a href="mailto:${email}" style="color: #066F89;">${email}</a></td></tr>
+                    <tr><td style="padding: 8px 0; color: #666;"><strong>Email:</strong></td><td><a href="mailto:${email || 'N/A'}" style="color: #066F89;">${email || 'N/A'}</a></td></tr>
                     <tr><td style="padding: 8px 0; color: #666;"><strong>Country:</strong></td><td>${country}${city ? `, ${city}` : ''}</td></tr>
                     <tr><td style="padding: 8px 0; color: #666;"><strong>Preferred Comm:</strong></td><td>${preferredComm || 'Not specified'}</td></tr>
                 </table>

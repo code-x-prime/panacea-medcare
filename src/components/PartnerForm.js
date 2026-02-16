@@ -43,9 +43,9 @@ export default function PartnerForm({ locale }) {
         e.preventDefault();
         setIsSubmitting(true);
         setError("");
-
-        if (!formData.name || !formData.email || !formData.phone) {
-            setError(t("error") || "Please fill all required fields");
+        // Validation (email optional)
+        if (!formData.name || !formData.phone) {
+            setError(t("error") || "Please fill all required fields (name and phone)");
             setIsSubmitting(false);
             return;
         }

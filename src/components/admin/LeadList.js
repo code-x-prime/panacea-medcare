@@ -214,84 +214,89 @@ export default function LeadList({ leads = [] }) {
           <table className="w-full">
             <thead className="bg-gradient-to-r from-gray-50 to-gray-50/80 border-b-2 border-gray-100">
               <tr>
-                <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Lead Details</th>
-                <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden md:table-cell">Contact Info</th>
-                <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Source</th>
-                <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Date</th>
-                <th className="px-4 sm:px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
-                <th className="px-4 sm:px-6 py-4 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                <th className="px-3 sm:px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Lead Details</th>
+                <th className="px-3 sm:px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Contact Info</th>
+                <th className="px-3 sm:px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden xl:table-cell">Source</th>
+                <th className="px-3 sm:px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden xl:table-cell">Date</th>
+                <th className="px-3 sm:px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
+                <th className="px-3 sm:px-4 py-3 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {paginatedLeads.length > 0 ? (
                 paginatedLeads.map((lead, idx) => (
                   <tr key={lead.id} className={`hover:bg-panacea-primary/5 transition-colors group ${idx % 2 === 1 ? "bg-gray-50/40" : ""}`}>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 rounded-full bg-panacea-primary/10 flex items-center justify-center text-panacea-primary font-bold text-sm mr-3 flex-shrink-0">
+                        <div className="w-9 h-9 rounded-full bg-panacea-primary/10 flex items-center justify-center text-panacea-primary font-bold text-sm mr-2 flex-shrink-0">
                           {lead.name?.charAt(0) || "?"}
                         </div>
                         <div>
                           <div className="text-sm font-semibold text-gray-900">{lead.name || "Unknown"}</div>
                           <div className="text-xs text-gray-500">ID: #{lead.id}</div>
-                          <div className="md:hidden text-xs text-gray-500 mt-1">
-                            {lead.email || lead.phone}
+                          <div className="lg:hidden text-xs text-gray-500 mt-1">
+                            {lead.email && lead.email !== 'N/A' ? lead.email : (lead.phone || 'No contact')}
                           </div>
                         </div>
                       </div>
                     </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap hidden md:table-cell">
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap hidden lg:table-cell">
                       <div className="flex flex-col gap-1">
-                        {lead.email && (
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Mail className="w-3 h-3 mr-2 text-gray-400" />
-                            {lead.email}
+                        {lead.email && lead.email !== 'N/A' ? (
+                          <div className="flex items-center text-xs text-gray-600">
+                            <Mail className="w-3 h-3 mr-1 text-gray-400" />
+                            <span className="truncate max-w-[180px]">{lead.email}</span>
+                          </div>
+                        ) : (
+                          <div className="flex items-center text-xs text-gray-400 italic">
+                            <Mail className="w-3 h-3 mr-1" />
+                            N/A
                           </div>
                         )}
                         {lead.phone && (
-                          <div className="flex items-center text-sm text-gray-600">
-                            <Phone className="w-3 h-3 mr-2 text-gray-400" />
+                          <div className="flex items-center text-xs text-gray-600">
+                            <Phone className="w-3 h-3 mr-1 text-gray-400" />
                             {lead.phone}
                           </div>
                         )}
-                        {!lead.email && !lead.phone && (
-                          <span className="text-gray-400 text-sm">No contact info</span>
+                        {!lead.phone && (!lead.email || lead.email === 'N/A') && (
+                          <span className="text-gray-400 text-xs italic">No contact info</span>
                         )}
                       </div>
                     </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                      <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getSourceColor(lead.source)}`}>
-                        {lead.source === 'AI_PRESCREEN' ? '🤖 AI Pre-Screen' : lead.source || "Website"}
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap hidden xl:table-cell">
+                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getSourceColor(lead.source)}`}>
+                        {lead.source === 'AI_PRESCREEN' ? '🤖 AI' : lead.source || "Web"}
                       </span>
                       {isAIPrescreen(lead) && parseLeadMessage(lead)?.medical?.concern && (
-                        <p className="text-xs text-gray-500 mt-1 max-w-[150px] truncate">
+                        <p className="text-xs text-gray-500 mt-1 max-w-[120px] truncate">
                           {parseLeadMessage(lead).medical.concern}
                         </p>
                       )}
                     </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap hidden lg:table-cell">
-                      <div className="flex items-center text-sm text-gray-600">
-                        <Calendar className="w-3 h-3 mr-2 text-gray-400" />
-                        {new Date(lead.createdAt).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap hidden xl:table-cell">
+                      <div className="flex items-center text-xs text-gray-600">
+                        <Calendar className="w-3 h-3 mr-1 text-gray-400" />
+                        {new Date(lead.createdAt).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' })}
                       </div>
                     </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap">
-                      <span className={`px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(lead.status)}`}>
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap">
+                      <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(lead.status)}`}>
                         {lead.status || 'New'}
                       </span>
                     </td>
-                    <td className="px-4 sm:px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex items-center justify-end gap-2">
+                    <td className="px-3 sm:px-4 py-3 whitespace-nowrap text-right text-sm font-medium">
+                      <div className="flex items-center justify-end gap-1">
                         <button
                           onClick={() => setSelectedLead(lead)}
-                          className="p-2 text-gray-400 hover:text-panacea-primary hover:bg-panacea-primary/10 rounded-lg transition-colors"
+                          className="p-1.5 text-gray-400 hover:text-panacea-primary hover:bg-panacea-primary/10 rounded-lg transition-colors"
                           title="View Details"
                         >
                           <Eye className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => setDeleteConfirm(lead.id)}
-                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                          className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
                           title="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -401,7 +406,7 @@ export default function LeadList({ leads = [] }) {
 
               {/* Contact Info */}
               <div className="grid sm:grid-cols-2 gap-3">
-                {selectedLead.email && (
+                {selectedLead.email && selectedLead.email !== 'N/A' ? (
                   <a href={`mailto:${selectedLead.email}`} className="flex items-center gap-3 p-4 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors group">
                     <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
                       <Mail className="w-5 h-5 text-white" />
@@ -411,6 +416,16 @@ export default function LeadList({ leads = [] }) {
                       <p className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 break-all">{selectedLead.email}</p>
                     </div>
                   </a>
+                ) : (
+                  <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                    <div className="w-10 h-10 bg-gray-300 rounded-lg flex items-center justify-center">
+                      <Mail className="w-5 h-5 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-500 font-medium">Email</p>
+                      <p className="text-sm font-semibold text-gray-400 italic">N/A</p>
+                    </div>
+                  </div>
                 )}
                 {selectedLead.phone && (
                   <a href={`https://wa.me/${selectedLead.phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 bg-green-50 hover:bg-green-100 rounded-xl transition-colors group">
@@ -546,7 +561,7 @@ export default function LeadList({ leads = [] }) {
 
             {/* Actions */}
             <div className="sticky bottom-0 bg-white p-6 border-t border-gray-100 flex gap-3">
-              {selectedLead.email && (
+              {selectedLead.email && selectedLead.email !== 'N/A' && (
                 <a
                   href={`mailto:${selectedLead.email}`}
                   className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-panacea-primary text-white rounded-xl hover:bg-panacea-dark transition-colors font-medium shadow-lg shadow-panacea-primary/20"

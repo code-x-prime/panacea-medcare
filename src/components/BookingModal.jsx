@@ -38,9 +38,9 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
         setIsSubmitting(true);
         setError("");
 
-        // Validate
-        if (!formData.name || !formData.phone || !formData.email) {
-            setError("Please fill all required fields");
+        // Validate (email optional)
+        if (!formData.name || !formData.phone) {
+            setError("Please fill all required fields (name and phone)");
             setIsSubmitting(false);
             return;
         }

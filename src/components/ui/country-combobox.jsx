@@ -45,7 +45,7 @@ export function CountryCombobox({ value, onValueChange, placeholder = "Select co
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "w-full justify-between bg-white border-2 border-[#066F89]/40 hover:bg-[#066F89]/5 hover:border-[#066F89] focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 shadow-sm h-[46px] px-4 transition-all duration-200",
+            "w-full justify-between bg-white border-2 border-[#066F89]/40 hover:bg-white hover:border-[#066F89] focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 shadow-sm h-[46px] px-4 transition-all duration-200",
             !value && "text-gray-400",
             className
           )}
@@ -60,7 +60,7 @@ export function CountryCombobox({ value, onValueChange, placeholder = "Select co
               <span className="text-gray-500">{placeholder}</span>
             )}
           </span>
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50 text-[#066F89]" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[var(--radix-popover-trigger-width)] max-w-[500px] p-0" align="start" sideOffset={4}>

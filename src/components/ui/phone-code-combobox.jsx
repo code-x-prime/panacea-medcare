@@ -59,7 +59,7 @@ export function PhoneCodeCombobox({ value, onValueChange, className }) {
           role="combobox"
           aria-expanded={open}
           className={cn(
-            "w-[110px] justify-between bg-white border-2 border-[#066F89]/40 hover:bg-[#066F89]/5 hover:border-[#066F89] focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 shadow-sm h-[46px] px-3 transition-all duration-200",
+            "w-[110px] justify-between bg-white border-2 border-[#066F89]/40 hover:bg-white hover:border-[#066F89] focus:border-[#FF6B35] focus:ring-2 focus:ring-[#FF6B35]/20 shadow-sm h-[46px] px-3 transition-all duration-200",
             !value && "text-gray-400",
             className
           )}
@@ -67,7 +67,7 @@ export function PhoneCodeCombobox({ value, onValueChange, className }) {
           <span className="text-sm font-medium text-gray-900 truncate">
             {selectedCode ? selectedCode.value : "Code"}
           </span>
-          <ChevronsUpDown className="ml-1 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="ml-1 h-4 w-4 shrink-0 opacity-50 text-[#066F89]" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[320px] p-0" align="start" sideOffset={4}>

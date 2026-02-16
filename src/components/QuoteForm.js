@@ -39,12 +39,6 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
     medicalProblem: "",
   });
 
-  const countries = COUNTRIES;
-  const phoneCodes = countries.map((country) => ({
-    value: country.code,
-    label: `${country.code} (${country.label})`,
-  }));
-
   const onCountryChange = (value) => {
     const country = COUNTRIES.find((c) => c.value === value);
     const code = country?.code ?? formData.phoneCode;
@@ -319,7 +313,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
     return (
       <div
         dir={isRTL ? "rtl" : "ltr"}
-        className={`relative p-6 rounded-xl border-2 shadow-lg ${isHospitalVariant
+        className={`relative p-6 rounded border-2 shadow-lg ${isHospitalVariant
           ? "bg-[#066F89] border-[#066F89]/50"
           : "bg-white border-[#066F89]/30"
           }`}

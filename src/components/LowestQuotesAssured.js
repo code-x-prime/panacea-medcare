@@ -153,8 +153,8 @@ export default function LowestQuotesAssured({ locale }) {
                         </button>
 
                         {/* Form Content */}
-                        <div className="p-8 md:p-10">
-                            <QuoteForm embedded={true} selectedCountry={selectedTreatment} />
+                        <div>
+                            <QuoteForm embedded={true} selectedCountry={selectedTreatment} variant="hospital" />
                         </div>
                     </div>
                 </div>

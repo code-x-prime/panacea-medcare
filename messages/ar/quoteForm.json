@@ -8,6 +8,8 @@
   "selectCountry": "اختر البلد",
   "city": "المدينة",
   "selectCity": "اختر المدينة",
+  "email": "البريد الإلكتروني",
+  "emailPlaceholder": "بريدك الإلكتروني (اختياري)",
   "phoneNumber": "رقم الهاتف",
   "phonePlaceholder": "رقم هاتفك",
   "whatsappNumber": "رقم واتساب",

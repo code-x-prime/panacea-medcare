@@ -1,0 +1,19 @@
+{
+  "title": "Book Appointment",
+  "name": "Full Name",
+  "namePlaceholder": "Enter your full name",
+  "phone": "Phone Number",
+  "phonePlaceholder": "9999999999",
+  "email": "Email Address",
+  "emailPlaceholder": "your@email.com",
+  "message": "Message",
+  "messageLabelOptional": "Message (Optional)",
+  "messagePlaceholder": "Any specific requirements...",
+  "submit": "Submit Booking Request",
+  "submitting": "Submitting...",
+  "successTitle": "Booking Request Sent!",
+  "successMessage": "We have received your booking request. Our team will contact you shortly to confirm the appointment.",
+  "close": "Close",
+  "errorRequired": "Please fill all required fields (name and phone)",
+  "errorSubmit": "Failed to submit. Please try again."
+}

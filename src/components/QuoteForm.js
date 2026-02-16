@@ -29,6 +29,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     patientName: "",
+    email: "",
     country: "",
     city: "",
     phoneCode: "+91",
@@ -60,7 +61,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
     setIsSubmitting(true);
     setError("");
 
-    // Validate required fields
+    // Validate required fields (email optional)
     if (!formData.patientName || !formData.phoneNumber || !formData.whatsappNumber || !formData.medicalProblem) {
       setError(t("fillRequiredFields") || "Please fill all required fields including WhatsApp number");
       setIsSubmitting(false);
@@ -78,6 +79,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
         },
         body: JSON.stringify({
           name: formData.patientName,
+          email: formData.email,
           phone: fullPhone,
           country: formData.country,
           message: `City: ${formData.city}\nPhone Code: ${formData.phoneCode}\nWhatsApp Code: ${formData.whatsappCode}\nWhatsApp: ${fullWhatsapp}\nMedical Problem: ${formData.medicalProblem}`,
@@ -96,6 +98,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
 
         setFormData({
           patientName: "",
+          email: "",
           country: "",
           city: "",
           phoneCode: "+91",
@@ -111,7 +114,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
           if (!embedded) {
             setOpen(false);
           }
-        }, 3000);
+        }, 5000);
       } else {
         const data = await response.json();
         setError(data.error || t("submitError") || "Failed to submit. Please try again.");
@@ -137,7 +140,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
       <div className={isHospitalVariant ? "space-y-4" : "grid md:grid-cols-2 gap-4"}>
         <div>
           <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
-            {t("patientName")}
+            {t("patientName")} <span className="text-[#FF6B35]">*</span>
           </label>
           <Input
             type="text"
@@ -149,7 +152,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
           />
         </div>
 
-        {/* Country – selecting a country auto-sets phone code (e.g. Nigeria → +234) */}
+        {/* Country – selecting a country auto-sets phone code */}
         <div>
           <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
             {t("country")}
@@ -164,6 +167,20 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
       </div>
 
       <div className="grid gap-4">
+        {/* Email Address - Optional */}
+        <div>
+          <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
+            {t("email") || "Email Address"}
+          </label>
+          <Input
+            type="email"
+            placeholder={t("emailPlaceholder") || "your@email.com"}
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className={`w-full bg-white border-2 border-[#066F89]/40 focus:border-[#FF6B35] focus:ring-2 focus:ring-[#066F89]/30 ${isRTL ? 'text-right' : 'text-left'} shadow-sm`}
+          />
+        </div>
+
         {/* City */}
         <div>
           <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -182,7 +199,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
         {/* Phone Number */}
         <div>
           <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
-            {t("phoneNumber")}
+            {t("phoneNumber")} <span className="text-[#FF6B35]">*</span>
           </label>
           <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
             <PhoneCodeCombobox
@@ -204,7 +221,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
       {/* WhatsApp Number */}
       <div>
         <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
-          {t("whatsappNumber")}
+          {t("whatsappNumber")} <span className="text-[#FF6B35]">*</span>
         </label>
         <div className={`flex gap-2 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <PhoneCodeCombobox
@@ -216,6 +233,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
             placeholder={t("whatsappPlaceholder")}
             value={formData.whatsappNumber}
             onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+            required
             className={`flex-1 bg-white border-2 border-panacea-primary/30 focus:border-panacea-primary focus:ring-2 focus:ring-panacea-primary/20 ${isRTL ? 'text-right' : 'text-left'}`}
           />
         </div>
@@ -224,7 +242,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
       {/* Medical Problem */}
       <div>
         <label className={`block text-sm font-medium mb-1 ${isHospitalVariant ? 'text-white' : 'text-gray-700'} ${isRTL ? 'text-right' : 'text-left'}`}>
-          {t("medicalProblem")}
+          {t("medicalProblem")} <span className="text-[#FF6B35]">*</span>
         </label>
         <textarea
           placeholder={t("medicalProblemPlaceholder")}
@@ -244,12 +262,19 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
         </div>
       )}
 
-      {/* Success Message */}
+      {/* Success Message UI - Beautiful Full Height Overlay when Embedded, or standard when Dialog */}
       {isSuccess && (
-        <div className="bg-[#0BA35A]/10 text-[#0BA35A] p-4 rounded-lg text-center border-2 border-[#0BA35A]/30">
-          <FaCheckCircle className="w-8 h-8 mx-auto mb-2 text-[#0BA35A]" />
-          <p className="font-semibold">{t("submitSuccess") || "Request submitted successfully!"}</p>
-          <p className="text-sm mt-1">{t("successMessage") || "We will contact you shortly."}</p>
+        <div className={`bg-white/95 absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-6 ${embedded ? 'rounded-xl' : ''}`}>
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-bounce">
+            <FaCheckCircle className="w-8 h-8 text-green-600" />
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">{t("submitSuccess") || "Request Received!"}</h3>
+          <p className="text-gray-600 mb-6 max-w-xs">{t("successMessage") || "We'll review your medical problem and send you a quote shortly."}</p>
+          {!embedded && (
+            <Button onClick={() => setOpen(false)} variant="outline" className="border-panacea-primary text-panacea-primary hover:bg-panacea-primary/5">
+              Close
+            </Button>
+          )}
         </div>
       )}
 
@@ -294,7 +319,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
     return (
       <div
         dir={isRTL ? "rtl" : "ltr"}
-        className={`p-6 rounded-xl border-2 shadow-lg ${isHospitalVariant
+        className={`relative p-6 rounded-xl border-2 shadow-lg ${isHospitalVariant
           ? "bg-[#066F89] border-[#066F89]/50"
           : "bg-white border-[#066F89]/30"
           }`}
@@ -332,7 +357,7 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
           </DialogTitle>
           <DialogDescription className="text-sm text-gray-600">{t("description")}</DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-3 mt-2">
+        <form onSubmit={handleSubmit} className="space-y-3 mt-2 relative min-h-[400px]">
           {formFieldsContent}
         </form>
       </DialogContent>

@@ -100,18 +100,34 @@ export default function PartnerForm({ locale }) {
         }
     };
 
+    if (isSuccess) {
+        return (
+            <div className="bg-white p-8 md:p-12 rounded-2xl border-2 border-panacea-primary/30 shadow-panacea-lg flex flex-col items-center justify-center text-center min-h-[400px]">
+                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 animate-bounce">
+                    <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{t("successTitle") || "Thank You!"}</h3>
+                <p className="text-gray-600 mb-8 max-w-md">
+                    {t("successMessage") || "We have received your partnership request. Our team will review your profile and get back to you shortly."}
+                </p>
+                <button
+                    onClick={() => setIsSuccess(false)}
+                    className="px-8 py-3 bg-panacea-primary text-white rounded-xl font-semibold hover:bg-panacea-dark transition-colors shadow-lg shadow-panacea-primary/20"
+                >
+                    Submit Another Request
+                </button>
+            </div>
+        );
+    }
+
     return (
         <div className="bg-white p-6 md:p-8 rounded-2xl border-2 border-panacea-primary/30 shadow-panacea-lg">
             <form className="space-y-6" onSubmit={handleSubmit}>
                 {error && (
                     <div className="bg-[#FF6B35]/10 text-[#FF6B35] p-3 rounded-lg text-sm border-2 border-[#FF6B35]/30">
                         {error}
-                    </div>
-                )}
-
-                {isSuccess && (
-                    <div className="bg-[#0BA35A]/10 text-[#0BA35A] p-4 rounded-lg text-center border-2 border-[#0BA35A]/30">
-                        <p className="font-semibold">{t("success")}</p>
                     </div>
                 )}
 
@@ -130,10 +146,10 @@ export default function PartnerForm({ locale }) {
                     />
                 </div>
 
-                {/* Email */}
+                {/* Email (Optional) */}
                 <div>
                     <label className={`block text-sm font-medium text-panacea-dark mb-2 ${isRTL ? "text-right" : "text-left"}`}>
-                        {t("email")} <span className="text-[#FF6B35]">*</span>
+                        {t("email")}
                     </label>
                     <input
                         type="email"
@@ -141,7 +157,6 @@ export default function PartnerForm({ locale }) {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className={`w-full px-4 py-3 border-2 border-panacea-primary/30 rounded-lg focus:ring-2 focus:ring-panacea-primary/20 focus:border-panacea-primary transition-all ${isRTL ? "text-right" : "text-left"}`}
                         dir="ltr"
-                        required
                     />
                 </div>
 
@@ -233,7 +248,7 @@ export default function PartnerForm({ locale }) {
                 {/* Submit Button */}
                 <button
                     type="submit"
-                    disabled={isSubmitting || isSuccess}
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-[#066F89] via-[#066F89] to-[#FF6B35] hover:from-[#05596D] hover:via-[#066F89] hover:to-[#FF6B35] text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {isSubmitting ? (

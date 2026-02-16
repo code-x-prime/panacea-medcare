@@ -540,7 +540,7 @@ export default function AIPreScreeningForm({ locale }) {
                                         </div>
 
                                         <div className="md:col-span-2">
-                                            <label className={labelClass}>{t("step1.whatsapp")} <span className="text-xs text-[#FF6B35] font-normal">({t("optional")})</span></label>
+                                            <label className={labelClass}>{t("step1.whatsapp")}</label>
                                             <div className="flex gap-2">
                                                 <PhoneCodeCombobox
                                                     value={formData.phoneCode}
@@ -554,7 +554,7 @@ export default function AIPreScreeningForm({ locale }) {
                                         </div>
 
                                         <div className="md:col-span-2">
-                                            <label className={labelClass}>{t("step1.email")} <span className="text-xs text-[#FF6B35] font-normal">({t("optional")})</span></label>
+                                            <label className={labelClass}>{t("step1.email")}</label>
                                             <input type="email" name="email" value={formData.email} onChange={handleInputChange} className={inputClass} placeholder={t("step1.emailPlaceholder")} />
                                         </div>
 

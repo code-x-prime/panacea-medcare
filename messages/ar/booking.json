@@ -1,0 +1,19 @@
+{
+  "title": "حجز موعد",
+  "name": "الاسم الكامل",
+  "namePlaceholder": "أدخل اسمك الكامل",
+  "phone": "رقم الهاتف",
+  "phonePlaceholder": "9999999999",
+  "email": "البريد الإلكتروني",
+  "emailPlaceholder": "name@example.com",
+  "message": "الرسالة",
+  "messageLabelOptional": "الرسالة (اختياري)",
+  "messagePlaceholder": "أي متطلبات خاصة...",
+  "submit": "إرسال طلب الحجز",
+  "submitting": "جاري الإرسال...",
+  "successTitle": "تم إرسال الطب!",
+  "successMessage": "لقد تلقينا طلب الحجز الخاص بك. سيتواصل معك فريقنا قريباً لتأكيد الموعد.",
+  "close": "إغلاق",
+  "errorRequired": "يرجى ملء جميع الحقول المطلوبة (الاسم والهاتف)",
+  "errorSubmit": "فشل في الإرسال. يرجى المحاولة مرة أخرى."
+}

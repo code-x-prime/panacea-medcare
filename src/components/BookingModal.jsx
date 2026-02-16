@@ -11,7 +11,10 @@ import {
 } from "@/components/ui/select";
 import { COUNTRIES } from "@/lib/countries";
 
+import { useTranslations } from "next-intl";
+
 export default function BookingModal({ isOpen, onClose, doctor, hospital, locale }) {
+    const t = useTranslations("booking");
     const [formData, setFormData] = useState({
         name: "",
         phoneCode: "+91",
@@ -40,7 +43,7 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
 
         // Validate (email optional)
         if (!formData.name || !formData.phone) {
-            setError("Please fill all required fields (name and phone)");
+            setError(t("errorRequired") || "Please fill all required fields (name and phone)");
             setIsSubmitting(false);
             return;
         }
@@ -77,10 +80,10 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
                 }, 3000);
             } else {
                 const data = await response.json();
-                setError(data.message || "Failed to submit. Please try again.");
+                setError(data.message || t("errorSubmit") || "Failed to submit. Please try again.");
             }
         } catch (err) {
-            setError("Failed to submit. Please try again.");
+            setError(t("errorSubmit") || "Failed to submit. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
@@ -106,7 +109,7 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
                     >
                         <FaTimes className="w-5 h-5" />
                     </button>
-                    <h2 className="text-xl font-bold mb-2">Book Appointment</h2>
+                    <h2 className="text-xl font-bold mb-2">{t("title")}</h2>
                     {doctor && (
                         <div className="flex items-center gap-2 text-white/90 text-sm">
                             <FaUserMd className="w-4 h-4" />
@@ -124,10 +127,21 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="p-6 space-y-4">
                     {isSuccess ? (
-                        <div className="text-center py-8">
-                            <FaCheckCircle className="w-16 h-16 text-[#0BA35A] mx-auto mb-4" />
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Booking Request Sent!</h3>
-                            <p className="text-gray-600">We will contact you shortly.</p>
+                        <div className="flex flex-col items-center justify-center text-center py-8 animate-fadeIn">
+                            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6 animate-bounce">
+                                <FaCheckCircle className="w-10 h-10 text-green-600" />
+                            </div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">{t("successTitle") || "Booking Request Sent!"}</h3>
+                            <p className="text-gray-600 mb-8 max-w-xs mx-auto">
+                                {t("successMessage") || "We have received your booking request. Our team will contact you shortly to confirm the appointment."}
+                            </p>
+                            <button
+                                onClick={onClose}
+                                type="button"
+                                className="px-8 py-3 bg-[#066F89] text-white rounded-xl font-semibold hover:bg-[#05596D] transition-colors shadow-lg shadow-[#066F89]/20"
+                            >
+                                {t("close") || "Close"}
+                            </button>
                         </div>
                     ) : (
                         <>
@@ -139,14 +153,14 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Full Name <span className="text-[#FF6B35]">*</span>
+                                    {t("name")} <span className="text-[#FF6B35]">*</span>
                                 </label>
                                 <input
                                     type="text"
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder="Enter your full name"
+                                    placeholder={t("namePlaceholder")}
                                     className="w-full px-4 py-3 bg-white border-2 border-[#066F89]/40 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#FF6B35] transition-all shadow-sm"
                                     required
                                 />
@@ -154,7 +168,7 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Phone Number <span className="text-[#FF6B35]">*</span>
+                                    {t("phone")} <span className="text-[#FF6B35]">*</span>
                                 </label>
                                 <div className="flex gap-2">
                                     <Select
@@ -177,7 +191,7 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="9999999999"
+                                        placeholder={t("phonePlaceholder")}
                                         className="flex-1 px-4 py-3 bg-white border-2 border-[#066F89]/40 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#FF6B35] transition-all shadow-sm"
                                         required
                                     />
@@ -186,28 +200,27 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Email Address <span className="text-[#FF6B35]">*</span>
+                                    {t("email")}
                                 </label>
                                 <input
                                     type="email"
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    placeholder="your@email.com"
+                                    placeholder={t("emailPlaceholder")}
                                     className="w-full px-4 py-3 bg-white border-2 border-[#066F89]/40 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#FF6B35] transition-all shadow-sm"
-                                    required
                                 />
                             </div>
 
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                                    Message (Optional)
+                                    {t("messageLabelOptional") || t("message")}
                                 </label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    placeholder="Any specific requirements..."
+                                    placeholder={t("messagePlaceholder")}
                                     rows={3}
                                     className="w-full px-4 py-3 bg-white border-2 border-[#066F89]/40 rounded-lg focus:ring-2 focus:ring-[#066F89]/30 focus:border-[#FF6B35] transition-all resize-none shadow-sm"
                                 />
@@ -221,10 +234,10 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
                                 {isSubmitting ? (
                                     <>
                                         <FaSpinner className="w-5 h-5 animate-spin" />
-                                        Submitting...
+                                        {t("submitting")}
                                     </>
                                 ) : (
-                                    "Submit Booking Request"
+                                    t("submit")
                                 )}
                             </button>
                         </>

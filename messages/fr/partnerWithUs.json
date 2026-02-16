@@ -88,6 +88,8 @@
     "submit": "Soumettre la demande",
     "sending": "Envoi en cours...",
     "success": "Merci! Nous vous contacterons bientôt pour discuter des opportunités de partenariat.",
+    "successTitle": "Merci !",
+    "successMessage": "Nous avons bien reçu votre demande de partenariat. Notre équipe examinera votre profil et vous recontactera sous peu.",
     "error": "Échec de l'envoi. Veuillez réessayer."
   },
   "destinations": {

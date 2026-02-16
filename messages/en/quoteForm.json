@@ -8,6 +8,8 @@
   "selectCountry": "Select Country",
   "city": "City",
   "selectCity": "Select City",
+  "email": "Email Address",
+  "emailPlaceholder": "Your Email Address",
   "phoneNumber": "Phone Number",
   "phonePlaceholder": "Your Phone number",
   "whatsappNumber": "WhatsApp Number",

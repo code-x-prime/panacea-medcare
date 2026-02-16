@@ -1,0 +1,19 @@
+{
+  "title": "Prendre rendez-vous",
+  "name": "Nom complet",
+  "namePlaceholder": "Entrez votre nom complet",
+  "phone": "Numéro de téléphone",
+  "phonePlaceholder": "9999999999",
+  "email": "Adresse e-mail",
+  "emailPlaceholder": "votre@email.com",
+  "message": "Message",
+  "messageLabelOptional": "Message (Optionnel)",
+  "messagePlaceholder": "Vos besoins spécifiques...",
+  "submit": "Envoyer la demande",
+  "submitting": "Envoi en cours...",
+  "successTitle": "Demande envoyée !",
+  "successMessage": "Nous avons bien reçu votre demande. Notre équipe vous contactera bientôt pour confirmer le rendez-vous.",
+  "close": "Fermer",
+  "errorRequired": "Veuillez remplir tous les champs obligatoires (nom et téléphone)",
+  "errorSubmit": "Échec de l'envoi. Veuillez réessayer."
+}

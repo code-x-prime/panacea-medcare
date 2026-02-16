@@ -88,6 +88,8 @@
     "submit": "Submit Inquiry",
     "sending": "Submitting...",
     "success": "Thank you! We'll contact you soon to discuss partnership opportunities.",
+    "successTitle": "Thank You!",
+    "successMessage": "We have received your partnership request. Our team will review your profile and get back to you shortly.",
     "error": "Failed to submit. Please try again."
   },
   "destinations": {

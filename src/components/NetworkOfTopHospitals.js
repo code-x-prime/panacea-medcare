@@ -30,6 +30,8 @@ export default function NetworkOfTopHospitals({ locale }) {
             { name: "Stem Rx Hospital", slug: "stem-rx-hospital-mumbai" },
             { name: "Apollo Hospital", slug: "apollo-hospital-mumbai" },
             { name: "Fortis Hospital", slug: "fortis-hospital-mumbai" },
+            { name: "Lilavati Hospital", slug: "lilavati-hospital-mumbai" },
+            { name: "KIMS Hospital", slug: "kims-hospital-mumbai" },
         ],
         "hyderabad": [
             { name: "TX Hospital", slug: "tx-hospital-hyderabad" },
@@ -47,6 +49,9 @@ export default function NetworkOfTopHospitals({ locale }) {
         ],
         "nepal": [
             { name: "Nepal Mediciti", slug: "nepal-mediciti" },
+        ],
+        "israel": [
+            { name: "Sheba Medical Center", slug: "sheba-medical-center-israel" },
         ],
     };
 
@@ -79,6 +84,9 @@ export default function NetworkOfTopHospitals({ locale }) {
             "memorial-hospital-turkey": "/hospitals/memorial-hospital-turkey.jpg",
             "bumrungrad-hospital-thailand": "/hospitals/bumrungrad-hospital-thailand.jpg",
             "nepal-mediciti": "/hospitals/nepal-mediciti.jpg",
+            "sheba-medical-center-israel": "/hospitals/sheeba-hospital-israel.jpg",
+            "lilavati-hospital-mumbai": "/hospitals/lilavati-hospital-mumbai.jpg",
+            "kims-hospital-mumbai": "/hospitals/kims-hospital-mumbai.jpg",
         };
 
         // Return image if exists, otherwise return placeholder
@@ -87,7 +95,7 @@ export default function NetworkOfTopHospitals({ locale }) {
 
     return (
         <section
-            className="py-12 md:py-16 bg-gradient-to-br from-gray-50 via-white to-panacea-light/20"
+            className="py-8 md:py-12 bg-gradient-to-br from-gray-50 via-white to-panacea-light/20"
             dir={isRTL ? "rtl" : "ltr"}
         >
             <div className="container mx-auto px-4 xl:max-w-7xl ">
@@ -256,6 +264,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                 ...internationalHospitals["nepal"].map(h => ({ ...h, country: "nepal", countryName: t("nepal") || "Nepal", flag: "🇳🇵" })),
                                 ...internationalHospitals["thailand"].map(h => ({ ...h, country: "thailand", countryName: t("thailand") || "Thailand", flag: "🇹🇭" })),
                                 ...internationalHospitals["turkey"].map(h => ({ ...h, country: "turkey", countryName: t("turkey") || "Turkey", flag: "🇹🇷" })),
+                                ...(internationalHospitals["israel"] || []).map(h => ({ ...h, country: "israel", countryName: t("israel") || "Israel", flag: "🇮🇱" })),
                             ].sort((a, b) => a.name.localeCompare(b.name));
 
                             return (

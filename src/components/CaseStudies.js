@@ -53,7 +53,7 @@ export default function CaseStudies() {
     if (!stories.length) return null;
 
     return (
-        <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <section className="py-8 md:py-12 bg-white overflow-hidden">
             {/* Forced LTR for the carousel structure itself if needed, or handle RTL classes properly.
                 However, usually keeping the SECTION direction dynamic is better, but handling inner alignment manually.
                 Let's use logical properties instead of forcing dir.

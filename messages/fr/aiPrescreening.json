@@ -129,7 +129,9 @@
     "back": "Retour",
     "next": "Étape suivante",
     "submit": "Soumettre pour pré-dépistage IA",
-    "processing": "Envoi en cours..."
+    "processing": "Envoi en cours...",
+    "saveDraft": "Enregistrer et continuer plus tard",
+    "draftSaved": "Brouillon enregistré ! Reprenez à tout moment."
   },
   "success": {
     "title": "Merci! Votre demande a été reçue.",

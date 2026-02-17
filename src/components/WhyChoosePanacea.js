@@ -27,7 +27,7 @@ export default function WhyChoosePanacea({ locale }) {
 
     return (
         <section
-            className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-panacea-light relative overflow-hidden"
+            className="py-8 md:py-12 bg-gradient-to-br from-gray-50 to-panacea-light relative overflow-hidden"
         >
             {/* Background Pattern - Using new primary color */}
             <div className="absolute inset-0 opacity-5">

@@ -3597,6 +3597,279 @@
               ]
             }
           ]
+        },
+        {
+          "city": "Mumbai",
+          "hospitals": [
+            {
+              "id": "lilavati-hospital-mumbai",
+              "slug": "lilavati-hospital-mumbai",
+              "name": "Lilavati Hospital & Research Centre",
+              "nameAr": "مستشفى ليلافاتي ومركز الأبحاث",
+              "nameFr": "Lilavati Hospital & Research Centre",
+              "rating": {
+                "score": 4.6,
+                "totalReviews": 150
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 323,
+              "accreditations": [
+                "JCI",
+                "NABH"
+              ],
+              "about": {
+                "short": "Lilavati Hospital is a premier 323-bed multi-specialty tertiary care hospital in Mumbai, recognized globally for medical excellence.",
+                "shortAr": "مستشفى ليلافاتي هو مستشفى رعاية ثالثية متعدد التخصصات رائد يتسع لـ 323 سريرًا في مومباي، ومعترف به عالميًا للتميز الطبي.",
+                "shortFr": "L'hôpital Lilavati est un hôpital de soins tertiaires multi-spécialités de premier plan de 323 lits à Mumbai, reconnu mondialement pour son excellence médicale.",
+                "full": "Lilavati Hospital and Research Centre is a premier multi-specialty tertiary care hospital of India and has been acknowledged globally as the centre of medical excellence. Located at Bandra Reclamation, it boasts 323 beds, one of the largest ICUs in Mumbai, 12 state-of-the-art Operation Theatres, and a team of over 300 experienced consultants. The hospital follows the motto 'More than Healthcare, Human Care' and is a preferred destination for international patients and dignitaries.",
+                "fullAr": "مستشفى ليلافاتي ومركز الأبحاث هو مستشفى رعاية ثالثية متعدد التخصصات رائد في الهند وقد تم الاعتراف به عالميًا كمركز للتميز الطبي. يقع في استصلاح باندرا، ويضم 323 سريرًا، وواحدة من أكبر وحدات العناية المركزة في مومباي، و 12 غرفة عمليات حديثة، وفريقًا من أكثر من 300 استشاري من ذوي الخبرة. يتبع المستشفى شعار 'أكثر من الرعاية الصحية، الرعاية البشرية' وهو وجهة مفضلة للمرضى الدوليين وكبار الشخصيات.",
+                "fullFr": "L'hôpital Lilavati et centre de recherche est un hôpital de soins tertiaires multi-spécialités de premier plan en Inde et a été reconnu mondialement comme le centre d'excellence médicale. Situé à Bandra Reclamation, il dispose de 323 lits, de l'une des plus grandes unités de soins intensifs de Mumbai, de 12 salles d'opération de pointe et d'une équipe de plus de 300 consultants expérimentés. L'hôpital suit la devise 'Plus que des soins de santé, des soins humains' et est une destination privilégiée pour les patients internationaux et les dignitaires.",
+                "internationalPatients": true
+              },
+              "departments": [
+                {
+                  "name": "Cardiology",
+                  "doctors": 15
+                },
+                {
+                  "name": "Neurology",
+                  "doctors": 10
+                },
+                {
+                  "name": "Orthopedics",
+                  "doctors": 12
+                },
+                {
+                  "name": "Gastroenterology",
+                  "doctors": 8
+                }
+              ],
+              "infrastructure": {
+                "totalArea": "State-of-the-art facility in Bandra Reclamation",
+                "beds": 323,
+                "icuBeds": 35,
+                "operationTheatres": "12",
+                "technologies": [
+                  "3 Tesla MRI",
+                  "PET CT Scanner",
+                  "Dual Head Gamma Camera",
+                  "Linear Accelerator",
+                  "Digital Mammography"
+                ]
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "Private rooms with patient beds",
+                  "Free Wifi",
+                  "Phone in Room",
+                  "Mobility accessible rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Welcome Package",
+                  "Safe in the room",
+                  "Nursery / Nanny services",
+                  "Dry cleaning",
+                  "Personal assistance / Concierge",
+                  "Religious facilities",
+                  "Fitness centre",
+                  "Cafeteria",
+                  "Business centre services",
+                  "Shop",
+                  "Parking available"
+                ],
+                "moneyMatters": [
+                  "Health insurance coordination",
+                  "Medical travel insurance",
+                  "Foreign currency exchange",
+                  "ATM",
+                  "Credit Card",
+                  "Debit Card",
+                  "Netbanking"
+                ],
+                "food": [
+                  "Diet on Request",
+                  "Restaurant",
+                  "International Cuisine"
+                ],
+                "treatmentRelated": [
+                  "Medical records transfer",
+                  "Online doctor consultation",
+                  "Rehabilitation",
+                  "Pharmacy",
+                  "Document legalisation",
+                  "Post operative follow-up"
+                ],
+                "language": [
+                  "Interpreter",
+                  "Translation services"
+                ],
+                "transportation": [
+                  "Airport pickup",
+                  "Local tourism options",
+                  "Local transportation booking",
+                  "Visa / Travel office",
+                  "Car Hire",
+                  "Private driver / Limousine services",
+                  "Airambulance"
+                ]
+              },
+              "location": {
+                "airportKm": "12",
+                "airportDuration": "30-45 mins",
+                "airportName": "Chhatrapati Shivaji Maharaj International Airport (BOM)",
+                "metroKm": "2",
+                "railwayKm": "2",
+                "coordinates": {
+                  "lat": 19.0500,
+                  "lng": 72.8333
+                }
+              },
+              "awards": [
+                {
+                  "name": "India's Best Multi-Specialty Hospital by Praja Foundation (2024)",
+                  "nameAr": "أفضل مستشفى متعدد التخصصات في الهند من قبل مؤسسة براجا (2024)",
+                  "nameFr": "Meilleur hôpital multi-spécialités de l'Inde par la Fondation Praja (2024)"
+                },
+                {
+                  "name": "Ranked #1 in Mumbai by The Week Magazine",
+                  "nameAr": "المرتبة رقم 1 في مومباي من قبل مجلة الأسبوع",
+                  "nameFr": "Classé n°1 à Mumbai par le magazine The Week"
+                }
+              ],
+              "address": {
+                "line1": "Bandra Reclamation",
+                "city": "Mumbai",
+                "country": "India"
+              },
+              "images": [
+                "/hospitals/lilavati-hospital-mumbai-3.jpg",
+                "/hospitals/lilavati-hospital-mumbai.jpg",
+                "/hospitals/lilavati-hospital-mumbai-2.jpg"
+
+              ]
+            },
+            {
+              "id": "kims-hospital-mumbai",
+              "slug": "kims-hospital-mumbai",
+              "name": "KIMS Hospitals, Mumbai",
+              "nameAr": "مستشفيات كيمز، مومباي",
+              "nameFr": "Hôpitaux KIMS, Mumbai",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 60
+              },
+              "specialtyType": "Multi Specialty",
+              "beds": 300,
+              "accreditations": [
+                "NABH"
+              ],
+              "about": {
+                "short": "KIMS Hospitals Mumbai (Thane) is a newly launched 300-bed state-of-the-art quaternary care hospital offering robotic surgery and organ transplants.",
+                "shortAr": "مستشفيات كيمز مومباي (ثين) هو مستشفى رعاية رباعية حديث تم إطلاقه حديثًا بسعة 300 سرير يقدم الجراحة الروبوتية وزراعة الأعضاء.",
+                "shortFr": "Les hôpitaux KIMS de Mumbai (Thane) sont un nouvel hôpital de soins quaternaires de pointe de 300 lits proposant la chirurgie robotique et la transplantation d'organes.",
+                "full": "KIMS Hospitals Mumbai (Thane) is a newly launched 300-bed state-of-the-art hospital located in Hiranandani Estate. It brings KIMS' renowned healthcare expertise to Mumbai, offering comprehensive quaternary care services across 50+ specialties including Cardiac Sciences, Neurosciences, Oncology, and Organ Transplantation. The facility is equipped with advanced technologies like Da Vinci Robotic Systems and dedicated modular OTs.",
+                "fullAr": "مستشفيات كيمز مومباي (ثين) هو مستشفى حديث تم إطلاقه حديثًا بسعة 300 سرير يقع في مجمع هيرانانداني. إنه يجلب خبرة كيمز الشهيرة في الرعاية الصحية إلى مومباي، ويقدم خدمات رعاية رباعية شاملة عبر أكثر من 50 تخصصًا بما في ذلك علوم القلب، وعلوم الأعصاب، وعلم الأورام، وزراعة الأعضاء. تم تجهيز المرفق بتقنيات متقدمة مثل أنظمة دا فينشي الروبوتية وغرف عمليات معيارية مخصصة.",
+                "fullFr": "Les hôpitaux KIMS de Mumbai (Thane) sont un nouvel hôpital de pointe de 300 lits situé à Hiranandani Estate. Il apporte l'expertise renommée de KIMS en matière de soins de santé à Mumbai, offrant des services complets de soins quaternaires dans plus de 50 spécialités, notamment les sciences cardiaques, les neurosciences, l'oncologie et la transplantation d'organes. L'établissement est équipé de technologies de pointe telles que les systèmes robotiques Da Vinci et des salles d'opération modulaires dédiées.",
+                "internationalPatients": true
+              },
+              "departments": [
+                {
+                  "name": "Oncology",
+                  "doctors": 12
+                },
+                {
+                  "name": "Robotic Surgery",
+                  "doctors": 8
+                },
+                {
+                  "name": "Transplants",
+                  "doctors": 10
+                },
+                {
+                  "name": "Cardiology",
+                  "doctors": 15
+                }
+              ],
+              "infrastructure": {
+                "beds": 300,
+                "icuBeds": 51,
+                "operationTheatres": "9",
+                "technologies": [
+                  "Da Vinci Xi Robotic System",
+                  "3T MRI",
+                  "128 Slice CT Scanner",
+                  "PET-CT",
+                  "Neuro Navigation"
+                ]
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "Premium Suites",
+                  "Free Wifi",
+                  "TV in room",
+                  "Mobility accessible rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Safe in the room",
+                  "Nursery / Nanny services",
+                  "Personal assistance / Concierge",
+                  "Prayer Room",
+                  "Wellness Center",
+                  "Cafeteria",
+                  "Pharmacy",
+                  "Parking available"
+                ],
+                "moneyMatters": [
+                  "Insurance coordination",
+                  "Currency exchange",
+                  "ATM",
+                  "Credit/Debit Card accepted",
+                  "Wire Transfer"
+                ],
+                "food": [
+                  "Dietary Kitchen",
+                  "Multi-cuisine Restaurant",
+                  "Halal Food Available"
+                ],
+                "treatmentRelated": [
+                  "Tele-consultation",
+                  "Medical Visa Assistance",
+                  "Pharmacy",
+                  "Legalisation of documents"
+                ],
+                "language": [
+                  "Multi-lingual staff",
+                  "Interpreter Services"
+                ],
+                "transportation": [
+                  "Airport Transfers",
+                  "Local Transport Assistance",
+                  "Ambulance Services"
+                ]
+              },
+              "location": {
+                "airportKm": "30",
+                "airportDuration": "60-75 mins",
+                "airportName": "Chhatrapati Shivaji Maharaj International Airport (BOM)",
+                "metroKm": "Upcoming",
+                "railwayKm": "7",
+                "coordinates": {
+                  "lat": 19.2600,
+                  "lng": 72.9700
+                }
+              },
+              "address": {
+                "line1": "Hiranandani Estate, Ghodbundar Road, Thane West",
+                "city": "Mumbai",
+                "country": "India"
+              },
+              "images": [
+                "/hospitals/kims-hospital-mumbai-3.jpg",
+                "/hospitals/kims-hospital-mumbai.jpg",
+                "/hospitals/kims-hospital-mumbai-2.jpg"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -3730,37 +4003,125 @@
           "city": "Tel Aviv",
           "hospitals": [
             {
-              "id": "sheeba-hospital-israel",
-              "slug": "sheeba-hospital-israel",
-              "name": "Sheeba Hospital",
-              "nameAr": "مستشفى شيبة",
-              "nameFr": "Hôpital Sheeba",
+              "id": "sheba-medical-center-israel",
+              "slug": "sheba-medical-center-israel",
+              "name": "Sheba Medical Center",
+              "nameAr": "مركز شيبا الطبي",
+              "nameFr": "Centre médical Sheba",
               "rating": {
-                "score": 4.8,
-                "totalReviews": 45
+                "score": 4.9,
+                "totalReviews": 210
               },
               "specialtyType": "Multi Specialty",
-              "beds": 1700,
+              "beds": 2000,
               "accreditations": [
                 "JCI"
               ],
               "about": {
-                "short": "Sheeba Hospital is one of Israel's largest and most advanced medical centers.",
-                "shortAr": "مستشفى شيبة هو واحد من أكبر المراكز الطبية وأكثرها تقدمًا في إسرائيل.",
-                "shortFr": "L'hôpital Sheeba est l'un des plus grands et des plus avancés centres médicaux d'Israël.",
-                "full": "Sheeba Medical Center is one of Israel's largest and most advanced medical centers, providing comprehensive medical care and research.",
-                "fullAr": "المركز الطبي شيبة هو واحد من أكبر المراكز الطبية وأكثرها تقدمًا في إسرائيل، ويقدم رعاية طبية شاملة وبحوث.",
-                "fullFr": "Le centre médical Sheeba est l'un des plus grands et des plus avancés centres médicaux d'Israël, fournissant des soins médicaux complets et des recherches.",
+                "short": "Sheba Medical Center is Israel's largest hospital and consistently ranked among the world's top 10 hospitals by Newsweek.",
+                "shortAr": "مركز شيبا الطبي هو أكبر مستشفى في إسرائيل ويصنف باستمرار من بين أفضل 10 مستشفيات في العالم من قبل نيوزويك.",
+                "shortFr": "Le centre médical Sheba est le plus grand hôpital d'Israël et est régulièrement classé parmi les 10 meilleurs hôpitaux du monde par Newsweek.",
+                "full": "Sheba Medical Center at Tel HaShomer is the largest medical center in the Middle East and an internationally recognized healthcare facility. Known as the 'City of Health', it comprises an Acute Care Hospital, Rehabilitation Hospital, Women's Hospital, and Children's Hospital. It leads globally in medical innovation through its ARC Innovation Center and is a pioneer in medical simulation, robotics, and cancer research.",
+                "fullAr": "مركز شيبا الطبي في تل هاشومير هو أكبر مركز طبي في الشرق الأوسط ومنشأة رعاية صحية معترف بها دوليًا. يُعرف باسم 'مدينة الصحة'، ويضم مستشفى للرعاية الحادة ومستشفى لإعادة التأهيل ومستشفى للنساء ومستشفى للأطفال. وهي تقود عالميًا في الابتكار الطبي من خلال مركز ARC للابتكار وهي رائدة في المحاكاة الطبية والروبوتات وأبحاث السرطان.",
+                "fullFr": "Le centre médical Sheba de Tel HaShomer est le plus grand centre médical du Moyen-Orient et un établissement de santé de renommée internationale. Connu sous le nom de 'Ville de la santé', il comprend un hôpital de soins aigus, un hôpital de réadaptation, un hôpital pour femmes et un hôpital pour enfants. Il est un leader mondial de l'innovation médicale grâce à son centre d'innovation ARC et est un pionnier de la simulation médicale, de la robotique et de la recherche sur le cancer.",
                 "internationalPatients": true
               },
               "departments": [
                 {
-                  "name": "Cardiology",
-                  "doctors": 25
+                  "name": "Oncology",
+                  "doctors": 45
                 },
                 {
-                  "name": "Oncology",
-                  "doctors": 20
+                  "name": "Cardiology",
+                  "doctors": 40
+                },
+                {
+                  "name": "Rehabilitation",
+                  "doctors": 30
+                },
+                {
+                  "name": "Pediatrics",
+                  "doctors": 35
+                }
+              ],
+
+              "infrastructure": {
+                "totalArea": "200-acre campus 'City of Health'",
+                "beds": 2000,
+                "technologies": [
+                  "ARC Innovation Center",
+                  "Israel Center for Medical Simulation (MSR)",
+                  "Roman Abramovich Theranostics Center",
+                  "Da Vinci Robotic Systems",
+                  "Virtual Reality Rehabilitation"
+                ]
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "Sheba Baby Hotel",
+                  "Shopping Mall",
+                  "Synagogues & Prayer Rooms",
+                  "Free Wifi",
+                  "Private rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Safe in the room",
+                  "Concierge Services",
+                  "Banks & ATMs",
+                  "Parking"
+                ],
+                "moneyMatters": [
+                  "International Patient Coordinators",
+                  "Insurance Assistance",
+                  "Currency Exchange",
+                  "Credit Cards Accepted"
+                ],
+                "food": [
+                  "Kosher Food",
+                  "Cafeterias",
+                  "Coffee Shops",
+                  "Restaurants"
+                ],
+                "treatmentRelated": [
+                  "Medical Tourism Department",
+                  "Tele-medicine",
+                  "Pharmacy",
+                  "Rehabilitation Centers"
+                ],
+                "language": [
+                  "English",
+                  "Russian",
+                  "Arabic",
+                  "French",
+                  "Interpreters Available"
+                ],
+                "transportation": [
+                  "Shuttle Service",
+                  "Taxi Stand",
+                  "Private Transfer Arrangement"
+                ]
+              },
+              "location": {
+                "airportKm": "10",
+                "airportDuration": "15-20 mins",
+                "airportName": "Ben Gurion Airport (TLV)",
+                "metroKm": "N/A",
+                "railwayKm": "10",
+                "coordinates": {
+                  "lat": 32.0461,
+                  "lng": 34.8516
+                }
+              },
+              "awards": [
+                {
+                  "name": "Ranked Top 10 World's Best Hospitals by Newsweek (2019-2025)",
+                  "nameAr": "تم تصنيفه ضمن أفضل 10 مستشفيات في العالم من قبل نيوزويك (2019-2025)",
+                  "nameFr": "Classé parmi les 10 meilleurs hôpitaux du monde par Newsweek (2019-2025)"
+                },
+                {
+                  "name": "JCI Accredited (First in Israel)",
+                  "nameAr": "معتمد من JCI (الأول في إسرائيل)",
+                  "nameFr": "Accrédité JCI (Premier en Israël)"
                 }
               ],
               "address": {
@@ -3769,7 +4130,9 @@
                 "country": "Israel"
               },
               "images": [
-                "/hospitals/sheeba-hospital-israel.jpg"
+                "/hospitals/sheeba-hospital-israel-3.jpg",
+                "/hospitals/sheeba-hospital-israel.jpg",
+                "/hospitals/sheeba-hospital-israel-2.jpg"
               ]
             }
           ]

@@ -166,7 +166,9 @@
     "back": "Back",
     "next": "Next Step",
     "submit": "Submit for AI Pre-Screening",
-    "processing": "Submitting..."
+    "processing": "Submitting...",
+    "saveDraft": "Save & Continue Later",
+    "draftSaved": "Draft saved! Resume anytime."
   },
   "success": {
     "title": "Thank you! Your request has been received.",

@@ -17,7 +17,7 @@ export default function FAQ({ locale }) {
 
     return (
         <section
-            className="py-12 md:py-16 bg-gradient-to-br from-white via-panacea-light/30 to-gray-50"
+            className="py-8 md:py-12 bg-gradient-to-br from-white via-panacea-light/30 to-gray-50"
             dir={isRTL ? "rtl" : "ltr"}
         >
             <div className="container mx-auto px-4 xl:max-w-7xl max-w-5xl">

@@ -62,7 +62,7 @@ export default function TopMedicalDestinations({ locale }) {
     return (
         <>
             <section
-                className="py-12 md:py-16 bg-gradient-to-br from-gray-50 via-white to-teal-50 relative overflow-hidden"
+                className="py-8 md:py-12 bg-gradient-to-br from-gray-50 via-white to-teal-50 relative overflow-hidden"
                 dir={isRTL ? "rtl" : "ltr"}
             >
                 {/* Background Decoration */}

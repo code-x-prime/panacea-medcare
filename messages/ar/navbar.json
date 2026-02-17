@@ -125,7 +125,10 @@
         "name": "مستشفى بومرونجراد",
         "slug": "/hospitals/bumrungrad-hospital-thailand"
       },
-      { "name": "نيبال ميديسيتي", "slug": "/hospitals/nepal-mediciti" }
+      { "name": "نيبال ميديسيتي", "slug": "/hospitals/nepal-mediciti" },
+      { "name": "مستشفى ليلافاتي", "slug": "/hospitals/lilavati-hospital-mumbai" },
+      { "name": "مستشفى كيمز", "slug": "/hospitals/kims-hospital-mumbai" },
+      { "name": "مركز شيبا الطبي", "slug": "/hospitals/sheba-medical-center-israel" }
     ]
   }
 }

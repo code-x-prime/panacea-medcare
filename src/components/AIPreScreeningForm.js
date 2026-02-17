@@ -481,6 +481,14 @@ export default function AIPreScreeningForm({ locale }) {
                         </div>
                     </div>
 
+                    {/* Draft Saved Toast */}
+                    {draftSaved && (
+                        <div className="fixed bottom-6 right-6 bg-[#0BA35A] text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3 animate-fadeIn z-50 border border-white/20">
+                            <FaSave className="w-5 h-5" />
+                            <span className="font-semibold">{t("nav.draftSaved")}</span>
+                        </div>
+                    )}
+
                     <div className="p-6 md:p-8">
                         {error && (
                             <div className="mb-6 bg-red-50 text-red-600 px-4 py-3 rounded-xl text-sm border border-red-200 flex items-center gap-2">
@@ -918,6 +926,17 @@ export default function AIPreScreeningForm({ locale }) {
                                 ) : (
                                     <div />
                                 )}
+
+                                {/* Save Draft Button */}
+                                <button
+                                    type="button"
+                                    onClick={saveDraft}
+                                    className="px-4 py-2 text-[#066F89] hover:bg-[#066F89]/5 rounded-lg font-medium text-sm transition-colors flex items-center gap-2"
+                                >
+                                    <FaSave className="w-4 h-4" />
+                                    <span className="hidden sm:inline">{t("nav.saveDraft")}</span>
+                                    <span className="sm:hidden">Save</span>
+                                </button>
                                 {step < 4 ? (
                                     <button
                                         type="button"

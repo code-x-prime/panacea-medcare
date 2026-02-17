@@ -139,7 +139,10 @@
         "name": "Bumrungrad Hospital",
         "slug": "/hospitals/bumrungrad-hospital-thailand"
       },
-      { "name": "Nepal Mediciti", "slug": "/hospitals/nepal-mediciti" }
+      { "name": "Nepal Mediciti", "slug": "/hospitals/nepal-mediciti" },
+      { "name": "Lilavati Hospital", "slug": "/hospitals/lilavati-hospital-mumbai" },
+      { "name": "KIMS Hospital", "slug": "/hospitals/kims-hospital-mumbai" },
+      { "name": "Sheba Medical Center", "slug": "/hospitals/sheba-medical-center-israel" }
     ]
   }
 }

@@ -37,7 +37,7 @@ export default async function BlogSection({ locale }) {
     if (!posts || posts.length === 0) return null;
 
     return (
-        <section className="py-20 md:py-32 bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 relative overflow-hidden">
+        <section className="py-10 md:py-16 bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-panacea-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-80 h-80 bg-panacea-accent/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>

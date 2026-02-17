@@ -61,6 +61,7 @@ export default getRequestConfig(async ({ locale }) => {
     preScreening: (await import(`../../messages/${validLocale}/preScreening.json`)).default,
     aiPrescreening: (await import(`../../messages/${validLocale}/aiPrescreening.json`)).default,
     consultOnline: (await import(`../../messages/${validLocale}/consultOnline.json`)).default,
+    needAssistance: (await import(`../../messages/${validLocale}/needAssistance.json`)).default,
   };
 
   return {

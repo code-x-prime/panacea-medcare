@@ -32,10 +32,12 @@ export default function NetworkOfTopHospitals({ locale }) {
             { name: "Fortis Hospital", slug: "fortis-hospital-mumbai" },
             { name: "Lilavati Hospital", slug: "lilavati-hospital-mumbai" },
             { name: "KIMS Hospital", slug: "kims-hospital-mumbai" },
+            { name: "Dr. L H Hiranandani Hospital", slug: "hiranandani-hospital-mumbai" },
         ],
         "hyderabad": [
             { name: "TX Hospital", slug: "tx-hospital-hyderabad" },
             { name: "Apollo Hospital", slug: "apollo-hospital-hyderabad" },
+            { name: "KIMS Hospital", slug: "kims-hospital-hyderabad" },
         ],
     };
 
@@ -77,9 +79,11 @@ export default function NetworkOfTopHospitals({ locale }) {
             "stem-rx-hospital-mumbai": "/hospitals/stem-rx-hospital-mumbai.jpg",
             "apollo-hospital-mumbai": "/hospitals/apollo-hospital-mumbai.jpg",
             "fortis-hospital-mumbai": "/hospitals/fortis-hospital-mumbai.jpg",
+            "hiranandani-hospital-mumbai": "/hospitals/hiranandanih-hospital-mumbai.webp",
             // Hyderabad
             "tx-hospital-hyderabad": "/hospitals/tx-hospital-hyderabad.jpg",
             "apollo-hospital-hyderabad": "/hospitals/apollo-hospital-hyderabad.jpg",
+            "kims-hospital-hyderabad": "/hospitals/kims-hospital-hyderabad.webp",
             // International
             "memorial-hospital-turkey": "/hospitals/memorial-hospital-turkey.jpg",
             "bumrungrad-hospital-thailand": "/hospitals/bumrungrad-hospital-thailand.jpg",

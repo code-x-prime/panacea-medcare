@@ -118,6 +118,10 @@
         "slug": "/hospitals/apollo-hospital-hyderabad"
       },
       {
+        "name": "مستشفى كيمس كوندابور",
+        "slug": "/hospitals/kims-hospital-hyderabad"
+      },
+      {
         "name": "مستشفى ميموريال",
         "slug": "/hospitals/memorial-hospital-turkey"
       },
@@ -128,7 +132,8 @@
       { "name": "نيبال ميديسيتي", "slug": "/hospitals/nepal-mediciti" },
       { "name": "مستشفى ليلافاتي", "slug": "/hospitals/lilavati-hospital-mumbai" },
       { "name": "مستشفى كيمز", "slug": "/hospitals/kims-hospital-mumbai" },
-      { "name": "مركز شيبا الطبي", "slug": "/hospitals/sheba-medical-center-israel" }
+      { "name": "مركز شيبا الطبي", "slug": "/hospitals/sheba-medical-center-israel" },
+      { "name": "د. مستشفى إل إتش هيرانانداني", "slug": "/hospitals/hiranandani-hospital-mumbai" }
     ]
   }
 }

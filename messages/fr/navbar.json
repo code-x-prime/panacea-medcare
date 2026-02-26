@@ -99,12 +99,14 @@
       { "name": "Fortis Hospital Mumbai", "slug": "/hospitals/fortis-hospital-mumbai" },
       { "name": "TX Hospital", "slug": "/hospitals/tx-hospital-hyderabad" },
       { "name": "Apollo Hospital Hyderabad", "slug": "/hospitals/apollo-hospital-hyderabad" },
+      { "name": "Hôpital KIMS Kondapur", "slug": "/hospitals/kims-hospital-hyderabad" },
       { "name": "Memorial Hospital", "slug": "/hospitals/memorial-hospital-turkey" },
       { "name": "Bumrungrad Hospital", "slug": "/hospitals/bumrungrad-hospital-thailand" },
       { "name": "Nepal Mediciti", "slug": "/hospitals/nepal-mediciti" },
       { "name": "Hôpital Lilavati", "slug": "/hospitals/lilavati-hospital-mumbai" },
       { "name": "Hôpital KIMS", "slug": "/hospitals/kims-hospital-mumbai" },
-      { "name": "Centre médical Sheba", "slug": "/hospitals/sheba-medical-center-israel" }
+      { "name": "Centre médical Sheba", "slug": "/hospitals/sheba-medical-center-israel" },
+      { "name": "Hôpital Dr. L H Hiranandani", "slug": "/hospitals/hiranandani-hospital-mumbai" }
     ]
   }
 }

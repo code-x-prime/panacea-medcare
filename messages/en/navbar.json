@@ -132,12 +132,20 @@
         "slug": "/hospitals/apollo-hospital-hyderabad"
       },
       {
+        "name": "KIMS Hospital Kondapur",
+        "slug": "/hospitals/kims-hospital-hyderabad"
+      },
+      {
         "name": "Memorial Hospital",
         "slug": "/hospitals/memorial-hospital-turkey"
       },
       {
         "name": "Bumrungrad Hospital",
         "slug": "/hospitals/bumrungrad-hospital-thailand"
+      },
+      {
+        "name": "Dr. L H Hiranandani Hospital",
+        "slug": "/hospitals/hiranandani-hospital-mumbai"
       },
       { "name": "Nepal Mediciti", "slug": "/hospitals/nepal-mediciti" },
       { "name": "Lilavati Hospital", "slug": "/hospitals/lilavati-hospital-mumbai" },

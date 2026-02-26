@@ -3313,6 +3313,139 @@
                 "/hospitals/all/tx-hospital-hyderabad-2.jpg",
                 "/hospitals/all/tx-hospital-hyderabad-1.jpg"
               ]
+            },
+            {
+              "id": "kims-hospital-hyderabad",
+              "slug": "kims-hospital-hyderabad",
+              "name": "KIMS Hospital Kondapur",
+              "nameAr": "مستشفى كيمس كوندابور",
+              "nameFr": "Hôpital KIMS Kondapur",
+              "rating": {
+                "score": 4.6,
+                "totalReviews": 31
+              },
+              "establishedYear": 2014,
+              "specialtyType": "Multi Specialty",
+              "beds": 200,
+              "accreditations": [
+                "NABH",
+                "NABL",
+                "GreenOT"
+              ],
+              "about": {
+                "short": "KIMS Hospital Kondapur is a multi-specialty hospital providing complex and advanced quaternary healthcare in various specialties.",
+                "shortAr": "مستشفى كيمس كوندابور هو مستشفى متعدد التخصصات يقدم رعاية صحية رباعية معقدة ومتقدمة في تخصصات مختلفة.",
+                "shortFr": "L'hôpital KIMS Kondapur est un hôpital multi-spécialités offrant des soins de santé quaternaires complexes et avancés dans diverses spécialités.",
+                "full": "KIMS Hospitals is a group of 6 different institutes located at 6 different centers, accredited with GreenOT, NABH, and NABL. This hospital has the third largest epilepsy center in India. Well-equipped with the latest technologies for better diagnosis and therapeutic purposes such as cath labs harnessed with modern devices. The hospital provides complex and advanced quaternary healthcare in various specialties under disciplines such as neurosciences, cardiac sciences, oncology, orthopedics, renal sciences, and gastric sciences.",
+                "fullAr": "مستشفيات كيمس هي مجموعة مكونة من 6 معاهد مختلفة تقع في 6 مراكز مختلفة، ومعتمدة من GreenOT و NABH و NABL. يحتوي هذا المستشفى على ثالث أكبر مركز للصرع في الهند. مجهز تجهيزًا جيدًا بأحدث التقنيات للتشخيص الأفضل والأغراض العلاجية مثل مختبرات القسطرة المجهزة بأجهزة حديثة. يقدم المستشفى رعاية صحية رباعية معقدة ومتقدمة في تخصصات مختلفة مثل علوم الأعصاب، وعلوم القلب، والأورام، وجراحة العظام، وعلوم الكلى، وعلوم المعدة.",
+                "fullFr": "KIMS Hospitals est un groupe de 6 instituts différents situés dans 6 centres différents, accrédités par GreenOT, NABH et NABL. Cet hôpital possède le troisième plus grand centre d'épilepsie en Inde. Bien équipé avec les dernières technologies pour un meilleur diagnostic et des fins thérapeutiques telles que des laboratoires de cathétérisme équipés d'appareils modernes. L'hôpital offre des soins de santé quaternaires complexes et avancés dans diverses spécialités dans des disciplines telles que les neurosciences, les sciences cardiaques, l'oncologie, l'orthopédie, les sciences rénales et les sciences gastriques.",
+                "internationalPatients": true
+              },
+              "departments": [
+                {
+                  "name": "Neurosciences",
+                  "doctors": 5
+                },
+                {
+                  "name": "Cardiac Sciences",
+                  "doctors": 5
+                },
+                {
+                  "name": "Oncology",
+                  "doctors": 4
+                },
+                {
+                  "name": "Orthopedics",
+                  "doctors": 4
+                },
+                {
+                  "name": "Renal Sciences",
+                  "doctors": 3
+                },
+                {
+                  "name": "Gastric Sciences",
+                  "doctors": 3
+                }
+              ],
+              "teamAndSpecialties": {
+                "description": "There are 15 different specialties having highly skilled doctors and other healthcare professionals, who are richly experienced in their fields.",
+                "descriptionAr": "يوجد 15 تخصصًا مختلفًا يضم أطباء ذوي مهارات عالية وغيرهم من المتخصصين في الرعاية الصحية ، الذين يتمتعون بخبرة غنية في مجالاتهم.",
+                "descriptionFr": "Il y a 15 spécialités différentes ayant des médecins hautement qualifiés et d'autres professionnels de la santé, qui sont richement expérimentés dans leurs domaines."
+              },
+              "address": {
+                "line1": "# 1-112 / 86, Survey No 5 / EE",
+                "city": "Hyderabad",
+                "state": "Telangana",
+                "pincode": "500084",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 32,
+                "airportDuration": "52 mins",
+                "airportName": "Rajiv Gandhi International Airport",
+                "railwayKm": 3.5,
+                "railwayDuration": "13 mins",
+                "railwayName": "Railway station"
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "TV in room",
+                  "Private rooms",
+                  "Free Wifi",
+                  "Phone in Room",
+                  "Mobility accessible rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Welcome",
+                  "Safe in the room",
+                  "Nursery / Nanny services",
+                  "Dry cleaning",
+                  "Personal assistance / Concierge",
+                  "Religious facilities",
+                  "Fitness",
+                  "Spa and wellness",
+                  "Café",
+                  "Business centre services",
+                  "Shop",
+                  "Dedicated smoking areas",
+                  "Beauty Salon",
+                  "Special offer for group stays",
+                  "Parking available"
+                ],
+                "moneyMatters": [
+                  "Insurance accepted"
+                ],
+                "food": [
+                  "Vegetarian options"
+                ],
+                "treatmentRelated": [
+                  "24/7 Emergency",
+                  "ICU",
+                  "Operation Theatres"
+                ],
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup/drop"
+                ]
+              },
+              "infrastructure": {
+                "beds": 200,
+                "icuBeds": 70,
+                "operationTheatres": 4,
+                "technologies": [
+                  "Ultra-modern Cath Lab",
+                  "MRI",
+                  "CT",
+                  "Operating Theatres"
+                ]
+              },
+              "images": [
+                "/hospitals/kims-hospital-hyderabad.webp",
+                "/hospitals/kims-hospital-hyderabad-2.webp"
+              ]
             }
           ]
         },
@@ -3867,6 +4000,93 @@
                 "/hospitals/kims-hospital-mumbai-3.jpg",
                 "/hospitals/kims-hospital-mumbai.jpg",
                 "/hospitals/kims-hospital-mumbai-2.jpg"
+              ]
+            },
+            {
+              "id": "hiranandani-hospital-mumbai",
+              "slug": "hiranandani-hospital-mumbai",
+              "name": "Dr. L H Hiranandani Hospital",
+              "nameAr": "د. مستشفى إل إتش هيرانانداني",
+              "nameFr": "Hôpital Dr. L H Hiranandani",
+              "rating": {
+                "score": 5.0,
+                "totalReviews": 41
+              },
+              "establishedYear": 2004,
+              "specialtyType": "Super Specialty",
+              "beds": 240,
+              "accreditations": [
+                "NABH",
+                "NABL",
+                "ISO: 2006"
+              ],
+              "about": {
+                "short": "Dr. L H Hiranandani Hospital is a super-specialty hospital in Mumbai established in 2004, offering advanced and complex procedures with world-class technology.",
+                "shortAr": "مستشفى د. إل إتش هيرانانداني هو مستشفى فائق التخصص في مومباي تأسس عام 2004، ويقدم إجراءات متقدمة ومعقدة بتقنية عالمية المستوى.",
+                "shortFr": "L'hôpital Dr. L H Hiranandani est un hôpital super-spécialisé à Mumbai fondé en 2004, offrant des procédures avancées et complexes avec une technologie de classe mondiale.",
+                "full": "The hospital was established by Dr. L. H Hiranandani who initiated several operative techniques which are known as \"Dr. Hiranandani's Operations\" globally. In 2001, he received the ENT Surgeon of the ‘Millennium Award’ and the ‘SAARC Award’ on behalf of the SAARC countries. Within a span of 3 years after its establishment, the hospital became the first in Western India to receive NABH accreditation, which was given only to 8 hospitals in the country at that time. It is additionally accredited with NABL and ISO: 2006. Today, it has become a prominent center for all kinds of advanced and complex procedures, done with devices being operated with world-class technology.",
+                "fullAr": "تم إنشاء المستشفى من قبل الدكتور ل. هـ هيرانانداني الذي ابتكر العديد من التقنيات الجراحية المعروفة باسم \"عمليات دكتور هيرانانداني\" على مستوى العالم. في عام 2001 ، حصل على جائزة جراح الأنف والأذن والحنجرة لـ \"جائزة الألفية\" و \"جائزة سارك\" نيابة عن دول سارك. في غضون 3 سنوات من تأسيسه ، أصبح المستشفى الأول في غرب الهند الذي يحصل على اعتماد NABH ، والذي تم منحه لـ 8 مستشفيات فقط في البلاد في ذلك الوقت. وهي معتمدة بالإضافة إلى ذلك من NABL و ISO: 2006. واليوم ، أصبحت مركزًا بارزًا لجميع أنواع الإجراءات المتقدمة والمعقدة ، والتي يتم إجراؤها بأجهزة يتم تشغيلها بتكنولوجيا عالمية المستوى.",
+                "fullFr": "L'hôpital a été fondé par le Dr L. H Hiranandani qui a initié plusieurs techniques opératoires mondialement connues sous le nom d'\"Opérations du Dr Hiranandani\". En 2001, il a reçu le prix 'Millennium Award' et 'SAARC Award' en tant que chirurgien ORL au nom des pays de la SAARC. En l'espace de 3 ans après sa création, l'hôpital est devenu le premier de l'ouest de l'Inde à recevoir l'accréditation NABH, qui n'était alors accordée qu'à 8 hôpitaux du pays. Il est également accrédité par NABL et ISO: 2006. Aujourd'hui, il est devenu un centre de premier plan pour toutes sortes de procédures avancées et complexes, réalisées avec des appareils dotés d'une technologie de classe mondiale.",
+                "internationalPatients": true
+              },
+              "teamAndSpecialties": {
+                "description": "Dr. L.H Hiranandani Hospital was made under the leadership of Dr. L.H Hiranandani, who completed his studies in 1942 and went to England for further studies. In 1972, the Government of India awarded him the Padma Bhushan, the third highest civilian National award, for his contribution to the nation. In 1987, he has conferred the Dhanvantari Award, awarded for the first time in the field of ENT, for his notable contribution to medical science. There is a wide team of more than 1000 health care professionals who have worked together and performed more than 50,000 surgeries so far. All kinds of specialties are available which cover a wide range of medical conditions and their treatment including fatty liver, diabetic foot, sports clinic, sleep disorders, pain management, rheumatology and many more.",
+                "descriptionAr": "تأسس مستشفى د. ل. هـ هيرانانداني بقيادة د. ل. هـ هيرانانداني ، الذي أنهى دراسته في عام 1942 وذهب إلى إنجلترا لمزيد من الدراسات. في عام 1972 ، منحته حكومة الهند بادما بوشان ، ثالث أعلى جائزة وطنية مدنية ، لمساهمته في الأمة. في عام 1987 ، حصل على جائزة دانفانتاري ، التي منحت لأول مرة في مجال الأنف والأذن والحنجرة ، لمساهمته الملحوظة في العلوم الطبية. هناك فريق واسع يضم أكثر من 1000 متخصص في الرعاية الصحية عملوا معًا وأجروا أكثر من 50000 عملية جراحية حتى الآن. تتوفر جميع أنواع التخصصات التي تغطي مجموعة واسعة من الحالات الطبية وعلاجها بما في ذلك الكبد الدهني ، القدم السكرية ، العيادة الرياضية ، اضطرابات النوم ، إدارة الألم ، أمراض الروماتيزم وغيرها الكثير.",
+                "descriptionFr": "L'hôpital Dr. L.H Hiranandani a été créé sous la direction du Dr L.H Hiranandani, qui a terminé ses études en 1942 et est allé en Angleterre pour poursuivre ses études. En 1972, le gouvernement de l'Inde lui a décerné le Padma Bhushan, la troisième plus haute distinction civile nationale, pour sa contribution à la nation. En 1987, il a reçu le Dhanvantari Award, décerné pour la première fois dans le domaine de l'ORL, pour sa contribution notable à la science médicale. Il y a une vaste équipe de plus de 1000 professionnels de la santé qui ont travaillé ensemble et effectué plus de 50 000 interventions chirurgicales jusqu'à présent. Toutes sortes de spécialités sont disponibles qui couvrent un large éventail de conditions médicales et leur traitement, y compris la stéatose hépatique, le pied diabétique, la clinique des sports, les troubles du sommeil, la gestion de la douleur, la rhumatologie et bien d'autres."
+              },
+              "address": {
+                "line1": "Hill Side Avenue",
+                "city": "Mumbai",
+                "state": "Maharashtra",
+                "pincode": "400076",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 8,
+                "airportDuration": "35 mins",
+                "airportName": "Chhatrapati Shivaji Maharaj International Airport",
+                "railwayKm": 3.4,
+                "railwayDuration": "13 mins",
+                "railwayName": "Railway station",
+                "metroKm": 5.2,
+                "metroDuration": "25 mins",
+                "metroName": "Metro station"
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "TV in room",
+                  "Private rooms",
+                  "Free Wifi",
+                  "Phone in Room",
+                  "Mobility accessible rooms",
+                  "Family accommodation",
+                  "Laundry",
+                  "Welcome",
+                  "Safe in the room",
+                  "Nursery / Nanny services",
+                  "Dry cleaning",
+                  "Personal assistance / Concierge",
+                  "Religious facilities",
+                  "Fitness",
+                  "Spa and wellness",
+                  "Café",
+                  "Business centre services",
+                  "Shop",
+                  "Dedicated smoking areas",
+                  "Beauty Salon",
+                  "Special offer for group stays",
+                  "Parking available"
+                ]
+              },
+              "infrastructure": {
+                "description": "Started with 130 beds in 2004, the hospital is today a 240-bed facility. This is a centrally air-conditioned multispecialty hospital with the milieu interior as per ASHRAE (American Society for Heating Refrigeration and Air Conditioning Engineers) standards. The hospital has been built over a large area of land with all kinds of facilities including a cafeteria, family lounge, auditorium, ATM services, general stores, gymnasiums, pharmacies, ambulance services etc. A judicious blend of high-end technology, world-class clinical expertise, and outstanding personalized care, the hospital has entirely met global standards in health care.",
+                "descriptionAr": "بدأ المستشفى بسعة 130 سريرًا في عام 2004 ، وهو اليوم منشأة تضم 240 سريرًا. هذا مستشفى متعدد التخصصات مكيف مركزيًا مع تصميم داخلي وفقًا لمعايير الجمعية الأمريكية لمهندسي التدفئة والتبريد وتكييف الهواء (ASHRAE). تم بناء المستشفى على مساحة كبيرة من الأرض مع جميع أنواع المرافق بما في ذلك صالة طعام وصالة عائلية وقاعة ومرافق الصراف الآلي ومتاجر عامة وصالات رياضية وصيدليات وخدمات إسعاف وما إلى ذلك. مزيج حكيم من التكنولوجيا المتطورة والخبرة السريرية ذات المستوى العالمي والرعاية الشخصية المتميزة ، وقد استوفى المستشفى بالكامل المعايير العالمية في الرعاية الصحية.",
+                "descriptionFr": "Ayant commencé avec 130 lits en 2004, l'hôpital est aujourd'hui une structure de 240 lits. Il s'agit d'un hôpital multi-spécialités à climatisation centrale avec un intérieur selon les normes de l'ASHRAE (American Society for Heating Refrigeration and Air Conditioning Engineers). L'hôpital a été construit sur un vaste terrain avec toutes sortes d'installations, y compris une cafétéria, un salon familial, un auditorium, des services de guichet automatique, des magasins généraux, des gymnases, des pharmacies, des services d'ambulance, etc. Un mélange judicieux de technologie haut de gamme, d'expertise clinique de classe mondiale et de soins personnalisés exceptionnels, l'hôpital a entièrement répondu aux normes mondiales en matière de soins de santé.",
+                "beds": 240
+              },
+              "images": [
+                "/hospitals/hiranandanih-hospital-mumbai.webp",
+                "/hospitals/hiranandanih-hospital-mumbai-2.webp"
               ]
             }
           ]

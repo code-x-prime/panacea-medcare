@@ -18,7 +18,7 @@ export default function ContactPage({ params }) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        phoneCode: "+91",
+        phoneCode: "",
         phone: "",
         country: "",
         treatment: "",

@@ -22,6 +22,15 @@ export async function POST(request) {
             );
         }
 
+        // Block Indian bookings (+91) at API layer
+        const trimmedPhone = typeof phone === "string" ? phone.trim() : "";
+        if (trimmedPhone.startsWith("+91")) {
+            return NextResponse.json(
+                { success: false, message: "This booking form is only for international patients (non-Indian numbers)." },
+                { status: 400 }
+            );
+        }
+
         // Validate email format only if provided
         if (email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

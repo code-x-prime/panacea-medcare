@@ -56,7 +56,7 @@ export default function AIPreScreeningForm({ locale }) {
         country: "",
         city: "",
         nationality: "",
-        phoneCode: "+91",
+        phoneCode: "",
         phoneNumber: "",
         email: "",
         preferredComm: [],

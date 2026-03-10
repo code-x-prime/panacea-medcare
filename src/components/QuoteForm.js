@@ -32,9 +32,9 @@ export default function QuoteForm({ trigger, embedded = false, variant = "defaul
     email: "",
     country: "",
     city: "",
-    phoneCode: "+91",
+    phoneCode: "",
     phoneNumber: "",
-    whatsappCode: "+91",
+    whatsappCode: "",
     whatsappNumber: "",
     medicalProblem: "",
   });

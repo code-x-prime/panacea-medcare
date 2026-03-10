@@ -55,6 +55,18 @@ export async function POST(request) {
             );
         }
 
+        // Block Indian leads (+91 / India) at API layer
+        const isIndiaPhone = typeof phone === "string" && phone.trim().startsWith("+91");
+        const isIndiaCountry =
+            typeof country === "string" &&
+            country.toLowerCase().includes("india");
+        if (isIndiaPhone || isIndiaCountry) {
+            return NextResponse.json(
+                { success: false, error: "This AI Pre-Screening is only for international patients (non-Indian numbers)." },
+                { status: 400 }
+            );
+        }
+
         // File Uploads to Cloudflare R2
         const files = formData.getAll("files");
         const uploadedFileLinks = [];

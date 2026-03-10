@@ -14,9 +14,9 @@ export default function PartnerForm({ locale }) {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        phoneCode: "+91",
+        phoneCode: "",
         phone: "",
-        whatsappCode: "+91",
+        whatsappCode: "",
         whatsapp: "",
         country: "",
         areasOfInterest: "",
@@ -77,9 +77,9 @@ export default function PartnerForm({ locale }) {
                 setFormData({
                     name: "",
                     email: "",
-                    phoneCode: "+91",
+                    phoneCode: "",
                     phone: "",
-                    whatsappCode: "+91",
+                    whatsappCode: "",
                     whatsapp: "",
                     country: "",
                     areasOfInterest: "",

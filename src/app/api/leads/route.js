@@ -17,6 +17,19 @@ export async function POST(request) {
   try {
     const { name, email, phone, country, message, source, locale } = await request.json();
 
+    // Block Indian leads (+91 / India) at API layer
+    const trimmedPhone = typeof phone === "string" ? phone.trim() : "";
+    const isIndiaPhone = trimmedPhone.startsWith("+91");
+    const isIndiaCountry =
+      typeof country === "string" &&
+      country.toLowerCase().includes("india");
+    if (isIndiaPhone || isIndiaCountry) {
+      return NextResponse.json(
+        { error: "This form is only for international patients (non-Indian numbers)." },
+        { status: 400 }
+      );
+    }
+
     // Only require email OR phone (not both mandatory)
     if (!email && !phone) {
       return NextResponse.json(

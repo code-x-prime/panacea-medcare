@@ -17,7 +17,7 @@ export default function BookingModal({ isOpen, onClose, doctor, hospital, locale
     const t = useTranslations("booking");
     const [formData, setFormData] = useState({
         name: "",
-        phoneCode: "+91",
+        phoneCode: "",
         phone: "",
         email: "",
         message: ""

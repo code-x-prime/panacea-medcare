@@ -23,19 +23,25 @@ export function CountryCombobox({ value, onValueChange, placeholder = "Select co
   const [open, setOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState("");
 
-  const selectedCountry = COUNTRIES.find((country) => country.value === value);
+  // Exclude India from selectable countries (international form usage only)
+  const INTERNATIONAL_COUNTRIES = React.useMemo(
+    () => COUNTRIES.filter((c) => c.value !== "india" && c.code !== "+91"),
+    []
+  );
+
+  const selectedCountry = INTERNATIONAL_COUNTRIES.find((country) => country.value === value);
 
   // Filter countries based on search - search by name AND code
   const filteredCountries = React.useMemo(() => {
-    if (!searchValue) return COUNTRIES;
+    if (!searchValue) return INTERNATIONAL_COUNTRIES;
     const search = searchValue.toLowerCase().replace(/[+\s]/g, "");
-    return COUNTRIES.filter(
+    return INTERNATIONAL_COUNTRIES.filter(
       (country) =>
         country.label.toLowerCase().includes(searchValue.toLowerCase()) ||
         country.code.toLowerCase().replace(/[+\s]/g, "").includes(search) ||
         country.value.toLowerCase().includes(searchValue.toLowerCase())
     );
-  }, [searchValue]);
+  }, [searchValue, INTERNATIONAL_COUNTRIES]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>

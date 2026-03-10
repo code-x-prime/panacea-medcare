@@ -27,6 +27,8 @@ export function PhoneCodeCombobox({ value, onValueChange, className }) {
   const phoneCodes = React.useMemo(() => {
     const codeMap = new Map();
     COUNTRIES.forEach(country => {
+      // Exclude India / +91 from international lead forms
+      if (country.code === "+91" || country.value === "india") return;
       if (!codeMap.has(country.code)) {
         codeMap.set(country.code, {
           value: country.code,

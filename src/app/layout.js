@@ -17,8 +17,9 @@ export const metadata = {
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
   verification: {
-    google: "vqT3m2txIN7qhJcc-I8YO4ptTR0WKiJAqusG2YEMCvU",
+    google: "ZyygYM9msMhOpX50kpmQX8XXc9IhuZImsa2vn9woem4",
   },
+
 };
 
 export default async function RootLayout({ children }) {

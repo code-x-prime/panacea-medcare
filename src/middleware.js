@@ -16,6 +16,10 @@ const intlMiddleware = createMiddleware({
 export default async function middleware(request) {
   const pathname = request.nextUrl.pathname;
 
+  if (pathname.startsWith('/blog')) {
+    return NextResponse.next();
+  }
+
   // Protect admin routes (except login page)
   if (pathname.startsWith('/admin') && !pathname.startsWith('/n-admin')) {
     const sessionToken = request.cookies.get('admin_session')?.value;

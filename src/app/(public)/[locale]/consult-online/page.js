@@ -11,7 +11,7 @@ export async function generateMetadata({ params: { locale } }) {
         openGraph: {
             title: t("title"),
             description: t("subtitle"),
-            url: `https://panaceamedcare.com/${locale}/consult-online`,
+            url: `https://www.panaceamedcare.com/${locale}/consult-online`,
             type: "website",
             images: [
                 {

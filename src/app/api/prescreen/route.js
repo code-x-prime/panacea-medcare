@@ -185,7 +185,7 @@ export async function POST(request) {
                             </p>
                             
                             <div style="text-align: center; margin-top: 30px;">
-                                <a href="https://panaceamedcare.com" style="display: inline-block; background: linear-gradient(135deg, #FF6B35, #e55a2b); color: #fff; text-decoration: none; padding: 14px 30px; border-radius: 8px; font-weight: bold; font-size: 14px;">Visit Our Website</a>
+                                <a href="https://www.panaceamedcare.com" style="display: inline-block; background: linear-gradient(135deg, #FF6B35, #e55a2b); color: #fff; text-decoration: none; padding: 14px 30px; border-radius: 8px; font-weight: bold; font-size: 14px;">Visit Our Website</a>
                             </div>
                         </div>
                         <div style="background: #f5f5f5; padding: 20px; text-align: center; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0; border-top: none;">
@@ -267,7 +267,7 @@ export async function POST(request) {
                 ${filesHtml}
                 
                 <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #f0f0f0; text-align: center;">
-                    <a href="${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads" style="display: inline-block; background: #066F89; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold;">Open Admin Panel</a>
+                    <a href="${env.APP_URL || 'https://www.panaceamedcare.com'}/admin/leads" style="display: inline-block; background: #066F89; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold;">Open Admin Panel</a>
                     <a href="https://wa.me/${phone.replace('+', '')}" style="display: inline-block; background: #25D366; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-left: 10px;">WhatsApp Patient</a>
                 </div>
             </div>
@@ -291,7 +291,7 @@ export async function POST(request) {
         // Admin WhatsApp
         if (adminPhone) {
             try {
-                const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
+                const adminLink = `${env.APP_URL || 'https://www.panaceamedcare.com'}/admin/leads`;
                 const adminMsg = `🔥 *New AI Pre-Screening Lead*\n\n` +
                     `👤 *Patient Details:*\n` +
                     `• Name: ${patientName}\n` +

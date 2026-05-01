@@ -172,7 +172,7 @@ export async function POST(request) {
     const adminPhone = toE164(process.env.ADMIN_PHONE_NUMBER || "919958800961");
     if (adminPhone) {
       try {
-        const adminLink = `${env.APP_URL || 'https://panaceamedcare.com'}/admin/leads`;
+        const adminLink = `${env.APP_URL || 'https://www.panaceamedcare.com'}/admin/leads`;
         const adminMsg = `🎉 *New Lead Received*\n\n` +
           `👤 *Contact Details:*\n` +
           `• Name: ${name || "Guest"}\n` +

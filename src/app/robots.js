@@ -5,6 +5,6 @@ export default function robots() {
             allow: '/',
             disallow: '/admin/',
         },
-        sitemap: 'https://panaceamedcare.com/sitemap.xml',
+        sitemap: 'https://www.panaceamedcare.com/sitemap.xml',
     }
 }

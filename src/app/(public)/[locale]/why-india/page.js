@@ -12,7 +12,7 @@ export async function generateMetadata({ params: { locale } }) {
         openGraph: {
             title: t("title"),
             description: t("subtitle"),
-            url: `https://panaceamedcare.com/${locale}/why-india`,
+            url: `https://www.panaceamedcare.com/${locale}/why-india`,
             type: "website",
             images: [
                 {

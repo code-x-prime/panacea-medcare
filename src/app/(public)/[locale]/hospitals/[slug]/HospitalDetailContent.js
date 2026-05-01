@@ -135,7 +135,7 @@ export default function HospitalDetailContent({ params }) {
 
     // WhatsApp message with hospital name and link
     const whatsappMessageLink = encodeURIComponent(
-        `Hello, please contact me regarding ${hospitalName} - https://panaceamedcare.com/${locale}/hospitals/${slug}?source=wpchat_HDSB, Thank you!`
+        `Hello, please contact me regarding ${hospitalName} - https://www.panaceamedcare.com/${locale}/hospitals/${slug}?source=wpchat_HDSB, Thank you!`
     );
     const whatsappUrl = `https://wa.me/919958800961?text=${whatsappMessageLink}`;
 

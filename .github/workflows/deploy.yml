@@ -17,24 +17,29 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            
-            # Navigate to project directory
+
+            echo "⚙️ Loading NVM..."
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            nvm use 20
+
+            echo "📂 Go to project"
             cd /home/admin/panacea-medcare
-            
+
             echo "📥 Pulling latest code..."
             git pull origin main
-            
+
             echo "📦 Installing dependencies..."
             npm install
-            
-            echo "🔨 Generating Prisma Client..."
+
+            echo "🔨 Prisma generate..."
             npx prisma generate
-            
-            echo "🏗️ Building project..."
+
+            echo "🏗️ Build..."
             npm run build
-            
-            echo "🔄 Reloading PM2 (Zero Downtime)..."
+
+            echo "🔄 PM2 reload..."
             mkdir -p logs
-            pm2 reload ecosystem.config.js --update-env
-            
+            pm2 reload ecosystem.config.js --update-env || pm2 start ecosystem.config.js
+
             echo "✅ Deployment complete!"

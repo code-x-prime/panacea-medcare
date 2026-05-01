@@ -14,12 +14,15 @@ const raleway = Raleway({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.panaceamedcare.com'),
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
   verification: {
     google: "ZyygYM9msMhOpX50kpmQX8XXc9IhuZImsa2vn9woem4",
   },
-
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default async function RootLayout({ children }) {

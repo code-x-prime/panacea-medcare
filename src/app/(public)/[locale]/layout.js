@@ -10,6 +10,9 @@ import { getMessages } from "next-intl/server";
 export const metadata = {
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default async function PublicLayout({ children, params }) {

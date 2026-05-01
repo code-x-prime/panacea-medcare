@@ -1,0 +1,40 @@
+name: 🚀 Deploy Panacea Medcare
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            
+            # Navigate to project directory
+            cd /home/admin/panacea-medcare
+            
+            echo "📥 Pulling latest code..."
+            git pull origin main
+            
+            echo "📦 Installing dependencies..."
+            npm install
+            
+            echo "🔨 Generating Prisma Client..."
+            npx prisma generate
+            
+            echo "🏗️ Building project..."
+            npm run build
+            
+            echo "🔄 Reloading PM2 (Zero Downtime)..."
+            mkdir -p logs
+            pm2 reload ecosystem.config.js --update-env
+            
+            echo "✅ Deployment complete!"

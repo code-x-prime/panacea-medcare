@@ -5,9 +5,9 @@ async function getPosts() {
     try {
         // Fetch Blogs (category 3) and Articles (category 1) separately
         const [blogsRes, articlesRes] = await Promise.all([
-            fetch("https://blog.panaceamedcare.com/wp-json/wp/v2/posts?_embed&per_page=6&categories=3",
+            fetch("https://www.panaceamedcare.com/blog/wp-json/wp/v2/posts?_embed&per_page=6&categories=3",
                 { next: { revalidate: 60 } }),
-            fetch("https://blog.panaceamedcare.com/wp-json/wp/v2/posts?_embed&per_page=6&categories=1",
+            fetch("https://www.panaceamedcare.com/blog/wp-json/wp/v2/posts?_embed&per_page=6&categories=1",
                 { next: { revalidate: 60 } })
         ]);
 
@@ -57,7 +57,7 @@ export default async function BlogSection({ locale }) {
                     </div>
 
                     <a
-                        href="https://blog.panaceamedcare.com"
+                        href="https://www.panaceamedcare.com/blog/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hidden md:flex items-center gap-2 text-panacea-primary font-bold hover:text-panacea-dark transition-colors"
@@ -73,7 +73,7 @@ export default async function BlogSection({ locale }) {
 
                 <div className="mt-8 text-center md:hidden">
                     <a
-                        href="https://blog.panaceamedcare.com"
+                        href="https://www.panaceamedcare.com/blog/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-panacea-primary font-bold hover:text-panacea-dark transition-colors"

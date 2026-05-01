@@ -1,6 +1,6 @@
 name: 🚀 Deploy Panacea Medcare
 
-on:
+on: 
   push:
     branches: [main]
 

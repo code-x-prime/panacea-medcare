@@ -1,27 +1,21 @@
 
 import AISolutionsContent from "./AISolutionsContent";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "@/lib/getMessages";
 
-export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslations({ locale, namespace: "aiSolutions" });
+export async function generateMetadata({ params }) {
+    const { locale } = params;
+    const messages = await getMessages(locale, "aiSolutions");
 
     return {
-        title: t("title"),
-        description: t("subtitle"),
-        keywords: ["AI Healthcare Solutions", "Telemedicine Platform", "AI Teleradiology", "Digital Health"],
-        openGraph: {
-            title: t("title"),
-            description: t("subtitle"),
-            url: `https://www.panaceamedcare.com/${locale}/services/ai-solutions`,
-            type: "website",
-            images: [
-                {
-                    url: "/images/og-ai-solutions.jpg",
-                    width: 1200,
-                    height: 630,
-                    alt: t("title"),
-                },
-            ],
+        title: messages.seo?.title,
+        description: messages.seo?.description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/services/ai-solutions`,
+            languages: {
+                "en": "https://www.panaceamedcare.com/en/services/ai-solutions",
+                "fr": "https://www.panaceamedcare.com/fr/services/ai-solutions",
+                "ar": "https://www.panaceamedcare.com/ar/services/ai-solutions",
+            },
         },
     };
 }

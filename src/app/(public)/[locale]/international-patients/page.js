@@ -1,27 +1,21 @@
 
 import InternationalPatientsContent from "./InternationalPatientsContent";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "@/lib/getMessages";
 
-export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslations({ locale, namespace: "internationalPatients" });
+export async function generateMetadata({ params }) {
+    const { locale } = params;
+    const messages = await getMessages(locale, "internationalPatients");
 
     return {
-        title: t("title"),
-        description: t("subtitle"),
-        keywords: ["International Patients", "Medical Tourism Guide", "Treatment Process", "Visa Assistance"],
-        openGraph: {
-            title: t("title"),
-            description: t("subtitle"),
-            url: `https://www.panaceamedcare.com/${locale}/international-patients`,
-            type: "website",
-            images: [
-                {
-                    url: "/images/og-international.jpg",
-                    width: 1200,
-                    height: 630,
-                    alt: t("title"),
-                },
-            ],
+        title: messages.seo?.title,
+        description: messages.seo?.description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/international-patients`,
+            languages: {
+                "en": "https://www.panaceamedcare.com/en/international-patients",
+                "fr": "https://www.panaceamedcare.com/fr/international-patients",
+                "ar": "https://www.panaceamedcare.com/ar/international-patients",
+            },
         },
     };
 }

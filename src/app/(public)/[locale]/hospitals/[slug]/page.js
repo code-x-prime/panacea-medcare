@@ -1,7 +1,8 @@
 import HospitalDetailContent from "./HospitalDetailContent";
 import { getHospitalBySlug } from "@/data/hospitalsData";
 
-export async function generateMetadata({ params: { locale, slug } }) {
+export async function generateMetadata({ params }) {
+    const { locale, slug } = params;
     const hospital = getHospitalBySlug(slug);
 
     if (!hospital) {
@@ -10,16 +11,16 @@ export async function generateMetadata({ params: { locale, slug } }) {
         };
     }
 
-    const name = locale === "ar" ? (hospital.nameAr || hospital.name) : locale === "fr" ? (hospital.nameFr || hospital.name) : hospital.name;
-    const description = locale === "ar" ? (hospital.about?.shortAr || hospital.about?.short) : locale === "fr" ? (hospital.about?.shortFr || hospital.about?.short) : (hospital.about?.short || `Details about ${name}`);
-
     return {
-        title: `${name} - Panacea Medcare`,
-        description: description,
-        openGraph: {
-            title: name,
-            description: description,
-            images: hospital.images && hospital.images.length > 0 ? [hospital.images[0]] : [],
+        title: hospital.seoTitle?.[locale] || hospital.name,
+        description: hospital.seoDescription?.[locale] || "",
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/hospitals/${slug}`,
+            languages: {
+                "en": `https://www.panaceamedcare.com/en/hospitals/${slug}`,
+                "fr": `https://www.panaceamedcare.com/fr/hospitals/${slug}`,
+                "ar": `https://www.panaceamedcare.com/ar/hospitals/${slug}`,
+            },
         },
     };
 }

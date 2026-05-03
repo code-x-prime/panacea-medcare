@@ -1,24 +1,21 @@
 
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "@/lib/getMessages";
 import TreatmentsContent from "./TreatmentsContent";
 
-export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslations({ locale, namespace: "treatments" });
+export async function generateMetadata({ params }) {
+    const { locale } = params;
+    const messages = await getMessages(locale, "treatments");
 
     return {
-        title: t("title"),
-        description: t("intro"),
-        openGraph: {
-            title: t("title"),
-            description: t("intro"),
-            images: [
-                {
-                    url: "/images/og-treatments.jpg", // Ensure this image exists or use a generic one
-                    width: 1200,
-                    height: 630,
-                    alt: t("title"),
-                },
-            ],
+        title: messages.seo?.title,
+        description: messages.seo?.description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/treatments`,
+            languages: {
+                "en": "https://www.panaceamedcare.com/en/treatments",
+                "fr": "https://www.panaceamedcare.com/fr/treatments",
+                "ar": "https://www.panaceamedcare.com/ar/treatments",
+            },
         },
     };
 }

@@ -4,29 +4,24 @@ import { notFound } from "next/navigation";
 import TreatmentDetailContent from "./TreatmentDetailContent";
 import { getTreatmentBySlug } from "@/data/treatmentsData";
 
-export async function generateMetadata({ params: { locale, slug } }) {
+export async function generateMetadata({ params }) {
+    const { locale, slug } = params;
     const treatment = getTreatmentBySlug(slug);
 
     if (!treatment) {
         return {};
     }
 
-    const t = await getTranslations({ locale, namespace: treatment.namespace });
-
     return {
-        title: `${t("title")} - Panacea Medcare`,
-        description: t("intro"),
-        openGraph: {
-            title: t("title"),
-            description: t("intro"),
-            images: [
-                {
-                    url: `/treatment/${slug}.jpg`,
-                    width: 1200,
-                    height: 630,
-                    alt: t("title"),
-                },
-            ],
+        title: treatment.seoTitle?.[locale] || treatment.name,
+        description: treatment.seoDescription?.[locale] || "",
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/treatments/${slug}`,
+            languages: {
+                "en": `https://www.panaceamedcare.com/en/treatments/${slug}`,
+                "fr": `https://www.panaceamedcare.com/fr/treatments/${slug}`,
+                "ar": `https://www.panaceamedcare.com/ar/treatments/${slug}`,
+            },
         },
     };
 }

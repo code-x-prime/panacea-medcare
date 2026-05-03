@@ -31,6 +31,14 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'blog.panaceamedcare.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'www.panaceamedcare.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'panaceamedcare.com',
+            },
         ],
     },
     webpack: (config) => {

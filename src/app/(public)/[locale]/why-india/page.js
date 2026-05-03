@@ -1,27 +1,21 @@
 
 import WhyIndiaContent from "./WhyIndiaContent";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "@/lib/getMessages";
 
-export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslations({ locale, namespace: "whyIndia" });
+export async function generateMetadata({ params }) {
+    const { locale } = params;
+    const messages = await getMessages(locale, "whyIndia");
 
     return {
-        title: t("title"),
-        description: t("subtitle"),
-        keywords: ["Medical Value Travel India", "Why Choose India", "Affordable Healthcare", "JCI Accredited Hospitals India"],
-        openGraph: {
-            title: t("title"),
-            description: t("subtitle"),
-            url: `https://www.panaceamedcare.com/${locale}/why-india`,
-            type: "website",
-            images: [
-                {
-                    url: "/images/og-why-india.jpg",
-                    width: 1200,
-                    height: 630,
-                    alt: t("title"),
-                },
-            ],
+        title: messages.seo?.title,
+        description: messages.seo?.description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/why-india`,
+            languages: {
+                "en": "https://www.panaceamedcare.com/en/why-india",
+                "fr": "https://www.panaceamedcare.com/fr/why-india",
+                "ar": "https://www.panaceamedcare.com/ar/why-india",
+            },
         },
     };
 }

@@ -1,4 +1,24 @@
 // src/app/(public)/[locale]/page.js
+import { getMessages } from "@/lib/getMessages";
+
+export async function generateMetadata({ params }) {
+  const { locale } = params;
+  const messages = await getMessages(locale, "home");
+
+  return {
+    title: messages.seo?.title,
+    description: messages.seo?.description,
+    alternates: {
+      canonical: `https://www.panaceamedcare.com/${locale}`,
+      languages: {
+        "en": "https://www.panaceamedcare.com/en",
+        "fr": "https://www.panaceamedcare.com/fr",
+        "ar": "https://www.panaceamedcare.com/ar",
+      },
+    },
+  };
+}
+
 import HeroSection from '@/components/HeroSection';
 // import PatientStories from '@/components/PatientStories';
 import TopMedicalDestinations from '@/components/TopMedicalDestinations';

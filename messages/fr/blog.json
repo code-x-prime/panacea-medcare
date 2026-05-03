@@ -1,5 +1,9 @@
 {
-  "title": "Blog et actualités",
+  "seo": {
+    "title": "Blogs et nouvelles médicales | Panacea Medcare",
+    "description": "Lisez les derniers blogs médicaux et conseils de santé de Panacea Medcare. Articles d'experts sur les soins de santé en Inde."
+  },
+  "title": "Blog et nouvelles",
   "subtitle": "Dernières mises à jour et informations médicales",
   "categoryCancerCare": "Soins du cancer",
   "categoryOrthopedics": "Orthopédie",

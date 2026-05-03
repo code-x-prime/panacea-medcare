@@ -3,12 +3,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import env from "@/config/env";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 export const metadata = {
-  title: env.NEXT_PUBLIC_SITE_NAME,
+  metadataBase: new URL("https://www.panaceamedcare.com"),
+  title: {
+    default: "Panacea Medcare | Trusted Healthcare Partner",
+    template: "%s | Panacea Medcare"
+  },
   description: "Your trusted partner in healthcare excellence",
   alternates: {
     canonical: "/",

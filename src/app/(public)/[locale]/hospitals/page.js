@@ -1,29 +1,20 @@
 import HospitalsContent from "./HospitalsContent";
-import { getTranslations } from "next-intl/server";
+import { getMessages } from "@/lib/getMessages";
 
-export async function generateMetadata({ params: { locale } }) {
-    const t = await getTranslations({ locale });
-
-    // Manual fallback for titles
-    const titleMap = {
-        en: "Network Hospitals - Panacea Medcare",
-        ar: "المستشفيات الشريكة - باناسيا ميد كير",
-        fr: "Nos Hôpitaux Partenaires - Panacea Medcare"
-    };
-
-    const descMap = {
-        en: "Explore our network of accredited hospitals in India, Thailand, Turkey, and UAE.",
-        ar: "استكشف شبكة المستشفيات المعتمدة لدينا في الهند وتايلاند وتركيا والإمارات.",
-        fr: "Explorez notre réseau d'hôpitaux accrédités en Inde, Thaïlande, Turquie et aux EAU."
-    };
+export async function generateMetadata({ params }) {
+    const { locale } = params;
+    const messages = await getMessages(locale, "hospitals");
 
     return {
-        title: titleMap[locale] || titleMap.en,
-        description: descMap[locale] || descMap.en,
-        openGraph: {
-            title: titleMap[locale] || titleMap.en,
-            description: descMap[locale] || descMap.en,
-            type: "website",
+        title: messages.seo?.title,
+        description: messages.seo?.description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/hospitals`,
+            languages: {
+                "en": "https://www.panaceamedcare.com/en/hospitals",
+                "fr": "https://www.panaceamedcare.com/fr/hospitals",
+                "ar": "https://www.panaceamedcare.com/ar/hospitals",
+            },
         },
     };
 }

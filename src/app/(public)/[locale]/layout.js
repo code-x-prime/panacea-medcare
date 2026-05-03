@@ -13,9 +13,12 @@ export const metadata = {
     template: "%s | Panacea Medcare"
   },
   description: "Your trusted partner in healthcare excellence",
-  alternates: {
-    canonical: "/",
-  },
+    verification: {
+        google: "0cIlg3ZIREwnOyuqd3qWtnKRDMKCMpOnFQA8EdSiLy0",
+    },
+    alternates: {
+        canonical: "/",
+    },
 };
 
 export default async function PublicLayout({ children, params }) {

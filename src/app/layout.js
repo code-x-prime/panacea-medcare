@@ -18,7 +18,7 @@ export const metadata = {
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
   verification: {
-    google: "ZyygYM9msMhOpX50kpmQX8XXc9IhuZImsa2vn9woem4",
+    google: "0cIlg3ZIREwnOyuqd3qWtnKRDMKCMpOnFQA8EdSiLy0",
   },
   alternates: {
     canonical: "/",
@@ -38,6 +38,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NP4R37SX');`}
         </Script>
         {/* End Google Tag Manager  */}
+        <meta name="google-site-verification" content="0cIlg3ZIREwnOyuqd3qWtnKRDMKCMpOnFQA8EdSiLy0" />
       </head>
       <body className={`${raleway.variable} font-sans overflow-x-hidden`}>
         {/* Google Tag Manager (noscript) */}

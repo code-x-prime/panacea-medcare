@@ -2,13 +2,24 @@ import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
-// Fix for nginx proxy — port 3000 redirect problem
 function getBaseUrl(request) {
   const host = request.headers.get('x-forwarded-host') ||
     request.headers.get('host') ||
     'www.panaceamedcare.com';
   const proto = request.headers.get('x-forwarded-proto') || 'https';
   return `${proto}://${host}`;
+}
+
+// Port 3000 fix — koi bhi redirect mein :3000 ho to hata do
+function fixRedirect(response) {
+  if ([301, 302, 307, 308].includes(response.status)) {
+    const location = response.headers.get('location');
+    if (location && location.includes(':3000')) {
+      const fixed = location.replace(':3000', '');
+      return NextResponse.redirect(fixed, response.status);
+    }
+  }
+  return response;
 }
 
 const intlMiddleware = createMiddleware({
@@ -53,11 +64,10 @@ export default async function middleware(request) {
     const firstSegment = pathSegments[0];
 
     if (!validLocales.includes(firstSegment)) {
-      const newUrl = new URL(
-        pathname === "/" || pathname === "" ? `/${savedLocale}` : `/${savedLocale}${pathname}`,
-        getBaseUrl(request)
-      );
-      return NextResponse.redirect(newUrl);
+      const newPath = pathname === "/" || pathname === ""
+        ? `/${savedLocale}`
+        : `/${savedLocale}${pathname}`;
+      return NextResponse.redirect(new URL(newPath, getBaseUrl(request)));
     }
 
     if (firstSegment !== savedLocale && validLocales.includes(firstSegment)) {
@@ -67,11 +77,11 @@ export default async function middleware(request) {
         maxAge: 31536000,
         sameSite: "lax",
       });
-      return response;
+      return fixRedirect(response);
     }
   }
 
-  return intlMiddleware(request);
+  return fixRedirect(intlMiddleware(request));
 }
 
 export const config = {

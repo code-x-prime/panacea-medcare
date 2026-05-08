@@ -17,11 +17,12 @@ export const metadata = {
   metadataBase: new URL('https://www.panaceamedcare.com'),
   title: env.NEXT_PUBLIC_SITE_NAME,
   description: "Your trusted partner in healthcare excellence",
+  robots: "index, follow",
   verification: {
     google: "0cIlg3ZIREwnOyuqd3qWtnKRDMKCMpOnFQA8EdSiLy0",
   },
   alternates: {
-    canonical: "/",
+    canonical: "/en",
   },
 };
 

@@ -8,6 +8,7 @@ export async function generateMetadata({ params }) {
   return {
     title: messages.seo?.title,
     description: messages.seo?.description,
+    robots: "index, follow",
     alternates: {
       canonical: `https://www.panaceamedcare.com/${locale}`,
       languages: {

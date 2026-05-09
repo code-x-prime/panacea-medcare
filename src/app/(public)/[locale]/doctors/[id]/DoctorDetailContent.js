@@ -139,8 +139,8 @@ export default function DoctorDetailContent({ params }) {
                                 </div>
 
                                 {/* Action Buttons */}
-                                <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
-                                    {/* Book Appointment Button */}
+                                {/* <div className="mt-6 pt-6 border-t border-gray-200 space-y-3">
+
                                     <button
                                         onClick={() => setIsBookingModalOpen(true)}
                                         className="w-full flex items-center justify-center gap-2 bg-panacea-primary hover:bg-panacea-dark text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
@@ -149,7 +149,7 @@ export default function DoctorDetailContent({ params }) {
                                         <span>Book Appointment</span>
                                     </button>
 
-                                    {/* WhatsApp Button */}
+
                                     <a
                                         href={whatsappLink}
                                         target="_blank"
@@ -160,7 +160,7 @@ export default function DoctorDetailContent({ params }) {
                                         <span>WhatsApp</span>
                                     </a>
 
-                                    {/* Email Button */}
+
                                     <a
                                         href={emailLink}
                                         className="w-full flex items-center justify-center gap-2 bg-panacea-accent hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
@@ -168,7 +168,7 @@ export default function DoctorDetailContent({ params }) {
                                         <FaEnvelope className="w-5 h-5" />
                                         <span>Email Us</span>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

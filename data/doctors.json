@@ -20293,5 +20293,114 @@
     "designation": "Radiation Oncologist",
     "hospitalDesignation": "Radiation Oncologist",
     "experience": "16 Years"
+  },
+  {
+    "id": "purshotam-lal-metro",
+    "name": "Dr. (Prof.) Purshotam Lal",
+    "specialty": "Interventional Cardiology",
+    "designation": "Chairman - Metro Group & Director Interventional Cardiology",
+    "hospitalDesignation": "Chairman - Metro Group & Director Interventional Cardiology",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-purshotam-lal.webp",
+    "bio": "Dr. (Prof.) Purshotam Lal is Chairman of Metro Group of Hospitals and Director of Interventional Cardiology at Metro Hospital Faridabad, a pioneer in cardiac care in India."
+  },
+  {
+    "id": "neeraj-jain-metro",
+    "name": "Dr. Neeraj Jain",
+    "specialty": "Interventional Cardiology",
+    "designation": "Medical Director & Director Interventional Cardiology",
+    "hospitalDesignation": "Medical Director - Metro Hospital Faridabad",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-neeraj-jain.jpg",
+    "bio": "Dr. Neeraj Jain is Medical Director at Metro Hospital Faridabad and Director of Interventional Cardiology with extensive experience in complex cardiac procedures."
+  },
+  {
+    "id": "shailendra-lalwani-metro",
+    "name": "Dr. Shailendra Lalwani",
+    "specialty": "Liver Transplant & GI Surgery",
+    "designation": "Director & HOD - Liver Transplant, HPB & GI Surgery",
+    "hospitalDesignation": "Director & HOD - Liver Transplant, HPB & GI Surgery",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-shailendra-lalwani.png",
+    "bio": "Dr. Shailendra Lalwani leads liver transplant, HPB and GI surgery at Metro Hospital Faridabad with expertise in complex hepatobiliary procedures."
+  },
+  {
+    "id": "rajender-singla-metro",
+    "name": "Dr. Rajender Singla",
+    "specialty": "Neurology",
+    "designation": "Director & HOD - Neurology",
+    "hospitalDesignation": "Director & HOD - Neurology",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-rajender-singla.png",
+    "bio": "Dr. Rajender Singla is Director and HOD of Neurology at Metro Hospital Faridabad, providing advanced care for stroke, epilepsy and neurological disorders."
+  },
+  {
+    "id": "ashok-dhar-metro",
+    "name": "Dr. Ashok Kr. Dhar",
+    "specialty": "Orthopedics & Joint Replacement",
+    "designation": "Director - Orthopaedics & Joint Replacement (Unit-I)",
+    "hospitalDesignation": "Director - Orthopaedics & Joint Replacement",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-ashok-kr-dhar.png",
+    "bio": "Dr. Ashok Kr. Dhar is Director of Orthopaedics & Joint Replacement at Metro Hospital Faridabad, specialising in knee and hip replacement and sports injuries."
+  },
+  {
+    "id": "praveen-bansal-metro",
+    "name": "Dr. Praveen Kumar Bansal",
+    "specialty": "Medical Oncology",
+    "designation": "Director - Oncology Services",
+    "hospitalDesignation": "Director - Oncology Services, Medical Oncology",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-praveen-kumar-bansal.png",
+    "bio": "Dr. Praveen Kumar Bansal is Director of Oncology Services at Metro Hospital Faridabad with expertise in medical oncology and cancer care."
+  },
+  {
+    "id": "sumit-bansal-metro",
+    "name": "Dr. Sumit Bansal",
+    "specialty": "Urology & Renal Transplant",
+    "designation": "Director & HOD - Urology, Renal Transplant & Robotic Surgery",
+    "hospitalDesignation": "Director & HOD - Urology, Renal Transplant & Robotic Surgery",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-sumit-bansal.png",
+    "bio": "Dr. Sumit Bansal leads urology, renal transplant and robotic surgery at Metro Hospital Faridabad with advanced minimally invasive expertise."
+  },
+  {
+    "id": "himanshu-arora-metro",
+    "name": "Dr. Himanshu Arora",
+    "specialty": "Neurosurgery & Spine",
+    "designation": "Director - Neuro Surgery & Spine (Unit-I)",
+    "hospitalDesignation": "Director - Neuro Surgery & Spine",
+    "hospital": "Metro Hospital Faridabad",
+    "hospitalSlug": "metro-hospital-faridabad",
+    "image": "/metro-hospital-faridabad/dr-himanshu-arora.png",
+    "bio": "Dr. Himanshu Arora is Director of Neuro Surgery & Spine at Metro Hospital Faridabad, offering advanced spine and brain surgery care."
+  },
+  {
+    "id": "rashi-chitkara-dental",
+    "name": "Dr. Rashi Chitkara",
+    "specialty": "Cosmetic & General Dentistry",
+    "designation": "Chief Dentist & Clinic Director",
+    "hospitalDesignation": "Chief Dentist & Clinic Director",
+    "hospital": "Dr. Rashi's Dental Clinic",
+    "hospitalSlug": "rashi-dental-clinic-gurgaon",
+    "qualification": "BDS",
+    "experience": "20+ Years",
+    "image": "/rashi-dental-clinic/dr-rashi-chitkara.jpg",
+    "bio": "Dr. Rashi Chitkara is the lead dentist at Dr. Rashi's Dental Clinic Gurgaon with 20+ years of experience in cosmetic dentistry, dental implants, aligners, root canal treatment and full mouth rehabilitation.",
+    "expertise": [
+      "Cosmetic dentistry",
+      "Dental implants",
+      "Invisible aligners",
+      "Root canal treatment",
+      "Veneers & smile design",
+      "Full mouth rehabilitation"
+    ]
   }
 ]

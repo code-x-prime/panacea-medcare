@@ -72,6 +72,8 @@ export default function sitemap() {
         "medanta-hospital-gurgaon",
         "neelkanth-maternity-ivf-hospital-gurgaon",
         "manipal-hospital-dwarka",
+        "metro-hospital-faridabad",
+        "rashi-dental-clinic-gurgaon",
         // Chennai
         "apollo-hospital-greams-road-chennai",
         // Mumbai

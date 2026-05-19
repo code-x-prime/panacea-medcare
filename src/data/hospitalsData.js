@@ -98,6 +98,30 @@ const hospitalSEO = {
             ar: "مستشفى مارينجو آسيا جيرجاون هو مستشفى معتمد متعدد التخصصات مع دعم متقدم للقلب والأعصاب والعلاج من قبل باناسيا ميد كير."
         }
     },
+    "metro-hospital-faridabad": {
+        seoTitle: {
+            en: "Best Hospital in Faridabad | Metro Hospital & Heart Institute",
+            fr: "Meilleur hôpital de Faridabad | Metro Hospital & Heart Institute",
+            ar: "أفضل مستشفى في فريد آباد | مستشفى مترو ومعهد القلب"
+        },
+        seoDescription: {
+            en: "Metro Hospital Faridabad is a NABH-accredited 400-bed multi-speciality hospital with centres of excellence in cardiac sciences, oncology, neurosciences and organ transplant.",
+            fr: "Metro Hospital Faridabad est un hôpital multi-spécialités de 400 lits accrédité NABH avec des centres d'excellence en sciences cardiaques, oncologie, neurosciences et greffe d'organes.",
+            ar: "مستشفى مترو فريد آباد هو مستشفى متعدد التخصصات بسعة 400 سرير معتمد من NABH مع مراكز تميز في علوم القلب والأورام وعلوم الأعصاب وزراعة الأعضاء."
+        }
+    },
+    "rashi-dental-clinic-gurgaon": {
+        seoTitle: {
+            en: "Best Dental Clinic in Gurgaon | Dr. Rashi's Dental Clinic",
+            fr: "Meilleure clinique dentaire à Gurgaon | Clinique dentaire Dr. Rashi",
+            ar: "أفضل عيادة أسنان في جورجاون | عيادة الدكتورة راشي للأسنان"
+        },
+        seoDescription: {
+            en: "Dr. Rashi's Dental Clinic Gurgaon offers cosmetic dentistry, dental implants, aligners, root canal treatment and full mouth rehabilitation with expert care.",
+            fr: "La clinique dentaire Dr. Rashi à Gurgaon propose dentisterie esthétique, implants dentaires, aligneurs, traitement de canal et réhabilitation bucco-dentaire complète.",
+            ar: "تقدم عيادة الدكتورة راشي للأسنان في جورجاون طب الأسنان التجميلي وزراعة الأسنان والتقويم وعلاج قناة الجذر وإعادة تأهيل الفم الكامل."
+        }
+    },
     "asian-hospital-delhi": {
         seoTitle: {
             en: "Best Hospital in Faridabad Delhi NCR | Asian Institute of Medical Sciences",
@@ -282,6 +306,8 @@ export const indiaHospitals = {
         { name: "Neelkanth Maternity & IVF Hospital Gurgaon", slug: "neelkanth-maternity-ivf-hospital-gurgaon" },
         { name: "Sight Avenue Hospital Gurgaon", slug: "sight-avenue-hospital-gurgaon" },
         { name: "Manipal Hospital Dwarka", slug: "manipal-hospital-dwarka" },
+        { name: "Metro Hospital Faridabad", slug: "metro-hospital-faridabad" },
+        { name: "Rashi Dental Clinic", slug: "rashi-dental-clinic-gurgaon" },
     ],
     "chennai": [
         { name: "Apollo Hospital Greams Road", slug: "apollo-hospital-greams-road-chennai" },
@@ -290,10 +316,14 @@ export const indiaHospitals = {
         { name: "Stem Rx Hospital", slug: "stem-rx-hospital-mumbai" },
         { name: "Apollo Hospital", slug: "apollo-hospital-mumbai" },
         { name: "Fortis Hospital", slug: "fortis-hospital-mumbai" },
+        { name: "Lilavati Hospital", slug: "lilavati-hospital-mumbai" },
+        { name: "KIMS Hospital", slug: "kims-hospital-mumbai" },
+        { name: "Dr. L H Hiranandani Hospital", slug: "hiranandani-hospital-mumbai" },
     ],
     "hyderabad": [
         { name: "TX Hospital", slug: "tx-hospital-hyderabad" },
         { name: "Apollo Hospital", slug: "apollo-hospital-hyderabad" },
+        { name: "KIMS Hospital Kondapur", slug: "kims-hospital-hyderabad" },
     ],
 };
 
@@ -306,5 +336,8 @@ export const internationalHospitals = {
     ],
     "nepal": [
         { name: "Nepal Mediciti", slug: "nepal-mediciti" },
+    ],
+    "israel": [
+        { name: "Sheba Medical Center", slug: "sheba-medical-center-israel" },
     ],
 };

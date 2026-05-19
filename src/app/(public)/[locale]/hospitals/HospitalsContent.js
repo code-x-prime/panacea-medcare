@@ -226,6 +226,7 @@ export default function HospitalsContent({ params }) {
                             ...internationalHospitals["nepal"].map(h => ({ ...h, country: "nepal", countryName: t("nepal") || "Nepal", flag: "🇳🇵" })),
                             ...internationalHospitals["thailand"].map(h => ({ ...h, country: "thailand", countryName: t("thailand") || "Thailand", flag: "🇹🇭" })),
                             ...internationalHospitals["turkey"].map(h => ({ ...h, country: "turkey", countryName: t("turkey") || "Turkey", flag: "🇹🇷" })),
+                            ...(internationalHospitals["israel"] || []).map(h => ({ ...h, country: "israel", countryName: t("israel") || "Israel", flag: "🇮🇱" })),
                         ].sort((a, b) => a.name.localeCompare(b.name));
 
                         return (

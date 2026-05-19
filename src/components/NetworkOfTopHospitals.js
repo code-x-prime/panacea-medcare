@@ -4,98 +4,11 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
+import { indiaHospitals, internationalHospitals, getHospitalImage } from "@/data/hospitalsData";
 
 export default function NetworkOfTopHospitals({ locale }) {
     const t = useTranslations("networkHospitals");
     const isRTL = locale === "ar";
-
-    const indiaHospitals = {
-        "delhi-ncr": [
-            { name: "Asian Hospital", slug: "asian-hospital-delhi" },
-            { name: "Marengo Asia Hospital, Gurgaon", slug: "marengo-asia-hospital-gurgaon" },
-            { name: "Indraprastha Apollo Hospital", slug: "indraprastha-apollo-hospital-new-delhi" },
-
-            { name: "Fortis Hospital Gurgaon", slug: "fortis-hospital-gurgaon" },
-            { name: "Max Hospital Saket", slug: "max-hospital-saket" },
-            { name: "BLK Max Hospital Pusa Road", slug: "blk-max-hospital-pusa-road" },
-            { name: "Medanta Hospital, Gurgaon", slug: "medanta-hospital-gurgaon" },
-            { name: "Neelkanth Maternity & IVF Hospital Gurgaon", slug: "neelkanth-maternity-ivf-hospital-gurgaon" },
-            { name: "Sight Avenue Hospital Gurgaon", slug: "sight-avenue-hospital-gurgaon" },
-            { name: "Manipal Hospital Dwarka", slug: "manipal-hospital-dwarka" },
-        ],
-        "chennai": [
-            { name: "Apollo Hospital Greams Road", slug: "apollo-hospital-greams-road-chennai" },
-        ],
-        "mumbai": [
-            { name: "Stem Rx Hospital", slug: "stem-rx-hospital-mumbai" },
-            { name: "Apollo Hospital", slug: "apollo-hospital-mumbai" },
-            { name: "Fortis Hospital", slug: "fortis-hospital-mumbai" },
-            { name: "Lilavati Hospital", slug: "lilavati-hospital-mumbai" },
-            { name: "KIMS Hospital", slug: "kims-hospital-mumbai" },
-            { name: "Dr. L H Hiranandani Hospital", slug: "hiranandani-hospital-mumbai" },
-        ],
-        "hyderabad": [
-            { name: "TX Hospital", slug: "tx-hospital-hyderabad" },
-            { name: "Apollo Hospital", slug: "apollo-hospital-hyderabad" },
-            { name: "KIMS Hospital", slug: "kims-hospital-hyderabad" },
-        ],
-    };
-
-    // International hospitals - Only India, Nepal, Turkey, Thailand
-    const internationalHospitals = {
-        "turkey": [
-            { name: "Memorial Hospital", slug: "memorial-hospital-turkey" },
-        ],
-        "thailand": [
-            { name: "Bumrungrad Hospital", slug: "bumrungrad-hospital-thailand" },
-        ],
-        "nepal": [
-            { name: "Nepal Mediciti", slug: "nepal-mediciti" },
-        ],
-        "israel": [
-            { name: "Sheba Medical Center", slug: "sheba-medical-center-israel" },
-        ],
-    };
-
-    // Helper function to get hospital image - returns image path or placeholder
-    const getHospitalImage = (slug) => {
-        // Image mapping for hospitals with actual images
-        const imageMap = {
-            // Delhi NCR
-            "asian-hospital-delhi": "/hospitals/asian-hospital.jpg",
-            "marengo-asia-hospital-gurgaon": "/hospitals/marengo-asia-hospital-gurgaon.jpg",
-            "indraprastha-apollo-hospital-new-delhi": "/hospitals/indraprastha-apollo-hospital-new-delhi.jpg",
-            "apollo-hospitals-all": "/hospitals/apollo-hospitals-all.jpg",
-            "fortis-hospital-gurgaon": "/hospitals/fortis-hospital-gurgaon.jpg",
-            "max-hospital-saket": "/hospitals/max-hospital-saket.jpg",
-            "blk-max-hospital-pusa-road": "/hospitals/blk-max-hospital-pusa-road.jpg",
-            "medanta-hospital-gurgaon": "/hospitals/medanta-hospital-gurgaon.jpg",
-            "neelkanth-maternity-ivf-hospital-gurgaon": "/hospitals/neelkanth-maternity-ivf-hospital-gurgaon.jpg",
-            "sight-avenue-hospital-gurgaon": "/hospitals/sight-avenue-hospital-gurgaon.jpg",
-            "manipal-hospital-dwarka": "/hospitals/manipal-hospital-dwarka.jpg",
-            // Chennai
-            "apollo-hospital-greams-road-chennai": "/hospitals/apollo-hospital-greams-road-chennai.jpg",
-            // Mumbai
-            "stem-rx-hospital-mumbai": "/hospitals/stem-rx-hospital-mumbai.jpg",
-            "apollo-hospital-mumbai": "/hospitals/apollo-hospital-mumbai.jpg",
-            "fortis-hospital-mumbai": "/hospitals/fortis-hospital-mumbai.jpg",
-            "hiranandani-hospital-mumbai": "/hospitals/hiranandanih-hospital-mumbai.webp",
-            // Hyderabad
-            "tx-hospital-hyderabad": "/hospitals/tx-hospital-hyderabad.jpg",
-            "apollo-hospital-hyderabad": "/hospitals/apollo-hospital-hyderabad.jpg",
-            "kims-hospital-hyderabad": "/hospitals/kims-hospital-hyderabad.webp",
-            // International
-            "memorial-hospital-turkey": "/hospitals/memorial-hospital-turkey.jpg",
-            "bumrungrad-hospital-thailand": "/hospitals/bumrungrad-hospital-thailand.jpg",
-            "nepal-mediciti": "/hospitals/nepal-mediciti.jpg",
-            "sheba-medical-center-israel": "/hospitals/sheeba-hospital-israel.jpg",
-            "lilavati-hospital-mumbai": "/hospitals/lilavati-hospital-mumbai.jpg",
-            "kims-hospital-mumbai": "/hospitals/kims-hospital-mumbai.jpg",
-        };
-
-        // Return image if exists, otherwise return placeholder
-        return imageMap[slug] || "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
-    };
 
     return (
         <section

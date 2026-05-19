@@ -1447,6 +1447,265 @@
               ]
             },
             {
+              "id": "metro-hospital-faridabad",
+              "slug": "metro-hospital-faridabad",
+              "name": "Metro Hospital Faridabad",
+              "nameAr": "مستشفى مترو فريد آباد",
+              "nameFr": "Hôpital Metro Faridabad",
+              "rating": {
+                "score": 4.6,
+                "totalReviews": 210
+              },
+              "establishedYear": 2002,
+              "specialtyType": "Multi Specialty",
+              "beds": 400,
+              "accreditations": [
+                "NABH",
+                "NABL"
+              ],
+              "about": {
+                "short": "Metro Hospital Faridabad (Metro Heart Institute with Multispeciality) is a NABH-accredited tertiary care hospital with 400+ beds, 200+ doctors and centres of excellence in cardiac sciences, oncology, neurosciences, organ transplant and orthopedics.",
+                "shortAr": "مستشفى مترو فريد آباد هو مستشفى رعاية ثالثية معتمد من NABH بأكثر من 400 سرير و200 طبيب ومراكز تميز في علوم القلب والأورام وعلوم الأعصاب وزراعة الأعضاء وجراحة العظام.",
+                "shortFr": "Metro Hospital Faridabad est un hôpital de soins tertiaires accrédité NABH avec plus de 400 lits, 200+ médecins et des centres d'excellence en sciences cardiaques, oncologie, neurosciences, greffe d'organes et orthopédie.",
+                "full": "Metro Hospital Faridabad, also known as Metro Heart Institute with Multispeciality, is one of the leading NABH-accredited hospitals in Delhi NCR. Established in 2002 on an 8-acre campus in Sector 16A, Faridabad, the hospital offers 400+ beds including advanced ICU care and 200+ specialist doctors.\n\nCentres of excellence include Cardiac Sciences (interventional cardiology, cardiac surgery, electrophysiology, robotic cardiac surgery), Cancer Care (medical, surgical and radiation oncology), Neurosciences, Orthopedics & Joint Replacement, Gastroenterology & Hepatology (including liver transplant), Nephrology & Urology, Paediatrics, Obstetrics & Gynaecology, and Bariatric Surgery.\n\nThe hospital is a trusted destination for international patients seeking advanced cardiac care, cancer treatment, joint replacement, spine surgery and organ transplant procedures in India.",
+                "fullAr": "مستشفى مترو فريد آباد، المعروف أيضًا بمعهد مترو للقلب متعدد التخصصات، هو من أبرز المستشفيات المعتمدة من NABH في دلهي NCR. تأسس عام 2002 على حرم بمساحة 8 أفدنة في القطاع 16أ، فريد آباد، ويقدم أكثر من 400 سرير بما في ذلك رعاية العناية المركزة المتقدمة وأكثر من 200 طبيب متخصص.\n\nتشمل مراكز التميز علوم القلب (قسطرة القلب، جراحة القلب، الفيزيولوجيا الكهربية للقلب)، رعاية السرطان، علوم الأعصاب، جراحة العظام واستبدال المفاصل، أمراض الجهاز الهضمي وزراعة الكبد، أمراض الكلى والمسالك البولية، طب الأطفال، التوليد وأمراض النساء، وجراحة السمنة.\n\nالمستشفى وجهة موثوقة للمرضى الدوليين الباحثين عن رعاية قلبية متقدمة وعلاج السرطان واستبدال المفاصل وجراحة العمود الفقري وزراعة الأعضاء في الهند.",
+                "fullFr": "Metro Hospital Faridabad, également connu sous le nom de Metro Heart Institute with Multispeciality, est l'un des principaux hôpitaux accrédités NABH de Delhi NCR. Fondé en 2002 sur un campus de 8 acres au secteur 16A, Faridabad, l'hôpital offre plus de 400 lits dont des soins intensifs avancés et plus de 200 médecins spécialistes.\n\nLes centres d'excellence comprennent les sciences cardiaques, les soins du cancer, les neurosciences, l'orthopédie et le remplacement articulaire, la gastro-entérologie et l'hépatologie (dont la greffe de foie), la néphrologie et l'urologie, la pédiatrie, l'obstétrique et la gynécologie, et la chirurgie bariatrique.\n\nL'hôpital est une destination de confiance pour les patients internationaux recherchant des soins cardiaques avancés, un traitement du cancer, un remplacement articulaire, une chirurgie de la colonne vertébale et des greffes d'organes en Inde.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiology & Cardiac Surgery", "doctors": 25 },
+                { "name": "Oncology", "doctors": 18 },
+                { "name": "Neurosciences", "doctors": 12 },
+                { "name": "Orthopedics & Joint Replacement", "doctors": 10 },
+                { "name": "Gastroenterology & Liver Transplant", "doctors": 8 },
+                { "name": "Nephrology & Urology", "doctors": 8 }
+              ],
+              "address": {
+                "line1": "Sector 16A, Faridabad",
+                "city": "Faridabad (Delhi NCR)",
+                "state": "Haryana",
+                "pincode": "121002",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 32,
+                "airportDuration": "45 mins",
+                "airportName": "Indira Gandhi International Airport (DEL)",
+                "metroKm": 4,
+                "metroDuration": "10 mins",
+                "metroName": "NHPC Chowk Metro Station",
+                "coordinates": {
+                  "lat": 28.4112,
+                  "lng": 77.3132
+                }
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "TV in room",
+                  "Private rooms",
+                  "Free Wifi",
+                  "Family accommodation",
+                  "Laundry",
+                  "Parking available",
+                  "Café",
+                  "Prayer Room"
+                ],
+                "moneyMatters": [
+                  "Health insurance coordination",
+                  "Foreign currency exchange",
+                  "ATM",
+                  "Credit Card",
+                  "Debit Card"
+                ],
+                "food": [
+                  "Diet on Request",
+                  "Restaurant",
+                  "International Cuisine",
+                  "Vegetarian options"
+                ],
+                "treatmentRelated": [
+                  "24/7 Emergency",
+                  "ICU",
+                  "Operation Theatres",
+                  "Pharmacy",
+                  "Blood Bank",
+                  "Online doctor consultation",
+                  "Post operative followup"
+                ],
+                "language": [
+                  "English",
+                  "Hindi",
+                  "Arabic",
+                  "Interpreter services"
+                ],
+                "transportation": [
+                  "Airport pickup",
+                  "Ambulance services",
+                  "Local transportation booking"
+                ]
+              },
+              "infrastructure": {
+                "totalArea": "8-acre multispeciality campus",
+                "beds": 400,
+                "icuBeds": 72,
+                "operationTheatres": 14,
+                "technologies": [
+                  "Cath Lab",
+                  "Robotic surgery",
+                  "Linear accelerator",
+                  "PET-CT",
+                  "MRI & CT",
+                  "Modular operation theatres"
+                ]
+              },
+              "teamAndSpecialties": {
+                "description": "Metro Hospital Faridabad brings together 200+ specialists across cardiac sciences, oncology, neuro & spine surgery, orthopedics, gastroenterology, nephrology, urology and transplant programmes with advanced robotic and minimally invasive capabilities.",
+                "descriptionAr": "يجمع مستشفى مترو فريد آباد أكثر من 200 متخصص في علوم القلب والأورام وجراحة الأعصاب والعمود الفقري وجراحة العظام وأمراض الجهاز الهضمي وأمراض الكلى والمسالك البولية وبرامج الزراعة مع قدرات روبوتية وتدخلية طفيفة.",
+                "descriptionFr": "Metro Hospital Faridabad réunit plus de 200 spécialistes en sciences cardiaques, oncologie, chirurgie neuro-spinale, orthopédie, gastro-entérologie, néphrologie, urologie et programmes de greffe avec des capacités robotiques et mini-invasives avancées."
+              },
+              "milestones": [
+                {
+                  "name": "NABH accredited multi-speciality hospital",
+                  "nameAr": "مستشفى متعدد التخصصات معتمد من NABH",
+                  "nameFr": "Hôpital multi-spécialités accrédité NABH"
+                },
+                {
+                  "name": "400+ beds with advanced cardiac & cancer care",
+                  "nameAr": "أكثر من 400 سرير مع رعاية قلبية وسرطان متقدمة",
+                  "nameFr": "Plus de 400 lits avec soins cardiaques et oncologiques avancés"
+                },
+                {
+                  "name": "Centres of excellence in organ transplant & robotic surgery",
+                  "nameAr": "مراكز تميز في زراعة الأعضاء والجراحة الروبوتية",
+                  "nameFr": "Centres d'excellence en greffe d'organes et chirurgie robotique"
+                }
+              ],
+              "internationalPatientServices": {
+                "description": "Metro Hospital Faridabad offers dedicated international patient services including pre-arrival consultation, visa assistance, airport transfers, accommodation support and multilingual coordinators.",
+                "descriptionAr": "يقدم مستشفى مترو فريد آباد خدمات مخصصة للمرضى الدوليين بما في ذلك الاستشارة قبل الوصول والمساعدة في التأشيرة والتنقلات من المطار ودعم الإقامة ومنسقين متعددين اللغات.",
+                "descriptionFr": "Metro Hospital Faridabad offre des services dédiés aux patients internationaux, notamment consultation avant l'arrivée, aide au visa, transferts aéroport, aide à l'hébergement et coordinateurs multilingues.",
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              },
+              "images": [
+                "/hospitals/metro-hospital-faridabad.webp",
+                "/hospitals/all/metro-hospital-faridabad-1.jpg",
+                "/hospitals/all/metro-hospital-faridabad-2.jpg"
+              ]
+            },
+            {
+              "id": "rashi-dental-clinic-gurgaon",
+              "slug": "rashi-dental-clinic-gurgaon",
+              "name": "Dr. Rashi's Dental Clinic",
+              "nameAr": "عيادة الدكتورة راشي للأسنان",
+              "nameFr": "Clinique dentaire Dr. Rashi",
+              "rating": {
+                "score": 4.7,
+                "totalReviews": 85
+              },
+              "establishedYear": 2010,
+              "specialtyType": "Dental & Cosmetic Dentistry",
+              "beds": 0,
+              "accreditations": [],
+              "about": {
+                "short": "Dr. Rashi's Dental Clinic in Gurgaon is a premium dental centre offering cosmetic dentistry, dental implants, aligners, root canal treatment, veneers and full mouth rehabilitation.",
+                "shortAr": "عيادة الدكتورة راشي للأسنان في جورجاون هي مركز أسنان متميز يقدم طب الأسنان التجميلي وزراعة الأسنان والتقويم وعلاج قناة الجذر والقشور وإعادة تأهيل الفم الكامل.",
+                "shortFr": "La clinique dentaire Dr. Rashi à Gurgaon est un centre dentaire premium offrant dentisterie esthétique, implants, aligneurs, traitement de canal, facettes et réhabilitation complète.",
+                "full": "Dr. Rashi's Dental Clinic is located at JMS Crosswalk, Sector 93, Gurugram (Gurgaon). Led by Dr. Rashi Chitkara with over 20 years of experience, the clinic specialises in cosmetic and general dentistry, endodontics, dental implants, invisible aligners, teeth whitening, veneers, crowns & bridges, and full mouth rehabilitation.\n\nThe clinic also offers oral surgery, laser gum treatment, paediatric dentistry and smile makeovers using modern digital dentistry tools. International patients visit for affordable, high-quality aesthetic and restorative dental care in Delhi NCR.",
+                "fullAr": "تقع عيادة الدكتورة راشي للأسنان في JMS Crosswalk، القطاع 93، جوروجرام. يقودها الدكتورة راشي شيتكارا بخبرة تزيد عن 20 عامًا، وتتخصص في طب الأسنان التجميلي والعام وعلاج الجذور وزراعة الأسنان والتقويم الشفاف وتبييض الأسنان والقشور والتيجان والجسور وإعادة تأهيل الفم الكامل.\n\nكما تقدم العيادة جراحة الفم وعلاج اللثة بالليزر وطب أسنان الأطفال وتجميل الابتسامة بأدوات طب الأسنان الرقمية الحديثة. يزور المرضى الدوليون للحصول على رعاية أسنان تجميلية وترميمية عالية الجودة وبأسعار معقولة في دلهي NCR.",
+                "fullFr": "La clinique dentaire Dr. Rashi est située au JMS Crosswalk, secteur 93, Gurugram. Dirigée par le Dr Rashi Chitkara avec plus de 20 ans d'expérience, elle se spécialise en dentisterie esthétique et générale, endodontie, implants dentaires, aligneurs invisibles, blanchiment, facettes, couronnes et bridges et réhabilitation bucco-dentaire complète.\n\nLa clinique propose également chirurgie buccale, traitement gingival au laser, dentisterie pédiatrique et relooking du sourire avec des outils de dentisterie numérique modernes.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cosmetic Dentistry", "doctors": 1 },
+                { "name": "Dental Implants", "doctors": 1 },
+                { "name": "Root Canal & Endodontics", "doctors": 1 }
+              ],
+              "address": {
+                "line1": "1092, 1st Floor, JMS Crosswalk, Sector 93, DLF Gardencity Road",
+                "city": "Gurgaon (Delhi NCR)",
+                "state": "Haryana",
+                "pincode": "122004",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 22,
+                "airportDuration": "35 mins",
+                "airportName": "Indira Gandhi International Airport (DEL)",
+                "metroKm": 5,
+                "metroDuration": "12 mins",
+                "metroName": "Sector 55-56 Metro Station",
+                "coordinates": {
+                  "lat": 28.415,
+                  "lng": 77.05
+                }
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "Modern dental chairs",
+                  "Digital X-ray",
+                  "Sterilization protocols",
+                  "Free Wifi",
+                  "Parking available"
+                ],
+                "moneyMatters": [
+                  "Credit Card",
+                  "Debit Card",
+                  "UPI",
+                  "Cash"
+                ],
+                "food": [],
+                "treatmentRelated": [
+                  "Digital smile design",
+                  "Same-day crowns (where applicable)",
+                  "Sedation dentistry",
+                  "Online consultation"
+                ],
+                "language": [
+                  "English",
+                  "Hindi"
+                ],
+                "transportation": [
+                  "Airport pickup (on request)",
+                  "Cab services"
+                ]
+              },
+              "infrastructure": {
+                "totalArea": "Premium dental clinic",
+                "technologies": [
+                  "Digital X-ray",
+                  "Intraoral scanners",
+                  "Laser dentistry",
+                  "CAD/CAM crowns"
+                ]
+              },
+              "teamAndSpecialties": {
+                "description": "The clinic is led by Dr. Rashi Chitkara, an experienced cosmetic and general dentist specialising in smile design, implants, aligners, root canal therapy and full mouth rehabilitation for local and international patients.",
+                "descriptionAr": "تقود العيادة الدكتورة راشي شيتكارا، طبيبة أسنان تجميلية وعامة ذات خبرة متخصصة في تصميم الابتسامة والزراعة والتقويم وعلاج قناة الجذر وإعادة تأهيل الفم للمرضى المحليين والدوليين.",
+                "descriptionFr": "La clinique est dirigée par le Dr Rashi Chitkara, dentiste esthétique et généraliste expérimentée, spécialisée en design du sourire, implants, aligneurs, traitement de canal et réhabilitation complète pour patients locaux et internationaux."
+              },
+              "internationalPatientServices": {
+                "description": "International patients receive treatment planning, cost estimates, appointment scheduling and travel assistance for dental procedures in Gurgaon.",
+                "descriptionAr": "يحصل المرضى الدوليون على تخطيط العلاج وتقديرات التكلفة وجدولة المواعيد ومساعدة السفر لإجراءات الأسنان في جورجاون.",
+                "descriptionFr": "Les patients internationaux reçoivent une planification du traitement, des devis, la prise de rendez-vous et une assistance voyage pour les soins dentaires à Gurgaon.",
+                "preArrivalConsultation": true,
+                "visaAssistance": false,
+                "airportPickup": true,
+                "multilingualInterpreters": false,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              },
+              "images": [
+                "/hospitals/rashi-dental-clinic-gurgaon.avif",
+                "/hospitals/all/rashi-dental-clinic-gurgaon-1.jpeg",
+                "/hospitals/all/rashi-dental-clinic-gurgaon-2.jpeg"
+              ]
+            },
+            {
               "id": "apollo-hospitals-all",
               "slug": "apollo-hospitals-all",
               "name": "All Apollo Hospitals (All Cities)",

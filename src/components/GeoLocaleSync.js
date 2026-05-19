@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import {
   GEO_COUNTRY_COOKIE,
@@ -10,105 +10,128 @@ import {
 } from "@/lib/locale/geo";
 
 const MANUAL_COOKIE = "locale_manual";
-/** Short cache only to avoid duplicate calls in the same second */
-const REFETCH_MS = 45 * 1000;
+const COUNTRY_SESSION_KEY = "pm_geo_country";
+const CHECK_TIME_KEY = "pm_geo_checked_at";
+/** Re-check after this interval (VPN change / new tab) */
+const RECHECK_MS = 2 * 60 * 1000;
+
+function getCookie(name) {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie
+    .split(";")
+    .map((c) => c.trim())
+    .find((c) => c.startsWith(`${name}=`));
+  return match ? decodeURIComponent(match.split("=")[1]) : null;
+}
 
 function hasCookie(name) {
-  if (typeof document === "undefined") return false;
-  return document.cookie.split(";").some((c) => c.trim().startsWith(`${name}=`));
+  return getCookie(name) != null;
 }
 
 function setGeoCountryCookie(countryCode) {
-  const maxAge = 60 * 10;
-  document.cookie = `${GEO_COUNTRY_COOKIE}=${countryCode}; path=/; max-age=${maxAge}; SameSite=Lax`;
+  document.cookie = `${GEO_COUNTRY_COOKIE}=${countryCode}; path=/; max-age=${60 * 30}; SameSite=Lax`;
 }
 
-async function fetchCountryFromIp() {
-  let code = "";
-
+async function tryJson(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 5000);
   try {
-    const res = await fetch("https://ipwho.is/", { cache: "no-store" });
-    if (res.ok) {
-      const data = await res.json();
-      if (data?.success !== false) {
-        code = String(data?.country_code || "").trim().toUpperCase();
-      }
-    }
+    const res = await fetch(url, { cache: "no-store", signal: controller.signal });
+    if (!res.ok) return null;
+    return await res.json();
   } catch {
-    /* fallback */
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Browser-side first (respects VPN). Server /api/geo only when CDN header exists.
+ */
+async function detectCountryCode() {
+  const geoJs = await tryJson("https://get.geojs.io/v1/ip/country.json");
+  if (geoJs?.country) {
+    return String(geoJs.country).trim().toUpperCase();
   }
 
-  if (!code) {
-    const res = await fetch("https://ipapi.co/json/", { cache: "no-store" });
-    if (!res.ok) throw new Error("geo lookup failed");
-    const data = await res.json();
-    code = String(data?.country_code || "").trim().toUpperCase();
+  const whois = await tryJson("https://ipwho.is/");
+  if (whois?.success !== false && whois?.country_code) {
+    return String(whois.country_code).trim().toUpperCase();
   }
 
-  if (!code) throw new Error("no country code");
-  return code;
+  const api = await tryJson("/api/geo");
+  if (api?.countryCode) {
+    return String(api.countryCode).trim().toUpperCase();
+  }
+
+  return null;
+}
+
+function getPathLocale(pathname) {
+  const first = pathname?.split("/").filter(Boolean)[0];
+  return LOCALES.includes(first) ? first : "en";
+}
+
+function shouldSkipCheck(pathLocale) {
+  const lastAt = Number(sessionStorage.getItem(CHECK_TIME_KEY) || 0);
+  const lastCountry = sessionStorage.getItem(COUNTRY_SESSION_KEY);
+  if (!lastAt || !lastCountry) return false;
+  if (Date.now() - lastAt > RECHECK_MS) return false;
+  return getLocaleFromCountry(lastCountry) === pathLocale;
 }
 
 export default function GeoLocaleSync() {
   const pathname = usePathname();
-  const lastFetchRef = useRef(0);
-  const inflightRef = useRef(null);
 
   useEffect(() => {
     if (hasCookie(MANUAL_COOKIE)) return;
 
+    const pathLocale = getPathLocale(pathname);
+    if (shouldSkipCheck(pathLocale)) return;
+
     let cancelled = false;
 
-    const syncLocale = async (force = false) => {
-      if (inflightRef.current) return inflightRef.current;
+    const sync = async () => {
+      const countryCode = await detectCountryCode();
+      if (cancelled || !countryCode) return;
 
-      const run = (async () => {
-        const now = Date.now();
-        if (!force && now - lastFetchRef.current < REFETCH_MS) {
-          return;
-        }
+      const geoLocale = getLocaleFromCountry(countryCode);
+      const prevCountry = sessionStorage.getItem(COUNTRY_SESSION_KEY);
 
-        const countryCode = await fetchCountryFromIp();
-        if (cancelled) return;
+      setGeoCountryCookie(countryCode);
+      sessionStorage.setItem(COUNTRY_SESSION_KEY, countryCode);
+      sessionStorage.setItem(CHECK_TIME_KEY, String(Date.now()));
 
-        lastFetchRef.current = Date.now();
-        setGeoCountryCookie(countryCode);
+      if (geoLocale !== pathLocale) {
+        const nextPath = switchPathLocale(pathname || "/", geoLocale);
+        window.location.replace(nextPath);
+        return;
+      }
 
-        const geoLocale = getLocaleFromCountry(countryCode);
-        const pathLocale = pathname?.split("/").filter(Boolean)[0];
-        const currentLocale = LOCALES.includes(pathLocale) ? pathLocale : "en";
-
-        if (geoLocale !== currentLocale) {
+      if (prevCountry && prevCountry !== countryCode) {
+        const prevLocale = getLocaleFromCountry(prevCountry);
+        if (prevLocale !== geoLocale) {
           const nextPath = switchPathLocale(pathname || "/", geoLocale);
           window.location.replace(nextPath);
         }
-      })();
-
-      inflightRef.current = run;
-      try {
-        await run;
-      } catch {
-        /* keep current locale */
-      } finally {
-        inflightRef.current = null;
       }
     };
 
-    syncLocale(true);
+    const timer = setTimeout(sync, 150);
 
-    const onFocus = () => syncLocale(true);
     const onVisible = () => {
-      if (document.visibilityState === "visible") {
-        syncLocale(true);
-      }
+      if (document.visibilityState !== "visible") return;
+      const lastAt = Number(sessionStorage.getItem(CHECK_TIME_KEY) || 0);
+      if (Date.now() - lastAt < RECHECK_MS) return;
+      sync();
     };
 
-    window.addEventListener("focus", onFocus);
     document.addEventListener("visibilitychange", onVisible);
 
     return () => {
       cancelled = true;
-      window.removeEventListener("focus", onFocus);
+      clearTimeout(timer);
       document.removeEventListener("visibilitychange", onVisible);
     };
   }, [pathname]);

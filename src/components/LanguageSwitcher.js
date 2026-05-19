@@ -38,7 +38,7 @@ export default function LanguageSwitcher({ currentLocale }) {
       document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${maxAge}; SameSite=Lax`;
       document.cookie = `locale_manual=1; path=/; max-age=${maxAge}; SameSite=Lax`;
       sessionStorage.removeItem("pm_geo_country");
-      sessionStorage.removeItem("pm_geo_time");
+      sessionStorage.removeItem("pm_geo_checked_at");
     }
 
     var segments = pathname.split("/").filter((s) => s !== "");

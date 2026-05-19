@@ -20383,24 +20383,24 @@
     "bio": "Dr. Himanshu Arora is Director of Neuro Surgery & Spine at Metro Hospital Faridabad, offering advanced spine and brain surgery care."
   },
   {
-    "id": "rashi-chitkara-dental",
-    "name": "Dr. Rashi Chitkara",
-    "specialty": "Cosmetic & General Dentistry",
-    "designation": "Chief Dentist & Clinic Director",
-    "hospitalDesignation": "Chief Dentist & Clinic Director",
-    "hospital": "Dr. Rashi's Dental Clinic",
+    "id": "rashi-kapoor-kapoor-dental",
+    "name": "Dr. Rashi Kapoor",
+    "specialty": "Cosmetic & Aesthetic Dentistry",
+    "designation": "Founder",
+    "hospitalDesignation": "Founder - Kapoor's Safe Hands Dental",
+    "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
     "hospitalSlug": "rashi-dental-clinic-gurgaon",
     "qualification": "BDS",
-    "experience": "20+ Years",
-    "image": "/rashi-dental-clinic/dr-rashi-chitkara.jpg",
-    "bio": "Dr. Rashi Chitkara is the lead dentist at Dr. Rashi's Dental Clinic Gurgaon with 20+ years of experience in cosmetic dentistry, dental implants, aligners, root canal treatment and full mouth rehabilitation.",
+    "experience": "15+ Years",
+    "image": "/kapoor-safehands-dental/dr-rashi-kapoor.jpg",
+    "bio": "Dr. Rashi Kapoor is an accomplished cosmetic dentist with 15+ years of expertise in aesthetic dentistry, veneers, smile designing, teeth whitening, crowns & bridges, full mouth rehabilitation and metal-free restorations.",
     "expertise": [
-      "Cosmetic dentistry",
-      "Dental implants",
-      "Invisible aligners",
-      "Root canal treatment",
-      "Veneers & smile design",
-      "Full mouth rehabilitation"
+      "Smile designing",
+      "Veneers & laminates",
+      "Teeth whitening",
+      "Full mouth rehabilitation",
+      "Crowns & bridges",
+      "Flexible dentures"
     ]
   },
   {

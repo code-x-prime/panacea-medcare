@@ -125,14 +125,14 @@ const hospitalSEO = {
     },
     "rashi-dental-clinic-gurgaon": {
         seoTitle: {
-            en: "Best Dental Clinic in Gurgaon | Dr. Rashi's Dental Clinic",
-            fr: "Meilleure clinique dentaire à Gurgaon | Clinique dentaire Dr. Rashi",
-            ar: "أفضل عيادة أسنان في جورجاون | عيادة الدكتورة راشي للأسنان"
+            en: "Best Dental Clinic in Gurgaon | Kapoor's Safe Hands Dental",
+            fr: "Meilleure clinique dentaire à Gurgaon | Kapoor's Safe Hands Dental",
+            ar: "أفضل عيادة أسنان في جورجاون | مركز كابور للأسنان - الأيدي الآمنة"
         },
         seoDescription: {
-            en: "Dr. Rashi's Dental Clinic Gurgaon offers cosmetic dentistry, dental implants, aligners, root canal treatment and full mouth rehabilitation with expert care.",
-            fr: "La clinique dentaire Dr. Rashi à Gurgaon propose dentisterie esthétique, implants dentaires, aligneurs, traitement de canal et réhabilitation bucco-dentaire complète.",
-            ar: "تقدم عيادة الدكتورة راشي للأسنان في جورجاون طب الأسنان التجميلي وزراعة الأسنان والتقويم وعلاج قناة الجذر وإعادة تأهيل الفم الكامل."
+            en: "Kapoor's Safe Hands Dental Gurgaon offers cosmetic dentistry, dental implants, Invisalign, root canal therapy and full mouth rehabilitation by expert specialists in Sushant Lok.",
+            fr: "Kapoor's Safe Hands Dental Gurgaon propose dentisterie esthétique, implants, Invisalign, traitement de canal et réhabilitation complète à Sushant Lok.",
+            ar: "يقدم مركز كابور للأسنان في جورجاون طب الأسنان التجميلي وزراعة الأسنان وإنفيسلاين وعلاج قناة الجذر وإعادة تأهيل الفم الكامل في سوشانت لوك."
         }
     },
     "asian-hospital-delhi": {
@@ -320,7 +320,7 @@ export const indiaHospitals = {
         { name: "Sight Avenue Hospital Gurgaon", slug: "sight-avenue-hospital-gurgaon" },
         { name: "Manipal Hospital Dwarka", slug: "manipal-hospital-dwarka" },
         { name: "Metro Hospital Faridabad", slug: "metro-hospital-faridabad" },
-        { name: "Rashi Dental Clinic", slug: "rashi-dental-clinic-gurgaon" },
+        { name: "Kapoor's Safe Hands Dental", slug: "rashi-dental-clinic-gurgaon" },
         { name: "Yatharth Hospital Greater Noida", slug: "yatharth-hospital-greater-noida" },
     ],
     "chennai": [

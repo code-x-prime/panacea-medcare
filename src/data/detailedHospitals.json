@@ -1700,9 +1700,159 @@
                 "accommodationAssistance": true
               },
               "images": [
-                "/hospitals/rashi-dental-clinic-gurgaon.avif",
+                "/hospitals/rashi-dental-clinic-gurgaon.jpg",
                 "/hospitals/all/rashi-dental-clinic-gurgaon-1.jpeg",
                 "/hospitals/all/rashi-dental-clinic-gurgaon-2.jpeg"
+              ]
+            },
+            {
+              "id": "yatharth-hospital-greater-noida",
+              "slug": "yatharth-hospital-greater-noida",
+              "name": "Yatharth Super Speciality Hospital Greater Noida",
+              "nameAr": "مستشفى ياثارث سوبر التخصصي جريتر نويدا",
+              "nameFr": "Hôpital Yatharth Super Speciality Greater Noida",
+              "rating": {
+                "score": 4.5,
+                "totalReviews": 320
+              },
+              "establishedYear": 2000,
+              "specialtyType": "Multi Specialty",
+              "beds": 400,
+              "accreditations": [
+                "NABH",
+                "JCI"
+              ],
+              "about": {
+                "short": "Yatharth Super Speciality Hospital Greater Noida is a 400-bed NABH-accredited tertiary care hospital in Delhi NCR with 30+ specialties including cancer care, cardiac sciences, neurosciences, organ transplant and robotic surgery.",
+                "shortAr": "مستشفى ياثارث سوبر التخصصي جريتر نويدا هو مستشفى رعاية ثالثية بسعة 400 سرير معتمد من NABH في دلهي NCR مع أكثر من 30 تخصصًا بما في ذلك رعاية السرطان وعلوم القلب وعلوم الأعصاب وزراعة الأعضاء والجراحة الروبوتية.",
+                "shortFr": "Yatharth Super Speciality Hospital Greater Noida est un hôpital tertiaire de 400 lits accrédité NABH dans Delhi NCR avec plus de 30 spécialités dont oncologie, sciences cardiaques, neurosciences, greffe d'organes et chirurgie robotique.",
+                "full": "Yatharth Super Speciality Hospital, Greater Noida is a leading tertiary care hospital in Delhi NCR with 400 beds including 112 critical care beds and nine modular operation theatres.\n\nThe hospital offers super speciality services in cancer care and bone marrow transplant, urology and kidney transplant, cardiology and cardiovascular surgery, neurology and neurosurgery, gastroenterology and GI surgery, orthopaedics including spine surgery and joint replacement, plastic surgery, pulmonology, and comprehensive mother and child care including advanced IVF.\n\nAdvanced technology includes Da Vinci and Cuvis robotic systems, process-driven critical care, and advanced diagnostic and imaging facilities. Yatharth Group hospitals are NABH accredited and trusted by international patients for holistic, contemporary care.",
+                "fullAr": "مستشفى ياثارث سوبر التخصصي، جريتر نويدا هو مستشفى رعاية ثالثية رائد في دلهي NCR بسعة 400 سرير بما في ذلك 112 سرير عناية حرجة وتسعة مسارح عمليات معيارية.\n\nيقدم المستشفى خدمات فائقة التخصص في رعاية السرطان وزراعة نخاع العظام، والمسالك البولية وزراعة الكلى، وأمراض القلب وجراحة القلب والأوعية، وطب الأعصاب وجراحة الأعصاب، وأمراض الجهاز الهضمي وجراحة الجهاز الهضمي، وجراحة العظام بما في ذلك جراحة العمود الفقري واستبدال المفاصل، والجراحة التجميلية، وأمراض الرئة، ورعاية الأم والطفل الشاملة بما في ذلك التلقيح الاصطناعي المتقدم.\n\nتشمل التكنولوجيا المتقدمة أنظمة دا فينشي وكوفيس الروبوتية، والرعاية الحرجة القائمة على العمليات، ومرافق التشخيص والتصوير المتقدمة.",
+                "fullFr": "Yatharth Super Speciality Hospital, Greater Noida est un hôpital de soins tertiaires de premier plan dans Delhi NCR avec 400 lits dont 112 lits de soins intensifs et neuf blocs opératoires modulaires.\n\nL'hôpital offre des services super spécialisés en oncologie et greffe de moelle osseuse, urologie et greffe de rein, cardiologie et chirurgie cardiovasculaire, neurologie et neurochirurgie, gastro-entérologie et chirurgie digestive, orthopédie dont chirurgie de la colonne et prothèses articulaires, chirurgie plastique, pneumologie et soins mère-enfant complets dont FIV avancée.\n\nLes technologies avancées comprennent les systèmes robotiques Da Vinci et Cuvis, des soins intensifs structurés et des équipements de diagnostic et d'imagerie de pointe.",
+                "internationalPatients": true
+              },
+              "departments": [
+                { "name": "Cardiac Sciences", "doctors": 15 },
+                { "name": "Neurosciences", "doctors": 12 },
+                { "name": "Oncology & BMT", "doctors": 10 },
+                { "name": "Orthopedics & Spine", "doctors": 10 },
+                { "name": "Gastroenterology & Liver Transplant", "doctors": 8 },
+                { "name": "Nephrology & Urology", "doctors": 8 }
+              ],
+              "address": {
+                "line1": "Plot No. 32, Omega-I, MG Road",
+                "city": "Greater Noida (Delhi NCR)",
+                "state": "Uttar Pradesh",
+                "pincode": "201309",
+                "country": "India"
+              },
+              "location": {
+                "airportKm": 55,
+                "airportDuration": "70 mins",
+                "airportName": "Indira Gandhi International Airport (DEL)",
+                "metroKm": 8,
+                "metroDuration": "15 mins",
+                "metroName": "Depot Station Greater Noida",
+                "coordinates": {
+                  "lat": 28.4789,
+                  "lng": 77.502
+                }
+              },
+              "facilities": {
+                "comfortDuringStay": [
+                  "TV in room",
+                  "Private rooms",
+                  "Free Wifi",
+                  "Family accommodation",
+                  "Laundry",
+                  "Parking available",
+                  "Café",
+                  "Prayer Room"
+                ],
+                "moneyMatters": [
+                  "Health insurance coordination",
+                  "Foreign currency exchange",
+                  "ATM",
+                  "Credit Card",
+                  "Debit Card"
+                ],
+                "food": [
+                  "Diet on Request",
+                  "Restaurant",
+                  "International Cuisine",
+                  "Vegetarian options"
+                ],
+                "treatmentRelated": [
+                  "24/7 Emergency",
+                  "ICU",
+                  "Operation Theatres",
+                  "Pharmacy",
+                  "Blood Bank",
+                  "Robotic surgery",
+                  "Online doctor consultation"
+                ],
+                "language": [
+                  "English",
+                  "Hindi",
+                  "Interpreter services"
+                ],
+                "transportation": [
+                  "Airport pickup",
+                  "Ambulance services",
+                  "Local transportation booking"
+                ]
+              },
+              "infrastructure": {
+                "totalArea": "400-bed super speciality campus",
+                "beds": 400,
+                "icuBeds": 112,
+                "operationTheatres": 9,
+                "technologies": [
+                  "Da Vinci Robotic System",
+                  "Cuvis Robotic System",
+                  "Cath Lab with 3D imaging",
+                  "Philips MRI",
+                  "PET-CT",
+                  "Modular operation theatres"
+                ]
+              },
+              "teamAndSpecialties": {
+                "description": "Yatharth Greater Noida brings together leading specialists across cardiac sciences, neurosciences, oncology, orthopedics, gastroenterology, nephrology, urology, pulmonology and transplant programmes with advanced robotic and minimally invasive surgery.",
+                "descriptionAr": "يجمع ياثارث جريتر نويدا متخصصين رائدين في علوم القلب وعلوم الأعصاب والأورام وجراحة العظام وأمراض الجهاز الهضمي وأمراض الكلى والمسالك البولية وأمراض الرئة وبرامج الزراعة مع جراحة روبوتية وتدخلية طفيفة.",
+                "descriptionFr": "Yatharth Greater Noida réunit des spécialistes de premier plan en sciences cardiaques, neurosciences, oncologie, orthopédie, gastro-entérologie, néphrologie, urologie, pneumologie et programmes de greffe avec chirurgie robotique et mini-invasive."
+              },
+              "milestones": [
+                {
+                  "name": "NABH accredited super speciality hospital",
+                  "nameAr": "مستشفى فائق التخصص معتمد من NABH",
+                  "nameFr": "Hôpital super spécialisé accrédité NABH"
+                },
+                {
+                  "name": "400 beds with 112 critical care beds",
+                  "nameAr": "400 سرير مع 112 سرير عناية حرجة",
+                  "nameFr": "400 lits dont 112 lits de soins intensifs"
+                },
+                {
+                  "name": "Da Vinci & Cuvis robotic surgery programmes",
+                  "nameAr": "برامج جراحة روبوتية دا فينشي وكوفيس",
+                  "nameFr": "Programmes de chirurgie robotique Da Vinci et Cuvis"
+                }
+              ],
+              "internationalPatientServices": {
+                "description": "Yatharth Hospital offers international patient support including pre-arrival consultation, visa assistance, airport transfers, accommodation help and dedicated care coordinators.",
+                "descriptionAr": "يقدم مستشفى ياثارث دعمًا للمرضى الدوليين بما في ذلك الاستشارة قبل الوصول والمساعدة في التأشيرة والتنقلات من المطار ومساعدة الإقامة ومنسقين رعاية مخصصين.",
+                "descriptionFr": "Yatharth Hospital offre un accompagnement aux patients internationaux : consultation avant l'arrivée, aide au visa, transferts aéroport, hébergement et coordinateurs dédiés.",
+                "preArrivalConsultation": true,
+                "visaAssistance": true,
+                "airportPickup": true,
+                "multilingualInterpreters": true,
+                "dedicatedCoordinators": true,
+                "accommodationAssistance": true
+              },
+              "images": [
+                "/hospitals/yatharth-hospital-greater-noida.webp",
+                "/hospitals/all/yatharth-hospital-greater-noida-1.webp",
+                "/hospitals/all/yatharth-hospital-greater-noida-2.jpg"
               ]
             },
             {

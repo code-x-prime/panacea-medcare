@@ -74,6 +74,7 @@ export default function sitemap() {
         "manipal-hospital-dwarka",
         "metro-hospital-faridabad",
         "rashi-dental-clinic-gurgaon",
+        "yatharth-hospital-greater-noida",
         // Chennai
         "apollo-hospital-greams-road-chennai",
         // Mumbai

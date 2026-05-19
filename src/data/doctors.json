@@ -20357,7 +20357,7 @@
     "hospitalDesignation": "Director - Oncology Services, Medical Oncology",
     "hospital": "Metro Hospital Faridabad",
     "hospitalSlug": "metro-hospital-faridabad",
-    "image": "/metro-hospital-faridabad/dr-praveen-kumar-bansal.jpg",
+    "image": "/metro-hospital-faridabad/dr-praveen-kumar-bansal.png",
     "bio": "Dr. Praveen Kumar Bansal is Director of Oncology Services at Metro Hospital Faridabad with expertise in medical oncology and cancer care."
   },
   {
@@ -20368,7 +20368,7 @@
     "hospitalDesignation": "Director & HOD - Urology, Renal Transplant & Robotic Surgery",
     "hospital": "Metro Hospital Faridabad",
     "hospitalSlug": "metro-hospital-faridabad",
-    "image": "/metro-hospital-faridabad/dr-sumit-bansal.jpg",
+    "image": "/metro-hospital-faridabad/dr-sumit-bansal.png",
     "bio": "Dr. Sumit Bansal leads urology, renal transplant and robotic surgery at Metro Hospital Faridabad with advanced minimally invasive expertise."
   },
   {
@@ -20379,7 +20379,7 @@
     "hospitalDesignation": "Director - Neuro Surgery & Spine",
     "hospital": "Metro Hospital Faridabad",
     "hospitalSlug": "metro-hospital-faridabad",
-    "image": "/metro-hospital-faridabad/dr-himanshu-arora.jpg",
+    "image": "/metro-hospital-faridabad/dr-himanshu-arora.png",
     "bio": "Dr. Himanshu Arora is Director of Neuro Surgery & Spine at Metro Hospital Faridabad, offering advanced spine and brain surgery care."
   },
   {
@@ -20402,5 +20402,77 @@
       "Veneers & smile design",
       "Full mouth rehabilitation"
     ]
+  },
+  {
+    "id": "kapil-sharma-yatharth",
+    "name": "Dr. Kapil Sharma",
+    "specialty": "Gastroenterology",
+    "designation": "Group Director - Gastroenterology",
+    "hospitalDesignation": "Group Director - Gastroenterology",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, MD (General Medicine), DM (Gastroenterology)",
+    "image": "/yatharth-hospital-greater-noida/dr-kapil-sharma.jpg",
+    "bio": "Dr. Kapil Sharma is Group Director of Gastroenterology at Yatharth Super Speciality Hospital Greater Noida."
+  },
+  {
+    "id": "amit-nath-misra-yatharth",
+    "name": "Dr. Amit Nath Misra",
+    "specialty": "Orthopedics & Joint Replacement",
+    "designation": "Director & HOD - Orthopaedics & Joint Replacement",
+    "hospitalDesignation": "Director & HOD - Orthopaedics & Joint Replacement",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, MS, MCH, FRCS",
+    "image": "/yatharth-hospital-greater-noida/dr-amit-nath-misra.jpg",
+    "bio": "Dr. Amit Nath Misra leads orthopaedics and joint replacement at Yatharth Hospital Greater Noida with expertise in robotic orthopaedic surgery."
+  },
+  {
+    "id": "sumit-goyal-yatharth",
+    "name": "Dr. Sumit Goyal",
+    "specialty": "Neurosurgery",
+    "designation": "Director & HOD - Neurosurgery",
+    "hospitalDesignation": "Director & HOD of Neurosurgery, Group Director of Neurointervention",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, DNB (Neurosurgery), FINR (France)",
+    "image": "/yatharth-hospital-greater-noida/dr-sumit-goyal.jpg",
+    "bio": "Dr. Sumit Goyal is Director and HOD of Neurosurgery at Yatharth Hospital Greater Noida, specialising in neurointervention and spine care."
+  },
+  {
+    "id": "viresh-mahajan-yatharth",
+    "name": "Dr. Viresh Mahajan",
+    "specialty": "Pediatric Cardiology",
+    "designation": "Chairman - Pediatric Cardiac Sciences",
+    "hospitalDesignation": "Chairman - Pediatric Cardiac Sciences (Yatharth Group)",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, MD (Pediatrics), FNB (Pediatric Cardiology)",
+    "image": "/yatharth-hospital-greater-noida/dr-viresh-mahajan.jpg",
+    "bio": "Dr. Viresh Mahajan is Chairman of Pediatric Cardiac Sciences at Yatharth Group, providing advanced cardiac care for children."
+  },
+  {
+    "id": "manoj-gupta-yatharth",
+    "name": "Dr. Manoj Gupta",
+    "specialty": "GI Surgery & Liver Transplant",
+    "designation": "Senior Director & HOD - Robotic & Laparoscopic GI Surgery",
+    "hospitalDesignation": "Senior Director & HOD - Robotic & Laparoscopic GI Surgery, GI Oncology and Liver Transplant",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, MS, DNB (GI Surgery)",
+    "image": "/yatharth-hospital-greater-noida/dr-manoj-gupta.jpg",
+    "bio": "Dr. Manoj Gupta leads robotic and laparoscopic GI surgery, GI oncology and liver transplant at Yatharth Hospital Greater Noida."
+  },
+  {
+    "id": "arunachalam-yatharth",
+    "name": "Dr. Arunachalam M",
+    "specialty": "Pulmonology",
+    "designation": "Senior Consultant & HOD - Pulmonology",
+    "hospitalDesignation": "Senior Consultant and HOD - Pulmonology",
+    "hospital": "Yatharth Super Speciality Hospital Greater Noida",
+    "hospitalSlug": "yatharth-hospital-greater-noida",
+    "qualification": "MBBS, DTCD, DNB, DM, EDARM, MRCP SCE",
+    "image": "/yatharth-hospital-greater-noida/dr-arunachalam-m.jpg",
+    "bio": "Dr. Arunachalam M is Senior Consultant and HOD of Pulmonology at Yatharth Super Speciality Hospital Greater Noida."
   }
 ]

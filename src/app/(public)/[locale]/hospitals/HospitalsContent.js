@@ -3,7 +3,7 @@
 import TopBanner from "@/components/TopBanner";
 import Breadcrumb from "@/components/Breadcrumb";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { Award, MapPin, Building2 } from "lucide-react";
@@ -93,12 +93,11 @@ export default function HospitalsContent({ params }) {
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
-                                        <Image
+                                        <PublicImage
                                             src={getHospitalImage(hospital.slug)}
                                             alt={hospital.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
@@ -125,12 +124,11 @@ export default function HospitalsContent({ params }) {
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
-                                        <Image
+                                        <PublicImage
                                             src={getHospitalImage(hospital.slug)}
                                             alt={hospital.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
@@ -157,12 +155,11 @@ export default function HospitalsContent({ params }) {
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
-                                        <Image
+                                        <PublicImage
                                             src={getHospitalImage(hospital.slug)}
                                             alt={hospital.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
@@ -189,12 +186,11 @@ export default function HospitalsContent({ params }) {
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
-                                        <Image
+                                        <PublicImage
                                             src={getHospitalImage(hospital.slug)}
                                             alt={hospital.name}
                                             fill
                                             className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                     </div>
@@ -238,12 +234,11 @@ export default function HospitalsContent({ params }) {
                                         className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
-                                            <Image
+                                            <PublicImage
                                                 src={getHospitalImage(hospital.slug)}
                                                 alt={hospital.name}
                                                 fill
                                                 className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                                                 onError={(e) => {
                                                     e.target.src = "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
                                                 }}

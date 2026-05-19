@@ -1,5 +1,6 @@
 
 import rawHospitals from "./detailedHospitals.json";
+import { resolvePublicImageSrc } from "@/lib/publicImage";
 
 const hospitalSEO = {
     "fortis-hospital-gurgaon": {
@@ -108,6 +109,18 @@ const hospitalSEO = {
             en: "Metro Hospital Faridabad is a NABH-accredited 400-bed multi-speciality hospital with centres of excellence in cardiac sciences, oncology, neurosciences and organ transplant.",
             fr: "Metro Hospital Faridabad est un hôpital multi-spécialités de 400 lits accrédité NABH avec des centres d'excellence en sciences cardiaques, oncologie, neurosciences et greffe d'organes.",
             ar: "مستشفى مترو فريد آباد هو مستشفى متعدد التخصصات بسعة 400 سرير معتمد من NABH مع مراكز تميز في علوم القلب والأورام وعلوم الأعصاب وزراعة الأعضاء."
+        }
+    },
+    "yatharth-hospital-greater-noida": {
+        seoTitle: {
+            en: "Best Hospital in Greater Noida | Yatharth Super Speciality Hospital",
+            fr: "Meilleur hôpital de Greater Noida | Yatharth Super Speciality Hospital",
+            ar: "أفضل مستشفى في جريتر نويدا | مستشفى ياثارث سوبر التخصصي"
+        },
+        seoDescription: {
+            en: "Yatharth Super Speciality Hospital Greater Noida is a NABH-accredited 400-bed tertiary care hospital with robotic surgery, cancer care, cardiac sciences, neurosciences and organ transplant.",
+            fr: "Yatharth Super Speciality Hospital Greater Noida est un hôpital tertiaire de 400 lits accrédité NABH avec chirurgie robotique, oncologie, sciences cardiaques, neurosciences et greffe d'organes.",
+            ar: "مستشفى ياثارث سوبر التخصصي جريتر نويدا هو مستشفى رعاية ثالثية بسعة 400 سرير معتمد من NABH مع جراحة روبوتية ورعاية السرطان وعلوم القلب وعلوم الأعصاب وزراعة الأعضاء."
         }
     },
     "rashi-dental-clinic-gurgaon": {
@@ -288,7 +301,7 @@ export function getHospitalBySlug(slug) {
 export function getHospitalImage(slug) {
     const hospital = hospitalsMap[slug];
     if (hospital && hospital.images && hospital.images.length > 0) {
-        return hospital.images[0];
+        return resolvePublicImageSrc(hospital.images[0]);
     }
     return "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=250&fit=crop&auto=format";
 }
@@ -308,6 +321,7 @@ export const indiaHospitals = {
         { name: "Manipal Hospital Dwarka", slug: "manipal-hospital-dwarka" },
         { name: "Metro Hospital Faridabad", slug: "metro-hospital-faridabad" },
         { name: "Rashi Dental Clinic", slug: "rashi-dental-clinic-gurgaon" },
+        { name: "Yatharth Hospital Greater Noida", slug: "yatharth-hospital-greater-noida" },
     ],
     "chennai": [
         { name: "Apollo Hospital Greams Road", slug: "apollo-hospital-greams-road-chennai" },

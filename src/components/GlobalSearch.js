@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import { Search, X, User, Building2 } from "lucide-react";
 import doctors from "@/data/doctors.json";
 import { hospitalsData } from "@/data/hospitalsData";
@@ -264,12 +265,11 @@ export default function GlobalSearch({ locale = "en" }) {
                                         >
                                             <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-gray-100 relative">
                                                 {hospital.images && hospital.images.length > 0 ? (
-                                                    <Image
+                                                    <PublicImage
                                                         src={hospital.images[0]}
                                                         alt={hospital.name}
                                                         fill
                                                         className="object-cover"
-                                                        unoptimized
                                                     />
                                                 ) : (
                                                     <div className="w-full h-full flex items-center justify-center bg-green-100">

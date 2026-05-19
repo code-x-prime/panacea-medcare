@@ -14,7 +14,8 @@ const nextConfig = {
             { source: '/doctors', destination: '/en/doctors', permanent: true },
             { source: '/doctors/:id', destination: '/en/doctors/:id', permanent: true },
             { source: '/hospitals', destination: '/en/hospitals', permanent: true },
-            { source: '/hospitals/:path*', destination: '/en/hospitals/:path*', permanent: true },
+            // Hospital slugs only — do not redirect /hospitals/*.jpg|.webp (static files in public/hospitals)
+            { source: '/hospitals/:slug([^/.]+)', destination: '/en/hospitals/:slug', permanent: true },
             { source: '/treatments/:path*', destination: '/en/treatments/:path*', permanent: true },
             { source: '/services/:path*', destination: '/en/services/:path*', permanent: true },
             { source: '/about', destination: '/en/about', permanent: true },

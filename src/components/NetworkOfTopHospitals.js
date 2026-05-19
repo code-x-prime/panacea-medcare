@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { indiaHospitals, internationalHospitals, getHospitalImage } from "@/data/hospitalsData";
@@ -54,7 +54,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
-                                            <Image
+                                            <PublicImage
                                                 src={getHospitalImage(hospital.slug)}
                                                 alt={hospital.name}
                                                 fill
@@ -85,7 +85,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
-                                            <Image
+                                            <PublicImage
                                                 src={getHospitalImage(hospital.slug)}
                                                 alt={hospital.name}
                                                 fill
@@ -116,7 +116,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
-                                            <Image
+                                            <PublicImage
                                                 src={getHospitalImage(hospital.slug)}
                                                 alt={hospital.name}
                                                 fill
@@ -147,7 +147,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
-                                            <Image
+                                            <PublicImage
                                                 src={getHospitalImage(hospital.slug)}
                                                 alt={hospital.name}
                                                 fill
@@ -193,7 +193,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                             className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                         >
                                             <div className="relative h-40 overflow-hidden bg-gray-100">
-                                                <Image
+                                                <PublicImage
                                                     src={getHospitalImage(hospital.slug)}
                                                     alt={hospital.name}
                                                     fill

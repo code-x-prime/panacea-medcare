@@ -3,7 +3,8 @@
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
+import { resolvePublicImageSrc } from "@/lib/publicImage";
 import { FaStar, FaMapMarkerAlt, FaBed, FaUserMd, FaCheckCircle, FaWhatsapp, FaPlay, FaChevronLeft, FaChevronRight, FaCalendarCheck, FaPlane } from "react-icons/fa";
 import { getHospitalBySlug } from "@/data/hospitalsData";
 import doctorsData from "@/data/doctors.json";
@@ -76,7 +77,7 @@ export default function HospitalDetailContent({ params }) {
     // Get hospital images - returns placeholder if images don't exist
     const getHospitalImages = (hosp) => {
         if (hosp.images && hosp.images.length > 0) {
-            return hosp.images;
+            return hosp.images.map((img) => resolvePublicImageSrc(img));
         }
         // Default placeholder images
         return [
@@ -148,13 +149,12 @@ export default function HospitalDetailContent({ params }) {
             {/* Single Image Header */}
             <div className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
                 {hospitalImages.length > 0 && (
-                    <Image
+                    <PublicImage
                         src={hospitalImages[0]}
                         alt={hospitalName}
                         fill
                         className="object-cover"
                         priority
-                        unoptimized
                     />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-b from-panacea-primary/80 via-panacea-primary/60 to-panacea-primary/80"></div>
@@ -291,13 +291,12 @@ export default function HospitalDetailContent({ params }) {
                                                     <div key={item.id || itemIdx} className="w-full">
                                                         {item.type === 'image' ? (
                                                             <div className="relative group rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                                                                <Image
+                                                                <PublicImage
                                                                     src={item.src}
                                                                     alt={`${hospitalName} - Image`}
                                                                     fill
                                                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                                     loading="lazy"
-                                                                    unoptimized
                                                                 />
                                                             </div>
                                                         ) : (
@@ -306,13 +305,12 @@ export default function HospitalDetailContent({ params }) {
                                                                 style={{ aspectRatio: '16/9' }}
                                                                 onClick={() => setSelectedVideo(item)}
                                                             >
-                                                                <Image
+                                                                <PublicImage
                                                                     src={item.thumbnail}
                                                                     alt={item.title}
                                                                     fill
                                                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                                     loading="lazy"
-                                                                    unoptimized
                                                                 />
                                                                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                                                                     <div className="w-14 h-14 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -440,13 +438,12 @@ export default function HospitalDetailContent({ params }) {
                                                                     >
                                                                         <span className="relative w-full aspect-square mb-3 sm:mb-4 rounded-lg overflow-hidden bg-gray-100 block flex-shrink-0">
                                                                             {doctor.image ? (
-                                                                                <Image
+                                                                                <PublicImage
                                                                                     src={doctor.image}
                                                                                     alt={doctor.name}
                                                                                     fill
                                                                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                                                     loading="lazy"
-                                                                                    unoptimized
                                                                                 />
                                                                             ) : (
                                                                                 <span className="w-full h-full bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center absolute inset-0">

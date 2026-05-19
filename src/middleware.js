@@ -42,8 +42,25 @@ function applyLocaleCookies(response, locale, manual) {
   }
 }
 
+const HOSPITAL_IMAGE_RE =
+  /^\/(en|ar|fr)\/hospitals\/(.+\.(?:jpe?g|png|webp|avif|gif))$/i;
+
+/** Wrong img URLs like /en/hospitals/foo.jpg must serve from /public/hospitals/foo.jpg */
+function rewriteLocaleHospitalImage(request) {
+  const { pathname } = request.nextUrl;
+  const match = pathname.match(HOSPITAL_IMAGE_RE);
+  if (!match) return null;
+  const url = request.nextUrl.clone();
+  url.pathname = `/hospitals/${match[2]}`;
+  return NextResponse.rewrite(url);
+}
+
 export default function middleware(request) {
   const { pathname } = request.nextUrl;
+
+  const imageRewrite = rewriteLocaleHospitalImage(request);
+  if (imageRewrite) return imageRewrite;
+
   const manual = isManualLocale(request);
 
   if (pathNeedsLocalePrefix(pathname)) {
@@ -98,5 +115,8 @@ export default function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/((?!api|admin|_next|_vercel|.*\\..*).*)"],
+  matcher: [
+    "/((?!api|admin|_next|_vercel|.*\\..*).*)",
+    "/(en|ar|fr)/hospitals/:path*",
+  ],
 };

@@ -37,6 +37,8 @@ export default function LanguageSwitcher({ currentLocale }) {
       const maxAge = 60 * 60 * 24 * 365;
       document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${maxAge}; SameSite=Lax`;
       document.cookie = `locale_manual=1; path=/; max-age=${maxAge}; SameSite=Lax`;
+      sessionStorage.removeItem("pm_geo_country");
+      sessionStorage.removeItem("pm_geo_time");
     }
 
     var segments = pathname.split("/").filter((s) => s !== "");

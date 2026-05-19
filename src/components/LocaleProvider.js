@@ -3,6 +3,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import GeoLocaleSync from "@/components/GeoLocaleSync";
 
 const VALID_LOCALES = ["en", "ar", "fr"];
 
@@ -21,5 +22,10 @@ export default function LocaleProvider({ children }) {
     document.body.className = fontClass;
   }, [pathname]);
 
-  return <>{children}</>;
+  return (
+    <>
+      <GeoLocaleSync />
+      {children}
+    </>
+  );
 }

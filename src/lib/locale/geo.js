@@ -8,15 +8,20 @@ const ARABIC_COUNTRIES = new Set([
   "TN", "LY", "YE", "SY", "PS", "SD", "MR", "DJ", "KM", "TD", "ER", "SO",
 ]);
 
+/** Francophone regions → French site */
 const FRENCH_COUNTRIES = new Set([
   "FR", "BE", "LU", "MC", "SN", "CI", "ML", "BF", "NE", "TG", "BJ", "GA",
-  "CG", "CD", "CM", "MG", "HT", "RW", "BI", "DJ", "CF", "GN", "TD", "MR",
+  "CG", "CD", "CM", "MG", "HT", "RW", "BI", "CF", "GN",
 ]);
+
+/** Bangladesh, India, USA, UK, etc. → English (default when not in AR/FR lists) */
 
 /**
  * @param {import('next/server').NextRequest} request
  * @returns {string | null} ISO country code or null
  */
+export const GEO_COUNTRY_COOKIE = "geo_country";
+
 export function getCountryFromRequest(request) {
   const raw =
     request.headers.get("cf-ipcountry") ||

@@ -16,6 +16,14 @@ export async function generateMetadata({ params: { locale, id } }) {
     return {
         title,
         description,
+        alternates: {
+            canonical: `https://www.panaceamedcare.com/${locale}/doctors/${id}`,
+            languages: {
+                en: `https://www.panaceamedcare.com/en/doctors/${id}`,
+                fr: `https://www.panaceamedcare.com/fr/doctors/${id}`,
+                ar: `https://www.panaceamedcare.com/ar/doctors/${id}`,
+            },
+        },
         openGraph: {
             title,
             description,

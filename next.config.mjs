@@ -9,6 +9,20 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    async redirects() {
+        return [
+            { source: '/doctors', destination: '/en/doctors', permanent: true },
+            { source: '/doctors/:id', destination: '/en/doctors/:id', permanent: true },
+            { source: '/hospitals', destination: '/en/hospitals', permanent: true },
+            { source: '/hospitals/:path*', destination: '/en/hospitals/:path*', permanent: true },
+            { source: '/treatments/:path*', destination: '/en/treatments/:path*', permanent: true },
+            { source: '/services/:path*', destination: '/en/services/:path*', permanent: true },
+            { source: '/about', destination: '/en/about', permanent: true },
+            { source: '/contact', destination: '/en/contact', permanent: true },
+            { source: '/blogs', destination: '/en/blogs', permanent: true },
+            { source: '/blog', destination: '/en/blogs', permanent: true },
+        ];
+    },
     images: {
         remotePatterns: [
             {

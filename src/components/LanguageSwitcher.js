@@ -32,12 +32,11 @@ export default function LanguageSwitcher({ currentLocale }) {
   }, []);
 
   function handleLanguageChange(newLocale) {
-    // Save to localStorage
     if (typeof window !== "undefined") {
       localStorage.setItem("preferred-locale", newLocale);
-
-      // Also set cookie for middleware to read
-      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+      const maxAge = 60 * 60 * 24 * 365;
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=${maxAge}; SameSite=Lax`;
+      document.cookie = `locale_manual=1; path=/; max-age=${maxAge}; SameSite=Lax`;
     }
 
     var segments = pathname.split("/").filter((s) => s !== "");

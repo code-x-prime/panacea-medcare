@@ -1,6 +1,10 @@
-
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import DestinationContent from "./DestinationContent";
-import { getDestinationData } from "@/data/destinationsData";
+import { destinations, getDestinationData } from "@/data/destinationsData";
+
+export function generateStaticParams() {
+    return Object.keys(destinations).map((destination) => ({ destination }));
+}
 
 export async function generateMetadata({ params: { locale, destination } }) {
     const dest = getDestinationData(destination, locale);
@@ -8,10 +12,14 @@ export async function generateMetadata({ params: { locale, destination } }) {
     return {
         title: dest.title,
         description: dest.description,
+        alternates: {
+            canonical: siteUrl(locale, `/tourism-leisure/${destination}`),
+            languages: alternateLanguages(`/tourism-leisure/${destination}`),
+        },
         openGraph: {
             title: dest.title,
             description: dest.description,
-            url: `https://www.panaceamedcare.com/${locale}/tourism-leisure/${destination}`,
+            url: `${siteUrl(locale, `/tourism-leisure/${destination}`)}`,
             type: "website",
             images: [
                 {

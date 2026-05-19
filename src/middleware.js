@@ -1,5 +1,6 @@
 import createMiddleware from "next-intl/middleware";
 import { NextResponse } from "next/server";
+import { routing } from "@/i18n/routing";
 import {
   LOCALES,
   getGeoLocale,
@@ -17,9 +18,7 @@ const MANUAL_COOKIE = "locale_manual";
 const COOKIE_MAX_AGE = 60 * 60 * 24 * 365;
 
 const intlMiddleware = createMiddleware({
-  locales: LOCALES,
-  defaultLocale: "en",
-  localePrefix: "always",
+  ...routing,
   localeDetection: false,
 });
 
@@ -42,10 +41,27 @@ function applyLocaleCookies(response, locale, manual) {
   }
 }
 
+/** Legacy /en/* → /* (301) for SEO — English lives at root */
+function redirectLegacyEnPrefix(request) {
+  const { pathname } = request.nextUrl;
+  if (!pathname.startsWith("/en")) return null;
+  if (pathname === "/en") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/";
+    return NextResponse.redirect(url, 308);
+  }
+  if (pathname.startsWith("/en/")) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(3) || "/";
+    return NextResponse.redirect(url, 308);
+  }
+  return null;
+}
+
 const HOSPITAL_IMAGE_RE =
   /^\/(en|ar|fr)\/hospitals\/(.+\.(?:jpe?g|png|webp|avif|gif))$/i;
 
-/** Wrong img URLs like /en/hospitals/foo.jpg must serve from /public/hospitals/foo.jpg */
+/** Wrong img URLs like /en/hospitals/foo.jpg → /hospitals/foo.jpg */
 function rewriteLocaleHospitalImage(request) {
   const { pathname } = request.nextUrl;
   const match = pathname.match(HOSPITAL_IMAGE_RE);
@@ -58,6 +74,9 @@ function rewriteLocaleHospitalImage(request) {
 export default function middleware(request) {
   const { pathname } = request.nextUrl;
 
+  const legacyEn = redirectLegacyEnPrefix(request);
+  if (legacyEn) return legacyEn;
+
   const imageRewrite = rewriteLocaleHospitalImage(request);
   if (imageRewrite) return imageRewrite;
 
@@ -65,19 +84,19 @@ export default function middleware(request) {
 
   if (pathNeedsLocalePrefix(pathname)) {
     const locale = getPreferredLocaleForRedirect(request, manual);
-    const url = request.nextUrl.clone();
-    url.pathname = buildLocalizedPath(pathname, locale);
-    const response = NextResponse.redirect(url, 308);
-    applyLocaleCookies(response, locale, manual);
-    return response;
+    if (locale !== "en") {
+      const url = request.nextUrl.clone();
+      url.pathname = buildLocalizedPath(pathname, locale);
+      const response = NextResponse.redirect(url, 308);
+      applyLocaleCookies(response, locale, manual);
+      return response;
+    }
   }
 
   if (manual) {
     const response = intlMiddleware(request);
     const pathLocale = getLocaleFromPath(pathname);
-    if (pathLocale) {
-      applyLocaleCookies(response, pathLocale, true);
-    }
+    applyLocaleCookies(response, pathLocale, true);
     return response;
   }
 
@@ -93,7 +112,7 @@ export default function middleware(request) {
     const geoLocale = getGeoLocale(request);
     const pathLocale = getLocaleFromPath(pathname);
 
-    if (!pathLocale || pathLocale !== geoLocale) {
+    if (pathLocale !== geoLocale) {
       const url = request.nextUrl.clone();
       url.pathname = switchPathLocale(pathname, geoLocale);
       const response = NextResponse.redirect(url, 308);
@@ -108,9 +127,7 @@ export default function middleware(request) {
 
   const response = intlMiddleware(request);
   const pathLocale = getLocaleFromPath(pathname);
-  if (pathLocale) {
-    applyLocaleCookies(response, pathLocale, false);
-  }
+  applyLocaleCookies(response, pathLocale, false);
   return response;
 }
 

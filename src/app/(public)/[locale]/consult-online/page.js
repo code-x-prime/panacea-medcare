@@ -1,4 +1,5 @@
 import QuoteForm from "@/components/QuoteForm";
+import { siteUrl } from "@/lib/locale/routing";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
@@ -11,7 +12,7 @@ export async function generateMetadata({ params: { locale } }) {
         openGraph: {
             title: t("title"),
             description: t("subtitle"),
-            url: `https://www.panaceamedcare.com/${locale}/consult-online`,
+            url: `${siteUrl(locale, `/consult-online`)}`,
             type: "website",
             images: [
                 {

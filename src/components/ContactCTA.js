@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import { FaWhatsapp, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
@@ -104,7 +105,7 @@ export default function ContactCTA({ locale }) {
 
           {/* Teleconsultation Card */}
           <Link
-            href={`/${locale}/services/teleconsultation`}
+            href={localePath(locale, `/services/teleconsultation`)}
             className="group bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-panacea-accent/50 transition-all duration-300 transform hover:scale-105 border-2 border-white/50"
           >
             <div className="flex flex-col items-center text-center">

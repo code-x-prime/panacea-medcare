@@ -1,7 +1,8 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import Link from "next/link";
 import doctors from "@/data/doctors.json";
 import { FaUserMd, FaCheckCircle, FaWhatsapp, FaEnvelope, FaCalendarAlt } from "react-icons/fa";
@@ -73,13 +74,12 @@ export default function DoctorDetailContent({ params }) {
                             <div className="bg-white p-4 md:p-6 rounded-lg shadow-lg sticky top-4">
                                 <div className="relative w-full aspect-square mb-6 rounded-lg overflow-hidden bg-gray-100">
                                     {doctor.image ? (
-                                        <Image
+                                        <PublicImage
                                             src={doctor.image}
                                             alt={name}
                                             fill
                                             className="object-cover"
                                             loading="lazy"
-                                            unoptimized
                                         />
                                     ) : (
                                         <div className="w-full h-full bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center">
@@ -102,7 +102,7 @@ export default function DoctorDetailContent({ params }) {
                                             <p className="text-sm text-gray-600 mb-1">Hospital</p>
                                             {hospitalSlug ? (
                                                 <Link
-                                                    href={`/${locale}/hospitals/${hospitalSlug}`}
+                                                    href={localePath(locale, `/hospitals/${hospitalSlug}`)}
                                                     className="text-panacea-primary hover:underline font-semibold"
                                                 >
                                                     {hospital} →

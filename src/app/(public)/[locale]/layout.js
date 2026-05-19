@@ -18,7 +18,7 @@ export const metadata = {
     google: "0cIlg3ZIREwnOyuqd3qWtnKRDMKCMpOnFQA8EdSiLy0",
   },
   alternates: {
-    canonical: "/en",
+    canonical: "/",
   },
 };
 

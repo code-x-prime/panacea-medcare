@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -11,8 +12,8 @@ export default function InternationalPatientsContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.internationalPatients") || "International Patients", href: `/${locale}/international-patients` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.internationalPatients") || "International Patients", href: localePath(locale, `/international-patients`) }
     ];
 
     const concerns = t.raw("topConcerns.concerns");

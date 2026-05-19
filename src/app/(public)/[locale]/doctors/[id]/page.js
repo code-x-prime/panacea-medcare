@@ -1,4 +1,5 @@
 import DoctorDetailContent from "./DoctorDetailContent";
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import doctors from "@/data/doctors.json";
 
 export async function generateMetadata({ params: { locale, id } }) {
@@ -17,12 +18,8 @@ export async function generateMetadata({ params: { locale, id } }) {
         title,
         description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/doctors/${id}`,
-            languages: {
-                en: `https://www.panaceamedcare.com/en/doctors/${id}`,
-                fr: `https://www.panaceamedcare.com/fr/doctors/${id}`,
-                ar: `https://www.panaceamedcare.com/ar/doctors/${id}`,
-            },
+            canonical: `${siteUrl(locale, `/doctors/${id}`)}`,
+            languages: alternateLanguages(`/doctors/${id}`),
         },
         openGraph: {
             title,

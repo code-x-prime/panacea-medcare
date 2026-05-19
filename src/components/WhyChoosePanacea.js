@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
@@ -124,7 +125,7 @@ export default function WhyChoosePanacea({ locale }) {
                         {/* CTA Buttons - Orange for primary CTA */}
                         <div className={`flex flex-wrap gap-4 ${isRTL ? "flex-row-reverse" : ""}`}>
                             <Link
-                                href={`/${locale}/about`}
+                                href={localePath(locale, `/about`)}
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-panacea-accent to-panacea-orange-400 hover:from-panacea-orange-600 hover:to-panacea-accent text-white font-bold rounded-full shadow-panacea-orange hover:shadow-xl transition-all duration-300 hover:scale-105"
                             >
                                 {t("ctaButton")}
@@ -132,7 +133,7 @@ export default function WhyChoosePanacea({ locale }) {
                             </Link>
 
                             <Link
-                                href={`/${locale}/consult-online`}
+                                href={localePath(locale, `/consult-online`)}
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-white border-2 border-panacea-primary text-panacea-primary hover:bg-panacea-primary hover:text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300"
                             >
                                 {t("consultButton")}

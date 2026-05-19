@@ -1,9 +1,10 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import { CheckCircle2 } from "lucide-react";
 
 export default function WhyIndiaContent({ locale }) {
@@ -11,8 +12,8 @@ export default function WhyIndiaContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.whyIndia") || "Why India", href: `/${locale}/why-india` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.whyIndia") || "Why India", href: localePath(locale, `/why-india`) }
     ];
 
     const reasons = [
@@ -53,7 +54,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 5,
-            icon: "/why-india/communication.svg",
+            icon: "/why-india/ease-communication.svg",
             title: t("reasons.communication.title"),
             points: [
                 t("reasons.communication.point1"),
@@ -62,7 +63,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 6,
-            icon: "/why-india/holistic.svg",
+            icon: "/why-india/holistic-wellness.svg",
             title: t("reasons.holistic.title"),
             points: [
                 t("reasons.holistic.point1"),
@@ -71,7 +72,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 7,
-            icon: "/why-india/tourism.svg",
+            icon: "/why-india/tourism-opportunities.svg",
             title: t("reasons.tourism.title"),
             points: [
                 t("reasons.tourism.point1"),
@@ -80,7 +81,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 8,
-            icon: "/why-india/polices.svg",
+            icon: "/why-india/supportive-government.svg",
             title: t("reasons.government.title"),
             points: [
                 t("reasons.government.point1"),
@@ -89,7 +90,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 9,
-            icon: "/why-india/success.svg",
+            icon: "/why-india/positive-outcomes.svg",
             title: t("reasons.success.title"),
             points: [
                 t("reasons.success.point1")
@@ -97,7 +98,7 @@ export default function WhyIndiaContent({ locale }) {
         },
         {
             id: 10,
-            icon: "/why-india/connectivity.svg",
+            icon: "/why-india/global-connectivity.svg",
             title: t("reasons.connectivity.title"),
             points: [
                 t("reasons.connectivity.point1")
@@ -141,11 +142,9 @@ export default function WhyIndiaContent({ locale }) {
                         >
                             <div className={`flex items-start gap-4 mb-4 ${isRTL ? "flex-row-reverse" : ""}`}>
                                 <div className="w-12 h-12 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                    <Image
+                                    <PublicImage
                                         src={reason.icon}
                                         alt={reason.title}
-                                        width={24}
-                                        height={24}
                                         className="w-6 h-6 object-contain filter brightness-0 invert"
                                     />
                                 </div>

@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -12,8 +13,8 @@ export default function PartnerWithUsContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.partner") || "Partner With Us", href: `/${locale}/partner-with-us` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.partner") || "Partner With Us", href: localePath(locale, `/partner-with-us`) }
     ];
 
     const propositionPoints = t.raw("proposition.points");
@@ -264,7 +265,7 @@ export default function PartnerWithUsContent({ locale }) {
                             {locale === "ar" ? "اتصل بنا لمناقشة فرص الشراكة" : locale === "fr" ? "Contactez-nous pour discuter des opportunités de partenariat" : "Contact us to discuss partnership opportunities"}
                         </p>
                         <a
-                            href={`/${locale}/contact`}
+                            href={localePath(locale, `/contact`)}
                             className="inline-block bg-white text-panacea-primary font-semibold px-8 py-4 rounded-lg hover:bg-panacea-light transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                         >
                             {locale === "ar" ? "اتصل بنا" : locale === "fr" ? "Contactez-nous" : "Contact Us"}

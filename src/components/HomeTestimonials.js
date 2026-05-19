@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -158,7 +159,7 @@ export default function HomeTestimonials({ locale }) {
                     {/* View All Link */}
                     <div className={`mt-8 text-center ${isRTL ? "text-right" : "text-left"}`}>
                         <a
-                            href={`/${locale}/testimonials`}
+                            href={localePath(locale, `/testimonials`)}
                             className="inline-flex items-center gap-2 text-panacea-primary font-semibold hover:text-panacea-accent transition-colors duration-300"
                         >
                             {locale === "ar" ? "عرض جميع الشهادات" : locale === "fr" ? "Voir tous les témoignages" : "View All Testimonials"}

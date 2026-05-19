@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -61,7 +62,7 @@ export default function Footer({ locale }) {
           {/* Company Info */}
           <div className="lg:col-span-1">
             {/* Logo */}
-            <Link href={`/${locale}`} className="inline-block mb-2">
+            <Link href={localePath(locale, '/')} className="inline-block mb-2">
               <Image
                 src="/logo.png"
                 alt="Panacea Medcare Logo"
@@ -165,7 +166,7 @@ export default function Footer({ locale }) {
               </a>
 
               <a
-                href={`/${locale}/services/teleconsultation`}
+                href={localePath(locale, `/services/teleconsultation`)}
                 className="flex items-center gap-3 text-panacea-light/90 hover:text-white transition-colors group mt-2 pt-2 border-t border-white/10"
               >
                 <div className="w-10 h-10 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
@@ -244,7 +245,7 @@ export default function Footer({ locale }) {
               {legalLinks.map((link) => (
                 <Link
                   key={link.key}
-                  href={`/${locale}${link.href}`}
+                  href={localePath(locale, link.href)}
                   className="text-sm text-panacea-light/80 hover:text-white transition-colors"
                 >
                   {t(`legal.${link.key}`)}

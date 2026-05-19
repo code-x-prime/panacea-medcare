@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -125,7 +126,7 @@ export default function NotFound() {
                         {/* Action Buttons */}
                         <div className={`flex flex-col sm:flex-row gap-4 mb-8 ${isRTL ? 'sm:flex-row-reverse' : ''}`}>
                             <Link
-                                href={`/${locale}`}
+                                href={localePath(locale, '/')}
                                 className={`group flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-panacea-primary to-panacea-dark text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 ${isRTL ? 'flex-row-reverse' : ''}`}
                             >
                                 <FaHome className="w-5 h-5 group-hover:scale-110 transition-transform" />

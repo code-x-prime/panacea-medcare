@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -41,7 +42,7 @@ export default function HomeBlogPreview({ locale }) {
             <p className="text-lg text-gray-600 max-w-2xl">{t("subtitle")}</p>
           </div>
           <Link
-            href={`/${locale}/blog`}
+            href={localePath(locale, `/blog`)}
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
           >
             <span>{isRTL ? "عرض جميع المقالات" : "View all articles"}</span>
@@ -52,7 +53,7 @@ export default function HomeBlogPreview({ locale }) {
           {posts.map((post) => (
             <Link
               key={post.id}
-              href={`/${locale}/blog/${post.id}`}
+              href={localePath(locale, `/blog/${post.id}`)}
               className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
             >
               <div className="relative h-52 overflow-hidden bg-gray-100">
@@ -87,7 +88,7 @@ export default function HomeBlogPreview({ locale }) {
 
         <div className="mt-6 flex justify-center md:hidden">
           <Link
-            href={`/${locale}/blog`}
+            href={localePath(locale, `/blog`)}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
           >
             <span>{isRTL ? "عرض جميع المقالات" : "View all articles"}</span>

@@ -1,4 +1,5 @@
 import DoctorsContent from "./DoctorsContent";
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import { getMessages } from "@/lib/getMessages";
 
 export async function generateMetadata({ params }) {
@@ -9,12 +10,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/doctors`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/doctors",
-                "fr": "https://www.panaceamedcare.com/fr/doctors",
-                "ar": "https://www.panaceamedcare.com/ar/doctors",
-            },
+            canonical: `${siteUrl(locale, `/doctors`)}`,
+            languages: alternateLanguages("/doctors"),
         },
     };
 }

@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import AboutContent from "./AboutContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/about`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/about",
-                "fr": "https://www.panaceamedcare.com/fr/about",
-                "ar": "https://www.panaceamedcare.com/ar/about",
-            },
+            canonical: `${siteUrl(locale, `/about`)}`,
+            languages: alternateLanguages("/about"),
         },
     };
 }

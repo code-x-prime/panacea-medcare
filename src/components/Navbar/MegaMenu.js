@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import Link from "next/link";
 
@@ -26,7 +27,7 @@ export default function MegaMenu({ items, type, locale, onClose }) {
             {items.map((countryItem, idx) => (
               <div key={idx} className="space-y-1.5">
                 <Link
-                  href={"/" + locale + countryItem.slug}
+                  href={localePath(locale, countryItem.slug)}
                   onClick={onClose}
                   className="block font-bold text-teal-600 text-sm border-b border-teal-100 pb-1 hover:text-teal-700 transition-colors"
                   style={{ textAlign: isRTL ? "right" : "left" }}
@@ -38,7 +39,7 @@ export default function MegaMenu({ items, type, locale, onClose }) {
                     countryItem.treatments.map((treatment, tIdx) => (
                       <li key={tIdx}>
                         <Link
-                          href={"/" + locale + treatment.slug}
+                          href={localePath(locale, treatment.slug)}
                           onClick={onClose}
                           className="block text-gray-600 hover:text-teal-600 transition-colors text-xs font-medium py-0.5 px-1.5 rounded hover:bg-teal-50"
                         >
@@ -79,7 +80,7 @@ export default function MegaMenu({ items, type, locale, onClose }) {
             {items.map((item, idx) => (
               <Link
                 key={idx}
-                href={"/" + locale + item.slug}
+                href={localePath(locale, item.slug)}
                 onClick={onClose}
                 className="block p-2 rounded-lg border border-gray-100 hover:border-teal-200 hover:bg-teal-50 transition-all group"
               >
@@ -111,7 +112,7 @@ export default function MegaMenu({ items, type, locale, onClose }) {
             {items.map((countryItem, idx) => (
               <div key={idx} className="space-y-1.5">
                 <Link
-                  href={"/" + locale + countryItem.slug}
+                  href={localePath(locale, countryItem.slug)}
                   onClick={onClose}
                   className="block font-bold text-teal-600 text-sm border-b border-teal-100 pb-1 hover:text-teal-700 transition-colors"
                 >
@@ -122,7 +123,7 @@ export default function MegaMenu({ items, type, locale, onClose }) {
                     countryItem.treatments.map((treatment, tIdx) => (
                       <li key={tIdx}>
                         <Link
-                          href={"/" + locale + treatment.slug}
+                          href={localePath(locale, treatment.slug)}
                           onClick={onClose}
                           className="block text-gray-600 hover:text-teal-600 transition-colors text-xs font-medium py-0.5 px-1.5 rounded hover:bg-teal-50"
                         >

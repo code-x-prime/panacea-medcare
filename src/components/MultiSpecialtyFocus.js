@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -66,7 +67,7 @@ export default function MultiSpecialtyFocus({ locale }) {
                         return (
                             <Link
                                 key={specialty.id}
-                                href={`/${locale}/treatments/${treatmentSlug}`}
+                                href={localePath(locale, `/treatments/${treatmentSlug}`)}
                                 className={`group relative bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-panacea-primary hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 ${isRTL ? "text-right" : "text-left"
                                     }`}
                             >

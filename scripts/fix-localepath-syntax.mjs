@@ -1,0 +1,22 @@
+import fs from "fs";
+import path from "path";
+
+function walk(dir, acc = []) {
+  for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, ent.name);
+    if (ent.isDirectory()) walk(p, acc);
+    else if (/\.(js|jsx)$/.test(ent.name)) acc.push(p);
+  }
+  return acc;
+}
+
+for (const file of walk(path.join(process.cwd(), "src"))) {
+  let c = fs.readFileSync(file, "utf8");
+  const orig = c;
+  c = c.replace(/href:\s*\$\{localePath\(/g, "href: localePath(");
+  c = c.replace(/href=\{\$\{localePath\(/g, "href={localePath(");
+  if (c !== orig) {
+    fs.writeFileSync(file, c);
+    console.log("fixed", file);
+  }
+}

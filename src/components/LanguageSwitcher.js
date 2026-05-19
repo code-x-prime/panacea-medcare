@@ -3,20 +3,21 @@
 import { useRouter, usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Globe } from "lucide-react";
+import { localePath, stripLocaleFromPath } from "@/lib/locale/routing";
 
-var languages = [
+const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
   { code: "ar", name: "العربية", flag: "🇸🇦" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
 ];
 
 export default function LanguageSwitcher({ currentLocale }) {
-  var router = useRouter();
-  var pathname = usePathname();
-  var [isOpen, setIsOpen] = useState(false);
-  var dropdownRef = useRef(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
-  var currentLang =
+  const currentLang =
     languages.find((l) => l.code === currentLocale) || languages[0];
 
   useEffect(() => {
@@ -41,33 +42,8 @@ export default function LanguageSwitcher({ currentLocale }) {
       sessionStorage.removeItem("pm_geo_checked_at");
     }
 
-    var segments = pathname.split("/").filter((s) => s !== "");
-
-    // Check if first segment is a valid locale
-    var localeList = languages.map((l) => l.code);
-    var firstSegment = segments[0];
-    var isFirstSegmentLocale = localeList.indexOf(firstSegment) !== -1;
-
-    var newPath = "";
-
-    if (isFirstSegmentLocale) {
-      // Replace existing locale
-      segments[0] = newLocale;
-      newPath = "/" + segments.join("/");
-    } else {
-      // Add new locale at start
-      newPath = "/" + newLocale + pathname;
-    }
-
-    // Clean path
-    newPath = newPath.replace(/\/+/g, "/");
-    if (newPath.length > 1 && newPath.endsWith("/")) {
-      newPath = newPath.slice(0, -1);
-    }
-
-    if (newPath === "" || newPath === "/") {
-      newPath = "/" + newLocale;
-    }
+    const pathWithoutLocale = stripLocaleFromPath(pathname || "/");
+    const newPath = localePath(newLocale, pathWithoutLocale);
 
     setIsOpen(false);
     router.push(newPath);
@@ -97,7 +73,7 @@ export default function LanguageSwitcher({ currentLocale }) {
       {isOpen && (
         <div className="absolute top-full mt-2 right-0 w-44 bg-white border border-gray-200 rounded-lg shadow-xl z-[100] overflow-hidden">
           {languages.map((lang) => {
-            var isActive = lang.code === currentLocale;
+            const isActive = lang.code === currentLocale;
             return (
               <button
                 key={lang.code}

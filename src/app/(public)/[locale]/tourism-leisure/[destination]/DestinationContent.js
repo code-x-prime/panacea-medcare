@@ -1,9 +1,10 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import Link from "next/link";
 import { ArrowLeft, MapPin, Camera, Utensils, Hotel } from "lucide-react";
 import { getDestinationData } from "@/data/destinationsData";
@@ -15,9 +16,9 @@ export default function DestinationContent({ locale, destination }) {
     const dest = getDestinationData(destination, locale);
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.tourism") || "Tourism & Leisure", href: `/${locale}/tourism-leisure` },
-        { label: dest.title.split(" - ")[0], href: `/${locale}/tourism-leisure/${destination}` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.tourism") || "Tourism & Leisure", href: localePath(locale, `/tourism-leisure`) },
+        { label: dest.title.split(" - ")[0], href: localePath(locale, `/tourism-leisure/${destination}`) }
     ];
 
     return (
@@ -38,7 +39,7 @@ export default function DestinationContent({ locale, destination }) {
             <section className="container mx-auto px-4 xl:max-w-7xl sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
                 {/* Back Button */}
                 <Link
-                    href={`/${locale}/tourism-leisure`}
+                    href={localePath(locale, `/tourism-leisure`)}
                     className={`inline-flex items-center gap-2 text-panacea-primary hover:text-panacea-secondary mb-8 transition-colors ${isRTL ? "flex-row-reverse" : ""}`}
                 >
                     <ArrowLeft className={`w-5 h-5 ${isRTL ? "rotate-180" : ""}`} />
@@ -47,17 +48,12 @@ export default function DestinationContent({ locale, destination }) {
 
                 {/* Hero Image */}
                 <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-panacea-lg mb-12">
-                    <Image
+                    <PublicImage
                         src={dest.image}
                         alt={dest.title}
                         fill
                         className="object-cover"
-                        sizes="100vw"
                         priority
-                        onError={(e) => {
-                            e.target.style.display = 'none';
-                            e.target.parentElement.style.background = 'linear-gradient(135deg, #066F89 0%, #066F89 100%)';
-                        }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
@@ -79,16 +75,11 @@ export default function DestinationContent({ locale, destination }) {
                             >
                                 {/* Image */}
                                 <div className="relative h-40 overflow-hidden">
-                                    <Image
+                                    <PublicImage
                                         src={`/destinations/${destination}/highlight-${idx + 1}.jpg`}
                                         alt={highlight}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                        sizes="(max-width: 768px) 50vw, 25vw"
-                                        onError={(e) => {
-                                            e.target.style.display = 'none';
-                                            e.target.parentElement.style.background = `linear-gradient(135deg, ${['#066F89', '#0BA35A', '#FF6B35', '#8B5CF6'][idx % 4]} 0%, ${['#0BA35A', '#FF6B35', '#8B5CF6', '#066F89'][idx % 4]} 100%)`;
-                                        }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 </div>
@@ -153,13 +144,13 @@ export default function DestinationContent({ locale, destination }) {
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link
-                            href={`/${locale}/contact`}
+                            href={localePath(locale, `/contact`)}
                             className="bg-white text-panacea-primary font-semibold px-8 py-4 rounded-lg hover:bg-panacea-light transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                         >
                             {locale === "ar" ? "اتصل بنا" : locale === "fr" ? "Contactez-nous" : "Contact Us"}
                         </Link>
                         <Link
-                            href={`/${locale}/tourism-leisure`}
+                            href={localePath(locale, `/tourism-leisure`)}
                             className="bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/30 transition-all duration-300 border-2 border-white/30"
                         >
                             {locale === "ar" ? "استكشف المزيد" : locale === "fr" ? "Explorer Plus" : "Explore More"}

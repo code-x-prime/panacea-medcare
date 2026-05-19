@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { localePath } from "@/lib/locale/routing";
 
 export default function Dropdown({ items, locale }) {
   const isRTL = locale === "ar";
@@ -14,7 +15,7 @@ export default function Dropdown({ items, locale }) {
       {items.map((item, idx) => (
         <Link
           key={idx}
-          href={`/${locale}${item.slug}`}
+          href={localePath(locale, `/${item.slug}`)}
           className="block px-6 py-3 text-sm font-medium text-gray-700 hover:bg-panacea-primary/5 hover:text-panacea-primary transition-colors cursor-pointer"
           dir={isRTL ? "rtl" : "ltr"}
           style={{

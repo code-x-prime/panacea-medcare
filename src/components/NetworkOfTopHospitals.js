@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import PublicImage from "@/components/PublicImage";
@@ -50,7 +51,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                 {[...indiaHospitals["delhi-ncr"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
-                                        href={`/${locale}/hospitals/${hospital.slug}`}
+                                        href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
@@ -81,7 +82,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                 {[...indiaHospitals["chennai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
-                                        href={`/${locale}/hospitals/${hospital.slug}`}
+                                        href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
@@ -112,7 +113,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                 {[...indiaHospitals["mumbai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
-                                        href={`/${locale}/hospitals/${hospital.slug}`}
+                                        href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
@@ -143,7 +144,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                 {[...indiaHospitals["hyderabad"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                     <Link
                                         key={idx}
-                                        href={`/${locale}/hospitals/${hospital.slug}`}
+                                        href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                         className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-32 md:h-36 overflow-hidden bg-gray-100">
@@ -189,7 +190,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                                     {allInternationalHospitals.map((hospital, idx) => (
                                         <Link
                                             key={idx}
-                                            href={`/${locale}/hospitals/${hospital.slug}`}
+                                            href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                             className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                         >
                                             <div className="relative h-40 overflow-hidden bg-gray-100">
@@ -231,7 +232,7 @@ export default function NetworkOfTopHospitals({ locale }) {
                         </div>
                         <div className={`flex flex-wrap gap-4 justify-center ${isRTL ? "flex-row-reverse" : ""}`}>
                             <Link
-                                href={`/${locale}/contact`}
+                                href={localePath(locale, `/contact`)}
                                 className="px-6 md:px-8 py-3 bg-[#F5841F] hover:bg-[#E07316] text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 block text-center"
                             >
                                 {t("contactHospital") || "Contact Hospital"}

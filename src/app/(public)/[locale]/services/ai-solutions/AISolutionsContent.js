@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -15,9 +16,9 @@ export default function AISolutionsContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.services") || "Services", href: `/${locale}/services` },
-        { label: t("breadcrumb.aiSolutions") || "AI Solutions", href: `/${locale}/services/ai-solutions` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.services") || "Services", href: localePath(locale, `/services`) },
+        { label: t("breadcrumb.aiSolutions") || "AI Solutions", href: localePath(locale, `/services/ai-solutions`) }
     ];
 
     const sections = t.raw("sections");
@@ -537,7 +538,7 @@ export default function AISolutionsContent({ locale }) {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href={`/${locale}/contact`}
+                                href={localePath(locale, `/contact`)}
                                 className={`inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-panacea-primary rounded-lg font-semibold text-base transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}
                             >
                                 <span>
@@ -546,7 +547,7 @@ export default function AISolutionsContent({ locale }) {
                                 <ArrowRight className={`w-5 h-5 ${isRTL ? "rotate-180" : ""}`} />
                             </Link>
                             <Link
-                                href={`/${locale}/partner-with-us`}
+                                href={localePath(locale, `/partner-with-us`)}
                                 className={`inline-flex items-center justify-center gap-3 px-8 py-4 bg-panacea-accent text-white rounded-lg font-semibold text-base transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}
                             >
                                 <span>

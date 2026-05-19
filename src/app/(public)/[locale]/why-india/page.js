@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import WhyIndiaContent from "./WhyIndiaContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/why-india`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/why-india",
-                "fr": "https://www.panaceamedcare.com/fr/why-india",
-                "ar": "https://www.panaceamedcare.com/ar/why-india",
-            },
+            canonical: `${siteUrl(locale, `/why-india`)}`,
+            languages: alternateLanguages("/why-india"),
         },
     };
 }

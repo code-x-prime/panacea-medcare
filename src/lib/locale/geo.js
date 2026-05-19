@@ -62,14 +62,20 @@ export function getGeoLocale(request) {
  */
 export function switchPathLocale(pathname, newLocale) {
   const segments = pathname.split("/").filter(Boolean);
+  let pathWithoutLocale = pathname || "/";
+
   if (segments.length > 0 && LOCALES.includes(segments[0])) {
-    segments[0] = newLocale;
-    return "/" + segments.join("/");
+    const rest = segments.slice(1).join("/");
+    pathWithoutLocale = rest ? `/${rest}` : "/";
   }
-  if (pathname === "/" || pathname === "") {
+
+  if (newLocale === "en") {
+    return pathWithoutLocale === "" ? "/" : pathWithoutLocale;
+  }
+  if (pathWithoutLocale === "/" || pathWithoutLocale === "") {
     return `/${newLocale}`;
   }
-  return `/${newLocale}${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
+  return `/${newLocale}${pathWithoutLocale.startsWith("/") ? pathWithoutLocale : `/${pathWithoutLocale}`}`;
 }
 
 /**
@@ -78,5 +84,6 @@ export function switchPathLocale(pathname, newLocale) {
  */
 export function getLocaleFromPath(pathname) {
   const first = pathname.split("/").filter(Boolean)[0];
-  return LOCALES.includes(first) ? first : null;
+  if (LOCALES.includes(first)) return first;
+  return "en";
 }

@@ -11,17 +11,9 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     async redirects() {
         return [
-            { source: '/doctors', destination: '/en/doctors', permanent: true },
-            { source: '/doctors/:id', destination: '/en/doctors/:id', permanent: true },
-            { source: '/hospitals', destination: '/en/hospitals', permanent: true },
-            // Hospital slugs only — do not redirect /hospitals/*.jpg|.webp (static files in public/hospitals)
-            { source: '/hospitals/:slug([^/.]+)', destination: '/en/hospitals/:slug', permanent: true },
-            { source: '/treatments/:path*', destination: '/en/treatments/:path*', permanent: true },
-            { source: '/services/:path*', destination: '/en/services/:path*', permanent: true },
-            { source: '/about', destination: '/en/about', permanent: true },
-            { source: '/contact', destination: '/en/contact', permanent: true },
-            { source: '/blogs', destination: '/en/blogs', permanent: true },
-            { source: '/blog', destination: '/en/blogs', permanent: true },
+            // Legacy /en URLs → root (English, SEO)
+            { source: '/en', destination: '/', permanent: true },
+            { source: '/en/:path*', destination: '/:path*', permanent: true },
         ];
     },
     images: {

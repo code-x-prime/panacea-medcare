@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -12,8 +13,8 @@ export default function TreatmentsContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.treatments") || "Treatments", href: `/${locale}/treatments` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.treatments") || "Treatments", href: localePath(locale, `/treatments`) }
     ];
 
     const treatments = Object.values(treatmentsData).map(treatment => ({
@@ -50,7 +51,7 @@ export default function TreatmentsContent({ locale }) {
                     {treatments.map((treatment) => (
                         <Link
                             key={treatment.id}
-                            href={`/${locale}/treatments/${treatment.slug}`}
+                            href={localePath(locale, `/treatments/${treatment.slug}`)}
                             className={`group bg-white p-6 md:p-8 rounded-xl shadow-panacea hover:shadow-panacea-lg transition-all duration-300 border-2 ${treatment.borderColor} transform hover:-translate-y-1 h-full flex flex-col`}
                         >
                             <div className={`mb-4 ${isRTL ? "text-right" : "text-left"} flex-shrink-0 w-16 h-16 md:w-20 md:h-20 relative`}>

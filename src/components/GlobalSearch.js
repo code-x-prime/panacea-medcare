@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
@@ -151,9 +152,9 @@ export default function GlobalSearch({ locale = "en" }) {
         setIsOpen(false);
         setQuery("");
         if (type === "doctor") {
-            router.push(`/${locale}/doctors/${item.id}`);
+            router.push(localePath(locale, `/doctors/${item.id}`));
         } else if (type === "hospital") {
-            router.push(`/${locale}/hospitals/${item.slug}`);
+            router.push(localePath(locale, `/hospitals/${item.slug}`));
         }
     };
 

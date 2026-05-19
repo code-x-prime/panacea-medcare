@@ -1,9 +1,10 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useState, useMemo, useEffect } from "react";
 import TopBanner from "@/components/TopBanner";
 import Link from "next/link";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import doctors from "@/data/doctors.json";
 import { FaUserMd, FaSearch, FaChevronLeft, FaChevronRight, FaWhatsapp, FaCalendarCheck } from "react-icons/fa";
 import BookingModal from "@/components/BookingModal";
@@ -121,16 +122,15 @@ export default function DoctorsContent({ params }) {
                                         key={doctor.id}
                                         className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-transparent hover:border-panacea-primary flex flex-col w-full max-w-full"
                                     >
-                                        <Link href={`/${locale}/doctors/${doctor.id}`} className="flex-1 flex flex-col">
+                                        <Link href={localePath(locale, `/doctors/${doctor.id}`)} className="flex-1 flex flex-col">
                                             <span className="aspect-square bg-gray-200 relative overflow-hidden block w-full">
                                                 {doctor.image ? (
-                                                    <Image
+                                                    <PublicImage
                                                         src={doctor.image}
                                                         alt={name}
                                                         fill
                                                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                                                         loading="lazy"
-                                                        unoptimized
                                                     />
                                                 ) : (
                                                     <span className="absolute inset-0 bg-gradient-to-br from-panacea-primary/20 to-panacea-primary/5 flex items-center justify-center">
@@ -164,7 +164,7 @@ export default function DoctorsContent({ params }) {
                                         <div className="p-4 md:p-6 pt-0 space-y-3">
                                             {hospitalSlug && (
                                                 <Link
-                                                    href={`/${locale}/hospitals/${hospitalSlug}`}
+                                                    href={localePath(locale, `/hospitals/${hospitalSlug}`)}
                                                     className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center text-xs md:text-sm"
                                                 >
                                                     View Hospital

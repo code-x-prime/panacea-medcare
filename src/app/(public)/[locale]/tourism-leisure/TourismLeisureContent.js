@@ -1,9 +1,10 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
 import Breadcrumb from "@/components/Breadcrumb";
-import Image from "next/image";
+import PublicImage from "@/components/PublicImage";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
@@ -12,8 +13,8 @@ export default function TourismLeisureContent({ locale }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.tourism") || "Tourism & Leisure", href: `/${locale}/tourism-leisure` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.tourism") || "Tourism & Leisure", href: localePath(locale, `/tourism-leisure`) }
     ];
 
     const services = [
@@ -71,15 +72,11 @@ export default function TourismLeisureContent({ locale }) {
                             {/* Taj Mahal Image */}
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
-                                    <Image
+                                    <PublicImage
                                         src="/tourism/taj-mahal.jpg"
                                         alt="Taj Mahal, Agra - Iconic monument"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        onError={(e) => {
-                                            e.target.style.display = 'none';
-                                        }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -92,15 +89,11 @@ export default function TourismLeisureContent({ locale }) {
                             {/* Ayurvedic Treatment Image */}
                             <div className="relative rounded-2xl overflow-hidden shadow-panacea-lg group">
                                 <div className="aspect-[4/3] relative bg-gradient-to-br from-panacea-primary/20 to-panacea-secondary/20">
-                                    <Image
+                                    <PublicImage
                                         src="/tourism/ayurvedic-wellness.jpg"
                                         alt="Ayurvedic treatment - Shirodhara therapy"
                                         fill
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        onError={(e) => {
-                                            e.target.style.display = 'none';
-                                        }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -129,11 +122,9 @@ export default function TourismLeisureContent({ locale }) {
 
                                         <div className={`flex items-start gap-4 relative z-10 ${isRTL ? "flex-row-reverse" : ""}`}>
                                             <div className="w-16 h-16 bg-gradient-to-br from-panacea-primary to-panacea-secondary rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-md group-hover:shadow-lg p-3">
-                                                <Image
+                                                <PublicImage
                                                     src={service.icon}
                                                     alt={service.title}
-                                                    width={32}
-                                                    height={32}
                                                     className="w-12 h-12 object-contain filter brightness-0 invert"
                                                 />
                                             </div>
@@ -162,48 +153,23 @@ export default function TourismLeisureContent({ locale }) {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
-                            {
-                                key: "agra",
-                                name: t("destinations.agra"),
-                                image: "/agra.jpg",
-                                slug: "/tourism-leisure/agra"
-                            },
-                            {
-                                key: "kerala",
-                                name: t("destinations.kerala"),
-                                image: "/kerala.jpg",
-                                slug: "/tourism-leisure/kerala"
-                            },
-                            {
-                                key: "goa",
-                                name: t("destinations.goa"),
-                                image: "/goa.jpg",
-                                slug: "/tourism-leisure/goa"
-                            },
-                            {
-                                key: "rajasthan",
-                                name: t("destinations.rajasthan"),
-                                image: "/rajasthan.jpg",
-                                slug: "/tourism-leisure/rajasthan"
-                            }
+                            { key: "agra", name: t("destinations.agra"), image: "/agra.jpg" },
+                            { key: "kerala", name: t("destinations.kerala"), image: "/kerala.jpg" },
+                            { key: "goa", name: t("destinations.goa"), image: "/goa.jpg" },
+                            { key: "rajasthan", name: t("destinations.rajasthan"), image: "/rajasthan.jpg" },
                         ].map((destination, idx) => (
                             <Link
                                 key={idx}
-                                href={`/${locale}${destination.slug}`}
+                                href={localePath(locale, `/tourism-leisure/${destination.key}`)}
                                 className="bg-white rounded-2xl shadow-panacea overflow-hidden hover:shadow-panacea-lg transition-all duration-300 border-2 border-transparent hover:border-panacea-primary/30 group cursor-pointer"
                             >
                                 {/* Image */}
                                 <div className="relative h-48 overflow-hidden">
-                                    <Image
+                                    <PublicImage
                                         src={destination.image}
                                         alt={destination.name}
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                        onError={(e) => {
-                                            e.target.style.display = 'none';
-                                            e.target.parentElement.style.background = 'linear-gradient(135deg, #066F89 0%, #066F89 100%)';
-                                        }}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                                 </div>

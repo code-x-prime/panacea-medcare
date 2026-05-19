@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -35,7 +36,7 @@ export default function NeedAssistanceButton({ locale }) {
 
                             <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start ${isRTL ? "flex-row-reverse" : ""}`}>
                                 <Link
-                                    href={`/${locale}/pre-screening`}
+                                    href={localePath(locale, `/pre-screening`)}
                                     className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#066F89] rounded-xl font-bold text-lg shadow-lg hover:shadow-xl hover:bg-blue-50 transition-all transform hover:-translate-y-1 ${isRTL ? "flex-row-reverse" : ""}`}
                                 >
                                     <span>{t("ctaPrimary")}</span>
@@ -43,7 +44,7 @@ export default function NeedAssistanceButton({ locale }) {
                                 </Link>
 
                                 <Link
-                                    href={`/${locale}/contact`}
+                                    href={localePath(locale, `/contact`)}
                                     className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#066F89]/30 border border-white/30 backdrop-blur-sm text-white rounded-xl font-semibold text-lg hover:bg-white/20 transition-all ${isRTL ? "flex-row-reverse" : ""}`}
                                 >
                                     <span>{t("ctaSecondary")}</span>

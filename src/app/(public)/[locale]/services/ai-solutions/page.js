@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import AISolutionsContent from "./AISolutionsContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/services/ai-solutions`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/services/ai-solutions",
-                "fr": "https://www.panaceamedcare.com/fr/services/ai-solutions",
-                "ar": "https://www.panaceamedcare.com/ar/services/ai-solutions",
-            },
+            canonical: `${siteUrl(locale, `/services/ai-solutions`)}`,
+            languages: alternateLanguages("/services/ai-solutions"),
         },
     };
 }

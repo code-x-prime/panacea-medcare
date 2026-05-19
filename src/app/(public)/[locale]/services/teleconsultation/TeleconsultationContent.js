@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -108,7 +109,7 @@ export default function TeleconsultationContent({ locale }) {
                         {t("cta.subtitle")}
                     </p>
                     <Link
-                        href={`/${locale}/consult-online`}
+                        href={localePath(locale, `/consult-online`)}
                         className={`inline-flex items-center justify-center gap-2 px-8 py-4 bg-panacea-accent hover:bg-panacea-accent/90 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-xl hover:scale-105 ${isRTL ? "flex-row-reverse" : ""}`}
                     >
                         {t("cta.button")}

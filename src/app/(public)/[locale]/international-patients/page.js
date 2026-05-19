@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import InternationalPatientsContent from "./InternationalPatientsContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/international-patients`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/international-patients",
-                "fr": "https://www.panaceamedcare.com/fr/international-patients",
-                "ar": "https://www.panaceamedcare.com/ar/international-patients",
-            },
+            canonical: `${siteUrl(locale, `/international-patients`)}`,
+            languages: alternateLanguages("/international-patients"),
         },
     };
 }

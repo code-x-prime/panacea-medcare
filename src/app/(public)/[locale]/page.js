@@ -1,5 +1,6 @@
 // src/app/(public)/[locale]/page.js
 import { getMessages } from "@/lib/getMessages";
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
     description: messages.seo?.description,
     robots: "index, follow",
     alternates: {
-      canonical: `https://www.panaceamedcare.com/${locale}`,
-      languages: {
-        "en": "https://www.panaceamedcare.com/en",
-        "fr": "https://www.panaceamedcare.com/fr",
-        "ar": "https://www.panaceamedcare.com/ar",
-      },
+      canonical: siteUrl(locale, "/"),
+      languages: alternateLanguages("/"),
     },
   };
 }

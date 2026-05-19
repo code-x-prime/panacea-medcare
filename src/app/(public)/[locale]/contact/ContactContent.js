@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useState } from "react";
 import TopBanner from "@/components/TopBanner";
@@ -302,7 +303,7 @@ export default function ContactContent({ locale }) {
 
                             {/* Teleconsultation Card */}
                             <Link
-                                href={`/${locale}/services/teleconsultation`}
+                                href={localePath(locale, `/services/teleconsultation`)}
                                 className={`bg-panacea-light p-6 rounded-lg hover:shadow-lg transition-all group ${isRTL ? "text-right" : "text-left"}`}
                             >
                                 <div className="flex items-start gap-4">

@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -60,7 +61,7 @@ export default function ServicesPage({ params }) {
                     {services.map((service) => (
                         <Link
                             key={service.key}
-                            href={`/${locale}${service.href}`}
+                            href={localePath(locale, `/${service.href}`)}
                             className="group bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-panacea-primary"
                         >
                             <div className={`text-5xl mb-4 ${isRTL ? "text-right" : "text-left"}`}>

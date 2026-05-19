@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -29,7 +30,7 @@ export default function HomeCaseStudiesPreview({ locale }) {
             </p>
           </div>
           <Link
-            href={`/${locale}/case-studies`}
+            href={localePath(locale, `/case-studies`)}
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
           >
             <span>{isRTL ? "عرض جميع القصص" : "View all stories"}</span>
@@ -46,7 +47,7 @@ export default function HomeCaseStudiesPreview({ locale }) {
             return (
               <Link
                 key={study.id}
-                href={`/${locale}/case-studies/${study.id}`}
+                href={localePath(locale, `/case-studies/${study.id}`)}
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1"
               >
                 <div className="relative h-52 overflow-hidden bg-gray-100">
@@ -78,7 +79,7 @@ export default function HomeCaseStudiesPreview({ locale }) {
 
         <div className="mt-6 flex justify-center md:hidden">
           <Link
-            href={`/${locale}/case-studies`}
+            href={localePath(locale, `/case-studies`)}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-panacea-primary text-white font-semibold hover:bg-panacea-dark transition-all"
           >
             <span>{isRTL ? "عرض جميع القصص" : "View all stories"}</span>

@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -114,7 +115,7 @@ export default function HowWeWork({ locale }) {
                 {/* Bottom CTA Buttons */}
                 <div className={`flex flex-wrap gap-4 justify-center mt-12 ${isRTL ? "flex-row-reverse" : ""}`}>
                     <Link
-                        href={`/${locale}/contact`}
+                        href={localePath(locale, `/contact`)}
                         className="px-8 py-3 bg-[#F5841F] hover:bg-[#E07316] text-white rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 block text-center"
                     >
                         {t("getStarted")}

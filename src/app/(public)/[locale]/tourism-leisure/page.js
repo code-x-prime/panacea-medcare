@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import TourismLeisureContent from "./TourismLeisureContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/tourism-leisure`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/tourism-leisure",
-                "fr": "https://www.panaceamedcare.com/fr/tourism-leisure",
-                "ar": "https://www.panaceamedcare.com/ar/tourism-leisure",
-            },
+            canonical: `${siteUrl(locale, `/tourism-leisure`)}`,
+            languages: alternateLanguages("/tourism-leisure"),
         },
     };
 }

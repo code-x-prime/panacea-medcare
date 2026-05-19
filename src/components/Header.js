@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -64,7 +65,7 @@ export default function Header({ locale }) {
           <div className="mx-auto px-4  py-[0.5px]">
             <div className={"flex items-center justify-between " + (isRTL ? "flex-row-reverse" : "")}>
               {/* Logo - RTL: right side, LTR: left side - Reduced height */}
-              <Link href={"/" + locale} className={isRTL ? "order-3" : "order-1"}>
+              <Link href={localePath(locale, '/')} className={isRTL ? "order-3" : "order-1"}>
                 <div
                   className={
                     "flex items-center gap-2 " + (isRTL ? "flex-row-reverse" : "")
@@ -107,7 +108,7 @@ export default function Header({ locale }) {
 
                 {/* Book Teleconsultation - Orange CTA Button */}
                 <Link
-                  href={`/${locale}/services/teleconsultation`}
+                  href={localePath(locale, `/services/teleconsultation`)}
                   className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#F5841F] hover:bg-[#E07316] text-white text-base rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   {t.requestConsultation}

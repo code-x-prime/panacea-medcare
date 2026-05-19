@@ -1,4 +1,5 @@
 
+import { siteUrl } from "@/lib/locale/routing";
 import TeleconsultationContent from "./TeleconsultationContent";
 import { getTranslations } from "next-intl/server";
 
@@ -12,7 +13,7 @@ export async function generateMetadata({ params: { locale } }) {
         openGraph: {
             title: t("title"),
             description: t("subtitle"),
-            url: `https://www.panaceamedcare.com/${locale}/services/teleconsultation`,
+            url: `${siteUrl(locale, `/services/teleconsultation`)}`,
             type: "website",
             images: [
                 {

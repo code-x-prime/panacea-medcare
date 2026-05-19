@@ -1,68 +1,68 @@
 import doctors from "@/data/doctors.json";
 import caseStudies from "@/data/caseStudies.json";
+import { localePath } from "@/lib/locale/routing";
 
 export default function sitemap() {
-    const baseUrl = 'https://www.panaceamedcare.com';
-    const locales = ['en', 'ar', 'fr'];
+    const baseUrl = "https://www.panaceamedcare.com";
+    const locales = ["en", "ar", "fr"];
 
-    // Static routes
     const routes = [
-        '',
-        '/about',
-        '/blog',
-        '/case-studies',
-        '/consent',
-        '/consult-online',
-        '/contact',
-        '/doctors',
-        '/faq',
-        '/hospitals',
-        '/international-patients',
-        '/our-offices',
-        '/partner-with-us',
-        '/privacy',
-        '/services',
-        '/terms',
-        '/tourism-leisure',
-        '/treatment-packages',
-        '/treatments',
-        '/why-india',
+        "",
+        "/about",
+        "/blog",
+        "/case-studies",
+        "/consent",
+        "/consult-online",
+        "/contact",
+        "/doctors",
+        "/faq",
+        "/hospitals",
+        "/international-patients",
+        "/our-offices",
+        "/partner-with-us",
+        "/privacy",
+        "/disclaimer",
+        "/cookies",
+        "/services",
+        "/terms",
+        "/tourism-leisure",
+        "/treatment-packages",
+        "/treatments",
+        "/why-india",
     ];
 
-    // Services sub-pages
     const services = [
-        'ai-solutions',
-        'medical-tourism',
-        'tele-pathology',
-        'tele-radiology',
-        'teleconsultation'
+        "ai-solutions",
+        "medical-tourism",
+        "tele-pathology",
+        "tele-radiology",
+        "teleconsultation",
     ];
 
-    // Treatment sub-pages
     const treatments = [
-        'aesthetic',
-        'ayurveda',
-        'bmt',
-        'cardiac',
-        'dental',
-        'diagnostics',
-        'gastroenterology',
-        'gynecology',
-        'laparoscopic',
-        'mental-health',
-        'neurosurgery',
-        'oncology',
-        'ophthalmology',
-        'organ-transplant',
-        'orthopedics',
-        'pediatrics',
-        'rehabilitation',
-        'robotic'
+        "aesthetic",
+        "ayurveda",
+        "bmt",
+        "cardiac",
+        "dental",
+        "diagnostics",
+        "gastroenterology",
+        "gynecology",
+        "laparoscopic",
+        "mental-health",
+        "neurosurgery",
+        "oncology",
+        "ophthalmology",
+        "organ-transplant",
+        "orthopedics",
+        "pediatrics",
+        "rehabilitation",
+        "robotic",
     ];
 
-    // Hospital slugs (extracted from hospitals/page.js)
+    const tourismDestinations = ["agra", "kerala", "goa", "rajasthan"];
+
     const hospitals = [
-        // Delhi NCR
         "asian-hospital-delhi",
         "marengo-asia-hospital-gurgaon",
         "indraprastha-apollo-hospital-new-delhi",
@@ -75,16 +75,12 @@ export default function sitemap() {
         "metro-hospital-faridabad",
         "rashi-dental-clinic-gurgaon",
         "yatharth-hospital-greater-noida",
-        // Chennai
         "apollo-hospital-greams-road-chennai",
-        // Mumbai
         "stem-rx-hospital-mumbai",
         "apollo-hospital-mumbai",
         "fortis-hospital-mumbai",
-        // Hyderabad
         "tx-hospital-hyderabad",
         "apollo-hospital-hyderabad",
-        // International
         "memorial-hospital-turkey",
         "bumrungrad-hospital-thailand",
         "nepal-mediciti",
@@ -92,64 +88,67 @@ export default function sitemap() {
 
     const sitemapEntries = [];
 
-    // Generate entries for each locale
-    locales.forEach(locale => {
-        // 1. Static Routes
-        routes.forEach(route => {
+    locales.forEach((locale) => {
+        routes.forEach((route) => {
+            const path = localePath(locale, route || "/");
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}${route}`,
+                url: `${baseUrl}${path === "/" ? "" : path}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: route === '' ? 1.0 : 0.8,
+                changeFrequency: "weekly",
+                priority: route === "" ? 1.0 : 0.8,
             });
         });
 
-        // 2. Services
-        services.forEach(slug => {
+        services.forEach((slug) => {
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}/services/${slug}`,
+                url: `${baseUrl}${localePath(locale, `/services/${slug}`)}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
                 priority: 0.8,
             });
         });
 
-        // 3. Treatments
-        treatments.forEach(slug => {
+        treatments.forEach((slug) => {
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}/treatments/${slug}`,
+                url: `${baseUrl}${localePath(locale, `/treatments/${slug}`)}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
                 priority: 0.8,
             });
         });
 
-        // 4. Hospitals (Dynamic)
-        hospitals.forEach(slug => {
+        tourismDestinations.forEach((slug) => {
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}/hospitals/${slug}`,
+                url: `${baseUrl}${localePath(locale, `/tourism-leisure/${slug}`)}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
                 priority: 0.7,
             });
         });
 
-        // 5. Doctors (Dynamic from JSON)
-        doctors.forEach(doctor => {
+        hospitals.forEach((slug) => {
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}/doctors/${doctor.id}`,
+                url: `${baseUrl}${localePath(locale, `/hospitals/${slug}`)}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
                 priority: 0.7,
             });
         });
 
-        // 6. Case Studies (Dynamic from JSON)
-        caseStudies.forEach(study => {
+        doctors.forEach((doctor) => {
             sitemapEntries.push({
-                url: `${baseUrl}/${locale}/case-studies/${study.id}`,
+                url: `${baseUrl}${localePath(locale, `/doctors/${doctor.id}`)}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
+                priority: 0.7,
+            });
+        });
+
+        caseStudies.forEach((study) => {
+            sitemapEntries.push({
+                url: `${baseUrl}${localePath(locale, `/case-studies/${study.id}`)}`,
+                lastModified: new Date(),
+                changeFrequency: "weekly",
                 priority: 0.7,
             });
         });

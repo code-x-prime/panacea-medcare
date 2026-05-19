@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -158,7 +159,7 @@ export default function Navbar({ locale = "en" }) {
                   }}
                 >
                   <Link
-                    href={item.slug === "/" ? "/" + locale : "/" + locale + item.slug}
+                    href={item.slug === "/" ? localePath(locale, '/') : localePath(locale, item.slug)}
                     className={
                       "flex items-center text-sm font-semibold px-2 py-1 rounded-md transition-all duration-200 " +
                       (shouldWrap ? "max-w-[150px] " : "") +
@@ -208,8 +209,8 @@ export default function Navbar({ locale = "en" }) {
                         {subMenuItems.map((subItem, sIdx) => (
                           <a
                             key={sIdx}
-                            href={"/" + locale + (subItem.slug || "")}
-                            onClick={(e) => handleSubMenuClick(e, "/" + locale + (subItem.slug || ""))}
+                            href={localePath(locale, (subItem.slug) || "")}
+                            onClick={(e) => handleSubMenuClick(e, localePath(locale, (subItem.slug) || ""))}
                             className="block px-2 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-gray-700 hover:bg-gradient-to-r hover:from-panacea-primary/10 hover:to-panacea-secondary/10 hover:text-panacea-primary rounded-lg transition-all duration-200 font-medium cursor-pointer"
                           >
                             {subItem.name || subItem.country}
@@ -230,7 +231,7 @@ export default function Navbar({ locale = "en" }) {
         }`}>
         <div className="container mx-auto px-4 xl:max-w-7xl flex items-end gap-3 py-2">
           {isSticky && (
-            <Link href={"/" + locale} className="flex-shrink-0">
+            <Link href={localePath(locale, '/')} className="flex-shrink-0">
               <Image
                 src="/logo.png"
                 alt="Panacea Medcare Logo"
@@ -303,8 +304,8 @@ export default function Navbar({ locale = "en" }) {
                         <Link
                           href={
                             item.slug === "/"
-                              ? "/" + locale
-                              : "/" + locale + item.slug
+                              ? localePath(locale, '/')
+                              : localePath(locale, item.slug)
                           }
                           className={
                             "text-lg font-semibold transition-colors " +
@@ -320,7 +321,7 @@ export default function Navbar({ locale = "en" }) {
                         {/* JCI Badge in Mobile Menu - Attached to Hospitals */}
                         {isHospitals && (
                           <Link
-                            href={"/" + locale + item.slug}
+                            href={localePath(locale, item.slug)}
                             className="bg-panacea-primary text-white px-3 py-1.5 rounded-lg font-bold text-xs leading-tight flex flex-col items-center justify-center shadow-sm"
                             onClick={closeMobileMenu}
                             style={{ lineHeight: '1.1', minWidth: '70px' }}
@@ -360,14 +361,14 @@ export default function Navbar({ locale = "en" }) {
                         {subMenuItems.map((sub, sIdx) => (
                           <a
                             key={sIdx}
-                            href={"/" + locale + sub.slug}
+                            href={localePath(locale, sub.slug)}
                             className="block py-2 sm:py-2.5 text-xs sm:text-sm md:text-base font-medium text-panacea-dark hover:text-panacea-accent hover:bg-white rounded px-2 sm:px-3 transition-colors break-words cursor-pointer"
                             style={{
                               wordBreak: 'break-word',
                               hyphens: 'auto',
                               lineHeight: '1.4'
                             }}
-                            onClick={(e) => handleSubMenuClick(e, "/" + locale + sub.slug)}
+                            onClick={(e) => handleSubMenuClick(e, localePath(locale, sub.slug))}
                           >
                             {sub.name}
                           </a>

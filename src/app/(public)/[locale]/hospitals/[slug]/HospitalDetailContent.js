@@ -1,4 +1,5 @@
 "use client";
+import { localePath, siteUrl } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
 import { notFound } from "next/navigation";
@@ -136,7 +137,7 @@ export default function HospitalDetailContent({ params }) {
 
     // WhatsApp message with hospital name and link
     const whatsappMessageLink = encodeURIComponent(
-        `Hello, please contact me regarding ${hospitalName} - https://www.panaceamedcare.com/${locale}/hospitals/${slug}?source=wpchat_HDSB, Thank you!`
+        `Hello, please contact me regarding ${hospitalName} - ${siteUrl(locale, `/hospitals/${slug}?source=wpchat_HDSB, Thank you!`)}`
     );
     const whatsappUrl = `https://wa.me/919958800961?text=${whatsappMessageLink}`;
 
@@ -433,7 +434,7 @@ export default function HospitalDetailContent({ params }) {
                                                                     className="group bg-white border border-gray-200 rounded-xl p-3 sm:p-4 md:p-6 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col w-full max-w-full min-w-0"
                                                                 >
                                                                     <Link
-                                                                        href={`/${locale}/doctors/${doctor.id}`}
+                                                                        href={localePath(locale, `/doctors/${doctor.id}`)}
                                                                         className="flex-1 flex flex-col min-w-0"
                                                                     >
                                                                         <span className="relative w-full aspect-square mb-3 sm:mb-4 rounded-lg overflow-hidden bg-gray-100 block flex-shrink-0">

@@ -1,4 +1,5 @@
 
+import { siteUrl, alternateLanguages } from "@/lib/locale/routing";
 import PartnerWithUsContent from "./PartnerWithUsContent";
 import { getMessages } from "@/lib/getMessages";
 
@@ -10,12 +11,8 @@ export async function generateMetadata({ params }) {
         title: messages.seo?.title,
         description: messages.seo?.description,
         alternates: {
-            canonical: `https://www.panaceamedcare.com/${locale}/partner-with-us`,
-            languages: {
-                "en": "https://www.panaceamedcare.com/en/partner-with-us",
-                "fr": "https://www.panaceamedcare.com/fr/partner-with-us",
-                "ar": "https://www.panaceamedcare.com/ar/partner-with-us",
-            },
+            canonical: `${siteUrl(locale, `/partner-with-us`)}`,
+            languages: alternateLanguages("/partner-with-us"),
         },
     };
 }

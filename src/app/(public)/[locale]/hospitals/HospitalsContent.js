@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -15,8 +16,8 @@ export default function HospitalsContent({ params }) {
     const isRTL = locale === "ar";
 
     const breadcrumbItems = [
-        { label: locale === "ar" ? "الرئيسية" : locale === "fr" ? "Accueil" : "Home", href: `/${locale}` },
-        { label: locale === "ar" ? "المستشفيات" : locale === "fr" ? "Hôpitaux" : "Hospitals", href: `/${locale}/hospitals` }
+        { label: locale === "ar" ? "الرئيسية" : locale === "fr" ? "Accueil" : "Home", href: localePath(locale, '/') },
+        { label: locale === "ar" ? "المستشفيات" : locale === "fr" ? "Hôpitaux" : "Hospitals", href: localePath(locale, `/hospitals`) }
     ];
 
     const whatsappNumber = "919958800961";
@@ -89,7 +90,7 @@ export default function HospitalsContent({ params }) {
                             {[...indiaHospitals["delhi-ncr"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                 <Link
                                     key={idx}
-                                    href={`/${locale}/hospitals/${hospital.slug}`}
+                                    href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
@@ -120,7 +121,7 @@ export default function HospitalsContent({ params }) {
                             {[...indiaHospitals["chennai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                 <Link
                                     key={idx}
-                                    href={`/${locale}/hospitals/${hospital.slug}`}
+                                    href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
@@ -151,7 +152,7 @@ export default function HospitalsContent({ params }) {
                             {[...indiaHospitals["mumbai"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                 <Link
                                     key={idx}
-                                    href={`/${locale}/hospitals/${hospital.slug}`}
+                                    href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
@@ -182,7 +183,7 @@ export default function HospitalsContent({ params }) {
                             {[...indiaHospitals["hyderabad"]].sort((a, b) => a.name.localeCompare(b.name)).map((hospital, idx) => (
                                 <Link
                                     key={idx}
-                                    href={`/${locale}/hospitals/${hospital.slug}`}
+                                    href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                     className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                 >
                                     <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
@@ -230,7 +231,7 @@ export default function HospitalsContent({ params }) {
                                 {allInternationalHospitals.map((hospital, idx) => (
                                     <Link
                                         key={idx}
-                                        href={`/${locale}/hospitals/${hospital.slug}`}
+                                        href={localePath(locale, `/hospitals/${hospital.slug}`)}
                                         className="group block bg-white rounded-xl overflow-hidden shadow-panacea hover:shadow-panacea-lg transition-all duration-300 hover:-translate-y-2 border border-gray-100"
                                     >
                                         <div className="relative h-40 md:h-44 overflow-hidden bg-gray-100">
@@ -275,7 +276,7 @@ export default function HospitalsContent({ params }) {
                         </div>
                         <div className={`flex flex-col sm:flex-row gap-4 justify-center ${isRTL ? "flex-row-reverse" : ""}`}>
                             <Link
-                                href={`/${locale}/contact`}
+                                href={localePath(locale, `/contact`)}
                                 className="px-8 py-4 bg-white text-panacea-primary rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-center"
                             >
                                 {t("contactHospital") || "Contact Hospital"}

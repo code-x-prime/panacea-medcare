@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/locale/routing";
 
 import TopBanner from "@/components/TopBanner";
 import { useTranslations } from "next-intl";
@@ -19,9 +20,9 @@ export default function TreatmentDetailContent({ locale, treatment, namespace })
     }
 
     const breadcrumbItems = [
-        { label: t("breadcrumb.home") || "Home", href: `/${locale}` },
-        { label: t("breadcrumb.treatments") || "Treatments", href: `/${locale}/treatments` },
-        { label: t(`breadcrumb.${treatment.id}`) || treatment.id, href: `/${locale}/treatments/${treatment.slug}` }
+        { label: t("breadcrumb.home") || "Home", href: localePath(locale, '/') },
+        { label: t("breadcrumb.treatments") || "Treatments", href: localePath(locale, `/treatments`) },
+        { label: t(`breadcrumb.${treatment.id}`) || treatment.id, href: localePath(locale, `/treatments/${treatment.slug}`) }
     ];
 
 
@@ -60,7 +61,7 @@ export default function TreatmentDetailContent({ locale, treatment, namespace })
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href={`/${locale}/services/teleconsultation`}
+                                href={localePath(locale, `/services/teleconsultation`)}
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-panacea-primary text-white rounded-lg font-semibold hover:bg-panacea-blue-600 transition-all shadow-panacea hover:shadow-panacea-lg"
                             >
                                 {t("cta.consultation")}

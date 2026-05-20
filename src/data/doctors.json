@@ -20385,22 +20385,99 @@
   {
     "id": "rashi-kapoor-kapoor-dental",
     "name": "Dr. Rashi Kapoor",
-    "specialty": "Cosmetic & Aesthetic Dentistry",
-    "designation": "Founder",
+    "specialty": "Smile Design & Cosmetic Dentistry",
+    "designation": "Founder & Smile Design Specialist",
     "hospitalDesignation": "Founder - Kapoor's Safe Hands Dental",
     "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
     "hospitalSlug": "rashi-dental-clinic-gurgaon",
     "qualification": "BDS",
     "experience": "15+ Years",
-    "image": "/kapoor-safehands-dental/dr-rashi-kapoor.jpg",
-    "bio": "Dr. Rashi Kapoor is an accomplished cosmetic dentist with 15+ years of expertise in aesthetic dentistry, veneers, smile designing, teeth whitening, crowns & bridges, full mouth rehabilitation and metal-free restorations.",
+    "image": "/kapoor-safehands-dental/dr-rashi-kapoor.webp",
+    "bio": "Dr. Rashi Kapoor is an accomplished cosmetic dentist with 15+ years in aesthetic dentistry. She specialises in veneers, smile designing, teeth whitening, crowns & bridges, full mouth rehabilitation, metal-free crowns and flexible dentures.",
     "expertise": [
       "Smile designing",
       "Veneers & laminates",
       "Teeth whitening",
       "Full mouth rehabilitation",
       "Crowns & bridges",
-      "Flexible dentures"
+      "Metal-free restorations"
+    ]
+  },
+  {
+    "id": "varun-kapoor-kapoor-dental",
+    "name": "Dr. Varun Kapoor",
+    "specialty": "Dental Counselling & Patient Care",
+    "designation": "Co-Founder & Dental Counselor",
+    "hospitalDesignation": "Co-Founder - Kapoor's Safe Hands Dental",
+    "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
+    "hospitalSlug": "rashi-dental-clinic-gurgaon",
+    "qualification": "Dental Care Coordinator",
+    "experience": "15+ Years",
+    "image": "/kapoor-safehands-dental/dr-varun-kapoor.webp",
+    "bio": "Dr. Varun Kapoor is the dental counsellor, ensuring a smooth and well-informed experience: explaining conditions and options, guiding treatment plans and costs, addressing concerns with empathy, and coordinating between dentists and patients.",
+    "expertise": [
+      "Patient counselling",
+      "Treatment planning",
+      "Care coordination",
+      "International patient support"
+    ]
+  },
+  {
+    "id": "ankush-mahajan-kapoor-dental",
+    "name": "Dr. Ankush Mahajan",
+    "specialty": "Oral & Maxillofacial Surgery",
+    "designation": "Oral Surgeon",
+    "hospitalDesignation": "Oral & Maxillofacial Surgery Specialist",
+    "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
+    "hospitalSlug": "rashi-dental-clinic-gurgaon",
+    "qualification": "MDS (Oral & Maxillofacial Surgery)",
+    "experience": "15+ Years",
+    "image": "/kapoor-safehands-dental/dr-ankush-mahajan.webp",
+    "bio": "Dr. Ankush Mahajan is an oral & maxillofacial surgeon with 15+ years of experience in wisdom tooth extraction, dentoalveolar surgery, bone grafting, implant placement and rehabilitation, facial fractures, cyst and tumour management, and TMJ disorders.",
+    "expertise": [
+      "Wisdom tooth extraction",
+      "Dental implants",
+      "Bone grafting",
+      "Facial trauma",
+      "TMJ disorders"
+    ]
+  },
+  {
+    "id": "jitendra-khanna-kapoor-dental",
+    "name": "Dr. Jitendra Khanna",
+    "specialty": "Implantology & Prosthodontics",
+    "designation": "Prosthodontist & Implant Specialist",
+    "hospitalDesignation": "Prosthodontist & Implant Specialist",
+    "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
+    "hospitalSlug": "rashi-dental-clinic-gurgaon",
+    "qualification": "MDS (Prosthodontics)",
+    "experience": "20+ Years",
+    "image": "/kapoor-safehands-dental/dr-jitendra-khanna.webp",
+    "bio": "Dr. Jitendra Khanna is a distinguished prosthodontist and implant specialist with 20+ years of experience, among the most reputed implant and restorative dentists in Gurgaon and NCR.",
+    "expertise": [
+      "Dental implants",
+      "Prosthodontics",
+      "Full mouth rehabilitation",
+      "Precision restorations"
+    ]
+  },
+  {
+    "id": "tanya-dhawan-kapoor-dental",
+    "name": "Dr. Tanya Dhawan",
+    "specialty": "Endodontics (Root Canal)",
+    "designation": "Endodontist & Root Canal Specialist",
+    "hospitalDesignation": "Endodontist",
+    "hospital": "Kapoor's Safe Hands Dental & Healthcare Centre",
+    "hospitalSlug": "rashi-dental-clinic-gurgaon",
+    "qualification": "MDS (Conservative Dentistry & Endodontics)",
+    "experience": "10+ Years",
+    "image": "/kapoor-safehands-dental/dr-tanya-dhawan.webp",
+    "bio": "Dr. Tanya Dhawan is an endodontist and member of the Indian Endodontic Society, specialising in single-visit root canal treatment, re-treatment cases and periapical surgeries.",
+    "expertise": [
+      "Single-visit RCT",
+      "Root canal re-treatment",
+      "Periapical surgery",
+      "Conservative dentistry"
     ]
   },
   {

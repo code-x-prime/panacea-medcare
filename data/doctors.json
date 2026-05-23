@@ -17798,21 +17798,7 @@
     "bio": "Dr. Kala Chandrahas is a General Surgeon with 11+ years of experience at TX Hospital Hyderabad.",
     "image": "/TX Hospital/Dr. Kala Chandrahas.webp"
   },
-  {
-    "id": "manocharan-t-tx-hyderabad",
-    "name": "Dr. Manocharan T",
-    "specialty": "General Surgeon",
-    "designation": "General Surgeon",
-    "qualification": "MBBS, MS",
-    "experience": "7+ Years",
-    "hospital": "TX Hospital Hyderabad",
-    "hospitalSlug": "tx-hospital-hyderabad",
-    "specialties": [
-      "General Surgery"
-    ],
-    "bio": "Dr. Manocharan T is a General Surgeon with 7+ years of experience at TX Hospital Hyderabad.",
-    "image": "/TX Hospital/Dr. Manocharan T.webp"
-  },
+
   {
     "id": "jayaram-reddy-s-tx-hyderabad",
     "name": "Dr. Jayaram Reddy S",

@@ -69,7 +69,7 @@ export default function Footer({ locale }) {
                 width={200}
                 height={100}
                 className="h-16 md:h-20 w-auto brightness-0 invert"
-                priority
+                loading="lazy"
               />
             </Link>
 

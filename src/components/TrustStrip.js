@@ -71,6 +71,8 @@ export default function TrustStrip({ locale }) {
                                                 alt={partner.name}
                                                 fill
                                                 className="object-contain"
+                                                sizes="192px"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </div>
@@ -84,6 +86,8 @@ export default function TrustStrip({ locale }) {
                                                 alt={partner.name}
                                                 fill
                                                 className="object-contain"
+                                                sizes="192px"
+                                                loading="lazy"
                                             />
                                         </div>
                                     </div>

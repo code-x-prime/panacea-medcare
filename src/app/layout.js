@@ -9,8 +9,10 @@ import Script from "next/script";
 
 const raleway = Raleway({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-raleway",
+  display: "swap",
+  preload: true,
 });
 
 export const metadata = {

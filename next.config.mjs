@@ -16,7 +16,10 @@ const nextConfig = {
             { source: '/en/:path*', destination: '/:path*', permanent: true },
         ];
     },
+    compress: true,
     images: {
+        formats: ["image/avif", "image/webp"],
+        minimumCacheTTL: 31536000,
         remotePatterns: [
             {
                 protocol: 'https',

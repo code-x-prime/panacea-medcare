@@ -46,28 +46,17 @@ export default function HeroSection({ locale }) {
     >
       {/* Background Images - mobile-first with picture for conditional loading */}
       <div className="absolute inset-0">
-        {/* Mobile image */}
-        <Image
-          src="/bg-sm.png"
-          alt="World-class medical care with compassionate doctors and happy patients"
-          fill
-          className="object-cover object-center md:hidden"
-          priority
-          quality={75}
-          sizes="100vw"
-          style={{ objectPosition: isRTL ? "right center" : "left center" }}
-        />
-        {/* Desktop image - lazy on mobile viewport */}
-        <Image
-          src="/hero-banner.png"
-          alt="World-class medical care with compassionate doctors and happy patients"
-          fill
-          className="object-cover object-center hidden md:block"
-          priority
-          quality={75}
-          sizes="100vw"
-          style={{ objectPosition: isRTL ? "right center" : "left center" }}
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/_next/image?url=%2Fbg-sm.png&w=750&q=75" />
+          <source media="(min-width: 769px)" srcSet="/_next/image?url=%2Fhero-banner.png&w=1920&q=75" />
+          <img
+            src="/_next/image?url=%2Fhero-banner.png&w=1920&q=75"
+            alt="World-class medical care with compassionate doctors and happy patients"
+            className="object-cover object-center absolute inset-0 w-full h-full"
+            style={{ objectPosition: isRTL ? "right center" : "left center" }}
+            fetchpriority="high"
+          />
+        </picture>
 
         {/* Teal overlay */}
         <div

@@ -21,9 +21,9 @@ export default function PublicImage({ src, alt, fill, className = "", loading, p
         if (onError) onError(e);
     };
 
-    // Default sizes for responsive scaling when fill is used
+    // Default sizes for responsive scaling when fill is used (optimized for 2/3/4-column grids)
     const defaultSizes = fill 
-        ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
+        ? "(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" 
         : undefined;
 
     return (

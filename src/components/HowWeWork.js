@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { localePath } from "@/lib/locale/routing";
 
 import { useTranslations } from "next-intl";
@@ -7,6 +8,7 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function HowWeWork({ locale }) {
+    const [playVideo, setPlayVideo] = useState(false);
     const t = useTranslations("howWeWork");
     const isRTL = locale === "ar";
 
@@ -94,15 +96,38 @@ export default function HowWeWork({ locale }) {
                     {/* Right Side - Video */}
                     <div className="relative">
                         <div className="bg-gradient-to-br from-panacea-primary to-panacea-dark rounded-3xl p-2 shadow-2xl">
-                            <div className="bg-black rounded-2xl overflow-hidden aspect-video">
-                                <iframe
-                                    className="w-full h-full"
-                                    src="https://www.youtube.com/embed/kA_19g5gu04"
-                                    title={t("videoTitle")}
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
+                            <div className="bg-black rounded-2xl overflow-hidden aspect-video relative">
+                                {playVideo ? (
+                                    <iframe
+                                        className="w-full h-full"
+                                        src="https://www.youtube.com/embed/kA_19g5gu04?autoplay=1"
+                                        title={t("videoTitle")}
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                ) : (
+                                    <>
+                                        <Image
+                                            src="https://img.youtube.com/vi/kA_19g5gu04/hqdefault.jpg"
+                                            alt={t("videoTitle") || "Video preview"}
+                                            fill
+                                            className="object-cover"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
+                                        />
+                                        <button
+                                            onClick={() => setPlayVideo(true)}
+                                            className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300 group/play"
+                                            aria-label="Play video"
+                                        >
+                                            <div className="w-16 h-16 bg-[#F5841F] rounded-full flex items-center justify-center shadow-2xl transform group-hover/play:scale-110 transition-transform duration-300">
+                                                <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </>
+                                )}
                             </div>
                         </div>
 

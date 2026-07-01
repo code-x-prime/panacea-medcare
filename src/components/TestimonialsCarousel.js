@@ -136,12 +136,13 @@ function TestimonialCard({ testimonial }) {
                 <div className="bg-white rounded-2xl overflow-hidden h-full shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative flex flex-col">
                     {/* Video Container */}
                     <div className="relative aspect-video w-full bg-gray-900">
-                        <iframe
-                            src={`https://www.youtube.com/embed/${videoId}?controls=0&modestbranding=1&rel=0`}
-                            title="Testimonial Video"
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            className="w-full h-full absolute inset-0"
-                        ></iframe>
+                        <Image
+                            src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                            alt="Testimonial Video Preview"
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                        />
                         {/* Play Button Overlay */}
                         <button
                             onClick={() => setShowVideo(true)}
@@ -212,13 +213,14 @@ function TestimonialCard({ testimonial }) {
                     {/* Video Section - Left Side */}
                     <div className="relative md:w-2/5 flex-shrink-0 bg-gray-900">
                         <div className="aspect-video md:aspect-auto md:h-full relative">
-                            {/* Embedded Video */}
-                            <iframe
-                                src={`https://www.youtube.com/embed/${videoId}?controls=0&modestbranding=1&rel=0`}
-                                title="Video testimonial preview"
-                                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                className="w-full h-full absolute inset-0"
-                            ></iframe>
+                            {/* Embedded Video Preview Image */}
+                            <Image
+                                src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+                                alt="Video testimonial preview"
+                                fill
+                                className="object-cover"
+                                sizes="(max-width: 768px) 100vw, 20vw"
+                            />
 
                             {/* Play Button Overlay */}
                             <button

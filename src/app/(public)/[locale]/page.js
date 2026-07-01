@@ -42,7 +42,6 @@ export default function HomePage({ params }) {
     <div>
       <HeroSection locale={locale} />
       <TrustStrip locale={locale} />
-      <TestimonialsCarousel />
       <TopMedicalDestinations locale={locale} />
       <NetworkOfTopHospitals locale={locale} />
       <LowestQuotesAssured locale={locale} />
@@ -52,6 +51,7 @@ export default function HomePage({ params }) {
       <NeedAssistanceButton locale={locale} />
       <HowWeWork locale={locale} />
       <OurServices locale={locale} />
+      <TestimonialsCarousel />
       <CaseStudies />
       <FAQ locale={locale} />
       <BlogSection locale={locale} />

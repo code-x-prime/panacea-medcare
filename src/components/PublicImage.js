@@ -1,53 +1,41 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import { resolvePublicImageSrc } from "@/lib/publicImage";
 
 const FALLBACK =
     "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=450&fit=crop&auto=format";
 
-/** Public assets from /public — fill mode uses CSS background so paths stay /hospitals/... not /en/hospitals/... */
-export default function PublicImage({ src, alt, fill, className = "", loading, priority, onError, ...rest }) {
+/** Public assets from /public — optimized using Next.js Image component */
+export default function PublicImage({ src, alt, fill, className = "", loading, priority, onError, sizes, ...rest }) {
     const resolved = resolvePublicImageSrc(src);
-    const [url, setUrl] = useState(resolved || FALLBACK);
+    const [imgSrc, setImgSrc] = useState(resolved || FALLBACK);
 
     useEffect(() => {
-        if (!resolved) {
-            setUrl(FALLBACK);
-            return;
-        }
-        const probe = new window.Image();
-        probe.onload = () => setUrl(resolved);
-        probe.onerror = () => setUrl(FALLBACK);
-        probe.src = resolved;
+        setImgSrc(resolved || FALLBACK);
     }, [resolved]);
 
-    if (!resolved && !fill) return null;
-
-    if (fill) {
-        return (
-            <div
-                role="img"
-                aria-label={alt || ""}
-                className={`absolute inset-0 bg-cover bg-center bg-no-repeat ${className}`.trim()}
-                style={{ backgroundImage: `url("${url}")` }}
-                {...rest}
-            />
-        );
-    }
-
     const handleError = (e) => {
-        if (e.currentTarget.src !== FALLBACK) e.currentTarget.src = FALLBACK;
-        onError?.(e);
+        setImgSrc(FALLBACK);
+        if (onError) onError(e);
     };
 
+    // Default sizes for responsive scaling when fill is used
+    const defaultSizes = fill 
+        ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
+        : undefined;
+
     return (
-        <img
-            src={url}
+        <Image
+            src={imgSrc}
             alt={alt || ""}
+            fill={fill}
             className={className}
-            loading={priority ? "eager" : loading}
+            loading={priority ? undefined : (loading || "lazy")}
+            priority={priority}
             onError={handleError}
+            sizes={sizes || defaultSizes}
             {...rest}
         />
     );

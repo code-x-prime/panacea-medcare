@@ -29,12 +29,12 @@ export default function Footer({ locale }) {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const services = [
-    "medicalOpinion",
-    "travelAssistance",
-    "visaSupport",
-    "accommodation",
-    "interpreters",
-    "followUpCare",
+    { key: "medicalOpinion", href: "/consult-online" },
+    { key: "travelAssistance", href: "/international-patients" },
+    { key: "visaSupport", href: "/international-patients" },
+    { key: "accommodation", href: "/international-patients" },
+    { key: "interpreters", href: "/international-patients" },
+    { key: "followUpCare", href: "/services" },
   ];
 
   const legalLinks = [
@@ -105,10 +105,13 @@ export default function Footer({ locale }) {
             <h4 className="font-bold text-xl mb-3 text-white">{t("services.title")}</h4>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-panacea-light/90 hover:text-panacea-secondary transition-colors cursor-default">
-                    {t(`services.${service}`)}
-                  </span>
+                <li key={service.key}>
+                  <Link
+                    href={localePath(locale, service.href)}
+                    className="text-panacea-light/90 hover:text-panacea-secondary transition-colors"
+                  >
+                    {t(`services.${service.key}`)}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -262,7 +265,7 @@ export default function Footer({ locale }) {
             <p className="text-sm text-panacea-light/60">
               Designed & Developed by{" "}
               <a
-                href="http://groxmedia.in"
+                href="https://groxmedia.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-panacea-accent hover:text-white transition-colors"

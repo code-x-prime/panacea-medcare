@@ -1,0 +1,218 @@
+{
+  "seo": {
+    "title": "Tourisme Médical en Inde | Agence de Tourisme Médical de Confiance",
+    "description": "Agence de tourisme médical de confiance en Inde au service des patients de plus de 30 pays. Accès aux meilleurs hôpitaux, médecins experts, soins abordables et soutien complet au voyage."
+  },
+  "hero": {
+    "title": "Tourisme Médical en Inde : Votre Partenaire de Confiance pour des Soins de Santé de Classe Mondiale",
+    "subtitle": "Connecter directement les patients internationaux aux meilleurs spécialistes et hôpitaux pour des soins de santé abordables et de haute qualité."
+  },
+  "intro": {
+    "p1": "Trouver des soins de santé de confiance à l'étranger est difficile en raison des coûts de traitement élevés, des longues listes d'attente et de l'incertitude quant au choix du bon hôpital. En tant qu'agence et facilitateur de tourisme médical expérimenté en Inde, Panacea Medcare fournit des services de tourisme médical de bout en bout qui vous connectent directement aux meilleurs spécialistes et hôpitaux pour bénéficier de traitements médicaux de classe mondiale en Inde."
+  },
+  "whyChooseIndia": {
+    "title": "Pourquoi Choisir le Tourisme Médical en Inde ?",
+    "description": "L'industrie du tourisme médical en Inde est l'une des destinations les plus réputées et fiables au monde, offrant des hôpitaux de classe mondiale, des experts hautement qualifiés, une technologie médicale de pointe, des traitements rentables et des soins personnalisés.",
+    "items": [
+      {
+        "id": "specialists",
+        "title": "Spécialistes Médicaux de Classe Mondiale",
+        "description": "Le tourisme médical en Inde ouvre la porte à des professionnels chevronnés formés à l'étranger et possédant des décennies d'expérience dans divers domaines médicaux."
+      },
+      {
+        "id": "hospitals",
+        "title": "Hôpitaux Reconnus à l'Échelle Internationale",
+        "description": "Les hôpitaux disposent de bâtiments modernes, de blocs opératoires avancés, de protocoles de traitement acceptés à l'échelle mondiale et de soins centrés sur le patient."
+      },
+      {
+        "id": "affordable",
+        "title": "Traitements Abordables Sans Compromis sur la Qualité",
+        "description": "Le principal avantage du tourisme médical en Inde est que vous recevez des soins médicaux de première qualité à des coûts bien inférieurs à ceux de nombreux autres pays."
+      },
+      {
+        "id": "technology",
+        "title": "Technologie Médicale Avancée",
+        "description": "Systèmes chirurgicaux robotisés, blocs opératoires hybrides, diagnostics IA et imagerie médicale de pointe sont utilisés dans tous les hôpitaux partenaires."
+      },
+      {
+        "id": "fasterAccess",
+        "title": "Accès Plus Rapide aux Traitements",
+        "description": "L'Inde évite les longues listes d'attente en offrant des consultations spécialistes rapides et des créneaux de traitement opportuns."
+      },
+      {
+        "id": "support",
+        "title": "Assistance Complète aux Patients Internationaux",
+        "description": "Nous fournissons une assistance complète comprenant la coordination des soins, les arrangements de voyage, l'hébergement, l'interprétariat et le transfert aéroport."
+      }
+    ]
+  },
+  "whyPanacea": {
+    "title": "Pourquoi Choisir Panacea Medcare comme Agence de Tourisme Médical Leader en Inde ?",
+    "description": "Panacea Medcare fonctionne comme une agence de tourisme médical de confiance et un facilitateur dédié en Inde, offrant des soins personnalisés et une gestion complète du voyage.",
+    "items": [
+      {
+        "id": "trustedCompany",
+        "title": "Agence de Tourisme Médical de Confiance",
+        "description": "En tant qu'agence leader en Inde, Panacea Medcare a bâti la confiance des patients du monde entier grâce à des solutions de santé claires et personnalisées."
+      },
+      {
+        "id": "planning",
+        "title": "Planification de Traitement Personnalisée",
+        "description": "Chaque patient est unique ; nos praticiens étudient vos rapports et recommandent les meilleurs médecins et hôpitaux adaptés à vos besoins."
+      },
+      {
+        "id": "support247",
+        "title": "Support Patient 24/7",
+        "description": "Nos coordonnateurs pour patients internationaux sont disponibles jour et nuit pour répondre à vos questions et organiser vos rendez-vous."
+      },
+      {
+        "id": "matching",
+        "title": "Mise en Relation Hôpital & Médecin",
+        "description": "Choisir le bon spécialiste est essentiel. Nous jumelons chaque patient avec des hôpitaux de renommée internationale et les meilleurs experts."
+      },
+      {
+        "id": "estimates",
+        "title": "Devis de Coût Transparents",
+        "description": "Notre équipe partage des estimations de traitement claires sans frais cachés afin que vous puissiez planifier votre séjour en toute confiance."
+      },
+      {
+        "id": "visa",
+        "title": "Assistance Visa Médical",
+        "description": "Nos experts simplifient la démarche de visa médical, en vous guidant à travers les documents et lettres d'invitation."
+      },
+      {
+        "id": "pickup",
+        "title": "Accueil et Transfert Aéroport",
+        "description": "Dès votre arrivée, notre équipe assure votre accueil à l'aéroport et votre transfert confortable vers votre logement."
+      },
+      {
+        "id": "accommodation",
+        "title": "Assistance Hébergement",
+        "description": "Panacea Medcare réserve des séjours sûrs et confortables à proximité de votre hôpital pour les patients et leurs familles."
+      },
+      {
+        "id": "interpreter",
+        "title": "Support d'Interprétariat",
+        "description": "Une communication claire est essentielle. Nous fournissons une assistance d'interprètes pour faciliter les échanges avec l'équipe médicale."
+      },
+      {
+        "id": "followUp",
+        "title": "Suivi Médical Après Traitement",
+        "description": "Les soins ne s'arrêtent pas à la fin du traitement. Nous organisons les visites de suivi et les discussions de récupération après votre retour."
+      }
+    ]
+  },
+  "treatments": {
+    "title": "Traitements Médicaux en Inde",
+    "description": "Panacea Medcare connecte les patients internationaux aux plus grands spécialistes et hôpitaux multidisciplinaires d'Inde pour des soins avancés.",
+    "cta": "Explorer toutes les options de traitement",
+    "items": [
+      { "id": "cancer", "name": "Traitement du Cancer", "description": "Bénéficiez de traitements oncologiques avancés par chimiothérapie, immunothérapie, radiothérapie et chirurgie de pointe.", "slug": "/treatments/oncology" },
+      { "id": "transplant", "name": "Greffe d'Organes", "description": "Procédures de transplantation du rein, du foie et de la moelle osseuse avec des spécialistes expérimentés.", "slug": "/treatments/organ-transplant" },
+      { "id": "heart", "name": "Chirurgie Cardiaque", "description": "Chirurgie de pontage, remplacement valvulaire et procédures cardiaques complexes réalisées par des chirurgiens renommés.", "slug": "/treatments/cardiac" },
+      { "id": "orthopedic", "name": "Chirurgie Orthopédique", "description": "Retrouvez la mobilité grâce au remplacement de la hanche, du genou et aux soins des blessures sportives.", "slug": "/treatments/orthopedics" },
+      { "id": "robotic", "name": "Chirurgie Robotique", "description": "Découvrez les avantages de la chirurgie assistée par robot : meilleure précision, cicatrices réduites et récupération plus rapide.", "slug": "/treatments/robotic" },
+      { "id": "ivf", "name": "PMA & Fertilité", "description": "Réalisez votre rêve de parentalité avec des solutions de fertilité de pointe comme la FIV et les meilleurs experts d'Inde.", "slug": "/treatments" },
+      { "id": "cosmetic", "name": "Chirurgie Esthétique", "description": "Chirurgies esthétiques et reconstructives sûres avec des résultats naturels réalisés par des chirurgiens plasticiens expérimentés.", "slug": "/treatments/aesthetic" },
+      { "id": "dental", "name": "Soins Dentaires", "description": "Implants dentaires, esthétique du sourire et réhabilitation dentaire complète dans des cliniques de pointe.", "slug": "/treatments/dental" },
+      { "id": "neurology", "name": "Neurologie & Neurochirurgie", "description": "Accès à des neurologues expérimentés pour les AVC, l'épilepsie, la maladie de Parkinson et les tumeurs cérébrales.", "slug": "/treatments/neurosurgery" },
+      { "id": "gastroenterology", "name": "Gastro-entérologie", "description": "Endoscopie, chirurgie gastro-intestinale et soins hépatiques avancés.", "slug": "/treatments/gastroenterology" },
+      { "id": "urology", "name": "Urologie", "description": "Extraction de calculs rénaux, chirurgie urologique robotique et soins de la prostate.", "slug": "/treatments" },
+      { "id": "spine", "name": "Chirurgie du Rachis", "description": "Soulagement durable des douleurs vertébrales par chirurgie mini-invasive et remplacement de disque.", "slug": "/treatments/neurosurgery" }
+    ]
+  },
+  "hospitals": {
+    "title": "Grands Hôpitaux pour les Soins Médicaux en Inde",
+    "description": "Panacea Medcare s'associe aux hôpitaux les plus fiables d'Inde pour offrir des soins de santé de niveau mondial.",
+    "cta": "Explorer les meilleurs hôpitaux pour tous les traitements en Inde",
+    "list": [
+      { "name": "Medanta", "slug": "/hospitals/medanta-hospital-gurgaon" },
+      { "name": "Hôpitaux Apollo", "slug": "/hospitals/indraprastha-apollo-hospital-new-delhi" },
+      { "name": "Fortis Healthcare", "slug": "/hospitals/fortis-hospital-gurgaon" },
+      { "name": "Max Healthcare", "slug": "/hospitals/max-hospital-saket" },
+      { "name": "Hôpital BLK-Max", "slug": "/hospitals/blk-max-hospital-pusa-road" },
+      { "name": "Hôpitaux Marengo Asia", "slug": "/hospitals/marengo-asia-hospital-gurgaon" },
+      { "name": "Institut Asiatique des Sciences Médicales", "slug": "/hospitals/asian-hospital-delhi" },
+      { "name": "Hôpitaux Yatharth", "slug": "/hospitals/yatharth-hospital-greater-noida" }
+    ]
+  },
+  "doctors": {
+    "title": "Rencontrez Nos Grands Spécialistes en Inde",
+    "description": "Panacea Medcare met en relation les patients internationaux avec les spécialistes les plus respectés d'Inde pour des soins de très haute qualité.",
+    "cta": "Explorer les meilleurs médecins par spécialité",
+    "list": [
+      "Dr. Anita Kant",
+      "Dr. Amit Bangia",
+      "Dr. Swati Mani",
+      "Dr. Rajiv Ranjan",
+      "Dr. Shweta Arora",
+      "Dr. N. K. Pandey",
+      "Dr. Ravi Shankar",
+      "Dr. Neha Kapoor",
+      "Dr. Uma Rani",
+      "Dr. Meenu Grewal",
+      "Dr. Sandeep Kondep",
+      "Dr. Usha Priyambada"
+    ]
+  },
+  "process": {
+    "title": "Notre Processus de Tourisme Médical en Inde",
+    "description": "Panacea Medcare rend votre parcours médical simple, clair et serein avec un chemin structuré conçu pour les patients internationaux.",
+    "steps": [
+      { "number": 1, "title": "Partager Vos Rapports Médicaux", "description": "Envoyez vos dossiers médicaux à nos spécialistes pour une étude attentive de votre état de santé." },
+      { "number": 2, "title": "Avis Médical Gratuit", "description": "Recevez un avis médical gratuit d'experts pour prendre votre décision en toute clarté." },
+      { "number": 3, "title": "Sélection du Médecin et de l'Hôpital", "description": "Votre facilitateur vous met en relation avec l'expert et l'hôpital correspondant à votre budget." },
+      { "number": 4, "title": "Plan de Traitement & Devis", "description": "Obtenez un itinéraire de traitement clair avec des coûts précis et sans frais cachés." },
+      { "number": 5, "title": "Assistance Visa Médical", "description": "Notre équipe gère vos documents et instructions de visa médical pour un départ sans délai." },
+      { "number": 6, "title": "Voyage & Hébergement", "description": "Transferts aéroport et hébergements confortables sont organisés pour un voyage sans souci." },
+      { "number": 7, "title": "Traitement en Inde", "description": "Bénéficiez de soins de classe mondiale avec notre coordination complète sur place." },
+      { "number": 8, "title": "Rétablissement & Suivi", "description": "Le soutien continue après le traitement avec des conseils de récupération et consultations à distance." }
+    ]
+  },
+  "countries": {
+    "title": "Pays que Nous Servons",
+    "description": "Panacea Medcare sert des patients du monde entier pour rendre le voyage médical facile et sécurisé.",
+    "list": ["Australie", "Afrique", "Kenya", "Nigeria", "Ghana", "Ouganda", "Tanzanie", "Zambie", "États-Unis", "Royaume-Uni", "Éthiopie"]
+  },
+  "ctaSection": {
+    "title": "Commencez Votre Voyage Médical en Inde avec Panacea Medcare",
+    "description": "Ne laissez pas les coûts élevés ou les délais ralentir votre guérison. Contactez-nous dès aujourd'hui pour obtenir votre avis médical gratuit."
+  },
+  "faqs": {
+    "title": "Foire Aux Questions",
+    "items": [
+      {
+        "q": "Pourquoi le tourisme médical en Inde devient-il populaire ?",
+        "a": "L'Inde offre des hôpitaux de pointe, des médecins expérimentés, des coûts réduits, aucun délai d'attente et un accompagnement complet."
+      },
+      {
+        "q": "Pourquoi choisir Panacea Medcare ?",
+        "a": "Panacea Medcare offre une prise en charge globale, la sélection de l'hôpital, l'organisation des voyages et des soins sur mesure."
+      },
+      {
+        "q": "Quels traitements puis-je recevoir en Inde ?",
+        "a": "Nous organisons des soins pour le cancer, les greffes d'organes, la chirurgie cardiaque, l'orthopédie, la chirurgie robotique et bien plus."
+      },
+      {
+        "q": "Panacea Medcare aide-t-elle avec le visa et le voyage ?",
+        "a": "Oui. Nous gérons le visa médical, l'accueil à l'aéroport, le logement et les rendez-vous médicaux."
+      },
+      {
+        "q": "Comment sélectionnez-vous le bon hôpital et médecin ?",
+        "a": "Nos experts étudient vos rapports pour recommander les spécialistes et hôpitaux les plus adaptés."
+      },
+      {
+        "q": "Combien de temps prend le processus ?",
+        "a": "La durée dépend de votre état de santé, mais notre équipe veille à ce que toutes les démarches soient fluides et rapides."
+      },
+      {
+        "q": "Aurai-je un suivi après mon retour ?",
+        "a": "Oui, nous assurons un suivi médical continu avec vos médecins une fois rentré chez vous."
+      },
+      {
+        "q": "Quels pays Panacea Medcare dessert-elle ?",
+        "a": "Nous accompagnons des patients d'Australie, d'Afrique, du Kenya, du Nigeria, du Royaume-Uni, des États-Unis et d'ailleurs."
+      }
+    ]
+  }
+}

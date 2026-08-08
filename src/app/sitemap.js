@@ -29,6 +29,7 @@ export default function sitemap() {
         "/treatment-packages",
         "/treatments",
         "/why-india",
+        "/medical-tourism-india",
     ];
 
     const services = [

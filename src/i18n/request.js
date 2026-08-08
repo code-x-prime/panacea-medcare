@@ -62,6 +62,7 @@ export default getRequestConfig(async ({ locale }) => {
     aiPrescreening: (await import(`../../messages/${validLocale}/aiPrescreening.json`)).default,
     consultOnline: (await import(`../../messages/${validLocale}/consultOnline.json`)).default,
     needAssistance: (await import(`../../messages/${validLocale}/needAssistance.json`)).default,
+    medicalTourismIndia: (await import(`../../messages/${validLocale}/medicalTourismIndia.json`)).default,
   };
 
   return {

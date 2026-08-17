@@ -5,7 +5,13 @@
   },
   "hero": {
     "title": "Tourisme Médical en Inde : Votre Partenaire de Confiance pour des Soins de Santé de Classe Mondiale",
-    "subtitle": "Connecter directement les patients internationaux aux meilleurs spécialistes et hôpitaux pour des soins de santé abordables et de haute qualité."
+    "subtitle": "Connecter directement les patients internationaux aux meilleurs spécialistes et hôpitaux pour des soins de santé abordables et de haute qualité.",
+    "bookAppointment": "Prendre un Rendez-vous",
+    "talkCoordinator": "Parler à un coordinateur",
+    "badge1Title": "Soins bienveillants",
+    "badge1Sub": "À chaque étape du parcours",
+    "badge2Title": "15+ ans d'expérience",
+    "badge2Sub": "Meilleurs médecins & hôpitaux"
   },
   "intro": {
     "p1": "Trouver des soins de santé de confiance à l'étranger est difficile en raison des coûts de traitement élevés, des longues listes d'attente et de l'incertitude quant au choix du bon hôpital. En tant qu'agence et facilitateur de tourisme médical expérimenté en Inde, Panacea Medcare fournit des services de tourisme médical de bout en bout qui vous connectent directement aux meilleurs spécialistes et hôpitaux pour bénéficier de traitements médicaux de classe mondiale en Inde."
@@ -172,7 +178,7 @@
   "countries": {
     "title": "Pays que Nous Servons",
     "description": "Panacea Medcare sert des patients du monde entier pour rendre le voyage médical facile et sécurisé.",
-    "list": ["Australie", "Afrique", "Kenya", "Nigeria", "Ghana", "Ouganda", "Tanzanie", "Zambie", "États-Unis", "Royaume-Uni", "Éthiopie"]
+    "list": ["Bangladesh", "Afghanistan", "Canada", "Australie", "Afrique", "Kenya", "Nigeria", "Ghana", "Ouganda", "Tanzanie", "Zambie", "États-Unis", "Royaume-Uni", "Éthiopie"]
   },
   "ctaSection": {
     "title": "Commencez Votre Voyage Médical en Inde avec Panacea Medcare",

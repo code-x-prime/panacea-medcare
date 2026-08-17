@@ -5,7 +5,13 @@
   },
   "hero": {
     "title": "Medical Tourism India: Your Trusted Partner for World-Class Healthcare in India",
-    "subtitle": "Connecting international patients directly to top-notch medical specialists and hospitals for affordable, high-quality care."
+    "subtitle": "Connecting international patients directly to top-notch medical specialists and hospitals for affordable, high-quality care.",
+    "bookAppointment": "Book an Appointment",
+    "talkCoordinator": "Talk to a coordinator",
+    "badge1Title": "Compassionate care",
+    "badge1Sub": "Every step of the way",
+    "badge2Title": "15+ yrs experience",
+    "badge2Sub": "Top Doctors & Hospitals"
   },
   "intro": {
     "p1": "Locating trusted healthcare abroad is challenging due to high treatment expenses, lengthy waiting lists, and uncertainty about selecting the right hospital. As a trusted medical tourism company India and experienced medical tourism facilitator, Medical Tourism India with Panacea Medcare provides end-to-end medical tourism services in India that connect you directly to top-notch medical specialists and hospitals to avail world-class medical treatment in India. You get hassle-free Healthcare Tourism India with personalized support. Get your free medical opinion today."
@@ -172,7 +178,7 @@
   "countries": {
     "title": "Countries We Serve",
     "description": "Panacea Medcare is a reliable Medical Tourism India provider to patients from all over the world. Medical Tourism Company India includes us in our role of providing everything required to make Medical Travel India easy for our patients, from creating treatment plans to coordinating with hospitals, assisting with travel, to having a dedicated medical support team for our patients. This makes quality Medical Treatment in India open to international patients worldwide.",
-    "list": ["Australia", "Africa", "Kenya", "Nigeria", "Ghana", "Uganda", "Tanzania", "Zambia", "United States", "United Kingdom", "Ethiopia"]
+    "list": ["Bangladesh", "Afghanistan", "Canada", "Australia", "Africa", "Kenya", "Nigeria", "Ghana", "Uganda", "Tanzania", "Zambia", "United States", "United Kingdom", "Ethiopia"]
   },
   "ctaSection": {
     "title": "Start Your Medical Tourism India Journey with Panacea Medcare",

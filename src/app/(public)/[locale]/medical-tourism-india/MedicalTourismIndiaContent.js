@@ -4,8 +4,8 @@ import { localePath } from "@/lib/locale/routing";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import TopBanner from "@/components/TopBanner";
 import Breadcrumb from "@/components/Breadcrumb";
+import BookingModal from "@/components/BookingModal";
 import {
   CheckCircle2,
   ShieldCheck,
@@ -25,6 +25,7 @@ import {
   MapPin,
   Calendar,
   HelpCircle,
+  Heart,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -32,6 +33,7 @@ export default function MedicalTourismIndiaContent({ locale }) {
   const t = useTranslations("medicalTourismIndia");
   const isRTL = locale === "ar";
   const [openFaq, setOpenFaq] = useState(null);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -72,45 +74,115 @@ export default function MedicalTourismIndiaContent({ locale }) {
 
   return (
     <main dir={isRTL ? "rtl" : "ltr"} className="bg-slate-50 min-h-screen text-slate-800">
-      {/* Top Banner / Hero */}
-      <TopBanner
-        locale={locale}
-        namespace="heroSection"
-        title={t("hero.title")}
-        subtitle={t("hero.subtitle")}
-        variant="gradient"
-        size="lg"
-      />
+      {/* Modern Clean Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#f8faff] via-[#fbfdff] to-[#f4f7ff] pt-4 sm:pt-6 pb-12 sm:pb-16 lg:pb-20 border-b border-slate-200/60">
+        <div className="container mx-auto px-4 xl:max-w-7xl">
+          {/* Breadcrumb */}
+          <div className="mb-6 sm:mb-8">
+            <Breadcrumb items={breadcrumbItems} locale={locale} />
+          </div>
 
-      {/* Breadcrumb */}
-      <section className="container mx-auto px-4 xl:max-w-7xl pt-6 pb-2">
-        <Breadcrumb items={breadcrumbItems} locale={locale} />
-      </section>
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+            {/* Left Column: Heading, Description & CTAs */}
+            <div className="lg:col-span-7 space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[#1e293b] leading-[1.16] tracking-tight">
+                {locale === "en" ? (
+                  <>
+                    Medical Tourism India: <br className="hidden sm:inline" />
+                    Your Trusted Partner for{" "}
+                    <span className="text-[#7c5dfa]">World-Class Healthcare</span>{" "}
+                    in India
+                  </>
+                ) : (
+                  t("hero.title")
+                )}
+              </h1>
 
-      {/* Introduction with Hero Image */}
-      <section className="container mx-auto px-4 xl:max-w-7xl py-8 md:py-12">
-        <div className="bg-white rounded-3xl p-6 md:p-10 shadow-sm border border-slate-100 max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 text-panacea-primary font-bold text-lg mb-4">
-                <Sparkles className="w-6 h-6 text-panacea-accent" />
-                <h2>{t("hero.title")}</h2>
-              </div>
-              <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#64748b] leading-relaxed font-normal max-w-xl">
                 {t("intro.p1")}
               </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsBookingModalOpen(true)}
+                  className="inline-flex items-center justify-center gap-2 bg-[#1c275a] hover:bg-[#131b40] text-white font-medium px-7 py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 text-base group cursor-pointer"
+                >
+                  <span>{t("hero.bookAppointment")}</span>
+                  <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${isRTL ? "rotate-180 group-hover:-translate-x-1" : ""}`} />
+                </button>
+
+                <a
+                  href="https://wa.me/919958800961"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-slate-50 text-[#334155] font-medium px-6 py-3.5 rounded-full border border-slate-300 hover:border-slate-400 shadow-sm transition-all duration-200 text-base"
+                >
+                  <PhoneCall className="w-4 h-4 text-[#334155]" />
+                  <span>{t("hero.talkCoordinator")}</span>
+                </a>
+              </div>
             </div>
-            <div className="lg:col-span-5 relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-md border border-slate-100 bg-slate-100">
-              <Image
-                src="/images/medical_tourism_hero.png"
-                alt="Medical Tourism India"
-                fill
-                className="object-cover"
-                unoptimized
-                onError={(e) => {
-                  e.currentTarget.src = "/medical-consultation.jpg";
-                }}
-              />
+
+            {/* Right Column: Hero Visual with Floating Badges */}
+            <div className="lg:col-span-5 relative mt-6 lg:mt-0">
+              <div className="relative mx-auto max-w-md lg:max-w-none px-4 sm:px-6 lg:px-0">
+                {/* Main Card with Soft Pink/Warm Container matching the reference image */}
+                <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden bg-[#fed7dc] p-3 sm:p-4 shadow-sm">
+                  <div className="relative h-72 sm:h-96 lg:h-[420px] rounded-2xl sm:rounded-[2rem] overflow-hidden bg-slate-100">
+                    <Image
+                      src="/images/medical_tourism_hero.png"
+                      alt="Medical Tourism India"
+                      fill
+                      className="object-cover object-center"
+                      priority
+                      unoptimized
+                      onError={(e) => {
+                        e.currentTarget.src = "/medical-consultation.jpg";
+                      }}
+                    />
+                  </div>
+                </div>
+
+                {/* Floating Badge 1 - Top Left */}
+                <div
+                  className={`absolute -top-3 sm:-top-4 ${
+                    isRTL ? "-right-2 sm:right-2" : "-left-2 sm:left-2"
+                  } bg-white rounded-2xl py-3 px-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-3 z-20`}
+                >
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#f4effe] text-[#7c5dfa] flex items-center justify-center flex-shrink-0">
+                    <Heart className="w-5 h-5 text-[#7c5dfa]" />
+                  </div>
+                  <div className={isRTL ? "text-right" : "text-left"}>
+                    <div className="text-xs sm:text-sm font-bold text-[#1e293b] leading-tight">
+                      {t("hero.badge1Title")}
+                    </div>
+                    <div className="text-[11px] sm:text-xs text-[#64748b] font-medium">
+                      {t("hero.badge1Sub")}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating Badge 2 - Bottom Right */}
+                <div
+                  className={`absolute -bottom-3 sm:-bottom-4 ${
+                    isRTL ? "-left-2 sm:left-2" : "-right-2 sm:right-2"
+                  } bg-white rounded-2xl py-3 px-4 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.08)] border border-slate-100 flex items-center gap-3 z-20`}
+                >
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#eff6ff] text-[#2563eb] flex items-center justify-center flex-shrink-0">
+                    <ShieldCheck className="w-5 h-5 text-[#2563eb]" />
+                  </div>
+                  <div className={isRTL ? "text-right" : "text-left"}>
+                    <div className="text-xs sm:text-sm font-bold text-[#1e293b] leading-tight">
+                      {t("hero.badge2Title")}
+                    </div>
+                    <div className="text-[11px] sm:text-xs text-[#64748b] font-medium">
+                      {t("hero.badge2Sub")}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -150,7 +222,7 @@ export default function MedicalTourismIndiaContent({ locale }) {
         </div>
       </section>
 
-      {/* Why Choose Panacea Medcare with Showcase Image */}
+      {/* Why Choose Panacea Medcare */}
       <section className="bg-slate-100 py-12 md:py-20 border-y border-slate-200">
         <div className="container mx-auto px-4 xl:max-w-7xl">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -165,63 +237,23 @@ export default function MedicalTourismIndiaContent({ locale }) {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-8 items-center mb-12">
-            <div className="lg:col-span-5 relative h-72 md:h-96 rounded-3xl overflow-hidden shadow-lg border border-white">
-              <Image
-                src="/images/advanced_medical_care.png"
-                alt="Advanced Medical Care India"
-                fill
-                className="object-cover"
-                unoptimized
-                onError={(e) => {
-                  e.currentTarget.src = "/hero-banner.png";
-                }}
-              />
-            </div>
-            <div className="lg:col-span-7 grid md:grid-cols-2 gap-4">
-              {whyPanaceaItems.slice(0, 6).map((item) => {
-                const IconComponent = iconsMap[item.id] || ShieldCheck;
-                return (
-                  <div
-                    key={item.id}
-                    className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-3 hover:border-panacea-primary/40 transition-colors"
-                  >
-                    <div className="w-10 h-10 bg-panacea-primary/10 rounded-xl flex items-center justify-center text-panacea-primary flex-shrink-0 mt-1">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h3 className="text-base font-bold text-panacea-primary mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-slate-600 text-xs leading-relaxed line-clamp-3">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {whyPanaceaItems.slice(6).map((item) => {
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+            {whyPanaceaItems.map((item) => {
               const IconComponent = iconsMap[item.id] || ShieldCheck;
               return (
                 <div
                   key={item.id}
-                  className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex items-start gap-3 hover:border-panacea-primary/40 transition-colors"
+                  className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex flex-col hover:border-panacea-primary/40 hover:shadow-md transition-all duration-200 group"
                 >
-                  <div className="w-10 h-10 bg-panacea-primary/10 rounded-xl flex items-center justify-center text-panacea-primary flex-shrink-0 mt-1">
+                  <div className="w-11 h-11 bg-panacea-primary/10 rounded-xl flex items-center justify-center text-panacea-primary mb-4 group-hover:scale-105 transition-transform">
                     <IconComponent className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="text-base font-bold text-panacea-primary mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
+                  <h3 className="text-base font-bold text-panacea-primary mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs leading-relaxed flex-grow">
+                    {item.description}
+                  </p>
                 </div>
               );
             })}
@@ -485,6 +517,13 @@ export default function MedicalTourismIndiaContent({ locale }) {
           })}
         </div>
       </section>
+
+      {/* Booking Modal */}
+      <BookingModal
+        isOpen={isBookingModalOpen}
+        onClose={() => setIsBookingModalOpen(false)}
+        locale={locale}
+      />
     </main>
   );
 }

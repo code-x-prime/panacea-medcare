@@ -146,8 +146,11 @@ export default function OurServices({ locale }) {
 
                 {/* Bottom Notice & CTA */}
                 <div className="bg-gradient-to-br from-panacea-light via-white to-panacea-blue-50 rounded-3xl p-8 md:p-12 shadow-sm border border-panacea-primary/10">
-                    <div className="text-center mb-6">
-                        <p className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                    <div className="text-center mb-6 max-w-3xl mx-auto">
+                        <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 mb-3 leading-snug">
+                            {t("freeNoticeHeading")}
+                        </h2>
+                        <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                             {t("freeNotice")}
                         </p>
                     </div>

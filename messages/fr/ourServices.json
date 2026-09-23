@@ -3,7 +3,8 @@
   "title": "Services de Tourisme Médical en Inde",
   "subtitle": "Un soutien coordonné à chaque étape de votre parcours médical en Inde — des consultations spécialisées au suivi post-traitement.",
   "chatWithUs": "Obtenez une Consultation Gratuite",
-  "freeNotice": "Prêt à Explorer le Traitement Médical en Inde ? Parlez-nous de votre condition. Partagez vos rapports médicaux et laissez Panacea Medcare vous aider à explorer des spécialistes, hôpitaux, options de traitement et coûts indicatifs avant votre voyage.",
+  "freeNoticeHeading": "Prêt à Explorer le Traitement Médical en Inde ?",
+  "freeNotice": "Parlez-nous de votre condition. Partagez vos rapports médicaux et laissez Panacea Medcare vous aider à explorer des spécialistes, hôpitaux, options de traitement et coûts indicatifs avant votre voyage.",
   "services": {
     "medicalOpinion": {
       "title": "1. Consultation de Médecin Spécialiste",

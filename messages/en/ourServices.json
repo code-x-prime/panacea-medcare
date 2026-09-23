@@ -3,7 +3,8 @@
   "title": "Medical Tourism Services in India",
   "subtitle": "Coordinated support for every step of your medical journey in India — from specialist consultations to post-treatment follow-up.",
   "chatWithUs": "Get a Free Consultation",
-  "freeNotice": "Ready to Explore Medical Treatment in India? Tell us about your condition. Share your medical reports and let Panacea Medcare help you explore suitable specialists, hospitals, treatment options and indicative costs before you travel.",
+  "freeNoticeHeading": "Ready to Explore Medical Treatment in India?",
+  "freeNotice": "Tell us about your condition. Share your medical reports and let Panacea Medcare help you explore suitable specialists, hospitals, treatment options and indicative costs before you travel.",
   "services": {
     "medicalOpinion": {
       "title": "1. Specialist Doctor Consultation",

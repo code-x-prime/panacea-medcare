@@ -1,61 +1,61 @@
 {
-  "badge": "Solutions de soins complets",
-  "title": "Services complets pour votre parcours de santé",
-  "subtitle": "Nos gestionnaires de soins dédiés fournissent une assistance personnalisée à chaque étape. Tous les services sont gratuits - vous ne payez que pour votre traitement médical.",
-  "chatWithUs": "Discutez avec nous",
-  "freeNotice": "Tous nos services sont GRATUITS - votre facture d'hôpital reste inchangée!",
+  "badge": "Services de Tourisme Médical",
+  "title": "Services de Tourisme Médical en Inde",
+  "subtitle": "Un soutien coordonné à chaque étape de votre parcours médical en Inde — des consultations spécialisées au suivi post-traitement.",
+  "chatWithUs": "Obtenez une Consultation Gratuite",
+  "freeNotice": "Prêt à Explorer le Traitement Médical en Inde ? Parlez-nous de votre condition. Partagez vos rapports médicaux et laissez Panacea Medcare vous aider à explorer des spécialistes, hôpitaux, options de traitement et coûts indicatifs avant votre voyage.",
   "services": {
     "medicalOpinion": {
-      "title": "Avis médical et analyse des coûts",
-      "description": "Recevez des avis médicaux d'experts et des détails de coûts complets de spécialistes de premier plan."
+      "title": "1. Consultation de Médecin Spécialiste",
+      "description": "Pas sûr du spécialiste dont vous avez besoin ? Connectez-vous avec des médecins adaptés en Inde selon vos rapports médicaux, votre condition et vos exigences de traitement avant de voyager pour des soins médicaux."
     },
     "caseManagement": {
-      "title": "Services dédiés aux patients internationaux et gestion de cas",
-      "description": "Gestionnaire de cas personnalisé assigné pour coordonner tous les aspects de votre parcours médical."
+      "title": "2. Sélection d'Hôpital en Inde",
+      "description": "Choisir le bon hôpital est important. Accédez aux hôpitaux de premier plan en Inde selon vos besoins de traitement, la spécialité, les facilities, l'emplacement et le soutien aux patients internationaux."
     },
     "telemedicine": {
-      "title": "Télémédecine - Consultation vidéo avec des médecins experts",
-      "description": "Connectez-vous avec des spécialistes de premier plan via des consultations vidéo sécurisées partout dans le monde."
+      "title": "3. Second Avis Médical",
+      "description": "Besoin de clarté avant une décision de traitement majeure ? Faites revoir vos rapports médicaux et coordonnez-les avec des spécialistes adaptés en Inde pour un second avis médical éclairé."
     },
     "preTravelConsult": {
-      "title": "Consultation pré-voyage",
-      "description": "Conseils complets sur votre procédure, la préparation et ce à quoi vous attendre lors de votre visite."
+      "title": "4. Évaluation des Rapports Médicaux",
+      "description": "Envoyez vos rapports médicaux, scanners et dossiers de traitement antérieurs pour une évaluation préliminaire et une coordination spécialisée, afin d'identifier des parcours de traitement adaptés avant de voyager en Inde."
     },
     "visaSupport": {
-      "title": "Assistance visa",
-      "description": "Support complet pour visa médical et assistance documentaire pour un voyage sans tracas."
+      "title": "5. Assistance Visa Médical",
+      "description": "Le voyage médical implique des formulaires, de la documentation et de la planification. Obtenez une assistance coordonnée pour le processus de visa médical et la documentation hospitalière pour votre parcours de traitement en Inde."
     },
     "currencyExchange": {
-      "title": "Change de devises",
-      "description": "Services de change pratiques disponibles à des tarifs compétitifs dans votre ville de destination."
+      "title": "6. Estimation du Coût du Traitement",
+      "description": "Inquiet des dépenses de traitement imprévues ? Obtenez des estimations indicatives du coût du traitement médical auprès d'hôpitaux adaptés en Inde, pour planifier votre parcours de santé avec plus de clarté financière."
     },
     "interpreters": {
-      "title": "Interprètes linguistiques",
-      "description": "Interprètes professionnels pour assurer une communication claire avec le personnel médical en tout temps."
+      "title": "7. Support Interprète et Patients",
+      "description": "Les barrières linguistiques ne devraient pas rendre les soins de santé plus difficiles. Accédez au soutien d'interprètes et aux services aux patients internationaux lorsque disponibles, pour communiquer plus confortablement avec médecins, hôpitaux et équipes de soins."
     },
     "transportation": {
-      "title": "Services de transport",
-      "description": "Transferts aéroport gratuits et transport local pour tous les rendez-vous médicaux."
+      "title": "8. Accueil Aéroport et Transferts",
+      "description": "Arriver en Inde ne devrait pas ajouter du stress. Obtenez un accueil aéroport coordonné et un soutien de transport entre l'aéroport, l'hôtel et l'hôpital tout au long de votre parcours médical."
     },
     "accommodation": {
-      "title": "Arrangements d'hébergement",
-      "description": "Options de logement confortables près des hôpitaux, adaptées à votre budget et vos préférences."
+      "title": "9. Assistance Hébergement",
+      "description": "Besoin d'un hébergement confortable près de votre hôpital ? Obtenez une aide pour trouver des hôtels et séjours adaptés selon le lieu de traitement, la durée, le confort et les exigences des patients internationaux."
     },
     "admissionSupport": {
-      "title": "Coordination hospitalière",
-      "description": "Assistance complète pour l'admission à l'hôpital, les rendez-vous et les besoins en pharmacie."
+      "title": "10. Assistance Admission Hospitalière",
+      "description": "L'admission à l'hôpital peut sembler compliquée lors d'un voyage international. Recevez une coordination dédiée pour la documentation, les rendez-vous et les procédures d'admission afin de faciliter votre arrivée et votre traitement."
     },
     "nursingCare": {
-      "title": "Soins infirmiers privés",
-      "description": "Arrangements pour des soins infirmiers privés dédiés lorsque médicalement requis."
+      "title": "11. Support Post-Traitement et Suivi",
+      "description": "Votre parcours médical ne s'arrête pas après la sortie. Obtenez une coordination continue pour les consultations de suivi, les dossiers médicaux et la communication avec les prestataires de soins après votre retour à la maison."
     },
     "flexiblePayment": {
-      "title": "Options de paiement flexibles",
-      "description": "Plusieurs méthodes de paiement et plans de versements flexibles pour rendre votre traitement abordable."
+      "title": "12. Coordination des Rendez-vous Hospitaliers",
+      "description": "Évitez la corvée de gérer les rendez-vous depuis un autre pays. Obtenez des consultations et rendez-vous hospitaliers coordonnés autour de votre plan de traitement, vos rapports médicaux et votre calendrier de voyage."
     },
     "patientPortal": {
-      "title": "Portail patient et gestion des dossiers médicaux",
-      "description": "Accès en ligne sécurisé à vos dossiers médicaux, rapports et historique de traitement à tout moment."
+      "title": "13. Pré-dépistage Médical par IA",
+      "description": "Pas sûr de par où commencer ? Utilisez le pré-dépistage médical par IA pour comprendre les spécialités potentielles, les parcours de traitement et les coûts indicatifs avant de vous connecter avec des professionnels de santé en Inde."
     }
   }
 }

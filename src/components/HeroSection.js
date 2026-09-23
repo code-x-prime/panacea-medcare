@@ -11,27 +11,27 @@ const headline = {
 };
 
 const tagline = {
-  en: "Pre-screening, Smarter matching, Better outcomes",
-  ar: "الفحص المسبق، المطابقة الذكية، نتائج أفضل",
-  fr: "Pré-dépistage, Correspondance intelligente, Meilleurs résultats",
+  en: "Your Trusted Medical Tourism Company in India",
+  ar: "شركتك الموثوقة للسياحة العلاجية في الهند",
+  fr: "Votre Société de Tourisme Médical de Confiance en Inde",
 };
 
 const supportingText = {
-  en: "Fast, Personalized Global Treatment Plans from Accredited Hospitals",
-  ar: "خطط علاج عالمية سريعة وشخصية من مستشفيات معتمدة",
-  fr: "Plans de traitement mondiaux rapides et personnalisés auprès d'hôpitaux accrédités",
+  en: "Medical tourism can feel overwhelming — finding the right doctor, hospital and treatment shouldn't. Get personalized support for medical tourism in India, from specialist matching and hospital selection to treatment planning and international patient care.",
+  ar: "قد تبدو السياحة العلاجية مرهقة — العثور على الطبيب والمستشفى والعلاج المناسبين لا يجب أن يكون كذلك. احصل على دعم شخصي للسياحة العلاجية في الهند، من مطابقة المتخصصين واختيار المستشفى إلى تخطيط العلاج والرعاية الدولية للمرضى.",
+  fr: "Le tourisme médical peut sembler accablant — trouver le bon médecin, l'hôpital et le traitement ne devrait pas l'être. Obtenez un soutien personnalisé pour le tourisme médical en Inde, du matching de spécialistes à la sélection d'hôpitaux, en passant par la planification du traitement et les soins aux patients internationaux.",
 };
 
 const ctaPreScreening = {
-  en: "Start Your AI Pre-Screening",
-  ar: "ابدأ الفحص المسبق بالذكاء الاصطناعي",
-  fr: "Commencez Votre Pré-dépistage IA",
+  en: "Get Your Treatment Plan",
+  ar: "احصل على خطة علاجك",
+  fr: "Obtenez Votre Plan de Traitement",
 };
 
 const ctaWhatsApp = {
-  en: "Talk to a Care Expert",
-  ar: "تحدث مع خبير الرعاية",
-  fr: "Parler à un Expert en Soins",
+  en: "Get a Free Consultation",
+  ar: "احصل على استشارة مجانية",
+  fr: "Obtenez une Consultation Gratuite",
 };
 
 export default function HeroSection({ locale }) {

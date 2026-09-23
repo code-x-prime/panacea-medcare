@@ -91,7 +91,7 @@ export default function HeroSection({ locale }) {
 
           {/* Supporting text - improved contrast: white with opacity instead of low-contrast gold */}
           <p
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-10 w-full leading-relaxed"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-8 w-full leading-relaxed"
             style={{
               fontFamily: "var(--font-raleway), Raleway, sans-serif",
               color: "#FFE566",

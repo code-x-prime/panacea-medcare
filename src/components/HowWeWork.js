@@ -47,7 +47,7 @@ export default function HowWeWork({ locale }) {
                     <h2 className="text-4xl md:text-5xl  font-extrabold bg-gradient-to-r from-panacea-primary to-panacea-secondary bg-clip-text text-transparent mb-6 leading-tight">
                         {t("title")}
                     </h2>
-                    <p className="text-xl  text-panacea-gray max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg text-panacea-gray max-w-3xl mx-auto leading-relaxed">
                         {t("subtitle")}
                     </p>
                 </div>

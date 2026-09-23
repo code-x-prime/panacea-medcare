@@ -56,7 +56,7 @@ export default function MultiSpecialtyFocus({ locale }) {
                     <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
                         {t("title")}
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         {t("subtitle")}
                     </p>
                 </div>
